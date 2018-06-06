@@ -50,7 +50,11 @@ function createPost(body){
 	div.classList.add('rcorners');
 
 	let publisher_image = document.createElement('img');
-	publisher_image.src = body.publisher.profile_image;
+	if(body.publisher.profile_image == "http://app.bwayconnected.com/public/images/default.jpg"){
+		publisher_image.src = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"
+	} else {
+		publisher_image.src = body.publisher.profile_image;
+	}
 	publisher_image.classList.add('publisher_image');
 
 	div.appendChild(publisher_image);

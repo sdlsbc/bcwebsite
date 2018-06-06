@@ -22,6 +22,8 @@
     font-weight: 100;
     margin-top: -8px;
     margin-left: 4%;
+    margin-bottom: 15px;
+    overflow: hidden;
 }
 .subarticle{
     font-size:12px;
@@ -45,21 +47,32 @@ body {
 }
 
 .rcorners{
-    width:279px;
+  width:279px;
+  background-color:#fff;
+  color: rgb(0, 0, 0);
+  
+  border-radius:10px;
+  margin: 10px;
+  font-size:20px;
+}
+@media only screen and (max-width: 700px) {
+  .rcorners {
+    width: 330px;
     background-color:#fff;
     color: rgb(0, 0, 0);
     
     border-radius:10px;
     margin: 10px;
     font-size:20px;
+  }
 }
 
 .publisher_image {
     width: 50px;
     height: auto;
     border-radius: 50%;
-    margin-left: 2%;
-    margin-top: 2%;
+    margin-left: 4%;
+    margin-top: 4%;
 }
 
 .main_image {

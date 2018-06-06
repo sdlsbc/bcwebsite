@@ -55,6 +55,12 @@ function createPost(body){
 	center1.appendChild(main_image);
 	div.appendChild(center1);
 
+	let title = document.createElement('p');
+	let titleNode = document.createTextNode(body.title);
+	title.appendChild(titleNode);
+	title.classList.add('title');
+	div.appendChild(title);
+
 	document.getElementById('postsbox').appendChild(div);
 
 	

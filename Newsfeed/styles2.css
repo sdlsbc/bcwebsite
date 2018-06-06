@@ -20,6 +20,36 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+#postsbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: 100%;
+}
+
+.rcorners{
+    width:279px;
+    background-color:#fff;
+    color: rgb(0, 0, 0);
+    
+    border-radius:10px;
+    
+    font-size:20px;
+}
+
+.publisher_image {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.main_image{
+    width: 100%;
+    height: auto;
+}
+
 .rcorners1 {
     width:279px;
     background-color:#fff;
@@ -196,6 +226,8 @@ body {
     font-size: 36px;
     margin-left: 50px;
 }
+
+
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}

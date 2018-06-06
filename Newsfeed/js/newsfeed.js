@@ -1,6 +1,10 @@
-function loadAndShowPosts(offset){
+var fetchCount = 0;
+var wait = false;
+
+function loadAndShowPosts(){
 	console.log("in loadandshow")
-	getPostsItems(offset)
+	wait = true;
+	getPostsItems()
 	.then(newsRaw => {
 		//console.log(newsRaw)
 		newsRaw.forEach(element => 
@@ -10,9 +14,11 @@ function loadAndShowPosts(offset){
 	})
 }
 
-function getPostsItems(offset){
-	let url = "http://app.bwayconnected.com/api/posts?offset=0&limit=";
-	url = url + offset;
+function getPostsItems(){
+
+	let url = "http://app.bwayconnected.com/api/posts?offset="+(12*fetchCount)+"&limit=12";
+	fetchCount += 1;
+	//url = url + offset;
 	let params = {
 		headers: {
 			'content-type': 'application/json'
@@ -21,7 +27,10 @@ function getPostsItems(offset){
 	}
 	return fetch(url, params)
 	.then(res => res.json())
-	.then(body => body.Result.Posts)
+	.then(body => {
+		wait = false;
+		return body.Result.Posts;
+	})
 }
 
 
@@ -68,3 +77,14 @@ function createPost(body){
 	//img.src = 
 	console.log("in createPost")
 }
+
+window.onscroll = function(ev) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        if(!wait){
+        	loadAndShowPosts();
+        }
+    }
+};
+
+
+

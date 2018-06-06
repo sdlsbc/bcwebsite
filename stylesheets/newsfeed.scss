@@ -21,7 +21,7 @@ body {
     font-family: "Lato", sans-serif;
 }
 
-.rcorners1 {
+/*.rcorners1 {
     width:279px;
     background-color:#fff;
     color: rgb(0, 0, 0);
@@ -138,7 +138,7 @@ body {
     position: absolute;
     top:25px;
     right:20px;
-}
+}*/
 
 .wrapper {
     margin-right: auto; /* 1 */
@@ -198,6 +198,10 @@ body {
     margin-left: 50px;
 }
 
+.col-sm-3 {
+    color: red;
+  padding: 5px;
+}
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}

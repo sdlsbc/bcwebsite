@@ -61,6 +61,12 @@ function createPost(body){
 	title.classList.add('title');
 	div.appendChild(title);
 
+	let description = document.createElement('p');
+	let descriptionNode = document.createTextNode(body.description);
+	description.appendChild(descriptionNode);
+	description.classList.add('description');
+	div.appendChild(description);
+
 	document.getElementById('postsbox').appendChild(div);
 
 	

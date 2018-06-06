@@ -1,15 +1,27 @@
-#wrapper{
-    
+#wrapper {
 	background-color:#ecf2f9;
 	padding-bottom:30px;
     padding:10px;
 
 			
 }
-.title{
-    font-size: 15px;
+.title {
+    font-size: 14px;
     font-weight:bold;
-    color:darkblue;
+    width: 90%;
+    margin-left: 4%;
+    color: #6495ed;
+}
+.description {
+    font-size: 14px;
+    font-weight:bold;
+    width: 90%;
+    height: 30px;
+    margin-left: 4%;
+    color: gray;
+    font-weight: 100;
+    margin-top: -8px;
+    margin-left: 4%;
 }
 .subarticle{
     font-size:12px;
@@ -22,7 +34,7 @@ body {
 }
 
 #postsbox {
-    background-color:#ecf2f9;
+    background-color:#F0F8FF;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -46,9 +58,11 @@ body {
     width: 50px;
     height: auto;
     border-radius: 50%;
+    margin-left: 2%;
+    margin-top: 2%;
 }
 
-.main_image{
+.main_image {
     width: 100%;
     height: auto;
 }

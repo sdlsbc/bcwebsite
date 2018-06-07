@@ -53,10 +53,6 @@ function createPost(body){
 	let div = document.createElement('div');
 	div.classList.add('rcorners');
 
-	// let publisher_name = document.createElement('name');
-	// publisher_name.src = body.publisher.profile_name;
-	// publisher_name.classList.add('publisher_name');
-
 	let publisher_image = document.createElement('img');
 	if(body.publisher.profile_image == "http://app.bwayconnected.com/public/images/default.jpg"){
 		publisher_image.src = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"
@@ -68,10 +64,26 @@ function createPost(body){
 	div.appendChild(publisher_image);
 	div.appendChild(document.createElement('br'));
 
-	// div.appendChild(publisher_name);
-	// div.appendChild(document.createElement('br'));
 
-	let center1 = document.createElement('center');
+	
+
+	// let social = document.createElement('img');
+	// social_images.classList.add('social_images')
+	// social.appendChild(social_images);
+	// div.appendChild(social);
+
+	// var img_div = document.createElement('img');
+ //  img_div.src = "../images/fbicon.png";
+
+ //  var src = document.querySelectorAll("rcorners");
+ //  src.appendChild(img_div);
+
+
+
+
+
+
+  let center1 = document.createElement('center');
 
 	let main_image = document.createElement('img');
 	main_image.src = body.post_image;

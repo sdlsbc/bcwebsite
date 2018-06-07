@@ -79,6 +79,21 @@ body {
     flex-wrap: nowrap;
 }
 
+#loading{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 5;
+    width: 15%;
+    height: 6%;
+    background-color:rgba(0,0,0,0.5); 
+    border-radius: 18px;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
 @media only screen and (max-width: 700px) {
   .rcorners {
     width: 330px;

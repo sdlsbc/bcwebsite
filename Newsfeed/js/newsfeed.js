@@ -4,6 +4,7 @@ var wait = false;
 function loadAndShowPosts(){
 	console.log("in loadandshow")
 	wait = true;
+	document.getElementById('loading').classList.remove('hidden');
 	getPostsItems()
 	.then(newsRaw => {
 		//console.log(newsRaw)
@@ -14,6 +15,7 @@ function loadAndShowPosts(){
 		if(fetchCount > 1){
 			window.scrollBy({ top: 40, behavior: "smooth"});
 		}
+		document.getElementById('loading').classList.add('hidden');
 	})
 
 }

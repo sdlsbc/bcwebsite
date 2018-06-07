@@ -6,13 +6,13 @@
 
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 
-  
-	<link rel="stylesheet" href="./stylesheets/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="./stylesheets/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="stylesheets/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="stylesheets/style.css"> <!-- Resource style -->
 	
-  	
 	<title>Broadway Connected</title>
+
 </head>
+
 <body>
 	<header class="cd-main-header">
 		<img onclick="run()" class="logo" src="images/bc_solo_logo.png" alt="logo" width="360" height="60">
@@ -56,7 +56,7 @@
 					</p>
 
 					<p class="cd-signin-modal__fieldset">
-						<input class="cd-signin-modal__input cd-signin-modal__input--full-width" type="submit" value="Login">
+						<input class="cd-signin-modal__input cd-signin-modal__input--full-width" type="submit" value="Login" onclick="signin()">
 					</p>
 				</form>
 				
@@ -90,7 +90,7 @@
 					</p>
 
 					<p class="cd-signin-modal__fieldset">
-						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding" type="submit" value="Create account">
+						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding" type="submit" value="Create account" onclick="register()">
 					</p>
 				</form>
 			</div> <!-- cd-signin-modal__block -->
@@ -121,7 +121,7 @@
         <div class="centered2"> Connecting the World Of Theater, while increasing collaboration and improving efficiency</div>
     </div>
       
-
+<script src="./javascript/register.js"></script> <!-- Resource JavaScript -->
 <script src="./javascript/placeholders.min.js"></script> <!-- polyfill for the HTML5 placeholder attribute -->
 <script src="./javascript/main.js"></script> <!-- Resource JavaScript -->
 

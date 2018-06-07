@@ -39,14 +39,15 @@ body {
 }
 
 #postsbox {
-   background-color:#F0F8FF;
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   justify-content: space-evenly;
-   align-content: space-around;
-   height: auto;
-   overflow: hidden;
+    background-color:#F0F8FF;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 20px;
 }
 .rcorners{
   width:279px;

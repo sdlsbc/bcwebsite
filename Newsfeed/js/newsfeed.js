@@ -1,6 +1,20 @@
 var fetchCount = 0;
 var wait = false;
 
+function checkLocalStorage(){
+	//if (localStorage.getItem("user_id") == null)
+	//{
+		//alert("Please Sign Up First");
+		 //redirect to login page
+
+		//window.location.href = "../../index.html";
+
+	//}else{
+		//local storage value"+localStorage.getItem("user_id");
+		loadAndShowPosts();
+	//}
+}
+
 function loadAndShowPosts(){
 	console.log("in loadandshow")
 	wait = true;
@@ -14,8 +28,6 @@ function loadAndShowPosts(){
 	}).then(res => {
 		if(fetchCount > 1){
 			window.scrollBy({ top: 40, behavior: "smooth"});
-		} else {
-			loadAndShowPosts();
 		}
 		document.getElementById('loading').classList.add('hidden');
 	})

@@ -55,11 +55,17 @@ body {
   border-radius:10px;
   margin: 10px;
   font-size:20px;
+  z-index: 1;
+  /*display: none;*/
 }
 .rcorners:hover {
-    background: linear-gradient(#0080FF 10%, white 50%, white);
-    color: white;
+  background: linear-gradient(#0080FF 10%, white 50%, white);
+  color: white;
+  z-index: 1;
+  /*display: block;*/ 
 }
+
+
 @media only screen and (max-width: 700px) {
   .rcorners {
     width: 330px;
@@ -92,9 +98,6 @@ body {
     width: 100%;
     height: auto;
 }
-
-
-
 
 
 .topright{

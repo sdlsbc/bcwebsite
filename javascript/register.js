@@ -25,7 +25,7 @@ fetch(url, {
 .then(response =>{
 
     // check if sign up successful
-    if(response.Response == 1000)
+    if(response.Response == "1000")
     {
         alert("User Already Exists");
     }else{
@@ -42,7 +42,6 @@ fetch(url, {
             alert("cookie not found ");
         }
     }
-    
 })
 
 }
@@ -72,15 +71,13 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-	
     var user=getCookie("user_id");
     if (user != "") {
         alert("Welcome again " + user);
+        var currentLocation = window.location;
+        var url = currentLocation+"/newsfeed.html";
+        window.location.href = url ;
     } else {
-    //    user = prompt("Please enter your name:","");
-    //    if (user != "" && user != null) {
-    //        setCookie("username", user, 30);
-    //    }
     alert("No cookies yet");
     }
 }

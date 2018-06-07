@@ -8,10 +8,14 @@ function loadAndShowPosts(){
 	.then(newsRaw => {
 		//console.log(newsRaw)
 		newsRaw.forEach(element => 
-			
 			createPost(element)
 		);
+	}).then(res => {
+		if(fetchCount > 1){
+			window.scrollBy({ top: 40, behavior: "smooth"});
+		}
 	})
+
 }
 
 function getPostsItems(){
@@ -85,7 +89,7 @@ function createPost(body){
 window.onscroll = function(ev) {
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
         if(!wait){
-        	loadAndShowPosts();
+        	loadAndShowPosts()
         }
     }
 };

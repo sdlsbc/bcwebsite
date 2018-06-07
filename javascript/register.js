@@ -47,7 +47,7 @@ fetch(url, {
             alert("not saved locally");
         }else{
 
-            window.location.href = "../Newsfeed/newsfeed.html";
+            window.location.href = "Newsfeed/newsfeed.html";
         }
     }
 })
@@ -102,7 +102,7 @@ var data = {
             alert("not saved locally");
         }else{
             // alert(localStorage.getItem("user_id"));
-            window.location.href = "../Newsfeed/newsfeed.html";
+            window.location.href = "Newsfeed/newsfeed.html";
         }
     }
 })

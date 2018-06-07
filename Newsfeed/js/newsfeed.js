@@ -65,23 +65,6 @@ function createPost(body){
 	div.appendChild(document.createElement('br'));
 
 
-	
-
-	// let social = document.createElement('img');
-	// social_images.classList.add('social_images')
-	// social.appendChild(social_images);
-	// div.appendChild(social);
-
-	// var img_div = document.createElement('img');
- //  img_div.src = "../images/fbicon.png";
-
- //  var src = document.querySelectorAll("rcorners");
- //  src.appendChild(img_div);
-
-
-
-
-
 
   let center1 = document.createElement('center');
 
@@ -94,12 +77,20 @@ function createPost(body){
 	let button_div = document.createElement('div');
 	button_div.classList.add('button_row');
 	let fav_button = document.createElement('img');
-	fav_button.src = '../images/newsfeed_buttons/favorite-heart-button-3@2x.png';
+	fav_button.src = '../images/newsfeed_buttons/heart2.png';
 	button_div.appendChild(fav_button);
 
 	let share_button = document.createElement('img');
-	share_button.src = '../images/newsfeed_buttons/share@2x.png';
+	share_button.src = '../images/newsfeed_buttons/share.png';
 	button_div.appendChild(share_button)
+
+	let flag_button = document.createElement('img');
+	flag_button.src = '../images/newsfeed_buttons/flag.png';
+	button_div.appendChild(flag_button);
+
+	let comment_button = document.createElement('img');
+	comment_button.src = '../images/newsfeed_buttons/comment.png';
+	button_div.appendChild(comment_button);
 
 	div.appendChild(button_div);
 

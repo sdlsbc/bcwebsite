@@ -4,13 +4,13 @@ var wait = false;
 function checkLocalStorage(){
 	//if (localStorage.getItem("user_id") == null)
 	//{
-		alert("Please Sign Up First");
-		// redirect to login page
+		//alert("Please Sign Up First");
+		 //redirect to login page
 
-		//window.location.href = "file:///C:/Users/Ankita%20Mhatre/Documents/BC-repo/bcwebsite/index.html";
+		//window.location.href = "../../index.html";
 
 	//}else{
-		// local storage value"+localStorage.getItem("user_id");
+		//local storage value"+localStorage.getItem("user_id");
 		loadAndShowPosts();
 	//}
 }

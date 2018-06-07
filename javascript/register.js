@@ -47,7 +47,7 @@ fetch(url, {
             alert("not saved locally");
         }else{
 
-            window.location.href = "file:///C:/Users/Ankita%20Mhatre/Documents/BC-repo/bcwebsite//Newsfeed/newsfeed.html";
+            window.location.href = "../Newsfeed/newsfeed.html";
         }
     }
 })
@@ -102,7 +102,7 @@ var data = {
             alert("not saved locally");
         }else{
             // alert(localStorage.getItem("user_id"));
-            window.location.href = "file:///C:/Users/Ankita%20Mhatre/Documents/BC-repo/bcwebsite//Newsfeed/newsfeed.html";
+            window.location.href = "../Newsfeed/newsfeed.html";
         }
     }
 })
@@ -113,5 +113,5 @@ var data = {
 function signout(){
     localStorage.clear();
     alert("Logged out");
-    window.location.href = "file:///C:/Users/Ankita%20Mhatre/Documents/BC-repo/bcwebsite/index.html";
+    window.location.href = "../index.html";
 }

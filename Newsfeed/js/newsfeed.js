@@ -53,6 +53,10 @@ function createPost(body){
 	let div = document.createElement('div');
 	div.classList.add('rcorners');
 
+	// let publisher_name = document.createElement('name');
+	// publisher_name.src = body.publisher.profile_name;
+	// publisher_name.classList.add('publisher_name');
+
 	let publisher_image = document.createElement('img');
 	if(body.publisher.profile_image == "http://app.bwayconnected.com/public/images/default.jpg"){
 		publisher_image.src = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"
@@ -63,6 +67,9 @@ function createPost(body){
 
 	div.appendChild(publisher_image);
 	div.appendChild(document.createElement('br'));
+
+	// div.appendChild(publisher_name);
+	// div.appendChild(document.createElement('br'));
 
 	let center1 = document.createElement('center');
 
@@ -77,6 +84,12 @@ function createPost(body){
 	title.appendChild(titleNode);
 	title.classList.add('title');
 	div.appendChild(title);
+
+	let description = document.createElement('p');
+	let descriptionNode = document.createTextNode(body.description);
+	description.appendChild(descriptionNode);
+	description.classList.add('description');
+	div.appendChild(description);
 
 	document.getElementById('postsbox').appendChild(div);
 

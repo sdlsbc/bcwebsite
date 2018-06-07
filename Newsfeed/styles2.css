@@ -3,7 +3,6 @@
 	padding-bottom:30px;
     padding:10px;
 
-
 			
 }
 .title {
@@ -23,6 +22,11 @@
     font-weight: 100;
     margin-top: -8px;
     margin-left: 4%;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.description:hover {
+    color: white;
 }
 .subarticle{
     font-size:12px;
@@ -34,7 +38,6 @@ body {
     font-family: "Lato", sans-serif;
 }
 
-<<<<<<< HEAD:Newsfeed/styles2.css
 #postsbox {
     background-color:#F0F8FF;
     display: flex;
@@ -44,66 +47,48 @@ body {
     align-content: space-around;
     height: auto;
     overflow: hidden;
-=======
-.rcorners1 {
-    width:279px;
-    background-color:#fff;
-    color: rgb(0, 0, 0);
-    display:block;
-    border-radius:10px;
-    overflow:hidden;
-    font-size:20px;
-
-   
+    padding-top: 20px;
 }
-.rcorners2 {
-    width:279px;
-    background-color:#fff;
-    color: rgb(0, 0, 0);
-    display:block;
-    border-radius:10px;
-    overflow:hidden;
-    font-size:20px;
-    position: absolute;
-   
->>>>>>> 3af00267c214ab331e5b165f946a1f4657bdefbc:stylesheets/styles2.css
-}
-
 .rcorners{
-    width:279px;
+  width:279px;
+  background-color: white;
+  color: black;  
+  border-radius:10px;
+  margin: 10px;
+  font-size:20px;
+}
+.rcorners:hover {
+    background: linear-gradient(#0080FF 10%, white 50%, white);
+    color: white;
+}
+@media only screen and (max-width: 700px) {
+  .rcorners {
+    width: 330px;
     background-color:#fff;
     color: rgb(0, 0, 0);
     
     border-radius:10px;
     margin: 10px;
     font-size:20px;
-<<<<<<< HEAD:Newsfeed/styles2.css
+  }
 }
 
 .publisher_image {
     width: 50px;
     height: auto;
     border-radius: 50%;
-    margin-left: 2%;
-    margin-top: 2%;
-=======
-    position: absolute;
-
+    margin-left: 4%;
+    margin-top: 4%;
 }
 
-.rcorners4 {
-    width:279px;
-    background-color:#fff;
-    color: rgb(0, 0, 0);
-    display:block;
-    border-radius:10px;
-    overflow:hidden;
-    font-size:20px;
-    position: absolute;
-
->>>>>>> 3af00267c214ab331e5b165f946a1f4657bdefbc:stylesheets/styles2.css
+.publisher_name {
+    width: 50px;
+    color: black;
+    height: auto;
+    border-radius: 50%;
+    margin-left: 4%;
+    margin-top: 4%;
 }
-
 .main_image {
     width: 100%;
     height: auto;
@@ -159,7 +144,7 @@ body {
     transition: 0.3s;
 
 }
-.profile {
+.profile{
     text-decoration: none;
     font-size: 13px;
     color: rgb(19, 6, 209);
@@ -170,7 +155,7 @@ body {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 16px;
-    color:gray;
+    color: #818181;
     display: block;
     transition: 0.3s;
 }
@@ -193,4 +178,3 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-

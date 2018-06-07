@@ -6,14 +6,54 @@
 
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 
-  
-	<link rel="stylesheet" href="./stylesheets/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="./stylesheets/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	
-  	
 	<title>Broadway Connected</title>
+
 </head>
-<body>
+
+<!-- <script>
+
+function setCookie(cname,cvalue,exdays) {
+	alert("hi");
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+alert("here");
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+	
+    var user=getCookie("username");
+    if (user != "") {
+        alert("Welcome again " + user);
+    } else {
+       user = prompt("Please enter your name:","");
+       if (user != "" && user != null) {
+           setCookie("username", user, 30);
+       }
+    }
+}
+		</script> -->
+<body onload="checkCookie()">
 	<header class="cd-main-header">
 		<img class="logo" src="images/bc_solo_logo.png" alt="logo" width="360" height="60">
 
@@ -90,7 +130,7 @@
 					</p>
 
 					<p class="cd-signin-modal__fieldset">
-						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding" type="submit" value="Create account">
+						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding" type="submit" value="Create account" onclick="register()">
 					</p>
 				</form>
 			</div> <!-- cd-signin-modal__block -->
@@ -120,9 +160,9 @@
         <div class="centered">Theater: Anywhere, Anytime, For Anyone</div>
         <div class="centered2"> Connecting the World Of Theater, while increasing collaboration and improving efficiency</div>
     </div>
-      
-<script src="./javascript/placeholders.min.js"></script> <!-- polyfill for the HTML5 placeholder attribute -->
-<script src="./javascript/main.js"></script> <!-- Resource JavaScript -->
+	<script src="js/register.js" crossorigin="anonymous"></script>      
+<script src="js/placeholders.min.js"></script> <!-- polyfill for the HTML5 placeholder attribute -->
+<script src="js/main.js"></script> <!-- Resource JavaScript -->
 
 </body>
 </html>

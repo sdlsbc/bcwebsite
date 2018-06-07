@@ -67,10 +67,6 @@ function createPost(body){
 	let div = document.createElement('div');
 	div.classList.add('rcorners');
 
-	// let publisher_name = document.createElement('name');
-	// publisher_name.src = body.publisher.profile_name;
-	// publisher_name.classList.add('publisher_name');
-
 	let publisher_image = document.createElement('img');
 	if(body.publisher.profile_image == "http://app.bwayconnected.com/public/images/default.jpg"){
 		publisher_image.src = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"
@@ -82,16 +78,35 @@ function createPost(body){
 	div.appendChild(publisher_image);
 	div.appendChild(document.createElement('br'));
 
-	// div.appendChild(publisher_name);
-	// div.appendChild(document.createElement('br'));
 
-	let center1 = document.createElement('center');
+
+  let center1 = document.createElement('center');
 
 	let main_image = document.createElement('img');
 	main_image.src = body.post_image;
 	main_image.classList.add('main_image')
 	center1.appendChild(main_image);
 	div.appendChild(center1);
+
+	let button_div = document.createElement('div');
+	button_div.classList.add('button_row');
+	let fav_button = document.createElement('img');
+	fav_button.src = '../images/newsfeed_buttons/heart2.png';
+	button_div.appendChild(fav_button);
+
+	let share_button = document.createElement('img');
+	share_button.src = '../images/newsfeed_buttons/share.png';
+	button_div.appendChild(share_button)
+
+	let flag_button = document.createElement('img');
+	flag_button.src = '../images/newsfeed_buttons/flag.png';
+	button_div.appendChild(flag_button);
+
+	let comment_button = document.createElement('img');
+	comment_button.src = '../images/newsfeed_buttons/comment.png';
+	button_div.appendChild(comment_button);
+
+	div.appendChild(button_div);
 
 	let title = document.createElement('p');
 	let titleNode = document.createTextNode(body.title);

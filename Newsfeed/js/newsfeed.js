@@ -91,6 +91,18 @@ function createPost(body){
 	center1.appendChild(main_image);
 	div.appendChild(center1);
 
+	let button_div = document.createElement('div');
+	button_div.classList.add('button_row');
+	let fav_button = document.createElement('img');
+	fav_button.src = '../images/newsfeed_buttons/favorite-heart-button-3@2x.png';
+	button_div.appendChild(fav_button);
+
+	let share_button = document.createElement('img');
+	share_button.src = '../images/newsfeed_buttons/share@2x.png';
+	button_div.appendChild(share_button)
+
+	div.appendChild(button_div);
+
 	let title = document.createElement('p');
 	let titleNode = document.createTextNode(body.title);
 	title.appendChild(titleNode);

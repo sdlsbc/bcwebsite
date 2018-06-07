@@ -14,6 +14,8 @@ function loadAndShowPosts(){
 	}).then(res => {
 		if(fetchCount > 1){
 			window.scrollBy({ top: 40, behavior: "smooth"});
+		} else {
+			loadAndShowPosts();
 		}
 		document.getElementById('loading').classList.add('hidden');
 	})
@@ -68,7 +70,7 @@ function createPost(body){
 
 
 
-  let center1 = document.createElement('center');
+	let center1 = document.createElement('center');
 
 	let main_image = document.createElement('img');
 	main_image.src = body.post_image;

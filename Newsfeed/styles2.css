@@ -98,14 +98,6 @@ body {
   /*display: block;*/ 
 }
 
-
-/*.button_row{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}*/
-
-
 #loading{
     position: fixed;
     bottom: 5px;
@@ -119,6 +111,12 @@ body {
 
 .hidden{
     visibility: hidden;
+}
+
+.button_row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 .button_row img {

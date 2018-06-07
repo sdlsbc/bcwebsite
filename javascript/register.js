@@ -1,15 +1,14 @@
 function register()
 { 
-    alert("1");
-  var username=document.getElementById('signup-username').value;
-  var email=document.getElementById('signup-email').value;
-   var password=document.getElementById('signup-password').value;
-//    alert(username+"---"+password);
+var email=document.getElementById('signup-email').value;
+var password=document.getElementById('signup-password').value;
+// var fname=document.getElementById('signup-firstname').value;
+// var lname=document.getElementById('signup-lastname').value;
 
 var url = 'http://app.bwayconnected.com/api/register';
 var data = {
-    "email": "poiuy+11@gmail.com",
-    "password": "1234567",
+    "email": email,
+    "password": password,
     "first_name": "A",
     "last_name": "M"
   };
@@ -29,55 +28,90 @@ fetch(url, {
     {
         alert("User Already Exists");
     }else{
-        alert(response.Result.user_id);
+        
         console.log('Success:', response)
-        var user_id_value = response.Result.user_id;
-    
-        setCookie('user_id',user_id_value,7);
-        var xx = getCookie('user_id');
-    
-        if (xx !== "") {
-           alert("cookie saved "+ xx);
+        var id = response.Result.user_id;
+        var first_name = response.Result.first_name;
+        var last_name = response.Result.last_name;
+        var profile_image = response.Result.profile_image;
+        var token = response.Result.token;
+
+        localStorage.setItem("user_id", id);
+        localStorage.setItem("first_name", first_name);
+        localStorage.setItem("last_name", last_name);
+        localStorage.setItem("profile_image", profile_image);
+        localStorage.setItem("token", token);
+
+        if (localStorage.getItem("user_id") == "")
+        {
+            alert("not saved locally");
         }else{
-            alert("cookie not found ");
+
+            window.location.href = "file:///C:/Users/Ankita%20Mhatre/Documents/BC-repo/bcwebsite//Newsfeed/newsfeed.html";
         }
     }
 })
 
 }
-function setCookie(cname,cvalue,exdays) {
-	alert("in set cookie");
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires=" + d.toGMTString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
 
-function getCookie(cname) {
-    alert("in get cookie");
-    var name = cname + "=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
+function signin(){
+
+    var email=document.getElementById('signin-email').value;
+    var password=document.getElementById('signin-password').value;
+
+    // verify email
+    var url = 'http://app.bwayconnected.com/api/login';
+var data = {
+    "email": email,
+    "password": password
+  };
+
+  fetch(url, {
+  method: 'POST', 
+  body: JSON.stringify(data), 
+  headers:{
+    'Content-Type': 'application/json'
+  }
+}).then(res => res.json())
+.catch(error => console.error('Error:', error))
+.then(response =>{
+
+    console.log('Success:', response);
+
+    // check if sign in successful
+    if(response.Response == "1000")
+    {
+        alert("Invalid Credentials");
+    }else{
+
+        console.log('Success:', response);
+        var id = response.Result.user_id;
+        var first_name = response.Result.first_name;
+        var last_name = response.Result.last_name;
+        var profile_image = response.Result.profile_image;
+        var token = response.Result.token;
+
+        localStorage.setItem("user_id", id);
+        localStorage.setItem("first_name", first_name);
+        localStorage.setItem("last_name", last_name);
+        localStorage.setItem("profile_image", profile_image);
+        localStorage.setItem("token", token);
+
+        if (localStorage.getItem("user_id") == "")
+        {
+            alert("not saved locally");
+        }else{
+            // alert(localStorage.getItem("user_id"));
+            window.location.href = "file:///C:/Users/Ankita%20Mhatre/Documents/BC-repo/bcwebsite//Newsfeed/newsfeed.html";
         }
     }
-    return "";
+})
+
+
 }
 
-function checkCookie() {
-    var user=getCookie("user_id");
-    if (user != "") {
-        alert("Welcome again " + user);
-        var currentLocation = window.location;
-        var url = currentLocation+"/newsfeed.html";
-        window.location.href = url ;
-    } else {
-    alert("No cookies yet");
-    }
+function signout(){
+    localStorage.clear();
+    alert("Logged out");
+    window.location.href = "file:///C:/Users/Ankita%20Mhatre/Documents/BC-repo/bcwebsite/index.html";
 }

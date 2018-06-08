@@ -18,7 +18,7 @@
     <!-- <div class="pure-u-1-2"> -->
 
 
-  <button id="myBtn1" type="button" class="button1" data-dismiss="modal"><a class="signin" href="#0" data-signin="login">Sign in</a></button>
+  <button id="myBtn1" type="button" class="button1" data-dismiss="modal"><a class="signin" data-signin="login">Sign in</a></button>
   <!-- The Modal -->
 	<div id="myModal1" class="modal">
 	  <div class="modal-content">
@@ -46,7 +46,7 @@
 						</p>
 
 						<p class="submit">
-							<input class="input-submit" type="submit" value="Login" onclick="signin()">
+							<input class="input-submit" type="button" value="Login" onclick="signin()">
 						</p>
 					</form>
 				
@@ -57,9 +57,9 @@
 	</div>
 
 	<script>
-	var modal = document.getElementById('myModal1');
-  var btn = document.getElementById("myBtn1");
-	var span = document.getElementsByClassName("close")[0];
+	let modal = document.getElementById('myModal1');
+  let btn = document.getElementById("myBtn1");
+	let span = document.getElementsByClassName("close")[0];
 	btn.onclick = function() {
     modal.style.display = "block";
 	}
@@ -106,13 +106,14 @@
 					</p>
 
 					<p class="submit-signin">
-						<input class="input-submit" type="submit" value="Create account" onclick="register()">
+						<input class="input-submit" type="button" value="Create account" onclick="register()">
 					</p>
 	  		</form>
   		</div> 
 		</div>
 	</div>
 </div> 
+
 
 
 <div class="jumbotron">

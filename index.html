@@ -21,8 +21,7 @@
 
   <div id="myModal2" class="modal">
 	  <div class="modal-content">
-	  <a href="#login" class="a-login">Login</a>
-	  <a href="#signup" class="a-signup">Sign Up</a>
+	  <a href="#login" class="a-login">Sign Up</a>
 	  <br><br>
 	    <!-- <span class="close2">&times;</span> -->
       <div class="signin" id="signin" data-type="signup"> 
@@ -68,18 +67,20 @@
   <!-- The Modal -->
 	<div id="myModal1" id="login" class="modal"> 
 	  <div class="modal-content">
-	    <span class="close">&times;</span>
+	  <a href="#login" class="a-login">Login</a>
+	  <br><br>
+	    <!-- <span class="close">&times;</span> -->
 	    <div class="create">
 				<div class="login-create" data-type="login">
 	  			<form class="login-create">
 						<p class="login-email">
-							<label class="label-email" for="signin-email">E-mail</label>
+							<label class="label-email" for="signin-email">E-MAIL</label>
 							<input class="input-email" id="signin-email" type="email" placeholder="E-mail">
 							<span class="input-error">Error message here!</span>
 						</p>
 
-						<p class="label-password">
-							<label class="label-password" for="signin-password">Password</label>
+						<p class="login-password">
+							<label class="label-password" for="signin-password">PASSWORD</label>
 							<input class="input-password" id="signin-password" type="text"  placeholder="Password">
 							<a href="#0" class="hide">Hide</a>
 							<span class="error">Error message here!</span>
@@ -90,7 +91,7 @@
 		  				<label for="remember-me">Remember me</label>
 						</p>
 
-						<p class="submit">
+						<p class="login-submit">
 							<input class="input-submit" type="button" value="Login" onclick="signin()">
 						</p>
 					</form>

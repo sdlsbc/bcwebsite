@@ -84,20 +84,10 @@ body {
     border-radius: 2%;
 }
 .a-login {
-  /*width: 30%;*/
-  float: left;
+  width: 100%;
+  text-align: center;
   color: #326ddc;
-  margin-left: 35%;
-  font-size: 22px;
-  padding-bottom: 10px;
-  text-decoration: none;
-  border-bottom: 2px solid #326ddc;
-}
-.a-signup {
-  /*width: 30%;*/
-  float: right;
-  color: #326ddc;
-  margin-right: 35%;
+  margin-left: 45%;
   font-size: 22px;
   padding-bottom: 10px;
   text-decoration: none;
@@ -219,7 +209,86 @@ body {
   cursor:pointer;
   -webkit-border-radius: 5px;
   border-radius: 25px;
+  color: white;
+  font-weight: 100;
 }
+
+
+
+
+
+/*login*/
+.login-email {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+.login-email label {
+  color: #0080FF;
+  font-size: 14px;
+  margin-left: 25px;
+  font-weight: 100;
+  float: left;
+}
+.login-email input[type=email] {
+  background-color: #E0E0E0;
+  border-radius: 13%/180%;
+  padding-left: 25px;
+  margin-top: 6px;
+  font-size: 14px;
+  border: none;
+  height: 40px;
+  width: 100%;
+  color; gray;
+}
+.login-email span {
+  display: none;
+}
+
+.login-password {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+.login-password label {
+  color: #0080FF;
+  font-size: 14px;
+  margin-left: 25px;
+  font-weight: 100;
+  float: left;
+}
+.login-password input[type=text] {
+  background-color: #E0E0E0;
+  border-radius: 13%/180%;
+  padding-left: 25px;
+  margin-top: 6px;
+  font-size: 14px;
+  border: none;
+  height: 40px;
+  width: 100%;
+  color; gray;
+}
+.login-password span {
+  display: none;
+}
+.login-password a {
+  display: none;
+}
+.login-submit input[type=button] {
+  background-color: #326ddc;
+  padding: 10px; 
+  margin-left: 40%;
+  width: 20%;
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 25px;
+  color: white;
+  font-weight: 100;
+}
+
+
+
 .close {
     color: #aaaaaa;
     float: right;

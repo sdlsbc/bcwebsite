@@ -264,6 +264,11 @@ body {
     transition: 0.3s;
 
 }
+.profile_pic{
+    border-radius: 50%;
+    width: 136px;
+    height: auto;
+}
 .profile{
     text-decoration: none;
     font-size: 13px;

@@ -4,62 +4,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="styles2.css">
 </head>
+<style>   
+  
+    </style>
 <body onload="checkLocalStorage()">
     <!-- sidebar. -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <p> </p>
         
-        <center><img src="../images/mainicon.png"></center>
+        <center id=profile_pic></center>
       
-        <center><p class="navname">John Smith</p></center>
+        <center><p class="navname"></p></center>
         <center><p class="profile">Your Profile</p></center>
         <br/>
-        <a href="#"><img src="../images/rss.png" width="19" height="19">&nbsp&nbspNewsfeed</a>
+        <!-- <a href="#"><img src="../images/rss.png" width="19" height="19">&nbsp&nbspNewsfeed</a>
         <a href="#"><img src="../images/calendar3.png" width="19" height="19">&nbsp&nbspCalendar</a>
         <a href="#"><img src="../images/heart.png" width="19" height="19">&nbsp&nbspMy Favorites</a>
         <a href="#"><img src="../images/compass.png" width="19" height="19">&nbsp&nbspDiscover</a>
         <a href="#"><img src="../images/Camera.png" width="19" height="19">&nbsp&nbspProduction Profiles</a>
         <a href="#"><img src="../images/building.png" width="19" height="19">&nbsp&nbspCompany Profiles</a>
         <a href="#"><img src="../images/briefcase.png" width="19" height="19">&nbsp&nbspBoB Homepage</a>
-        <a href="#"><img src="../images/info.png" width="19" height="19">&nbsp&nbspFAQ &amp Contact Us</a>
+        <a href="#"><img src="../images/info.png" width="19" height="19">&nbsp&nbspFAQ &amp Contact Us</a> -->
     </div>
     
     <!-- sidebar. -->
 <div class="navbar">
 
     <span style="font-size:30px;cursor:pointer" onclick="openNav()"> <img src="../images/side button2.png"  > </span>
-    <img src="../images/bc_solo_logo.png" class="logo">
-    <a href="#"><img class="topright" src="../images/messages.png"></a> 
-    <a href="#"><img class="topright2" src="../images/notifications.png"></a>
-    <a href="#"><img class="topright3" src="../images/settings.png" onclick="signout()"></a>
+    <div style="flex-wrap:wrap">
+        <img src="../images/bc_solo_logo.png" class="logo">
+        <button class="topright3 signout-button" onclick="signout()"  >Sign Out</button>
+    </div>
+
 </div>
 
-   
-    
-   
-    <!--blog posts-->
-    <!--<div id="wrapper">-->
-    <!--
-    <a href="#">
-    <div class="rcorners1">
-        &nbsp<img src="images/icon1.png">   
-        <br/>
-        <center><img src="images/play1.png"/></center> 
-        <center><img src="images/action bar2.png"></center>
-        <p class="article">Title goes here</p>
-        <p class="subarticle"> lorem upsum blah blah blah blah blah</p>
+    <div id="postsbox" class="main">
     </div>
-    </a>
-    -->
-    <div id="postsbox">
-    </div>
-    <!--</div>-->
-    <!--blog posts-->
-   
-  
-    <!-- scripts -->
-   <script>
+
+
+    <img id="loading" class='hidden' src='../images/BCloading.gif'/>
+
+    <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
         }

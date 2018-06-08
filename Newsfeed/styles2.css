@@ -5,7 +5,15 @@
 }
 
 .navbar {
-
+    position: fixed;
+    /* overflow: hidden; */
+    background: white;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.main{
+    margin-top: 50px;
 }
 .navbar span {
   display: flex;
@@ -23,7 +31,7 @@
 .navbar .logo {
   width: 270px; 
   margin-left: 60px; 
-  margin-top: -40px; 
+  margin-top: -30px; 
   margin-bottom: 12px;
 }
 @media screen and (max-width: 700px) {
@@ -132,6 +140,22 @@ body {
     margin-bottom: 21px;
 }
 
+.signout-button {
+    background-color: #2461C6;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    text-align: center;
+    display: inline-block;
+    font-size: 10;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 7px;
+}
+
+
 .button_row{
     display: flex;
     flex-direction: row;
@@ -206,7 +230,7 @@ body {
 }
 .topright3{
     position: absolute;
-    top:25px;
+    top:13px;
     right:20px;
 }
 
@@ -224,7 +248,7 @@ body {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 2;
+    z-index: 4;
     top: 0;
     left: 0;
     background-color: #0d1a26;

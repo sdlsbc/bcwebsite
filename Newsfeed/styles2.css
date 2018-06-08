@@ -119,7 +119,7 @@ body {
     flex-wrap: nowrap;
 }
 
-.button_row img {
+.button {
     weight: 22px;
     height: 22px;
     padding-left: 12px;
@@ -128,13 +128,14 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
 }
-.button_row img:first-child {
+
+.favorite {
     weight: 22px;
     height: 22px;
     padding-left: 12px;
     padding-top: 10px;
 }
-.button_row img:first-child:hover {
+.favorite:hover {
     weight: 22px;
     height: 22px;
     margin-left: 12px;
@@ -144,6 +145,16 @@ body {
     background-color: red;
     overflow: none;
     /*background: linear-gradient(#0080FF 10%, white 45%, white);*/
+}
+.favorite_click{
+    weight: 22px;
+    height: 22px;
+    margin-left: 12px;
+    margin-top: 10px;
+    padding-left: 0px;
+    padding-top: 0px;
+    background-color: red;
+    overflow: none;
 }
 @media only screen and (max-width: 700px) {
   .rcorners {

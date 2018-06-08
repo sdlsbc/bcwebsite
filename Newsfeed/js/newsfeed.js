@@ -18,6 +18,7 @@ function checkLocalStorage(){
 function loadAndShowPosts(){
 	console.log("in loadandshow")
 	wait = true;
+	document.getElementById('loading').classList.remove('hidden');
 	getPostsItems()
 	.then(newsRaw => {
 		//console.log(newsRaw)
@@ -28,8 +29,23 @@ function loadAndShowPosts(){
 		if(fetchCount > 1){
 			window.scrollBy({ top: 40, behavior: "smooth"});
 		}
+		document.getElementById('loading').classList.add('hidden');
 	})
 
+}
+
+function favorite(post_id){
+	//alert("totes fave" + id)
+	let user_id = localStorage.getItem("user_id");
+	let url = "http://app.bwayconnected.com/api/post/favourite?user_id=" + user_id + "&post_id=" + post_id;
+	let params = {
+		headers: {
+			'content-type': 'application/json'
+		},
+		method: 'POST'
+	}
+	return fetch(url, params)
+	.then(res => res.json())
 }
 
 function getPostsItems(){
@@ -53,19 +69,12 @@ function getPostsItems(){
 
 
 function createPost(body){
-	/*let publisher = getPublisher(body.id)
-	.then(publisher => {
-		console.log(publisher)
-		let div = document.createElement('div');
-		let img = document.createElement('img');
-		img.src = publisher.profile_image;
-		img.classList.add('profile');
-		div.appendChild(img);
-		document.body.appendChild(div);
-		console.log(body)
-	})*/
+
 	let div = document.createElement('div');
 	div.classList.add('rcorners');
+
+	let publisher_div = document.createElement('div');
+	publisher_div.classList.add('publisher');
 
 	let publisher_image = document.createElement('img');
 	if(body.publisher.profile_image == "http://app.bwayconnected.com/public/images/default.jpg"){
@@ -74,13 +83,21 @@ function createPost(body){
 		publisher_image.src = body.publisher.profile_image;
 	}
 	publisher_image.classList.add('publisher_image');
-
-	div.appendChild(publisher_image);
-	div.appendChild(document.createElement('br'));
+	publisher_div.appendChild(publisher_image);
 
 
+	let publisher_name = document.createElement('p');
+	publisher_nameText = document.createTextNode(body.publisher.first_name + " " + body.publisher.last_name);
+	publisher_name.classList.add('publisher_name');
 
-  let center1 = document.createElement('center');
+	publisher_name.appendChild(publisher_nameText);
+	publisher_div.appendChild(publisher_name);
+
+	div.appendChild(publisher_div);
+
+
+
+	let center1 = document.createElement('center');
 
 	let main_image = document.createElement('img');
 	main_image.src = body.post_image;
@@ -90,20 +107,44 @@ function createPost(body){
 
 	let button_div = document.createElement('div');
 	button_div.classList.add('button_row');
+
+
+	let user_id = localStorage.getItem("user_id");
 	let fav_button = document.createElement('img');
 	fav_button.src = '../images/newsfeed_buttons/heart2.png';
+	if(body.favourites.some(fav =>  fav.user_id == user_id)){
+		fav_button.classList.add('favorite_click');
+	} else {
+		fav_button.classList.add('button');
+	}
+	fav_button.onclick = function(ev) { 
+		favorite(body.id)
+		.then(body => {
+			if(body.Message === "Added to user favourite successfully"){
+				ev.srcElement.classList.remove('button');
+				ev.srcElement.classList.add('favorite_click');
+			} else {
+				ev.srcElement.classList.add('button');
+				ev.srcElement.classList.remove('favorite_click');
+			}
+		})
+	};
+	fav_button.classList.add('favorite');
 	button_div.appendChild(fav_button);
 
 	let share_button = document.createElement('img');
 	share_button.src = '../images/newsfeed_buttons/share.png';
+	share_button.classList.add('button');
 	button_div.appendChild(share_button)
 
 	let flag_button = document.createElement('img');
 	flag_button.src = '../images/newsfeed_buttons/flag.png';
+	flag_button.classList.add('button');
 	button_div.appendChild(flag_button);
 
 	let comment_button = document.createElement('img');
 	comment_button.src = '../images/newsfeed_buttons/comment.png';
+	comment_button.classList.add('button');
 	button_div.appendChild(comment_button);
 
 	div.appendChild(button_div);

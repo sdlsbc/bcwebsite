@@ -2,7 +2,7 @@ body {
   margin-top: 20px;
   width: 100%;
   background-image: url("../images/Group 3@2x.png");
-  height: 100%; 
+  height: 110%; 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,8 +12,8 @@ body {
   background-color: white;
   width: 101%;
   margin-left: -1%;
-  margin-top: -17px;
-  height: 100px;
+  margin-top: -30px;
+  height: 91px;
 }
 .main-header img {
   margin-top: 35px;
@@ -25,21 +25,37 @@ body {
   border-radius: 25px;
   padding-top: 6px;
   margin-right: 30px;
-  width: 100px;
-  height: 30px; 
+  width: 105px;
+  height: 33px; 
   font-size: 16px;
   float: right;
   border-color: #326ddc;
   font-family: 'Tajawal', sans-serif;
+  text-decoration: none;
 }
 .main-header .button1 {
+  background: #326ddc;
+  color: white;
+}
+.main-header .button1:hover {
   background: white;
-  color: #326ddc;
+  color: white;
+}
+.main-header .button1 a {
+  text-decoration: none;
+  /*color: white;*/
 }
 .main-header .button2 {
   background: #326ddc;
   color: white;
-  
+}
+.main-header .button2 a {
+  text-decoration: none;
+  /*color: white;*/
+}
+.main-header .button2:hover {
+  background: white;
+  color: white;
 }
 .logo-image{
   width: 270px;
@@ -52,19 +68,157 @@ body {
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
-    top: 0;
+    top: 0px;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 .modal-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 40%;
+    margin-bottom: 20px;
+    margin-top: 180px;
+    border-radius: 2%;
+}
+.a-login {
+  /*width: 30%;*/
+  float: left;
+  color: #326ddc;
+  margin-left: 35%;
+  font-size: 22px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  border-bottom: 2px solid #326ddc;
+}
+.a-signup {
+  /*width: 30%;*/
+  float: right;
+  color: #326ddc;
+  margin-right: 35%;
+  font-size: 22px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  border-bottom: 2px solid #326ddc;
+}
+.first_name {
+  width: 50%;
+  float: left;
+}
+.first_name label {
+  color: #0080FF;
+  font-size: 14px;
+  margin-left: 25px;
+  font-weight: 100;
+}
+.first_name input[type=text] {
+  background-color: #E0E0E0;
+  border-radius: 13%/97%;
+  padding-left: 15px;
+  margin-left: 5px;
+  margin-top: 6px;
+  font-size: 14px;
+  border: none;
+  height: 40px;
+  width: 100%;
+  color; gray;
+}
+.first_name span {
+  display: none;
+}
+.last_name {
+  width: 45%;
+  float: right;
+}
+.last_name label {
+  color: #0080FF;
+  font-size: 14px;
+  margin-left: 18px;
+  font-weight: 100;
+}
+.last_name input[type=text] {
+  background-color: #E0E0E0;
+  border-radius: 13%/97%;
+  padding-left: 18px;
+  margin-top: 6px;
+  font-size: 14px;
+  border: none;
+  height: 40px;
+  width: 100%;
+  color; gray;
+}
+.last_name span {
+  display: none;
+}
+
+
+.signin-email {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+.signin-email label {
+  color: #0080FF;
+  font-size: 14px;
+  margin-left: 25px;
+  font-weight: 100;
+  float: left;
+}
+.signin-email input[type=email] {
+  background-color: #E0E0E0;
+  border-radius: 13%/180%;
+  padding-left: 25px;
+  margin-top: 6px;
+  font-size: 14px;
+  border: none;
+  height: 40px;
+  width: 100%;
+  color; gray;
+}
+.signin-email span {
+  display: none;
+}
+
+.signin-password {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+.signin-password label {
+  color: #0080FF;
+  font-size: 14px;
+  margin-left: 25px;
+  font-weight: 100;
+  float: left;
+}
+.signin-password input[type=text] {
+  background-color: #E0E0E0;
+  border-radius: 13%/180%;
+  padding-left: 25px;
+  margin-top: 6px;
+  font-size: 14px;
+  border: none;
+  height: 40px;
+  width: 100%;
+  color; gray;
+}
+.signin-password span {
+  display: none;
+}
+.signin-password a {
+  display: none;
+}
+.signin-submit input[type=submit] {
+  background-color: #326ddc;
+  padding: 10px; 
+  margin-left: 40%;
+  width: 20%;
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 25px;
 }
 .close {
     color: #aaaaaa;
@@ -93,7 +247,7 @@ body {
 .jumbotron{
   background-image: url("images/Group 3@2x.png");
   text-align: center;
-  margin-top: 130px;
+  margin-top: -60px;
 }
 /*.jumbotron-page3 {
   background-image: url("images/Group 3@2x.png");

@@ -27,7 +27,7 @@ function loadProfile(){
 		pic.src = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"
 	} else {
 		pic.src = source;
-	}	
+	}
 
 	div.appendChild(pic);
 

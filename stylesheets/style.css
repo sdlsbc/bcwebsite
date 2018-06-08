@@ -210,7 +210,7 @@ body {
 .signin-password a {
   display: none;
 }
-.signin-submit input[type=submit] {
+.signin-submit input[type=button] {
   background-color: #326ddc;
   padding: 10px; 
   margin-left: 40%;

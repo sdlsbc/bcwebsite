@@ -243,14 +243,13 @@ body {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 4;
+    z-index: 5;
     top: 0;
     left: 0;
     background-color: #0d1a26;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    z-index: 2;
 }
 .navname{
     text-decoration: none;

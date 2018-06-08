@@ -58,7 +58,7 @@
 					</p>
 
 					<p class="signin-submit">
-						<input class="input-submit" type="submit" value="SIGN UP" onclick="register()">
+						<input class="input-submit" type="button" value="SIGN UP" onclick="register()">
 					</p>
 	  		</form>
   		</div> 
@@ -91,7 +91,7 @@
 						</p>
 
 						<p class="submit">
-							<input class="input-submit" type="submit" value="Login" onclick="signin()">
+							<input class="input-submit" type="button" value="Login" onclick="signin()">
 						</p>
 					</form>
 				
@@ -102,9 +102,9 @@
 	</div>
 
 	<script>
-	var modal = document.getElementById('myModal1');
-  var btn = document.getElementById("myBtn1");
-	var span = document.getElementsByClassName("close")[0];
+	let modal = document.getElementById('myModal1');
+  let btn = document.getElementById("myBtn1");
+	let span = document.getElementsByClassName("close")[0];
 	btn.onclick = function() {
     modal.style.display = "block";
 	}
@@ -118,6 +118,7 @@
 	}
 </script>
 </div> 
+
 
 
 <div class="jumbotron">

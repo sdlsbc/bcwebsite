@@ -2,7 +2,7 @@ body {
   margin-top: 20px;
   width: 100%;
   background-image: url("../images/Group 3@2x.png");
-  height: 110%; 
+  height: 100%; 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -88,9 +88,9 @@ body {
   flex-wrap: wrap;
 }
 .main-header span .logo {
-    height: 52px;
-    width: auto;
-    margin-right: -10px;
+  height: 52px;
+  width: auto;
+  margin-right: -10px;
 }
 .main-header span a {
   padding: 8px 8px 8px 32px;
@@ -106,25 +106,26 @@ body {
 }
 
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0px;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  padding-top: auto;
+  left: 0;
+  top: 0px;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
 }
 .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 40%;
-    margin-bottom: 20px;
-    margin-top: 180px;
-    border-radius: 2%;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  margin-top: 275px;
+  border-radius: 2%;
+  height: auto;
+  margin-bottom: 15px;
 }
 .a-login {
   width: 100%;
@@ -283,6 +284,7 @@ hr {
   background-color: #326ddc;
   padding: 12px; 
   margin-left: 40%;
+  margin-bottom: -10px;
   width: 20%;
   border:0 none;
   cursor:pointer;
@@ -296,6 +298,7 @@ hr {
   background-color: #0000CD;
   padding: 12px; 
   margin-left: 40%;
+  margin-bottom: -10px;
   width: 20%;
   border:0 none;
   cursor:pointer;

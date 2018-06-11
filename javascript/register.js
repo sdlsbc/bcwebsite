@@ -3,13 +3,15 @@ function register() {
     var password=document.getElementById('signup-password').value;
     var fname=document.getElementById('signup-firstname').value;
     var lname=document.getElementById('signup-lastname').value;
+    var handle=document.getElementById('signup-handle').value;
 
     var url = 'http://app.bwayconnected.com/api/register';
     var data = {
         "email": email,
         "password": password,
         "first_name": fname,
-        "last_name": lname
+        "last_name": lname,
+        "handle": handle
     };
 
     fetch(url, {
@@ -33,12 +35,14 @@ function register() {
             var last_name = response.Result.last_name;
             var profile_image = response.Result.profile_image;
             var token = response.Result.token;
+            var handle = response.Result.handle;
 
             localStorage.setItem("user_id", id);
             localStorage.setItem("first_name", first_name);
             localStorage.setItem("last_name", last_name);
             localStorage.setItem("profile_image", profile_image);
             localStorage.setItem("token", token);
+            localStorage.setItem("handle",handle);
             console.log(localStorage.getItem("user_id"));
             if (localStorage.getItem("user_id") == "") {
                 alert("not saved locally");

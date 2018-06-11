@@ -16,6 +16,17 @@
     align-items: center;
     flex-wrap: wrap;
 }
+.navbar p {
+    color: #C0C0C0;
+    font-size: 16px;
+    font-weight: 100;
+    margin-left: 25px;
+}
+@media screen and (max-width: 700px) {
+  .navbar p {
+    display: none;
+  }
+}
 .signout {
   display: flex;
   justify-content: flex-end;
@@ -245,7 +256,7 @@ body {
 
 .main_image {
     width: 100%;
-    height: auto;
+    /*height: 20%;*/
 }
 
 

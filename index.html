@@ -90,27 +90,27 @@
 							<input class="input-password" id="signin-password" type="text"  placeholder="Password">
 							<a href="#0" class="hide">Hide</a>
 							<span class="error">Error message here!</span>
-	  				</p>
+						</p>
 
-						<p class="remember-me">
-							<input type="checkbox" id="remember-me" checked class="input-remember">
-		  				<label for="remember-me">Remember me</label>
+						<p class="agree">
+							<input type="checkbox" id="accept-terms" class="input-agree">
+							<label for="accept-terms">I agree to the
+								<a href="#0">Terms</a>
+							</label>
 						</p>
 
 						<p class="login-submit">
 							<input class="input-submit" type="button" value="Login" onclick="signin()">
 						</p>
 					</form>
-				
-					<p class="forgot"><a href="#0" data-signin="reset">Forgot your password?</a></p>
-				</div> 
-			</div> 
-	  </div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<script>
 	let modal = document.getElementById('myModal1');
-  let btn = document.getElementById("myBtn1");
+  	let btn = document.getElementById("myBtn1");
 	let span = document.getElementsByClassName("close")[0];
 	btn.onclick = function() {
     modal.style.display = "block";
@@ -164,12 +164,21 @@
 </script>
 
 
-<br><br><br><br><br><br>
-	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 
-<script src="./javascript/register.js"></script> <!-- Resource JavaScript -->
-    <script src="./javascript/placeholders.min.js"></script> <!-- polyfill for the HTML5 placeholder attribute -->
-    <script src="./javascript/main.js"></script> <!-- Resource JavaScript -->
+
+	<script src="./javascript/register.js"></script>
+	<!-- Resource JavaScript -->
+	<script src="./javascript/placeholders.min.js"></script>
+	<!-- polyfill for the HTML5 placeholder attribute -->
+	<script src="./javascript/main.js"></script>
+	<!-- Resource JavaScript -->
 
 </body>
+
 </html>

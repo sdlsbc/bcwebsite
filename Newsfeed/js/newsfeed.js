@@ -27,7 +27,7 @@ function loadProfile(){
 		pic.src = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"
 	} else {
 		pic.src = source;
-	}	
+	}
 
 	div.appendChild(pic);
 
@@ -88,11 +88,37 @@ function getPostsItems(){
 	})
 }
 
+function showModal(body){
 
+var x = document.getElementsByClassName("modal-header");
+x[0].innerHTML = body.title;
+
+// -----the content-----
+// body.post_image
+// body.publisher.first_name
+// body.publisher.last_name
+// body.publisher.profile_image;
+// body.post_image;
+// body.title
+// body.description
+
+	modal.style.display = "block";
+}
 function createPost(body){
 
 	let div = document.createElement('div');
 	div.classList.add('rcorners');
+
+	// adding modal .click event
+
+	div.onclick = (function() {
+		var currentI = body;
+		return function() { 
+			showModal(currentI);
+		}
+	 })();
+
+	 //adding modal .click end
 
 	let publisher_div = document.createElement('div');
 	publisher_div.classList.add('publisher');

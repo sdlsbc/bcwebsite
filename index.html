@@ -70,7 +70,7 @@
 	  <a href="#login" class="a-login">Login</a>
 	  <hr>
 	  <br>
-	    <!-- <span class="close">&times;</span> -->
+	    <span class="close"></span>
 	    <div class="create">
 				<div class="login-create" data-type="login">
 	  			<form class="login-create">
@@ -151,9 +151,15 @@
     modal2.style.display = "none";
 	}
 	window.onclick = function(event) {
-    console.log("trying to close")
+    modal2.style.display = "none";
     
 	}
+
+	// window.onclick = function(event) {
+ //    if (event.target == modal2) {
+ //        modal2.style.display = "none";
+ //    }
+ //  }
 </script>
 
 

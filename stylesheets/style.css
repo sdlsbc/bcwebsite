@@ -65,6 +65,45 @@ body {
   width: 270px;
   height: 45px;
 }
+.coming-soon {
+  width: 100%;
+  height: auto;
+}
+.coming-soon h1 {
+  color: white;
+  text-align: center;
+  font-weight: 100;
+  margin-top: 20%;
+  font-size: 66px;
+}
+.main-header span {
+  position: fixed;
+  background: white;
+  left: 0px;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main-header span .logo {
+    height: 52px;
+    width: auto;
+    margin-right: -10px;
+}
+.main-header span a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.main-header span a:hover {
+  color: #f1f1f1;
+}
 
 .modal {
     display: none; /* Hidden by default */

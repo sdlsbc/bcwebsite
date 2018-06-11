@@ -170,8 +170,9 @@ function createPost(body){
 
 	div.appendChild(button_div);
 
-	let title = document.createElement('p');
+	let title = document.createElement('a');
 	let titleNode = document.createTextNode(body.title);
+	title.setAttribute('href', "#popup1");
 	title.appendChild(titleNode);
 	title.classList.add('title');
 	div.appendChild(title);
@@ -184,11 +185,33 @@ function createPost(body){
 
 	document.getElementById('postsbox').appendChild(div);
 
-	
-	
 	//img.src = 
 	console.log("in createPost")
 }
+
+function createPopup(body){
+// Title
+let titlex = document.createElement('h2');
+let titleNodex = document.createTextNode(body.title);
+titlex.appendChild(titleNodex);
+titlex.classList.add('titlex');
+div.appendChild(titlex);
+
+// description
+// let description = document.createElement('p');
+// let descriptionNode = document.createTextNode(body.description);
+// description.appendChild(descriptionNode);
+// description.classList.add('description');
+// div.appendChild(description);
+
+// popup
+document.getElementById('popup').appendChild(div);
+//img.src = 
+	console.log("in createPopup")
+}
+
+
+
 
 window.onscroll = function(ev) {
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {

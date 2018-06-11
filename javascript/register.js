@@ -1,15 +1,15 @@
 function register() { 
     var email=document.getElementById('signup-email').value;
     var password=document.getElementById('signup-password').value;
-    // var fname=document.getElementById('signup-firstname').value;
-    // var lname=document.getElementById('signup-lastname').value;
+    var fname=document.getElementById('signup-firstname').value;
+    var lname=document.getElementById('signup-lastname').value;
 
     var url = 'http://app.bwayconnected.com/api/register';
     var data = {
         "email": email,
         "password": password,
-        "first_name": "A",
-        "last_name": "M"
+        "first_name": fname,
+        "last_name": lname
     };
 
     fetch(url, {

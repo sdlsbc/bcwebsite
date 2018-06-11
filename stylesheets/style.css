@@ -29,33 +29,37 @@ body {
   height: 33px; 
   font-size: 16px;
   float: right;
-  border-color: #326ddc;
+  border: 2px solid #326ddc;
   font-family: 'Tajawal', sans-serif;
   text-decoration: none;
 }
 .main-header .button1 {
   background: #326ddc;
-  color: white;
 }
 .main-header .button1:hover {
   background: white;
-  color: white;
 }
 .main-header .button1 a {
   text-decoration: none;
-  /*color: white;*/
+  color: white;
+}
+.main-header .button1:hover a {
+  text-decoration: none;
+  color: #326ddc;
 }
 .main-header .button2 {
   background: #326ddc;
-  color: white;
 }
 .main-header .button2 a {
   text-decoration: none;
-  /*color: white;*/
+  color: white;
 }
 .main-header .button2:hover {
   background: white;
-  color: white;
+}
+.main-header .button2:hover a {
+  text-decoration: none;
+  color: #326ddc;
 }
 .logo-image{
   width: 270px;
@@ -84,28 +88,23 @@ body {
     border-radius: 2%;
 }
 .a-login {
-  /*width: 30%;*/
-  float: left;
+  width: 100%;
+  text-align: center;
   color: #326ddc;
-  margin-left: 35%;
+  margin-left: 45%;
   font-size: 22px;
   padding-bottom: 10px;
   text-decoration: none;
-  border-bottom: 2px solid #326ddc;
 }
-.a-signup {
-  /*width: 30%;*/
-  float: right;
+hr {
+  width: 100%;
+  height: 2px;
   color: #326ddc;
-  margin-right: 35%;
-  font-size: 22px;
-  padding-bottom: 10px;
-  text-decoration: none;
-  border-bottom: 2px solid #326ddc;
 }
 .first_name {
   width: 50%;
   float: left;
+  margin-top: 20px;
 }
 .first_name label {
   color: #0080FF;
@@ -131,6 +130,7 @@ body {
 .last_name {
   width: 45%;
   float: right;
+  margin-top: 20px;
 }
 .last_name label {
   color: #0080FF;
@@ -160,6 +160,7 @@ body {
   text-align: center;
 }
 .signin-email label {
+  margin-top: 10px;
   color: #0080FF;
   font-size: 14px;
   margin-left: 25px;
@@ -187,6 +188,7 @@ body {
   text-align: center;
 }
 .signin-password label {
+  margin-top: 10px;
   color: #0080FF;
   font-size: 14px;
   margin-left: 25px;
@@ -212,14 +214,149 @@ body {
 }
 .signin-submit input[type=button] {
   background-color: #326ddc;
-  padding: 10px; 
+  padding: 12px; 
   margin-left: 40%;
   width: 20%;
   border:0 none;
   cursor:pointer;
   -webkit-border-radius: 5px;
   border-radius: 25px;
+  font-size: 14px;
+  color: white;
+  font-weight: 100;
 }
+.signin-submit input[type=button]:hover {
+  background-color: #0000CD;
+  padding: 12px; 
+  margin-left: 40%;
+  width: 20%;
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 25px;
+  font-size: 14px;
+  color: white;
+  font-weight: 100;
+}
+.signin-agree {
+  margin-left: 3px;
+  font-size: 15px;
+}
+.signin-agree a {
+  font-size: 15px;
+  text-decoration: none;
+  color: #326ddc;
+}
+
+
+
+
+/*login*/
+.login-email {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+.login-email label {
+  color: #0080FF;
+  font-size: 14px;
+  margin-left: 25px;
+  font-weight: 100;
+  float: left;
+}
+.login-email input[type=email] {
+  background-image: url("../images/mail-icon.png");
+  background-position: 4.5% 50%;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  padding-top: 2px;
+
+  background-color: #E0E0E0;
+  border-radius: 13%/180%;
+  padding-left: 57px; 
+  margin-top: 6px;
+  font-size: 14px;
+  border: none;
+  height: 40px;
+  width: 100%;
+  color; gray;
+}
+.login-email span {
+  display: none;
+}
+
+.login-password {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+.login-password label {
+  margin-top: 10px;
+  color: #0080FF;
+  font-size: 14px;
+  margin-left: 25px;
+  font-weight: 100;
+  float: left;
+}
+.login-password input[type=text] {
+  background-image: url("../images/password-icon.png");
+  background-position: 4.5% 50%;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  padding-top: 2px;
+
+  background-color: #E0E0E0;
+  border-radius: 13%/180%;
+  padding-left: 57px;
+  margin-top: 6px;
+  font-size: 14px;
+  border: none;
+  height: 40px;
+  width: 100%;
+  color; gray;
+}
+.login-password span {
+  display: none;
+}
+.login-password a {
+  display: none;
+}
+.login-submit input[type=button] {
+  background-color: #326ddc;
+  padding: 12px; 
+  margin-left: 40%;
+  width: 20%;
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 25px;
+  font-size: 14px;
+  color: white;
+  font-weight: 100;
+}
+.login-submit input[type=button]:hover {
+  background-color: #0000CD;
+  padding: 12px; 
+  margin-left: 40%;
+  width: 20%;
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 25px;
+  color: white;
+  font-size: 14px;
+  font-weight: 100;
+}
+.forgot a {
+  margin-top: 20px;
+  color: #0080FF;;
+  text-align: center;
+  margin-left: 33%;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+
 .close {
     color: #aaaaaa;
     float: right;

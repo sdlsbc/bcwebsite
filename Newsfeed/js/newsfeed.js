@@ -190,23 +190,15 @@ function createPost(body){
 }
 
 function createPopup(body){
-// Title
-let titlex = document.createElement('h2');
-let titleNodex = document.createTextNode(body.title);
-titlex.appendChild(titleNodex);
-titlex.classList.add('titlex');
-div.appendChild(titlex);
 
-// description
-// let description = document.createElement('p');
-// let descriptionNode = document.createTextNode(body.description);
-// description.appendChild(descriptionNode);
-// description.classList.add('description');
-// div.appendChild(description);
 
-// popup
-document.getElementById('popup').appendChild(div);
-//img.src = 
+  let title = document.createElement('p');
+	let titleNode = document.createTextNode(body.title);
+	title.appendChild(titleNode);
+	title.classList.add('title');
+	div.appendChild(title);
+	document.getElementById('popup1').appendChild(div);
+  //img.src = 
 	console.log("in createPopup")
 }
 

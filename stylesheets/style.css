@@ -12,7 +12,7 @@ body {
   background-color: white;
   width: 101%;
   margin-left: -1%;
-  margin-top: -30px;
+  margin-top: -35px;
   height: 91px;
 }
 .main-header img {
@@ -62,8 +62,8 @@ body {
   color: #326ddc;
 }
 .logo-image{
-  width: 270px;
-  height: 45px;
+  width: 300px;
+  height: 55px;
 }
 .coming-soon {
   width: 100%;
@@ -369,10 +369,10 @@ hr {
   float: left;
 }
 .login-password input[type=text] {
-  background-image: url("../images/password-icon.png");
+  background-image: url("../images/lock.png");
   background-position: 4.5% 50%;
   background-repeat: no-repeat;
-  background-size: 18px;
+  background-size: 20px;
   padding-top: 2px;
 
   background-color: #E0E0E0;

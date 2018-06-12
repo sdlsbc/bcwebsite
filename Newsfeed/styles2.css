@@ -264,6 +264,20 @@
   margin-top: -17px;
   margin-right: 8.5%;
 }  
+.clock img {
+  float: right; 
+  width: 30px; 
+  height: 30px; 
+  margin-top: -24px; 
+  margin-right: 17px;
+}
+.share img {
+  float: right; 
+  width: 30px; 
+  height: 30px; 
+  margin-top: -24px; 
+  margin-right: -250px;
+}
 .modal-body {padding: 2px 16px;}
         
 .modal-title  {
@@ -425,8 +439,8 @@
     font-size: 24px;
   }
   .modal-header img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     float: left;
     margin-top: -30px;
@@ -434,26 +448,42 @@
   }
   .modal_h3 {
     font-size: 14px;
-    margin-top: -25px;
-    margin-left: 62px;
+    margin-top: -28px;
+    margin-left: 82px;
     color: gray;
   }
   .modal-date {
     color: gray;
-    float: right;
-    font-size: 16px;
-    margin-top: -7px;
-    margin-right: 8.5%;
+    float: none;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-right: 0px;
+    margin-left: 111px;
   }  
+  .clock img {
+    float: left; 
+    width: 20px; 
+    height: 20px; 
+    margin-top: -19px; 
+    margin-right: 0px;
+    margin-left: 81px;
+  }
+  .share img {
+    float: right; 
+    width: 30px; 
+    height: 30px; 
+    margin-top: -24px; 
+    margin-right: -250px;
+  }
   .modal-body {padding: 2px 16px;}
           
   .modal-title  {
     padding: 2px 16px;
     font-size: 20px;
-    margin-top: 75px;
-    margin-left: 3.5%;
+    margin-top: 55px;
+    margin-left: -1%;
     background-color: white;
-    width: 90%;
+    width: 100%;
     color: #326ddc;
   }
   .modal-description {

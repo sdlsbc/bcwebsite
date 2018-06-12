@@ -157,7 +157,9 @@
   padding: 0;
   border: 1px solid #888;
   width: 80%;
-  height: 180%;
+  height: 80%;
+  overflow: none;
+  overflow-y: scroll; 
   border-radius: 4%/3%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   -webkit-animation-name: animatetop;
@@ -165,7 +167,41 @@
   animation-name: animatetop;
   animation-duration: 0.4s
 }
-        
+    
+/* Let's get this party started */
+/*.modal-content::-webkit-scrollbar {
+    width: 20px;
+}*/
+ 
+/* Track */
+.modal-content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px white; 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar { 
+  width: 70px; 
+} 
+.modal-content::-webkit-scrollbar-thumb { 
+  border: 32px solid #fefefe; 
+  background-clip: padding-box; 
+  -webkit-border-radius: 20px; 
+  background-color: #326ddc;
+}
+ 
+/* Handle */
+/*.modal-content::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #326ddc; 
+    -webkit-box-shadow: inset 0 0 6px gray; 
+}*/
+.modal-content::-webkit-scrollbar-thumb:window-inactive {
+  background: #fefefe; 
+}
+
+
 /* Add Animation */
 @-webkit-keyframes animatetop {
   from {top:-300px; opacity:0} 
@@ -192,11 +228,11 @@
   cursor: pointer;
 }
 .modal-image {
-  margin-left: 10%;
+  margin-left: 8%;
   margin-top: 5.5%;
 }
 .modal-image img {
-  width: 90%;
+  width: 100%;
   height: 360px;
 }
 .modal-header {
@@ -213,12 +249,12 @@
   border-radius: 50%;
   float: left;
   margin-top: -30px;
-  margin-left: 9%;
+  margin-left: 6.3%;
 }
 .modal_h3 {
   font-size: 18px;
   margin-top: -15px;
-  margin-left: 175px;
+  margin-left: 140px;
   color: gray;
 }
 .modal-date {
@@ -226,7 +262,7 @@
   float: right;
   font-size: 16px;
   margin-top: -17px;
-  margin-right: 9%;
+  margin-right: 0%;
 }  
 /*.modal-content .clock {
   float: right;
@@ -239,8 +275,9 @@
   padding: 2px 16px;
   font-size: 28px;
   margin-top: 75px;
-  margin-left: 12.5%;
+  margin-left: 13%;
   background-color: white;
+  width: 80%;
   color: #326ddc;
 }
 .modal-description {
@@ -250,31 +287,12 @@
   margin-left: 11%;
   width: 80%;
   text-align: justify;
+  padding-bottom: 60px;
 }
 
 
 /* Let's get this party started */
-::-webkit-scrollbar {
-    width: 12px;
-}
- 
-/* Track */
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: rgba(0,0,0,0.5); 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-}
-::-webkit-scrollbar-thumb:window-inactive {
-    background: rgba(255,0,0,0.4); 
-}
+
 
 
 

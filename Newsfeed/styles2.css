@@ -13,48 +13,6 @@
   visibility: visible;
   opacity: 1;
 }
-.titlex {
-  font-size: 20px;
-  color: red;
-}
-
-.popup {
-  z-index: 2;
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 30%;
-  position: relative;
-  transition: all 5s ease-in-out;
-}
-
-.popup .titlex h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif;
-}
-.popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
-.popup .close:hover {
-  color: orange;
-}
-.popup .content {
-  max-height: 30%;
-  overflow: auto;
-}
-
-
-
-
 #wrapper {
 	background-color:#ecf2f9;
 	padding-bottom:30px;
@@ -171,6 +129,160 @@
     margin-bottom: 15px;
     overflow: hidden;
 }
+
+
+
+
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+        
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  height: 180%;
+  border-radius: 4%/3%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+        
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+        
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+        
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+        
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-image {
+  margin-left: 10%;
+  margin-top: 5.5%;
+}
+.modal-image img {
+  width: 90%;
+  height: 360px;
+}
+.modal-header {
+  padding: 2px 16px;
+  background-color: white;
+  text-align: center;
+  margin-top: 40px;
+  color: #326ddc;
+  font-size: 24px;
+}
+.modal-header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  float: left;
+  margin-top: -30px;
+  margin-left: 9%;
+}
+.modal_h3 {
+  font-size: 18px;
+  margin-top: -15px;
+  margin-left: 175px;
+  color: gray;
+}
+.modal-date {
+  color: gray;
+  float: right;
+  font-size: 16px;
+  margin-top: -17px;
+  margin-right: 9%;
+}  
+/*.modal-content .clock {
+  float: right;
+  width: 30px;
+  height: 30px;
+}*/
+.modal-body {padding: 2px 16px;}
+        
+.modal-title  {
+  padding: 2px 16px;
+  font-size: 28px;
+  margin-top: 75px;
+  margin-left: 12.5%;
+  background-color: white;
+  color: #326ddc;
+}
+.modal-description {
+  color: dark-gray;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-left: 11%;
+  width: 80%;
+  text-align: justify;
+}
+
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.5); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255,0,0,0.4); 
+}
+
+
+
+
+
+
+
+
 
 
 .subarticle{

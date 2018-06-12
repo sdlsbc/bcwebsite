@@ -90,9 +90,31 @@ function getPostsItems(){
 
 function showModal(body){
 
-var x = document.getElementsByClassName("modal-header");
-x[0].innerHTML = body.title;
+var img_address = body.post_image;
+var post_image = document.getElementsByClassName('modal-image');
+post_image[0].innerHTML = '<img src='+img_address+'>';
 
+var profile_image_address = body.publisher.profile_image;
+var profile_image = document.getElementsByClassName("modal-header");
+profile_image[0].innerHTML = '<img src='+profile_image_address+'>';
+
+var publisher_name = document.getElementsByClassName("modal_h3");
+publisher_name[0].innerHTML = body.publisher.first_name + ' ' + body.publisher.last_name;
+
+var date = document.getElementsByClassName("modal-date");
+date[0].innerHTML = body.published_date;
+
+
+var title = document.getElementsByClassName("modal-title");
+title[0].innerHTML = body.title;
+
+var description = document.getElementsByClassName("modal-description");
+description[0].innerHTML = body.description;
+
+
+
+// let flag_button = document.createElement('img');
+// 	flag_button.src = '../images/newsfeed_buttons/flag.png';
 // -----the content-----
 // body.post_image
 // body.publisher.first_name
@@ -196,9 +218,8 @@ function createPost(body){
 
 	div.appendChild(button_div);
 
-	let title = document.createElement('a');
+	let title = document.createElement('p');
 	let titleNode = document.createTextNode(body.title);
-	title.setAttribute('href', "#popup1");
 	title.appendChild(titleNode);
 	title.classList.add('title');
 	div.appendChild(title);
@@ -213,19 +234,6 @@ function createPost(body){
 
 	//img.src = 
 	console.log("in createPost")
-}
-
-function createPopup(body){
-
-
-  let title = document.createElement('p');
-	let titleNode = document.createTextNode(body.title);
-	title.appendChild(titleNode);
-	title.classList.add('title');
-	div.appendChild(title);
-	document.getElementById('popup1').appendChild(div);
-  //img.src = 
-	console.log("in createPopup")
 }
 
 

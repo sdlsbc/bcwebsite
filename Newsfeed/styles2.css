@@ -229,11 +229,11 @@
   cursor: pointer;
 }
 .modal-image {
-  margin-left: 10%;
+  margin-left: 11%;
   margin-top: 5.5%;
 }
 .modal-image img {
-  width: 100%;
+  width: auto;
   height: 360px;
 }
 .modal-header {
@@ -428,7 +428,7 @@
     margin-top: 5.5%;
   }
   .modal-image img {
-    width: 100%;
+    width: auto;
     height: 180px;
   }
   .modal-header {

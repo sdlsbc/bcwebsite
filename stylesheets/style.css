@@ -29,12 +29,12 @@ body {
   height: 33px; 
   font-size: 16px;
   float: right;
-  border: 2px solid #326ddc;
+  border: 2px solid #1B5AC3;
   font-family: 'Tajawal', sans-serif;
   text-decoration: none;
 }
 .main-header .button1 {
-  background: #326ddc;
+  background: #1B5AC3;
 }
 .main-header .button1:hover {
   background: white;
@@ -45,10 +45,10 @@ body {
 }
 .main-header .button1:hover a {
   text-decoration: none;
-  color: #326ddc;
+  color: #1B5AC3;
 }
 .main-header .button2 {
-  background: #326ddc;
+  background: #1B5AC3;
 }
 .main-header .button2 a {
   text-decoration: none;
@@ -59,7 +59,7 @@ body {
 }
 .main-header .button2:hover a {
   text-decoration: none;
-  color: #326ddc;
+  color: #1B5AC3;
 }
 .logo-image{
   width: 300px;
@@ -130,7 +130,7 @@ body {
 .a-login {
   width: 100%;
   text-align: center;
-  color: #326ddc;
+  color: #1B5AC3;
   margin-left: 45%;
   font-size: 22px;
   padding-bottom: 10px;
@@ -139,7 +139,7 @@ body {
 hr {
   width: 100%;
   height: 2px;
-  color: #326ddc;
+  color: #1B5AC3;
 }
 .first_name {
   width: 50%;
@@ -281,7 +281,7 @@ hr {
   display: none;
 }
 .signin-submit input[type=button] {
-  background-color: #326ddc;
+  background-color: #1B5AC3;
   padding: 12px; 
   margin-left: 40%;
   margin-bottom: -10px;
@@ -315,7 +315,7 @@ hr {
 .signin-agree a {
   font-size: 15px;
   text-decoration: none;
-  color: #326ddc;
+  color: #1B5AC3;
 }
 
 
@@ -392,7 +392,7 @@ hr {
   display: none;
 }
 .login-submit input[type=button] {
-  background-color: #326ddc;
+  background-color: #1B5AC3;
   padding: 12px; 
   margin-left: 40%;
   width: 20%;

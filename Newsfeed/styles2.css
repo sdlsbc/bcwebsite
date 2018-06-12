@@ -156,7 +156,7 @@
   margin: auto;
   padding: 0;
   border: 1px solid #888;
-  width: 80%;
+  width: 60%;
   height: 80%;
   overflow: none;
   overflow-y: scroll; 
@@ -228,7 +228,7 @@
   cursor: pointer;
 }
 .modal-image {
-  margin-left: 8%;
+  margin-left: 10%;
   margin-top: 5.5%;
 }
 .modal-image img {
@@ -249,12 +249,12 @@
   border-radius: 50%;
   float: left;
   margin-top: -30px;
-  margin-left: 6.3%;
+  margin-left: 8.5%;
 }
 .modal_h3 {
   font-size: 18px;
   margin-top: -15px;
-  margin-left: 140px;
+  margin-left: 142px;
   color: gray;
 }
 .modal-date {
@@ -262,7 +262,7 @@
   float: right;
   font-size: 16px;
   margin-top: -17px;
-  margin-right: 6%;
+  margin-right: 8.5%;
 }  
 /*.modal-content .clock {
   float: right;
@@ -277,7 +277,7 @@
   margin-top: 75px;
   margin-left: 10%;
   background-color: white;
-  width: 80%;
+  width: 90%;
   color: #326ddc;
 }
 .modal-description {

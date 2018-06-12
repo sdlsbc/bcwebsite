@@ -104,6 +104,11 @@ publisher_name[0].innerHTML = body.publisher.first_name + ' ' + body.publisher.l
 var date = document.getElementsByClassName("modal-date");
 date[0].innerHTML = body.published_date;
 
+// var now = new Date()
+// var date = now.toLocaleDateString();
+// var time = now.toLocaleTimeString();
+// alert(time)
+
 var title = document.getElementsByClassName("modal-title");
 title[0].innerHTML = body.title;
 

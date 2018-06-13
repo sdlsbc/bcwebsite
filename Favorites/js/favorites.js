@@ -1,5 +1,6 @@
 var fetchCount = 0;
 var wait = false;
+var test = true;
 
 function checkLocalStorage() {
 	//if (localStorage.getItem("user_id") == null)

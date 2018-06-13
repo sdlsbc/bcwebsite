@@ -104,29 +104,16 @@ function showModal(body) {
 	var date = document.getElementsByClassName("modal-date");
 	date[0].innerHTML = body.published_date;
 
-	// var now = new Date()
-	// var date = now.toLocaleDateString();
-	// var time = now.toLocaleTimeString();
-	// alert(time)
+	var dateTime = body.published_date;
+	var dateTime = dateTime.split(" ");
+	var date = dateTime[0];
+	var time = dateTime[1];
 
 	var title = document.getElementsByClassName("modal-title");
 	title[0].innerHTML = body.title;
 
 	var description = document.getElementsByClassName("modal-description");
 	description[0].innerHTML = body.description;
-
-
-
-	// let flag_button = document.createElement('img');
-	// 	flag_button.src = '../images/newsfeed_buttons/flag.png';
-	// -----the content-----
-	// body.post_image
-	// body.publisher.first_name
-	// body.publisher.last_name
-	// body.publisher.profile_image;
-	// body.post_image;
-	// body.title
-	// body.description
 
 	modal.style.display = "block";
 }

@@ -20,6 +20,74 @@ body {
   margin-left: 34px;
   float: left;
 }
+.main-header span {
+  position: fixed;
+  background: white;
+  left: 0px;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main-header span .logo {
+  height: 52px;
+  width: auto;
+  margin-right: -10px;
+}
+.main-header span a {
+  /*padding: 8px 8px 8px 32px;*/
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 40px;
+  margin-left: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.main-header span a:hover {
+  color: #f1f1f1;
+}
+
+@media screen and (max-width: 700px) {
+  .main-header span .logo {
+    height: 50px;
+    width: 91%;
+    text-align: center;
+    /*margin-right: -10px;*/
+  }
+  .main-header {
+    background-color: white;
+    width: 100%;
+    margin-left: 0%;
+    margin-top: -35px;
+    height: 130px;
+    text-align: center;
+  }
+  .main-header img {
+    margin-top: 38px;
+    margin-left: 5%;
+  }
+  .main-header span a {
+    text-decoration: none;
+    margin-top: 0px;
+    text-align: center;
+    width: 7%;
+    left: 27px;
+    padding-left: 30px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .main-header span a:hover {
+    color: #f1f1f1;
+  }
+  .main-header span a p {
+    font-size: 13px;
+  }
+}
+
 .main-header button {
   margin-top: 45px;
   border-radius: 25px;
@@ -33,6 +101,27 @@ body {
   font-family: 'Tajawal', sans-serif;
   text-decoration: none;
 }
+@media screen and (max-width: 700px) {
+  .main-header button {
+    margin-top: -1px;
+    border-radius: 25px;
+    padding-top: 6px;
+    margin-right: 28px;
+    width: 88px;
+    height: 30px;
+    font-size: 14px;
+    border: 2px solid #1B5AC3;
+    font-family: 'Tajawal', sans-serif;
+    text-decoration: none;
+  }
+  .main-header .button1 {
+    margin-left: 20px;
+  }
+  .main-header .button2 {
+    margin-left: 20px;
+  }
+}
+
 .main-header .button1 {
   background: #1B5AC3;
 }
@@ -93,35 +182,6 @@ body {
     margin-top: 80%;
     font-size: 46px;
   }
-}
-.main-header span {
-  position: fixed;
-  background: white;
-  left: 0px;
-  width: 100%;
-  z-index: 3;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.main-header span .logo {
-  height: 52px;
-  width: auto;
-  margin-right: -10px;
-}
-.main-header span a {
-  /*padding: 8px 8px 8px 32px;*/
-  text-decoration: none;
-  font-size: 16px;
-  margin-top: 40px;
-  margin-left: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-.main-header span a:hover {
-  color: #f1f1f1;
 }
 
 .modal {
@@ -446,6 +506,333 @@ hr {
 }
 
 
+
+
+@media screen and (max-width: 700px) { 
+  .modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    padding-top: auto;
+    left: 0;
+    top: 0px;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    margin-top: 275px;
+    border-radius: 2%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  .a-login {
+    width: 100%;
+    text-align: center;
+    color: #1B5AC3;
+    margin-left: 2%;
+    font-size: 22px;
+    padding-bottom: 10px;
+    text-decoration: none;
+  }
+  hr {
+    width: 100%;
+    height: 2px;
+    color: #1B5AC3;
+  }
+  .first_name {
+    width: 50%;
+    float: left;
+    margin-top: 20px;
+  }
+  .first_name label {
+    color: #0080FF;
+    font-size: 14px;
+    margin-left: -30px;
+    font-weight: 100;
+  }
+  .first_name input[type=text] {
+    background-color: #E0E0E0;
+    border-radius: 13%/97%;
+    padding-left: 15px;
+    margin-left: 5px;
+    margin-top: 6px;
+    font-size: 14px;
+    border: none;
+    height: 40px;
+    width: 100%;
+    color; gray;
+  }
+  .first_name span {
+    display: none;
+  }
+  .last_name {
+    width: 45%;
+    float: right;
+    margin-top: 20px;
+  }
+  .last_name label {
+    color: #0080FF;
+    font-size: 14px;
+    margin-left: -30px;
+    font-weight: 100;
+  }
+  .last_name input[type=text] {
+    background-color: #E0E0E0;
+    border-radius: 13%/97%;
+    padding-left: 18px;
+    margin-top: 6px;
+    font-size: 14px;
+    border: none;
+    height: 40px;
+    width: 100%;
+    color; gray;
+  }
+  .last_name span {
+    display: none;
+  }
+  
+  .handle {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .handle label {
+    margin-top: 10px;
+    color: #0080FF;
+    font-size: 14px;
+    margin-left: 25px;
+    font-weight: 100;
+    float: left;
+  }
+  .handle input[type=text] {
+    background-color: #E0E0E0;
+    border-radius: 13%/180%;
+    padding-left: 25px;
+    margin-top: 6px;
+    font-size: 14px;
+    border: none;
+    height: 40px;
+    width: 100%;
+    color; gray;
+  }
+  .handle span {
+    display: none;
+  }
+  
+  
+  .signin-email {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .signin-email label {
+    margin-top: 10px;
+    color: #0080FF;
+    font-size: 14px;
+    margin-left: 25px;
+    font-weight: 100;
+    float: left;
+  }
+  .signin-email input[type=email] {
+    background-color: #E0E0E0;
+    border-radius: 13%/180%;
+    padding-left: 25px;
+    margin-top: 6px;
+    font-size: 14px;
+    border: none;
+    height: 40px;
+    width: 100%;
+    color; gray;
+  }
+  .signin-email span {
+    display: none;
+  }
+  
+  .signin-password {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .signin-password label {
+    margin-top: 10px;
+    color: #0080FF;
+    font-size: 14px;
+    margin-left: 25px;
+    font-weight: 100;
+    float: left;
+  }
+  .signin-password input[type=text] {
+    background-color: #E0E0E0;
+    border-radius: 13%/180%;
+    padding-left: 25px;
+    margin-top: 6px;
+    font-size: 14px;
+    border: none;
+    height: 40px;
+    width: 100%;
+    color; gray;
+  }
+  .signin-password span {
+    display: none;
+  }
+  .signin-password a {
+    display: none;
+  }
+  .signin-submit input[type=button] {
+    background-color: #1B5AC3;
+    padding: 12px; 
+    margin-left: 0%;
+    margin-bottom: -10px;
+    width: 28%;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 25px;
+    font-size: 14px;
+    color: white;
+    font-weight: 100;
+  }
+  .signin-submit input[type=button]:hover {
+    background-color: #0000CD;
+    padding: 12px; 
+    margin-left: 0%;
+    margin-bottom: -10px;
+    width: 28%;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 25px;
+    font-size: 14px;
+    color: white;
+    font-weight: 100;
+  }
+  .signin-agree {
+    margin-left: 3px;
+    font-size: 15px;
+  }
+  .signin-agree a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #1B5AC3;
+  }
+  
+  
+  
+  
+  /*login*/
+  .login-email {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .login-email label {
+    color: #0080FF;
+    font-size: 14px;
+    margin-left: 25px;
+    font-weight: 100;
+    float: left;
+  }
+  .login-email input[type=email] {
+    background-image: url("../images/mail-icon.png");
+    background-position: 4.5% 50%;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    padding-top: 2px;
+  
+    background-color: #E0E0E0;
+    border-radius: 13%/180%;
+    padding-left: 57px; 
+    margin-top: 6px;
+    font-size: 14px;
+    border: none;
+    height: 40px;
+    width: 100%;
+    color; gray;
+  }
+  .login-email span {
+    display: none;
+  }
+  
+  .login-password {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .login-password label {
+    margin-top: 10px;
+    color: #0080FF;
+    font-size: 14px;
+    margin-left: 25px;
+    font-weight: 100;
+    float: left;
+  }
+  .login-password input[type=text] {
+    background-image: url("../images/lock.png");
+    background-position: 4.5% 50%;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    padding-top: 2px;
+  
+    background-color: #E0E0E0;
+    border-radius: 13%/180%;
+    padding-left: 57px;
+    margin-top: 6px;
+    font-size: 14px;
+    border: none;
+    height: 40px;
+    width: 100%;
+    color; gray;
+  }
+  .login-password span {
+    display: none;
+  }
+  .login-password a {
+    display: none;
+  }
+  .login-submit input[type=button] {
+    background-color: #1B5AC3;
+    padding: 12px; 
+    margin-left: 0%;
+    margin-bottom: -10px;
+    width: 28%;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 25px;
+    font-size: 14px;
+    color: white;
+    font-weight: 100;
+  }
+  .login-submit input[type=button]:hover {
+    background-color: #0000CD;
+    padding: 12px; 
+    margin-left: 0%;
+    width: 28%;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 25px;
+    color: white;
+    font-size: 14px;
+    font-weight: 100;
+  }
+  .forgot a {
+    margin-top: 20px;
+    color: #0080FF;;
+    text-align: center;
+    margin-left: 33%;
+    text-decoration: none;
+    font-size: 18px;
+  }
+}
+
+
 .close {
     color: #aaaaaa;
     float: right;
@@ -486,6 +873,8 @@ hr {
   width: 22%;
   margin-left: 20px;
 }
+
+
 p.big {
   font-weight: 100;
   text-align: center;
@@ -501,3 +890,51 @@ p.small {
   font-size: 24px;
   font-family: 'Tajawal', sans-serif;
 }
+
+
+
+
+
+@media screen and (max-width: 700px) {
+  .jumbotron{
+    background-image: url("images/Group 3@2x.png");
+    text-align: center;
+    margin-top: -100px;
+    height: 100%;
+  }
+  /*.jumbotron-page3 {
+    background-image: url("images/Group 3@2x.png");
+    text-align: center;
+    margin-top: 130px;
+  }*/
+  .jumbotron-page3 img {
+    text-align: center;
+    margin-top: 25px;
+    width: 22%;
+    margin-left: 20px;
+  }
+  p.big {
+    font-weight: 100;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    width: 90%;
+    margin-left: 4%;
+    font-family: 'Tajawal', sans-serif;
+  }
+  p.small {
+    font-weight: 100;
+    margin-top: -20px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    width: 96%;
+    margin-left: 2%;
+    font-family: 'Tajawal', sans-serif;
+  }
+}
+
+
+
+
+

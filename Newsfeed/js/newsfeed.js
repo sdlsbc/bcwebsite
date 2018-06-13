@@ -1,7 +1,7 @@
 var fetchCount = 0;
 var wait = false;
 
-function checkLocalStorage() {
+function checkLocalStorage(page) {
 	//if (localStorage.getItem("user_id") == null)
 	//{
 	//alert("Please Sign Up First");
@@ -11,10 +11,53 @@ function checkLocalStorage() {
 
 	//}else{
 	//local storage value"+localStorage.getItem("user_id");
-	loadAndShowPosts();
+	loadAndShowPosts(page);
 	//}
 	loadProfile();
 
+}
+
+function loadAndShowPosts(page) {
+	console.log("in loadandshow")
+	wait = true;
+	document.getElementById('loading').classList.remove('hidden');
+	getPostsItems(page)
+		.then(newsRaw => {
+			//console.log(newsRaw)
+			newsRaw.forEach(element =>
+				createPost(element)
+			);
+		}).then(res => {
+			if (fetchCount > 1) {
+				window.scrollBy({ top: 40, behavior: "smooth" });
+			}
+			document.getElementById('loading').classList.add('hidden');
+		})
+}
+
+function getPostsItems(page) {
+	let url = "";
+	if(page == 'new'){
+		url = "http://app.bwayconnected.com/api/posts?offset=" + (12 * fetchCount) + "&limit=12";
+	}
+	if(page == 'fav'){
+		let user_id = localStorage.getItem("user_id");
+		url = "http://app.bwayconnected.com/api/post/favourites?user_id=" + user_id + "&offset=" + (12 * fetchCount) + "&limit=12";
+	}
+	fetchCount += 1;
+	//url = url + offset;
+	let params = {
+		headers: {
+			'content-type': 'application/json'
+		},
+		method: 'GET'
+	}
+	return fetch(url, params)
+		.then(res => res.json())
+		.then(body => {
+			wait = false;
+			return body.Result.Posts;
+		})
 }
 
 function loadProfile() {
@@ -36,24 +79,6 @@ function loadProfile() {
 	namep.appendChild(name);
 }
 
-function loadAndShowPosts() {
-	console.log("in loadandshow")
-	wait = true;
-	document.getElementById('loading').classList.remove('hidden');
-	getPostsItems()
-		.then(newsRaw => {
-			//console.log(newsRaw)
-			newsRaw.forEach(element =>
-				createPost(element)
-			);
-		}).then(res => {
-			if (fetchCount > 1) {
-				window.scrollBy({ top: 40, behavior: "smooth" });
-			}
-			document.getElementById('loading').classList.add('hidden');
-		})
-
-}
 
 function favorite(post_id) {
 	//alert("totes fave" + id)
@@ -69,24 +94,7 @@ function favorite(post_id) {
 		.then(res => res.json())
 }
 
-function getPostsItems() {
 
-	let url = "http://app.bwayconnected.com/api/posts?offset=" + (12 * fetchCount) + "&limit=12";
-	fetchCount += 1;
-	//url = url + offset;
-	let params = {
-		headers: {
-			'content-type': 'application/json'
-		},
-		method: 'GET'
-	}
-	return fetch(url, params)
-		.then(res => res.json())
-		.then(body => {
-			wait = false;
-			return body.Result.Posts;
-		})
-}
 
 function showModal(body) {
 

@@ -33,8 +33,6 @@
 body {
     font-family: "Lato", sans-serif;
 }
-
-<<<<<<< HEAD:Newsfeed/styles2.css
 #postsbox {
     background-color:#F0F8FF;
     display: flex;
@@ -44,7 +42,7 @@ body {
     align-content: space-around;
     height: auto;
     overflow: hidden;
-=======
+}
 .rcorners1 {
     width:279px;
     background-color:#fff;
@@ -65,19 +63,15 @@ body {
     overflow:hidden;
     font-size:20px;
     position: absolute;
-   
->>>>>>> 3af00267c214ab331e5b165f946a1f4657bdefbc:stylesheets/styles2.css
 }
 
 .rcorners{
     width:279px;
     background-color:#fff;
     color: rgb(0, 0, 0);
-    
     border-radius:10px;
     margin: 10px;
     font-size:20px;
-<<<<<<< HEAD:Newsfeed/styles2.css
 }
 
 .publisher_image {
@@ -86,7 +80,6 @@ body {
     border-radius: 50%;
     margin-left: 2%;
     margin-top: 2%;
-=======
     position: absolute;
 
 }
@@ -100,9 +93,6 @@ body {
     overflow:hidden;
     font-size:20px;
     position: absolute;
-
->>>>>>> 3af00267c214ab331e5b165f946a1f4657bdefbc:stylesheets/styles2.css
-}
 
 .main_image {
     width: 100%;

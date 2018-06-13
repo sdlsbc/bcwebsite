@@ -161,8 +161,6 @@ function createPost(body) {
 
 	div.appendChild(publisher_div);
 
-
-
 	let center1 = document.createElement('center');
 
 	// adding modal .click event

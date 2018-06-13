@@ -108,6 +108,7 @@ function showModal(body) {
 	var dateTime = dateTime.split(" ");
 	var date = dateTime[0];
 	var time = dateTime[1];
+	alert("Date "+date+" Time "+time);
 
 	var title = document.getElementsByClassName("modal-title");
 	title[0].innerHTML = body.title;

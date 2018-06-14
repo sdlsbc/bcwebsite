@@ -302,25 +302,40 @@
   color: gray;
 }
 .modal-date {
-  color: gray;
-  float: right;
-  font-size: 16px;
   margin-top: -17px;
-  margin-right: 8.5%;
-}  
+  font-size: 14px;
+  margin-left: 83%;
+  color: gray;
+} 
+.calendar {
+  margin-top: -21px;
+  margin-left: 78%;
+} 
+.calendar img {
+  width: 26px;
+  height: 26px;
+}
+.modal-time {
+  color: gray;
+  margin-left: 67%;
+  margin-top: -25px;
+  font-size: 14px;
+}
+.clock {
+  margin-top: -21px;
+  margin-left: 62%;
+}
 .clock img {
-  float: right; 
-  width: 30px; 
-  height: 30px; 
-  margin-top: -24px; 
-  margin-right: 17px;
+  width: 26px;
+  height: 26px;
+}
+.share {
+  margin-left: 96%;
+  margin-top: -31px;
 }
 .share img {
-  float: right; 
-  width: 30px; 
-  height: 30px; 
-  margin-top: -24px; 
-  margin-right: -250px;
+  width: 26px;
+  height: 26px;
 }
 .modal-body {padding: 2px 16px;}
         
@@ -372,7 +387,7 @@
     background: white;
     height: 90px;
     top: 0;
-    margin-left: -4px;
+    margin-left: -8px;
     width: 100%;
     z-index: 3;
     display: flex;
@@ -489,36 +504,49 @@
     border-radius: 50%;
     float: left;
     margin-top: -30px;
-    margin-left: 3%;
+    margin-left: 1%;
   }
   .modal_h3 {
     font-size: 14px;
     margin-top: -28px;
-    margin-left: 82px;
+    margin-left: 27%;
     color: gray;
   }
   .modal-date {
+    margin-top: 2px;
+    font-size: 12px;
+    margin-left: 71%;
     color: gray;
-    float: none;
-    font-size: 14px;
-    margin-top: 5px;
-    margin-right: 0px;
-    margin-left: 111px;
-  }  
+  } 
+  .calendar {
+    margin-top: -15px;
+    margin-left: 62%;
+  } 
+  .calendar img {
+    width: 16px;
+    height: 16px;
+  }
+  .modal-time {
+    color: gray;
+    margin-left: 36%;
+    margin-top: -19px;
+    font-size: 12px;
+  }
+  .clock {
+    margin-top: -14px;
+    margin-left: 27.5%;
+  }
   .clock img {
-    float: left; 
-    width: 20px; 
-    height: 20px; 
-    margin-top: -19px; 
-    margin-right: 0px;
-    margin-left: 81px;
+    width: 16px;
+    height: 16px;
+  }
+  .share {
+    margin-left: 27%;
+    margin-top: 1px;
   }
   .share img {
-    float: right; 
-    width: 30px; 
-    height: 30px; 
-    margin-top: -24px; 
-    margin-right: -250px;
+    width: 16px;
+    height: 16px;
   }
   .modal-body {padding: 2px 16px;}
           

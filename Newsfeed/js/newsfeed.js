@@ -109,14 +109,17 @@ function showModal(body) {
 	var publisher_name = document.getElementsByClassName("modal_h3");
 	publisher_name[0].innerHTML = body.publisher.first_name + ' ' + body.publisher.last_name;
 
-	var date = document.getElementsByClassName("modal-date");
-	date[0].innerHTML = body.published_date;
 
-	var dateTime = body.published_date;
+  var dateTime = body.published_date;
 	var dateTime = dateTime.split(" ");
-	var date = dateTime[0];
+	var date1 = dateTime[0];
 	var time = dateTime[1];
-	alert("Date "+date+" Time "+time);
+	var date = document.getElementsByClassName("modal-date");
+	date[0].innerHTML = date1;
+
+  var date = document.getElementsByClassName("modal-time");
+	date[0].innerHTML = time;
+
 
 	var title = document.getElementsByClassName("modal-title");
 	title[0].innerHTML = body.title;

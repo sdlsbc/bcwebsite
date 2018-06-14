@@ -1,4 +1,5 @@
 body {
+  position: fixed;
   margin-top: 20px;
   width: 100%;
   background-image: url("../images/Group 3@2x.png");
@@ -60,7 +61,7 @@ body {
   .main-header {
     background-color: white;
     width: 100%;
-    margin-left: -3%;
+    margin-left: 0%;
     margin-top: -35px;
     height: 103px;
     text-align: center;
@@ -525,14 +526,13 @@ hr {
     overflow: auto; 
   }
   .modal-content {
-    position: fixed;
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    margin-left: 9px;
-    margin-top: 39%;
+    margin-left: 16px;
+    margin-top: 68%;
     border-radius: 2%;
     height: auto;
     margin-bottom: 15px;

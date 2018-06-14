@@ -1,5 +1,6 @@
 var fetchCount = 0;
 var wait = false;
+var PAGE = "";
 
 function checkLocalStorage(page) {
 	//if (localStorage.getItem("user_id") == null)
@@ -8,20 +9,20 @@ function checkLocalStorage(page) {
 	//redirect to login page
 
 	//window.location.href = "../../index.html";
-
+	PAGE = page;
 	//}else{
 	//local storage value"+localStorage.getItem("user_id");
-	loadAndShowPosts(page);
+	loadAndShowPosts();
 	//}
 	loadProfile();
 
 }
 
-function loadAndShowPosts(page) {
+function loadAndShowPosts() {
 	console.log("in loadandshow")
 	wait = true;
 	document.getElementById('loading').classList.remove('hidden');
-	getPostsItems(page)
+	getPostsItems()
 		.then(newsRaw => {
 			//console.log(newsRaw)
 			newsRaw.forEach(element =>
@@ -35,12 +36,12 @@ function loadAndShowPosts(page) {
 		})
 }
 
-function getPostsItems(page) {
+function getPostsItems() {
 	let url = "";
-	if(page == 'new'){
+	if(PAGE == 'new'){
 		url = "http://app.bwayconnected.com/api/posts?offset=" + (12 * fetchCount) + "&limit=12";
 	}
-	if(page == 'fav'){
+	if(PAGE == 'fav'){
 		let user_id = localStorage.getItem("user_id");
 		url = "http://app.bwayconnected.com/api/post/favourites?user_id=" + user_id + "&offset=" + (12 * fetchCount) + "&limit=12";
 	}
@@ -52,6 +53,7 @@ function getPostsItems(page) {
 		},
 		method: 'GET'
 	}
+
 	return fetch(url, params)
 		.then(res => res.json())
 		.then(body => {

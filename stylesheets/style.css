@@ -179,8 +179,10 @@ body {
     color: white;
     text-align: center;
     font-weight: 100;
-    margin-top: 80%;
-    font-size: 46px;
+    margin-top: 50%;
+    margin-left: 5%;
+    width: 90%;
+    font-size: 36px;
   }
 }
 
@@ -342,7 +344,7 @@ hr {
   font-weight: 100;
   float: left;
 }
-.signin-password input[type=text] {
+.signin-password input[type=password] {
   background-color: #E0E0E0;
   border-radius: 13%/180%;
   padding-left: 25px;
@@ -447,7 +449,7 @@ hr {
   font-weight: 100;
   float: left;
 }
-.login-password input[type=text] {
+.login-password input[type=password] {
   background-image: url("../images/lock.png");
   background-position: 4.5% 50%;
   background-repeat: no-repeat;

@@ -115,12 +115,12 @@ function showModal(body) {
   var dateTime = body.published_date;
 	var dateTime = dateTime.split(" ");
 	var date1 = dateTime[0];
-	var time = dateTime[1];
+	var time1 = dateTime[1];
 	var date = document.getElementsByClassName("modal-date");
 	date[0].innerHTML = date1;
 
-  var date = document.getElementsByClassName("modal-time");
-	date[0].innerHTML = time;
+  var time = document.getElementsByClassName("modal-time");
+	time[0].innerHTML = time1;
 
 
 	var title = document.getElementsByClassName("modal-title");

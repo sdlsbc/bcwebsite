@@ -122,7 +122,7 @@
 }
 
 .open_sidenav {
-  width: 20px;
+  width: 36px;
   font-size: 30px;
   cursor: pointer;
   margin-top: 10px;
@@ -727,12 +727,21 @@ body {
     flex-wrap: nowrap;
 }
 
-.favorite {
-    weight: 22px;
-    height: 22px;
-    padding-left: 12px;
-    padding-top: 10px;
+.fav_likes {
+  weight: 22px;
+  height: 22px;
+  padding-left: 2px;
+  padding-top: 10px;
+  margin-top: 3px;
+  color: red;
 }
+.favorite {
+  weight: 22px;
+  height: 22px;
+  padding-left: 12px;
+  padding-top: 10px;
+}
+
 .favorite:hover {
     weight: 22px;
     height: 22px;

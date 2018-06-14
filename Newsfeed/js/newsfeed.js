@@ -183,7 +183,7 @@ function showModal(body) {
 }
 
 function createPost(body) {
-
+	// console.log(body)
 	let div = document.createElement('div');
 	div.classList.add('rcorners');
 
@@ -261,6 +261,14 @@ function createPost(body) {
 	fav_button.classList.add('favorite');
 	button_div.appendChild(fav_button);
 
+
+  let fav_button_num = document.createElement('p');
+  let fav_button_numNode = document.createTextNode(body.likes);
+  fav_button_num.appendChild(fav_button_numNode);
+  fav_button_num.classList.add('fav_likes');
+  button_div.appendChild(fav_button_num);
+
+  
 	let share_button = document.createElement('img');
 	share_button.src = '../images/newsfeed_buttons/share.png';
 	share_button.classList.add('button');

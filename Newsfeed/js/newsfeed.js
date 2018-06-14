@@ -122,15 +122,44 @@ function showModal(body) {
   var time = document.getElementsByClassName("modal-time");
 	time[0].innerHTML = time1;
 
-
 	var title = document.getElementsByClassName("modal-title");
 	title[0].innerHTML = body.title;
 
 	var description = document.getElementsByClassName("modal-description");
 	description[0].innerHTML = body.description;
 
+
+ //  var url = document.getElementsByClassName("modal-other");
+	// url[0].innerHTML = body.source_url;
+  var url = body.source_url;
+  var url_x = document.getElementById('modal-other');
+  url_x.href = url;
+
+
+
+ //  var img_address = body.post_image;
+	// var post_image = document.getElementsByClassName('modal-image');
+	// post_image[0].innerHTML = '<img src=' + img_address + '>';
+
+
 	modal.style.display = "block";
+ 
+
+ //  fav_button.onclick = function (ev) {
+	// 	favorite(body.id)
+	// 		.then(body => {
+	// 			if (body.Message === "Added to user favourite successfully") {
+	// 				ev.srcElement.classList.remove('button');
+	// 				ev.srcElement.classList.add('favorite_click');
+	// 			} else {
+	// 				ev.srcElement.classList.add('button');
+	// 				ev.srcElement.classList.remove('favorite_click');
+	// 			}
+	// 		})
+	// };
+
 }
+
 function createPost(body) {
 
 	let div = document.createElement('div');

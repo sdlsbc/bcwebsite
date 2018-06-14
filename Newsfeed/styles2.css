@@ -153,10 +153,9 @@
 .title {
   font-size: 14px;
   font-weight:bold;
-  width: 90%;
+  width: 91%;
   margin-left: 4%;
   color: #1B5AC3; 
-  text-align: justify;
   text-decoration: none;
 }
 .description {
@@ -358,6 +357,50 @@
   padding-bottom: 60px;
 }
 
+.signout-button {
+  background-color: #1B5AC3;
+  border: 2px solid #1B5AC3;
+  color: white;
+  padding: 3px 12px;
+  width: 105px;
+  height: 36px;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 25px;
+  margin-right: 45px;
+  font-size: 14px;
+  margin-left: 48%;
+  margin-bottom: 20px;
+}
+.signout-button:hover {
+  background-color: white;
+  border: 2px solid #1B5AC3;
+  color: white;
+  padding: 3px 12px;
+  width: 105px;
+  height: 36px;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 25px;
+  margin-right: 45px;
+  font-size: 14px;
+  margin-left: 48%;
+  margin-bottom: 20px;
+}
+.signout-button a {
+  text-decoration: none;
+  color: white;
+}
+.signout-button a:hover {
+  text-decoration: none;
+  color: blue;
+}
 
 /* Let's get this party started */
 

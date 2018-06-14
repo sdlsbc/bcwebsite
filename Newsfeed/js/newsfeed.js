@@ -116,11 +116,43 @@ function showModal(body) {
 	var dateTime = dateTime.split(" ");
 	var date1 = dateTime[0];
 	var time1 = dateTime[1];
-	var date = document.getElementsByClassName("modal-date");
-	date[0].innerHTML = date1;
 
-  var time = document.getElementsByClassName("modal-time");
-	time[0].innerHTML = time1;
+	var real_date = Date(date1);
+	var real_date = real_date.split(" ");
+	var real_date0 = real_date[0];
+	var real_date1 = real_date[1];
+	var real_date2 = real_date[2];
+	var really_real_date = [real_date0] + " " + [real_date1] + " " + [real_date2];
+
+	var date = document.getElementsByClassName("modal-date");
+	date[0].innerHTML = really_real_date;
+ //  var time = document.getElementsByClassName("modal-time");
+	// time[0].innerHTML = time1;
+   
+  var time_split = time1.split(':');
+  var hours = Number(time_split[0]);
+  var minutes = Number(time_split[1]);
+  var seconds = Number(time_split[2]);
+  
+  var timeValue;
+
+  if (hours > 0 && hours <= 12) {
+    timeValue= "" + hours;
+	} else if (hours > 12) {
+  	timeValue= "" + (hours - 12);
+	} else if (hours == 0) {
+  	timeValue= "12";
+	}
+  
+  timeValue += (minutes < 10) ? ":0" + minutes : ":" + minutes;  // get minutes
+	// timeValue += (seconds < 10) ? ":0" + seconds : ":" + seconds;  // get seconds
+	timeValue += (hours >= 12) ? " P.M." : " A.M.";  // get AM/PM
+
+  var timexxx = document.getElementsByClassName("modal-time");
+	timexxx[0].innerHTML = timeValue;
+
+
+
 
 	var title = document.getElementsByClassName("modal-title");
 	title[0].innerHTML = body.title;
@@ -128,35 +160,25 @@ function showModal(body) {
 	var description = document.getElementsByClassName("modal-description");
 	description[0].innerHTML = body.description;
 
-
- //  var url = document.getElementsByClassName("modal-other");
-	// url[0].innerHTML = body.source_url;
   var url = body.source_url;
   var url_x = document.getElementById('modal-other');
   url_x.href = url;
 
-
-
- //  var img_address = body.post_image;
-	// var post_image = document.getElementsByClassName('modal-image');
-	// post_image[0].innerHTML = '<img src=' + img_address + '>';
-
-
 	modal.style.display = "block";
  
 
- //  fav_button.onclick = function (ev) {
-	// 	favorite(body.id)
-	// 		.then(body => {
-	// 			if (body.Message === "Added to user favourite successfully") {
-	// 				ev.srcElement.classList.remove('button');
-	// 				ev.srcElement.classList.add('favorite_click');
-	// 			} else {
-	// 				ev.srcElement.classList.add('button');
-	// 				ev.srcElement.classList.remove('favorite_click');
-	// 			}
-	// 		})
-	// };
+  fav_button.onclick = function (ev) {
+		favorite(body.id)
+			.then(body => {
+				if (body.Message === "Added to user favourite successfully") {
+					ev.srcElement.classList.remove('button');
+					ev.srcElement.classList.add('favorite_click');
+				} else {
+					ev.srcElement.classList.add('button');
+					ev.srcElement.classList.remove('favorite_click');
+				}
+			})
+	};
 
 }
 

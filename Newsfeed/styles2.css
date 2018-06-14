@@ -357,7 +357,10 @@
   padding-bottom: 60px;
 }
 
-.signout-button {
+.read_more {
+  margin-left: 48%;
+}
+.read_more .signout-button {
   background-color: #1B5AC3;
   border: 2px solid #1B5AC3;
   color: white;
@@ -372,10 +375,10 @@
   border-radius: 25px;
   margin-right: 45px;
   font-size: 14px;
-  margin-left: 48%;
+/*  margin-left: 48%;*/
   margin-bottom: 20px;
 }
-.signout-button:hover {
+.read_more .signout-button:hover {
   background-color: white;
   border: 2px solid #1B5AC3;
   color: white;
@@ -393,15 +396,22 @@
   margin-left: 48%;
   margin-bottom: 20px;
 }
-.signout-button a {
+.read_more .signout-button a {
   text-decoration: none;
   color: white;
+
 }
-.signout-button a:hover {
+
+.read_more .signout-button a:hover {
   text-decoration: none;
   color: blue;
 }
 
+@media screen and (max-width: 700px) {
+  .read_more {
+    margin-left: 36%;
+  }
+}
 /* Let's get this party started */
 
 

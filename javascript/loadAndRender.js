@@ -281,10 +281,41 @@ function createPost(body) {
 
 	let comment_button = document.createElement('img');
 	comment_button.src = '../images/newsfeed_buttons/comment.png';
-	comment_button.classList.add('button');
+	comment_button.classList.add('comment_button');
 	button_div.appendChild(comment_button);
+  
+  let comment_message = document.createElement('div')
+  // comment_message.classList.add('comment_message');
+  button_div.appendChild(comment_message);
+  comment_message.classList.add('hidden')
+
+  comment_button.onclick = function (ev) {
+		// let comment_buttonx = document.getElementsByClassName("comment_message")[0];
+	 //  comment_buttonx.display = "block";
+  //   comment_buttonx.classList.remove('hidden');
+    createCustomAlert("Comments not available, please use IOS app");
+
+
+
+	  // if (comment_buttonx.display = "block") {
+   //    comment_buttonx.classList.remove('hidden');
+   //    comment_buttonx.classList.add('block');
+   //  } else {
+   //  	comment_buttonx.classList.add('hidden');
+   //  	comment_buttonx.classList.remove('block');
+   //  }
+
+	};
+
 
 	div.appendChild(button_div);
+
+	var ALERT_BUTTON_TEXT = "x";
+  if(document.getElementById) {
+    window.alert = function(txt) {
+      createCustomAlert(txt);
+    }
+  }
 
 	let title = document.createElement('p');
 	let titleNode = document.createTextNode(body.title);

@@ -333,8 +333,8 @@
   height: 26px;
 }
 .modal-favorite {
-  margin-left: 26%;
-  margin-top: -4px;
+  margin-left: 94%;
+  margin-top: -33px;
 }
 .modal-favorite img {
   width: 26px;
@@ -423,6 +423,25 @@
 @media screen and (max-width: 700px) {
   .read_more {
     margin-left: 36%;
+  }
+
+
+
+  .modal-favorite {
+    margin-left: 26%;
+    margin-top: -4px;
+  }
+  .modal-favorite img {
+    width: 26px;
+    height: 26px;
+  }
+  .modal-favorite img:hover{
+    background-color: red;
+    overflow: none;
+  }
+  .modal-favorite-clicked{
+    background-color: red;
+    overflow: none;
   }
 }
 /* Let's get this party started */

@@ -164,6 +164,16 @@ function showModal(body) {
 	var url_x = document.getElementById('modal-other');
 	url_x.href = url;
 
+	console.log("url");
+	console.log(url);
+	if (url == "") {
+		document.getElementsByClassName("read_more")[0].style.display = "none";
+	} else {
+		document.getElementsByClassName('read_more')[0].style.display = "block";
+		var url_x = document.getElementById('modal-other');
+		url_x.href = url;
+	}
+
 	modal.style.display = "block";
  
 	let fav_button = document.getElementById('modal-favorite-img')

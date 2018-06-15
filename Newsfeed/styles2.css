@@ -749,18 +749,6 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
 }
-.comment_button:hover{
-  weight: 22px;
-  height: 22px;
-  margin-left: 12px;
-  margin-top: 10px;
-  padding-left: 0px;
-  padding-top: 0px;
-  /*border: 1px solid red;*/
-  background: linear-gradient(white 0%, #1B5AC3 70%, white 15%, white);
-  /*background-color: red;*/
-  overflow: none;
-}
 
 .fav_likes {
   weight: 22px;
@@ -927,6 +915,17 @@ body {
   background-image:url(tp.png); /* required by MSIE to prevent actions on lower z-index elements */
 }
 #alertBox {
+  /*-moz-animation: cssAnimation 0s ease-in 1s forwards;*/
+/*    -webkit-animation: cssAnimation 0s ease-in 1s forwards;*/
+
+   /* -o-animation: cssAnimation 0s ease-in 1s forwards;*/
+    /*animation: cssAnimation 0s ease-in 1s forwards;*/
+    
+    /*-webkit-animation-fill-mode: forwards;*/
+    /*animation-fill-mode: forwards;*/
+
+
+
   position: relative;
   width: 100%;
   min-height: 50px;
@@ -1001,7 +1000,23 @@ code {
 .important {
   background-color:#F5FCC8;
   padding:2px;
-
 }
 
+
+/*
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
+*/
 

@@ -293,38 +293,33 @@ function createPost(body) {
 	share_button.classList.add('button');
 	button_div.appendChild(share_button)
 
+	share_button.onclick = function (ev) {
+    createCustomAlert("Sharing not currently available on web version, please download our IOS app");
+	};
+
 	let flag_button = document.createElement('img');
 	flag_button.src = '../images/newsfeed_buttons/flag.png';
 	flag_button.classList.add('button');
 	button_div.appendChild(flag_button);
 
+	flag_button.onclick = function (ev) {
+    createCustomAlert("Flagged not currently available on web version, please download our IOS app");
+	};
+
 	let comment_button = document.createElement('img');
 	comment_button.src = '../images/newsfeed_buttons/comment.png';
 	comment_button.classList.add('comment_button');
 	button_div.appendChild(comment_button);
-  
-  let comment_message = document.createElement('div')
-  // comment_message.classList.add('comment_message');
-  button_div.appendChild(comment_message);
-  comment_message.classList.add('hidden')
 
-  comment_button.onclick = function (ev) {
-		// let comment_buttonx = document.getElementsByClassName("comment_message")[0];
-	 //  comment_buttonx.display = "block";
-  //   comment_buttonx.classList.remove('hidden');
-    createCustomAlert("Comments not available, please download our IOS app");
+  comment_button.onclick = function(ev) {
+    createCustomAlert("Comments not currently available on web version, please download our IOS app");
+	  //setTimeout(function(){ createCustomAlert("Comments not currently available on web version, please download our IOS app").hide(); }, 1000,);
 
+	  //setTimeout(function () { $("#modalContainer").fadeOut(); }, 5000);
 
-
-	  // if (comment_buttonx.display = "block") {
-   //    comment_buttonx.classList.remove('hidden');
-   //    comment_buttonx.classList.add('block');
-   //  } else {
-   //  	comment_buttonx.classList.add('hidden');
-   //  	comment_buttonx.classList.remove('block');
-   //  }
 
 	};
+
 
 
 	div.appendChild(button_div);
@@ -335,6 +330,9 @@ function createPost(body) {
       createCustomAlert(txt);
     }
   }
+
+
+
 
 	let title = document.createElement('p');
 	let titleNode = document.createTextNode(body.title);

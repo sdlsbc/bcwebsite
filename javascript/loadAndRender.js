@@ -99,7 +99,7 @@ function favorite(post_id) {
 
 
 function showModal(body) {
-
+	let user_id = localStorage.getItem("user_id");
 	var img_address = body.post_image;
 	var post_image = document.getElementsByClassName('modal-image');
 	post_image[0].innerHTML = '<img src=' + img_address + '>';
@@ -160,22 +160,25 @@ function showModal(body) {
 	var description = document.getElementsByClassName("modal-description");
 	description[0].innerHTML = body.description;
 
-  var url = body.source_url;
-  var url_x = document.getElementById('modal-other');
-  url_x.href = url;
+	var url = body.source_url;
+	var url_x = document.getElementById('modal-other');
+	url_x.href = url;
 
 	modal.style.display = "block";
  
+	let fav_button = document.getElementById('modal-favorite-img')
 
-  fav_button.onclick = function (ev) {
+	if (body.favourites.some(fav => fav.user_id == user_id)) {
+		fav_button.classList.add('modal-favorite-clicked');
+	}
+
+	fav_button.onclick = function (ev) {
 		favorite(body.id)
 			.then(body => {
 				if (body.Message === "Added to user favourite successfully") {
-					ev.srcElement.classList.remove('button');
-					ev.srcElement.classList.add('favorite_click');
+					ev.srcElement.classList.add('modal-favorite-clicked');
 				} else {
-					ev.srcElement.classList.add('button');
-					ev.srcElement.classList.remove('favorite_click');
+					ev.srcElement.classList.remove('modal-favorite-clicked');
 				}
 			})
 	};

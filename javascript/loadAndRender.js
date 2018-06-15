@@ -105,6 +105,12 @@ function showModal(body) {
 	post_image[0].innerHTML = '<img src=' + img_address + '>';
 
 	var profile_image_address = body.publisher.profile_image;
+
+	// check if profile picture is default
+	if (profile_image_address == "http://app.bwayconnected.com/public/images/default.jpg") {
+		profile_image_address = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"
+	}
+
 	var profile_image = document.getElementsByClassName("modal-header");
 	profile_image[0].innerHTML = '<img src=' + profile_image_address + '>';
 

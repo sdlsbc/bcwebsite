@@ -333,8 +333,8 @@
   height: 26px;
 }
 .modal-favorite {
-  margin-left: 96%;
-  margin-top: -31px;
+  margin-left: 26%;
+  margin-top: -4px;
 }
 .modal-favorite img {
   width: 26px;
@@ -619,10 +619,10 @@
   .modal-title  {
     padding: 2px 16px;
     font-size: 20px;
-    margin-top: 55px;
-    margin-left: -1%;
+    margin-top: 20px;
+    margin-left: 4%;
     background-color: white;
-    width: 100%;
+    width: 89%;
     color: #1B5AC3;
   }
   .modal-description {

@@ -332,14 +332,23 @@
   width: 26px;
   height: 26px;
 }
-.share {
+.modal-favorite {
   margin-left: 96%;
   margin-top: -31px;
 }
-.share img {
+.modal-favorite img {
   width: 26px;
   height: 26px;
 }
+.modal-favorite img:hover{
+  background-color: red;
+  overflow: none;
+}
+.modal-favorite-clicked{
+  background-color: red;
+  overflow: none;
+}
+
 .modal-body {padding: 2px 16px;}
         
 .modal-title  {

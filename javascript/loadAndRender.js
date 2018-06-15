@@ -306,7 +306,7 @@ function createPost(body) {
 		// let comment_buttonx = document.getElementsByClassName("comment_message")[0];
 	 //  comment_buttonx.display = "block";
   //   comment_buttonx.classList.remove('hidden');
-    createCustomAlert("Comments not available, please use IOS app");
+    createCustomAlert("Comments not available, please download our IOS app");
 
 
 

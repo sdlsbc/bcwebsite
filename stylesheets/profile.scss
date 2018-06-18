@@ -33,39 +33,46 @@
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-}
-.navbar a { text-decoration: none;}
-.navbar a:hover p { text-decoration:none; color:#A9A9A9;}
-.navbar p {
-  color: #C0C0C0;
-  font-size: 16px;
-  font-weight: 100;
-  margin-left: 25px;
-  margin-top: 19px;
+  a { 
+    text-decoration: none;
+    &:hover p { 
+      text-decoration:none; color:#A9A9A9;
+    }
+  }
+  p {
+    color: #C0C0C0;
+    font-size: 16px;
+    font-weight: 100;
+    margin-left: 25px;
+    margin-top: 19px;
+  }
 }
 @media screen and (max-width: 700px) {
-  .navbar a {
-    width: 20%;
-    margin-left: 5px;
+  .navbar { 
+    a {
+      width: 20%;
+      margin-left: 5px;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 100;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
   }
-  .navbar p {
-    font-size: 14px;
-    font-weight: 100;
-    margin-left: 10px;
+
+  .open_sidenav {
+    width: 36px;
+    font-size: 30px;
+    cursor: pointer;
     margin-top: 10px;
   }
-}
-.open_sidenav {
-  width: 36px;
-  font-size: 30px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-.logo {
+  .logo {
     height: 52px;
     width: auto;
     margin-right: -10px;
     margin-top: 3px;
+  }
 }
 
 /* ===================== S I G N  O U T ===================== */
@@ -91,16 +98,16 @@
   border-radius: 25px;
   margin-right: 45px;
   font-size: 14px;
-}
-.profile-signout-button:hover {
-  width: 105px;
-  height: 36px;
-  background-color: white;
-  border: 2px solid #1B5AC3;
-  border-radius: 25px;
-  margin-right: 45px; 
-  color: #1B5AC3;
-  font-size: 14px;
+  &:hover {
+    width: 105px;
+    height: 36px;
+    background-color: white;
+    border: 2px solid #1B5AC3;
+    border-radius: 25px;
+    margin-right: 45px; 
+    color: #1B5AC3;
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 700px) {
   .profile-signout-button {
@@ -119,22 +126,22 @@
     margin-left: 20%;
     margin-top: -34px;
     font-size: 13px;
-  }
-  .profile-signout-button:hover {
-    background-color: white;
-    border: 2px solid #1B5AC3;
-    color: #1B5AC3;
-    padding: 3px 12px;
-    width: 85px;
-    height: 28px;
-    text-align: center;
-    cursor: pointer;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    border-radius: 25px;
-    margin-right: 15%;
-    margin-top: -14px;
-    font-size: 13px;
+    &:hover {
+      background-color: white;
+      border: 2px solid #1B5AC3;
+      color: #1B5AC3;
+      padding: 3px 12px;
+      width: 85px;
+      height: 28px;
+      text-align: center;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      border-radius: 25px;
+      margin-right: 15%;
+      margin-top: -14px;
+      font-size: 13px;
+    }
   }
 }
 

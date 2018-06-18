@@ -37,26 +37,35 @@
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-}
-.navbar a { text-decoration: none;}
-.navbar a:hover p { text-decoration:none; color:#A9A9A9;}
-.navbar p {
-  color: #C0C0C0;
-  font-size: 16px;
-  font-weight: 100;
-  margin-left: 25px;
-  margin-top: 19px;
-}
-@media screen and (max-width: 700px) {
-  .navbar a {
-    width: 20%;
-    margin-left: 5px;
+  a {
+    text-decoration: none;
+    &:hover {
+      p {
+        text-decoration:none; color:#A9A9A9;
+      }
+    }
   }
-  .navbar p {
-    font-size: 14px;
+  p {
+    color: #C0C0C0;
+    font-size: 16px;
     font-weight: 100;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: 25px;
+    margin-top: 19px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .navbar {
+    a {
+      width: 20%;
+      margin-left: 5px;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 100;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
   }
 }
 
@@ -83,16 +92,16 @@
   border-radius: 25px;
   margin-right: 45px;
   font-size: 14px;
-}
-.signout-button:hover {
-  width: 105px;
-  height: 36px;
-  background-color: white;
-  border: 2px solid #1B5AC3;
-  border-radius: 25px;
-  margin-right: 45px; 
-  color: #1B5AC3;
-  font-size: 14px;
+  &:hover {
+    width: 105px;
+    height: 36px;
+    background-color: white;
+    border: 2px solid #1B5AC3;
+    border-radius: 25px;
+    margin-right: 45px; 
+    color: #1B5AC3;
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 700px) {
   .signout-button {
@@ -111,22 +120,22 @@
     margin-right: 15%;
     margin-top: -14px;
     font-size: 13px;
-  }
-  .signout-button:hover {
-    background-color: white;
-    border: 2px solid #1B5AC3;
-    color: #1B5AC3;
-    padding: 3px 12px;
-    width: 85px;
-    height: 28px;
-    text-align: center;
-    cursor: pointer;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    border-radius: 25px;
-    margin-right: 15%;
-    margin-top: -14px;
-    font-size: 13px;
+    &:hover {
+      background-color: white;
+      border: 2px solid #1B5AC3;
+      color: #1B5AC3;
+      padding: 3px 12px;
+      width: 85px;
+      height: 28px;
+      text-align: center;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      border-radius: 25px;
+      margin-right: 15%;
+      margin-top: -14px;
+      font-size: 13px;
+    }
   }
 }
 .open_sidenav {
@@ -172,23 +181,23 @@
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,128); /* Fallback color */
   background-color: rgba(0,0,51, 0.7); /* Black w/ opacity */
-}
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 60%;
-  height: 80%;
-  overflow: none;
-  overflow-x: scroll; 
-  border-radius: 24px/23px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 60%;
+    height: 80%;
+    overflow: none;
+    overflow-x: scroll; 
+    border-radius: 24px/23px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+  }
 }
 .modal-content::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px white; 
@@ -232,11 +241,11 @@
 .modal-image {
   margin-left: 11%;
   margin-top: 5.5%;
-}
-.modal-image img {
-  width: 97%;
-  /*width: auto;*/
-  height: 360px;
+  img {
+    width: 97%;
+    /*width: auto;*/
+    height: 360px;
+  }
 }
 .modal-header {
   padding: 2px 16px;
@@ -245,14 +254,14 @@
   margin-top: 40px;
   color: #1B5AC3;
   font-size: 24px;
-}
-.modal-header img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  float: left;
-  margin-top: -30px;
-  margin-left: 8.5%;
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+    margin-top: -30px;
+    margin-left: 8.5%;
+  }
 }
 
 /* =================== M A I N  M O D A L  I C O N S =================== */
@@ -273,10 +282,10 @@
 .calendar {
   margin-top: -21px;
   margin-left: 78%;
-} 
-.calendar img {
-  width: 26px;
-  height: 26px;
+  img {
+    width: 26px;
+    height: 26px;
+  }
 }
 .modal-time {
   color: gray;
@@ -287,22 +296,22 @@
 .clock {
   margin-top: -21px;
   margin-left: 62%;
-}
-.clock img {
-  width: 26px;
-  height: 26px;
+  img {
+    width: 26px;
+    height: 26px;
+  }
 }
 .modal-favorite {
   margin-left: 94%;
   margin-top: -33px;
-}
-.modal-favorite img {
-  width: 26px;
-  height: 26px;
-}
-.modal-favorite img:hover{
-  background-color: red;
-  overflow: none;
+  img {
+    width: 26px;
+    height: 26px;
+    &:hover {
+      background-color: red;
+      overflow: none;
+    }
+  }
 }
 .modal-favorite-clicked{
   background-color: red;
@@ -333,49 +342,50 @@
 
 .read_more {
   margin-left: 48%;
+  .signout-button {
+    background-color: #1B5AC3;
+    border: 2px solid #1B5AC3;
+    color: white;
+    padding: 3px 12px;
+    width: 105px;
+    height: 36px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 25px;
+    margin-right: 45px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    &:hover {
+      background-color: white;
+      border: 2px solid #1B5AC3;
+      color: white;
+      padding: 3px 12px;
+      width: 105px;
+      height: 36px;
+      text-align: center;
+      font-size: 12px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      border-radius: 25px;
+      margin-right: 45px;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      &:hover {
+        text-decoration: none;
+        color: blue;
+      }
+    }
+  }
 }
-.read_more .signout-button {
-  background-color: #1B5AC3;
-  border: 2px solid #1B5AC3;
-  color: white;
-  padding: 3px 12px;
-  width: 105px;
-  height: 36px;
-  text-align: center;
-  font-size: 12px;
-  cursor: pointer;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  border-radius: 25px;
-  margin-right: 45px;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-.read_more .signout-button:hover {
-  background-color: white;
-  border: 2px solid #1B5AC3;
-  color: white;
-  padding: 3px 12px;
-  width: 105px;
-  height: 36px;
-  text-align: center;
-  font-size: 12px;
-  cursor: pointer;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  border-radius: 25px;
-  margin-right: 45px;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-.read_more .signout-button a {
-  text-decoration: none;
-  color: white;
-}
-.read_more .signout-button a:hover {
-  text-decoration: none;
-  color: blue;
-}
+
 
 /* ================== M O B I L E  F A V  B T N ================== */
 
@@ -387,15 +397,15 @@
   .modal-favorite {
     margin-left: 26%;
     margin-top: -4px;
-  }
-  .modal-favorite img {
-    width: 26px;
-    height: 26px;
-  }
-  .modal-favorite img:hover{
-    background-color: red;
-    overflow: none;
-  }
+    img {
+      width: 26px;
+      height: 26px;
+      &:hover {
+        background-color: red;
+        overflow: none;
+      }
+    }
+  } 
   .modal-favorite-clicked{
     background-color: red;
     overflow: none;
@@ -431,25 +441,25 @@
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  .modal-content {
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 80%;
-    height: 80%;
-    padding-top: 4px;
-    margin-top: 15px;
-    overflow: none;
-    overflow-y: scroll; 
-    border-radius: 4%/3%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
+    .modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      border: 1px solid #888;
+      width: 80%;
+      height: 80%;
+      padding-top: 4px;
+      margin-top: 15px;
+      overflow: none;
+      overflow-y: scroll; 
+      border-radius: 4%/3%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s
+    }
   }
   .modal-content::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px white; 
@@ -492,10 +502,10 @@
   .modal-image {
     margin-left: 6.5%;
     margin-top: 5.5%;
-  }
-  .modal-image img {
-    width: auto;
-    height: 180px;
+    img {
+      width: auto;
+      height: 180px;
+    }
   }
   .modal-header {
     padding: 2px 16px;
@@ -504,14 +514,14 @@
     margin-top: 40px;
     color: #1B5AC3;
     font-size: 24px;
-  }
-  .modal-header img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    float: left;
-    margin-top: -30px;
-    margin-left: 1%;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      float: left;
+      margin-top: -30px;
+      margin-left: 1%;
+    }
   }
 
 /* ============== M O B I L E  M O D A L  I C O N S =============== */
@@ -532,10 +542,10 @@
   .calendar {
     margin-top: -15px;
     margin-left: 62%;
-  } 
-  .calendar img {
-    width: 16px;
-    height: 16px;
+    img {
+      width: 16px;
+      height: 16px;
+    }
   }
   .modal-time {
     color: gray;
@@ -546,18 +556,18 @@
   .clock {
     margin-top: -14px;
     margin-left: 27.5%;
-  }
-  .clock img {
-    width: 16px;
-    height: 16px;
+    img {
+      width: 16px;
+      height: 16px;
+    }
   }
   .share {
     margin-left: 27%;
     margin-top: 1px;
-  }
-  .share img {
-    width: 16px;
-    height: 16px;
+    img {
+      width: 16px;
+      height: 16px;
+    }
   }
   .modal-body {padding: 2px 16px;}
           
@@ -593,17 +603,17 @@
   text-decoration: none;
 }
 .description {
-    font-size: 14px;
-    font-weight:bold;
-    width: 90%;
-    height: 30px;
-    margin-left: 4%;
-    color: gray;
-    font-weight: 100;
-    margin-top: -8px;
-    margin-left: 4%;
-    margin-bottom: 15px;
-    overflow: hidden;
+  font-size: 14px;
+  font-weight:bold;
+  width: 90%;
+  height: 30px;
+  margin-left: 4%;
+  color: gray;
+  font-weight: 100;
+  margin-top: -8px;
+  margin-left: 4%;
+  margin-bottom: 15px;
+  overflow: hidden;
 }
 
 .subarticle{
@@ -635,11 +645,11 @@ body {
   margin: 10px;
   font-size: 16px;
   z-index: 1;
-}
-.rcorners:hover {
-  background: linear-gradient(#1B5AC3 10%, white 45%, white);
-  color: white;
-  z-index: 1;
+  &:hover {
+    background: linear-gradient(#1B5AC3 10%, white 45%, white);
+    color: white;
+    z-index: 1;
+  }
 }
 @media only screen and (max-width: 700px) {
   .rcorners {
@@ -664,7 +674,7 @@ body {
 .hidden{
   visibility: hidden;
 }
-.publisher{
+.publisher {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -790,47 +800,54 @@ body {
 }
 .sidenav .profile {
   text-decoration: none;
-}
-.sidenav .profile a {
-  font-size: 13px;
-  color: rgb(19, 6, 209);
-  display: block;
-  transition: 0.3s;
-  margin-left: -51px
-}
-@media screen and (max-height: 700px) {
-  .sidenav .profile {
-    text-decoration: none;
-  }
-  .sidenav .profile a {
-    font-size: 18px;
+  a {
+    font-size: 13px;
     color: rgb(19, 6, 209);
     display: block;
     transition: 0.3s;
-    margin-left: -20px
+    margin-left: -51px
   }
 }
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 16px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
+@media screen and (max-height: 700px) {
+  .sidenav {
+    a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 16px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+      &:hover {
+        color: #f1f1f1;
+      }
+    }
+    .profile {
+      text-decoration: none;
+      a {
+        font-size: 18px;
+        color: rgb(19, 6, 209);
+        display: block;
+        transition: 0.3s;
+        margin-left: -20px
+      }
+    }
+    .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+  }
 }
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
+ 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+    a {
+      font-size: 18px;
+    }
+  }
 }
 
 /* ===================== M A I N  A L E R T ===================== */
@@ -911,13 +928,13 @@ code {
   border-bottom:1px solid #000;
   height:90px;
   padding-top:4px;
-}
-#credits img {
-  float:left;
-  margin:5px 10px 5px 0px;
-  border:1px solid #000000;
-  width:80px;
-  height:79px;
+  img {
+    float:left;
+    margin:5px 10px 5px 0px;
+    border:1px solid #000000;
+    width:80px;
+    height:79px;
+  }
 }
 .important {
   background-color:#F5FCC8;

@@ -92,14 +92,13 @@ function favorite(post_id) {
 		},
 		method: 'POST'
 	}
-	likesUpdate(post_id);
 	return fetch(url, params)
-		.then(res => res.json())
+		 .then(res => res.json());
 		
 }
 
 function likesUpdate(post_id) {
-
+console.log('update likes post id ',post_id);
 	let url = 'http://app.bwayconnected.com/api/post/detail?post_id=' + post_id;
 
 	fetch(url, {
@@ -247,9 +246,14 @@ function showModal(body) {
 				let parent = document.getElementById(body.Posts[0].id);
 				let fav_from_newsfeed = parent.querySelector('.favorite');
 				let fav_likes = parent.querySelector('.fav_likes');
+				// var post_id_to_use = 
 				fav_button.onclick = function (ev) {
 					favorite(body.Posts[0].id)
 						.then(body => {
+							console.log('body',body);
+							if (body.Response == "2000") {
+								likesUpdate(body.Result.Posts[0].id);
+							}
 							if (body.Message === "Added to user favourite successfully") {
 								ev.srcElement.classList.add('modal-favorite-clicked');
 								// reflect this change on same article on Newsfeed
@@ -333,6 +337,10 @@ function createPost(body) {
 	fav_button.onclick = function (ev) {
 		favorite(body.id)
 			.then(body => {
+				console.log('body of Create Post',body);
+				if (body.Response == "2000") {
+					likesUpdate(body.Result.Posts[0].id);
+				}
 				if (body.Message === "Added to user favourite successfully") {
 					ev.srcElement.classList.remove('button');
 					ev.srcElement.classList.add('favorite_click');

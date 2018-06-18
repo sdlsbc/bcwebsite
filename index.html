@@ -1,19 +1,15 @@
 <html>
-
-<head>
-	<link rel="icon" href="./images/bc32_mcU_icon.ico" type="image/x-icon">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Broadway Connected</title>
-	<link href="./stylesheets/style.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
-	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
-	 crossorigin="anonymous">
+  <head>
+  <link rel="icon" href="./images/bc32_mcU_icon.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Broadway Connected</title>
+  <link href="./stylesheets/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
 </head>
-
 <body>
-
 <div class="main-header" id="myTopnav">
     <!-- <div class="pure-u-1-2">  --> 
   <img class="logo-image" src="./images/bc_solo_logo.png" alt="Broadway Connected">
@@ -22,127 +18,88 @@
   <div class="buttonx">
     <button id="myBtn2" type="button" class="button2" data-dismiss="modal"><a class="signup" href="#0" data-signin="signup" style="text-decoration:none;">Sign Up</a></button>
   </div>
-
   <div id="myModal2" class="modal">
-	  <div class="modal-content">
-	  <a href="#login" class="a-login">Sign Up</a>
-	  <hr>
-	    <!-- <span class="close2">&times;</span> -->
+      <div class="modal-content">
+      <a href="#login" class="a-login">Sign Up</a>
+      <hr>
+        <!-- <span class="close2">&times;</span> -->
       <div class="signin" id="signin" data-type="signup"> 
-		    <form class="signin-form">
-		      <p class="first_name">
-						<label class="signin-label" for="signup-firstname">FIRST NAME</label>
-						<input class="signin-firstname" id="signup-firstname" type="text" placeholder=" Your First Name">
-						<span class="signin-error">Error message here!</span>
-					</p>
-					<p class="last_name">
-						<label class="signin-label" for="signup-lastname">LAST NAME</label>
-						<input class="signin-lastname" id="signup-lastname" type="text" placeholder="Your Last Name">
-						<span class="signin-error">Error message here!</span>
-					</p>
-					<p class="handle">
-						<label class="signin-label" for="signup-handle">USERNAME</label>
-						<input class="signin-handle" id="signup-handle" type="text" placeholder="Username">
-						<span class="signin-error">Error message here!</span>
-					</p>
-
-					<p class="signin-email">
-						<label class="email">E-MAIL</label>
-						<input class="input-email" id="signup-email" type="email" placeholder="E-mail">
-						<span class="email">Error message here!</span>
-					</p>
-
-					<p class="signin-password">
-						<label class="account-password">PASSWORD</label>
-						<input class="input-account" id="signup-password" type="password"  placeholder="Password">
-						<a href="#0" class="hide">Hide</a>
-						<span class="error">Error message here!</span>
-					</p>
-					<p class="signin-submit">
-						<input class="input-submit" type="button" value="SIGN UP" onclick="register()">
-					</p>
-	  		</form>
-  		</div> 
-		</div>
-
-		<div id="myModal2" class="modal">
-			<div class="modal-content">
-				<a href="#login" class="a-login">Sign Up</a>
-				<hr>
-				<!-- <span class="close2">&times;</span> -->
-				<div class="signin" id="signin" data-type="signup">
-					<form class="signin-form">
-						<p class="first_name">
-							<label class="signin-label" for="signup-firstname">FIRST NAME</label>
-							<input class="signin-firstname" id="signup-firstname" type="text" placeholder=" Your First Name">
-							<span class="signin-error">Error message here!</span>
-						</p>
-						<p class="last_name">
-							<label class="signin-label" for="signup-lastname">LAST NAME</label>
-							<input class="signin-lastname" id="signup-lastname" type="text" placeholder="Your Last Name">
-							<span class="signin-error">Error message here!</span>
-						</p>
-						<p class="handle">
-							<label class="signin-label" for="signup-handle">USERNAME</label>
-							<input class="signin-handle" id="signup-handle" type="text" placeholder="Username">
-							<span class="signin-error">Error message here!</span>
-						</p>
-
-						<p class="signin-email">
-							<label class="email">E-MAIL</label>
-							<input class="input-email" id="signup-email" type="email" placeholder="E-mail">
-							<span class="email">Error message here!</span>
-						</p>
-
-						<p class="signin-password">
-							<label class="account-password">PASSWORD</label>
-							<input class="input-account" id="signup-password" type="password" placeholder="Password">
-							<a href="#0" class="hide">Hide</a>
-							<span class="error">Error message here!</span>
-						</p>
-						<p class="login-submit">
-							<input class="input-submit" type="button" value="Login" onclick="signin()">
-						</p>
-					</form>
-				</div>
-			</div>
-		</div>
-
-		<script>
-			let modal = document.getElementById('myModal1');
-			let btn = document.getElementById("myBtn1");
-			let span = document.getElementsByClassName("close")[0];
-			btn.onclick = function () {
-				modal.style.display = "block";
-			}
-			span.onclick = function () {
-				modal.style.display = "none";
-			}
-			window.onclick = function (event) {
-				console.log("trying to close")
-				if (event.target == modal) {
-					modal.style.display = "none";
-				}
-				if (event.target == modal2) {
-
-					modal2.style.display = "none";
-				}
-			}
-		</script>
-	</div>
-
-	<script>
-	let modal = document.getElementById('myModal1');
-  	let btn = document.getElementById("myBtn1");
-	let span = document.getElementsByClassName("close")[0];
-	btn.onclick = function() {
+            <form class="signin-form">
+              <p class="first_name">
+                        <label class="signin-label" for="signup-firstname">FIRST NAME</label>
+                        <input class="signin-firstname" id="signup-firstname" type="text" placeholder=" Your First Name">
+                        <span class="signin-error">Error message here!</span>
+                    </p>
+                    <p class="last_name">
+                        <label class="signin-label" for="signup-lastname">LAST NAME</label>
+                        <input class="signin-lastname" id="signup-lastname" type="text" placeholder="Your Last Name">
+                        <span class="signin-error">Error message here!</span>
+                    </p>
+                    <p class="handle">
+                        <label class="signin-label" for="signup-handle">USERNAME</label>
+                        <input class="signin-handle" id="signup-handle" type="text" placeholder="Username">
+                        <span class="signin-error">Error message here!</span>
+                    </p>
+                    <p class="signin-email">
+                        <label class="email">E-MAIL</label>
+                        <input class="input-email" id="signup-email" type="email" placeholder="E-mail">
+                        <span class="email">Error message here!</span>
+                    </p>
+                    <p class="signin-password">
+                        <label class="account-password">PASSWORD</label>
+                        <input class="input-account" id="signup-password" type="password"  placeholder="Password">
+                        <a href="#0" class="hide">Hide</a>
+                        <span class="error">Error message here!</span>
+                    </p>
+                    <p class="signin-submit">
+                        <input class="input-submit" type="button" value="SIGN UP" onclick="register()">
+                    </p>
+            </form>
+        </div> 
+        </div>
+    </div>
+    <button id="myBtn1" type="button" class="button1" data-dismiss="modal"><a class="signin" href="#0" data-signin="login" style="text-decoration:none;">Login</a></button>
+  <!-- The Modal -->
+    <div id="myModal1" id="login" class="modal"> 
+      <div class="modal-content">
+      <a href="#login" class="a-login">Login</a>
+      <hr>
+      <br>
+        <span class="close"></span>
+        <div class="create">
+                <div class="login-create" data-type="login">
+                <form class="login-create">
+                        <p class="login-email">
+                            <label class="label-email" for="signin-email">YOUR E-MAIL</label>
+                            <input class="input-email" id="signin-email" type="email" placeholder="E-mail">
+                            <span class="input-error">Error message here!</span>
+                        </p>
+                        <p class="login-password">
+                            <label class="label-password" for="signin-password">PASSWORD</label>
+                            <input class="input-password" id="signin-password" type="password"  placeholder="Password">
+                            <a href="#0" class="hide">Hide</a>
+                            <span class="error">Error message here!</span>
+                        </p>
+                        <p class="login-submit">
+                            <input class="input-submit" type="button" value="Login" onclick="signin()">
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    let modal = document.getElementById('myModal1');
+    let btn = document.getElementById("myBtn1");
+    let span = document.getElementsByClassName("close")[0];
+    btn.onclick = function() {
     modal.style.display = "block";
-	}
-	span.onclick = function() {
+    }
+    span.onclick = function() {
     modal.style.display = "none";
-	}
-	window.onclick = function(event) {
-		console.log("trying to close")
+    }
+    window.onclick = function(event) {
+        console.log("trying to close")
     if (event.target == modal) {
         modal.style.display = "none";
     }
@@ -150,58 +107,46 @@
         
         modal2.style.display = "none";
     }
-	}
+    }
 </script>
 </div> 
-
-
-
-	<div class="jumbotron">
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<p class="big">Theater: Anywhere, Anytime, For Anyone</h1>
-			<p class="small"> Connecting the World Of Theater, while increasing collaboration and improving efficiency.</p>
-	</div>
-	<!-- </div> -->
-
-	<script>
-		var modal2 = document.getElementById('myModal2');
-		var btn2 = document.getElementById("myBtn2");
-		var span2 = document.getElementsByClassName("close2")[0];
-		btn2.onclick = function () {
-			modal2.style.display = "block";
-		}
-		span2.onclick = function () {
-			modal2.style.display = "none";
-		}
-		window.onclick = function (event) {
-			modal2.style.display = "none";
-
-		}
-
-
-	</script>
-
-
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-
-
-	<script src="./javascript/register.js"></script>
-	<!-- Resource JavaScript -->
-	<script src="./javascript/placeholders.min.js"></script>
-	<!-- polyfill for the HTML5 placeholder attribute -->
-	<script src="./javascript/main.js"></script>
-	<!-- Resource JavaScript -->
-
+<div class="jumbotron">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+   <p class="big">Theater: Anywhere, Anytime, For Anyone</h1>
+   <p class="small"> Connecting the World Of Theater, while increasing collaboration and improving efficiency.</p>
+</div>
+  <!-- </div> -->
+<script>
+    var modal2 = document.getElementById('myModal2');
+    var btn2 = document.getElementById("myBtn2");
+    var span2 = document.getElementsByClassName("close2")[0];
+    btn2.onclick = function() {
+    modal2.style.display = "block";
+    }
+    span2.onclick = function() {
+    modal2.style.display = "none";
+    }
+    window.onclick = function(event) {
+    modal2.style.display = "none";
+    
+    }
+</script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <script src="./javascript/register.js"></script>
+    <!-- Resource JavaScript -->
+    <script src="./javascript/placeholders.min.js"></script>
+    <!-- polyfill for the HTML5 placeholder attribute -->
+    <script src="./javascript/main.js"></script>
+    <!-- Resource JavaScript -->
 </body>
-
 </html>

@@ -145,7 +145,27 @@
   }
 }
 
-
+.profile-wrapper {
+  background-color: $light-blue;
+  padding-top: 100%;
+  margin-top: 62px;
+  height: 100%;
+  .user_pic {
+    border-radius: 50%;
+    width: 50%;
+    height: auto;
+  }
+  h3 {
+    color: $main-blue;
+    font-size: 28px;
+    font-weight: 100;
+  }
+  p {
+    color: $main-blue;
+    font-size: 22px;
+    font-weight: 100;
+  }
+}
 
 
 

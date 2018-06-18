@@ -811,7 +811,7 @@ body {
 /* ===================== M A I N  A L E R T ===================== */
 #modalContainer {
   position: fixed;
-  background-color: #1B5AC3;
+  /*background-color: #1B5AC3;*/
   position: absolute;
   top: 0;
   width: 100%;
@@ -1716,7 +1716,7 @@ code span {
 /* ======================= A L E R T  B O X ======================= */
 #modalContainer {
   position: fixed;
-  background-color: #1B5AC3;
+  /* background-color: $main-blue;*/
   position: absolute;
   top: 0;
   width: 100%;
@@ -2023,6 +2023,24 @@ code {
       margin-right: 15%;
       margin-top: -14px;
       font-size: 13px; } }
+.profile-wrapper {
+  background-color: #F0F8FF;
+  padding-top: 100%;
+  margin-top: 62px;
+  height: 100%; }
+  .profile-wrapper .user_pic {
+    border-radius: 50%;
+    width: 50%;
+    height: auto; }
+  .profile-wrapper h3 {
+    color: #1B5AC3;
+    font-size: 28px;
+    font-weight: 100; }
+  .profile-wrapper p {
+    color: #1B5AC3;
+    font-size: 22px;
+    font-weight: 100; }
+
 /*@media screen and (max-width: 700px) {
  
 }*/

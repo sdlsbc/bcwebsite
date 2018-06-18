@@ -208,14 +208,17 @@ function showModal(body) {
 				}else{
 					fav_button.classList.remove('modal-favorite-clicked');
 				}
-
+				let fav_from_newsfeed = document.getElementById(body.Posts[0].id);
 				fav_button.onclick = function (ev) {
 					favorite(body.Posts[0].id)
 						.then(body => {
-							if (body.Posts[0].Message === "Added to user favourite successfully") {
+							if (body.Message === "Added to user favourite successfully") {
 								ev.srcElement.classList.add('modal-favorite-clicked');
+								
+								fav_from_newsfeed.classList.add('favorite_click');
 							} else {
 								ev.srcElement.classList.remove('modal-favorite-clicked');
+								fav_from_newsfeed.classList.remove('favorite_click');
 							}
 						})
 				};
@@ -284,6 +287,7 @@ function createPost(body) {
 
 	let user_id = localStorage.getItem("user_id");
 	let fav_button = document.createElement('img');
+	fav_button.setAttribute("id", body.id);
 	fav_button.src = '../images/newsfeed_buttons/heart2.png';
 	if (body.favourites.some(fav => fav.user_id == user_id)) {
 		fav_button.classList.add('favorite_click');
@@ -296,9 +300,12 @@ function createPost(body) {
 				if (body.Message === "Added to user favourite successfully") {
 					ev.srcElement.classList.remove('button');
 					ev.srcElement.classList.add('favorite_click');
+
 				} else {
 					ev.srcElement.classList.add('button');
 					ev.srcElement.classList.remove('favorite_click');
+					// reflect this change on same article on Newsfeed
+
 				}
 			})
 	};

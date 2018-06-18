@@ -1,5 +1,6 @@
 /* =================== M A I N  H E A D E R =================== */
-
+$main-blue: #1B5AC3;
+$light-blue: #F0F8FF;
 
 .body {
   position: fixed;
@@ -59,13 +60,13 @@
     height: 33px; 
     font-size: 16px;
     float: right;
-    border: 2px solid #1B5AC3;
+    border: 2px solid $main-blue;
     font-family: 'Tajawal', sans-serif;
     text-decoration: none;
   }
 }
 .main-header .button1 {   /*button 1 = login*/
-  background: #1B5AC3;
+  background: $main-blue;
   &:hover {
     background: white;
   }
@@ -74,12 +75,12 @@
     color: white;
     &:hover {
       text-decoration: none;
-      color: #1B5AC3;
+      color: $main-blue;
     }
   }
 }
 .main-header .button2 {   /*button 2 = sign up*/
-  background: #1B5AC3;
+  background: $main-blue;
   &:hover {
     background: white;
   }
@@ -88,7 +89,7 @@
     color: white;
     &:hover a {
       text-decoration: none;
-      color: #1B5AC3;
+      color: $main-blue;
     }
   }
 }
@@ -112,7 +113,7 @@
       width: 70px;
       height: 20px;
       font-size: 12px;
-      border: 2px solid #1B5AC3;
+      border: 2px solid $main-blue;
       font-family: 'Tajawal', sans-serif;
       text-decoration: none;
     }
@@ -156,7 +157,7 @@
 /* =============== C O M I N G  S O O N  P A G E =============== */
 
 
-.logo-image{
+.logo-image {
   width: 300px;
   height: 55px;
 }
@@ -219,7 +220,7 @@
 .a-login {             /*login and signup button*/
   width: 100%;
   text-align: center;
-  color: #1B5AC3;
+  color: $main-blue;
   margin-left: 45%;
   font-size: 22px;
   padding-bottom: 10px;
@@ -228,7 +229,7 @@
 hr {
   width: 100%;
   height: 2px;
-  color: #1B5AC3;
+  color: $main-blue;
 }
 .first_name {
   width: 50%;
@@ -366,7 +367,7 @@ hr {
   }
 }
 .signin-submit input[type=button] {
-  background-color: #1B5AC3;
+  background-color: $main-blue;
   padding: 12px; 
   margin-left: 40%;
   margin-bottom: -10px;
@@ -399,7 +400,7 @@ hr {
   a {
     font-size: 15px;
     text-decoration: none;
-    color: #1B5AC3;
+    color: $main-blue;
   }
 }
 
@@ -433,7 +434,7 @@ hr {
   .a-login {
     width: 100%;
     text-align: center;
-    color: #1B5AC3;
+    color: $main-blue;
     margin-left: 2%;
     font-size: 22px;
     padding-bottom: 10px;
@@ -442,7 +443,7 @@ hr {
   hr {
     width: 100%;
     height: 2px;
-    color: #1B5AC3;
+    color: $main-blue;
   }
   .first_name {
     width: 50%;
@@ -580,7 +581,7 @@ hr {
    }
   }
   .signin-submit input[type=button] {
-    background-color: #1B5AC3;
+    background-color: $main-blue;
     padding: 12px; 
     margin-left: 0%;
     margin-bottom: -10px;
@@ -613,7 +614,7 @@ hr {
     a {
       font-size: 15px;
       text-decoration: none;
-      color: #1B5AC3;
+      color: $main-blue;
     }
   }
 }
@@ -688,7 +689,7 @@ hr {
   }
 }
 .login-submit input[type=button] {
-  background-color: #1B5AC3;
+  background-color: $main-blue;
   padding: 12px; 
   margin-left: 40%;
   width: 20%;
@@ -792,7 +793,7 @@ hr {
       display: none;
     }
     input[type=button] {
-      background-color: #1B5AC3;
+      background-color: $main-blue;
       padding: 12px; 
       margin-left: 0%;
       margin-bottom: -10px;
@@ -931,7 +932,7 @@ code span {  /*random*/
 
 #modalContainer {
   position: fixed;
-  background-color: #1B5AC3;
+ /* background-color: $main-blue;*/
   position:absolute;
   top:0;
   width:100%;
@@ -958,7 +959,7 @@ code span {  /*random*/
   height: 0px;
   font-size: 20;
   margin-top: 14px;
-  color: #1B5AC3;
+  color: $main-blue;
   font-weight: 100;
   text-align: center;
   vertical-align: middle;
@@ -1025,7 +1026,7 @@ code {
 @media screen and (max-width: 700px) {
   #modalContainer {
     position: fixed;
-    background-color: #1B5AC3;
+    background-color: $main-blue;
     position:absolute;
     top:0;
     width:100%;
@@ -1051,7 +1052,7 @@ code {
     height: 0px;
     font-size: 12px;
     margin-top: 14px;
-    color: #1B5AC3;
+    color: $main-blue;
     font-weight: 100;
     text-align: center;
     vertical-align: middle;

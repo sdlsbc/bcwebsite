@@ -9,23 +9,30 @@
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
 </head>
 
-<body>
+<div class="body">
 
-<div class="main-header">
-  <span>
+  <div class="navbar">
     <img class="logo" src="../images/bc_solo_logo.png">
-    <a href='../Newsfeed/newsfeed.html'><p>Newsfeed</p></a>
-    <a href='./discover.html'><p>Discover</p></a>
-    <a href='../Explore/explore.html'><p>Explore</p></a>
-  </span>
+    <a href='../Newsfeed/newsfeed.html'>
+      <p>Newsfeed</p>
+    </a>
+    <a href='../Discover/discover.html'>
+      <p>Discover</p>
+    </a>
+    <a href='../Explore/explore.html'>
+      <p>Explore</p>
+    </a>
+    <div class="signout">
+      <button class="signout-button" onclick="signout()">Sign Out</button>
+    </div>
+  </div>
+  
+  <div class="coming-soon">
+    <h1>Coming Soon...</h1>
+  </div>
+
+
+
+
 </div>
-
-<div class="coming-soon">
-  <h1>Coming Soon...</h1>
-</div>
-
-
-
-
-</body>
 </html>

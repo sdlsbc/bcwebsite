@@ -872,12 +872,38 @@ body {
     width: 136px;
     height: auto;
 }
-.profile{
+
+.sidenav .profile {
+  text-decoration: none;
+/*font-size: 13px;
+  color: rgb(19, 6, 209);
+  display: block;
+  transition: 0.3s;
+  margin-left: -51px*/
+}
+.sidenav .profile a {
+  font-size: 13px;
+  color: rgb(19, 6, 209);
+  display: block;
+  transition: 0.3s;
+  margin-left: -51px
+}
+@media screen and (max-height: 700px) {
+  .sidenav .profile {
     text-decoration: none;
-    font-size: 13px;
+ /* font-size: 13px;
     color: rgb(19, 6, 209);
     display: block;
     transition: 0.3s;
+    margin-left: -3px*/
+  }
+  .sidenav .profile a {
+    font-size: 18px;
+    color: rgb(19, 6, 209);
+    display: block;
+    transition: 0.3s;
+    margin-left: -20px
+  }
 }
 .sidenav a {
     padding: 8px 8px 8px 32px;

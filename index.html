@@ -14,6 +14,7 @@
 
 <body>
 
+<<<<<<< HEAD
 	<div class="main-header" id="myTopnav">
 		<!-- <div class="pure-u-1-2">  -->
 		<img class="logo-image" src="./images/bc_solo_logo.png" alt="Broadway Connected">
@@ -23,6 +24,57 @@
 			<button id="myBtn2" type="button" class="button2" data-dismiss="modal">
 				<a class="signup" href="#0" data-signin="signup" style="text-decoration:none;">Sign Up</a>
 			</button>
+=======
+<div class="main-header" id="myTopnav">
+    <!-- <div class="pure-u-1-2">  --> 
+  <img class="logo-image" src="./images/bc_solo_logo.png" alt="Broadway Connected">
+    <!-- </div> -->
+    <!-- <div class="pure-u-1-2"> -->
+  <div class="buttonx">
+    <button id="myBtn2" type="button" class="button2" data-dismiss="modal"><a class="signup" href="#0" data-signin="signup" style="text-decoration:none;">Sign Up</a></button>
+  </div>
+
+  <div id="myModal2" class="modal">
+	  <div class="modal-content">
+	  <a href="#login" class="a-login">Sign Up</a>
+	  <hr>
+	    <!-- <span class="close2">&times;</span> -->
+      <div class="signin" id="signin" data-type="signup"> 
+		    <form class="signin-form">
+		      <p class="first_name">
+						<label class="signin-label" for="signup-firstname">FIRST NAME</label>
+						<input class="signin-firstname" id="signup-firstname" type="text" placeholder=" Your First Name">
+						<span class="signin-error">Error message here!</span>
+					</p>
+					<p class="last_name">
+						<label class="signin-label" for="signup-lastname">LAST NAME</label>
+						<input class="signin-lastname" id="signup-lastname" type="text" placeholder="Your Last Name">
+						<span class="signin-error">Error message here!</span>
+					</p>
+					<p class="handle">
+						<label class="signin-label" for="signup-handle">USERNAME</label>
+						<input class="signin-handle" id="signup-handle" type="text" placeholder="Username">
+						<span class="signin-error">Error message here!</span>
+					</p>
+
+					<p class="signin-email">
+						<label class="email">E-MAIL</label>
+						<input class="input-email" id="signup-email" type="email" placeholder="E-mail">
+						<span class="email">Error message here!</span>
+					</p>
+
+					<p class="signin-password">
+						<label class="account-password">PASSWORD</label>
+						<input class="input-account" id="signup-password" type="password"  placeholder="Password">
+						<a href="#0" class="hide">Hide</a>
+						<span class="error">Error message here!</span>
+					</p>
+					<p class="signin-submit">
+						<input class="input-submit" type="button" value="SIGN UP" onclick="register()">
+					</p>
+	  		</form>
+  		</div> 
+>>>>>>> 6fe72f286c0e1fa3007a37d2033f80378f4f0cd7
 		</div>
 
 		<div id="myModal2" class="modal">
@@ -60,6 +112,7 @@
 							<a href="#0" class="hide">Hide</a>
 							<span class="error">Error message here!</span>
 						</p>
+<<<<<<< HEAD
 
 						<!-- <p class="signin-agree">
 						<input type="checkbox" id="accept-terms" class="input-agree">
@@ -111,6 +164,12 @@
 							</p>
 						</form>
 					</div>
+=======
+						<p class="login-submit">
+							<input class="input-submit" type="button" value="Login" onclick="signin()">
+						</p>
+					</form>
+>>>>>>> 6fe72f286c0e1fa3007a37d2033f80378f4f0cd7
 				</div>
 			</div>
 		</div>
@@ -138,11 +197,37 @@
 		</script>
 	</div>
 
+<<<<<<< HEAD
 	<!-- <input type="button" value = "Test the alert" onclick="alert('Alert this pages');" /> -->
 	<!-- <div class="alert">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
   This is an alert box.
 </div> -->
+=======
+	<script>
+	let modal = document.getElementById('myModal1');
+  	let btn = document.getElementById("myBtn1");
+	let span = document.getElementsByClassName("close")[0];
+	btn.onclick = function() {
+    modal.style.display = "block";
+	}
+	span.onclick = function() {
+    modal.style.display = "none";
+	}
+	window.onclick = function(event) {
+		console.log("trying to close")
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    if (event.target == modal2) {
+        
+        modal2.style.display = "none";
+    }
+	}
+</script>
+</div> 
+
+>>>>>>> 6fe72f286c0e1fa3007a37d2033f80378f4f0cd7
 
 
 	<div class="jumbotron">

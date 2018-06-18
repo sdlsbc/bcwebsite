@@ -1,6 +1,9 @@
 @import "newsfeed";
+@import "index_styling";
+@import "article";
+@import "profile";
 
-@media screen and (max-width: 700px) {
-  @import "newsfeed_small";
-}
+/*@media screen and (max-width: 700px) {
+ 
+}*/
 

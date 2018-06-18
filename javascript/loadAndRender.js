@@ -73,33 +73,12 @@ function loadProfile() {
 	} else {
 		pic.src = source;
 	}
+
 	div.appendChild(pic);
-
-
-	let div_profile = document.getElementById('user_pic');
-	let pic_profile = document.createElement('img');
-	pic_profile.classList.add('user_pic');
-	let source_profile = localStorage.getItem('profile_image');
-
-	if (source_profile == "http://app.bwayconnected.com/public/images/default.jpg") {
-		pic_profile.src = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"
-	} else {
-		pic_profile.src = source_profile;
-	}
-	div_profile.appendChild(pic_profile);
-
-
-	
 
 	let namep = document.getElementsByClassName('navname')[0];
 	let name = document.createTextNode(localStorage.getItem('first_name') + " " + localStorage.getItem('last_name'));
 	namep.appendChild(name);
-
-	let name_profilex = document.getElementsByClassName('profile_name')[0];
-	let name_profile = document.createTextNode(localStorage.getItem('first_name') + " " + localStorage.getItem('last_name'));
-	name_profilex.appendChild(name_profile);
-
-
 }
 
 

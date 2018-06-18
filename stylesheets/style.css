@@ -2038,25 +2038,42 @@ code {
       margin-right: 15%;
       margin-top: -14px;
       font-size: 13px; } }
-.profile-wrapper {
+.body-wrapper {
   background-color: #F0F8FF;
-  padding-top: 46%;
-  margin-top: 62px;
-  height: 100%; }
-  .profile-wrapper #user_pic {
-    margin-top: -43%; }
-    .profile-wrapper #user_pic img {
-      border-radius: 50%;
-      width: 200px;
-      height: 200px; }
-  .profile-wrapper h3 {
-    color: #1B5AC3;
-    font-size: 28px;
-    font-weight: 100; }
-  .profile-wrapper p {
-    color: #1B5AC3;
-    font-size: 22px;
-    font-weight: 100; }
+  height: 100%;
+  padding-top: 50%; }
+  .body-wrapper .profile-wrapper {
+    margin-top: -52%;
+    height: 350px;
+    width: 100%;
+    background: black url(http://www.electrictoolbox.com/images/rangitoto-3072x200.jpg) no-repeat;
+    background-size: 100% 100%; }
+    .body-wrapper .profile-wrapper #user_pic {
+      margin-top: 4%;
+      padding-top: 60px; }
+      .body-wrapper .profile-wrapper #user_pic img {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px; }
+      .body-wrapper .profile-wrapper #user_pic h1 {
+        font-weight: 100;
+        color: white; }
+  .body-wrapper .items {
+    display: flex;
+    flex-wrap: wrap; }
+    .body-wrapper .items .item {
+      flex: 1 0 25%;
+      box-sizing: border-box;
+      background: white;
+      color: #171e42;
+      padding: 10px; }
+      .body-wrapper .items .item a {
+        text-decoration: none;
+        color: #1B5AC3; }
+        .body-wrapper .items .item a:hover {
+          color: gray; }
+        .body-wrapper .items .item a p {
+          text-align: center; }
 
 /*@media screen and (max-width: 700px) {
  

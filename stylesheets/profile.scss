@@ -145,28 +145,50 @@
   }
 }
 
-.profile-wrapper {
+.body-wrapper {
   background-color: $light-blue;
-  padding-top: 46%;
-  margin-top: 62px;
   height: 100%;
-  #user_pic {
-    margin-top: -43%;
-    img {
-      border-radius: 50%;
-      width: 200px;
-      height: 200px;
+  padding-top: 50%;
+  .profile-wrapper {
+    margin-top: -52%;
+    height: 350px; 
+    width: 100%;
+    background: black url(http://www.electrictoolbox.com/images/rangitoto-3072x200.jpg) no-repeat;
+    background-size: 100% 100%;
+    #user_pic {
+      margin-top: 4%;
+      padding-top: 60px;
+      img {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+      }
+      h1 {
+        font-weight: 100;
+        color: white;
+      }
     }
   }
-  h3 {
-    color: $main-blue;
-    font-size: 28px;
-    font-weight: 100;
-  }
-  p {
-    color: $main-blue;
-    font-size: 22px;
-    font-weight: 100;
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+    .item {
+      flex: 1 0 25%;
+      box-sizing: border-box;
+      background: white;
+      color: #171e42;
+      padding: 10px;
+      a {
+        text-decoration: none;
+        color: $main-blue;
+        &:hover {
+          color: gray;
+        }
+        p {
+          text-align: center;
+        }
+      }
+    }
   }
 }
 

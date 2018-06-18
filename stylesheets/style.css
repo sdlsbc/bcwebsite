@@ -770,14 +770,29 @@ body {
   width: 136px;
   height: auto; }
 
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #818181;
+  display: block;
+  transition: 0.3s; }
+  .sidenav a:hover {
+    color: #f1f1f1; }
 .sidenav .profile {
   text-decoration: none; }
   .sidenav .profile a {
-    font-size: 13px;
+    font-size: 16px;
     color: #1306d1;
     display: block;
     transition: 0.3s;
     margin-left: -51px; }
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px; }
 
 @media screen and (max-height: 700px) {
   .sidenav a {
@@ -2025,13 +2040,15 @@ code {
       font-size: 13px; } }
 .profile-wrapper {
   background-color: #F0F8FF;
-  padding-top: 100%;
+  padding-top: 46%;
   margin-top: 62px;
   height: 100%; }
-  .profile-wrapper .user_pic {
-    border-radius: 50%;
-    width: 50%;
-    height: auto; }
+  .profile-wrapper #user_pic {
+    margin-top: -43%; }
+    .profile-wrapper #user_pic img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px; }
   .profile-wrapper h3 {
     color: #1B5AC3;
     font-size: 28px;

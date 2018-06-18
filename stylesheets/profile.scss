@@ -147,13 +147,16 @@
 
 .profile-wrapper {
   background-color: $light-blue;
-  padding-top: 100%;
+  padding-top: 46%;
   margin-top: 62px;
   height: 100%;
-  .user_pic {
-    border-radius: 50%;
-    width: 50%;
-    height: auto;
+  #user_pic {
+    margin-top: -43%;
+    img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+    }
   }
   h3 {
     color: $main-blue;

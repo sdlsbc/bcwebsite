@@ -798,14 +798,34 @@ body {
   width: 136px;
   height: auto;
 }
-.sidenav .profile {
-  text-decoration: none;
+.sidenav {
   a {
-    font-size: 13px;
-    color: rgb(19, 6, 209);
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
     display: block;
     transition: 0.3s;
-    margin-left: -51px
+    &:hover {
+      color: #f1f1f1;
+    }
+  }
+  .profile {
+    text-decoration: none;
+    a {
+      font-size: 16px;
+      color: rgb(19, 6, 209);
+      display: block;
+      transition: 0.3s;
+      margin-left: -51px
+    }
+  }
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
   }
 }
 @media screen and (max-height: 700px) {

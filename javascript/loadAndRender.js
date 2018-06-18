@@ -73,33 +73,12 @@ function loadProfile() {
 	} else {
 		pic.src = source;
 	}
+
 	div.appendChild(pic);
-
-
-	let div_profile = document.getElementById('user_pic');
-	let pic_profile = document.createElement('img');
-	pic_profile.classList.add('user_pic');
-	let source_profile = localStorage.getItem('profile_image');
-
-	if (source_profile == "http://app.bwayconnected.com/public/images/default.jpg") {
-		pic_profile.src = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"
-	} else {
-		pic_profile.src = source_profile;
-	}
-	div_profile.appendChild(pic_profile);
-
-
-	
 
 	let namep = document.getElementsByClassName('navname')[0];
 	let name = document.createTextNode(localStorage.getItem('first_name') + " " + localStorage.getItem('last_name'));
 	namep.appendChild(name);
-
-	let name_profilex = document.getElementsByClassName('profile_name')[0];
-	let name_profile = document.createTextNode(localStorage.getItem('first_name') + " " + localStorage.getItem('last_name'));
-	name_profilex.appendChild(name_profile);
-
-
 }
 
 
@@ -113,14 +92,13 @@ function favorite(post_id) {
 		},
 		method: 'POST'
 	}
-	likesUpdate(post_id);
 	return fetch(url, params)
-		.then(res => res.json())
+		 .then(res => res.json());
 		
 }
 
 function likesUpdate(post_id) {
-
+console.log('update likes post id ',post_id);
 	let url = 'http://app.bwayconnected.com/api/post/detail?post_id=' + post_id;
 
 	fetch(url, {
@@ -268,9 +246,14 @@ function showModal(body) {
 				let parent = document.getElementById(body.Posts[0].id);
 				let fav_from_newsfeed = parent.querySelector('.favorite');
 				let fav_likes = parent.querySelector('.fav_likes');
+				// var post_id_to_use = 
 				fav_button.onclick = function (ev) {
 					favorite(body.Posts[0].id)
 						.then(body => {
+							console.log('body',body);
+							if (body.Response == "2000") {
+								likesUpdate(body.Result.Posts[0].id);
+							}
 							if (body.Message === "Added to user favourite successfully") {
 								ev.srcElement.classList.add('modal-favorite-clicked');
 								// reflect this change on same article on Newsfeed
@@ -354,6 +337,10 @@ function createPost(body) {
 	fav_button.onclick = function (ev) {
 		favorite(body.id)
 			.then(body => {
+				console.log('body of Create Post',body);
+				if (body.Response == "2000") {
+					likesUpdate(body.Result.Posts[0].id);
+				}
 				if (body.Message === "Added to user favourite successfully") {
 					ev.srcElement.classList.remove('button');
 					ev.srcElement.classList.add('favorite_click');

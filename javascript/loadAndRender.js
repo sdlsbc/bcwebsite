@@ -99,12 +99,18 @@ function favorite(post_id) {
 
 
 function showModal(body) {
-
+	let user_id = localStorage.getItem("user_id");
 	var img_address = body.post_image;
 	var post_image = document.getElementsByClassName('modal-image');
 	post_image[0].innerHTML = '<img src=' + img_address + '>';
 
 	var profile_image_address = body.publisher.profile_image;
+
+	// check if profile picture is default
+	if (profile_image_address == "http://app.bwayconnected.com/public/images/default.jpg") {
+		profile_image_address = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"
+	}
+
 	var profile_image = document.getElementsByClassName("modal-header");
 	profile_image[0].innerHTML = '<img src=' + profile_image_address + '>';
 
@@ -160,22 +166,35 @@ function showModal(body) {
 	var description = document.getElementsByClassName("modal-description");
 	description[0].innerHTML = body.description;
 
-  var url = body.source_url;
-  var url_x = document.getElementById('modal-other');
-  url_x.href = url;
+	var url = body.source_url;
+	var url_x = document.getElementById('modal-other');
+	url_x.href = url;
+
+	console.log("url");
+	console.log(url);
+	if (url == "") {
+		document.getElementsByClassName("read_more")[0].style.display = "none";
+	} else {
+		document.getElementsByClassName('read_more')[0].style.display = "block";
+		var url_x = document.getElementById('modal-other');
+		url_x.href = url;
+	}
 
 	modal.style.display = "block";
  
+	let fav_button = document.getElementById('modal-favorite-img')
 
-  fav_button.onclick = function (ev) {
+	if (body.favourites.some(fav => fav.user_id == user_id)) {
+		fav_button.classList.add('modal-favorite-clicked');
+	}
+
+	fav_button.onclick = function (ev) {
 		favorite(body.id)
 			.then(body => {
 				if (body.Message === "Added to user favourite successfully") {
-					ev.srcElement.classList.remove('button');
-					ev.srcElement.classList.add('favorite_click');
+					ev.srcElement.classList.add('modal-favorite-clicked');
 				} else {
-					ev.srcElement.classList.add('button');
-					ev.srcElement.classList.remove('favorite_click');
+					ev.srcElement.classList.remove('modal-favorite-clicked');
 				}
 			})
 	};
@@ -274,17 +293,46 @@ function createPost(body) {
 	share_button.classList.add('button');
 	button_div.appendChild(share_button)
 
+	share_button.onclick = function (ev) {
+    createCustomAlert("Sharing not currently available on web version, please download our IOS app");
+	};
+
 	let flag_button = document.createElement('img');
 	flag_button.src = '../images/newsfeed_buttons/flag.png';
 	flag_button.classList.add('button');
 	button_div.appendChild(flag_button);
 
+	flag_button.onclick = function (ev) {
+    createCustomAlert("Flagged not currently available on web version, please download our IOS app");
+	};
+
 	let comment_button = document.createElement('img');
 	comment_button.src = '../images/newsfeed_buttons/comment.png';
-	comment_button.classList.add('button');
+	comment_button.classList.add('comment_button');
 	button_div.appendChild(comment_button);
 
+  comment_button.onclick = function(ev) {
+    createCustomAlert("Comments not currently available on web version, please download our IOS app");
+	  //setTimeout(function(){ createCustomAlert("Comments not currently available on web version, please download our IOS app").hide(); }, 1000,);
+
+	  //setTimeout(function () { $("#modalContainer").fadeOut(); }, 5000);
+
+
+	};
+
+
+
 	div.appendChild(button_div);
+
+	var ALERT_BUTTON_TEXT = "x";
+  if(document.getElementById) {
+    window.alert = function(txt) {
+      createCustomAlert(txt);
+    }
+  }
+
+
+
 
 	let title = document.createElement('p');
 	let titleNode = document.createTextNode(body.title);

@@ -1,3 +1,7 @@
+.hidden{
+  display: none;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -328,14 +332,23 @@
   width: 26px;
   height: 26px;
 }
-.share {
-  margin-left: 96%;
-  margin-top: -31px;
+.modal-favorite {
+  margin-left: 94%;
+  margin-top: -33px;
 }
-.share img {
+.modal-favorite img {
   width: 26px;
   height: 26px;
 }
+.modal-favorite img:hover{
+  background-color: red;
+  overflow: none;
+}
+.modal-favorite-clicked{
+  background-color: red;
+  overflow: none;
+}
+
 .modal-body {padding: 2px 16px;}
         
 .modal-title  {
@@ -410,6 +423,25 @@
 @media screen and (max-width: 700px) {
   .read_more {
     margin-left: 36%;
+  }
+
+
+
+  .modal-favorite {
+    margin-left: 26%;
+    margin-top: -4px;
+  }
+  .modal-favorite img {
+    width: 26px;
+    height: 26px;
+  }
+  .modal-favorite img:hover{
+    background-color: red;
+    overflow: none;
+  }
+  .modal-favorite-clicked{
+    background-color: red;
+    overflow: none;
   }
 }
 /* Let's get this party started */
@@ -606,10 +638,10 @@
   .modal-title  {
     padding: 2px 16px;
     font-size: 20px;
-    margin-top: 55px;
-    margin-left: -1%;
+    margin-top: 20px;
+    margin-left: 4%;
     background-color: white;
-    width: 100%;
+    width: 89%;
     color: #1B5AC3;
   }
   .modal-description {
@@ -718,13 +750,23 @@ body {
 }
 
 .button {
-    weight: 22px;
-    height: 22px;
-    padding-left: 12px;
-    padding-top: 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+  weight: 22px;
+  height: 22px;
+  padding-left: 12px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.comment_button {
+  weight: 22px;
+  height: 22px;
+  padding-left: 12px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 .fav_likes {
@@ -867,4 +909,133 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/*--- A L E R T ---*/
+#modalContainer {
+  position: fixed;
+  background-color: #1B5AC3);
+  position:absolute;
+  top:0;
+  width:100%;
+  height:10%;
+  left:0px;
+  z-index:10000;
+  background-image:url(tp.png); /* required by MSIE to prevent actions on lower z-index elements */
+}
+#alertBox {
+  /*-moz-animation: cssAnimation 0s ease-in 1s forwards;*/
+/*    -webkit-animation: cssAnimation 0s ease-in 1s forwards;*/
+
+   /* -o-animation: cssAnimation 0s ease-in 1s forwards;*/
+    /*animation: cssAnimation 0s ease-in 1s forwards;*/
+    
+    /*-webkit-animation-fill-mode: forwards;*/
+    /*animation-fill-mode: forwards;*/
+
+
+
+  position: relative;
+  width: 100%;
+  min-height: 50px;
+  max-height: 200px;
+  margin-left: 0px;
+  margin-top: 45px;
+  background-color: #BBD9EE;
+  background-repeat: no-repeat;
+  top: 10px;
+}
+#modalContainer > #alertBox {
+  position:fixed;
+}
+#alertBox p {
+  height: 0px;
+  font-size: 20;
+  margin-top: 14px;
+  color: #1B5AC3;
+  font-weight: 100;
+  text-align: center;
+  vertical-align: middle;
+}
+#alertBox #closeBtn {
+  display: block;
+  position: relative;
+  float: right;
+  margin-top: -17px;
+  border: 0 none;
+  width: 70px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFF;
+  background-color: #BBD9EE;
+  border-radius: 0px;
+  text-decoration: none;
+  outline: 0!important;
+  font-size: 20px;
+}
+#mContainer {
+  position:relative;
+  width:600px;
+  margin:auto;
+  padding:5px;
+  border-top:2px solid #fff;
+  border-bottom:2px solid #fff;
+}
+h1,h2 {
+  margin:0;
+  padding:4px;
+}
+code {
+  font-size:1.2em;
+  color:#069;
+}
+#credits {
+  position:relative;
+  margin:25px auto 0px auto;
+  width:350px; 
+  font:0.7em verdana;
+  border-top:1px solid #000;
+  border-bottom:1px solid #000;
+  height:90px;
+  padding-top:4px;
+}
+#credits img {
+  float:left;
+  margin:5px 10px 5px 0px;
+  border:1px solid #000000;
+  width:80px;
+  height:79px;
+}
+.important {
+  background-color:#F5FCC8;
+  padding:2px;
+}
+
+
+/*
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
+*/
 

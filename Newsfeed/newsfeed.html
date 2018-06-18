@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles2.css">
 </head>
+
 <body onload="checkLocalStorage('new')">
     <!-- sidebar. -->
     <div id="mySidenav" class="sidenav">
@@ -18,87 +19,98 @@
             <p class="profile">Your Profile</p>
         </center>
         <br/>
-        <a href="../Favorites/favorites.html"><img src="../images/heart.png" width="19" height="19">&nbsp&nbsp My Favorites</a>
+        <a href="../Favorites/favorites.html">
+            <img src="../images/heart.png" width="19" height="19">&nbsp&nbsp My Favorites</a>
 
     </div>
     <!-- sidebar. -->
-<div class="navbar">
-    <span class="open_sidenav" onclick="openNav()">
-        <img src="../images/side button2.png">
-    </span>
-    <img class="logo" src="../images/bc_solo_logo.png"> 
-    <a href='../Newsfeed/newsfeed.html'><p>Newsfeed</p></a>
-    <a href='../Discover/discover.html'><p>Discover</p></a>
-    <a href='../Explore/explore.html'><p>Explore</p></a>
-    <div class="signout">
-        <button class="signout-button" onclick="signout()">Sign Out</button>
+    <div class="navbar">
+        <span class="open_sidenav" onclick="openNav()">
+            <img src="../images/side button2.png">
+        </span>
+        <img class="logo" src="../images/bc_solo_logo.png">
+        <a href='../Newsfeed/newsfeed.html'>
+            <p>Newsfeed</p>
+        </a>
+        <a href='../Discover/discover.html'>
+            <p>Discover</p>
+        </a>
+        <a href='../Explore/explore.html'>
+            <p>Explore</p>
+        </a>
+        <div class="signout">
+            <button class="signout-button" onclick="signout()">Sign Out</button>
+        </div>
     </div>
-</div>
-    
-        <div id="postsbox"> 
-        </div>
-        
-<!-- The Modal -->
-<div id="myModal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-      <div class="modal-image">
-        <span class="close"></span>
-      </div>
-      <div class="modal-header">
-      </div>
-      <div class="modal_h3">
-      </div>
-      <div class="modal-date">
-      </div>
-        <div class="calendar">
-        <img src="../images/Calendar.png">
-        </div>
-      <div class="modal-time"> 
-      </div>
-        <div class="clock">
-          <img src="../images/clock.png">
-        </div>
-      <div class="share" >
-        <img src="../images/newsfeed_buttons/heart2.png">
-      </div>
-      <center>
-        <div class="modal-title"></div>
-      </center>
-      <center>
-        <div class="modal-description"></div>
-      </center>
-<!--       <center>
+
+    <div id="postsbox">
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-image">
+                <span class="close"></span>
+            </div>
+            <div class="modal-header">
+            </div>
+            <div class="modal_h3">
+            </div>
+            <div class="modal-date">
+            </div>
+            <div class="calendar">
+                <img src="../images/calendar.png">
+            </div>
+            <div class="modal-time">
+            </div>
+            <div class="clock">
+                <img src="../images/clock.png">
+            </div>
+            <div class="modal-favorite">
+                <img id="modal-favorite-img" src="../images/newsfeed_buttons/heart2.png">
+            </div>
+            <center>
+                <div class="modal-title"></div>
+            </center>
+            <center>
+                <div class="modal-description"></div>
+            </center>
+            <!--       <center>
         <div class="modal-other"></div>
       </center> -->
-      <div class="read_more">
-        <button class="signout-button"><a href="" target="_blank" id="modal-other">See More</a></button>
+            <div class="read_more">
+                <button class="signout-button">
+                    <a href="" target="_blank" id="modal-other">See More</a>
+                </button>
+            </div>
+
+        </div>
       </div>
-      
-      </div>
-    <img id="loading" class='hidden' src='../images/BCloading.gif' />
-    <script>
+        <img id="loading" class='hidden' src='../images/BCloading.gif' />
+        <script>
             var modal = document.getElementById('myModal');
 
             var span = document.getElementsByClassName("close")[0];
-            span.onclick = function() {
+            span.onclick = function () {
                 modal.style.display = "none";
             }
-            window.onclick = function(event) {
+            window.onclick = function (event) {
                 if (event.target == modal) {
                     modal.style.display = "none";
                 }
             }
-            </script>
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-        }
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-    </script>
-    <script src="../javascript/register.js"></script>
-    <script type="text/javascript" src="js/newsfeed.js"></script>
+        </script>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+        <script src="../javascript/register.js"></script>
+        <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
 </body>
+
 </html>

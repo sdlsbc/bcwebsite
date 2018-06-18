@@ -92,8 +92,43 @@ function favorite(post_id) {
 		},
 		method: 'POST'
 	}
+	likesUpdate(post_id);
 	return fetch(url, params)
 		.then(res => res.json())
+		
+}
+
+function likesUpdate(post_id) {
+
+	let url = 'http://app.bwayconnected.com/api/post/detail?post_id=' + post_id;
+
+	fetch(url, {
+		method: 'GET',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+		.then(res => res.json())
+		.catch(error => console.error('Error:', error))
+		.then(response => {
+
+			if (response.Response == "1000") {
+				console.log("request not successful");
+				// createCustomAlert("WARNING: User Already Exists");
+			} else {
+				console.log('Success in likes likesUpdate:', response)
+				var body = response.Result;
+				var likes = body.Posts[0].likes;
+				console.log('Likes are', likes)
+
+				let parent = document.getElementById(post_id);
+				console.log('post id in likes', post_id)
+				let fav_likes = parent.querySelector('.fav_likes');
+				fav_likes.innerHTML = likes;
+
+			}
+	})
+	// console.log('in likes update');
 }
 
 
@@ -208,23 +243,24 @@ function showModal(body) {
 				}else{
 					fav_button.classList.remove('modal-favorite-clicked');
 				}
-				let fav_from_newsfeed = document.getElementById(body.Posts[0].id);
+
+				let parent = document.getElementById(body.Posts[0].id);
+				let fav_from_newsfeed = parent.querySelector('.favorite');
+				let fav_likes = parent.querySelector('.fav_likes');
 				fav_button.onclick = function (ev) {
 					favorite(body.Posts[0].id)
 						.then(body => {
 							if (body.Message === "Added to user favourite successfully") {
 								ev.srcElement.classList.add('modal-favorite-clicked');
-								
+								// reflect this change on same article on Newsfeed
 								fav_from_newsfeed.classList.add('favorite_click');
 							} else {
 								ev.srcElement.classList.remove('modal-favorite-clicked');
+								// reflect this change on same article on Newsfeed
 								fav_from_newsfeed.classList.remove('favorite_click');
 							}
 						})
 				};
-
-
-
 			}
 		})
 }
@@ -282,12 +318,12 @@ function createPost(body) {
 	div.appendChild(center1);
 
 	let button_div = document.createElement('div');
+	button_div.setAttribute("id", body.id);
 	button_div.classList.add('button_row');
-
 
 	let user_id = localStorage.getItem("user_id");
 	let fav_button = document.createElement('img');
-	fav_button.setAttribute("id", body.id);
+	// fav_button.setAttribute("id", body.id);
 	fav_button.src = '../images/newsfeed_buttons/heart2.png';
 	if (body.favourites.some(fav => fav.user_id == user_id)) {
 		fav_button.classList.add('favorite_click');
@@ -304,7 +340,6 @@ function createPost(body) {
 				} else {
 					ev.srcElement.classList.add('button');
 					ev.srcElement.classList.remove('favorite_click');
-					// reflect this change on same article on Newsfeed
 
 				}
 			})

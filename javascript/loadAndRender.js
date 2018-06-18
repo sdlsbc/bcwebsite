@@ -114,17 +114,15 @@ function showModal(body) {
 		.catch(error => console.error('Error:', error))
 		.then(response => {
 
-			// check if request successful
 			if (response.Response == "1000") {
 				console.log("request not successful");
 				// createCustomAlert("WARNING: User Already Exists");
 			} else {
 				console.log('Success:', response)
 				var body = response.Result;
-				// console.log('data fetched for modal', body);
-				console.log('posts: ', body.Posts[0].id);
 
-
+				// start building the modal
+				
 				var img_address = body.Posts[0].post_image;
 				var post_image = document.getElementsByClassName('modal-image');
 				post_image[0].innerHTML = '<img src=' + img_address + '>';
@@ -192,8 +190,6 @@ function showModal(body) {
 				var url_x = document.getElementById('modal-other');
 				url_x.href = url;
 
-				console.log("url");
-				console.log(url);
 				if (url == "") {
 					document.getElementsByClassName("read_more")[0].style.display = "none";
 				} else {
@@ -207,7 +203,10 @@ function showModal(body) {
 				let fav_button = document.getElementById('modal-favorite-img')
 
 				if (body.Posts[0].favourites.some(fav => fav.user_id == user_id)) {
+					// console.log('this post is in favorites');
 					fav_button.classList.add('modal-favorite-clicked');
+				}else{
+					fav_button.classList.remove('modal-favorite-clicked');
 				}
 
 				fav_button.onclick = function (ev) {
@@ -225,8 +224,6 @@ function showModal(body) {
 
 			}
 		})
-
-	//fetch data end
 }
 
 function createPost(body) {

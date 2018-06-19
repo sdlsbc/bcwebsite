@@ -454,7 +454,11 @@ function createPost(body) {
 }
 
 function loadProfileData(){
-	console.log('in loadProfileData')
+	console.log('in loadProfileData');
+	let user_id = localStorage.getItem("user_id");
+
+	//api call and get data
+	
 }
 
 

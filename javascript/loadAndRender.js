@@ -479,9 +479,10 @@ let url = 'http://app.bwayconnected.com/api/user/profile?user_id='+user_id+'&pro
 				console.log('Success in loadProfileData', response)
 				var body = response.Result.profile;
 				var fn = body.first_name;
+				var ln = body.last_name;
 				var profile_image = body.profile_image;
 
-				document.getElementsByClassName()
+				document.getElementById('name').innerHTML = fn;
 				console.log('fn is', fn);
 
 			}

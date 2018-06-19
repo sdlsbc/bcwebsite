@@ -157,6 +157,37 @@
   width: 136px;
   height: auto;
 }
-
+.profile_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  .second_nav_right {
+    margin-top: 7%;
+    flex: 1 1 160px;
+    a {
+      text-decoration: none;
+      float: right;
+      width: 13.5%;
+      display: inline;
+      &:first-child {
+        margin-right: 180px;
+      }
+      p {
+        text-align: center;
+        color: $main-blue;
+        &:hover {
+          border-bottom: 4px solid $main-blue;
+        }
+      }
+    }
+  }
+  .user_profile_left {
+    float: left;
+    .user_img {
+      margin-left: 20%;
+    }
+  }
+}
 
 

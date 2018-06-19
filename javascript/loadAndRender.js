@@ -23,7 +23,6 @@ function checkLocalStorage(page) {
 }
 
 function loadAndShowPosts() {
-	console.log("in loadandshow")
 	wait = true;
 	document.getElementById('loading').classList.remove('hidden');
 	getPostsItems()
@@ -446,7 +445,6 @@ function createPost(body) {
 	document.getElementById('postsbox').appendChild(div);
 
 	//img.src = 
-	console.log("in createPost")
 }
 
 

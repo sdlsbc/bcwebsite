@@ -3,7 +3,7 @@
 <head>
   <link rel="icon" href="../images/bc32_mcU_icon.ico" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles2.css">
+  <link href="../stylesheets/style.css" rel="stylesheet">
 </head>
 
 <body onload="checkLocalStorage('new')">
@@ -16,7 +16,9 @@
             <p class="navname"></p>
         </center>
         <center>
-            <p class="profile">Your Profile</p>
+          <p class="profile">
+            <a href="../Profile/profile.html">Your Profile</a>
+          </p>
         </center>
         <br/>
         <a href="../Favorites/favorites.html">
@@ -25,21 +27,21 @@
     </div>
     <!-- sidebar. -->
     <div class="navbar">
-        <span class="open_sidenav" onclick="openNav()">
-            <img src="../images/side button2.png">
-        </span>
-        <img class="logo" src="../images/bc_solo_logo.png">
-        <a href='../Newsfeed/newsfeed.html'>
-            <p>Newsfeed</p>
-        </a>
-        <a href='../Discover/discover.html'>
-            <p>Discover</p>
+      <span class="open_sidenav" onclick="openNav()">
+        <img src="../images/side button2.png">
+      </span>
+      <img class="logo" src="../images/bc_solo_logo.png">
+      <a href='../Newsfeed/newsfeed.html'>
+        <p>Newsfeed</p>
+      </a>
+      <a href='../Discover/discover.html'>
+          <p>Discover</p>
         </a>
         <a href='../Explore/explore.html'>
-            <p>Explore</p>
+          <p>Explore</p>
         </a>
         <div class="signout">
-            <button class="signout-button" onclick="signout()">Sign Out</button>
+          <button class="signout-button" onclick="signout()">Sign Out</button>
         </div>
     </div>
 
@@ -60,7 +62,7 @@
             <div class="modal-date">
             </div>
             <div class="calendar">
-                <img src="../images/Calendar.png">
+                <img src="../images/calendar.png">
             </div>
             <div class="modal-time">
             </div>

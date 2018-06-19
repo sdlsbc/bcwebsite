@@ -316,6 +316,68 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .right {
+    float: left;
+    width: 50%;
+    .modal-date {
+      float:left;
+      width: 22%;
+      display: inline-block;
+      margin-top: 25px;
+      font-size: 14px;
+      color: gray;
+      margin-left: 48px;
+    } 
+    .calendar {
+      float:left;
+      width: 8%;
+      display: inline-block;
+      margin-top: 20px;
+      margin-right: 10px;
+      img {
+        width: 26px;
+        height: 26px;
+      }
+    }
+    .modal-time {
+      float:left;
+      width: 22%;
+      display: inline-block;
+      color: gray;
+      margin-top: 25px;
+      font-size: 14px;
+    }
+    .clock {
+      float:left;
+      width: 8%;
+      display: inline-block;
+      margin-top: 20px;
+      margin-right: 10px;
+      img {
+        width: 26px;
+        height: 26px;
+      }
+    }
+    .modal-favorite {
+      float:left;
+      width: 12%;
+      display: inline-block;
+      margin-top: 20px;
+      img {
+        width: 26px;
+        height: 26px;
+        &:hover {
+          background-color: red;
+          overflow: none;
+        }
+      }
+    }
+    .modal-favorite-clicked{
+      background-color: red;
+      overflow: none;
+    }
+  }
+
   .modal-image {
     margin-left: 0%;
     margin-top: 5.5%;
@@ -324,6 +386,7 @@
       height: 270px;
     }
   }
+
   .left {
     float: left;
     width: 50%;
@@ -354,6 +417,7 @@
       margin-left: -21%;
     }
   }
+
   #modal-other {
     text-decoration: none;
     background-color: #1B5AC3;
@@ -395,37 +459,52 @@
 
 
 .right {
+  float: left;
+  width: 50%;
   .modal-date {
-    margin-top: -17px;
+    float:left;
+    width: 22%;
+    display: inline-block;
+    margin-top: 25px;
     font-size: 14px;
-    margin-left: 83%;
     color: gray;
+    margin-left: 48px;
   } 
   .calendar {
-    margin-top: -21px;
-    margin-left: 78%;
+    float:left;
+    width: 8%;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 10px;
     img {
       width: 26px;
       height: 26px;
     }
   }
   .modal-time {
+    float:left;
+    width: 22%;
+    display: inline-block;
     color: gray;
-    margin-left: 67%;
-    margin-top: -25px;
+    margin-top: 25px;
     font-size: 14px;
   }
   .clock {
-    margin-top: -21px;
-    margin-left: 62%;
+    float:left;
+    width: 8%;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 10px;
     img {
       width: 26px;
       height: 26px;
     }
   }
   .modal-favorite {
-    margin-left: 94%;
-    margin-top: -33px;
+    float:left;
+    width: 12%;
+    display: inline-block;
+    margin-top: 20px;
     img {
       width: 26px;
       height: 26px;
@@ -508,6 +587,71 @@
 
 
 @media screen and (max-width: 700px) {
+  .right {
+      width: 100%;
+    .modal-date {
+      float:left;
+      width: 22%;
+      display: inline-block;
+      margin-top: -17px;
+      font-size: 14px;
+      color: gray;
+      margin-left: 38%;
+    } 
+    .calendar {
+      float:left;
+      width: 8%;
+      display: inline-block;
+      margin-top: -22px;
+      margin-right: 10px;
+      margin-left: 27%;
+      img {
+        width: 26px;
+        height: 26px;
+      }
+    }
+    .modal-time {
+      float:left;
+      width: 22%;
+      display: inline-block;
+      color: gray;
+      margin-top: 15px;
+      font-size: 14px;
+      margin-left: -1%;
+    }
+    .clock {
+      float:left;
+      width: 8%;
+      display: inline-block;
+      margin-top: 9px;
+      margin-right: 10px;
+      margin-left: -32%;
+      img {
+        width: 26px;
+        height: 26px;
+      }
+    }
+    .modal-favorite {
+      float:left;
+      width: 12%;
+      display: inline-block;
+      margin-top: 41px;
+      margin-left: -34%;
+      margin-bottom: 40px;
+      img {
+        width: 26px;
+        height: 26px;
+        &:hover {
+          background-color: red;
+          overflow: none;
+        }
+      }
+    }
+    .modal-favorite-clicked{
+      background-color: red;
+      overflow: none;
+    }
+  }
   .read_more {
     margin-left: 36%;
   }
@@ -591,10 +735,10 @@
     cursor: pointer;
   }
   .modal-image {
-    margin-left: 7.5%;
+    margin-left: 1.5%;
     margin-top: 5.5%;
     img {
-      width: 97%;
+      /*width: 97%;*/
       height: 200px;
     }
   }

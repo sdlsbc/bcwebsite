@@ -296,6 +296,57 @@
     margin-left: -40%; }
 
 @media screen and (max-width: 1000px) {
+  .right {
+    float: left;
+    width: 50%; }
+    .right .modal-date {
+      float: left;
+      width: 22%;
+      display: inline-block;
+      margin-top: 25px;
+      font-size: 14px;
+      color: gray;
+      margin-left: 48px; }
+    .right .calendar {
+      float: left;
+      width: 8%;
+      display: inline-block;
+      margin-top: 20px;
+      margin-right: 10px; }
+      .right .calendar img {
+        width: 26px;
+        height: 26px; }
+    .right .modal-time {
+      float: left;
+      width: 22%;
+      display: inline-block;
+      color: gray;
+      margin-top: 25px;
+      font-size: 14px; }
+    .right .clock {
+      float: left;
+      width: 8%;
+      display: inline-block;
+      margin-top: 20px;
+      margin-right: 10px; }
+      .right .clock img {
+        width: 26px;
+        height: 26px; }
+    .right .modal-favorite {
+      float: left;
+      width: 12%;
+      display: inline-block;
+      margin-top: 20px; }
+      .right .modal-favorite img {
+        width: 26px;
+        height: 26px; }
+        .right .modal-favorite img:hover {
+          background-color: red;
+          overflow: none; }
+    .right .modal-favorite-clicked {
+      background-color: red;
+      overflow: none; }
+
   .modal-image {
     margin-left: 0%;
     margin-top: 5.5%; }
@@ -365,40 +416,56 @@
       font-size: 14px;
       margin-bottom: 40px; } }
 /* =================== M A I N  M O D A L  I C O N S =================== */
-.right .modal-date {
-  margin-top: -17px;
-  font-size: 14px;
-  margin-left: 83%;
-  color: gray; }
-.right .calendar {
-  margin-top: -21px;
-  margin-left: 78%; }
-  .right .calendar img {
-    width: 26px;
-    height: 26px; }
-.right .modal-time {
-  color: gray;
-  margin-left: 67%;
-  margin-top: -25px;
-  font-size: 14px; }
-.right .clock {
-  margin-top: -21px;
-  margin-left: 62%; }
-  .right .clock img {
-    width: 26px;
-    height: 26px; }
-.right .modal-favorite {
-  margin-left: 94%;
-  margin-top: -33px; }
-  .right .modal-favorite img {
-    width: 26px;
-    height: 26px; }
-    .right .modal-favorite img:hover {
-      background-color: red;
-      overflow: none; }
-.right .modal-favorite-clicked {
-  background-color: red;
-  overflow: none; }
+.right {
+  float: left;
+  width: 50%; }
+  .right .modal-date {
+    float: left;
+    width: 22%;
+    display: inline-block;
+    margin-top: 25px;
+    font-size: 14px;
+    color: gray;
+    margin-left: 48px; }
+  .right .calendar {
+    float: left;
+    width: 8%;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 10px; }
+    .right .calendar img {
+      width: 26px;
+      height: 26px; }
+  .right .modal-time {
+    float: left;
+    width: 22%;
+    display: inline-block;
+    color: gray;
+    margin-top: 25px;
+    font-size: 14px; }
+  .right .clock {
+    float: left;
+    width: 8%;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 10px; }
+    .right .clock img {
+      width: 26px;
+      height: 26px; }
+  .right .modal-favorite {
+    float: left;
+    width: 12%;
+    display: inline-block;
+    margin-top: 20px; }
+    .right .modal-favorite img {
+      width: 26px;
+      height: 26px; }
+      .right .modal-favorite img:hover {
+        background-color: red;
+        overflow: none; }
+  .right .modal-favorite-clicked {
+    background-color: red;
+    overflow: none; }
 
 .modal-body {
   padding: 2px 16px; }
@@ -464,6 +531,61 @@
 
 /* ================== M O B I L E  F A V  B T N ================== */
 @media screen and (max-width: 700px) {
+  .right {
+    width: 100%; }
+    .right .modal-date {
+      float: left;
+      width: 22%;
+      display: inline-block;
+      margin-top: -17px;
+      font-size: 14px;
+      color: gray;
+      margin-left: 38%; }
+    .right .calendar {
+      float: left;
+      width: 8%;
+      display: inline-block;
+      margin-top: -22px;
+      margin-right: 10px;
+      margin-left: 27%; }
+      .right .calendar img {
+        width: 26px;
+        height: 26px; }
+    .right .modal-time {
+      float: left;
+      width: 22%;
+      display: inline-block;
+      color: gray;
+      margin-top: 15px;
+      font-size: 14px;
+      margin-left: -1%; }
+    .right .clock {
+      float: left;
+      width: 8%;
+      display: inline-block;
+      margin-top: 9px;
+      margin-right: 10px;
+      margin-left: -32%; }
+      .right .clock img {
+        width: 26px;
+        height: 26px; }
+    .right .modal-favorite {
+      float: left;
+      width: 12%;
+      display: inline-block;
+      margin-top: 41px;
+      margin-left: -34%;
+      margin-bottom: 40px; }
+      .right .modal-favorite img {
+        width: 26px;
+        height: 26px; }
+        .right .modal-favorite img:hover {
+          background-color: red;
+          overflow: none; }
+    .right .modal-favorite-clicked {
+      background-color: red;
+      overflow: none; }
+
   .read_more {
     margin-left: 36%; }
 
@@ -549,10 +671,10 @@
     cursor: pointer; }
 
   .modal-image {
-    margin-left: 7.5%;
+    margin-left: 1.5%;
     margin-top: 5.5%; }
     .modal-image img {
-      width: 97%;
+      /*width: 97%;*/
       height: 200px; }
 
   .left {

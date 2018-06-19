@@ -158,20 +158,23 @@
   height: auto;
 }
 .profile_wrapper {
+  background-color: $light-blue;
+  margin-top: 130px;
   display: flex;
   flex-wrap: wrap;
   height: 100%;
   width: 100%;
   .second_nav_right {
-    margin-top: 7%;
+    width: 65%;
+    margin-top: -3%;
     flex: 1 1 160px;
     a {
       text-decoration: none;
       float: right;
-      width: 13.5%;
+      width: 18%;
       display: inline;
       &:first-child {
-        margin-right: 180px;
+        margin-right: 140px;
       }
       p {
         text-align: center;
@@ -184,8 +187,83 @@
   }
   .user_profile_left {
     float: left;
-    .user_img {
-      margin-left: 20%;
+    margin-top: -4%;
+    width: 30%;
+    margin-left: 4%;
+    .user_img {   
+      text-align: center;
+      img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+      }
+    }
+    .name {
+      font-size: 18px;
+      color: $main-blue;
+      text-align: center;
+    }
+    .username {
+      font-size: 16px;
+      margin-top: -10px;
+      color: $main-blue;
+      text-align: center;
+    }
+    .title {
+      font-size: 16px;
+      font-weight: 100;
+      margin-top: 0px;
+      color: $main-blue;
+      text-align: center;
+    }
+    .organization {
+      font-size: 16px;
+      font-weight: 100;
+      margin-top: -10px;
+      color: $main-blue;
+      text-align: center;
+    }
+    .user_type {
+      font-size: 16px;
+      font-weight: 100;
+      margin-top: -10px;
+      color: $main-blue;
+      text-align: center;
+    }
+    .briefcase_icon {
+      text-align: center;
+      margin-top: 28px;
+      img {
+        width: 28px;
+        height: 24px;
+      }
+    }
+    .previous {
+      font-size: 16px;
+      margin-top: -10px;
+      color: $main-blue;
+      text-align: center;
+    }
+    .previous_job {
+      font-size: 16px;
+      font-weight: 100;
+      margin-top: -10px;
+      color: $main-blue;
+      text-align: center;
+    }
+    .location_icon {
+      text-align: center;
+      margin-top: 28px;
+      img {
+        width: 28px;
+        height: 28px;
+      }
+    }
+    .location {
+      font-size: 16px;
+      margin-top: -10px;
+      color: $main-blue;
+      text-align: center;
     }
   }
 }

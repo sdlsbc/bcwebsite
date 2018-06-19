@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <link rel="icon" href="../images/bc32_mcU_icon.ico" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="../stylesheets/style.css" rel="stylesheet">
 </head>
-<body onload="checkLocalStorage('new')">
-    <!-- sidebar. -->
+
+<body onload="checkLocalStorage('profile')">
+  <!-- sidebar. -->
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <p></p>
     <center id="profile_pic"></center>
-    <center><p class="navname"></p></center>
-    <center><p class="profile"><a href="google.com">Your Profile</a></p></center>
+    <center>
+      <p class="navname"></p>
+    </center>
+    <center>
+      <p class="profile">
+        <a href="google.com">Your Profile</a>
+      </p>
+    </center>
     <br/>
     <a href="../Favorites/favorites.html">
       <img src="../images/heart.png" width="19" height="19">&nbsp&nbsp My Favorites
@@ -36,15 +44,31 @@
       </center>
     </div>
     <div class="items">
-      <div class="item"><a href="#"><p>Articles</p></a></div>
-      <div class="item"><a href="#"><p>Events</p></a></div>
-      <div class="item"><a href="#"><p>Followers</p></a></div>
-      <div class="item"><a href="#"><p>Following</p></a></div>
+      <div class="item">
+        <a href="#">
+          <p>Articles</p>
+        </a>
+      </div>
+      <div class="item">
+        <a href="#">
+          <p>Events</p>
+        </a>
+      </div>
+      <div class="item">
+        <a href="#">
+          <p>Followers</p>
+        </a>
+      </div>
+      <div class="item">
+        <a href="#">
+          <p>Following</p>
+        </a>
+      </div>
     </div>
   </div>
 
 
-<!-- <div class="body-wrapper">
+  <!-- <div class="body-wrapper">
   <div class="wrapper-image"></div>
   <div class="user-image"></div>
 </div> -->
@@ -59,9 +83,9 @@
       document.getElementById("mySidenav").style.width = "0";
     }
   </script>
+  <script type="text/javascript" src="../javascript/profile.js"></script>
   <script src="../javascript/register.js"></script>
   <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
-  </body>
+</body>
+
 </html>
-
-

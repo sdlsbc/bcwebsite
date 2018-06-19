@@ -10,6 +10,10 @@ function checkLocalStorage(page) {
 
 	//window.location.href = "../../index.html";
 	PAGE = page;
+
+	if (PAGE == 'profile'){
+		
+	}
 	//}else{
 	//local storage value"+localStorage.getItem("user_id");
 	loadAndShowPosts();

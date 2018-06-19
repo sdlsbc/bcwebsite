@@ -2053,6 +2053,7 @@ code {
 .profile_wrapper {
   background-color: #F0F8FF;
   margin-top: 130px;
+  padding-bottom: 8%;
   display: flex;
   flex-wrap: wrap;
   height: 100%;

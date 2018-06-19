@@ -10,6 +10,12 @@ function checkLocalStorage(page) {
 
 	//window.location.href = "../../index.html";
 	PAGE = page;
+
+	if (PAGE == 'profile'){
+		console.log(PAGE);
+		loadProfileData();
+
+	}
 	//}else{
 	//local storage value"+localStorage.getItem("user_id");
 	loadAndShowPosts();
@@ -447,6 +453,13 @@ function createPost(body) {
 	//img.src = 
 }
 
+function loadProfileData(){
+	console.log('in loadProfileData');
+	let user_id = localStorage.getItem("user_id");
+
+	//api call and get data
+	
+}
 
 
 

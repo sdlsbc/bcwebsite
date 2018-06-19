@@ -455,9 +455,39 @@ function createPost(body) {
 
 function loadProfileData(){
 	console.log('in loadProfileData');
-	let user_id = localStorage.getItem("user_id");
-
+	// let user_id = localStorage.getItem("user_id");
+	let user_id = 12;
+// http://app.bwayconnected.com/api/user/profile?user_id=12&profile_id=12
 	//api call and get data
+
+let url = 'http://app.bwayconnected.com/api/user/profile?user_id='+user_id+'&profile_id='+user_id;
+
+	fetch(url, {
+		method: 'GET',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	})
+		.then(res => res.json())
+		.catch(error => console.error('Error:', error))
+		.then(response => {
+
+			if (response.Response == "1000") {
+				console.log("request not successful in loadProfileData");
+				// createCustomAlert("WARNING: User Already Exists");
+			} else {
+				console.log('Success in loadProfileData', response)
+				var body = response.Result.profile;
+				var fn = body.first_name;
+				var ln = body.last_name;
+				var profile_image = body.profile_image;
+
+				document.getElementById('name').innerHTML = fn;
+				console.log('fn is', fn);
+
+			}
+	})
+
 	
 }
 

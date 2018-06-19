@@ -12,7 +12,9 @@ function checkLocalStorage(page) {
 	PAGE = page;
 
 	if (PAGE == 'profile'){
-		
+		console.log(PAGE);
+		loadProfileData();
+
 	}
 	//}else{
 	//local storage value"+localStorage.getItem("user_id");
@@ -258,11 +260,13 @@ function showModal(body) {
 								likesUpdate(body.Result.Posts[0].id);
 							}
 							if (body.Message === "Added to user favourite successfully") {
-								ev.srcElement.classList.add('modal-favorite-clicked');
+								var target = ev.srcElement || ev.target;
+								target.classList.add('modal-favorite-clicked');
 								// reflect this change on same article on Newsfeed
 								fav_from_newsfeed.classList.add('favorite_click');
 							} else {
-								ev.srcElement.classList.remove('modal-favorite-clicked');
+								var target = ev.srcElement || ev.target;
+								target.classList.remove('modal-favorite-clicked');
 								// reflect this change on same article on Newsfeed
 								fav_from_newsfeed.classList.remove('favorite_click');
 							}
@@ -345,12 +349,14 @@ function createPost(body) {
 					likesUpdate(body.Result.Posts[0].id);
 				}
 				if (body.Message === "Added to user favourite successfully") {
-					ev.srcElement.classList.remove('button');
-					ev.srcElement.classList.add('favorite_click');
+					var target = ev.srcElement || ev.target
+					target.classList.remove('button');
+					target.classList.add('favorite_click');
 
 				} else {
-					ev.srcElement.classList.add('button');
-					ev.srcElement.classList.remove('favorite_click');
+					var target = ev.srcElement || ev.target
+					target.classList.add('button');
+					target.classList.remove('favorite_click');
 
 				}
 			})
@@ -447,6 +453,9 @@ function createPost(body) {
 	//img.src = 
 }
 
+function loadProfileData(){
+	console.log('in loadProfileData')
+}
 
 
 

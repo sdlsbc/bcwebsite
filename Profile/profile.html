@@ -8,72 +8,49 @@
 </head>
 
 <body onload="checkLocalStorage('profile')">
-  <!-- sidebar. -->
+    <!-- sidebar. -->
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <p></p>
-    <center id="profile_pic"></center>
+    <center id="user_pic"></center>
     <center>
-      <p class="navname"></p>
+      <p class="user_name"></p>
     </center>
     <center>
-      <p class="profile">
-        <a href="google.com">Your Profile</a>
-      </p>
+    <p class="profile">
+      <a href="../Profile/profile.html">Your Profile</a>
+    </p>
     </center>
     <br/>
     <a href="../Favorites/favorites.html">
-      <img src="../images/heart.png" width="19" height="19">&nbsp&nbsp My Favorites
-    </a>
+      <img src="../images/heart.png" width="19" height="19">&nbsp&nbsp My Favorites</a>
 
   </div>
+    <!-- sidebar. -->
   <div class="navbar">
     <span class="open_sidenav" onclick="openNav()">
       <img src="../images/side button2.png">
     </span>
     <img class="logo" src="../images/bc_solo_logo.png">
+    <a href='../Newsfeed/newsfeed.html'>
+      <p>Newsfeed</p>
+    </a>
+    <a href='../Discover/discover.html'>
+      <p>Discover</p>
+    </a>
+    <a href='../Explore/explore.html'>
+      <p>Explore</p>
+    </a>
     <div class="signout">
       <button class="signout-button" onclick="signout()">Sign Out</button>
     </div>
   </div>
-  <div class="body-wrapper">
-    <div class="profile-wrapper">
-      <center id="user_pic">
-        <img src="../images/play1.png">
-        <h1>Glinda The Good Witch</h1>
-      </center>
-    </div>
-    <div class="items">
-      <div class="item">
-        <a href="#">
-          <p>Articles</p>
-        </a>
-      </div>
-      <div class="item">
-        <a href="#">
-          <p>Events</p>
-        </a>
-      </div>
-      <div class="item">
-        <a href="#">
-          <p>Followers</p>
-        </a>
-      </div>
-      <div class="item">
-        <a href="#">
-          <p>Following</p>
-        </a>
-      </div>
+ 
+  <div class="profile-wrapper">
+    <div class="second-nav">
     </div>
   </div>
-
-
-  <!-- <div class="body-wrapper">
-  <div class="wrapper-image"></div>
-  <div class="user-image"></div>
-</div> -->
-
-
+  
 
   <script>
     function openNav() {
@@ -83,9 +60,16 @@
       document.getElementById("mySidenav").style.width = "0";
     }
   </script>
-  <script type="text/javascript" src="../javascript/profile.js"></script>
+
   <script src="../javascript/register.js"></script>
   <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
 </body>
-
 </html>
+
+
+
+
+
+
+
+

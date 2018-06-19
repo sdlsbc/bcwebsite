@@ -2038,63 +2038,18 @@ code {
       margin-right: 15%;
       margin-top: -14px;
       font-size: 13px; } }
-/*body {
-  background-color: $light-blue;*/
-.body-wrapper {
-  margin-top: 55%; }
-  .body-wrapper .profile-wrapper {
-    margin-top: -52%;
-    height: 350px;
-    width: 100%;
-    background: black url(http://www.electrictoolbox.com/images/rangitoto-3072x200.jpg) no-repeat;
-    background-size: 100% 100%; }
-    .body-wrapper .profile-wrapper #user_pic {
-      margin-top: 4%;
-      padding-top: 60px; }
-      .body-wrapper .profile-wrapper #user_pic img {
-        border-radius: 50%;
-        width: 200px;
-        height: 200px; }
-      .body-wrapper .profile-wrapper #user_pic h1 {
-        font-weight: 100;
-        color: white; }
-  .body-wrapper .items {
-    display: flex;
-    flex-wrap: wrap; }
-    .body-wrapper .items .item {
-      flex: 1 0 25%;
-      box-sizing: border-box;
-      background: white;
-      color: #171e42;
-      padding: 10px; }
-      .body-wrapper .items .item a {
-        text-decoration: none;
-        color: #1B5AC3; }
-        .body-wrapper .items .item a:hover {
-          color: gray; }
-        .body-wrapper .items .item a p {
-          text-align: center; }
+.user_name {
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  display: block;
+  transition: 0.3s; }
 
-/*}*/
-/*body {
-  width: 100%;
-  height: 100%;
-.body-wrapper {
-  background-color: $light-blue;
-  height: 150%;
-  padding-top: 50%;
-  .profile-wrapper {
-    margin-top: -52%;
-    height: 350px; 
-    width: 100%;
-    background: black url(http://www.electrictoolbox.com/images/rangitoto-3072x200.jpg) no-repeat;
-    background-size: 100% 100%;
-  }
-/*  .wrapper-image {
-    background: black url(http://www.electrictoolbox.com/images/rangitoto-3072x200.jpg) no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-  }*/
+.user_pic {
+  border-radius: 50%;
+  width: 136px;
+  height: auto; }
+
 /*@media screen and (max-width: 700px) {
  
 }*/

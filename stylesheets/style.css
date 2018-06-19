@@ -2074,6 +2074,19 @@ code {
         color: #1B5AC3; }
         .profile_wrapper .second_nav_right a p:hover {
           border-bottom: 4px solid #1B5AC3; }
+    .profile_wrapper .second_nav_right #profile-postsbox {
+      background-color: white;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-content: space-around;
+      height: auto;
+      overflow: hidden;
+      padding-top: 50px;
+      margin-top: 62px;
+      margin-left: 9%;
+      width: 72%; }
   .profile_wrapper .user_profile_left {
     float: left;
     margin-top: -4%;
@@ -2140,6 +2153,39 @@ code {
       margin-top: -10px;
       color: #1B5AC3;
       text-align: center; }
+    .profile_wrapper .user_profile_left .view-more {
+      background-color: #1B5AC3;
+      border: 2px solid #1B5AC3;
+      color: white;
+      padding: 3px 12px;
+      width: 105px;
+      height: 36px;
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      /* Safari */
+      transition-duration: 0.4s;
+      border-radius: 25px;
+      font-size: 14px; }
+      .profile_wrapper .user_profile_left .view-more:hover {
+        width: 105px;
+        height: 36px;
+        margin-top: 20px;
+        background-color: white;
+        border: 2px solid #1B5AC3;
+        border-radius: 25px;
+        color: #1B5AC3;
+        font-size: 14px; }
+      .profile_wrapper .user_profile_left .view-more a {
+        text-decoration: none; }
+        .profile_wrapper .user_profile_left .view-more a p {
+          color: white;
+          margin-top: 4px; }
+          .profile_wrapper .user_profile_left .view-more a p:hover {
+            color: #1B5AC3;
+            margin-top: 4px; }
 
 /*@media screen and (max-width: 700px) {
  

@@ -30,16 +30,29 @@ function loadAndShowPosts(){
     getPostsItems()
         .then(newsRaw => {
             console.log(newsRaw.length)
+            var oldDate = new Date(0);
+            console.log("oldDate", oldDate)
             newsRaw.forEach(element => {
-                console.log(Date.parse(element.published_date))
+                var newDate = new Date(Date.parse(element.published_date));
+                newDate.setHours(0,0,0,0)
+                console.log("newDate", newDate)
+                if(newDate < oldDate)
+                    console.log("It's a new day")
+                    oldDate = newDate;
+                    let date = document.createElement('h3');
+                    //let dateObj = new Date(Date.parse(body.published_date));
+                    let dateNode = document.createTextNode(oldDate.toDateString());
+                    date.appendChild(dateNode);
+                    document.getElementById('profile-postsbox').appendChild(date);
                 createPost(element);
+
             })
         })
 }
 
 function getPostsItems(){
     let user_id = localStorage.getItem("user_id");
-    var url = "http://app.bwayconnected.com/api/user/profile?user_id=67&profile_id=12";
+    var url = "http://app.bwayconnected.com/api/user/profile?user_id=67&profile_id=67";
     let params = {
         headers: {
             'content-type': 'application/json'
@@ -54,14 +67,7 @@ function getPostsItems(){
 function createPost(body){
 
     let div = document.createElement('div');
-    div.classList.add('userfeed-post')
-    
-    let date = document.createElement('h3');
-    let dateObj = new Date(Date.parse(body.published_date));
-
-    let dateNode = document.createTextNode(dateObj.toDateString());
-    date.appendChild(dateNode);
-    div.appendChild(date);
+    div.classList.add('userfeed-post');
 
     let publisher_div = document.createElement('div');
     publisher_div.classList.add('publisher');

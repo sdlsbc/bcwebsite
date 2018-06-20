@@ -46,36 +46,15 @@
 }
 .profile_wrapper {
   background-color: $light-blue;
-  margin-top: 130px;
+  margin-top: 310px;
   padding-bottom: 8%;
   display: flex;
   flex-wrap: wrap;
   height: 100%;
   width: 100%;
-  .second_nav_right {
-    width: 65%;
-    margin-top: -3%;
-    flex: 1 1 160px;
-    a {
-      text-decoration: none;
-      float: right;
-      width: 13%;
-      display: inline;
-      &:first-child {
-        margin-right: 140px;
-      }
-      p {
-        text-align: center;
-        color: $main-blue;
-        &:hover {
-          border-bottom: 4px solid $main-blue;
-        }
-      }
-    }
-  }
   .user_profile_left {
     float: left;
-    margin-top: -4%;
+    margin-top: -50%;
     width: 100%;
     margin-left: 4%;
     .user_img {   
@@ -83,15 +62,16 @@
       img {
         border: 4px solid $main-blue;
         border-radius: 50%;
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
       }
     }
     .name {
       text-align: center;
       width: 100%;
-      font-size: 28px;
+      font-size: 20px;
       color: $main-blue;
+      margin-top: 5px;
       text-align: center;
     }
     .username {
@@ -99,6 +79,7 @@
       margin-top: -10px;
       color: $main-blue;
       text-align: center;
+      display: none;
     }
     .title {
       font-size: 16px;
@@ -106,6 +87,7 @@
       margin-top: 0px;
       color: $main-blue;
       text-align: center;
+      display: none;
     }
     .organization {
       font-size: 16px;
@@ -113,6 +95,7 @@
       margin-top: -10px;
       color: $main-blue;
       text-align: center;
+      display: none;
     }
     .user_type {
       font-size: 16px;
@@ -120,6 +103,7 @@
       margin-top: -10px;
       color: $main-blue;
       text-align: center;
+      display: none;
     }
     .briefcase_icon {
       text-align: center;
@@ -127,6 +111,7 @@
       img {
         width: 28px;
         height: 24px;
+        display: none;
       }
     }
     .previous {
@@ -134,6 +119,7 @@
       margin-top: -10px;
       color: $main-blue;
       text-align: center;
+      display: none;
     }
     .previous_job {
       font-size: 16px;
@@ -141,6 +127,7 @@
       margin-top: -10px;
       color: $main-blue;
       text-align: center;
+      display: none;
     }
     .location_icon {
       text-align: center;
@@ -148,6 +135,7 @@
       img {
         width: 28px;
         height: 28px;
+        display: none;
       }
     }
     .location {
@@ -171,6 +159,7 @@
       transition-duration: 0.4s;
       border-radius: 25px;
       font-size: 14px;
+      display: none;
       &:hover {
         width: 105px;
         height: 36px;
@@ -194,35 +183,78 @@
       }
     }
   }
-  #profile-postsbox {
-    background-color: $light-blue;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: space-around;
-    height: auto;
-    overflow: hidden;
-    padding-top: 50px;
-    margin-top: 62px;
-    margin-left: 9%;
-    width: 74%;
-    .userfeed-post {
-      background-color: white;
-      margin-bottom: 20px;
-      width: 100%;
-      height: auto;
-      overflow: none;
-      .publisher {
-        float: left;
-        .userfeed-publisher-image {
-          width: 60px;
-          height: 60px;
-          margin-left: 20px;
+  .second_nav_right {
+    width: 100%;
+    margin-top: -8%;
+    flex: 1 1 160px;
+    a {
+      text-decoration: none;
+      float: left;
+      width: 17%;
+      margin-left: 0%;
+      font-size: 12px;
+      display: inline;
+      &:first-child {
+        margin-left: 16%;
+        margin-right: 0px;
+      }
+      p {
+        text-align: center;
+        color: $main-blue;
+        &:hover {
+          border-bottom: 4px solid $main-blue;
         }
-        .userfeed-name {
+      }
+    }
+    #profile-postsbox {
+      background-color: $light-blue;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-content: space-around;
+      height: auto;
+      overflow: hidden;
+      padding-top: 50px;
+      margin-top: 62px;
+      margin-left: 12.5%;
+      width: 74%;
+      .userfeed-post {
+        background-color: white;
+        margin-bottom: 20px;
+        border-radius: 1.8%/6%;
+        width: 100%;
+        height: auto;
+        overflow: none;
+        .publisher {
+          float: left;
+          .userfeed-publisher-image {
+            width: 60px;
+            height: 60px;
+            margin-left: 20px;
+            margin-top: 5px;
+          }
+          .userfeed-name {
+            font-size: 20px;
+            font-weight: 400;
+            margin-left: 10px;
+            margin-top: 23px;
+          }
+        }
+        .userfeed-title {
+          /*float: left;*/
+          width: 90%;
+          margin-left: 34px;
+          margin-top: 35px;
+          color: $main-blue;
+          font-size: 18px;
+        }
+        .userfeed-description {
+          text-align: justify;
+          margin-left: -3px;
+          width: 94%;
+          margin-top: 123px;
           font-size: 16px;
-          margin-left: 10px;
         }
       }
     }

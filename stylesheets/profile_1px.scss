@@ -1,163 +1,37 @@
-.hidden{
-  display: none;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-#wrapper {
-  background-color:#ecf2f9;
-  padding-bottom:30px;
-  padding:10px;           
-}
-.navbar {
-  position: fixed;
-  background: white;
-  margin-left: -8px;
-  padding-left: 4px;
-  top: 0;
-  width: 100%;
-  z-index: 3;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  a { 
-    text-decoration: none;
-    &:hover p { 
-      text-decoration:none; color:#A9A9A9;
-    }
-  }
-  p {
-    color: #C0C0C0;
-    font-size: 16px;
-    font-weight: 100;
-    margin-left: 25px;
-    margin-top: 19px;
-  }
-}
-.userfeed-post{
-  padding: 10px;
-}
-.userfeed-publisher-image{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-.userfeed-description{
-  padding:10px;
-  max-height: 80px;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 700px) {
-  .navbar { 
-    a {
-      width: 20%;
-      margin-left: 5px;
-    }
-    p {
-      font-size: 14px;
-      font-weight: 100;
-      margin-left: 10px;
-      margin-top: 10px;
-    }
-  }
-
-  .open_sidenav {
-    width: 36px;
-    font-size: 30px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  .logo {
-    height: 50%;
-    width: auto;
-    margin-right: -10px;
-    margin-top: 3px;
-  }
-}
-
-/* ===================== S I G N  O U T ===================== */
-
-
-.profile-signout {
-  display: flex;
-  justify-content: flex-end;
-  flex-grow: 2;
-}
 .profile-signout-button {
   background-color: #1B5AC3;
   border: 2px solid #1B5AC3;
   color: white;
   padding: 3px 12px;
-  width: 105px;
-  height: 36px;
+  width: 85px;
+  height: 28px;
   text-align: center;
   font-size: 12px;
   cursor: pointer;
-  -webkit-transition-duration: 0.4s; /* Safari */
+  -webkit-transition-duration: 0.4s; 
   transition-duration: 0.4s;
   border-radius: 25px;
-  margin-right: 45px;
-  font-size: 14px;
+  margin-left: 20%;
+  margin-top: -34px;
+  font-size: 13px;
   &:hover {
-    width: 105px;
-    height: 36px;
     background-color: white;
     border: 2px solid #1B5AC3;
-    border-radius: 25px;
-    margin-right: 45px; 
     color: #1B5AC3;
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .profile-signout-button {
-    background-color: #1B5AC3;
-    border: 2px solid #1B5AC3;
-    color: white;
     padding: 3px 12px;
     width: 85px;
     height: 28px;
     text-align: center;
-    font-size: 12px;
     cursor: pointer;
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     border-radius: 25px;
-    margin-left: 20%;
-    margin-top: -34px;
+    margin-right: 15%;
+    margin-top: -14px;
     font-size: 13px;
-    &:hover {
-      background-color: white;
-      border: 2px solid #1B5AC3;
-      color: #1B5AC3;
-      padding: 3px 12px;
-      width: 85px;
-      height: 28px;
-      text-align: center;
-      cursor: pointer;
-      -webkit-transition-duration: 0.4s; /* Safari */
-      transition-duration: 0.4s;
-      border-radius: 25px;
-      margin-right: 15%;
-      margin-top: -14px;
-      font-size: 13px;
-    }
   }
 }
+
 .user_name {
   text-decoration: none;
   font-size: 16px;
@@ -172,7 +46,7 @@
 }
 .profile_wrapper {
   background-color: $light-blue;
-  margin-top: 130px;
+  margin-top: 310px;
   padding-bottom: 8%;
   display: flex;
   flex-wrap: wrap;
@@ -180,21 +54,24 @@
   width: 100%;
   .user_profile_left {
     float: left;
-    margin-top: -4%;
-    width: 30%;
+    margin-top: -50%;
+    width: 100%;
     margin-left: 4%;
     .user_img {   
       text-align: center;
       img {
         border: 4px solid $main-blue;
         border-radius: 50%;
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
       }
     }
     .name {
-      font-size: 18px;
+      text-align: center;
+      width: 100%;
+      font-size: 20px;
       color: $main-blue;
+      margin-top: 5px;
       text-align: center;
     }
     .username {
@@ -202,6 +79,7 @@
       margin-top: -10px;
       color: $main-blue;
       text-align: center;
+      display: none;
     }
     .title {
       font-size: 16px;
@@ -209,6 +87,7 @@
       margin-top: 0px;
       color: $main-blue;
       text-align: center;
+      display: none;
     }
     .organization {
       font-size: 16px;
@@ -216,6 +95,7 @@
       margin-top: -10px;
       color: $main-blue;
       text-align: center;
+      display: none;
     }
     .user_type {
       font-size: 16px;
@@ -223,6 +103,7 @@
       margin-top: -10px;
       color: $main-blue;
       text-align: center;
+      display: none;
     }
     .briefcase_icon {
       text-align: center;
@@ -230,6 +111,7 @@
       img {
         width: 28px;
         height: 24px;
+        display: none;
       }
     }
     .previous {
@@ -237,6 +119,7 @@
       margin-top: -10px;
       color: $main-blue;
       text-align: center;
+      display: none;
     }
     .previous_job {
       font-size: 16px;
@@ -244,6 +127,7 @@
       margin-top: -10px;
       color: $main-blue;
       text-align: center;
+      display: none;
     }
     .location_icon {
       text-align: center;
@@ -251,6 +135,7 @@
       img {
         width: 28px;
         height: 28px;
+        display: none;
       }
     }
     .location {
@@ -270,10 +155,11 @@
       text-align: center;
       font-size: 12px;
       cursor: pointer;
-      -webkit-transition-duration: 0.4s; /* Safari */
+      -webkit-transition-duration: 0.4s; 
       transition-duration: 0.4s;
       border-radius: 25px;
       font-size: 14px;
+      display: none;
       &:hover {
         width: 105px;
         height: 36px;
@@ -298,17 +184,19 @@
     }
   }
   .second_nav_right {
-    width: 65%;
-    margin-top: -3%;
+    width: 100%;
+    margin-top: -8%;
     flex: 1 1 160px;
     a {
       text-decoration: none;
-      float: right;
-      width: 18%;
+      float: left;
+      width: 19%;
+      margin-left: 0%;
+      font-size: 12px;
       display: inline;
       &:first-child {
-        margin-left: 0%;
-        margin-right: 18%;
+        margin-left: 10%;
+        margin-right: 0px;
       }
       p {
         text-align: center;
@@ -329,15 +217,9 @@
       overflow: hidden;
       padding-top: 50px;
       margin-top: 62px;
-      margin-left: 9%;
+      margin-left: 12.5%;
       width: 74%;
       .userfeed-post {
-        box-shadow: 0 6px 2px -2px rgba(220,220,220,0.5);
-/*        border-left: 1px solid rgba(220,220,220,0.5);
-        border-right: 1px solid rgba(220,220,220,0.5);
-        border-top: 1px solid rgba(220,220,220,0.5);*/
-        /*border-bottom: 4px solid rgba(0, 0, 0, 0.2);*/
-        /*box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);*/
         background-color: white;
         margin-bottom: 20px;
         border-radius: 1.8%/6%;
@@ -347,8 +229,8 @@
         .publisher {
           float: left;
           .userfeed-publisher-image {
-            width: 43px;
-            height: 43px;
+            width: 60px;
+            height: 60px;
             margin-left: 20px;
             margin-top: 5px;
           }
@@ -356,19 +238,20 @@
             font-size: 20px;
             font-weight: 400;
             margin-left: 10px;
-            margin-top: 18px;
+            margin-top: 23px;
           }
         }
         .userfeed-title {
-          float: left;
-          margin-left: -165px;
-          margin-top: 86px;
+          /*float: left;*/
+          width: 90%;
+          margin-left: 34px;
+          margin-top: 35px;
           color: $main-blue;
           font-size: 18px;
         }
         .userfeed-description {
           text-align: justify;
-          margin-left: 8px;
+          margin-left: -3px;
           width: 94%;
           margin-top: 123px;
           font-size: 16px;
@@ -377,5 +260,3 @@
     }
   }
 }
-
-

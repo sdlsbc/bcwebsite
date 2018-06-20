@@ -10,6 +10,13 @@
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
 </head>
 <div class="body">
+    <script src="./javascript/register.js"></script>
+    <script>
+        if(navigator.userAgent.indexOf("MSIE") != -1 )
+        {
+            createCustomAlert('For the best experience, please browse our website with Google Chrome.');
+        }
+    </script>
 <div class="main-header" id="myTopnav">
     <!-- <div class="pure-u-1-2">  --> 
   <img class="logo-image" src="./images/bc_solo_logo.png" alt="Broadway Connected">
@@ -143,7 +150,7 @@
     <br>
     <br>
     <br>
-    <script src="./javascript/register.js"></script>
+    
     <!-- Resource JavaScript -->
     <script src="./javascript/placeholders.min.js"></script>
     <!-- polyfill for the HTML5 placeholder attribute -->

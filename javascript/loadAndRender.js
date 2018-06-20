@@ -43,13 +43,13 @@ function loadAndShowPosts() {
 }
 
 function getPostsItems() {
-	let url = "";
+	let url = "http://app.bwayconnected.com/api/";
 	if (PAGE == 'new') {
-		url = "http://app.bwayconnected.com/api/posts?offset=" + (12 * fetchCount) + "&limit=12";
+		url = url + "posts?offset=" + (12 * fetchCount) + "&limit=12";
 	}
 	if (PAGE == 'fav') {
 		let user_id = localStorage.getItem("user_id");
-		url = "http://app.bwayconnected.com/api/post/favourites?user_id=" + user_id + "&offset=" + (12 * fetchCount) + "&limit=12";
+		url = url + "post/favourites?user_id=" + user_id + "&offset=" + (12 * fetchCount) + "&limit=12";
 	}
 	fetchCount += 1;
 	//url = url + offset;
@@ -98,6 +98,7 @@ function favorite(post_id) {
 		},
 		method: 'POST'
 	}
+	console.log(url)
 	return fetch(url, params)
 		 .then(res => res.json());
 		
@@ -396,13 +397,11 @@ function createPost(body) {
 	comment_button.classList.add('comment_button');
 	button_div.appendChild(comment_button);
 
-  comment_button.onclick = function(ev) {
-    createCustomAlert("Comments not currently available on web version, please download our IOS app");
-	  //setTimeout(function(){ createCustomAlert("Comments not currently available on web version, please download our IOS app").hide(); }, 1000,);
+  	comment_button.onclick = function(ev) {
+    	createCustomAlert("Comments not currently available on web version, please download our IOS app");
+		//setTimeout(function(){ createCustomAlert("Comments not currently available on web version, please download our IOS app").hide(); }, 1000,);
 
-	  //setTimeout(function () { $("#modalContainer").fadeOut(); }, 5000);
-
-
+		//setTimeout(function () { $("#modalContainer").fadeOut(); }, 5000);
 	};
 
 

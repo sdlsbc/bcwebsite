@@ -8,7 +8,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0; }
@@ -2197,7 +2197,7 @@ code {
   bottom: 0;
   left: 0;
   right: 0;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0; }
@@ -2234,6 +2234,17 @@ code {
     font-weight: 100;
     margin-left: 25px;
     margin-top: 19px; }
+
+.userfeed-post {
+  padding: 10px; }
+
+.userfeed-publisher-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; }
+
+.userfeed-description {
+  padding: 10px; }
 
 @media screen and (max-width: 700px) {
   .navbar a {

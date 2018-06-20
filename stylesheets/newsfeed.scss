@@ -915,8 +915,66 @@ body {
   height: auto;
   overflow: hidden;
   padding-top: 50px;
-  margin-top: 62px;
+  margin-top: 62px; 
 }
+
+
+/*============= N E W S F E E D  S A F A R I =============*/
+
+
+_::-webkit-full-page-media, _:future, :root #postsbox {
+  padding-left: 2%;
+}
+_::-webkit-full-page-media, _:future, :root .rcorners {
+  width: 23%;
+  background-color: white;
+  color: black;  
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  z-index: 1;
+  &:hover {
+    background: linear-gradient(#1B5AC3 10%, white 45%, white);
+    color: white;
+    z-index: 1;
+  }
+}
+_::-webkit-full-page-media, _:future, :root .rcorners { 
+  @media only screen and (max-width: 1200px) {
+    width: 29%;
+    background-color:#fff;
+    color: rgb(0, 0, 0);
+    border-radius:10px;
+    margin: 10px;
+    margin-left: 2.3%;
+    font-size: 20px;
+  }
+}
+_::-webkit-full-page-media, _:future, :root .rcorners { 
+  @media only screen and (max-width: 1000px) {
+    width: 40%;
+    background-color:#fff;
+    color: rgb(0, 0, 0);
+    border-radius:10px;
+    margin: 10px;
+    margin-left: 5.5%;
+    font-size: 20px;
+  }
+}
+_::-webkit-full-page-media, _:future, :root .rcorners { 
+  @media only screen and (max-width: 700px) {
+    width: 80%;
+    background-color:#fff;
+    color: rgb(0, 0, 0);
+    border-radius:10px;
+    margin: 10px;
+    margin-left: 9%;
+    font-size: 20px;
+  }
+}
+
 .rcorners{
   width: 279px;
   background-color: white;

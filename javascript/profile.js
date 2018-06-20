@@ -29,8 +29,9 @@ function loadAndShowPosts(){
     console.log("This is the /'main/'");
     getPostsItems()
         .then(newsRaw => {
+            console.log(newsRaw.length)
             newsRaw.forEach(element => {
-                console.log(element.title);
+                console.log(Date.parse(element.published_date))
                 createPost(element);
             })
         })
@@ -55,6 +56,12 @@ function createPost(body){
     let div = document.createElement('div');
     div.classList.add('userfeed-post')
     
+    let date = document.createElement('h3');
+    let dateObj = new Date(Date.parse(body.published_date));
+
+    let dateNode = document.createTextNode(dateObj.toDateString());
+    date.appendChild(dateNode);
+    div.appendChild(date);
 
     let publisher_div = document.createElement('div');
     publisher_div.classList.add('publisher');

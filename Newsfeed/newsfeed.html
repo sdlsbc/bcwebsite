@@ -4,6 +4,10 @@
   <link rel="icon" href="../images/bc32_mcU_icon.ico" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="../stylesheets/style.css" rel="stylesheet">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body onload="checkLocalStorage('new')">
@@ -51,41 +55,37 @@
     <!-- The Modal -->
     <div id="myModal" class="modal">
         <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-image">
-                <span class="close"></span>
-            </div>
-            <div class="modal-header">
-            </div>
-            <div class="modal_h3">
-            </div>
-            <div class="modal-date">
-            </div>
-            <div class="calendar">
-                <img src="../images/calendar.png">
-            </div>
-            <div class="modal-time">
-            </div>
-            <div class="clock">
-                <img src="../images/clock.png">
-            </div>
-            <div class="modal-favorite">
-                <img id="modal-favorite-img" src="../images/newsfeed_buttons/heart2.png">
-            </div>
-            <center>
-                <div class="modal-title"></div>
-            </center>
-            <center>
-                <div class="modal-description"></div>
-            </center>
-            <center><a href="" target="_blank" id="modal-other">See More</a></center>
-            <br><br>
-            <!--       <center>
-        <div class="modal-other"></div>
-      </center> -->
-            <div class="read_more">
-              <button class="signout-button"></button>
-            </div>
+      <div class="modal-content">
+        <div class="modal-image">
+            <span class="close"></span>
+        </div>
+        <div class="left">
+          <div class="modal-header"></div>
+          <div class="modal_h3"></div>
+        </div>
+        <div class="right">
+          <div class="modal-date"></div>
+          <div class="calendar">
+              <img src="../images/calendar.png">
+          </div>
+          <div class="modal-time"></div>
+          <div class="clock">
+            <img src="../images/clock.png">
+          </div>
+          <div class="modal-favorite">
+            <img id="modal-favorite-img" src="../images/newsfeed_buttons/heart2.png">
+          </div>
+          </div>
+          <center>
+              <div class="modal-title"></div>
+          </center>
+          <center>
+              <div class="modal-description"></div>
+          </center>
+          <center><a href="" target="_blank" id="modal-other">See More</a>  </center>
+          <br><br>
+          <div class="read_more">
+          </div>
 
         </div>
       </div>

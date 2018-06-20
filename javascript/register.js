@@ -4,6 +4,12 @@ function register() {
     var fname = document.getElementById('signup-firstname').value;
     var lname = document.getElementById('signup-lastname').value;
     var handle = document.getElementById('signup-handle').value;
+    let error_message = validateSignUpInput(email,password,fname,lname,handle);
+    if (error_message !== "") {
+        console.log('error msg from function',error_message);
+        createCustomAlert(error_message);
+    } else {
+
 
     var url = 'http://app.bwayconnected.com/api/register';
     var data = {
@@ -52,6 +58,7 @@ function register() {
                 }
             }
         })
+    }
 }
 
 function signin() {
@@ -186,6 +193,24 @@ function validateSigninInput(e, p) {
         return '';
     }else {
         return 'Please Enter A Valid Email ID';
+    }
+}
+
+function validateSignUpInput(e,p,fn,ln,h){
+    if (e == "" || e == null) {
+        return 'Please Enter Email';
+    } else if (p == "" || p == null) {
+        return 'Please Enter Password';
+    } else if(p.length < 6){
+        return 'The Password Must Be At Least 6 Characters';
+    } else if (fn == "" || fn == null) {
+        return 'Please Enter First Name';
+    } else if (ln == "" || ln == null) {
+        return 'Please Enter Last Name';
+    } else if (h == "" || h == null) {
+        return 'Please Enter Handle';
+    } else {
+        return '';
     }
 }
 

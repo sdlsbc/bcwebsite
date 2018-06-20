@@ -38,7 +38,7 @@ function loadAndShowPosts(){
 
 function getPostsItems(){
     let user_id = localStorage.getItem("user_id");
-    var url = "http://app.bwayconnected.com/api/user/profile?user_id=67&profile_id=67";
+    var url = "http://app.bwayconnected.com/api/user/profile?user_id=67&profile_id=12";
     let params = {
         headers: {
             'content-type': 'application/json'
@@ -76,6 +76,7 @@ function createPost(body){
     publisher_div.appendChild(name);
 
     div.appendChild(publisher_div);
+
 
     let title = document.createElement('p');
     let titleNode = document.createTextNode(body.title);

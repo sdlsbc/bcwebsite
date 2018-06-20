@@ -8,7 +8,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0; }
@@ -41,7 +41,7 @@
       text-decoration: none;
       color: #A9A9A9; }
   .navbar p {
-    color: #C0C0C0;
+    color: #B2B2B2;
     font-size: 16px;
     font-weight: 100;
     margin-left: 25px;
@@ -63,8 +63,8 @@
   flex-grow: 2; }
 
 .signout-button {
-  background-color: #1B5AC3;
-  border: 2px solid #1B5AC3;
+  background-color: #226BE4;
+  border: 2px solid #226BE4;
   color: white;
   padding: 3px 12px;
   width: 105px;
@@ -82,16 +82,16 @@
     width: 105px;
     height: 36px;
     background-color: white;
-    border: 2px solid #1B5AC3;
+    border: 2px solid #226BE4;
     border-radius: 25px;
     margin-right: 45px;
-    color: #1B5AC3;
+    color: #226BE4;
     font-size: 14px; }
 
 @media screen and (max-width: 700px) {
   .signout-button {
-    background-color: #1B5AC3;
-    border: 2px solid #1B5AC3;
+    background-color: #226BE4;
+    border: 2px solid #226BE4;
     color: white;
     padding: 3px 12px;
     width: 85px;
@@ -108,7 +108,7 @@
     font-size: 13px; }
     .signout-button:hover {
       background-color: white;
-      border: 2px solid #1B5AC3;
+      border: 2px solid #226BE4;
       color: #1B5AC3;
       padding: 3px 12px;
       width: 85px;
@@ -168,7 +168,7 @@
   /* Enable scroll if needed */
   background-color: navy;
   /* Fallback color */
-  background-color: rgba(0, 0, 51, 0.7);
+  background-color: rgba(34, 107, 228, 0.5);
   /* Black w/ opacity */ }
   .modal .modal-content {
     position: relative;
@@ -1200,7 +1200,7 @@ code {
   position: fixed;
   margin-top: 20px;
   width: 100%;
-  background-image: url("../images/Group 3@2x.png");
+  background-image: url("../images/background-new.png");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -1239,7 +1239,7 @@ code {
       display: block;
       transition: 0.3s; }
       .main-header span a:hover {
-        color: #f1f1f1; }
+        color: #E9E9E9; }
   .main-header button {
     margin-top: 45px;
     border-radius: 25px;
@@ -1249,13 +1249,13 @@ code {
     height: 33px;
     font-size: 16px;
     float: right;
-    border: 2px solid #1B5AC3;
+    border: 2px solid #226BE4;
     font-family: 'Tajawal', sans-serif;
     text-decoration: none; }
 
 .main-header .button1 {
   /*button 1 = login*/
-  background: #1B5AC3; }
+  background: #226BE4; }
   .main-header .button1:hover {
     background: white; }
   .main-header .button1 a {
@@ -1263,11 +1263,11 @@ code {
     color: white; }
     .main-header .button1 a:hover {
       text-decoration: none;
-      color: #1B5AC3; }
+      color: #226BE4; }
 
 .main-header .button2 {
   /*button 2 = sign up*/
-  background: #1B5AC3; }
+  background: #226BE4; }
   .main-header .button2:hover {
     background: white; }
   .main-header .button2 a {
@@ -1275,7 +1275,7 @@ code {
     color: white; }
     .main-header .button2 a:hover a {
       text-decoration: none;
-      color: #1B5AC3; }
+      color: #226BE4; }
 
 /* =============== M O B I L E  M A I N  H E A D E R =============== */
 @media screen and (max-width: 700px) {
@@ -1294,7 +1294,7 @@ code {
       width: 70px;
       height: 20px;
       font-size: 12px;
-      border: 2px solid #1B5AC3;
+      border: 2px solid #226BE4;
       font-family: 'Tajawal', sans-serif;
       text-decoration: none; }
     .main-header .main-header span .logo {
@@ -1317,7 +1317,7 @@ code {
       display: block;
       transition: 0.3s; }
       .main-header span a:hover {
-        color: #f1f1f1; }
+        color: #E9E9E9; }
       .main-header span a p {
         font-size: 13px; }
 
@@ -1366,7 +1366,7 @@ code {
   height: 100%;
   overflow: auto; }
   .index-modal .index-modal-content {
-    background-color: #fefefe;
+    background-color: #E9E9E9;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
@@ -1380,7 +1380,7 @@ code {
   /*login and signup button*/
   width: 100%;
   text-align: center;
-  color: #1B5AC3;
+  color: #226BE4;
   margin-left: 45%;
   font-size: 22px;
   padding-bottom: 10px;
@@ -1389,7 +1389,7 @@ code {
 hr {
   width: 100%;
   height: 2px;
-  color: #1B5AC3; }
+  color: #226BE4; }
 
 .first_name {
   width: 50%;
@@ -1403,7 +1403,7 @@ hr {
   .first_name span {
     display: none; }
   .first_name input[type=text] {
-    background-color: #E0E0E0;
+    background-color: #B2B2B2;
     border-radius: 13%/97%;
     padding-left: 15px;
     margin-left: 5px;
@@ -1424,7 +1424,7 @@ hr {
     margin-left: 18px;
     font-weight: 100; }
   .last_name input[type=text] {
-    background-color: #E0E0E0;
+    background-color: #B2B2B2;
     border-radius: 13%/97%;
     padding-left: 18px;
     margin-top: 6px;
@@ -1448,7 +1448,7 @@ hr {
     font-weight: 100;
     float: left; }
   .handle input[type=text] {
-    background-color: #E0E0E0;
+    background-color: #B2B2B2;
     border-radius: 13%/180%;
     padding-left: 25px;
     margin-top: 6px;
@@ -1472,7 +1472,7 @@ hr {
     font-weight: 100;
     float: left; }
   .signin-email input[type=email] {
-    background-color: #E0E0E0;
+    background-color: #B2B2B2;
     border-radius: 13%/180%;
     padding-left: 25px;
     margin-top: 6px;
@@ -1496,7 +1496,7 @@ hr {
     font-weight: 100;
     float: left; }
   .signin-password input[type=password] {
-    background-color: #E0E0E0;
+    background-color: #B2B2B2;
     border-radius: 13%/180%;
     padding-left: 25px;
     margin-top: 6px;
@@ -1511,7 +1511,7 @@ hr {
     display: none; }
 
 .signin-submit input[type=button] {
-  background-color: #1B5AC3;
+  background-color: #226BE4;
   padding: 12px;
   margin-left: 40%;
   margin-bottom: -10px;
@@ -1543,7 +1543,7 @@ hr {
   .signin-agree a {
     font-size: 15px;
     text-decoration: none;
-    color: #1B5AC3; }
+    color: #226BE4; }
 
 /* ============== M O B I L E  S I G N  I N  M O D A L ============== */
 @media screen and (max-width: 700px) {
@@ -1559,7 +1559,7 @@ hr {
     overflow: auto; }
 
   .index-modal-content {
-    background-color: #fefefe;
+    background-color: #E9E9E9;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
@@ -1573,7 +1573,7 @@ hr {
   .a-login {
     width: 100%;
     text-align: center;
-    color: #1B5AC3;
+    color: #226BE4;
     margin-left: 2%;
     font-size: 22px;
     padding-bottom: 10px;
@@ -1582,7 +1582,7 @@ hr {
   hr {
     width: 100%;
     height: 2px;
-    color: #1B5AC3; }
+    color: #226BE4; }
 
   .first_name {
     width: 50%;
@@ -1594,7 +1594,7 @@ hr {
       margin-left: -30px;
       font-weight: 100; }
     .first_name input[type=text] {
-      background-color: #E0E0E0;
+      background-color: #B2B2B2;
       border-radius: 13%/97%;
       padding-left: 15px;
       margin-left: 5px;
@@ -1617,7 +1617,7 @@ hr {
       margin-left: -30px;
       font-weight: 100; }
     .last_name input[type=text] {
-      background-color: #E0E0E0;
+      background-color: #B2B2B2;
       border-radius: 13%/97%;
       padding-left: 18px;
       margin-top: 6px;
@@ -1641,7 +1641,7 @@ hr {
       font-weight: 100;
       float: left; }
     .handle input[type=text] {
-      background-color: #E0E0E0;
+      background-color: #B2B2B2;
       border-radius: 13%/180%;
       padding-left: 25px;
       margin-top: 6px;
@@ -1665,7 +1665,7 @@ hr {
       font-weight: 100;
       float: left; }
     .signin-email input[type=email] {
-      background-color: #E0E0E0;
+      background-color: #B2B2B2;
       border-radius: 13%/180%;
       padding-left: 25px;
       margin-top: 6px;
@@ -1689,7 +1689,7 @@ hr {
       font-weight: 100;
       float: left; }
     .signin-password input[type=text] {
-      background-color: #E0E0E0;
+      background-color: #B2B2B2;
       border-radius: 13%/180%;
       padding-left: 25px;
       margin-top: 6px;
@@ -1704,7 +1704,7 @@ hr {
       display: none; }
 
   .signin-submit input[type=button] {
-    background-color: #1B5AC3;
+    background-color: #226BE4;
     padding: 12px;
     margin-left: 0%;
     margin-bottom: -10px;
@@ -1736,7 +1736,7 @@ hr {
     .signin-agree a {
       font-size: 15px;
       text-decoration: none;
-      color: #1B5AC3; } }
+      color: #226BE4; } }
 /* ===================== L O G I N  M O D A L ===================== */
 .login-email {
   width: 100%;
@@ -1798,7 +1798,7 @@ hr {
     display: none; }
 
 .login-submit input[type=button] {
-  background-color: #1B5AC3;
+  background-color: #226BE4;
   padding: 12px;
   margin-left: 40%;
   width: 20%;
@@ -1891,7 +1891,7 @@ hr {
     .login-password a {
       display: none; }
     .login-password input[type=button] {
-      background-color: #1B5AC3;
+      background-color: #226BE4;
       padding: 12px;
       margin-left: 0%;
       margin-bottom: -10px;
@@ -2043,7 +2043,7 @@ code span {
   height: 0px;
   font-size: 20;
   margin-top: 14px;
-  color: #1B5AC3;
+  color: #226BE4;
   font-weight: 100;
   text-align: center;
   vertical-align: middle; }
@@ -2104,7 +2104,7 @@ code {
 @media screen and (max-width: 700px) {
   #modalContainer {
     position: fixed;
-    background-color: #1B5AC3;
+    background-color: #226BE4;
     position: absolute;
     top: 0;
     width: 100%;
@@ -2131,7 +2131,7 @@ code {
     height: 0px;
     font-size: 12px;
     margin-top: 14px;
-    color: #1B5AC3;
+    color: #226BE4;
     font-weight: 100;
     text-align: center;
     vertical-align: middle; }
@@ -2188,6 +2188,8 @@ code {
   .important {
     background-color: #F5FCC8;
     padding: 2px; } }
+/*$other-blue-dark: #226BE4;
+$other-blue-light: #;*/
 .hidden {
   display: none; }
 
@@ -2197,7 +2199,7 @@ code {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0; }
@@ -2229,7 +2231,7 @@ code {
       text-decoration: none;
       color: #A9A9A9; }
   .navbar p {
-    color: #C0C0C0;
+    color: #B2B2B2;
     font-size: 16px;
     font-weight: 100;
     margin-left: 25px;
@@ -2343,7 +2345,7 @@ code {
   height: auto; }
 
 .profile_wrapper {
-  background-color: #F0F8FF;
+  background-color: #F7FAFF;
   margin-top: 130px;
   padding-bottom: 8%;
   display: flex;
@@ -2358,36 +2360,36 @@ code {
     .profile_wrapper .user_profile_left .user_img {
       text-align: center; }
       .profile_wrapper .user_profile_left .user_img img {
-        border: 4px solid #1B5AC3;
+        border: 4px solid #226BE4;
         border-radius: 50%;
         width: 150px;
         height: 150px; }
     .profile_wrapper .user_profile_left .name {
       font-size: 18px;
-      color: #1B5AC3;
+      color: #226BE4;
       text-align: center; }
     .profile_wrapper .user_profile_left .username {
       font-size: 16px;
       margin-top: -10px;
-      color: #1B5AC3;
+      color: #B2B2B2;
       text-align: center; }
     .profile_wrapper .user_profile_left .title {
       font-size: 16px;
       font-weight: 100;
       margin-top: 0px;
-      color: #1B5AC3;
+      color: #B2B2B2;
       text-align: center; }
     .profile_wrapper .user_profile_left .organization {
       font-size: 16px;
       font-weight: 100;
       margin-top: -10px;
-      color: #1B5AC3;
+      color: #B2B2B2;
       text-align: center; }
     .profile_wrapper .user_profile_left .user_type {
       font-size: 16px;
       font-weight: 100;
       margin-top: -10px;
-      color: #1B5AC3;
+      color: #B2B2B2;
       text-align: center; }
     .profile_wrapper .user_profile_left .briefcase_icon {
       text-align: center;
@@ -2398,13 +2400,13 @@ code {
     .profile_wrapper .user_profile_left .previous {
       font-size: 16px;
       margin-top: -10px;
-      color: #1B5AC3;
+      color: #B2B2B2;
       text-align: center; }
     .profile_wrapper .user_profile_left .previous_job {
       font-size: 16px;
       font-weight: 100;
       margin-top: -10px;
-      color: #1B5AC3;
+      color: #B2B2B2;
       text-align: center; }
     .profile_wrapper .user_profile_left .location_icon {
       text-align: center;
@@ -2415,11 +2417,11 @@ code {
     .profile_wrapper .user_profile_left .location {
       font-size: 16px;
       margin-top: -10px;
-      color: #1B5AC3;
+      color: #B2B2B2;
       text-align: center; }
     .profile_wrapper .user_profile_left .view-more {
-      background-color: #1B5AC3;
-      border: 2px solid #1B5AC3;
+      background-color: #226BE4;
+      border: 2px solid #226BE4;
       color: white;
       padding: 3px 12px;
       width: 105px;
@@ -2429,7 +2431,6 @@ code {
       font-size: 12px;
       cursor: pointer;
       -webkit-transition-duration: 0.4s;
-      /* Safari */
       transition-duration: 0.4s;
       border-radius: 25px;
       font-size: 14px; }
@@ -2438,7 +2439,7 @@ code {
         height: 36px;
         margin-top: 20px;
         background-color: white;
-        border: 2px solid #1B5AC3;
+        border: 2px solid #226BE4;
         border-radius: 25px;
         color: #1B5AC3;
         font-size: 14px; }
@@ -2448,13 +2449,14 @@ code {
           color: white;
           margin-top: 4px; }
           .profile_wrapper .user_profile_left .view-more a p:hover {
-            color: #1B5AC3;
+            color: #226BE4;
             margin-top: 4px; }
   .profile_wrapper .second_nav_right {
     width: 65%;
     margin-top: -3%;
     flex: 1 1 160px; }
     .profile_wrapper .second_nav_right a {
+      margin-top: -15px;
       text-decoration: none;
       float: right;
       width: 18%;
@@ -2464,11 +2466,13 @@ code {
         margin-right: 18%; }
       .profile_wrapper .second_nav_right a p {
         text-align: center;
-        color: #1B5AC3; }
+        color: #B2B2B2; }
         .profile_wrapper .second_nav_right a p:hover {
-          border-bottom: 4px solid #1B5AC3; }
+          color: #226BE4;
+          border-bottom: 4px solid #226BE4;
+          padding-bottom: 15px; }
     .profile_wrapper .second_nav_right #profile-postsbox {
-      background-color: #F0F8FF;
+      background-color: #F7FAFF;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -2482,11 +2486,6 @@ code {
       width: 74%; }
       .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post {
         box-shadow: 0 6px 2px -2px rgba(220, 220, 220, 0.5);
-        /*        border-left: 1px solid rgba(220,220,220,0.5);
-                border-right: 1px solid rgba(220,220,220,0.5);
-                border-top: 1px solid rgba(220,220,220,0.5);*/
-        /*border-bottom: 4px solid rgba(0, 0, 0, 0.2);*/
-        /*box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);*/
         background-color: white;
         margin-bottom: 20px;
         border-radius: 1.8%/6%;
@@ -2510,7 +2509,7 @@ code {
           float: left;
           margin-left: -165px;
           margin-top: 86px;
-          color: #1B5AC3;
+          color: #226BE4;
           font-size: 18px; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-description {
           text-align: justify;
@@ -2565,7 +2564,7 @@ code {
     height: auto; }
 
   .profile_wrapper {
-    background-color: #F0F8FF;
+    background-color: #F7FAFF;
     margin-top: 310px;
     padding-bottom: 8%;
     display: flex;
@@ -2580,7 +2579,7 @@ code {
       .profile_wrapper .user_profile_left .user_img {
         text-align: center; }
         .profile_wrapper .user_profile_left .user_img img {
-          border: 4px solid #1B5AC3;
+          border: 4px solid #226BE4;
           border-radius: 50%;
           width: 100px;
           height: 100px; }
@@ -2588,34 +2587,34 @@ code {
         text-align: center;
         width: 100%;
         font-size: 20px;
-        color: #1B5AC3;
+        color: #226BE4;
         margin-top: 5px;
         text-align: center; }
       .profile_wrapper .user_profile_left .username {
         font-size: 16px;
         margin-top: -10px;
-        color: #1B5AC3;
+        color: #226BE4;
         text-align: center;
         display: none; }
       .profile_wrapper .user_profile_left .title {
         font-size: 16px;
         font-weight: 100;
         margin-top: 0px;
-        color: #1B5AC3;
+        color: #226BE4;
         text-align: center;
         display: none; }
       .profile_wrapper .user_profile_left .organization {
         font-size: 16px;
         font-weight: 100;
         margin-top: -10px;
-        color: #1B5AC3;
+        color: #226BE4;
         text-align: center;
         display: none; }
       .profile_wrapper .user_profile_left .user_type {
         font-size: 16px;
         font-weight: 100;
         margin-top: -10px;
-        color: #1B5AC3;
+        color: #226BE4;
         text-align: center;
         display: none; }
       .profile_wrapper .user_profile_left .briefcase_icon {
@@ -2628,14 +2627,14 @@ code {
       .profile_wrapper .user_profile_left .previous {
         font-size: 16px;
         margin-top: -10px;
-        color: #1B5AC3;
+        color: #226BE4;
         text-align: center;
         display: none; }
       .profile_wrapper .user_profile_left .previous_job {
         font-size: 16px;
         font-weight: 100;
         margin-top: -10px;
-        color: #1B5AC3;
+        color: #226BE4;
         text-align: center;
         display: none; }
       .profile_wrapper .user_profile_left .location_icon {
@@ -2648,11 +2647,11 @@ code {
       .profile_wrapper .user_profile_left .location {
         font-size: 16px;
         margin-top: -10px;
-        color: #1B5AC3;
+        color: #226BE4;
         text-align: center; }
       .profile_wrapper .user_profile_left .view-more {
-        background-color: #1B5AC3;
-        border: 2px solid #1B5AC3;
+        background-color: #226BE4;
+        border: 2px solid #226BE4;
         color: white;
         padding: 3px 12px;
         width: 105px;
@@ -2671,7 +2670,7 @@ code {
           height: 36px;
           margin-top: 20px;
           background-color: white;
-          border: 2px solid #1B5AC3;
+          border: 2px solid #226BE4;
           border-radius: 25px;
           color: #1B5AC3;
           font-size: 14px; }
@@ -2681,7 +2680,7 @@ code {
             color: white;
             margin-top: 4px; }
             .profile_wrapper .user_profile_left .view-more a p:hover {
-              color: #1B5AC3;
+              color: #226BE4;
               margin-top: 4px; }
     .profile_wrapper .second_nav_right {
       width: 100%;
@@ -2699,11 +2698,11 @@ code {
           margin-right: 0px; }
         .profile_wrapper .second_nav_right a p {
           text-align: center;
-          color: #1B5AC3; }
+          color: #226BE4; }
           .profile_wrapper .second_nav_right a p:hover {
-            border-bottom: 4px solid #1B5AC3; }
+            border-bottom: 4px solid #226BE4; }
       .profile_wrapper .second_nav_right #profile-postsbox {
-        background-color: #F0F8FF;
+        background-color: #F7FAFF;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -2739,7 +2738,7 @@ code {
             width: 90%;
             margin-left: 34px;
             margin-top: 35px;
-            color: #1B5AC3;
+            color: #226BE4;
             font-size: 18px; }
           .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-description {
             text-align: justify;

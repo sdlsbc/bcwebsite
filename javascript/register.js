@@ -6,7 +6,7 @@ function register() {
     var handle = document.getElementById('signup-handle').value;
     let error_message = validateSignUpInput(email,password,fname,lname,handle);
     if (error_message !== "") {
-        console.log(error_message);
+        console.log('error msg from function',error_message);
         createCustomAlert(error_message);
     } else {
 
@@ -209,6 +209,8 @@ function validateSignUpInput(e,p,fn,ln,h){
         return 'Please Enter Last Name';
     } else if (h == "" || h == null) {
         return 'Please Enter Handle';
+    } else {
+        return '';
     }
 }
 

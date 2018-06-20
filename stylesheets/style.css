@@ -938,55 +938,61 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
   margin-bottom: 21px; }
 
 .button_row {
+  height: 14%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap; }
 
 .button {
-  weight: 22px;
-  height: 22px;
+  width: 35px;
+  height: 35px;
   padding-left: 12px;
   padding-top: 10px;
+  margin-left: 62px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap; }
 
 .comment_button {
-  weight: 22px;
-  height: 22px;
+  width: 35px;
+  height: 35px;
   padding-left: 12px;
+  margin-left: -85px;
   padding-top: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap; }
 
 .fav_likes {
-  weight: 22px;
-  height: 22px;
+  width: 35px;
+  height: 35px;
   padding-left: 2px;
   padding-top: 10px;
   margin-top: 3px;
   color: red; }
 
 .favorite {
-  weight: 22px;
-  height: 22px;
-  padding-left: 12px;
-  padding-top: 10px; }
-
-.favorite:hover {
-  weight: 22px;
-  height: 22px;
-  margin-left: 12px;
+  width: 25px;
+  height: 25px;
+  /*padding-left: 12px;
+  padding-top: 10px;*/
+  margin-left: 10px;
   margin-top: 10px;
   padding-left: 0px;
-  padding-top: 0px;
-  background-color: red;
-  overflow: none; }
+  padding-top: 0px; }
+  .favorite:hover {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-left: 0px;
+    padding-top: 0px;
+    background-color: red;
+    overflow: none; }
 
 .favorite_click {
-  weight: 22px;
-  height: 22px;
+  width: 35px;
+  height: 35px;
   margin-left: 12px;
   margin-top: 10px;
   padding-left: 0px;

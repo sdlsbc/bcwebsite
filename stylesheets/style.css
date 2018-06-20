@@ -2460,10 +2460,11 @@ code {
     .profile_wrapper .second_nav_right a {
       text-decoration: none;
       float: right;
-      width: 13%;
+      width: 18%;
       display: inline; }
       .profile_wrapper .second_nav_right a:first-child {
-        margin-right: 120px; }
+        margin-left: 0%;
+        margin-right: 18%; }
       .profile_wrapper .second_nav_right a p {
         text-align: center;
         color: #1B5AC3; }
@@ -2561,31 +2562,15 @@ code {
 
   .profile_wrapper {
     background-color: #F0F8FF;
-    margin-top: 130px;
+    margin-top: 310px;
     padding-bottom: 8%;
     display: flex;
     flex-wrap: wrap;
     height: 100%;
     width: 100%; }
-    .profile_wrapper .second_nav_right {
-      width: 65%;
-      margin-top: -3%;
-      flex: 1 1 160px; }
-      .profile_wrapper .second_nav_right a {
-        text-decoration: none;
-        float: right;
-        width: 13%;
-        display: inline; }
-        .profile_wrapper .second_nav_right a:first-child {
-          margin-right: 140px; }
-        .profile_wrapper .second_nav_right a p {
-          text-align: center;
-          color: #1B5AC3; }
-          .profile_wrapper .second_nav_right a p:hover {
-            border-bottom: 4px solid #1B5AC3; }
     .profile_wrapper .user_profile_left {
       float: left;
-      margin-top: -4%;
+      margin-top: -50%;
       width: 100%;
       margin-left: 4%; }
       .profile_wrapper .user_profile_left .user_img {
@@ -2593,60 +2578,69 @@ code {
         .profile_wrapper .user_profile_left .user_img img {
           border: 4px solid #1B5AC3;
           border-radius: 50%;
-          width: 150px;
-          height: 150px; }
+          width: 100px;
+          height: 100px; }
       .profile_wrapper .user_profile_left .name {
         text-align: center;
         width: 100%;
-        font-size: 28px;
+        font-size: 20px;
         color: #1B5AC3;
+        margin-top: 5px;
         text-align: center; }
       .profile_wrapper .user_profile_left .username {
         font-size: 16px;
         margin-top: -10px;
         color: #1B5AC3;
-        text-align: center; }
+        text-align: center;
+        display: none; }
       .profile_wrapper .user_profile_left .title {
         font-size: 16px;
         font-weight: 100;
         margin-top: 0px;
         color: #1B5AC3;
-        text-align: center; }
+        text-align: center;
+        display: none; }
       .profile_wrapper .user_profile_left .organization {
         font-size: 16px;
         font-weight: 100;
         margin-top: -10px;
         color: #1B5AC3;
-        text-align: center; }
+        text-align: center;
+        display: none; }
       .profile_wrapper .user_profile_left .user_type {
         font-size: 16px;
         font-weight: 100;
         margin-top: -10px;
         color: #1B5AC3;
-        text-align: center; }
+        text-align: center;
+        display: none; }
       .profile_wrapper .user_profile_left .briefcase_icon {
         text-align: center;
         margin-top: 28px; }
         .profile_wrapper .user_profile_left .briefcase_icon img {
           width: 28px;
-          height: 24px; }
+          height: 24px;
+          display: none; }
       .profile_wrapper .user_profile_left .previous {
         font-size: 16px;
         margin-top: -10px;
         color: #1B5AC3;
-        text-align: center; }
+        text-align: center;
+        display: none; }
       .profile_wrapper .user_profile_left .previous_job {
         font-size: 16px;
         font-weight: 100;
         margin-top: -10px;
         color: #1B5AC3;
-        text-align: center; }
+        text-align: center;
+        display: none; }
       .profile_wrapper .user_profile_left .location_icon {
         text-align: center;
         margin-top: 28px; }
         .profile_wrapper .user_profile_left .location_icon img {
           width: 28px;
-          height: 28px; }
+          height: 28px;
+          display: none; }
       .profile_wrapper .user_profile_left .location {
         font-size: 16px;
         margin-top: -10px;
@@ -2666,7 +2660,8 @@ code {
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         border-radius: 25px;
-        font-size: 14px; }
+        font-size: 14px;
+        display: none; }
         .profile_wrapper .user_profile_left .view-more:hover {
           width: 105px;
           height: 36px;
@@ -2684,33 +2679,69 @@ code {
             .profile_wrapper .user_profile_left .view-more a p:hover {
               color: #1B5AC3;
               margin-top: 4px; }
-    .profile_wrapper #profile-postsbox {
-      background-color: #F0F8FF;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      align-content: space-around;
-      height: auto;
-      overflow: hidden;
-      padding-top: 50px;
-      margin-top: 62px;
-      margin-left: 9%;
-      width: 74%; }
-      .profile_wrapper #profile-postsbox .userfeed-post {
-        background-color: white;
-        margin-bottom: 20px;
-        width: 100%;
+    .profile_wrapper .second_nav_right {
+      width: 100%;
+      margin-top: -8%;
+      flex: 1 1 160px; }
+      .profile_wrapper .second_nav_right a {
+        text-decoration: none;
+        float: left;
+        width: 17%;
+        margin-left: 0%;
+        font-size: 12px;
+        display: inline; }
+        .profile_wrapper .second_nav_right a:first-child {
+          margin-left: 16%;
+          margin-right: 0px; }
+        .profile_wrapper .second_nav_right a p {
+          text-align: center;
+          color: #1B5AC3; }
+          .profile_wrapper .second_nav_right a p:hover {
+            border-bottom: 4px solid #1B5AC3; }
+      .profile_wrapper .second_nav_right #profile-postsbox {
+        background-color: #F0F8FF;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: space-around;
         height: auto;
-        overflow: none; }
-        .profile_wrapper #profile-postsbox .userfeed-post .publisher {
-          float: left; }
-          .profile_wrapper #profile-postsbox .userfeed-post .publisher .userfeed-publisher-image {
-            width: 60px;
-            height: 60px;
-            margin-left: 20px; }
-          .profile_wrapper #profile-postsbox .userfeed-post .publisher .userfeed-name {
-            font-size: 16px;
-            margin-left: 10px; } }
+        overflow: hidden;
+        padding-top: 50px;
+        margin-top: 62px;
+        margin-left: 12.5%;
+        width: 74%; }
+        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post {
+          background-color: white;
+          margin-bottom: 20px;
+          border-radius: 1.8%/6%;
+          width: 100%;
+          height: auto;
+          overflow: none; }
+          .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .publisher {
+            float: left; }
+            .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .publisher .userfeed-publisher-image {
+              width: 60px;
+              height: 60px;
+              margin-left: 20px;
+              margin-top: 5px; }
+            .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .publisher .userfeed-name {
+              font-size: 20px;
+              font-weight: 400;
+              margin-left: 10px;
+              margin-top: 23px; }
+          .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-title {
+            /*float: left;*/
+            width: 90%;
+            margin-left: 34px;
+            margin-top: 35px;
+            color: #1B5AC3;
+            font-size: 18px; }
+          .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-description {
+            text-align: justify;
+            margin-left: -3px;
+            width: 94%;
+            margin-top: 123px;
+            font-size: 16px; } }
 
 /*# sourceMappingURL=style.css.map */

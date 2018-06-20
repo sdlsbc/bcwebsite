@@ -189,6 +189,20 @@ function validateSigninInput(e, p) {
     }
 }
 
+function validateSignUpInput(e,p,fn,ln,h){
+    if (e == "" || e == null) {
+        return 'Please Enter Email';
+    } else if (p == "" || p == null) {
+        return 'Please Enter Password';
+    } else if (fn == "" || fn == null) {
+        return 'Please Enter First Name';
+    } else if (ln == "" || ln == null) {
+        return 'Please Enter Last Name';
+    } else if (h == "" || h == null) {
+        return 'Please Enter Handle';
+    }
+}
+
 function validateEmail(e) {
     var atpos = e.indexOf("@");
     var dotpos = e.lastIndexOf(".");

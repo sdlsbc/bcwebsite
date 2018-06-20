@@ -14,6 +14,7 @@ function checkLocalStorage(page) {
 	if (PAGE == 'profile'){
 		console.log(PAGE);
 		loadProfileData();
+		loadProfile();
 
 	}
 	//}else{
@@ -480,9 +481,24 @@ let url = 'http://app.bwayconnected.com/api/user/profile?user_id='+user_id+'&pro
 				var body = response.Result.profile;
 				var fn = body.first_name;
 				var ln = body.last_name;
+				var handle = body.handle;
 				var profile_image = body.profile_image;
-
+				var headline_position = body.headline_position;
+				console.log('profile image url',profile_image);
 				document.getElementById('name').innerHTML = fn;
+				document.getElementById('username').innerHTML = handle;
+				document.getElementById('headline_position').innerHTML = headline_position;
+				var user_img = document.getElementsByClassName('user_img');
+				user_img.innerHTML = '<img src=' + profile_image + '>';
+				
+				var field_of_work = body.field_of_work;
+				var location = body.city+","+body.country;
+
+				var user_img = document.getElementById("user_img");
+				user_img.innerHTML = '<img src=' + profile_image + '>';
+				document.getElementById('name').innerHTML = fn;
+				document.getElementById('user_type').innerHTML = field_of_work;
+				document.getElementById('location').innerHTML = location;
 				console.log('fn is', fn);
 
 			}

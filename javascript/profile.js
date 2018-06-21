@@ -29,15 +29,12 @@ function loadAndShowPosts(){
     console.log("This is the /'main/'");
     getPostsItems()
         .then(newsRaw => {
-            console.log(newsRaw.length)
             var oldDate = new Date();
-            console.log("oldDate", oldDate)
             newsRaw.forEach(element => {
                 var newDate = new Date(Date.parse(element.published_date));
                 newDate.setHours(0,0,0,0)
-                console.log("newDate", newDate)
+
                 if(newDate < oldDate){
-                    console.log("It's a new day")
                     oldDate = newDate;
                     let date = document.createElement('h3');
                     //let dateObj = new Date(Date.parse(body.published_date));
@@ -45,6 +42,7 @@ function loadAndShowPosts(){
                     date.appendChild(dateNode);
                     document.getElementById('profile-postsbox').appendChild(date);
                 }
+
                 createPost(element);
 
             })
@@ -53,7 +51,8 @@ function loadAndShowPosts(){
 
 function getPostsItems(){
     let user_id = localStorage.getItem("user_id");
-    var url = "http://app.bwayconnected.com/api/user/profile?user_id=12&profile_id=12";
+
+    var url = "http://app.bwayconnected.com/api/user/profile?user_id="+user_id+"&profile_id=67";
     let params = {
         headers: {
             'content-type': 'application/json'
@@ -91,12 +90,32 @@ function createPost(body){
 
     div.appendChild(publisher_div);
 
+    let image_div = document.createElement('div');
+    let image = document.createElement('img');
+    image.src = body.post_image;
+    image.classList.add('userfeed-image');
+    image_div.appendChild(image);
+    div.appendChild(image_div);
+
+    let titleAndTime = document.createElement('div');
+    titleAndTime.classList.add('titleAndTime');
 
     let title = document.createElement('p');
     let titleNode = document.createTextNode(body.title);
     title.appendChild(titleNode);
     title.classList.add('userfeed-title');
-    div.appendChild(title);
+    titleAndTime.appendChild(title);
+
+    let time = document.createElement('div');
+    time.classList.add('time');
+    let clock = document.createElement('img');
+    clock.src = '../images/clock.png';
+    clock.classList.add('clock');
+    time.appendChild(clock);
+
+    titleAndTime.appendChild(time);
+
+    div.appendChild(titleAndTime);
 
     let description = document.createElement('p');
     let descriptionNode = document.createTextNode(body.description);

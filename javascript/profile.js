@@ -123,11 +123,25 @@ function createPost(body){
     div.appendChild(image_div);
 
     let favorite = document.createElement('div');
-    favorite.classList.add('favorite');
+    favorite.classList.add('userfeed-favorite');
     let heart = document.createElement('img');
     heart.src = '../images/newsfeed_buttons/heart2.png';
     heart.classList.add('heart');
-    div.appendChild(heart);
+    favorite.appendChild(heart);
+
+    let favorite_num = document.createElement('p');
+    let favorite_numText = document.createTextNode(body.likes);
+    favorite_num.appendChild(favorite_numText);
+    favorite.appendChild(favorite_num);
+
+    div.appendChild(favorite);
+
+    let comment = document.createElement('div');
+    comment.classList.add('comment');
+    let comment_box = document.createElement('img');
+    comment_box.src = '../images/newsfeed_buttons/comment.png';
+    comment_box.classList.add('comment_box');
+    div.appendChild(comment_box);
 
     let time = document.createElement('div');
     time.classList.add('time');

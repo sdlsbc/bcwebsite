@@ -388,6 +388,7 @@ $other-blue-light: #;*/
             color: red;
           }
         }
+
         .comment_box {
           width: 20px;
           height: 20px;
@@ -472,6 +473,11 @@ $other-blue-light: #;*/
         }
         .revealed-post {
           max-height: none;
+        }
+        .readMore {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
         }
       }
     }

@@ -250,6 +250,7 @@ function createPost(body){
     description_div.appendChild(description);
 
     let readMore = document.createElement('BUTTON');
+    readMore.classList.add('readMore');
     let readMoreNode = document.createTextNode('Read More');
     readMore.appendChild(readMoreNode);
     description_div.appendChild(readMore)

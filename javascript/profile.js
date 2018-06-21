@@ -122,6 +122,13 @@ function createPost(body){
     image_div.appendChild(image);
     div.appendChild(image_div);
 
+    let favorite = document.createElement('div');
+    favorite.classList.add('favorite');
+    let heart = document.createElement('img');
+    heart.src = '../images/newsfeed_buttons/heart2.png';
+    heart.classList.add('heart');
+    div.appendChild(heart);
+
     let time = document.createElement('div');
     time.classList.add('time');
     let clock = document.createElement('img');

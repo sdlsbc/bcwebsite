@@ -366,12 +366,28 @@ $other-blue-light: #;*/
             color: $main-blue;
             font-size: 18px;
         }
+        .heart {
+          width: 25px;
+          height: 25px;
+          float: left;
+          margin-right: 5px;
+          margin-top: 8.5px;
+          &:hover {
+            background-color: red;
+          }
+        }
         .time{
           width: 100%;
           .clock{
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             float:left;
+            padding-right: 4px;
+          }
+          p {
+            padding-top: 3px;
+            font-weight: 100;
+            font-size: 12px;
           }
         }
         .userfeed-description {

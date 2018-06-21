@@ -89,13 +89,35 @@
                             <span class="error">Error message here!</span>
                         </p>
                         <p class="login-submit">
-                            <input class="input-submit" type="button" value="Login" onclick="signin()">
+                            <input class="input-submit" type="button" id="loginBtn"value="Login" onclick="signin()">
                         </p>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <!-- log in submit button event listener -->
+    <script>
+        var input1 = document.getElementById("signin-email");
+        input1.addEventListener("keyup", function (event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                document.getElementById("loginBtn").click();
+            }
+        });
+
+        var input2 = document.getElementById("signin-password");
+        input2.addEventListener("keyup", function (event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                document.getElementById("loginBtn").click();
+            }
+        });
+
+    </script>
+
+
+
     <script>
     let modal = document.getElementById('myModal1');
     let btn = document.getElementById("myBtn1");

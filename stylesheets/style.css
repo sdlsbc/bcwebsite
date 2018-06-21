@@ -2458,13 +2458,13 @@ $other-blue-light: #;*/
       .profile_wrapper .second_nav_right a:first-child {
         margin-left: 0%;
         margin-right: 18%; }
-      .profile_wrapper .second_nav_right a p {
+      .profile_wrapper .second_nav_right a .p-tag {
         text-align: center;
         color: #B2B2B2; }
-        .profile_wrapper .second_nav_right a p:hover {
-          color: #226BE4;
-          border-bottom: 4px solid #226BE4;
-          padding-bottom: 15px; }
+      .profile_wrapper .second_nav_right a .p-tag.active {
+        color: #226BE4;
+        border-bottom: 4px solid #226BE4;
+        padding-bottom: 15px; }
     .profile_wrapper .second_nav_right #profile-postsbox {
       background-color: #F7FAFF;
       display: flex;
@@ -2708,10 +2708,10 @@ $other-blue-light: #;*/
         .profile_wrapper .second_nav_right a:first-child {
           margin-left: 10%;
           margin-right: 0px; }
-        .profile_wrapper .second_nav_right a p {
+        .profile_wrapper .second_nav_right a .p-tag {
           text-align: center;
           color: #226BE4; }
-          .profile_wrapper .second_nav_right a p:hover {
+          .profile_wrapper .second_nav_right a .p-tag:hover {
             border-bottom: 4px solid #226BE4; }
       .profile_wrapper .second_nav_right #profile-postsbox {
         background-color: #F7FAFF;

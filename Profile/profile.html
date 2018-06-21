@@ -4,6 +4,7 @@
  <link rel="icon" href="../images/bc32_mcU_icon.ico" type="image/x-icon">
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <link href="../stylesheets/style.css" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body onload="loadAndShowPosts()">
@@ -88,17 +89,23 @@
     <div class="second_nav_right">
       <!-- <a href="#"><p>Milestones</p></a>
       <a href="#"><p>Moments</p></a> -->
-      <a href="#"><p>Following</p></a>
-      <a href="#"><p>Followers</p></a>
-      <a href="../Calendar/calendar.html"><p>Calendar</p></a>
-      <a href="./profile.html"><p>User Feed</p></a>
+      <a href="#"><p class="p-tag">Following</p></a>
+      <a href="#"><p class="p-tag">Followers</p></a>
+      <a href="#"><p class="p-tag">Calendar</p></a>
+      <a href="#"><p class="p-tag">User Feed</p></a>
       
       <div id="profile-postsbox">
       </div>
       
     </div>
   </div>
-
+  <script>
+    $(".p-tag").click(function() {
+      $(".p-tag").removeClass("active");
+      // $(".p-tag-1:active").addClass(".p-tag-1");
+      $(this).addClass("active");
+    });
+  </script>
 
  <script>
    function openNav() {

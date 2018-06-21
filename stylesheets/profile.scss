@@ -302,14 +302,14 @@ $other-blue-light: #;*/
         margin-left: 0%;
         margin-right: 18%;
       }
-      p {
+      .p-tag {
         text-align: center;
         color: $gray;
-        &:hover {
-          color: $main-blue;
-          border-bottom: 4px solid $main-blue;
-          padding-bottom: 15px;
-        }
+      }
+      .p-tag.active {
+        color: $main-blue;
+        border-bottom: 4px solid $main-blue;
+        padding-bottom: 15px;
       }
     }
     #profile-postsbox {

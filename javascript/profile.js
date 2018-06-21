@@ -30,13 +30,13 @@ function loadAndShowPosts(){
     getPostsItems()
         .then(newsRaw => {
             console.log(newsRaw.length)
-            var oldDate = new Date(0);
+            var oldDate = new Date();
             console.log("oldDate", oldDate)
             newsRaw.forEach(element => {
                 var newDate = new Date(Date.parse(element.published_date));
                 newDate.setHours(0,0,0,0)
                 console.log("newDate", newDate)
-                if(newDate < oldDate)
+                if(newDate < oldDate){
                     console.log("It's a new day")
                     oldDate = newDate;
                     let date = document.createElement('h3');
@@ -44,6 +44,7 @@ function loadAndShowPosts(){
                     let dateNode = document.createTextNode(oldDate.toDateString());
                     date.appendChild(dateNode);
                     document.getElementById('profile-postsbox').appendChild(date);
+                }
                 createPost(element);
 
             })

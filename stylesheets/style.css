@@ -8,7 +8,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0; }
@@ -2201,7 +2201,7 @@ $other-blue-light: #;*/
   bottom: 0;
   left: 0;
   right: 0;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0; }
@@ -2578,6 +2578,10 @@ $other-blue-light: #;*/
           max-height: 80px; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .revealed-post {
           max-height: none; }
+        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .readMore {
+          display: block;
+          margin-left: auto;
+          margin-right: auto; }
   .profile_wrapper #profile-calendar {
     display: none;
     background-color: white;

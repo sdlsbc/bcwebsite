@@ -5,7 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="../stylesheets/style.css" rel="stylesheet">
 </head>
+<style>
+    /* The Close Button */
+.close {
+    color: blue;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
 
+.close:hover,
+.close:focus {
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
 <body onload="checkLocalStorage('new')">
     <!-- sidebar. -->
     <div id="mySidenav" class="sidenav">
@@ -50,10 +65,12 @@
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
+          
         <!-- Modal content -->
       <div class="modal-content">
+            <span class="close">&times;</span>
         <div class="modal-image">
-            <span class="close"></span>
+            <!-- <span class="close"></span> -->
         </div>
         <div class="left">
           <div class="modal-header"></div>

@@ -142,11 +142,27 @@ function createPost(body){
     title.classList.add('userfeed-title');
     div.appendChild(title);
 
+    let description_div = document.createElement('div');
+
     let description = document.createElement('p');
     let descriptionNode = document.createTextNode(body.description);
     description.appendChild(descriptionNode);
     description.classList.add('userfeed-description');
-    div.appendChild(description);
+    description.classList.add('hidden-post');
+
+    description_div.appendChild(description);
+
+    let readMore = document.createElement('BUTTON');
+    let readMoreNode = document.createTextNode('Read More');
+    readMore.appendChild(readMoreNode);
+    description_div.appendChild(readMore)
+
+    readMore.onclick = function(ev) {
+        ev.srcElement.parentElement.classList.add('revealed-post');
+        ev.srcElement.parentElement.classList.remove('hidden-post');
+    }
+
+    div.appendChild(description_div);
 
     document.getElementById('profile-postsbox').appendChild(div);
 }

@@ -366,23 +366,27 @@ $other-blue-light: #;*/
             color: $main-blue;
             font-size: 18px;
         }
-          .time{
-            width: 100%;
-            .clock{
-              width: 20px;
-              height: 20px;
-              float:left;
-            }
+        .time{
+          width: 100%;
+          .clock{
+            width: 20px;
+            height: 20px;
+            float:left;
           }
-        
+        }
         .userfeed-description {
           text-align: justify;
           margin: 0px 8px;
           width: 94%;
           font-size: 16px;
           padding:10px;
-          max-height: 80px;
           overflow: hidden;
+        }
+        .hidden-post {
+          max-height: 80px;
+        }
+        .revealed-post {
+          max-height: none;
         }
       }
     }

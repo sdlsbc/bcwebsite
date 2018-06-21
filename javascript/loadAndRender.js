@@ -458,58 +458,7 @@ function createPost(body) {
 	//img.src = 
 }
 
-function loadProfileData(){
-	console.log('in loadProfileData');
-	// let user_id = localStorage.getItem("user_id");
-	let user_id = 12;
-// http://app.bwayconnected.com/api/user/profile?user_id=12&profile_id=12
-	//api call and get data
 
-let url = 'http://app.bwayconnected.com/api/user/profile?user_id='+user_id+'&profile_id='+user_id;
-
-	fetch(url, {
-		method: 'GET',
-		headers: {
-			'Content-Type': 'application/json'
-		}
-	})
-		.then(res => res.json())
-		.catch(error => console.error('Error:', error))
-		.then(response => {
-
-			if (response.Response == "1000") {
-				console.log("request not successful in loadProfileData");
-				// createCustomAlert("WARNING: User Already Exists");
-			} else {
-				console.log('Success in loadProfileData', response)
-				var body = response.Result.profile;
-				var fn = body.first_name;
-				var ln = body.last_name;
-				var handle = body.handle;
-				var profile_image = body.profile_image;
-				var headline_position = body.headline_position;
-				console.log('profile image url',profile_image);
-				document.getElementById('name').innerHTML = fn;
-				document.getElementById('username').innerHTML = handle;
-				document.getElementById('headline_position').innerHTML = headline_position;
-				var user_img = document.getElementsByClassName('user_img');
-				user_img.innerHTML = '<img src=' + profile_image + '>';
-				
-				var field_of_work = body.field_of_work;
-				var location = body.city+","+body.country;
-
-				var user_img = document.getElementById("user_img");
-				user_img.innerHTML = '<img src=' + profile_image + '>';
-				document.getElementById('name').innerHTML = fn;
-				document.getElementById('user_type').innerHTML = field_of_work;
-				document.getElementById('location').innerHTML = location;
-				console.log('fn is', fn);
-
-			}
-	})
-
-	
-}
 
 
 

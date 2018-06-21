@@ -164,7 +164,7 @@ $other-blue-light: #;*/
 .profile_wrapper {
   background-color: $light-blue;
   margin-top: 130px;
-  padding-bottom: 8%;
+  padding-bottom: 15%;
   display: flex;
   flex-wrap: wrap;
   height: 100%;
@@ -302,14 +302,14 @@ $other-blue-light: #;*/
         margin-left: 0%;
         margin-right: 18%;
       }
-      p {
+      .p-tag {
         text-align: center;
         color: $gray;
-        &:hover {
-          color: $main-blue;
-          border-bottom: 4px solid $main-blue;
-          padding-bottom: 15px;
-        }
+      }
+      .p-tag.active {
+        color: $main-blue;
+        border-bottom: 4px solid $main-blue;
+        padding-bottom: 15px;
       }
     }
     #profile-postsbox {
@@ -360,34 +360,137 @@ $other-blue-light: #;*/
           width: 100%;
           height: auto;
         }
-        .titleAndTime{
-          display: flex;
-          justify-content: space-between;
-          .userfeed-title {
+        .userfeed-title {
             float: left;
             margin-left: 20px;
-            margin-top: 20px;
             color: $main-blue;
             font-size: 18px;
-          }
-          .time{
-            .clock{
-              width: 10px;
-              height: 10px;
+        }
+        .userfeed-favorite {
+          width: 100%;
+          .heart {
+            width: 25px;
+            height: 25px;
+            float: left;
+            margin-top: -4px;
+            &:hover {
+              background-color: red;
             }
           }
+          p {
+            font-size: 15px;
+            margin-left: -4px;
+            margin-top: 8px;
+            color: red;
+          }
         }
-        
+        .comment_box {
+          width: 20px;
+          height: 20px;
+          float: left;
+          margin-right: 9px;
+          margin-top: -32.5px;
+          margin-left: 51px;
+        }
+        .time{
+          width: 100%;
+          .clock{
+            width: 18px;
+            height: 18px;
+            float:left;
+            padding-right: 4px;        
+            margin-left: 89px;
+            margin-top: -32px;
+          }
+          p {
+            padding-top: 3px;
+            font-weight: 100;
+            font-size: 12px;
+            margin-left: 109px;
+            margin-top: -32px;
+          }
+        }
         .userfeed-description {
           text-align: justify;
           margin: 0px 8px;
           width: 94%;
           font-size: 16px;
           padding:10px;
-          max-height: 80px;
           overflow: hidden;
         }
+        .hidden-post {
+          max-height: 80px;
+        }
+        .revealed-post {
+          max-height: none;
+        }
       }
+    }
+  }
+  #profile-calendar {
+    display: none;
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 50px;
+    margin-top: 62px;
+    margin-left: 9%;
+    width: 74%;
+    height: 90%;
+    h1 {
+      margin-top: 110px;
+      font-weight: 100;
+      font-size: 30px;
+      text-align: center;
+      color: $main-blue;
+    }
+  }
+  #profile-followers {
+    display: none;
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 50px;
+    margin-top: 62px;
+    margin-left: 9%;
+    width: 74%;
+    height: 90%;
+    h1 {
+      margin-top: 110px;
+      font-weight: 100;
+      font-size: 30px;
+      text-align: center;
+      color: $main-blue;
+    }
+  }
+  #profile-following {
+    display: none;
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 50px;
+    margin-top: 62px;
+    margin-left: 9%;
+    width: 74%;
+    height: 90%;
+    h1 {
+      margin-top: 110px;
+      font-weight: 100;
+      font-size: 30px;
+      text-align: center;
+      color: $main-blue;
     }
   }
 }

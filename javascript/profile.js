@@ -1,3 +1,28 @@
+var divs = ["profile-postsbox", "profile-calendar", "profile-followers", "profile-following"];
+var visibleDivId = null;
+function toggleVisibility(divId) {
+  if(visibleDivId === divId) {
+    //visibleDivId = null;
+  } else {
+    visibleDivId = divId;
+  }
+  hideNonVisibleDivs();
+}
+function hideNonVisibleDivs() {
+  var i, divId, div;
+  for(i = 0; i < divs.length; i++) {
+    divId = divs[i];
+    div = document.getElementById(divId);
+    if(visibleDivId === divId) {
+      div.style.display = "block";
+    } else {
+      div.style.display = "none";
+    }
+  }
+}
+
+
+
 function checkBrowser(){
     if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 
     {
@@ -52,7 +77,7 @@ function loadAndShowPosts(){
 function getPostsItems(){
     let user_id = localStorage.getItem("user_id");
 
-    var url = "http://app.bwayconnected.com/api/user/profile?user_id="+user_id+"&profile_id=67";
+    var url = "http://app.bwayconnected.com/api/user/profile?user_id="+user_id+"&profile_id=12";
     let params = {
         headers: {
             'content-type': 'application/json'
@@ -97,14 +122,26 @@ function createPost(body){
     image_div.appendChild(image);
     div.appendChild(image_div);
 
-    let titleAndTime = document.createElement('div');
-    titleAndTime.classList.add('titleAndTime');
+    let favorite = document.createElement('div');
+    favorite.classList.add('userfeed-favorite');
+    let heart = document.createElement('img');
+    heart.src = '../images/newsfeed_buttons/heart2.png';
+    heart.classList.add('heart');
+    favorite.appendChild(heart);
 
-    let title = document.createElement('p');
-    let titleNode = document.createTextNode(body.title);
-    title.appendChild(titleNode);
-    title.classList.add('userfeed-title');
-    titleAndTime.appendChild(title);
+    let favorite_num = document.createElement('p');
+    let favorite_numText = document.createTextNode(body.likes);
+    favorite_num.appendChild(favorite_numText);
+    favorite.appendChild(favorite_num);
+
+    div.appendChild(favorite);
+
+    let comment = document.createElement('div');
+    comment.classList.add('comment');
+    let comment_box = document.createElement('img');
+    comment_box.src = '../images/newsfeed_buttons/comment.png';
+    comment_box.classList.add('comment_box');
+    div.appendChild(comment_box);
 
     let time = document.createElement('div');
     time.classList.add('time');
@@ -113,17 +150,71 @@ function createPost(body){
     clock.classList.add('clock');
     time.appendChild(clock);
 
-    titleAndTime.appendChild(time);
+    let timeSince = document.createElement('p');
+    let timeSinceText = document.createTextNode(howLongAgo(body.published_date));
+    timeSince.appendChild(timeSinceText);
+    time.appendChild(timeSince);
 
-    div.appendChild(titleAndTime);
+    div.appendChild(time);
+
+    let title = document.createElement('p');
+    let titleNode = document.createTextNode(body.title);
+    title.appendChild(titleNode);
+    title.classList.add('userfeed-title');
+    div.appendChild(title);
+
+    let description_div = document.createElement('div');
 
     let description = document.createElement('p');
     let descriptionNode = document.createTextNode(body.description);
     description.appendChild(descriptionNode);
     description.classList.add('userfeed-description');
-    div.appendChild(description);
+    description.classList.add('hidden-post');
+
+    description_div.appendChild(description);
+
+    let readMore = document.createElement('BUTTON');
+    let readMoreNode = document.createTextNode('Read More');
+    readMore.appendChild(readMoreNode);
+    description_div.appendChild(readMore)
+
+    readMore.onclick = function(ev) {
+        ev.srcElement.parentElement.classList.add('revealed-post');
+        ev.srcElement.parentElement.classList.remove('hidden-post');
+    }
+
+    div.appendChild(description_div);
 
     document.getElementById('profile-postsbox').appendChild(div);
+}
+
+function howLongAgo(date){
+    let now = new Date();
+    let postDate = new Date(Date.parse(date));
+    let years = DateDiff('yyyy', postDate, now);
+    if(years >= 1){
+        if(years == 1){
+            return "1 year ago"
+        }
+        return years + " years ago"
+    }
+
+    let months = DateDiff('m', postDate, now);
+    if(months >= 1){
+        if(months == 1){
+            return "1 month ago"
+        }
+        return months + " months ago"
+    }
+    
+    let days = DateDiff('d', postDate, now);
+    if(days >= 1){
+        if(days == 1){
+            return "1 day ago"
+        }
+        return days + " days ago"
+    }
+    return "Just now"
 }
 
 

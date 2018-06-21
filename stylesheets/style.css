@@ -8,7 +8,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0; }
@@ -2201,7 +2201,7 @@ $other-blue-light: #;*/
   bottom: 0;
   left: 0;
   right: 0;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0; }
@@ -2508,18 +2508,17 @@ $other-blue-light: #;*/
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-image {
           width: 100%;
           height: auto; }
-        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .titleAndTime {
-          display: flex;
-          justify-content: space-between; }
-          .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .titleAndTime .userfeed-title {
-            float: left;
-            margin-left: 20px;
-            margin-top: 20px;
-            color: #226BE4;
-            font-size: 18px; }
-          .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .titleAndTime .time .clock {
-            width: 10px;
-            height: 10px; }
+        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-title {
+          float: left;
+          margin-left: 20px;
+          color: #226BE4;
+          font-size: 18px; }
+        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .time {
+          width: 100%; }
+          .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .time .clock {
+            width: 20px;
+            height: 20px;
+            float: left; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-description {
           text-align: justify;
           margin: 0px 8px;

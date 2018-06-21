@@ -360,23 +360,20 @@ $other-blue-light: #;*/
           width: 100%;
           height: auto;
         }
-        .titleAndTime{
-          display: flex;
-          justify-content: space-between;
-          .userfeed-title {
+        .userfeed-title {
             float: left;
             margin-left: 20px;
-            margin-top: 20px;
             color: $main-blue;
             font-size: 18px;
-          }
+        }
           .time{
+            width: 100%;
             .clock{
-              width: 10px;
-              height: 10px;
+              width: 20px;
+              height: 20px;
+              float:left;
             }
           }
-        }
         
         .userfeed-description {
           text-align: justify;

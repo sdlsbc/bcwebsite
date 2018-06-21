@@ -1363,9 +1363,12 @@ code {
   top: 0px;
   width: 100%;
   height: 100%;
-  overflow: auto; }
+  overflow: auto;
+  /*  &:last-child {
+      display: show;
+    }*/ }
   .index-modal .index-modal-content {
-    background-color: #E9E9E9;
+    background-color: white;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
@@ -1402,7 +1405,7 @@ hr {
   .first_name span {
     display: none; }
   .first_name input[type=text] {
-    background-color: #B2B2B2;
+    background-color: #E9E9E9;
     border-radius: 13%/97%;
     padding-left: 15px;
     margin-left: 5px;
@@ -1423,7 +1426,7 @@ hr {
     margin-left: 18px;
     font-weight: 100; }
   .last_name input[type=text] {
-    background-color: #B2B2B2;
+    background-color: #E9E9E9;
     border-radius: 13%/97%;
     padding-left: 18px;
     margin-top: 6px;
@@ -1447,7 +1450,7 @@ hr {
     font-weight: 100;
     float: left; }
   .handle input[type=text] {
-    background-color: #B2B2B2;
+    background-color: #E9E9E9;
     border-radius: 13%/180%;
     padding-left: 25px;
     margin-top: 6px;
@@ -1471,7 +1474,7 @@ hr {
     font-weight: 100;
     float: left; }
   .signin-email input[type=email] {
-    background-color: #B2B2B2;
+    background-color: #E9E9E9;
     border-radius: 13%/180%;
     padding-left: 25px;
     margin-top: 6px;
@@ -1495,7 +1498,7 @@ hr {
     font-weight: 100;
     float: left; }
   .signin-password input[type=password] {
-    background-color: #B2B2B2;
+    background-color: #E9E9E9;
     border-radius: 13%/180%;
     padding-left: 25px;
     margin-top: 6px;
@@ -1753,7 +1756,7 @@ hr {
     background-repeat: no-repeat;
     background-size: 20px;
     padding-top: 2px;
-    background-color: #E0E0E0;
+    background-color: #E9E9E9;
     border-radius: 13%/180%;
     padding-left: 57px;
     margin-top: 6px;
@@ -1782,7 +1785,7 @@ hr {
     background-repeat: no-repeat;
     background-size: 20px;
     padding-top: 2px;
-    background-color: #E0E0E0;
+    background-color: #E9E9E9;
     border-radius: 13%/180%;
     padding-left: 57px;
     margin-top: 6px;

@@ -208,8 +208,11 @@ $gray: #B2B2B2;
   width: 100%; 
   height: 100%; 
   overflow: auto; 
+/*  &:last-child {
+    display: show;
+  }*/
   .index-modal-content {
-    background-color: $light-gray;
+    background-color: white;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
@@ -248,7 +251,7 @@ hr {
     display: none;
   }
   input[type=text] {
-    background-color: $gray;
+    background-color: $light-gray;
     border-radius: 13%/97%;
     padding-left: 15px;
     margin-left: 5px;
@@ -271,7 +274,7 @@ hr {
     font-weight: 100;
   }
   input[type=text] {
-    background-color: $gray;
+    background-color: $light-gray;
     border-radius: 13%/97%;
     padding-left: 18px;
     margin-top: 6px;
@@ -298,7 +301,7 @@ hr {
     float: left;
   }
   input[type=text] {
-    background-color: $gray;
+    background-color: $light-gray;
     border-radius: 13%/180%;
     padding-left: 25px;
     margin-top: 6px;
@@ -325,7 +328,7 @@ hr {
     float: left;
   }
   input[type=email] {
-    background-color: $gray;
+    background-color: $light-gray;
     border-radius: 13%/180%;
     padding-left: 25px;
     margin-top: 6px;
@@ -352,7 +355,7 @@ hr {
     float: left;
   }
   input[type=password] {
-    background-color: $gray;
+    background-color: $light-gray;
     border-radius: 13%/180%;
     padding-left: 25px;
     margin-top: 6px;
@@ -642,7 +645,7 @@ hr {
     background-repeat: no-repeat;
     background-size: 20px;
     padding-top: 2px;
-    background-color: #E0E0E0;
+    background-color: $light-gray;
     border-radius: 13%/180%;
     padding-left: 57px; 
     margin-top: 6px;
@@ -674,7 +677,7 @@ hr {
     background-repeat: no-repeat;
     background-size: 20px;
     padding-top: 2px;
-    background-color: #E0E0E0;
+    background-color: $light-gray;
     border-radius: 13%/180%;
     padding-left: 57px;
     margin-top: 6px;

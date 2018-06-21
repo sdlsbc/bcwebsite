@@ -2527,6 +2527,48 @@ $other-blue-light: #;*/
           padding: 10px;
           max-height: 80px;
           overflow: hidden; }
+  .profile_wrapper #profile-calendar {
+    display: none;
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 50px;
+    margin-top: 62px;
+    margin-left: 9%;
+    width: 74%;
+    height: 80%; }
+  .profile_wrapper #profile-followers {
+    display: none;
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 50px;
+    margin-top: 62px;
+    margin-left: 9%;
+    width: 74%;
+    height: 80%; }
+  .profile_wrapper #profile-following {
+    display: none;
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 50px;
+    margin-top: 62px;
+    margin-left: 9%;
+    width: 74%;
+    height: 80%; }
 
 @media screen and (max-width: 700px) {
   .profile-signout-button {

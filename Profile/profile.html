@@ -89,20 +89,35 @@
     <div class="second_nav_right">
       <!-- <a href="#"><p>Milestones</p></a>
       <a href="#"><p>Moments</p></a> -->
-      <a href="#"><p class="p-tag">Following</p></a>
-      <a href="#"><p class="p-tag">Followers</p></a>
-      <a href="#"><p class="p-tag">Calendar</p></a>
-      <a href="#"><p class="p-tag">User Feed</p></a>
+      <a href="#" onclick="toggleVisibility('profile-following');">
+        <p class="p-tag" id="following">Following</p>
+      </a>
+      <a href="#" onclick="toggleVisibility('profile-followers');">
+        <p class="p-tag" id="followers">Followers</p>
+        </a>
+      <a href="#" onclick="toggleVisibility('profile-calendar');">
+        <p class="p-tag" id="calendar">Calendar</p>
+      </a>
+      <a href="#" onclick="toggleVisibility('profile-postsbox');">
+        <p class="p-tag" id="userfeed">User Feed</p>
+      </a>
       
-      <div id="profile-postsbox">
+      <div id="profile-postsbox"></div>
+      <div id="profile-calendar">
+        <p>Calendar is Coming Soon...</p>
       </div>
-      
+      <div id="profile-followers">
+        <p>Followers is Coming Soon...</p>
+      </div>
+      <div id="profile-following">
+        <p>Following is Coming Soon...</p>
+      </div>
     </div>
+
   </div>
   <script>
     $(".p-tag").click(function() {
       $(".p-tag").removeClass("active");
-      // $(".p-tag-1:active").addClass(".p-tag-1");
       $(this).addClass("active");
     });
   </script>

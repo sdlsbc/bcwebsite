@@ -2239,14 +2239,6 @@ $other-blue-light: #;*/
     margin-left: 25px;
     margin-top: 19px; }
 
-.userfeed-post {
-  padding: 10px; }
-
-.userfeed-description {
-  padding: 10px;
-  max-height: 80px;
-  overflow: hidden; }
-
 @media screen and (max-width: 700px) {
   .navbar a {
     width: 20%;
@@ -2495,9 +2487,10 @@ $other-blue-light: #;*/
         box-shadow: 0 6px 2px -2px rgba(220, 220, 220, 0.5);
         background-color: white;
         margin-bottom: 20px;
-        border-radius: 1.8%/6%;
+        border-radius: 3%;
         width: 100%;
         height: auto;
+        padding: 10px;
         overflow: none; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .publisher {
           float: left; }
@@ -2512,18 +2505,29 @@ $other-blue-light: #;*/
             font-weight: 400;
             margin-left: 10px;
             margin-top: 18px; }
-        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-title {
-          float: left;
-          margin-left: -165px;
-          margin-top: 86px;
-          color: #226BE4;
-          font-size: 18px; }
+        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-image {
+          width: 100%;
+          height: auto; }
+        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .titleAndTime {
+          display: flex;
+          justify-content: space-between; }
+          .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .titleAndTime .userfeed-title {
+            float: left;
+            margin-left: 20px;
+            margin-top: 20px;
+            color: #226BE4;
+            font-size: 18px; }
+          .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .titleAndTime .time .clock {
+            width: 10px;
+            height: 10px; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-description {
           text-align: justify;
-          margin-left: 8px;
+          margin: 0px 8px;
           width: 94%;
-          margin-top: 123px;
-          font-size: 16px; }
+          font-size: 16px;
+          padding: 10px;
+          max-height: 80px;
+          overflow: hidden; }
 
 @media screen and (max-width: 700px) {
   .profile-signout-button {

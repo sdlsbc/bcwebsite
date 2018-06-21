@@ -43,6 +43,7 @@ $font: 'Roboto', sans-serif;
       margin-right: -10px;
     }
     a {
+      font-family: $font;
       text-decoration: none;
       font-size: 16px;
       margin-top: 40px;
@@ -56,6 +57,7 @@ $font: 'Roboto', sans-serif;
     }
   }
   button {
+    font-family: $font;
     margin-top: 45px;
     border-radius: 25px;
     padding-top: 6px;
@@ -75,9 +77,11 @@ $font: 'Roboto', sans-serif;
     background: white;
   }
   a {
+    font-family: $font;
     text-decoration: none;
     color: white;
     &:hover {
+      font-family: $font;
       text-decoration: none;
       color: $main-blue;
     }
@@ -91,7 +95,9 @@ $font: 'Roboto', sans-serif;
   a {
     text-decoration: none;
     color: white;
+    font-family: $font;
     &:hover a {
+      font-family: $font;
       text-decoration: none;
       color: $main-blue;
     }
@@ -133,6 +139,7 @@ $font: 'Roboto', sans-serif;
       height: 42%;
     }
     span a {
+      font-family: $font;
       text-decoration: none;
       margin-top: 0px;
       text-align: center;
@@ -146,6 +153,7 @@ $font: 'Roboto', sans-serif;
         color: $light-gray;
       }
       p {
+        font-family: $font;
         font-size: 13px;
       }
     }
@@ -170,6 +178,7 @@ $font: 'Roboto', sans-serif;
   width: 100%;
   height: auto;
   h1 {
+    font-family: $font;
     color: white;
     text-align: center;
     font-weight: 100;
@@ -186,6 +195,7 @@ $font: 'Roboto', sans-serif;
     width: 100%;
     height: auto;
     h1 {
+      font-family: $font;
       color: white;
       text-align: center;
       font-weight: 100;
@@ -244,6 +254,7 @@ hr {
   float: left;
   margin-top: 20px;
   label {
+    font-family: $font;
     color: #0080FF;
     font-size: 14px;
     margin-left: 25px;
@@ -263,6 +274,7 @@ hr {
     height: 40px;
     width: 100%;
     color: gray;
+    font-family: $font;
   }
 }  
 .last_name {
@@ -274,6 +286,7 @@ hr {
     font-size: 14px;
     margin-left: 18px;
     font-weight: 100;
+    font-family: $font;
   }
   input[type=text] {
     background-color: $light-gray;
@@ -285,6 +298,7 @@ hr {
     height: 40px;
     width: 100%;
     color:gray;
+    font-family: $font;
   }
   span {
     display: none;
@@ -295,6 +309,7 @@ hr {
   margin-top: 10px;
   text-align: center;
   label {
+    font-family: $font;
     margin-top: 10px;
     color: #0080FF;
     font-size: 14px;
@@ -303,6 +318,7 @@ hr {
     float: left;
   }
   input[type=text] {
+    font-family: $font;
     background-color: $light-gray;
     border-radius: 13%/180%;
     padding-left: 25px;
@@ -322,6 +338,7 @@ hr {
   margin-top: 10px;
   text-align: center;
   label {
+    font-family: $font;
     margin-top: 10px;
     color: #0080FF;
     font-size: 14px;
@@ -330,6 +347,7 @@ hr {
     float: left;
   }
   input[type=email] {
+    font-family: $font;
     background-color: $light-gray;
     border-radius: 13%/180%;
     padding-left: 25px;
@@ -349,6 +367,7 @@ hr {
   margin-top: 10px;
   text-align: center;
   label {
+    font-family: $font;
     margin-top: 10px;
     color: #0080FF;
     font-size: 14px;
@@ -357,6 +376,7 @@ hr {
     float: left;
   }
   input[type=password] {
+    font-family: $font;
     background-color: $light-gray;
     border-radius: 13%/180%;
     padding-left: 25px;
@@ -375,6 +395,7 @@ hr {
   }
 }
 .signin-submit input[type=button] {
+  font-family: $font;
   background-color: $main-blue;
   padding: 12px; 
   margin-left: 40%;
@@ -388,6 +409,7 @@ hr {
   color: white;
   font-weight: 100;
   &:hover {
+    font-family: $font;
     background-color: #0000CD;
     padding: 12px; 
     margin-left: 40%;
@@ -406,6 +428,7 @@ hr {
   margin-left: 3px;
   font-size: 15px;
   a {
+    font-family: $font;
     font-size: 15px;
     text-decoration: none;
     color: $main-blue;
@@ -452,18 +475,21 @@ hr {
     width: 100%;
     height: 2px;
     color: $main-blue;
+    font-family: $font;
   }
   .first_name {
     width: 50%;
     float: left;
     margin-top: 20px;
     label {
+      font-family: $font;
       color: #0080FF;
       font-size: 14px;
       margin-left: -30px;
       font-weight: 100;
     }
     input[type=text] {
+      font-family: $font;
       background-color: $gray;
       border-radius: 13%/97%;
       padding-left: 15px;
@@ -484,12 +510,14 @@ hr {
     float: right;
     margin-top: 20px;
     label {
+      font-family: $font;
       color: #0080FF;
       font-size: 14px;
       margin-left: -30px;
       font-weight: 100;
     }
     input[type=text] {
+      font-family: $font;
       background-color: $gray;
       border-radius: 13%/97%;
       padding-left: 18px;
@@ -509,6 +537,7 @@ hr {
     margin-top: 10px;
     text-align: center;
     label {
+      font-family: $font;
       margin-top: 10px;
       color: #0080FF;
       font-size: 14px;
@@ -517,6 +546,7 @@ hr {
       float: left;
     }
     input[type=text] {
+      font-family: $font;
       background-color: $gray;
       border-radius: 13%/180%;
       padding-left: 25px;
@@ -536,6 +566,7 @@ hr {
     margin-top: 10px;
     text-align: center;
     label {
+      font-family: $font;
       margin-top: 10px;
       color: #0080FF;
       font-size: 14px;
@@ -544,6 +575,7 @@ hr {
       float: left;
     }
     input[type=email] {
+      font-family: $font;
       background-color: $gray;
       border-radius: 13%/180%;
       padding-left: 25px;
@@ -563,6 +595,7 @@ hr {
     margin-top: 10px;
     text-align: center;
     label {
+      font-family: $font;
       margin-top: 10px;
       color: #0080FF;
       font-size: 14px;
@@ -571,6 +604,7 @@ hr {
       float: left;
     }
     input[type=text] {
+      font-family: $font;
       background-color: $gray;
       border-radius: 13%/180%;
       padding-left: 25px;
@@ -589,6 +623,7 @@ hr {
    }
   }
   .signin-submit input[type=button] {
+    font-family: $font;
     background-color: $main-blue;
     padding: 12px; 
     margin-left: 0%;
@@ -602,6 +637,7 @@ hr {
     color: white;
     font-weight: 100;
     &:hover {
+      font-family: $font;
       background-color: #0000CD;
       padding: 12px; 
       margin-left: 0%;
@@ -620,6 +656,7 @@ hr {
     margin-left: 3px;
     font-size: 15px;
     a {
+      font-family: $font;
       font-size: 15px;
       text-decoration: none;
       color: $main-blue;
@@ -635,6 +672,7 @@ hr {
   margin-top: 10px;
   text-align: center;
   label {
+    font-family: $font;
     color: #0080FF;
     font-size: 14px;
     margin-left: 25px;
@@ -642,6 +680,7 @@ hr {
     float: left;
   }
   input[type=email] {
+    font-family: $font;
     background-image: url("../images/mail-icon.png");
     background-position: 4.5% 50%;
     background-repeat: no-repeat;
@@ -666,6 +705,7 @@ hr {
   margin-top: 10px;
   text-align: center;
   label {
+    font-family: $font;
     margin-top: 10px;
     color: #0080FF;
     font-size: 14px;
@@ -674,6 +714,7 @@ hr {
     float: left;
   }
   input[type=password] {
+    font-family: $font;
     background-image: url("../images/lock.png");
     background-position: 4.5% 50%;
     background-repeat: no-repeat;
@@ -694,9 +735,11 @@ hr {
   }
   a {
     display: none;
+    font-family: $font;
   }
 }
 .login-submit input[type=button] {
+  font-family: $font;
   background-color: $main-blue;
   padding: 12px; 
   margin-left: 40%;
@@ -709,6 +752,7 @@ hr {
   color: white;
   font-weight: 100;
   &:hover {
+    font-family: $font;
     background-color: #0000CD;
     padding: 12px; 
     margin-left: 40%;
@@ -723,6 +767,7 @@ hr {
   }
 }
 .forgot a {
+  font-family: $font;
   margin-top: 20px;
   color: #0080FF;;
   text-align: center;
@@ -740,6 +785,7 @@ hr {
     margin-top: 10px;
     text-align: center;
     label {
+      font-family: $font;
       color: #0080FF;
       font-size: 14px;
       margin-left: 25px;
@@ -747,6 +793,7 @@ hr {
       float: left
     }
     input[type=email] {
+      font-family: $font;
       background-image: url("../images/mail-icon.png");
       background-position: 4.5% 50%;
       background-repeat: no-repeat;
@@ -771,6 +818,7 @@ hr {
     margin-top: 10px;
     text-align: center;
     label {
+      font-family: $font;
       margin-top: 10px;
       color: #0080FF;
       font-size: 14px;
@@ -779,6 +827,7 @@ hr {
       float: left;
     }
     input[type=text] {
+      font-family: $font;
       background-image: url("../images/lock.png");
       background-position: 4.5% 50%;
       background-repeat: no-repeat;
@@ -801,6 +850,7 @@ hr {
       display: none;
     }
     input[type=button] {
+      font-family: $font;
       background-color: $main-blue;
       padding: 12px; 
       margin-left: 0%;
@@ -814,6 +864,7 @@ hr {
       color: white;
       font-weight: 100;
       &:hover {
+        font-family: $font;
         background-color: #0000CD;
         padding: 12px; 
         margin-left: 0%;
@@ -829,6 +880,7 @@ hr {
     }
   }
   .forgot a {
+    font-family: $font;
     margin-top: 20px;
     color: #0080FF;;
     text-align: center;
@@ -840,6 +892,7 @@ hr {
 
 /* ====================== C L O S E  B T N ====================== */
 .close {
+  font-family: $font;
     color: #aaaaaa;
     float: right;
     font-size: 28px;
@@ -847,11 +900,13 @@ hr {
 }
 .close:hover,
 .close:focus {
+    font-family: $font;
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
 .close2 {
+  font-family: $font;
     color: #aaaaaa;
     float: right;
     font-size: 28px;
@@ -859,6 +914,7 @@ hr {
 }
 .close2:hover,
 .close2:focus {
+    font-family: $font;
     color: #000;
     text-decoration: none;
     cursor: pointer;
@@ -878,19 +934,21 @@ hr {
   margin-left: 20px;
 }
 p.big {
+  font-family: $font;
   font-weight: 100;
   text-align: center;
   color: white;
   font-size: 54px;
-  font-family: 'Tajawal', sans-serif;
+  font-family: $font;
 }
 p.small {
+  font-family: $font;
   font-weight: 100;
   margin-top: -50px;
   text-align: center;
   color: white;
   font-size: 24px;
-  font-family: 'Tajawal', sans-serif;
+  font-family: $font;
 }
 
 /* ============ M O B I L E  J U M B O T R O N  T E X T ============= */
@@ -910,6 +968,7 @@ p.small {
     margin-left: 20px;
   }
   p.big {
+    font-family: $font;
     font-weight: 100;
     text-align: center;
     color: white;
@@ -919,6 +978,7 @@ p.small {
     font-family: 'Tajawal', sans-serif;
   }
   p.small {
+    font-family: $font;
     font-weight: 100;
     margin-top: -20px;
     text-align: center;
@@ -932,6 +992,7 @@ p.small {
 
 code span {  /*random*/
   color:green;
+  font-family: $font;
 }
 
 /* ================= M O D A L  C O N T A I N E R ================= */
@@ -964,6 +1025,7 @@ code span {  /*random*/
   position:fixed;
 }
 #alertBox p {
+  font-family: $font;
   height: 0px;
   font-size: 20;
   margin-top: 14px;
@@ -972,6 +1034,7 @@ code span {  /*random*/
   text-align: center;
   vertical-align: middle;
   #closeBtn {
+    font-family: $font;
     display: block;
     position: relative;
     float: right;
@@ -997,10 +1060,12 @@ code span {  /*random*/
   border-bottom:2px solid #fff;
 }
 h1,h2 {
+  font-family: $font;
   margin:0;
   padding:4px;
 }
 code {
+  font-family: $font;
   font-size:1.2em;
   color:#069;
 }
@@ -1057,6 +1122,7 @@ code {
     position:fixed;
   }
   #alertBox p {
+    font-family: $font;
     height: 0px;
     font-size: 12px;
     margin-top: 14px;
@@ -1066,6 +1132,7 @@ code {
     vertical-align: middle;
   }
   #alertBox #closeBtn {
+    font-family: $font;
     display: block;
     position: relative;
     float: right;
@@ -1090,6 +1157,7 @@ code {
     border-bottom:2px solid #fff;
   }
   h1,h2 {
+    font-family: $font;
     margin:0;
     padding:4px;
   }

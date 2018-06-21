@@ -1230,6 +1230,7 @@ code {
       width: auto;
       margin-right: -10px; }
     .main-header span a {
+      font-family: "Roboto", sans-serif;
       text-decoration: none;
       font-size: 16px;
       margin-top: 40px;
@@ -1240,6 +1241,7 @@ code {
       .main-header span a:hover {
         color: #E9E9E9; }
   .main-header button {
+    font-family: "Roboto", sans-serif;
     margin-top: 45px;
     border-radius: 25px;
     padding-top: 6px;
@@ -1258,9 +1260,11 @@ code {
   .main-header .button1:hover {
     background: white; }
   .main-header .button1 a {
+    font-family: "Roboto", sans-serif;
     text-decoration: none;
     color: white; }
     .main-header .button1 a:hover {
+      font-family: "Roboto", sans-serif;
       text-decoration: none;
       color: #226BE4; }
 
@@ -1271,8 +1275,10 @@ code {
     background: white; }
   .main-header .button2 a {
     text-decoration: none;
-    color: white; }
+    color: white;
+    font-family: "Roboto", sans-serif; }
     .main-header .button2 a:hover a {
+      font-family: "Roboto", sans-serif;
       text-decoration: none;
       color: #226BE4; }
 
@@ -1306,6 +1312,7 @@ code {
       width: 79%;
       height: 42%; }
     .main-header span a {
+      font-family: "Roboto", sans-serif;
       text-decoration: none;
       margin-top: 0px;
       text-align: center;
@@ -1318,6 +1325,7 @@ code {
       .main-header span a:hover {
         color: #E9E9E9; }
       .main-header span a p {
+        font-family: "Roboto", sans-serif;
         font-size: 13px; }
 
   .main-header .button1 {
@@ -1334,6 +1342,7 @@ code {
   width: 100%;
   height: auto; }
   .coming-soon h1 {
+    font-family: "Roboto", sans-serif;
     color: white;
     text-align: center;
     font-weight: 100;
@@ -1346,6 +1355,7 @@ code {
     width: 100%;
     height: auto; }
     .coming-soon h1 {
+      font-family: "Roboto", sans-serif;
       color: white;
       text-align: center;
       font-weight: 100;
@@ -1398,6 +1408,7 @@ hr {
   float: left;
   margin-top: 20px; }
   .first_name label {
+    font-family: "Roboto", sans-serif;
     color: #0080FF;
     font-size: 14px;
     margin-left: 25px;
@@ -1414,7 +1425,8 @@ hr {
     border: none;
     height: 40px;
     width: 100%;
-    color: gray; }
+    color: gray;
+    font-family: "Roboto", sans-serif; }
 
 .last_name {
   width: 45%;
@@ -1424,7 +1436,8 @@ hr {
     color: #0080FF;
     font-size: 14px;
     margin-left: 18px;
-    font-weight: 100; }
+    font-weight: 100;
+    font-family: "Roboto", sans-serif; }
   .last_name input[type=text] {
     background-color: #E9E9E9;
     border-radius: 13%/97%;
@@ -1434,7 +1447,8 @@ hr {
     border: none;
     height: 40px;
     width: 100%;
-    color: gray; }
+    color: gray;
+    font-family: "Roboto", sans-serif; }
   .last_name span {
     display: none; }
 
@@ -1443,6 +1457,7 @@ hr {
   margin-top: 10px;
   text-align: center; }
   .handle label {
+    font-family: "Roboto", sans-serif;
     margin-top: 10px;
     color: #0080FF;
     font-size: 14px;
@@ -1450,6 +1465,7 @@ hr {
     font-weight: 100;
     float: left; }
   .handle input[type=text] {
+    font-family: "Roboto", sans-serif;
     background-color: #E9E9E9;
     border-radius: 13%/180%;
     padding-left: 25px;
@@ -1467,6 +1483,7 @@ hr {
   margin-top: 10px;
   text-align: center; }
   .signin-email label {
+    font-family: "Roboto", sans-serif;
     margin-top: 10px;
     color: #0080FF;
     font-size: 14px;
@@ -1474,6 +1491,7 @@ hr {
     font-weight: 100;
     float: left; }
   .signin-email input[type=email] {
+    font-family: "Roboto", sans-serif;
     background-color: #E9E9E9;
     border-radius: 13%/180%;
     padding-left: 25px;
@@ -1491,6 +1509,7 @@ hr {
   margin-top: 10px;
   text-align: center; }
   .signin-password label {
+    font-family: "Roboto", sans-serif;
     margin-top: 10px;
     color: #0080FF;
     font-size: 14px;
@@ -1498,6 +1517,7 @@ hr {
     font-weight: 100;
     float: left; }
   .signin-password input[type=password] {
+    font-family: "Roboto", sans-serif;
     background-color: #E9E9E9;
     border-radius: 13%/180%;
     padding-left: 25px;
@@ -1513,6 +1533,7 @@ hr {
     display: none; }
 
 .signin-submit input[type=button] {
+  font-family: "Roboto", sans-serif;
   background-color: #226BE4;
   padding: 12px;
   margin-left: 40%;
@@ -1526,6 +1547,7 @@ hr {
   color: white;
   font-weight: 100; }
   .signin-submit input[type=button]:hover {
+    font-family: "Roboto", sans-serif;
     background-color: #0000CD;
     padding: 12px;
     margin-left: 40%;
@@ -1543,6 +1565,7 @@ hr {
   margin-left: 3px;
   font-size: 15px; }
   .signin-agree a {
+    font-family: "Roboto", sans-serif;
     font-size: 15px;
     text-decoration: none;
     color: #226BE4; }
@@ -1584,18 +1607,21 @@ hr {
   hr {
     width: 100%;
     height: 2px;
-    color: #226BE4; }
+    color: #226BE4;
+    font-family: "Roboto", sans-serif; }
 
   .first_name {
     width: 50%;
     float: left;
     margin-top: 20px; }
     .first_name label {
+      font-family: "Roboto", sans-serif;
       color: #0080FF;
       font-size: 14px;
       margin-left: -30px;
       font-weight: 100; }
     .first_name input[type=text] {
+      font-family: "Roboto", sans-serif;
       background-color: #B2B2B2;
       border-radius: 13%/97%;
       padding-left: 15px;
@@ -1614,11 +1640,13 @@ hr {
     float: right;
     margin-top: 20px; }
     .last_name label {
+      font-family: "Roboto", sans-serif;
       color: #0080FF;
       font-size: 14px;
       margin-left: -30px;
       font-weight: 100; }
     .last_name input[type=text] {
+      font-family: "Roboto", sans-serif;
       background-color: #B2B2B2;
       border-radius: 13%/97%;
       padding-left: 18px;
@@ -1636,6 +1664,7 @@ hr {
     margin-top: 10px;
     text-align: center; }
     .handle label {
+      font-family: "Roboto", sans-serif;
       margin-top: 10px;
       color: #0080FF;
       font-size: 14px;
@@ -1643,6 +1672,7 @@ hr {
       font-weight: 100;
       float: left; }
     .handle input[type=text] {
+      font-family: "Roboto", sans-serif;
       background-color: #B2B2B2;
       border-radius: 13%/180%;
       padding-left: 25px;
@@ -1660,6 +1690,7 @@ hr {
     margin-top: 10px;
     text-align: center; }
     .signin-email label {
+      font-family: "Roboto", sans-serif;
       margin-top: 10px;
       color: #0080FF;
       font-size: 14px;
@@ -1667,6 +1698,7 @@ hr {
       font-weight: 100;
       float: left; }
     .signin-email input[type=email] {
+      font-family: "Roboto", sans-serif;
       background-color: #B2B2B2;
       border-radius: 13%/180%;
       padding-left: 25px;
@@ -1684,6 +1716,7 @@ hr {
     margin-top: 10px;
     text-align: center; }
     .signin-password label {
+      font-family: "Roboto", sans-serif;
       margin-top: 10px;
       color: #0080FF;
       font-size: 14px;
@@ -1691,6 +1724,7 @@ hr {
       font-weight: 100;
       float: left; }
     .signin-password input[type=text] {
+      font-family: "Roboto", sans-serif;
       background-color: #B2B2B2;
       border-radius: 13%/180%;
       padding-left: 25px;
@@ -1706,6 +1740,7 @@ hr {
       display: none; }
 
   .signin-submit input[type=button] {
+    font-family: "Roboto", sans-serif;
     background-color: #226BE4;
     padding: 12px;
     margin-left: 0%;
@@ -1719,6 +1754,7 @@ hr {
     color: white;
     font-weight: 100; }
     .signin-submit input[type=button]:hover {
+      font-family: "Roboto", sans-serif;
       background-color: #0000CD;
       padding: 12px;
       margin-left: 0%;
@@ -1736,6 +1772,7 @@ hr {
     margin-left: 3px;
     font-size: 15px; }
     .signin-agree a {
+      font-family: "Roboto", sans-serif;
       font-size: 15px;
       text-decoration: none;
       color: #226BE4; } }
@@ -1745,12 +1782,14 @@ hr {
   margin-top: 10px;
   text-align: center; }
   .login-email label {
+    font-family: "Roboto", sans-serif;
     color: #0080FF;
     font-size: 14px;
     margin-left: 25px;
     font-weight: 100;
     float: left; }
   .login-email input[type=email] {
+    font-family: "Roboto", sans-serif;
     background-image: url("../images/mail-icon.png");
     background-position: 4.5% 50%;
     background-repeat: no-repeat;
@@ -1773,6 +1812,7 @@ hr {
   margin-top: 10px;
   text-align: center; }
   .login-password label {
+    font-family: "Roboto", sans-serif;
     margin-top: 10px;
     color: #0080FF;
     font-size: 14px;
@@ -1780,6 +1820,7 @@ hr {
     font-weight: 100;
     float: left; }
   .login-password input[type=password] {
+    font-family: "Roboto", sans-serif;
     background-image: url("../images/lock.png");
     background-position: 4.5% 50%;
     background-repeat: no-repeat;
@@ -1797,9 +1838,11 @@ hr {
   .login-password span {
     display: none; }
   .login-password a {
-    display: none; }
+    display: none;
+    font-family: "Roboto", sans-serif; }
 
 .login-submit input[type=button] {
+  font-family: "Roboto", sans-serif;
   background-color: #226BE4;
   padding: 12px;
   margin-left: 40%;
@@ -1812,6 +1855,7 @@ hr {
   color: white;
   font-weight: 100; }
   .login-submit input[type=button]:hover {
+    font-family: "Roboto", sans-serif;
     background-color: #0000CD;
     padding: 12px;
     margin-left: 40%;
@@ -1825,6 +1869,7 @@ hr {
     font-weight: 100; }
 
 .forgot a {
+  font-family: "Roboto", sans-serif;
   margin-top: 20px;
   color: #0080FF;
   text-align: center;
@@ -1839,12 +1884,14 @@ hr {
     margin-top: 10px;
     text-align: center; }
     .login-email label {
+      font-family: "Roboto", sans-serif;
       color: #0080FF;
       font-size: 14px;
       margin-left: 25px;
       font-weight: 100;
       float: left; }
     .login-email input[type=email] {
+      font-family: "Roboto", sans-serif;
       background-image: url("../images/mail-icon.png");
       background-position: 4.5% 50%;
       background-repeat: no-repeat;
@@ -1867,6 +1914,7 @@ hr {
     margin-top: 10px;
     text-align: center; }
     .login-password label {
+      font-family: "Roboto", sans-serif;
       margin-top: 10px;
       color: #0080FF;
       font-size: 14px;
@@ -1874,6 +1922,7 @@ hr {
       font-weight: 100;
       float: left; }
     .login-password input[type=text] {
+      font-family: "Roboto", sans-serif;
       background-image: url("../images/lock.png");
       background-position: 4.5% 50%;
       background-repeat: no-repeat;
@@ -1893,6 +1942,7 @@ hr {
     .login-password a {
       display: none; }
     .login-password input[type=button] {
+      font-family: "Roboto", sans-serif;
       background-color: #226BE4;
       padding: 12px;
       margin-left: 0%;
@@ -1906,6 +1956,7 @@ hr {
       color: white;
       font-weight: 100; }
       .login-password input[type=button]:hover {
+        font-family: "Roboto", sans-serif;
         background-color: #0000CD;
         padding: 12px;
         margin-left: 0%;
@@ -1919,6 +1970,7 @@ hr {
         font-weight: 100; }
 
   .forgot a {
+    font-family: "Roboto", sans-serif;
     margin-top: 20px;
     color: #0080FF;
     text-align: center;
@@ -1927,6 +1979,7 @@ hr {
     font-size: 18px; } }
 /* ====================== C L O S E  B T N ====================== */
 .close {
+  font-family: "Roboto", sans-serif;
   color: #aaaaaa;
   float: right;
   font-size: 28px;
@@ -1934,11 +1987,13 @@ hr {
 
 .close:hover,
 .close:focus {
+  font-family: "Roboto", sans-serif;
   color: #000;
   text-decoration: none;
   cursor: pointer; }
 
 .close2 {
+  font-family: "Roboto", sans-serif;
   color: #aaaaaa;
   float: right;
   font-size: 28px;
@@ -1946,6 +2001,7 @@ hr {
 
 .close2:hover,
 .close2:focus {
+  font-family: "Roboto", sans-serif;
   color: #000;
   text-decoration: none;
   cursor: pointer; }
@@ -1963,19 +2019,21 @@ hr {
   margin-left: 20px; }
 
 p.big {
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   text-align: center;
   color: white;
   font-size: 54px;
-  font-family: 'Tajawal', sans-serif; }
+  font-family: "Roboto", sans-serif; }
 
 p.small {
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   margin-top: -50px;
   text-align: center;
   color: white;
   font-size: 24px;
-  font-family: 'Tajawal', sans-serif; }
+  font-family: "Roboto", sans-serif; }
 
 /* ============ M O B I L E  J U M B O T R O N  T E X T ============= */
 @media screen and (max-width: 700px) {
@@ -1992,6 +2050,7 @@ p.small {
     margin-left: 20px; }
 
   p.big {
+    font-family: "Roboto", sans-serif;
     font-weight: 100;
     text-align: center;
     color: white;
@@ -2001,6 +2060,7 @@ p.small {
     font-family: 'Tajawal', sans-serif; }
 
   p.small {
+    font-family: "Roboto", sans-serif;
     font-weight: 100;
     margin-top: -20px;
     text-align: center;
@@ -2011,7 +2071,8 @@ p.small {
     font-family: 'Tajawal', sans-serif; } }
 code span {
   /*random*/
-  color: green; }
+  color: green;
+  font-family: "Roboto", sans-serif; }
 
 /* ================= M O D A L  C O N T A I N E R ================= */
 /* ======================= A L E R T  B O X ======================= */
@@ -2042,6 +2103,7 @@ code span {
   position: fixed; }
 
 #alertBox p {
+  font-family: "Roboto", sans-serif;
   height: 0px;
   font-size: 20;
   margin-top: 14px;
@@ -2050,6 +2112,7 @@ code span {
   text-align: center;
   vertical-align: middle; }
   #alertBox p #closeBtn {
+    font-family: "Roboto", sans-serif;
     display: block;
     position: relative;
     float: right;
@@ -2074,10 +2137,12 @@ code span {
   border-bottom: 2px solid #fff; }
 
 h1, h2 {
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 4px; }
 
 code {
+  font-family: "Roboto", sans-serif;
   font-size: 1.2em;
   color: #069; }
 
@@ -2130,6 +2195,7 @@ code {
     position: fixed; }
 
   #alertBox p {
+    font-family: "Roboto", sans-serif;
     height: 0px;
     font-size: 12px;
     margin-top: 14px;
@@ -2139,6 +2205,7 @@ code {
     vertical-align: middle; }
 
   #alertBox #closeBtn {
+    font-family: "Roboto", sans-serif;
     display: block;
     position: relative;
     float: right;
@@ -2163,6 +2230,7 @@ code {
     border-bottom: 2px solid #fff; }
 
   h1, h2 {
+    font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 4px; }
 

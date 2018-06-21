@@ -194,6 +194,7 @@
       margin-left: 0%;
       font-size: 12px;
       display: inline;
+      margin-top: 4px;
       &:first-child {
         margin-left: 10%;
         margin-right: 0px;
@@ -217,8 +218,8 @@
       overflow: hidden;
       padding-top: 50px;
       margin-top: 62px;
-      margin-left: 12.5%;
-      width: 74%;
+      margin-left: 8.5%;
+      width: 84%;
       h3 {
         color: black;
         font-size: 16px;
@@ -235,17 +236,21 @@
         .publisher {
           float: left;
           .userfeed-publisher-image {
-            width: 60px;
-            height: 60px;
-            margin-left: 20px;
+            width: 35px;
+            height: 35px;
+            margin-left: 3px;
             margin-top: 5px;
           }
           .userfeed-name {
             font-size: 20px;
             font-weight: 400;
             margin-left: 10px;
-            margin-top: 23px;
+            margin-top: 11px;
           }
+        }
+        .userfeed-image{
+          width: 100%;
+          height: 150px;
         }
         .userfeed-title {
           /*float: left;*/
@@ -259,7 +264,7 @@
           text-align: justify;
           margin-left: -3px;
           width: 94%;
-          margin-top: 123px;
+          margin-top: 0px;
           font-size: 16px;
         }
       }

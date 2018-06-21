@@ -366,15 +366,31 @@ $other-blue-light: #;*/
             color: $main-blue;
             font-size: 18px;
         }
-        .heart {
-          width: 25px;
-          height: 25px;
-          float: left;
-          margin-right: 5px;
-          margin-top: 8.5px;
-          &:hover {
-            background-color: red;
+        .userfeed-favorite {
+          width: 100%;
+          .heart {
+            width: 25px;
+            height: 25px;
+            float: left;
+            margin-top: -4px;
+            &:hover {
+              background-color: red;
+            }
           }
+          p {
+            font-size: 15px;
+            margin-left: -4px;
+            margin-top: 8px;
+            color: red;
+          }
+        }
+        .comment_box {
+          width: 20px;
+          height: 20px;
+          float: left;
+          margin-right: 9px;
+          margin-top: -32.5px;
+          margin-left: 51px;
         }
         .time{
           width: 100%;
@@ -382,12 +398,16 @@ $other-blue-light: #;*/
             width: 18px;
             height: 18px;
             float:left;
-            padding-right: 4px;
+            padding-right: 4px;        
+            margin-left: 89px;
+            margin-top: -32px;
           }
           p {
             padding-top: 3px;
             font-weight: 100;
             font-size: 12px;
+            margin-left: 109px;
+            margin-top: -32px;
           }
         }
         .userfeed-description {

@@ -8,7 +8,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0; }
@@ -2201,7 +2201,7 @@ $other-blue-light: #;*/
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0; }
@@ -2540,7 +2540,13 @@ $other-blue-light: #;*/
     margin-top: 62px;
     margin-left: 9%;
     width: 74%;
-    height: 80%; }
+    height: 90%; }
+    .profile_wrapper #profile-calendar h1 {
+      margin-top: 110px;
+      font-weight: 100;
+      font-size: 30px;
+      text-align: center;
+      color: #226BE4; }
   .profile_wrapper #profile-followers {
     display: none;
     background-color: white;
@@ -2554,7 +2560,13 @@ $other-blue-light: #;*/
     margin-top: 62px;
     margin-left: 9%;
     width: 74%;
-    height: 80%; }
+    height: 90%; }
+    .profile_wrapper #profile-followers h1 {
+      margin-top: 110px;
+      font-weight: 100;
+      font-size: 30px;
+      text-align: center;
+      color: #226BE4; }
   .profile_wrapper #profile-following {
     display: none;
     background-color: white;
@@ -2568,7 +2580,13 @@ $other-blue-light: #;*/
     margin-top: 62px;
     margin-left: 9%;
     width: 74%;
-    height: 80%; }
+    height: 90%; }
+    .profile_wrapper #profile-following h1 {
+      margin-top: 110px;
+      font-weight: 100;
+      font-size: 30px;
+      text-align: center;
+      color: #226BE4; }
 
 @media screen and (max-width: 700px) {
   .profile-signout-button {

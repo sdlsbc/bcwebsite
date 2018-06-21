@@ -400,7 +400,14 @@ $other-blue-light: #;*/
     margin-top: 62px;
     margin-left: 9%;
     width: 74%;
-    height: 80%;
+    height: 90%;
+    h1 {
+      margin-top: 110px;
+      font-weight: 100;
+      font-size: 30px;
+      text-align: center;
+      color: $main-blue;
+    }
   }
   #profile-followers {
     display: none;
@@ -415,7 +422,14 @@ $other-blue-light: #;*/
     margin-top: 62px;
     margin-left: 9%;
     width: 74%;
-    height: 80%;
+    height: 90%;
+    h1 {
+      margin-top: 110px;
+      font-weight: 100;
+      font-size: 30px;
+      text-align: center;
+      color: $main-blue;
+    }
   }
   #profile-following {
     display: none;
@@ -430,7 +444,14 @@ $other-blue-light: #;*/
     margin-top: 62px;
     margin-left: 9%;
     width: 74%;
-    height: 80%;
+    height: 90%;
+    h1 {
+      margin-top: 110px;
+      font-weight: 100;
+      font-size: 30px;
+      text-align: center;
+      color: $main-blue;
+    }
   }
 }
 

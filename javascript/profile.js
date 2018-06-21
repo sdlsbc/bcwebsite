@@ -122,15 +122,6 @@ function createPost(body){
     image_div.appendChild(image);
     div.appendChild(image_div);
 
-    let titleAndTime = document.createElement('div');
-    titleAndTime.classList.add('titleAndTime');
-
-    let title = document.createElement('p');
-    let titleNode = document.createTextNode(body.title);
-    title.appendChild(titleNode);
-    title.classList.add('userfeed-title');
-    titleAndTime.appendChild(title);
-
     let time = document.createElement('div');
     time.classList.add('time');
     let clock = document.createElement('img');
@@ -138,9 +129,18 @@ function createPost(body){
     clock.classList.add('clock');
     time.appendChild(clock);
 
-    titleAndTime.appendChild(time);
+    let timeSince = document.createElement('p');
+    let timeSinceText = document.createTextNode(howLongAgo(body.published_date));
+    timeSince.appendChild(timeSinceText);
+    time.appendChild(timeSince);
 
-    div.appendChild(titleAndTime);
+    div.appendChild(time);
+
+    let title = document.createElement('p');
+    let titleNode = document.createTextNode(body.title);
+    title.appendChild(titleNode);
+    title.classList.add('userfeed-title');
+    div.appendChild(title);
 
     let description = document.createElement('p');
     let descriptionNode = document.createTextNode(body.description);
@@ -149,6 +149,35 @@ function createPost(body){
     div.appendChild(description);
 
     document.getElementById('profile-postsbox').appendChild(div);
+}
+
+function howLongAgo(date){
+    let now = new Date();
+    let postDate = new Date(Date.parse(date));
+    let years = DateDiff('yyyy', postDate, now);
+    if(years >= 1){
+        if(years == 1){
+            return "1 year ago"
+        }
+        return years + " years ago"
+    }
+
+    let months = DateDiff('m', postDate, now);
+    if(months >= 1){
+        if(months == 1){
+            return "1 month ago"
+        }
+        return months + " months ago"
+    }
+    
+    let days = DateDiff('d', postDate, now);
+    if(days >= 1){
+        if(days == 1){
+            return "1 day ago"
+        }
+        return days + " days ago"
+    }
+    return "Just now"
 }
 
 

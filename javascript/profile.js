@@ -50,8 +50,58 @@ function checkBrowser(){
     }
 }
 
+function loadProfileData(){
+    console.log('in loadProfileData');
+    // let user_id = localStorage.getItem("user_id");
+    let user_id = 12;
+    // http://app.bwayconnected.com/api/user/profile?user_id=12&profile_id=12
+    //api call and get data
+
+    let url = 'http://app.bwayconnected.com/api/user/profile?user_id='+user_id+'&profile_id='+user_id;
+
+    fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(res => res.json())
+    .catch(error => console.error('Error:', error))
+    .then(response => {
+
+        if (response.Response == "1000") {
+            console.log("request not successful in loadProfileData");
+            // createCustomAlert("WARNING: User Already Exists");
+        } else {
+            console.log('Success in loadProfileData', response)
+            var body = response.Result.profile;
+            var fn = body.first_name;
+            var ln = body.last_name;
+            var handle = body.handle;
+            var profile_image = body.profile_image;
+            var headline_position = body.headline_position;
+            document.getElementById('name').innerHTML = fn;
+            document.getElementById('username').innerHTML = handle;
+            document.getElementById('headline_position').innerHTML = headline_position;
+            var user_img = document.getElementsByClassName('user_img');
+            user_img.innerHTML = '<img src=' + profile_image + '>';
+            
+            var field_of_work = body.field_of_work;
+            var location = body.city+","+body.country;
+
+            var user_img = document.getElementById("user_img");
+            user_img.innerHTML = '<img src=' + profile_image + '>';
+            document.getElementById('name').innerHTML = fn;
+            document.getElementById('user_type').innerHTML = field_of_work;
+            document.getElementById('location').innerHTML = location;
+            console.log('fn is', fn);
+        }
+    }) 
+}
+
 function loadAndShowPosts(){
     console.log("This is the /'main/'");
+    loadProfileData();
     getPostsItems()
         .then(newsRaw => {
             var oldDate = new Date();
@@ -117,7 +167,12 @@ function createPost(body){
 
     let image_div = document.createElement('div');
     let image = document.createElement('img');
-    image.src = body.post_image;
+    if(body.post_image == "http://app.bwayconnected.com/public/images/articles/default.jpg"){
+        image.src = "http://app.bwayconnected.com/public/images/articles/unHla8zj9ZQK.jpg"
+    }else{
+        image.src = body.post_image;
+    }
+    console.log(body.post_image);
     image.classList.add('userfeed-image');
     image_div.appendChild(image);
     div.appendChild(image_div);
@@ -190,6 +245,7 @@ function createPost(body){
     description.appendChild(descriptionNode);
     description.classList.add('userfeed-description');
     description.classList.add('hidden-post');
+    description.id = body.id;
 
     description_div.appendChild(description);
 
@@ -199,8 +255,14 @@ function createPost(body){
     description_div.appendChild(readMore)
 
     readMore.onclick = function(ev) {
-        ev.srcElement.parentElement.classList.add('revealed-post');
-        ev.srcElement.parentElement.classList.remove('hidden-post');
+        var target = ev.srcElement || ev.target;
+        if(target.textContent == "Read More") {
+            document.getElementById(body.id).classList.remove('hidden-post');
+            target.textContent = "Read Less";
+        } else {
+            document.getElementById(body.id).classList.add('hidden-post');
+            target.textContent = "Read More";
+        }
     }
 
     div.appendChild(description_div);

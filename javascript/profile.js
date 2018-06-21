@@ -122,40 +122,60 @@ function createPost(body){
     image_div.appendChild(image);
     div.appendChild(image_div);
 
-    let favorite = document.createElement('div');
-    favorite.classList.add('userfeed-favorite');
-    let heart = document.createElement('img');
-    heart.src = '../images/newsfeed_buttons/heart2.png';
-    heart.classList.add('heart');
-    favorite.appendChild(heart);
+    let button_row = document.createElement('div');
+    button_row.classList.add('button-row');
 
-    let favorite_num = document.createElement('p');
-    let favorite_numText = document.createTextNode(body.likes);
-    favorite_num.appendChild(favorite_numText);
-    favorite.appendChild(favorite_num);
+      let favorite = document.createElement('div');
+      favorite.classList.add('userfeed-favorite');
+      let heart = document.createElement('img');
+      heart.src = '../images/newsfeed_buttons/heart2.png';
+      heart.classList.add('heart');
+      favorite.appendChild(heart);
+      button_row.appendChild(favorite);
 
-    div.appendChild(favorite);
 
-    let comment = document.createElement('div');
-    comment.classList.add('comment');
-    let comment_box = document.createElement('img');
-    comment_box.src = '../images/newsfeed_buttons/comment.png';
-    comment_box.classList.add('comment_box');
-    div.appendChild(comment_box);
+      let favorite_num = document.createElement('p');
+      let favorite_numText = document.createTextNode(body.likes);
+      favorite_num.appendChild(favorite_numText);
+      favorite.appendChild(favorite_num);
 
-    let time = document.createElement('div');
-    time.classList.add('time');
-    let clock = document.createElement('img');
-    clock.src = '../images/clock.png';
-    clock.classList.add('clock');
-    time.appendChild(clock);
+      div.appendChild(favorite);
+      // button_row.appendChild(favorite_num);
 
-    let timeSince = document.createElement('p');
-    let timeSinceText = document.createTextNode(howLongAgo(body.published_date));
-    timeSince.appendChild(timeSinceText);
-    time.appendChild(timeSince);
+      let comment = document.createElement('div');
+      comment.classList.add('comment');
+      let comment_box = document.createElement('img');
+      comment_box.src = '../images/newsfeed_buttons/comment.png';
+      comment_box.classList.add('comment_box');
+      div.appendChild(comment_box);
 
-    div.appendChild(time);
+      let share = document.createElement('div');
+      share.classList.add('share');
+      let share_icon = document.createElement('img');
+      share_icon.src = '../images/newsfeed_buttons/share.png';
+      share_icon.classList.add('share_icon');
+      div.appendChild(share_icon);
+
+      let flag = document.createElement('div');
+      flag.classList.add('flag');
+      let flag_icon = document.createElement('img');
+      flag_icon.src = '../images/newsfeed_buttons/flag.png';
+      flag_icon.classList.add('flag_icon');
+      div.appendChild(flag_icon);
+
+      let time = document.createElement('div');
+      time.classList.add('time');
+      let clock = document.createElement('img');
+      clock.src = '../images/clock.png';
+      clock.classList.add('clock');
+      time.appendChild(clock);
+
+      let timeSince = document.createElement('p');
+      let timeSinceText = document.createTextNode(howLongAgo(body.published_date));
+      timeSince.appendChild(timeSinceText);
+      time.appendChild(timeSince);
+
+      div.appendChild(time);
 
     let title = document.createElement('p');
     let titleNode = document.createTextNode(body.title);

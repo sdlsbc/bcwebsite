@@ -359,6 +359,7 @@ $other-blue-light: #;*/
         .userfeed-image{
           width: 100%;
           height: auto;
+          padding-bottom: 5px;
         }
         .userfeed-title {
             float: left;
@@ -380,7 +381,7 @@ $other-blue-light: #;*/
           p {
             font-size: 15px;
             margin-left: -4px;
-            margin-top: 8px;
+            margin-top: 5px;
             color: red;
           }
         }
@@ -389,25 +390,44 @@ $other-blue-light: #;*/
           height: 20px;
           float: left;
           margin-right: 9px;
-          margin-top: -32.5px;
+          margin-top: -32px;
           margin-left: 51px;
+        }
+        .share_icon {
+          width: 18px;
+          height: 18px;
+          float: left;
+          margin-right: 9px;
+          margin-top: -32px;
+          margin-left: 87px;
+        }
+        .flag_icon {
+          width: 18px;
+          height: 18px;
+          float: left;
+          margin-right: 9px;
+          margin-top: -31px;
+          margin-left: 122px;
         }
         .time{
           width: 100%;
+          /*border-bottom: 1px solid $gray;*/
+          /*box-shadow: 0 3px 2px -2px rgba(220,220,220,0.5);*/
+          box-shadow: 0 21px 0px -7px rgba(220, 220, 220, 0.5);
           .clock{
             width: 18px;
             height: 18px;
             float:left;
             padding-right: 4px;        
-            margin-left: 89px;
+            margin-left: 154px;
             margin-top: -32px;
           }
           p {
             padding-top: 3px;
             font-weight: 100;
             font-size: 12px;
-            margin-left: 109px;
-            margin-top: -32px;
+            margin-left: 174px;
+            margin-top: -32.5px;
           }
         }
         .userfeed-description {

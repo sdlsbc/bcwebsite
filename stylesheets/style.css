@@ -2507,7 +2507,8 @@ $other-blue-light: #;*/
             margin-top: 18px; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-image {
           width: 100%;
-          height: auto; }
+          height: auto;
+          padding-bottom: 5px; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-title {
           float: left;
           margin-left: 20px;
@@ -2525,30 +2526,47 @@ $other-blue-light: #;*/
           .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-favorite p {
             font-size: 15px;
             margin-left: -4px;
-            margin-top: 8px;
+            margin-top: 5px;
             color: red; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .comment_box {
           width: 20px;
           height: 20px;
           float: left;
           margin-right: 9px;
-          margin-top: -32.5px;
+          margin-top: -32px;
           margin-left: 51px; }
+        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .share_icon {
+          width: 18px;
+          height: 18px;
+          float: left;
+          margin-right: 9px;
+          margin-top: -32px;
+          margin-left: 87px; }
+        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .flag_icon {
+          width: 18px;
+          height: 18px;
+          float: left;
+          margin-right: 9px;
+          margin-top: -31px;
+          margin-left: 122px; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .time {
-          width: 100%; }
+          width: 100%;
+          /*border-bottom: 1px solid $gray;*/
+          /*box-shadow: 0 3px 2px -2px rgba(220,220,220,0.5);*/
+          box-shadow: 0 21px 0px -7px rgba(220, 220, 220, 0.5); }
           .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .time .clock {
             width: 18px;
             height: 18px;
             float: left;
             padding-right: 4px;
-            margin-left: 89px;
+            margin-left: 154px;
             margin-top: -32px; }
           .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .time p {
             padding-top: 3px;
             font-weight: 100;
             font-size: 12px;
-            margin-left: 109px;
-            margin-top: -32px; }
+            margin-left: 174px;
+            margin-top: -32.5px; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-description {
           text-align: justify;
           margin: 0px 8px;

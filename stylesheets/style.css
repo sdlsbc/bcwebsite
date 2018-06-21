@@ -2341,7 +2341,7 @@ $other-blue-light: #;*/
 .profile_wrapper {
   background-color: #F7FAFF;
   margin-top: 130px;
-  padding-bottom: 8%;
+  padding-bottom: 15%;
   display: flex;
   flex-wrap: wrap;
   height: 100%;
@@ -2754,7 +2754,7 @@ $other-blue-light: #;*/
               margin-top: 4px; }
     .profile_wrapper .second_nav_right {
       width: 100%;
-      margin-top: -8%;
+      margin-top: -5%;
       flex: 1 1 160px; }
       .profile_wrapper .second_nav_right a {
         text-decoration: none;
@@ -2763,15 +2763,17 @@ $other-blue-light: #;*/
         margin-left: 0%;
         font-size: 12px;
         display: inline;
-        margin-top: 4px; }
+        margin-top: -17px; }
         .profile_wrapper .second_nav_right a:first-child {
           margin-left: 10%;
           margin-right: 0px; }
         .profile_wrapper .second_nav_right a .p-tag {
           text-align: center;
-          color: #226BE4; }
-          .profile_wrapper .second_nav_right a .p-tag:hover {
-            border-bottom: 4px solid #226BE4; }
+          color: #B2B2B2; }
+        .profile_wrapper .second_nav_right a .p-tag.active {
+          color: #226BE4;
+          border-bottom: 4px solid #226BE4;
+          padding-bottom: 5px; }
       .profile_wrapper .second_nav_right #profile-postsbox {
         background-color: #F7FAFF;
         display: flex;
@@ -2824,6 +2826,69 @@ $other-blue-light: #;*/
             margin-left: -3px;
             width: 94%;
             margin-top: 0px;
-            font-size: 16px; } }
+            font-size: 16px; }
+      .profile_wrapper .second_nav_right #profile-calendar {
+        display: none;
+        background-color: white;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: space-around;
+        height: auto;
+        overflow: hidden;
+        padding-top: 50px;
+        margin-top: 62px;
+        margin-left: 12%;
+        width: 74%;
+        height: 90%; }
+        .profile_wrapper .second_nav_right #profile-calendar h1 {
+          margin-top: 60px;
+          padding-bottom: 150px;
+          font-weight: 100;
+          font-size: 20px;
+          text-align: center;
+          color: #226BE4; }
+      .profile_wrapper .second_nav_right #profile-followers {
+        display: none;
+        background-color: white;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: space-around;
+        height: auto;
+        overflow: hidden;
+        padding-top: 50px;
+        margin-top: 62px;
+        margin-left: 12%;
+        width: 74%;
+        height: 90%; }
+        .profile_wrapper .second_nav_right #profile-followers h1 {
+          margin-top: 60px;
+          padding-bottom: 150px;
+          font-weight: 100;
+          font-size: 20px;
+          text-align: center;
+          color: #226BE4; }
+      .profile_wrapper .second_nav_right #profile-following {
+        display: none;
+        background-color: white;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: space-around;
+        height: auto;
+        overflow: hidden;
+        padding-top: 50px;
+        margin-top: 62px;
+        margin-left: 12%;
+        width: 74%;
+        height: 90%; }
+        .profile_wrapper .second_nav_right #profile-following h1 {
+          margin-top: 60px;
+          padding-bottom: 150px;
+          font-weight: 100;
+          font-size: 20px;
+          text-align: center;
+          color: #226BE4; } }
 
 /*# sourceMappingURL=style.css.map */

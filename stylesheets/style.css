@@ -67,7 +67,7 @@
   border: 2px solid #226BE4;
   color: white;
   padding: 3px 12px;
-  width: 105px;
+  width: 106px;
   height: 36px;
   text-align: center;
   font-size: 12px;
@@ -76,7 +76,7 @@
   /* Safari */
   transition-duration: 0.4s;
   border-radius: 25px;
-  margin-right: 45px;
+  margin-right: 51px;
   font-size: 14px; }
   .signout-button:hover {
     width: 105px;
@@ -131,8 +131,9 @@
 .logo {
   height: 52px;
   width: auto;
-  margin-right: -10px;
-  margin-top: 3px; }
+  margin-right: -11px;
+  margin-left: 8px;
+  margin-top: 4px; }
 
 @media screen and (max-width: 700px) {
   .open_sidenav {
@@ -2336,7 +2337,9 @@ $other-blue-light: #;*/
   display: flex;
   flex-direction: row;
   align-items: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding-right: 4px;
+  padding-bottom: 5px; }
   .navbar a {
     font-family: "Roboto", sans-serif;
     text-decoration: none; }

@@ -85,7 +85,7 @@ $other-blue-light: #;*/
       font-family: $font;
       width: 20%;
       margin-left: 5px;
-      margin-top: -20px;
+      margin-top: -28px;
       p {
         font-family: $font;
         font-size: 14px;
@@ -98,6 +98,11 @@ $other-blue-light: #;*/
       }
       .explore-p-tag {
         margin-top: 27px;
+      }
+      .newsfeed-p-tag {
+        margin-top: 36px;
+        margin-left: 11px;
+        font-size: 12px;
       }
     }
   }

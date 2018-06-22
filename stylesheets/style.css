@@ -188,8 +188,8 @@
     /* Safari */
     transition-duration: 0.4s;
     border-radius: 25px;
-    margin-right: 25%;
-    margin-top: -14px;
+    margin-right: 4%;
+    margin-top: -50px;
     font-size: 13px; }
     .signout-button:hover {
       background-color: white;
@@ -2470,7 +2470,7 @@ $other-blue-light: #;*/
     font-family: "Roboto", sans-serif;
     width: 20%;
     margin-left: 5px;
-    margin-top: -20px; }
+    margin-top: -28px; }
     .navbar a p {
       font-family: "Roboto", sans-serif;
       font-size: 14px;
@@ -2481,6 +2481,10 @@ $other-blue-light: #;*/
       margin-top: 27px; }
     .navbar a .explore-p-tag {
       margin-top: 27px; }
+    .navbar a .newsfeed-p-tag {
+      margin-top: 36px;
+      margin-left: 11px;
+      font-size: 12px; }
 
   .open_sidenav {
     width: 36px;

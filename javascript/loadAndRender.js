@@ -285,6 +285,7 @@ function createPost(body) {
 
 	let publisher_div = document.createElement('div');
 	publisher_div.classList.add('publisher');
+	publisher_div.classList.add('pointer');
 
 	let publisher_image = document.createElement('img');
 	if (body.publisher.profile_image == "http://app.bwayconnected.com/public/images/default.jpg") {
@@ -314,6 +315,7 @@ function createPost(body) {
 	div.appendChild(publisher_div);
 
 	let center1 = document.createElement('center');
+	center1.classList.add('pointer');
 
 	// adding modal .click event
 	center1.onclick = (function () {
@@ -338,6 +340,7 @@ function createPost(body) {
 	let fav_button = document.createElement('img');
 	// fav_button.setAttribute("id", body.id);
 	fav_button.src = '../images/newsfeed_buttons/heart2.png';
+	fav_button.classList.add('pointer');
 	if (body.favourites.some(fav => fav.user_id == user_id)) {
 		fav_button.classList.add('favorite_click');
 	} else {
@@ -422,6 +425,7 @@ function createPost(body) {
 	let titleNode = document.createTextNode(body.title);
 	title.appendChild(titleNode);
 	title.classList.add('title');
+	title.classList.add('pointer');
 	div.appendChild(title);
 
 	// adding modal .click event
@@ -437,6 +441,7 @@ function createPost(body) {
 	let descriptionNode = document.createTextNode(body.description);
 	description.appendChild(descriptionNode);
 	description.classList.add('description');
+	description.classList.add('pointer');
 	div.appendChild(description);
 
 	// adding modal .click event

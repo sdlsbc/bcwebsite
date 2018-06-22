@@ -59,7 +59,8 @@ function loadProfileData(){
     // http://app.bwayconnected.com/api/user/profile?user_id=12&profile_id=12
     //api call and get data
 
-    let url = 'http://app.bwayconnected.com/api/user/profile?user_id='+user_id+'&profile_id='+user_id;
+    // let url = 'http://app.bwayconnected.com/api/user/profile?user_id='+user_id+'&profile_id='+user_id;
+    let url = 'http://app.bwayconnected.com/api/user/profile?user_id=12&profile_id=12';
 
     fetch(url, {
         method: 'GET',
@@ -134,7 +135,8 @@ function loadAndShowPosts(){
 function getPostsItems(){
     let user_id = localStorage.getItem("user_id");
 
-    var url = "http://app.bwayconnected.com/api/user/profile?user_id="+user_id+"&profile_id="+user_id;
+    // var url = "http://app.bwayconnected.com/api/user/profile?user_id="+user_id+"&profile_id="+user_id;
+    var url = "http://app.bwayconnected.com/api/user/profile?user_id=12&profile_id=12";
     let params = {
         headers: {
             'content-type': 'application/json'

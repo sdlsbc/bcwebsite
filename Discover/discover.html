@@ -11,7 +11,54 @@
 
 <div class="body">
 
+<body onload="checkLocalStorage('new')">
+    <!-- sidebar. -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <p> </p>
+        <center id="profile_pic"></center>
+        <center>
+            <p class="navname"></p>
+        </center>
+        <center>
+          <p class="profile">
+            <a href="../Profile/profile.html">My Profile</a>
+          </p>
+        </center>
+        <br/>
+        <div class="sidenav-links">
+          <a href="#">
+            <img src="../images/rss.png" width="19" height="19">&nbsp&nbsp Newsfeed
+          </a>
+          <a href="#">
+            <img src="../images/calendar.png" width="19" height="19">&nbsp&nbsp Calendar
+          </a>
+          <a href="../Favorites/favorites.html">
+            <img src="../images/heart.png" width="19" height="19">&nbsp&nbsp My Favorites
+          </a>
+          <a href="#">
+            <img src="../images/compass.png" width="19" height="19">&nbsp&nbsp Discover
+          </a>
+          <a href="#">
+            <img src="../images/production-profiles.png" width="19" height="19">&nbsp&nbsp Production Profiles
+          </a>
+          <a href="#">
+            <img src="../images/building.png" width="19" height="19">&nbsp&nbsp Company Profiles
+          </a>
+          <a href="#">
+            <img src="../images/briefcase.png" width="19" height="19">&nbsp&nbsp Business of Broadway 
+          </a>
+          <a href="#">
+            <img src="../images/info.png" width="19" height="19">&nbsp&nbsp FAQ & Contact Us
+          </a>
+        </div>
+
+    </div>
+
   <div class="navbar">
+    <span class="open_sidenav" onclick="openNav()">
+      <img src="../images/side button2.png">
+    </span>
     <img class="logo" src="../images/bc_solo_logo.png">
     <a href='../Newsfeed/newsfeed.html'>
       <p>Newsfeed</p>
@@ -33,6 +80,16 @@
 
 
 
-
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+  <script src="../javascript/register.js"></script>
+  <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
 </div>
+</body>
 </html>

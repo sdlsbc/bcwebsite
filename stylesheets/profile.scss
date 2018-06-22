@@ -513,7 +513,6 @@ $other-blue-light: #;*/
           height: 36px;
           margin-top: 20px;
           text-align: center;
-          font-size: 12px;
           cursor: pointer;
           -webkit-transition-duration: 0.4s; 
           transition-duration: 0.4s;
@@ -522,16 +521,21 @@ $other-blue-light: #;*/
           margin-bottom: 20px;
           font-family: $font;
           &:hover {
-            font-family: $font;
-            margin-left: 40%;
-            margin-bottom: 20px;
-            width: 103px;
-            height: 34px;
-            margin-top: 20px;
             background-color: white;
             color: $medium-blue;
             border: 1px solid $medium-blue;
+            padding: 3px 12px;
+            width: 105px;
+            height: 36px;
+            margin-top: 20px;
+            text-align: center;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s; 
+            transition-duration: 0.4s;
+            margin-left: 40%;
             font-size: 14px;
+            margin-bottom: 20px;
+            font-family: $font;
           }
         }
         .hidden-post {
@@ -544,6 +548,11 @@ $other-blue-light: #;*/
           display: block;
           margin-left: auto;
           margin-right: auto;
+          &:hover {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
         }
       }
     }

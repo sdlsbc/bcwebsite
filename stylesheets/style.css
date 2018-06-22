@@ -2844,7 +2844,6 @@ $other-blue-light: #;*/
           height: 36px;
           margin-top: 20px;
           text-align: center;
-          font-size: 12px;
           cursor: pointer;
           -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
@@ -2853,16 +2852,21 @@ $other-blue-light: #;*/
           margin-bottom: 20px;
           font-family: "Roboto", sans-serif; }
           .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post button:hover {
-            font-family: "Roboto", sans-serif;
-            margin-left: 40%;
-            margin-bottom: 20px;
-            width: 103px;
-            height: 34px;
-            margin-top: 20px;
             background-color: white;
             color: #99CCFF;
             border: 1px solid #99CCFF;
-            font-size: 14px; }
+            padding: 3px 12px;
+            width: 105px;
+            height: 36px;
+            margin-top: 20px;
+            text-align: center;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            margin-left: 40%;
+            font-size: 14px;
+            margin-bottom: 20px;
+            font-family: "Roboto", sans-serif; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .hidden-post {
           max-height: 80px; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .revealed-post {
@@ -2871,6 +2875,10 @@ $other-blue-light: #;*/
           display: block;
           margin-left: auto;
           margin-right: auto; }
+          .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .readMore:hover {
+            display: block;
+            margin-left: auto;
+            margin-right: auto; }
   .profile_wrapper #profile-calendar {
     display: none;
     background-color: white;

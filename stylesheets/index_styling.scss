@@ -16,6 +16,7 @@ $font: 'Roboto', sans-serif;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .main-header {
   background-color: white;
   width: 101%;
@@ -55,6 +56,14 @@ $font: 'Roboto', sans-serif;
         color: $light-gray;
       }
     }
+  }
+  .signout-x {
+    margin-left: 57%;
+    margin-right: 2%;
+    margin-top: 1px;
+  }
+  .signout-y {
+    margin-top: 1px;
   }
   button {
     font-family: $font;

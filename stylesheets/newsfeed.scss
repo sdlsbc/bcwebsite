@@ -63,7 +63,69 @@
       }
     }
   }
+  .signout-x {
+    float: right;
+    width: 10%;
+    display: inline-block;
+    margin-left: 47%;
+    margin-right: 2%;
+    margin-top: 1px;
+  }
+  .signout-y {
+    float: right;
+    width: 10%;
+    display: inline-block;
+    margin-top: 1px;
+
+  }
 }
+
+@media screen and (max-width: 900px) {
+  .navbar {
+    a {
+      width: 20%;
+      margin-left: 5px;
+      text-decoration: none;
+      .p-tagx {
+        color: #B2B2B2;
+        font-size: 16px;
+        font-weight: 100;
+        margin-left: 25px;
+        margin-top: 19px;
+        &:hover {
+          color: #E9E9E9;
+        }
+      }
+      .p-tag {
+        color: #226BE4;
+        font-size: 16px;
+        font-weight: 100;
+        margin-left: 25px;
+        margin-top: 39px;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        border-bottom: 4px solid #226BE4;
+        padding-bottom: 15px;
+      }
+    }
+    .signout-x {
+      float: right;
+      width: 10%;
+      display: inline-block;
+      margin-left: 40%;
+      margin-right: 5%;
+      margin-top: 1px;
+    }
+    .signout-y {
+      float: right;
+      width: 10%;
+      display: inline-block;
+      margin-top: 1px;
+    }
+  }
+}
+
+
 
 @media screen and (max-width: 700px) {
   .navbar {
@@ -91,12 +153,21 @@
         text-align: center;
         border-bottom: 4px solid #226BE4;
         padding-bottom: 15px;
-/*        &:hover {
-          color: #226BE4;
-          border-bottom: 4px solid #226BE4;
-          padding-bottom: 15px;
-        }*/
       }
+    }
+    .signout-x {
+      float: right;
+      width: 20%;
+      display: inline-block;
+      margin-left: 25%;
+      margin-right: 10%;
+      margin-top: 1px;
+    }
+    .signout-y {
+      float: right;
+      width: 20%;
+      display: inline-block;
+      margin-top: 1px;
     }
   }
 }
@@ -108,6 +179,10 @@
   display: flex;
   justify-content: flex-end;
   flex-grow: 2;
+  margin-left: 16%;
+  &:first-child {
+    margin-left: 40%;
+  }
 }
 .signout-button {
   background-color: #226BE4;
@@ -130,7 +205,7 @@
     background-color: white;
     border: 2px solid #226BE4;
     border-radius: 25px;
-    margin-right: 45px; 
+    margin-right: 25%; 
     color: #226BE4;
     font-size: 14px;
   }

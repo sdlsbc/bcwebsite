@@ -55,7 +55,54 @@
       text-align: center; }
       .navbar a .newsfeed-p-tag:hover {
         margin-top: 39px; }
+  .navbar .signout-x {
+    float: right;
+    width: 10%;
+    display: inline-block;
+    margin-left: 47%;
+    margin-right: 2%;
+    margin-top: 1px; }
+  .navbar .signout-y {
+    float: right;
+    width: 10%;
+    display: inline-block;
+    margin-top: 1px; }
 
+@media screen and (max-width: 900px) {
+  .navbar a {
+    width: 20%;
+    margin-left: 5px;
+    text-decoration: none; }
+    .navbar a .p-tagx {
+      color: #B2B2B2;
+      font-size: 16px;
+      font-weight: 100;
+      margin-left: 25px;
+      margin-top: 19px; }
+      .navbar a .p-tagx:hover {
+        color: #E9E9E9; }
+    .navbar a .p-tag {
+      color: #226BE4;
+      font-size: 16px;
+      font-weight: 100;
+      margin-left: 25px;
+      margin-top: 39px;
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      border-bottom: 4px solid #226BE4;
+      padding-bottom: 15px; }
+  .navbar .signout-x {
+    float: right;
+    width: 10%;
+    display: inline-block;
+    margin-left: 40%;
+    margin-right: 5%;
+    margin-top: 1px; }
+  .navbar .signout-y {
+    float: right;
+    width: 10%;
+    display: inline-block;
+    margin-top: 1px; } }
 @media screen and (max-width: 700px) {
   .navbar a {
     width: 20%;
@@ -78,17 +125,27 @@
       font-family: 'Roboto', sans-serif;
       text-align: center;
       border-bottom: 4px solid #226BE4;
-      padding-bottom: 15px;
-      /*        &:hover {
-                color: #226BE4;
-                border-bottom: 4px solid #226BE4;
-                padding-bottom: 15px;
-              }*/ } }
+      padding-bottom: 15px; }
+  .navbar .signout-x {
+    float: right;
+    width: 20%;
+    display: inline-block;
+    margin-left: 25%;
+    margin-right: 10%;
+    margin-top: 1px; }
+  .navbar .signout-y {
+    float: right;
+    width: 20%;
+    display: inline-block;
+    margin-top: 1px; } }
 /* ===================== S I G N  O U T ===================== */
 .signout {
   display: flex;
   justify-content: flex-end;
-  flex-grow: 2; }
+  flex-grow: 2;
+  margin-left: 16%; }
+  .signout:first-child {
+    margin-left: 40%; }
 
 .signout-button {
   background-color: #226BE4;
@@ -112,7 +169,7 @@
     background-color: white;
     border: 2px solid #226BE4;
     border-radius: 25px;
-    margin-right: 45px;
+    margin-right: 25%;
     color: #226BE4;
     font-size: 14px; }
 
@@ -1311,6 +1368,12 @@ code {
       transition: 0.3s; }
       .main-header span a:hover {
         color: #E9E9E9; }
+  .main-header .signout-x {
+    margin-left: 57%;
+    margin-right: 2%;
+    margin-top: 1px; }
+  .main-header .signout-y {
+    margin-top: 1px; }
   .main-header button {
     font-family: "Roboto", sans-serif;
     margin-top: 45px;

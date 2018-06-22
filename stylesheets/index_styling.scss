@@ -191,6 +191,12 @@ $font: 'Roboto', sans-serif;
 
 
 @media screen and (max-width: 700px) {
+  .logo-image {
+    width: 300px;
+    height: 55px;
+    margin-left: 11%;
+    margin-bottom: 12px;
+  }
   .coming-soon {
     width: 100%;
     height: auto;
@@ -220,9 +226,6 @@ $font: 'Roboto', sans-serif;
   width: 100%; 
   height: 100%; 
   overflow: auto; 
-/*  &:last-child {
-    display: show;
-  }*/
   .index-modal-content {
     background-color: white;
     margin: auto;
@@ -449,27 +452,28 @@ hr {
     width: 100%; 
     height: 100%; 
     overflow: auto; 
-  }
-  .index-modal-content {
-    background-color: $light-gray;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    margin-left: 16px;
-    margin-top: 68%;
-    border-radius: 2%;
-    height: auto;
-    margin-bottom: 15px;
-  }
-  .a-login {
-    width: 100%;
-    text-align: center;
-    color: $main-blue;
-    margin-left: 2%;
-    font-size: 22px;
-    padding-bottom: 10px;
-    text-decoration: none;
+    .index-modal-content {
+      background-color: white;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      margin-left: 16px;
+      margin-top: 68%;
+      border-radius: 2%;
+      height: auto;
+      margin-bottom: 15px;
+     .a-login {
+        width: 100%;
+        margin-left: 30%;
+        text-align: center;
+        color: $main-blue;
+        margin-left: 36%;
+        font-size: 22px;
+        padding-bottom: 10px;
+        text-decoration: none;
+      }
+    }
   }
   hr {
     width: 100%;
@@ -485,17 +489,17 @@ hr {
       font-family: $font;
       color: #0080FF;
       font-size: 14px;
-      margin-left: -30px;
+      margin-left: 6px;
       font-weight: 100;
     }
     input[type=text] {
       font-family: $font;
-      background-color: $gray;
+      background-color: $light-gray;
       border-radius: 13%/97%;
       padding-left: 15px;
       margin-left: 5px;
       margin-top: 6px;
-      font-size: 14px;
+      font-size: 12px;
       border: none;
       height: 40px;
       width: 100%;
@@ -513,16 +517,16 @@ hr {
       font-family: $font;
       color: #0080FF;
       font-size: 14px;
-      margin-left: -30px;
+      margin-left: 6px;
       font-weight: 100;
     }
     input[type=text] {
       font-family: $font;
-      background-color: $gray;
+      background-color: $light-gray;
       border-radius: 13%/97%;
       padding-left: 18px;
       margin-top: 6px;
-      font-size: 14px;
+      font-size: 12px;
       border: none;
       height: 40px;
       width: 100%;
@@ -541,17 +545,17 @@ hr {
       margin-top: 10px;
       color: #0080FF;
       font-size: 14px;
-      margin-left: 25px;
+      margin-left: 6px;
       font-weight: 100;
       float: left;
     }
     input[type=text] {
       font-family: $font;
-      background-color: $gray;
+      background-color: $light-gray;
       border-radius: 13%/180%;
       padding-left: 25px;
       margin-top: 6px;
-      font-size: 14px;
+      font-size: 12px;
       border: none;
       height: 40px;
       width: 100%;
@@ -570,17 +574,17 @@ hr {
       margin-top: 10px;
       color: #0080FF;
       font-size: 14px;
-      margin-left: 25px;
+      margin-left: 6px;
       font-weight: 100;
       float: left;
     }
     input[type=email] {
       font-family: $font;
-      background-color: $gray;
+      background-color: $light-gray;
       border-radius: 13%/180%;
       padding-left: 25px;
       margin-top: 6px;
-      font-size: 14px;
+      font-size: 12px;
       border: none;
       height: 40px;
       width: 100%;
@@ -599,17 +603,17 @@ hr {
       margin-top: 10px;
       color: #0080FF;
       font-size: 14px;
-      margin-left: 25px;
+      margin-left: 6px;
       font-weight: 100;
       float: left;
     }
     input[type=text] {
       font-family: $font;
-      background-color: $gray;
+      background-color: $light-gray;
       border-radius: 13%/180%;
       padding-left: 25px;
       margin-top: 6px;
-      font-size: 14px;
+      font-size: 12px;
       border: none;
       height: 40px;
       width: 100%;
@@ -626,14 +630,14 @@ hr {
     font-family: $font;
     background-color: $main-blue;
     padding: 12px; 
-    margin-left: 0%;
+    margin-left: 36%;
     margin-bottom: -10px;
     width: 28%;
     border:0 none;
     cursor:pointer;
     -webkit-border-radius: 5px;
     border-radius: 25px;
-    font-size: 14px;
+    font-size: 12px;
     color: white;
     font-weight: 100;
     &:hover {
@@ -647,7 +651,7 @@ hr {
       cursor:pointer;
       -webkit-border-radius: 5px;
       border-radius: 25px;
-      font-size: 14px;
+      font-size: 12px;
       color: white;
       font-weight: 100;
     }
@@ -690,7 +694,7 @@ hr {
     border-radius: 13%/180%;
     padding-left: 57px; 
     margin-top: 6px;
-    font-size: 14px;
+    font-size: 12px;
     border: none;
     height: 40px;
     width: 100%;
@@ -722,9 +726,9 @@ hr {
     padding-top: 2px;
     background-color: $light-gray;
     border-radius: 13%/180%;
-    padding-left: 57px;
+    padding-left: 47px;
     margin-top: 6px;
-    font-size: 14px;
+    font-size: 12px;
     border: none;
     height: 40px;
     width: 100%;
@@ -742,8 +746,8 @@ hr {
   font-family: $font;
   background-color: $main-blue;
   padding: 12px; 
-  margin-left: 40%;
-  width: 20%;
+  margin-left: 36%;
+  width: 28%;
   border:0 none;
   cursor:pointer;
   -webkit-border-radius: 5px;
@@ -788,7 +792,7 @@ hr {
       font-family: $font;
       color: #0080FF;
       font-size: 14px;
-      margin-left: 25px;
+      margin-left: 13px;
       font-weight: 100;
       float: left
     }
@@ -801,7 +805,7 @@ hr {
       padding-top: 2px;
       background-color: #E0E0E0;
       border-radius: 13%/180%;
-      padding-left: 57px; 
+      padding-left: 47px; 
       margin-top: 6px;
       font-size: 14px;
       border: none;
@@ -822,7 +826,7 @@ hr {
       margin-top: 10px;
       color: #0080FF;
       font-size: 14px;
-      margin-left: 25px;
+      margin-left: 13px;
       font-weight: 100;
       float: left;
     }
@@ -972,6 +976,7 @@ p.small {
     font-weight: 100;
     text-align: center;
     color: white;
+    margin-top: 101px;
     font-size: 30px;
     width: 90%;
     margin-left: 4%;

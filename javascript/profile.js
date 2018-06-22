@@ -1,5 +1,7 @@
 var divs = ["profile-postsbox", "profile-calendar", "profile-followers", "profile-following"];
 var visibleDivId = null;
+
+var user_id = localStorage.getItem("user_id");
 function toggleVisibility(divId) {
   if(visibleDivId === divId) {
     //visibleDivId = null;
@@ -53,7 +55,7 @@ function checkBrowser(){
 function loadProfileData(){
     console.log('in loadProfileData');
     // let user_id = localStorage.getItem("user_id");
-    let user_id = 12;
+    //let user_id = 12;
     // http://app.bwayconnected.com/api/user/profile?user_id=12&profile_id=12
     //api call and get data
 
@@ -78,7 +80,12 @@ function loadProfileData(){
             var fn = body.first_name;
             var ln = body.last_name;
             var handle = body.handle;
+
             var profile_image = body.profile_image;
+
+            if (profile_image == "http://app.bwayconnected.com/public/images/default.jpg") {
+                profile_image = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"
+            } 
             var headline_position = body.headline_position;
             document.getElementById('name').innerHTML = fn;
             document.getElementById('username').innerHTML = handle;
@@ -127,7 +134,7 @@ function loadAndShowPosts(){
 function getPostsItems(){
     let user_id = localStorage.getItem("user_id");
 
-    var url = "http://app.bwayconnected.com/api/user/profile?user_id="+user_id+"&profile_id=12";
+    var url = "http://app.bwayconnected.com/api/user/profile?user_id="+user_id+"&profile_id="+user_id;
     let params = {
         headers: {
             'content-type': 'application/json'
@@ -180,57 +187,57 @@ function createPost(body){
     let button_row = document.createElement('div');
     button_row.classList.add('button-row');
 
-      let favorite = document.createElement('div');
-      favorite.classList.add('userfeed-favorite');
-      let heart = document.createElement('img');
-      heart.src = '../images/newsfeed_buttons/heart2.png';
-      heart.classList.add('heart');
-      favorite.appendChild(heart);
-      button_row.appendChild(favorite);
+    let favorite = document.createElement('div');
+    favorite.classList.add('userfeed-favorite');
+    let heart = document.createElement('img');
+    heart.src = '../images/newsfeed_buttons/heart2.png';
+    heart.classList.add('heart');
+    favorite.appendChild(heart);
+    button_row.appendChild(favorite);
 
 
-      let favorite_num = document.createElement('p');
-      let favorite_numText = document.createTextNode(body.likes);
-      favorite_num.appendChild(favorite_numText);
-      favorite.appendChild(favorite_num);
+    let favorite_num = document.createElement('p');
+    let favorite_numText = document.createTextNode(body.likes);
+    favorite_num.appendChild(favorite_numText);
+    favorite.appendChild(favorite_num);
 
-      div.appendChild(favorite);
-      // button_row.appendChild(favorite_num);
+    div.appendChild(favorite);
+    // button_row.appendChild(favorite_num);
 
-      let comment = document.createElement('div');
-      comment.classList.add('comment');
-      let comment_box = document.createElement('img');
-      comment_box.src = '../images/newsfeed_buttons/comment.png';
-      comment_box.classList.add('comment_box');
-      div.appendChild(comment_box);
+    let comment = document.createElement('div');
+    comment.classList.add('comment');
+    let comment_box = document.createElement('img');
+    comment_box.src = '../images/newsfeed_buttons/comment.png';
+    comment_box.classList.add('comment_box');
+    div.appendChild(comment_box);
 
-      let share = document.createElement('div');
-      share.classList.add('share');
-      let share_icon = document.createElement('img');
-      share_icon.src = '../images/newsfeed_buttons/share.png';
-      share_icon.classList.add('share_icon');
-      div.appendChild(share_icon);
+    let share = document.createElement('div');
+    share.classList.add('share');
+    let share_icon = document.createElement('img');
+    share_icon.src = '../images/newsfeed_buttons/share.png';
+    share_icon.classList.add('share_icon');
+    div.appendChild(share_icon);
 
-      let flag = document.createElement('div');
-      flag.classList.add('flag');
-      let flag_icon = document.createElement('img');
-      flag_icon.src = '../images/newsfeed_buttons/flag.png';
-      flag_icon.classList.add('flag_icon');
-      div.appendChild(flag_icon);
+    let flag = document.createElement('div');
+    flag.classList.add('flag');
+    let flag_icon = document.createElement('img');
+    flag_icon.src = '../images/newsfeed_buttons/flag.png';
+    flag_icon.classList.add('flag_icon');
+    div.appendChild(flag_icon);
 
-      let time = document.createElement('div');
-      time.classList.add('time');
-      let clock = document.createElement('img');
-      clock.src = '../images/clock.png';
-      clock.classList.add('clock');
-      time.appendChild(clock);
+    let time = document.createElement('div');
+    time.classList.add('time');
+    let clock = document.createElement('img');
+    clock.src = '../images/clock.png';
+    clock.classList.add('clock');
+    time.appendChild(clock);
 
-      let timeSince = document.createElement('p');
-      let timeSinceText = document.createTextNode(howLongAgo(body.published_date));
-      timeSince.appendChild(timeSinceText);
-      time.appendChild(timeSince);
+    let timeSince = document.createElement('p');
+    let timeSinceText = document.createTextNode(howLongAgo(body.published_date));
+    timeSince.appendChild(timeSinceText);
+    time.appendChild(timeSince);
 
-      div.appendChild(time);
+    div.appendChild(time);
 
     let title = document.createElement('p');
     let titleNode = document.createTextNode(body.title);

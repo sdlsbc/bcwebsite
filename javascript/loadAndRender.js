@@ -570,6 +570,7 @@ function createPost(body) {
 	let descriptionNode = document.createTextNode(body.description);
 	description.appendChild(descriptionNode);
 	description.classList.add('description');
+	description.classList.add('ellipsis');
 	description.classList.add('pointer');
 	div.appendChild(description);
 

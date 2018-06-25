@@ -8,7 +8,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0; }
@@ -2411,7 +2411,7 @@ $other-blue-light: #;*/
   bottom: 0;
   left: 0;
   right: 0;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0; }
@@ -2951,6 +2951,10 @@ $other-blue-light: #;*/
       font-size: 30px;
       text-align: center;
       color: #226BE4; }
+  .profile_wrapper .follow-image {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%; }
 
 @media screen and (max-width: 700px) {
   .profile-signout-button {

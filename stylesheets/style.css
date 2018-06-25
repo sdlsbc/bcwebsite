@@ -1149,6 +1149,26 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
   border: 5px solid #226BE4; }
 
 /*===================== F U L L  S I D E N A V =====================*/
+.sidenav .profile {
+  text-decoration: none; }
+  .sidenav .profile #profile-a {
+    background-color: #18253B;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    color: #226BE4;
+    display: block;
+    transition: 0.3s;
+    margin-left: -25px;
+    margin-top: -10px; }
+.sidenav #closebtn {
+  font-family: 'Roboto', sans-serif;
+  background-color: #18253B;
+  position: absolute;
+  top: -9px;
+  left: 134px;
+  font-size: 36px;
+  margin-left: 50px; }
 .sidenav a {
   font-family: 'Roboto', sans-serif;
   padding: 8px 8px 8px 32px;
@@ -1169,29 +1189,12 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
     margin-left: -5px; }
     .sidenav a:hover img {
       margin-left: 5px; }
-.sidenav .profile {
-  text-decoration: none; }
-  .sidenav .profile a {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 100;
-    color: #226BE4;
-    display: block;
-    transition: 0.3s;
-    margin-left: -25px;
-    margin-top: -10px; }
 .sidenav .sidenav-links {
   background-color: #1e2e49;
   padding-bottom: 30px;
   padding-top: 10px;
   margin-top: -15px;
   height: auto; }
-.sidenav .closebtn {
-  position: absolute;
-  top: -9px;
-  left: 134px;
-  font-size: 36px;
-  margin-left: 50px; }
 
 /*===================== M O B I L E  S I D E N A V =====================*/
 @media screen and (max-height: 700px) {

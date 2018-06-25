@@ -1265,6 +1265,29 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
 
 
 .sidenav {
+  .profile {
+    text-decoration: none;
+    #profile-a {
+      background-color: #18253B;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-weight: 100;
+      color: #226BE4;
+      display: block;
+      transition: 0.3s;
+      margin-left: -25px;
+      margin-top: -10px;
+    }
+  }
+  #closebtn  {
+    font-family: 'Roboto', sans-serif;
+    background-color: #18253B;
+    position: absolute;
+    top: -9px;
+    left: 134px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
   a {
     font-family: 'Roboto', sans-serif;
     padding: 8px 8px 8px 32px;
@@ -1288,32 +1311,12 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
       }
     }
   }
-  .profile {
-    text-decoration: none;
-    a {
-      font-family: 'Roboto', sans-serif;
-      font-size: 14px;
-      font-weight: 100;
-      color: #226BE4;
-      display: block;
-      transition: 0.3s;
-      margin-left: -25px;
-      margin-top: -10px;
-    }
-  }
   .sidenav-links {
     background-color: #1e2e49;
     padding-bottom: 30px;
     padding-top: 10px;
     margin-top: -15px;
     height: auto;
-  }
-  .closebtn {
-    position: absolute;
-    top: -9px;
-    left: 134px;
-    font-size: 36px;
-    margin-left: 50px;
   }
 }
 

@@ -2979,6 +2979,31 @@ $other-blue-light: #;*/
       font-size: 30px;
       text-align: center;
       color: #226BE4; }
+    .profile_wrapper #profile-following .follow {
+      width: 47%;
+      margin-top: -6%;
+      margin-bottom: 7%;
+      margin-left: 1.5%;
+      margin-right: 0.5%;
+      height: 82px;
+      border: 1px solid #E9E9E9;
+      display: inline-block; }
+      .profile_wrapper #profile-following .follow img {
+        float: left;
+        width: 60px;
+        height: 60px;
+        margin-top: 2.5%;
+        margin-left: 4%;
+        margin-right: 3%;
+        border-radius: 50%;
+        border: 2px solid #226BE4; }
+      .profile_wrapper #profile-following .follow p {
+        font: "Roboto", sans-serif;
+        float: left;
+        margin-top: 33px;
+        display: inline;
+        font-weight: 400;
+        font-size: 13px; }
   .profile_wrapper .follow-image {
     width: 43px;
     height: 43px;
@@ -3266,21 +3291,21 @@ $other-blue-light: #;*/
           text-align: center;
           color: #226BE4; }
         .profile_wrapper .second_nav_right #profile-followers .follow {
-          width: 45%;
+          width: 46.6%;
           margin-top: -13%;
           margin-bottom: 14%;
-          margin-left: 2.6%;
+          margin-left: 1.6%;
           margin-right: 0%;
-          height: 58px;
+          height: 53px;
           border: 1px solid #E9E9E9;
           display: inline-block; }
           .profile_wrapper .second_nav_right #profile-followers .follow img {
             float: left;
-            width: 34px;
-            height: 34px;
+            width: 25px;
+            height: 25px;
             margin-top: 9%;
             margin-left: 2%;
-            margin-right: 4%;
+            margin-right: 2%;
             border-radius: 50%;
             border: 2px solid #226BE4; }
           .profile_wrapper .second_nav_right #profile-followers .follow p {
@@ -3289,7 +3314,7 @@ $other-blue-light: #;*/
             margin-top: 23px;
             display: inline;
             font-weight: 400;
-            font-size: 8px; }
+            font-size: 7px; }
       .profile_wrapper .second_nav_right #profile-following {
         display: none;
         background-color: white;
@@ -3301,7 +3326,7 @@ $other-blue-light: #;*/
         overflow: hidden;
         padding-top: 50px;
         margin-top: 62px;
-        margin-left: 12%;
+        margin-left: 13%;
         width: 74%;
         height: 90%; }
         .profile_wrapper .second_nav_right #profile-following h1 {
@@ -3311,6 +3336,31 @@ $other-blue-light: #;*/
           font-size: 20px;
           text-align: center;
           color: #226BE4; }
+        .profile_wrapper .second_nav_right #profile-following .follow {
+          width: 46.6%;
+          margin-top: -13%;
+          margin-bottom: 14%;
+          margin-left: 1.6%;
+          margin-right: 0%;
+          height: 53px;
+          border: 1px solid #E9E9E9;
+          display: inline-block; }
+          .profile_wrapper .second_nav_right #profile-following .follow img {
+            float: left;
+            width: 25px;
+            height: 25px;
+            margin-top: 9%;
+            margin-left: 2%;
+            margin-right: 2%;
+            border-radius: 50%;
+            border: 2px solid #226BE4; }
+          .profile_wrapper .second_nav_right #profile-following .follow p {
+            font: "Roboto", sans-serif;
+            float: left;
+            margin-top: 23px;
+            display: inline;
+            font-weight: 400;
+            font-size: 7px; }
 
   /*=================== I P A D  V I E W ====================*/ }
 

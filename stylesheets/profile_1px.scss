@@ -317,21 +317,21 @@
         color: $main-blue;
       }
       .follow {
-        width: 45%;
+        width: 46.6%;
         margin-top: -13%;
         margin-bottom: 14%;
-        margin-left: 2.6%;
+        margin-left: 1.6%;
         margin-right: 0%;
-        height: 58px;
+        height: 53px;
         border: 1px solid $light-gray;
         display: inline-block;
         img {
           float: left;
-          width: 34px;
-          height: 34px;
+          width: 25px;
+          height: 25px;
           margin-top: 9%;
           margin-left: 2%;
-          margin-right: 4%;
+          margin-right: 2%;
           border-radius: 50%;
           border: 2px solid $main-blue;
         }
@@ -341,7 +341,7 @@
           margin-top: 23px;
           display: inline;
           font-weight: 400;
-          font-size: 8px;
+          font-size: 7px;
         }
       }
     }
@@ -356,7 +356,7 @@
       overflow: hidden;
       padding-top: 50px;
       margin-top: 62px;
-      margin-left: 12%;
+      margin-left: 13%;
       width: 74%;
       height: 90%;
       h1 {
@@ -366,6 +366,34 @@
         font-size: 20px;
         text-align: center;
         color: $main-blue;
+      }
+      .follow {
+        width: 46.6%;
+        margin-top: -13%;
+        margin-bottom: 14%;
+        margin-left: 1.6%;
+        margin-right: 0%;
+        height: 53px;
+        border: 1px solid $light-gray;
+        display: inline-block;
+        img {
+          float: left;
+          width: 25px;
+          height: 25px;
+          margin-top: 9%;
+          margin-left: 2%;
+          margin-right: 2%;
+          border-radius: 50%;
+          border: 2px solid $main-blue;
+        }
+        p {
+          font: $font;
+          float: left;
+          margin-top: 23px;
+          display: inline;
+          font-weight: 400;
+          font-size: 7px;
+        }
       }
     }
   }

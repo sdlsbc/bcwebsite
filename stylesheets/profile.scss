@@ -658,6 +658,34 @@ $other-blue-light: #;*/
       text-align: center;
       color: $main-blue;
     }
+    .follow {
+      width: 47%;
+      margin-top: -6%;
+      margin-bottom: 7%;
+      margin-left: 1.5%;
+      margin-right: 0.5%;
+      height: 82px;
+      border: 1px solid $light-gray;
+      display: inline-block;
+      img {
+        float: left;
+        width: 60px;
+        height: 60px;
+        margin-top: 2.5%;
+        margin-left: 4%;
+        margin-right: 3%;
+        border-radius: 50%;
+        border: 2px solid $main-blue;
+      }
+      p {
+        font: $font;
+        float: left;
+        margin-top: 33px;
+        display: inline;
+        font-weight: 400;
+        font-size: 13px;
+      }
+    }
   }
   .follow-image{
     width: 43px;

@@ -607,6 +607,33 @@ $other-blue-light: #;*/
       text-align: center;
       color: $main-blue;
     }
+    .follow {
+      width: 48%;
+      margin-top: -6%;
+      margin-bottom: 7%;
+      margin-left: 6px;
+      margin-right: 3px;
+      height: 82px;
+      border: 1px solid $light-gray;
+      display: inline-block;
+      img {
+        float: left;
+        width: 60px;
+        height: 60px;
+        margin-top: 9px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 50%;
+        border: 2px solid $main-blue;
+      }
+      p {
+        font: $font;
+        float: left;
+        margin-top: 25px;
+        display: inline;
+        font-weight: 100;
+      }
+    }
   }
   #profile-following {
     display: none;
@@ -637,5 +664,6 @@ $other-blue-light: #;*/
     border-radius:50%;
   }
 }
+
 
 

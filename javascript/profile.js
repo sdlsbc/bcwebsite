@@ -392,10 +392,6 @@ function showUsers(user, divId) {
     div.classList.add('follow');
 
 
-    let name = document.createElement('p');
-    let nameNode = document.createTextNode(user.first_name + " " + user.last_name);
-    name.appendChild(nameNode);
-    div.appendChild(name);
 
     let image = document.createElement('img');
     if (user.profile_image == "http://app.bwayconnected.com/public/images/default.jpg") {
@@ -406,6 +402,12 @@ function showUsers(user, divId) {
     image.classList.add('follow-image');
     div.appendChild(image)
 
+    let name = document.createElement('p');
+    let nameNode = document.createTextNode(user.first_name + " " + user.last_name);
+    name.appendChild(nameNode);
+    div.appendChild(name);
+
+    
     document.getElementById(divId).appendChild(div);
     console.log(user.first_name);
 

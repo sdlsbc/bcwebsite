@@ -20,6 +20,8 @@ function checkLocalStorage(page) {
 		loadProfile();
 	} else if (PAGE == 'explore'){
 		loadProfile();
+	} else if (PAGE == 'bob'){
+		loadProfile();
 	}
 	//}else{
 	//local storage value"+localStorage.getItem("user_id");

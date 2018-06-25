@@ -1,7 +1,64 @@
 var divs = ["profile-postsbox", "profile-calendar", "profile-followers", "profile-following"];
 var visibleDivId = null;
-
+var followers = false;
+var followings = false;
 var user_id = localStorage.getItem("user_id");
+//var user_id = 12;
+function toggleAndLoadFollowers() {
+    toggleVisibility('profile-followers');
+    if(followers == false){
+        followers = true;
+    }
+    else {
+        return;
+    }
+    let url = "http://app.bwayconnected.com/api/user/followers?user_id=414";
+    //let url = "http://app.bwayconnected.com/api/user/followers?user_id=" + user_id;
+    let params = {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+    fetch(url, params)
+        .then(res => res.json())
+        .then(body => body.Result.records)
+        .then(users => {
+            users.forEach(user =>
+                showUsers(user, 'profile-followers')
+            )
+        })
+
+}
+
+function toggleAndLoadFollowings() {
+    toggleVisibility('profile-following');
+    //let url = "http://app.bwayconnected.com/api/user/followings?user_id=" + user_id;
+    if(followings == false){
+        followings = true;
+    }
+    else {
+        return;
+    }
+    let url = "http://app.bwayconnected.com/api/user/followings?user_id=414";
+    let params = {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+    console.log('about to fetch')
+    fetch(url, params)
+        .then(res => res.json())
+        .then(body => body.Result.records)
+        .then(users => {
+            users.forEach(user =>
+                showUsers(user, 'profile-following')
+            )
+        })
+
+}
+
 function toggleVisibility(divId) {
   if(visibleDivId === divId) {
     //visibleDivId = null;
@@ -57,11 +114,10 @@ function loadProfileData(){
     console.log('in loadProfileData');
     // let user_id = localStorage.getItem("user_id");
     //let user_id = 12;
-    // http://app.bwayconnected.com/api/user/profile?user_id=12&profile_id=12
     //api call and get data
 
-    // let url = 'http://app.bwayconnected.com/api/user/profile?user_id='+user_id+'&profile_id='+user_id;
-    let url = 'http://app.bwayconnected.com/api/user/profile?user_id=12&profile_id=12';
+     let url = 'http://app.bwayconnected.com/api/user/profile?user_id='+user_id+'&profile_id='+user_id;
+    //let url = 'http://app.bwayconnected.com/api/user/profile?user_id=12&profile_id=12';
 
     fetch(url, {
         method: 'GET',
@@ -135,6 +191,7 @@ function loadAndShowPosts(){
 
 function getPostsItems(){
     let user_id = localStorage.getItem("user_id");
+    //let url = "http://app.bwayconnected.com/api/user/profile?user_id=12&profile_id=12"
 
     // var url = "http://app.bwayconnected.com/api/user/profile?user_id="+user_id+"&profile_id="+user_id;
     var url = "http://app.bwayconnected.com/api/user/profile?user_id=12&profile_id=12";
@@ -144,6 +201,7 @@ function getPostsItems(){
         },
         method: 'GET'
     };
+    console.log(url);
     return fetch(url, params)
         .then(res => res.json())
         .then(body => body.Result.articles)
@@ -182,7 +240,6 @@ function createPost(body){
     }else{
         image.src = body.post_image;
     }
-    console.log(body.post_image);
     image.classList.add('userfeed-image');
     image_div.appendChild(image);
     div.appendChild(image_div);
@@ -327,6 +384,31 @@ function loadProfile() {
 	let namep = document.getElementsByClassName('navname')[0];
 	let name = document.createTextNode(localStorage.getItem('first_name') + " " + localStorage.getItem('last_name'));
 	namep.appendChild(name);
+}
+
+function showUsers(user, divId) {
+    console.log(divId);
+    let div = document.createElement('div');
+    div.classList.add('follow');
+
+
+    let name = document.createElement('p');
+    let nameNode = document.createTextNode(user.first_name + " " + user.last_name);
+    name.appendChild(nameNode);
+    div.appendChild(name);
+
+    let image = document.createElement('img');
+    if (user.profile_image == "http://app.bwayconnected.com/public/images/default.jpg") {
+        image.src = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"
+    } else {
+        image.src = user.profile_image;
+    }
+    image.classList.add('follow-image');
+    div.appendChild(image)
+
+    document.getElementById(divId).appendChild(div);
+    console.log(user.first_name);
+
 }
 
 function loadThese(){

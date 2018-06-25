@@ -70,8 +70,8 @@
 
 @media screen and (max-width: 900px) {
   .navbar a {
-    width: 20%;
-    margin-left: 5px;
+    width: 14%;
+    margin-left: -22px;
     text-decoration: none; }
     .navbar a .p-tagx {
       color: #B2B2B2;
@@ -143,7 +143,7 @@
   display: flex;
   justify-content: flex-end;
   flex-grow: 2;
-  margin-left: 16%; }
+  /*margin-left: 16%;*/ }
   .signout:first-child {
     margin-left: 40%; }
 
@@ -161,7 +161,7 @@
   /* Safari */
   transition-duration: 0.4s;
   border-radius: 25px;
-  margin-right: 25%;
+  margin-right: 10%;
   font-size: 14px; }
   .signout-button:hover {
     width: 105px;
@@ -189,7 +189,7 @@
     transition-duration: 0.4s;
     border-radius: 25px;
     margin-right: 4%;
-    margin-top: -50px;
+    margin-top: -7px;
     font-size: 13px; }
     .signout-button:hover {
       background-color: white;
@@ -1149,6 +1149,26 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
   border: 5px solid #226BE4; }
 
 /*===================== F U L L  S I D E N A V =====================*/
+.sidenav .profile {
+  text-decoration: none; }
+  .sidenav .profile #profile-a {
+    background-color: #18253B;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    color: #226BE4;
+    display: block;
+    transition: 0.3s;
+    margin-left: -25px;
+    margin-top: -10px; }
+.sidenav #closebtn {
+  font-family: 'Roboto', sans-serif;
+  background-color: #18253B;
+  position: absolute;
+  top: -9px;
+  left: 134px;
+  font-size: 36px;
+  margin-left: 50px; }
 .sidenav a {
   font-family: 'Roboto', sans-serif;
   padding: 8px 8px 8px 32px;
@@ -1163,30 +1183,18 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
   margin-bottom: 12px; }
   .sidenav a:hover {
     font-family: 'Roboto', sans-serif;
-    color: #f1f1f1; }
-.sidenav .profile {
-  text-decoration: none; }
-  .sidenav .profile a {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 100;
-    color: #226BE4;
-    display: block;
-    transition: 0.3s;
-    margin-left: -25px;
-    margin-top: -10px; }
+    color: #f1f1f1;
+    background-color: #226BE4;
+    width: 90%;
+    margin-left: -5px; }
+    .sidenav a:hover img {
+      margin-left: 5px; }
 .sidenav .sidenav-links {
-  background-color: #1e2e49;
+  background-color: #212D41;
   padding-bottom: 30px;
   padding-top: 10px;
   margin-top: -15px;
   height: auto; }
-.sidenav .closebtn {
-  position: absolute;
-  top: -9px;
-  left: 134px;
-  font-size: 36px;
-  margin-left: 50px; }
 
 /*===================== M O B I L E  S I D E N A V =====================*/
 @media screen and (max-height: 700px) {
@@ -2468,9 +2476,9 @@ $other-blue-light: #;*/
 @media screen and (max-width: 700px) {
   .navbar a {
     font-family: "Roboto", sans-serif;
-    width: 20%;
+    width: 24%;
     margin-left: 5px;
-    margin-top: -28px; }
+    margin-top: -2px; }
     .navbar a p {
       font-family: "Roboto", sans-serif;
       font-size: 14px;
@@ -2946,6 +2954,10 @@ $other-blue-light: #;*/
       font-size: 30px;
       text-align: center;
       color: #226BE4; }
+  .profile_wrapper .follow-image {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%; }
 
 @media screen and (max-width: 700px) {
   .profile-signout-button {

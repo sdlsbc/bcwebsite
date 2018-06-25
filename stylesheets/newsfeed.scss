@@ -83,8 +83,8 @@
 @media screen and (max-width: 900px) {
   .navbar {
     a {
-      width: 20%;
-      margin-left: 5px;
+      width: 14%;
+      margin-left: -22px;
       text-decoration: none;
       .p-tagx {
         color: #B2B2B2;
@@ -179,7 +179,7 @@
   display: flex;
   justify-content: flex-end;
   flex-grow: 2;
-  margin-left: 16%;
+  /*margin-left: 16%;*/
   &:first-child {
     margin-left: 40%;
   }
@@ -197,7 +197,7 @@
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   border-radius: 25px;
-  margin-right: 25%;
+  margin-right: 10%;
   font-size: 14px;
   &:hover {
     width: 105px;
@@ -225,7 +225,7 @@
     transition-duration: 0.4s;
     border-radius: 25px;
     margin-right: 4%;
-    margin-top: -50px;
+    margin-top: -7px;
     font-size: 13px;
     &:hover {
       background-color: white;
@@ -1265,6 +1265,29 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
 
 
 .sidenav {
+  .profile {
+    text-decoration: none;
+    #profile-a {
+      background-color: #18253B;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-weight: 100;
+      color: #226BE4;
+      display: block;
+      transition: 0.3s;
+      margin-left: -25px;
+      margin-top: -10px;
+    }
+  }
+  #closebtn  {
+    font-family: 'Roboto', sans-serif;
+    background-color: #18253B;
+    position: absolute;
+    top: -9px;
+    left: 134px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
   a {
     font-family: 'Roboto', sans-serif;
     padding: 8px 8px 8px 32px;
@@ -1277,38 +1300,23 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
     transition: 0.3s;
     width: 90%;
     margin-bottom: 12px;
-
     &:hover {
       font-family: 'Roboto', sans-serif;
       color: #f1f1f1;
-    }
-  }
-  .profile {
-    text-decoration: none;
-    a {
-      font-family: 'Roboto', sans-serif;
-      font-size: 14px;
-      font-weight: 100;
-      color: #226BE4;
-      display: block;
-      transition: 0.3s;
-      margin-left: -25px;
-      margin-top: -10px;
+      background-color: #226BE4;
+      width: 90%;
+      margin-left: -5px;
+      img {
+        margin-left: 5px;
+      }
     }
   }
   .sidenav-links {
-    background-color: #1e2e49;
+    background-color: #212D41;
     padding-bottom: 30px;
     padding-top: 10px;
     margin-top: -15px;
     height: auto;
-  }
-  .closebtn {
-    position: absolute;
-    top: -9px;
-    left: 134px;
-    font-size: 36px;
-    margin-left: 50px;
   }
 }
 

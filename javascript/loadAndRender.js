@@ -185,6 +185,10 @@ function showModal(body){
 	//  var time = document.getElementsByClassName("modal-time");
 	// time[0].innerHTML = time1;
 
+	var publisher_name = document.getElementsByClassName("modal_h3");
+	console.log(publisher_name)
+	publisher_name[0].innerHTML = body.Posts[0].publisher.first_name + ' ' + body.Posts[0].publisher.last_name;
+
 	var time_split = time1.split(':');
 	var hours = Number(time_split[0]);
 	var minutes = Number(time_split[1]);

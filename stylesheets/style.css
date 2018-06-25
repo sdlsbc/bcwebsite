@@ -1163,7 +1163,12 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
   margin-bottom: 12px; }
   .sidenav a:hover {
     font-family: 'Roboto', sans-serif;
-    color: #f1f1f1; }
+    color: #f1f1f1;
+    background-color: #226BE4;
+    width: 90%;
+    margin-left: -5px; }
+    .sidenav a:hover img {
+      margin-left: 5px; }
 .sidenav .profile {
   text-decoration: none; }
   .sidenav .profile a {
@@ -2468,9 +2473,6 @@ $other-blue-light: #;*/
 @media screen and (max-width: 700px) {
   .navbar a {
     font-family: "Roboto", sans-serif;
-    /*width: 20%;
-    margin-left: 5px;
-    margin-top: -28px;*/
     width: 24%;
     margin-left: 5px;
     margin-top: -2px; }

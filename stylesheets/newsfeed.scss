@@ -1277,10 +1277,15 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
     transition: 0.3s;
     width: 90%;
     margin-bottom: 12px;
-
     &:hover {
       font-family: 'Roboto', sans-serif;
       color: #f1f1f1;
+      background-color: #226BE4;
+      width: 90%;
+      margin-left: -5px;
+      img {
+        margin-left: 5px;
+      }
     }
   }
   .profile {

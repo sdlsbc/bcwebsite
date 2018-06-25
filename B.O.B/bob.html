@@ -1,0 +1,94 @@
+<head>
+  <link rel="icon" href="../images/bc32_mcU_icon.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Broadway Connected</title>
+  <link href="../stylesheets/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+</head>
+
+<div class="body">
+
+<body onload="checkLocalStorage('bob')">
+    <!-- sidebar. -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <p> </p>
+        <center id="profile_pic"></center>
+        <center>
+            <p class="navname"></p>
+        </center>
+        <center>
+          <p class="profile">
+            <a href="../Profile/profile.html">My Profile</a>
+          </p>
+        </center>
+        <br/>
+        <div class="sidenav-links">
+        <a href="#">
+          <img src="../images/rss@3x.png" width="19" height="19">&nbsp&nbsp Newsfeed
+        </a>
+        <a href="#">
+          <img src="../images/calendar (1)@3x.png" width="19" height="19">&nbsp&nbsp Calendar
+        </a>
+        <a href="../Favorites/favorites.html">
+          <img src="../images/heart@3x.png" width="19" height="19">&nbsp&nbsp My Favorites
+        </a>
+        <a href="#">
+          <img src="../images/compass@3x.png" width="19" height="19">&nbsp&nbsp Discover
+        </a>
+        <a href="#">
+          <img src="../images/stage@3x.png" width="19" height="19">&nbsp&nbsp Production Profiles
+        </a>
+        <a href="#">
+          <img src="../images/building@3x.png" width="19" height="19">&nbsp&nbsp Company Profiles
+        </a>
+        <a href="../B.O.B./bob.html">
+          <img src="../images/briefcase@3x.png" width="19" height="19">&nbsp&nbsp Business of Broadway 
+        </a>
+        <a href="#">
+          <img src="../images/info@3x.png" width="19" height="19">&nbsp&nbsp FAQ & Contact Us
+        </a>
+      </div>
+    </div>
+
+  <div class="navbar">
+    <span class="open_sidenav" onclick="openNav()">
+      <img src="../images/side button2.png" style="margin-left: 8px; margin-top: -6px;">
+    </span>
+    <img class="logo" style="margin-left: 16px;" src="../images/bc_solo_logo.png">
+    <a href='../Newsfeed/newsfeed.html'>
+      <p>Newsfeed</p>
+    </a>
+    <a href='../Discover/discover.html'>
+      <p>Discover</p>
+    </a>
+    <a href='../Explore/explore.html'>
+      <p>Explore</p>
+    </a>
+    <div class="signout">
+      <button class="signout-button" onclick="signout()">Sign Out</button>
+    </div>
+  </div>
+  
+  <div class="coming-soon">
+    <h1>Coming Soon...</h1>
+  </div>
+
+
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+  <script src="../javascript/register.js"></script>
+  <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
+</div>
+</body>
+</html>

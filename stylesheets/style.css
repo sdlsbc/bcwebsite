@@ -8,7 +8,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0; }
@@ -1190,7 +1190,7 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
     .sidenav a:hover img {
       margin-left: 5px; }
 .sidenav .sidenav-links {
-  background-color: #1e2e49;
+  background-color: #212D41;
   padding-bottom: 30px;
   padding-top: 10px;
   margin-top: -15px;
@@ -2414,7 +2414,7 @@ $other-blue-light: #;*/
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0; }

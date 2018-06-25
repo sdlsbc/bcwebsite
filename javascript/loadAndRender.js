@@ -16,6 +16,10 @@ function checkLocalStorage(page) {
 		loadProfileData();
 		loadProfile();
 
+	} else if (PAGE == 'discover'){
+		loadProfile();
+	} else if (PAGE == 'explore'){
+		loadProfile();
 	}
 	//}else{
 	//local storage value"+localStorage.getItem("user_id");

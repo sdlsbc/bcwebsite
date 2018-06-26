@@ -2,8 +2,10 @@
 @import "index_styling";
 @import "article";
 @import "profile";
+@import "profile_edit";
 
 @media screen and (max-width: 700px) {
-  @import "profile_1px"
+  @import "profile_1px";
+  @import "profile_edit_1px";
 }
 

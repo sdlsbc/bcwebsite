@@ -1,14 +1,14 @@
+.pp-main-image {
+  img {
+    width: 100%;
+    height: 300px;
+  }
+}
 .production-profiles-wrapper {
   border-bottom: 2px solid $main-blue;
   /*display: none;*/
   width: 100%;
   height: auto;
-  .pp-main-image {
-    img {
-      width: 100%;
-      height: 300px;
-    }
-  }
   .pp-header {
     width: 100%;
     text-align: center;

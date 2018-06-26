@@ -4,10 +4,12 @@
 @import "profile";
 @import "profile_edit";
 @import "production_profiles.scss";
+@import "company_profiles.scss";
 
 @media screen and (max-width: 700px) {
   @import "profile_1px";
   @import "profile_edit_1px";
-  @import "production_profiles_1px.scss"
+  @import "production_profiles_1px.scss";
+  @import "company_profiles.scss";
 }
 

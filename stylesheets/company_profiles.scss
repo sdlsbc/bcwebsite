@@ -1,0 +1,155 @@
+.profile_wrapper {
+  background-color: $light-blue;
+  margin-top: 550px;
+  padding-bottom: 25%;
+  /*display: flex;*/
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  .company_profiles_wrapper {
+    margin-top: -30%;
+    width: 30%;
+    margin-left: 34%;
+    .user_img {   
+      text-align: center;
+      img {
+        border: 4px solid $main-blue;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+  .cp-header {
+    width: 90%;
+    h2 {
+      margin-top: -20%;
+      margin-left: 9%;
+      text-align: center;
+      font-weight: 100;
+      font-size: 22px;
+      color: $main-blue;
+    }
+    h3 {
+      margin-top: 0.2%;
+      text-align: center;
+      margin-left: 9%;
+      font-weight: 100;
+      font-size: 18px;
+      color: black;
+    }
+    h5 {
+      margin-top: -0.9%;
+      text-align: center;
+      margin-left: 9%;
+      font-size: 12px;
+      color: $gray;
+    }
+    p {
+      width: 41%;
+      margin-top: 1%;
+      text-align: center;
+      margin-left: 33%;
+      font-size: 14px;
+    }
+  }
+  h4 {
+    margin-top: 5%;
+    font-weight: 100;
+    margin-left: 5.8%;
+    color: $main-blue;
+    margin-bottom: -35px;
+  }
+  .cp-row1 {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 90%;
+    height: 20%;
+    margin-left: 4%;
+    .cp-current-cast {
+      width: 18%;
+      margin-top: 4%;
+      margin-left: 2%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      display: inline-block;
+      text-align: center;
+      border: 1px solid $light-gray;
+      img {
+        width: 100%;
+        height: 45%;
+      }
+      h3 {
+        margin-top: 5px;
+        text-align: center;
+        color: $main-blue;
+      }
+      p {
+        margin-top: -4px;
+
+      }
+    }
+  }
+  .cp-row2 {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 90%;
+    height: 20%;
+    margin-left: 4%;
+    .cp-current-cast {
+      width: 18%;
+      margin-top: 4%;
+      margin-left: 2%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      display: inline-block;
+      text-align: center;
+      border: 1px solid $light-gray;
+      img {
+        width: 100%;
+        height: 45%;
+      }
+      h3 {
+        margin-top: 5px;
+        text-align: center;
+        color: $main-blue;
+      }
+      p {
+        margin-top: -4px;
+
+      }
+    }
+  }
+  .client-list-row1 {
+    width: 100%;
+    margin-left: 11%;
+    margin-top: 4%;
+    .clients {
+      /*÷ß*/
+      margin-right: 2%;
+      display: inline;
+      img {
+        width: 15%;
+        height: 80%;
+      }
+    }
+  }
+  .client-list-row2 {
+    width: 100%;
+    margin-left: 11%;
+    margin-top: 2%;
+    .clients {
+      /*÷ß*/
+      margin-right: 2%;
+      display: inline;
+      img {
+        width: 15%;
+        height: 80%;
+      }
+    }
+  }
+}

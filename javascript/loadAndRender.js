@@ -161,9 +161,9 @@ function showModal(body) {
 
 	var publisher_name = document.getElementsByClassName("modal_h3");
 
-	var publisher_nameNode = document.createTextNode(body.publisher.first_name + ' ' + body.publisher.last_name);
-	// publisher_name[0].innerHTML = body.publisher.first_name + ' ' + body.publisher.last_name;
-	publisher_name[0].appendChild(publisher_nameNode);
+	//var publisher_nameNode = document.createTextNode(body.publisher.first_name + ' ' + body.publisher.last_name);
+	publisher_name[0].innerHTML = body.publisher.first_name + ' ' + body.publisher.last_name;
+	//publisher_name[0].appendChild(publisher_nameNode);
 
 	var dateTime = body.published_date;
 	var dateTime = dateTime.split(" ");

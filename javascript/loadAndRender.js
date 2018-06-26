@@ -386,7 +386,6 @@ function createPost(body) {
 	comment_button.src = '../images/newsfeed_buttons/comment.png';
 	comment_button.classList.add('comment_button');
 	button_div.appendChild(comment_button);
-
   	comment_button.onclick = function(ev) {
     	createCustomAlert("Comments not currently available on web version, please download our IOS app");
 		//setTimeout(function(){ createCustomAlert("Comments not currently available on web version, please download our IOS app").hide(); }, 1000,);

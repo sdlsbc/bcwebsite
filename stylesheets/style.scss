@@ -3,6 +3,7 @@
 @import "article";
 @import "profile";
 @import "profile_edit";
+@import "production_profiles.scss";
 
 @media screen and (max-width: 700px) {
   @import "profile_1px";

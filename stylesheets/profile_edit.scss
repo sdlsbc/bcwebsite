@@ -209,17 +209,16 @@ $other-blue-light: #;*/
 }
 .profile_wrapper {
   background-color: $light-blue;
-  margin-top: 130px;
+  margin-top: 330px;
   padding-bottom: 15%;
-  display: flex;
+  /*display: flex;*/
   flex-wrap: wrap;
   height: 100%;
   width: 100%;
-  .user_profile_left {
-    float: left;
-    margin-top: -4%;
+  .user_profile_edit_left {
+    margin-top: -16%;
     width: 30%;
-    margin-left: 4%;
+    margin-left: 34%;
     .user_img {   
       text-align: center;
       img {
@@ -357,10 +356,11 @@ $other-blue-light: #;*/
       height: 30px;
     }
   }
-  .second_nav_right {
-    width: 65%;
+  .second_nav_right-edit {
+    width: 80%;
     margin-top: -3%;
-    flex: 1 1 160px;
+    margin-left: 13%;
+    /*flex: 1 1 160px;*/
     a {
       font-family: $font;
       margin-top: -15px;

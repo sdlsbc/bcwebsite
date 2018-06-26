@@ -3308,89 +3308,88 @@ $other-blue-light: #;*/
 
 .profile_wrapper {
   background-color: #F7FAFF;
-  margin-top: 130px;
+  margin-top: 330px;
   padding-bottom: 15%;
-  display: flex;
+  /*display: flex;*/
   flex-wrap: wrap;
   height: 100%;
   width: 100%; }
-  .profile_wrapper .user_profile_left {
-    float: left;
-    margin-top: -4%;
+  .profile_wrapper .user_profile_edit_left {
+    margin-top: -16%;
     width: 30%;
-    margin-left: 4%; }
-    .profile_wrapper .user_profile_left .user_img {
+    margin-left: 34%; }
+    .profile_wrapper .user_profile_edit_left .user_img {
       text-align: center; }
-      .profile_wrapper .user_profile_left .user_img img {
+      .profile_wrapper .user_profile_edit_left .user_img img {
         border: 4px solid #226BE4;
         border-radius: 50%;
         width: 150px;
         height: 150px; }
-    .profile_wrapper .user_profile_left .name {
+    .profile_wrapper .user_profile_edit_left .name {
       font-family: "Roboto", sans-serif;
       font-size: 18px;
       color: #226BE4;
       text-align: center; }
-    .profile_wrapper .user_profile_left .username {
+    .profile_wrapper .user_profile_edit_left .username {
       font-family: "Roboto", sans-serif;
       font-size: 16px;
       margin-top: -10px;
       color: #B2B2B2;
       text-align: center; }
-    .profile_wrapper .user_profile_left .title {
+    .profile_wrapper .user_profile_edit_left .title {
       font-family: "Roboto", sans-serif;
       font-size: 16px;
       font-weight: 100;
       margin-top: 0px;
       color: #B2B2B2;
       text-align: center; }
-    .profile_wrapper .user_profile_left .organization {
+    .profile_wrapper .user_profile_edit_left .organization {
       font-family: "Roboto", sans-serif;
       font-size: 16px;
       font-weight: 100;
       margin-top: -10px;
       color: #B2B2B2;
       text-align: center; }
-    .profile_wrapper .user_profile_left .user_type {
+    .profile_wrapper .user_profile_edit_left .user_type {
       font-family: "Roboto", sans-serif;
       font-size: 16px;
       font-weight: 100;
       margin-top: -10px;
       color: #B2B2B2;
       text-align: center; }
-    .profile_wrapper .user_profile_left .briefcase_icon {
+    .profile_wrapper .user_profile_edit_left .briefcase_icon {
       text-align: center;
       margin-top: 28px; }
-      .profile_wrapper .user_profile_left .briefcase_icon img {
+      .profile_wrapper .user_profile_edit_left .briefcase_icon img {
         width: 28px;
         height: 24px; }
-    .profile_wrapper .user_profile_left .previous {
+    .profile_wrapper .user_profile_edit_left .previous {
       font-family: "Roboto", sans-serif;
       font-size: 16px;
       margin-top: -10px;
       color: #B2B2B2;
       text-align: center; }
-    .profile_wrapper .user_profile_left .previous_job {
+    .profile_wrapper .user_profile_edit_left .previous_job {
       font-family: "Roboto", sans-serif;
       font-size: 16px;
       font-weight: 100;
       margin-top: -10px;
       color: #B2B2B2;
       text-align: center; }
-    .profile_wrapper .user_profile_left .location_icon {
+    .profile_wrapper .user_profile_edit_left .location_icon {
       font-family: "Roboto", sans-serif;
       text-align: center;
       margin-top: 28px; }
-      .profile_wrapper .user_profile_left .location_icon img {
+      .profile_wrapper .user_profile_edit_left .location_icon img {
         width: 28px;
         height: 28px; }
-    .profile_wrapper .user_profile_left .location {
+    .profile_wrapper .user_profile_edit_left .location {
       font-family: "Roboto", sans-serif;
       font-size: 16px;
       margin-top: -10px;
       color: #B2B2B2;
       text-align: center; }
-    .profile_wrapper .user_profile_left .view-more {
+    .profile_wrapper .user_profile_edit_left .view-more {
       background-color: rgba(51, 153, 255, 0.3);
       border: 2px solid #F7FAFF;
       color: #226BE4;
@@ -3405,14 +3404,14 @@ $other-blue-light: #;*/
       transition-duration: 0.4s;
       /*border-radius: 25px;*/
       font-size: 14px; }
-      .profile_wrapper .user_profile_left .view-more a {
+      .profile_wrapper .user_profile_edit_left .view-more a {
         font-family: "Roboto", sans-serif;
         text-decoration: none; }
-        .profile_wrapper .user_profile_left .view-more a p {
+        .profile_wrapper .user_profile_edit_left .view-more a p {
           font-family: "Roboto", sans-serif;
           margin-top: 5px;
           color: #226BE4; }
-      .profile_wrapper .user_profile_left .view-more:hover {
+      .profile_wrapper .user_profile_edit_left .view-more:hover {
         width: 103px;
         height: 34px;
         margin-top: 20px;
@@ -3421,44 +3420,45 @@ $other-blue-light: #;*/
         /*border-radius: 25px;*/
         color: #1B5AC3;
         font-size: 14px; }
-        .profile_wrapper .user_profile_left .view-more:hover a {
+        .profile_wrapper .user_profile_edit_left .view-more:hover a {
           font-family: "Roboto", sans-serif;
           text-decoration: none; }
-          .profile_wrapper .user_profile_left .view-more:hover a p {
+          .profile_wrapper .user_profile_edit_left .view-more:hover a p {
             font-family: "Roboto", sans-serif;
             color: #99CCFF;
             margin-top: 3px; }
-    .profile_wrapper .user_profile_left .edit-button {
+    .profile_wrapper .user_profile_edit_left .edit-button {
       text-align: center;
       padding-top: 5%;
       padding-left: 46%;
       width: 30px;
       height: 30px; }
-  .profile_wrapper .second_nav_right {
-    width: 65%;
+  .profile_wrapper .second_nav_right-edit {
+    width: 80%;
     margin-top: -3%;
-    flex: 1 1 160px; }
-    .profile_wrapper .second_nav_right a {
+    margin-left: 13%;
+    /*flex: 1 1 160px;*/ }
+    .profile_wrapper .second_nav_right-edit a {
       font-family: "Roboto", sans-serif;
       margin-top: -15px;
       text-decoration: none;
       float: right;
       width: 18%;
       display: inline; }
-      .profile_wrapper .second_nav_right a:first-child {
+      .profile_wrapper .second_nav_right-edit a:first-child {
         font-family: "Roboto", sans-serif;
         margin-left: 0%;
         margin-right: 18%; }
-      .profile_wrapper .second_nav_right a .p-tag {
+      .profile_wrapper .second_nav_right-edit a .p-tag {
         font-family: "Roboto", sans-serif;
         text-align: center;
         color: #B2B2B2; }
-      .profile_wrapper .second_nav_right a .p-tag.active {
+      .profile_wrapper .second_nav_right-edit a .p-tag.active {
         font-family: "Roboto", sans-serif;
         color: #226BE4;
         border-bottom: 4px solid #226BE4;
         padding-bottom: 15px; }
-    .profile_wrapper .second_nav_right #profile-postsbox {
+    .profile_wrapper .second_nav_right-edit #profile-postsbox {
       background-color: #F7FAFF;
       display: flex;
       flex-direction: row;
@@ -3471,14 +3471,14 @@ $other-blue-light: #;*/
       margin-top: 62px;
       margin-left: 9%;
       width: 74%; }
-      .profile_wrapper .second_nav_right #profile-postsbox h3 {
+      .profile_wrapper .second_nav_right-edit #profile-postsbox h3 {
         font-family: "Roboto", sans-serif;
         color: black;
         font-size: 16px;
         width: 100%;
         font-weight: 400;
         margin-bottom: 3px; }
-      .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post {
+      .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post {
         box-shadow: 0 6px 2px -2px rgba(220, 220, 220, 0.5);
         background-color: white;
         margin-bottom: 20px;
@@ -3487,91 +3487,91 @@ $other-blue-light: #;*/
         height: auto;
         padding: 10px;
         overflow: none; }
-        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .publisher {
+        .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post .publisher {
           float: left; }
-          .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .publisher .userfeed-publisher-image {
+          .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post .publisher .userfeed-publisher-image {
             width: 43px;
             height: 43px;
             border-radius: 50%;
             margin-left: 20px;
             margin-top: 5px; }
-          .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .publisher .userfeed-name {
+          .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post .publisher .userfeed-name {
             font-family: "Roboto", sans-serif;
             font-size: 20px;
             font-weight: 400;
             margin-left: 10px;
             margin-top: 18px; }
-        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-image {
+        .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post .userfeed-image {
           width: 100%;
           height: auto;
           padding-bottom: 5px; }
-        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-title {
+        .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post .userfeed-title {
           font-family: "Roboto", sans-serif;
           float: left;
           margin-left: 20px;
           color: #226BE4;
           font-size: 18px; }
-        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-favorite {
+        .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post .userfeed-favorite {
           width: 100%; }
-          .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-favorite .heart {
+          .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post .userfeed-favorite .heart {
             width: 25px;
             height: 25px;
             float: left;
             margin-top: -4px; }
-            .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-favorite .heart:hover {
+            .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post .userfeed-favorite .heart:hover {
               background-color: red; }
-          .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-favorite p {
+          .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post .userfeed-favorite p {
             font-family: "Roboto", sans-serif;
             font-size: 15px;
             margin-left: -4px;
             margin-top: 5px;
             color: red; }
-        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .comment_box {
+        .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post .comment_box {
           width: 20px;
           height: 20px;
           float: left;
           margin-right: 9px;
           margin-top: -32px;
           margin-left: 51px; }
-        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .share_icon {
+        .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post .share_icon {
           width: 18px;
           height: 18px;
           float: left;
           margin-right: 9px;
           margin-top: -32px;
           margin-left: 87px; }
-        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .flag_icon {
+        .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post .flag_icon {
           width: 18px;
           height: 18px;
           float: left;
           margin-right: 9px;
           margin-top: -31px;
           margin-left: 122px; }
-        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .time {
+        .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post .time {
           width: 100%;
           box-shadow: 0 21px 0px -7px rgba(220, 220, 220, 0.5); }
-          .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .time .clock {
+          .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post .time .clock {
             width: 18px;
             height: 18px;
             float: left;
             padding-right: 4px;
             margin-left: 154px;
             margin-top: -32px; }
-          .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .time p {
+          .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post .time p {
             font-family: "Roboto", sans-serif;
             padding-top: 3px;
             font-weight: 100;
             font-size: 14px;
             margin-left: 174px;
             margin-top: -32.5px; }
-        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-description {
+        .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post .userfeed-description {
           text-align: justify;
           margin: 0px 8px;
           width: 94%;
           font-size: 16px;
           padding: 10px;
           overflow: hidden; }
-        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post button {
+        .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post button {
           background-color: rgba(51, 153, 255, 0.3);
           border: 1px solid #F7FAFF;
           color: #226BE4;
@@ -3587,7 +3587,7 @@ $other-blue-light: #;*/
           font-size: 14px;
           margin-bottom: 20px;
           font-family: "Roboto", sans-serif; }
-          .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post button:hover {
+          .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post button:hover {
             background-color: white;
             color: #99CCFF;
             border: 1px solid #99CCFF;
@@ -3603,15 +3603,15 @@ $other-blue-light: #;*/
             font-size: 14px;
             margin-bottom: 20px;
             font-family: "Roboto", sans-serif; }
-        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .hidden-post {
+        .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post .hidden-post {
           max-height: 80px; }
-        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .revealed-post {
+        .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post .revealed-post {
           max-height: none; }
-        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .readMore {
+        .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post .readMore {
           display: block;
           margin-left: auto;
           margin-right: auto; }
-          .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .readMore:hover {
+          .profile_wrapper .second_nav_right-edit #profile-postsbox .userfeed-post .readMore:hover {
             display: block;
             margin-left: auto;
             margin-right: auto; }

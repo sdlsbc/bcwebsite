@@ -111,6 +111,8 @@ function checkBrowser(){
 
 function loadProfileData(){
     loadProfile();
+    var urlParams = new URLSearchParams(window.location.search);
+    console.log(urlParams.toString());
     console.log('in loadProfileData');
     // let user_id = localStorage.getItem("user_id");
     //let user_id = 12;

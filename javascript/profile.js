@@ -392,7 +392,6 @@ function showUsers(user, divId) {
     div.classList.add('follow');
 
 
-
     let image = document.createElement('img');
     if (user.profile_image == "http://app.bwayconnected.com/public/images/default.jpg") {
         image.src = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"

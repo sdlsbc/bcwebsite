@@ -1,0 +1,124 @@
+<head>
+  <head>
+ <link rel="icon" href="../images/bc32_mcU_icon.ico" type="image/x-icon">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta charset="UTF-8">
+ <meta name="google" content="notranslate">
+ <meta http-equiv="Content-Language" content="en">
+ <link href="../stylesheets/style.css" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<!-- <div class="body">
+ -->
+<body onload="checkLocalStorage('discover')" style="background-color:#F7FAFF">
+    <!-- sidebar. -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closeNav()">&times;</a>
+        <p> </p>
+        <center id="profile_pic"></center>
+        <center>
+            <p class="navname"></p>
+        </center>
+        <center>
+          <p class="profile">
+            <a href="../Profile/profile.html" id="profile-a">My Profile</a>
+          </p>
+        </center>
+        <br/>
+        <div class="sidenav-links">
+        <a href="../Newsfeed/newsfeed.html">
+          <img src="../images/rss@3x.png" width="19" height="19">&nbsp&nbsp Newsfeed
+        </a>
+        <a href="#">
+          <img src="../images/calendar (1)@3x.png" width="19" height="19">&nbsp&nbsp Calendar
+        </a>
+        <a href="../Favorites/favorites.html">
+          <img src="../images/heart@3x.png" width="19" height="19">&nbsp&nbsp My Favorites
+        </a>
+        <a href="#">
+          <img src="../images/compass@3x.png" width="19" height="19">&nbsp&nbsp Discover
+        </a>
+        <a href="#">
+          <img src="../images/stage@3x.png" width="19" height="19">&nbsp&nbsp Production Profiles
+        </a>
+        <a href="#">
+          <img src="../images/building@3x.png" width="19" height="19">&nbsp&nbsp Company Profiles
+        </a>
+        <a href="../B.O.B./bob.html">
+          <img src="../images/briefcase@3x.png" width="19" height="19">&nbsp&nbsp Business of Broadway 
+        </a>
+        <a href="../Contact/contact.html">
+          <img src="../images/info@3x.png" width="19" height="19">&nbsp&nbsp FAQ & Contact Us
+        </a>
+      </div>
+    </div>
+
+  <div class="navbar">
+    <span class="open_sidenav" onclick="openNav()">
+      <img src="../images/side button2.png" style="margin-left: 8px; margin-top: -6px;">
+    </span>
+    <img class="logo" style="margin-left: 16px;" src="../images/bc_solo_logo.png">
+    <a href='../Newsfeed/newsfeed.html'>
+      <p>Newsfeed</p>
+    </a>
+    <a href='../Discover/discover.html'>
+      <p>Discover</p>
+    </a>
+    <a href='../Explore/explore.html'>
+      <p>Explore</p>
+    </a>
+    <div class="signout">
+      <button class="signout-button" onclick="signout()">Sign Out</button>
+    </div>
+  </div>
+  
+
+  <div class="about">
+    <h2>About</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id</p>
+    <p>Sed quis ipsum turpis. Aenean vitae ultrices urna, vitae pharetra turpis. Mauris lorem sem, venenatis quis imperdiet a, dictum quis nibh. In in mi nec purus dignissim consectetur ut ullamcorper lectus.</p>
+    <br><br><br>
+  </div>
+  <div class="contact">
+    <h2>Contact</h2>
+    <p>Phone Number: (xxx) xxx - xxxx</p>
+    <p>Email: xx@xxx.com</p>
+  </div>
+  <div class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <h3>Question text goes here</h3>
+    <p>Sed quis ipsum turpis. Aenean vitae ultrices urna, vitae pharetra turpis. Mauris lorem sem, venenatis quis imperdiet a, dictum quis nibh. In in mi nec purus dignissim consectetur ut ullamcorper lectus.</p>
+    <h3>Question text goes here</h3>
+    <p>Sed quis ipsum turpis. Aenean vitae ultrices urna, vitae pharetra turpis. Mauris lorem sem, venenatis quis imperdiet a, dictum quis nibh. In in mi nec purus dignissim consectetur ut ullamcorper lectus.</p>
+    <h3>Question text goes here</h3>
+    <p>Sed quis ipsum turpis. Aenean vitae ultrices urna, vitae pharetra turpis. Mauris lorem sem, venenatis quis imperdiet a, dictum quis nibh. In in mi nec purus dignissim consectetur ut ullamcorper lectus.</p>
+    <h3>Question text goes here</h3>
+    <p>Sed quis ipsum turpis. Aenean vitae ultrices urna, vitae pharetra turpis. Mauris lorem sem, venenatis quis imperdiet a, dictum quis nibh. In in mi nec purus dignissim consectetur ut ullamcorper lectus.</p>
+    <h3>Question text goes here</h3>
+    <p>Sed quis ipsum turpis. Aenean vitae ultrices urna, vitae pharetra turpis. Mauris lorem sem, venenatis quis imperdiet a, dictum quis nibh. In in mi nec purus dignissim consectetur ut ullamcorper lectus.</p>
+    <h3>Question text goes here</h3>
+    <p>Sed quis ipsum turpis. Aenean vitae ultrices urna, vitae pharetra turpis. Mauris lorem sem, venenatis quis imperdiet a, dictum quis nibh. In in mi nec purus dignissim consectetur ut ullamcorper lectus.</p>
+  </div>
+
+  <div class="terms">
+    <button class="terms-button"><a href="#"><p>TERMS OF AGREEMENT</p></a></button> 
+    <br>
+    <button class="terms-button"><a href="#"><p>PRIVACY POLICY</p></a></button>
+  </div>
+
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+  <script src="../javascript/register.js"></script>
+  <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
+</div>
+<!-- </body> -->
+</html>

@@ -2403,6 +2403,109 @@ code {
   .important {
     background-color: #F5FCC8;
     padding: 2px; } }
+.about {
+  margin-top: 9%;
+  width: 100%;
+  border-bottom: 1px solid #E9E9E9; }
+  .about h2 {
+    margin-left: 5%;
+    width: 90%;
+    color: #226BE4;
+    font-weight: 300;
+    text-align: center; }
+  .about p {
+    width: 80%;
+    margin-left: 10%;
+    color: black;
+    font-weight: 400;
+    text-align: justify;
+    margin-bottom: 10px; }
+
+.contact {
+  border-bottom: 1px solid #E9E9E9;
+  padding-bottom: 50px;
+  padding-top: 4%; }
+  .contact h2 {
+    margin-left: 5%;
+    width: 90%;
+    color: #226BE4;
+    font-weight: 300;
+    text-align: center; }
+  .contact p {
+    width: 80%;
+    margin-left: 9.7%;
+    color: black;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 25px; }
+
+.faq {
+  border-bottom: 1px solid #E9E9E9;
+  margin-top: 4%; }
+  .faq h2 {
+    margin-left: 5%;
+    width: 90%;
+    color: #226BE4;
+    font-weight: 300;
+    text-align: center; }
+  .faq h3 {
+    margin-top: 60px;
+    margin-left: 10%;
+    width: 90%;
+    color: #226BE4;
+    font-weight: 300; }
+  .faq p {
+    width: 80%;
+    margin-left: 10%;
+    color: black;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 18px; }
+
+.terms {
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 6%; }
+  .terms .terms-button {
+    background-color: rgba(51, 153, 255, 0.3);
+    border: 2px solid #F7FAFF;
+    color: #226BE4;
+    padding: 3px 12px;
+    width: auto;
+    height: 38px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    /*border-radius: 25px;*/
+    font-size: 14px; }
+    .terms .terms-button a {
+      font-family: "Roboto", sans-serif;
+      text-decoration: none; }
+      .terms .terms-button a p {
+        font-family: "Roboto", sans-serif;
+        margin-top: 5.5px;
+        color: #226BE4; }
+    .terms .terms-button:hover {
+      width: auto;
+      height: 38px;
+      margin-top: 20px;
+      background-color: white;
+      border: 2px solid #99CCFF;
+      /*border-radius: 25px;*/
+      color: #1B5AC3;
+      font-size: 14px; }
+      .terms .terms-button:hover a {
+        font-family: "Roboto", sans-serif;
+        text-decoration: none; }
+        .terms .terms-button:hover a p {
+          font-family: "Roboto", sans-serif;
+          color: #99CCFF;
+          margin-top: 5px; }
+
 /*$other-blue-dark: #226BE4;
 $other-blue-light: #;*/
 .hidden {

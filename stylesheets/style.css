@@ -2468,10 +2468,11 @@ code {
   margin-top: 45px;
   margin-bottom: 6%; }
   .terms .terms-button {
-    background-color: rgba(51, 153, 255, 0.3);
-    border: 2px solid #F7FAFF;
+    background-color: white;
+    border: 2px solid #226BE4;
     color: #226BE4;
     padding: 3px 12px;
+    border-radius: 2%/15%;
     width: auto;
     height: 38px;
     margin-top: 20px;
@@ -2481,7 +2482,7 @@ code {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     /*border-radius: 25px;*/
-    font-size: 14px; }
+    font-size: 12px; }
     .terms .terms-button a {
       font-family: "Roboto", sans-serif;
       text-decoration: none; }
@@ -2493,11 +2494,13 @@ code {
       width: auto;
       height: 38px;
       margin-top: 20px;
-      background-color: white;
+      background-color: #F7FAFF;
       border: 2px solid #99CCFF;
-      /*border-radius: 25px;*/
+      border-radius: 2%/15%;
       color: #1B5AC3;
-      font-size: 14px; }
+      font-size: 12px;
+      padding: 3px 12px;
+      text-align: center; }
       .terms .terms-button:hover a {
         font-family: "Roboto", sans-serif;
         text-decoration: none; }

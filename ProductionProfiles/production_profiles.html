@@ -74,9 +74,15 @@
   </div>
 
 
+  <br><br>
+  <center>
+    <div class="pp-show-more">
+      <button class="pp-button" id="p1" onclick="myNewFunction()"><a href="#" style="text-decoration: none;"><p>Show More</p></a></button>
+    </div>
+  </center>
 
 
-  <div class="production-profiles-wrapper">
+  <div class="production-profiles-wrapper" id="pp-wrapper">
     <div class="pp-main-image">
       <img src="../images/background-new.png">
     </div>
@@ -160,13 +166,50 @@
         <p>@handle</p>
       </div>
     </div>
-    <center><div class="pp-show-more">
-      <button class="pp-button"><a href="#" style="text-decoration: none;"><p>Show Less</p></a></button>
+    <center>
+    <div class="pp-show-more">
+      <button class="pp-button" id="p2" onclick="myNewFunction()"><a href="#" style="text-decoration: none;"><p>Show Less</p></a></button>
     </div>
-    </center>
-
-
+  </center>
   </div>
+  <br><br>
+
+  
+  
+  <script>
+    // function myNewFunction() {
+    //   var x = document.getElementById("pp-wrapper");
+    //   if (x.style.display === "none") {
+    //     x.style.display = "block";
+    //   } else {
+    //     x.style.display = "none";
+    //   }
+    // }
+    function show() {
+      document.getElementById('pp-wrapper').className='visiblediv'; 
+    }
+    function hide() {
+      document.getElementById('pp-wrapper').className='production-profiles-wrapper'; 
+    }
+
+
+    var p1 = document.getElementById("p2");
+    p1.onclick = show;
+    var p2 = document.getElementById("p1");
+    p2.onclick = hide;
+    
+    $('#p1').hide();
+    
+    $('#p2').click(function(){
+        $('#p2').toggle();
+      $('#p1').toggle();
+    });
+    
+    $('#p1').click(function(){
+        $('#p2').toggle();
+      $('#p1').toggle();
+    });
+  </script>
 
 
 

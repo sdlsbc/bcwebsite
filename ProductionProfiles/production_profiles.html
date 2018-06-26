@@ -84,85 +84,87 @@
 
   <div class="production-profiles-wrapper" id="pp-wrapper">
     <div class="pp-main-image">
-      <img src="../images/background-new.png">
+      <img src="../images/profile-production-img.png">
     </div>
     <div class="pp-header">
       <h2>Hamilton Broadway</h2>
       <h3>@hamilton</h3>
       <p>BROADWAY PRODUCTION</p>
     </div>
-    <div class="pp-row1"><h4>Current Cast</h4>
+    <h4>Current Cast</h4>
+    <div class="pp-row1">
       <div class="pp-current-cast">
-        <img src="../images/play1.png">
-        <h3>Person Name</h3>
+        <img src="../images/icon8.png">
+        <h3>Full Name</h3>
         <p>@handle</p>
       </div>
       <div class="pp-current-cast">
-        <img src="../images/play1.png">
-        <h3>Person Name</h3>
+        <img src="../images/icon8.png">
+        <h3>Full Name</h3>
         <p>@handle</p>
       </div>
       <div class="pp-current-cast">
-        <img src="../images/play1.png">
-        <h3>Person Name</h3>
+        <img src="../images/icon8.png">
+        <h3>Full Name</h3>
         <p>@handle</p>
       </div>
       <div class="pp-current-cast">
-        <img src="../images/play1.png">
-        <h3>Person Name</h3>
+        <img src="../images/icon8.png">
+        <h3>Full Name</h3>
         <p>@handle</p>
       </div>
       <div class="pp-current-cast">
-        <img src="../images/play1.png">
-        <h3>Person Name</h3>
+        <img src="../images/icon8.png">
+        <h3>Full Name</h3>
         <p>@handle</p>
       </div>
       <div class="pp-current-cast">
-        <img src="../images/play1.png">
-        <h3>Person Name</h3>
+        <img src="../images/icon8.png">
+        <h3>Full Name</h3>
         <p>@handle</p>
       </div>
       <div class="pp-current-cast">
-        <img src="../images/play1.png">
-        <h3>Person Name</h3>
+        <img src="../images/icon8.png">
+        <h3>Full Name</h3>
         <p>@handle</p>
       </div>
     </div>
     <br><br>
-    <div class="pp-row2"><h4>Production Creatives</h4>
+    <h4>Production Creatives</h4>
+    <div class="pp-row2">
       <div class="pp-current-cast">
-        <img src="../images/play1.png">
-        <h3>Person Name</h3>
+        <img src="../images/icon8.png">
+        <h3>Full Name</h3>
         <p>@handle</p>
       </div>
       <div class="pp-current-cast">
-        <img src="../images/play1.png">
-        <h3>Person Name</h3>
+        <img src="../images/icon8.png">
+        <h3>Full Name</h3>
         <p>@handle</p>
       </div>
       <div class="pp-current-cast">
-        <img src="../images/play1.png">
-        <h3>Person Name</h3>
+        <img src="../images/icon8.png">
+        <h3>Full Name</h3>
         <p>@handle</p>
       </div>
       <div class="pp-current-cast">
-        <img src="../images/play1.png">
-        <h3>Person Name</h3>
+        <img src="../images/icon8.png">
+        <h3>Full Name</h3>
         <p>@handle</p>
       </div>
       <div class="pp-current-cast">
-        <img src="../images/play1.png">
-        <h3>Person Name</h3>
+        <img src="../images/icon8.png">
+        <h3>Full Name</h3>
         <p>@handle</p>
       </div>
       <div class="pp-current-cast">
-        <img src="../images/play1.png">
-        <h3>Person Name</h3>
+        <img src="../images/icon8.png">
+        <h3>Full Name</h3>
         <p>@handle</p>
       </div>
       <div class="pp-current-cast">
-        <img src="../images/play1.png">
-        <h3>Person Name</h3>
+        <img src="../images/icon8.png">
+        <h3>Full Name</h3>
         <p>@handle</p>
       </div>
     </div>
@@ -211,11 +213,65 @@
     });
   </script>
 
+  
+<!--========== U S E R  F E E D  V I E W  ==========-->
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+  <div class="profile_wrapper" style="margin-top: 130px;
+  padding-bottom: 15%;">
+    
+    
+    <div class="second_nav_right">
+      <!-- <a href="#"><p>Milestones</p></a>
+      <a href="#"><p>Moments</p></a> -->
+      <a href="#" onclick="toggleAndLoadFollowings();">
+        <p class="p-tag" id="following">Following</p>
+      </a>
+      <a href="#" onclick="toggleAndLoadFollowers();">
+        <p class="p-tag" id="followers">Followers</p>
+        </a>
+      <a href="#" onclick="toggleVisibility('profile-calendar');">
+        <p class="p-tag" id="calendar">Calendar</p>
+      </a>
+      <a href="#" onclick="toggleVisibility('profile-postsbox');">
+        <p class="p-tag" id="userfeed">User Feed</p>
+      </a>
+      
+      <div id="profile-postsbox"></div>
+      <div id="profile-calendar">
+        <h1>Calendar is Coming Soon...</h1>
+      </div>
+      <div id="profile-followers">
+        <!-- <h1>Followers is Coming Soon...</h1> -->
+      </div>
+      <div id="profile-following">
+      </div>
+    </div>
+
+  <script>
+    $(".p-tag").click(function() {
+      $(".p-tag").removeClass("active");
+      $(this).addClass("active");
+    });
+  </script>
+
+
+  <script src="../javascript/register.js"></script>
+  <script type="text/javascript" src="../javascript/jsDate.js"></script>
+  <script type="text/javascript" src="../javascript/profile.js"></script>
   </body>
 </html>
 

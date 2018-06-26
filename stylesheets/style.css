@@ -3734,6 +3734,7 @@ $other-blue-light: #;*/
     border-radius: 50%; }
 
 .production-profiles-wrapper {
+  border-bottom: 2px solid #226BE4;
   /*display: none;*/
   width: 100%;
   height: auto; }
@@ -3754,6 +3755,11 @@ $other-blue-light: #;*/
     .production-profiles-wrapper .pp-header p {
       font-weight: 300;
       font-size: 13px; }
+  .production-profiles-wrapper h4 {
+    font-weight: 100;
+    margin-left: 5.8%;
+    color: #226BE4;
+    margin-bottom: -35px; }
   .production-profiles-wrapper .pp-row1 {
     overflow-x: scroll;
     overflow-y: hidden;
@@ -3761,11 +3767,6 @@ $other-blue-light: #;*/
     width: 90%;
     height: 20%;
     margin-left: 4%; }
-    .production-profiles-wrapper .pp-row1 h4 {
-      font-weight: 100;
-      margin-left: 5px;
-      color: #226BE4;
-      margin-bottom: -35px; }
     .production-profiles-wrapper .pp-row1 .pp-current-cast {
       width: 18%;
       /*height: 20%;*/
@@ -3833,7 +3834,7 @@ $other-blue-light: #;*/
   transition-duration: 0.4s;
   margin-left: 0%;
   font-size: 14px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   font-family: "Roboto", sans-serif; }
   .pp-show-more .pp-button p {
     margin-top: 6px; }
@@ -3851,16 +3852,320 @@ $other-blue-light: #;*/
     transition-duration: 0.4s;
     margin-left: 0%;
     font-size: 14px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     font-family: "Roboto", sans-serif; }
 
 .visiblediv {
   display: none; }
 
-/*.production-profiles-wrapper {
-    
-}
-*/
+.second_nav_right {
+  padding-bottom: 30%;
+  width: 100%;
+  margin-left: 4%;
+  margin-top: 3%;
+  flex: 1 1 160px; }
+  .second_nav_right a {
+    font-family: "Roboto", sans-serif;
+    margin-top: -15px;
+    text-decoration: none;
+    float: right;
+    width: 18%;
+    display: inline; }
+    .second_nav_right a:first-child {
+      font-family: "Roboto", sans-serif;
+      margin-left: 0%;
+      margin-right: 18%; }
+    .second_nav_right a .p-tag {
+      font-family: "Roboto", sans-serif;
+      text-align: center;
+      color: #B2B2B2; }
+    .second_nav_right a .p-tag.active {
+      font-family: "Roboto", sans-serif;
+      color: #226BE4;
+      border-bottom: 4px solid #226BE4;
+      padding-bottom: 15px; }
+  .second_nav_right #pp-profile-postsbox {
+    background-color: #F7FAFF;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 50px;
+    margin-top: 62px;
+    margin-left: 9%;
+    width: 74%;
+    height: 90%; }
+    .second_nav_right #pp-profile-postsbox h3 {
+      font-family: "Roboto", sans-serif;
+      color: black;
+      font-size: 16px;
+      width: 100%;
+      font-weight: 400;
+      margin-bottom: 3px; }
+    .second_nav_right #pp-profile-postsbox .userfeed-post {
+      box-shadow: 0 6px 2px -2px rgba(220, 220, 220, 0.5);
+      background-color: white;
+      margin-bottom: 20px;
+      border-radius: 3%;
+      width: 100%;
+      height: auto;
+      padding: 10px;
+      overflow: none; }
+      .second_nav_right #pp-profile-postsbox .userfeed-post .publisher {
+        float: left; }
+        .second_nav_right #pp-profile-postsbox .userfeed-post .publisher .userfeed-publisher-image {
+          width: 43px;
+          height: 43px;
+          border-radius: 50%;
+          margin-left: 20px;
+          margin-top: 5px; }
+        .second_nav_right #pp-profile-postsbox .userfeed-post .publisher .userfeed-name {
+          font-family: "Roboto", sans-serif;
+          font-size: 20px;
+          font-weight: 400;
+          margin-left: 10px;
+          margin-top: 18px; }
+      .second_nav_right #pp-profile-postsbox .userfeed-post .userfeed-image {
+        width: 100%;
+        height: auto;
+        padding-bottom: 5px; }
+      .second_nav_right #pp-profile-postsbox .userfeed-post .userfeed-title {
+        font-family: "Roboto", sans-serif;
+        float: left;
+        margin-left: 20px;
+        color: #226BE4;
+        font-size: 18px; }
+      .second_nav_right #pp-profile-postsbox .userfeed-post .userfeed-favorite {
+        width: 100%; }
+        .second_nav_right #pp-profile-postsbox .userfeed-post .userfeed-favorite .heart {
+          width: 25px;
+          height: 25px;
+          float: left;
+          margin-top: -4px; }
+          .second_nav_right #pp-profile-postsbox .userfeed-post .userfeed-favorite .heart:hover {
+            background-color: red; }
+        .second_nav_right #pp-profile-postsbox .userfeed-post .userfeed-favorite p {
+          font-family: "Roboto", sans-serif;
+          font-size: 15px;
+          margin-left: -4px;
+          margin-top: 5px;
+          color: red; }
+      .second_nav_right #pp-profile-postsbox .userfeed-post .comment_box {
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin-right: 9px;
+        margin-top: -32px;
+        margin-left: 51px; }
+      .second_nav_right #pp-profile-postsbox .userfeed-post .share_icon {
+        width: 18px;
+        height: 18px;
+        float: left;
+        margin-right: 9px;
+        margin-top: -32px;
+        margin-left: 87px; }
+      .second_nav_right #pp-profile-postsbox .userfeed-post .flag_icon {
+        width: 18px;
+        height: 18px;
+        float: left;
+        margin-right: 9px;
+        margin-top: -31px;
+        margin-left: 122px; }
+      .second_nav_right #pp-profile-postsbox .userfeed-post .time {
+        width: 100%;
+        box-shadow: 0 21px 0px -7px rgba(220, 220, 220, 0.5); }
+        .second_nav_right #pp-profile-postsbox .userfeed-post .time .clock {
+          width: 18px;
+          height: 18px;
+          float: left;
+          padding-right: 4px;
+          margin-left: 154px;
+          margin-top: -32px; }
+        .second_nav_right #pp-profile-postsbox .userfeed-post .time p {
+          font-family: "Roboto", sans-serif;
+          padding-top: 3px;
+          font-weight: 100;
+          font-size: 14px;
+          margin-left: 174px;
+          margin-top: -32.5px; }
+      .second_nav_right #pp-profile-postsbox .userfeed-post .userfeed-description {
+        text-align: justify;
+        margin: 0px 8px;
+        width: 94%;
+        font-size: 16px;
+        padding: 10px;
+        overflow: hidden; }
+      .second_nav_right #pp-profile-postsbox .userfeed-post button {
+        background-color: rgba(51, 153, 255, 0.3);
+        border: 1px solid #F7FAFF;
+        color: #226BE4;
+        padding: 3px 12px;
+        width: 105px;
+        height: 36px;
+        margin-top: 20px;
+        text-align: center;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        margin-left: 40%;
+        font-size: 14px;
+        margin-bottom: 20px;
+        font-family: "Roboto", sans-serif; }
+        .second_nav_right #pp-profile-postsbox .userfeed-post button:hover {
+          background-color: white;
+          color: #99CCFF;
+          border: 1px solid #99CCFF;
+          padding: 3px 12px;
+          width: 105px;
+          height: 36px;
+          margin-top: 20px;
+          text-align: center;
+          cursor: pointer;
+          -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+          margin-left: 40%;
+          font-size: 14px;
+          margin-bottom: 20px;
+          font-family: "Roboto", sans-serif; }
+      .second_nav_right #pp-profile-postsbox .userfeed-post .hidden-post {
+        max-height: 80px; }
+      .second_nav_right #pp-profile-postsbox .userfeed-post .revealed-post {
+        max-height: none; }
+      .second_nav_right #pp-profile-postsbox .userfeed-post .readMore {
+        display: block;
+        margin-left: auto;
+        margin-right: auto; }
+        .second_nav_right #pp-profile-postsbox .userfeed-post .readMore:hover {
+          display: block;
+          margin-left: auto;
+          margin-right: auto; }
+  .second_nav_right #pp-profile-calendar {
+    display: none;
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 50px;
+    margin-top: 62px;
+    margin-left: 9%;
+    width: 74%;
+    height: 90%; }
+    .second_nav_right #pp-profile-calendar h1 {
+      font-family: "Roboto", sans-serif;
+      margin-top: 110px;
+      font-weight: 100;
+      font-size: 30px;
+      text-align: center;
+      color: #226BE4; }
+  .second_nav_right #pp-profile-followers {
+    display: none;
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 50px;
+    margin-top: 62px;
+    margin-left: 9%;
+    width: 74%;
+    height: 90%;
+    /*.follow {
+      width: 47%;
+      margin-top: -6%;
+      margin-bottom: 7%;
+      margin-left: 1.5%;
+      margin-right: 0.5%;
+      height: 82px;
+      border: 1px solid $light-gray;
+      display: inline-block;
+      img {
+        float: left;
+        width: 60px;
+        height: 60px;
+        margin-top: 2.5%;
+        margin-left: 4%;
+        margin-right: 3%;
+        border-radius: 50%;
+        border: 2px solid $main-blue;
+      }
+      p {
+        font: $font;
+        float: left;
+        margin-top: 33px;
+        display: inline;
+        font-weight: 400;
+        font-size: 13px;
+      }
+    }*/ }
+    .second_nav_right #pp-profile-followers h1 {
+      font-family: "Roboto", sans-serif;
+      margin-top: 110px;
+      font-weight: 100;
+      font-size: 30px;
+      text-align: center;
+      color: #226BE4; }
+  .second_nav_right #pp-profile-following {
+    display: none;
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 50px;
+    margin-top: 62px;
+    margin-left: 9%;
+    width: 74%;
+    height: 90%;
+    /*.follow {
+      width: 47%;
+      margin-top: -6%;
+      margin-bottom: 7%;
+      margin-left: 1.5%;
+      margin-right: 0.5%;
+      height: 82px;
+      border: 1px solid $light-gray;
+      display: inline-block;
+      img {
+        float: left;
+        width: 60px;
+        height: 60px;
+        margin-top: 2.5%;
+        margin-left: 4%;
+        margin-right: 3%;
+        border-radius: 50%;
+        border: 2px solid $main-blue;
+      }
+      p {
+        font: $font;
+        float: left;
+        margin-top: 33px;
+        display: inline;
+        font-weight: 400;
+        font-size: 13px;
+      }
+    }*/ }
+    .second_nav_right #pp-profile-following h1 {
+      font-family: "Roboto", sans-serif;
+      margin-top: 110px;
+      font-weight: 100;
+      font-size: 30px;
+      text-align: center;
+      color: #226BE4; }
+  .second_nav_right .follow-image {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%; }
+
 @media screen and (max-width: 700px) {
   .profile-signout-button {
     background-color: #1B5AC3;

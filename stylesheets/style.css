@@ -3817,6 +3817,40 @@ $other-blue-light: #;*/
         color: #226BE4; }
       .production-profiles-wrapper .pp-row2 .pp-current-cast p {
         margin-top: -4px; }
+  .production-profiles-wrapper .pp-show-more .pp-button {
+    background-color: rgba(51, 153, 255, 0.3);
+    border: 1px solid #F7FAFF;
+    color: #226BE4;
+    padding: 3px 12px;
+    width: 105px;
+    height: 36px;
+    margin-top: 50px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    margin-left: 0%;
+    font-size: 14px;
+    margin-bottom: 40px;
+    font-family: "Roboto", sans-serif; }
+    .production-profiles-wrapper .pp-show-more .pp-button p {
+      margin-top: 6px; }
+    .production-profiles-wrapper .pp-show-more .pp-button:hover {
+      background-color: white;
+      color: #99CCFF;
+      border: 1px solid #99CCFF;
+      padding: 3px 12px;
+      width: 105px;
+      height: 36px;
+      margin-top: 50px;
+      text-align: center;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      margin-left: 0%;
+      font-size: 14px;
+      margin-bottom: 40px;
+      font-family: "Roboto", sans-serif; }
 
 @media screen and (max-width: 700px) {
   .profile-signout-button {

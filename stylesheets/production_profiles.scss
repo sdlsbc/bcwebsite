@@ -103,4 +103,43 @@
       }
     }
   }
+  .pp-show-more {
+    .pp-button {
+      background-color: rgba(51, 153, 255, 0.3);
+      border: 1px solid $light-blue;
+      color: $main-blue;
+      padding: 3px 12px;
+      width: 105px;
+      height: 36px;
+      margin-top: 50px;
+      text-align: center;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s; 
+      transition-duration: 0.4s;
+      margin-left: 0%;
+      font-size: 14px;
+      margin-bottom: 40px;
+      font-family: $font;
+      p {
+        margin-top: 6px;
+      }
+      &:hover {
+        background-color: white;
+        color: $medium-blue;
+        border: 1px solid $medium-blue;
+        padding: 3px 12px;
+        width: 105px;
+        height: 36px;
+        margin-top: 50px;
+        text-align: center;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; 
+        transition-duration: 0.4s;
+        margin-left: 0%;
+        font-size: 14px;
+        margin-bottom: 40px;
+        font-family: $font;
+      }
+    }
+  }
 }

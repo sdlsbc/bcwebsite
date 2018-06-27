@@ -118,7 +118,7 @@
   flex-wrap: wrap;
   height: 100%;
   width: 100%;
-  margin-top: -35%;
+  margin-top: -76%;
   .pe-city-country {
     width: 45%;
     float: left;
@@ -161,8 +161,8 @@
     margin-top: -15px;
     text-decoration: none;
     float: right;
-    width: 15%;
-    margin-right: 3%;
+    width: 13%;
+    margin-right: 2%;
     display: inline;
     &:first-child {
       font-family: $font;
@@ -181,6 +181,32 @@
       padding-bottom: 15px;
     }
   }
+  #profile-moments {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 20px;
+    margin-top: 62px;
+    margin-left: 23%;
+    padding-bottom: 30%;
+    width: 80%;
+    height: 90%;
+    .pe-moments {
+      h1 {
+        font-family: $font;
+        margin-top: 110px;
+        font-weight: 100;
+        font-size: 30px;
+        text-align: center;
+        color: $main-blue;
+      }
+    }
+  }
   #profile-postsbox {
     background-color: white;
     display: flex;
@@ -190,19 +216,21 @@
     align-content: space-around;
     height: auto;
     overflow: hidden;
-    padding-top: 50px;
+    padding-top: 20px;
     margin-top: 62px;
     margin-left: 23%;
-    padding-bottom: 50%;
+    padding-bottom: 30%;
     width: 80%;
     height: 90%;
-    h1 {
-      font-family: $font;
-      margin-top: 110px;
-      font-weight: 100;
-      font-size: 30px;
-      text-align: center;
-      color: $main-blue;
+    .pe-milestones {
+      h1 {
+        font-family: $font;
+        margin-top: 110px;
+        font-weight: 100;
+        font-size: 30px;
+        text-align: center;
+        color: $main-blue;
+      }
     }
   }
   #profile-calendar {
@@ -214,21 +242,23 @@
     align-content: space-around;
     height: auto;
     overflow: hidden;
-    padding-top: 50px;
+    padding-top: 20px;
     margin-top: 62px;
     margin-left: 23%;
-    padding-bottom: 50%;
+    padding-bottom: 30%;
     width: 80%;
     height: 90%;
-    h1 {
-      font-family: $font;
-      margin-top: 110px;
-      font-weight: 100;
-      font-size: 30px;
-      text-align: center;
-      color: $main-blue;
+    .pe-articles {
+      h1 {
+        font-family: $font;
+        margin-top: 110px;
+        font-weight: 100;
+        font-size: 30px;
+        text-align: center;
+        color: $main-blue;
+      }
     }
-  }
+  }  
   #profile-followers {
     display: none;
     background-color: white;
@@ -238,19 +268,21 @@
     align-content: space-around;
     height: auto;
     overflow: hidden;
-    padding-top: 50px;
+    padding-top: 20px;
     margin-top: 62px;
     margin-left: 23%;
-    padding-bottom: 50%;
+    padding-bottom: 30%;
     width: 80%;
     height: 90%;
-    h1 {
-      font-family: $font;
-      margin-top: 110px;
-      font-weight: 100;
-      font-size: 30px;
-      text-align: center;
-      color: $main-blue;
+    .pe-events {
+      h1 {
+        font-family: $font;
+        margin-top: 110px;
+        font-weight: 100;
+        font-size: 30px;
+        text-align: center;
+        color: $main-blue;
+      }
     }
   }
   #profile-following {
@@ -262,19 +294,21 @@
     align-content: space-around;
     height: auto;
     overflow: hidden;
-    padding-top: 50px;
+    padding-top: 20px;
     margin-top: 62px;
     margin-left: 23%;
-    padding-bottom: 50%;
+    padding-bottom: 30%;
     width: 80%;
     height: 90%;
-    h1 {
-      font-family: $font;
-      margin-top: 110px;
-      font-weight: 100;
-      font-size: 30px;
-      text-align: center;
-      color: $main-blue;
+    .pe-information {
+      h1 {
+        font-family: $font;
+        margin-top: 110px;
+        font-weight: 100;
+        font-size: 30px;
+        text-align: center;
+        color: $main-blue;
+      }
     }
   }
 }

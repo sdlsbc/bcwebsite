@@ -1,4 +1,4 @@
-var divs = ["profile-postsbox", "profile-calendar", "profile-followers", "profile-following"];
+var divs = ["profile-postsbox", "profile-calendar", "profile-followers", "profile-following", "profile-moments"];
 var visibleDivId = null;
 var followers = false;
 var followings = false;

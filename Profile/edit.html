@@ -39,10 +39,10 @@
         <a href="#">
           <img src="../images/compass@3x.png" width="19" height="19">&nbsp&nbsp Discover
         </a>
-        <a href="#">
+        <a href="../ProductionProfiles/production_profiles.html">
           <img src="../images/stage@3x.png" width="19" height="19">&nbsp&nbsp Production Profiles
         </a>
-        <a href="#">
+        <a href="../CompanyProfiles/company_profiles.html">
           <img src="../images/building@3x.png" width="19" height="19">&nbsp&nbsp Company Profiles
         </a>
         <a href="../B.O.B./bob.html">
@@ -72,37 +72,75 @@
       <button class="signout-button" onclick="signout()">Sign Out</button>
     </div>
   </div>
- 
-  <div class="profile_wrapper">
-    <div class="user_profile_edit_left">
-      <div class="user_img" id="user_img">
-        <img>
-      </div>
-    </div>
-    <div class="second_nav_right-edit">
-      <!-- <a href="#"><p>Milestones</p></a>
-      <a href="#"><p>Moments</p></a> -->
-      <a href="#" onclick="toggleAndLoadFollowings();">
-        <p class="p-tag" id="milestones">Milestones</p>
-      </a>
-      <a href="#followers" onclick="toggleAndLoadFollowers();">
-        <p class="p-tag" id="articles">Articles</p>
-        </a>
-      <a href="#" onclick="toggleVisibility('profile-calendar');">
-        <p class="p-tag" id="events">Events</p>
-      </a>
-      <a href="#" onclick="toggleVisibility('profile-postsbox');">
-        <p class="p-tag" id="information">Information</p>
-      </a>
-      
-      <div id="edit-information"></div>
-      <div id="edit-events"></div>
-      <div id="edit-articles"></div>
-      <div id="edit-milestones">
-      </div>
-    </div>
 
+<div class="profile_wrapper">
+  <div class="pe-wrapper">
+    <div class="user_img" id="user_img">
+      <img>
+    </div>
   </div>
+  
+  <div class="pe-header">
+    <div class="pe-name">
+      <h2>John Doe</h2>
+    </div>
+    <div class="pe-handle">
+      <h3>@johndoe</h3>
+    </div>
+    <div class="pe-title">
+      <h4>CEO and Founder</h4>
+    </div>
+    <div class="pe-company">
+      <h5>@ Broadway Connected Inc</h5>
+    </div>
+    <div class="pe-role">
+      <h6>Entrepreneur</h6>
+    </div>
+  </div>
+  <div class="pe-show-more">
+    <button class="pe-button" id="p2" onclick="myNewFunction()"><a href="#" style="text-decoration: none;"><p>Show Less</p></a></button>
+  </div>
+</div>
+<div class="pe-wrapper2">
+  <div class="pe-city-country">
+    <img src="../images/pinpoint.png">
+    <h2>New York, United States</h2>
+    <h2>1501 Broadway, New York, New York</h2>
+  </div>
+  <div class="pe-previous-job">
+    <img src="../images/briefcase.png">
+    <h2>Previous:</h2>
+    <h2>Executive Intern @ Marathon Digital</h2>
+  </div>
+</div>
+<div class="pe-nav">
+  <a href="#" onclick="toggleVisibility('profile-following');">
+    <p class="p-tag" id="following">Following</p>
+  </a>
+  <a href="#" onclick="toggleVisibility('profile-followers');">
+    <p class="p-tag" id="followers">Followers</p>
+  </a>
+  <a href="#" onclick="toggleVisibility('profile-calendar');">
+    <p class="p-tag" id="calendar">Calendar</p>
+  </a>
+  <a href="#" onclick="toggleVisibility('profile-postsbox');">
+    <p class="p-tag" id="userfeed">User Feed</p>
+  </a>
+      
+  <div id="profile-postsbox">
+    <h1>Thing1 is Coming Soon...</h1>
+  </div>
+  <div id="profile-calendar">
+    <h1>Thing2 is Coming Soon...</h1>
+  </div>
+  <div id="profile-followers">
+    <h1>Thing3 is Coming Soon...</h1>
+  </div>
+  <div id="profile-following">
+    <h1>Thing4 is Coming Soon...</h1>
+  </div>
+</div>
+
   <script>
     $(".p-tag").click(function() {
       $(".p-tag").removeClass("active");
@@ -110,17 +148,33 @@
     });
   </script>
 
- <script>
-   function openNav() {
-     document.getElementById("mySidenav").style.width = "250px";
-   }
-   function closeNav() {
-     document.getElementById("mySidenav").style.width = "0";
-   }
- </script>
+  <script>
+     function openNav() {
+       document.getElementById("mySidenav").style.width = "250px";
+     }
+     function closeNav() {
+       document.getElementById("mySidenav").style.width = "0";
+     }
+  </script>
 
   <script src="../javascript/register.js"></script>
   <script type="text/javascript" src="../javascript/jsDate.js"></script>
   <script type="text/javascript" src="../javascript/profile.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

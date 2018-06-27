@@ -1,222 +1,13 @@
-/*$other-blue-dark: #226BE4;
-$other-blue-light: #;*/
-
-
-.hidden{
-  display: none;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-#wrapper {
-  background-color:#ecf2f9;
-  padding-bottom:30px;
-  padding:10px;           
-}
-.navbar {
-  position: fixed;
-  background: white;
-  margin-left: -8px;
-  padding-left: 4px;
-  top: 0;
-  width: 100%;
-  z-index: 3;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-right: 4px;
-  padding-bottom: 5px;
-  a { 
-    font-family: $font;
-    text-decoration: none;
-    p {
-      color: $gray;
-      &:hover { 
-        font-family: $font;
-        text-decoration:none; color: $light-gray;
-        font-size: 16px;
-        font-weight: 100;
-        margin-left: 25px;
-        margin-top: 19px;
-      }
-    }
-    .discover-p-tag {
-      margin-top: 39px; 
-      &:hover {
-        margin-top: 39px;
-      }
-    }
-    .explore-p-tag {
-      margin-top: 39px;
-      &:hover {
-        margin-top: 39px;
-      }
-    }
-  }
-  p {
-    font-family: $font;
-    color: $gray;
-    font-size: 16px;
-    font-weight: 100;
-    margin-left: 25px;
-    margin-top: 19px;
-    &:hover {
-      color: $light-gray;
-    }
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .navbar { 
-    a {
-      font-family: $font;
-      width: 24%;
-      margin-left: 5px;
-      margin-top: -2px;
-      p {
-        font-family: $font;
-        font-size: 14px;
-        font-weight: 100;
-        margin-left: 10px;
-        margin-top: 10px;
-      }
-      .discover-p-tag {
-        margin-top: 27px; 
-      }
-      .explore-p-tag {
-        margin-top: 27px;
-      }
-      .newsfeed-p-tag {
-        margin-top: 36px;
-        margin-left: 11px;
-        font-size: 12px;
-      }
-    }
-  }
-
-  .open_sidenav {
-    width: 36px;
-    font-size: 30px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  .logo {
-    height: 50%;
-    width: auto;
-    margin-right: -10px;
-    margin-top: 3px;
-  }
-}
-
-/* ===================== S I G N  O U T ===================== */
-
-
-.profile-signout {
-  display: flex;
-  justify-content: flex-end;
-  flex-grow: 2;
-}
-.profile-signout-button {
-  font-family: $font;
-  background-color: #1B5AC3;
-  border: 2px solid #1B5AC3;
-  color: white;
-  padding: 3px 12px;
-  width: 105px;
-  height: 36px;
-  text-align: center;
-  font-size: 12px;
-  cursor: pointer;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  border-radius: 25px;
-  margin-right: 45px;
-  font-size: 14px;
-  &:hover {
-    font-family: $font;
-    width: 105px;
-    height: 36px;
-    background-color: white;
-    border: 2px solid #1B5AC3;
-    border-radius: 25px;
-    margin-right: 45px; 
-    color: #1B5AC3;
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .profile-signout-button {
-    font-family: $font;
-    background-color: #1B5AC3;
-    border: 2px solid #1B5AC3;
-    color: white;
-    padding: 3px 12px;
-    width: 85px;
-    height: 28px;
-    text-align: center;
-    font-size: 12px;
-    cursor: pointer;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    border-radius: 25px;
-    margin-left: 20%;
-    margin-top: -34px;
-    font-size: 13px;
-    &:hover {
-      font-family: $font;
-      background-color: white;
-      border: 2px solid #1B5AC3;
-      color: #1B5AC3;
-      padding: 3px 12px;
-      width: 85px;
-      height: 28px;
-      text-align: center;
-      cursor: pointer;
-      -webkit-transition-duration: 0.4s; /* Safari */
-      transition-duration: 0.4s;
-      border-radius: 25px;
-      margin-right: 15%;
-      margin-top: -14px;
-      font-size: 13px;
-    }
-  }
-}
-.user_name {
-  font-family: $font;
-  text-decoration: none;
-  font-size: 16px;
-  color: #fff;
-  display: block;
-  transition: 0.3s;
-}
-.user_pic {
-  border-radius: 50%;
-  width: 136px;
-  height: auto;
-}
 .profile_wrapper {
-  background-color: $light-blue;
-  margin-top: 330px;
-  padding-bottom: 25%;
+  background-color: white;
+  margin-top: 760px;
+  padding-bottom: 22%;
   /*display: flex;*/
   flex-wrap: wrap;
   height: 100%;
   width: 100%;
-  .user_profile_edit_left {
-    margin-top: -16%;
+  .pe-wrapper {
+    margin-top: -490px;
     width: 30%;
     margin-left: 34%;
     .user_img {   
@@ -228,345 +19,190 @@ $other-blue-light: #;*/
         height: 150px;
       }
     }
-    .name {
-      font-family: $font;
-      font-size: 18px;
+  }
+  .pe-header {
+    width: 90%;
+
+    margin-top: -64px;
+    .pe-name h2 {
+      margin-top: -250px;
+      margin-left: 95px;
+      text-align: center;
+      font-weight: 100;
+      font-size: 22px;
       color: $main-blue;
-      text-align: center;
     }
-    .username {
-      font-family: $font;
-      font-size: 16px;
-      margin-top: -10px;
+    .pe-handle h3 {
+      margin-top: 0.2%;
+      text-align: center;
+      margin-left: 9%;
+      font-weight: 400;
+      font-size: 18px;
       color: $gray;
-      text-align: center;
     }
-    .title {
-      font-family: $font;
-      font-size: 16px;
-      font-weight: 100;
-      margin-top: 0px;
+    .pe-title h4 {
+      margin-top: 0.5%;
+      text-align: center;
+      margin-left: 9%;
+      font-size: 14px;
+      font-weight: 400;
       color: $gray;
-      text-align: center;
     }
-    .organization {
-      font-family: $font;
-      font-size: 16px;
-      font-weight: 100;
-      margin-top: -10px;
+    .pe-company h5 {
+      width: 41%;
+      margin-top: 3%;
+      text-align: center;
+      margin-left: 33%;
+      font-size: 14px;
+      font-weight: 400;
       color: $gray;
-      text-align: center;
     }
-    .user_type {
-      font-family: $font;
-      font-size: 16px;
-      font-weight: 100;
-      margin-top: -10px;
+    .pe-role h6 {
+      width: 41%;
+      margin-top: -1.5%;
+      text-align: center;
+      margin-left: 33.8%;
+      font-size: 14px;
+      font-weight: 400;
       color: $gray;
-      text-align: center;
     }
-    .briefcase_icon {
-      text-align: center;
-      margin-top: 28px;
-      img {
-        width: 28px;
-        height: 24px;
-      }
-    }
-    .previous {
-      font-family: $font;
-      font-size: 16px;
-      margin-top: -10px;
-      color: $gray;
-      text-align: center;
-    }
-    .previous_job {
-      font-family: $font;
-      font-size: 16px;
-      font-weight: 100;
-      margin-top: -10px;
-      color: $gray;
-      text-align: center;
-    }
-    .location_icon {
-      font-family: $font;
-      text-align: center;
-      margin-top: 28px;
-      img {
-        width: 28px;
-        height: 28px;
-      }
-    }
-    .location {
-      font-family: $font;
-      font-size: 16px;
-      margin-top: -10px;
-      color: $gray;
-      text-align: center;
-    }
-    .view-more {
+  }
+  .pe-show-more {
+    width: 100%;
+    text-align: center;
+    margin-top: -16.5%;
+    margin-left: -0.7%;
+    .pe-button {
       background-color: rgba(51, 153, 255, 0.3);
-      border: 2px solid $light-blue;
+      border: 1px solid $light-blue;
       color: $main-blue;
       padding: 3px 12px;
-      width: 105px;
-      height: 36px;
-      margin-top: 20px;
+      width: 90px;
+      height: 30px;
+      margin-top: 50px;
       text-align: center;
-      font-size: 12px;
       cursor: pointer;
       -webkit-transition-duration: 0.4s; 
       transition-duration: 0.4s;
-      /*border-radius: 25px;*/
-      font-size: 14px;
-      a {
-        font-family: $font;
-        text-decoration: none;
-        p {
-          font-family: $font;
-          margin-top: 5px;
-          color: $main-blue;
-        }
+      margin-left: 0%;
+      font-size: 12px;
+      margin-bottom: 10px;
+      font-family: $font;
+      p {
+        margin-top: 6px;
       }
       &:hover {
-        width: 103px;
-        height: 34px;
-        margin-top: 20px;
         background-color: white;
-        border: 2px solid $medium-blue;
-        /*border-radius: 25px;*/
-        color: #1B5AC3;
-        font-size: 14px;
-        a {
-          font-family: $font;
-          text-decoration: none;
-          p {
-            font-family: $font;
-            color: $medium-blue;
-            margin-top: 3px;
-          }
-        }
+        color: $medium-blue;
+        border: 1px solid $medium-blue;
+        padding: 3px 12px;
+        width: 90px;
+        height: 30px;
+        margin-top: 50px;
+        text-align: center;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; 
+        transition-duration: 0.4s;
+        margin-left: 0%;
+        font-size: 12px;
+        margin-bottom: 10px;
+        font-family: $font;
       }
     }
-    .edit-button {
-      text-align: center;
-      padding-top: 5%;
-      padding-left: 46%;
+  }
+  .visiblediv {
+    display: none;
+  }
+}
+.pe-wrapper2 {
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  margin-top: -35%;
+  .pe-city-country {
+    width: 45%;
+    float: left;
+    margin-top: -0.7%;
+    text-align: center;
+    img {
       width: 30px;
       height: 30px;
     }
-  }
-  .second_nav_right-edit {
-    width: 80%;
-    margin-top: -3%;
-    margin-left: 13%;
-    /*flex: 1 1 160px;*/
-    a {
-      font-family: $font;
-      margin-top: -15px;
-      text-decoration: none;
-      float: right;
-      width: 18%;
-      display: inline;
-      &:first-child {
-        font-family: $font;
-        margin-left: 0%;
-        margin-right: 18%;
-      }
-      .p-tag {
-        font-family: $font;
-        text-align: center;
-        color: $gray;
-      }
-      .p-tag.active {
-        font-family: $font;
-        color: $main-blue;
-        border-bottom: 4px solid $main-blue;
-        padding-bottom: 15px;
-      }
+    h2 {
+      font-weight: 400;
+      font-size: 14px;
+      color: $gray;
     }
-    #profile-postsbox {
-      background-color: $light-blue;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      align-content: space-around;
-      height: auto;
-      overflow: hidden;
-      padding-top: 50px;
-      margin-top: 62px;
-      margin-left: 9%;
-      width: 74%;
-      h3 {
-        font-family: $font;
-        color: black;
-        font-size: 16px;
-        width: 100%;
-        font-weight: 400;
-        margin-bottom: 3px;
-      }
-      .userfeed-post {
-        box-shadow: 0 6px 2px -2px rgba(220,220,220,0.5);
-        background-color: white;
-        margin-bottom: 20px;
-        border-radius: 3%;
-        width: 100%;
-        height: auto;
-        padding: 10px;
-        overflow: none;
-        .publisher {
-          float: left;
-          .userfeed-publisher-image {
-            width: 43px;
-            height: 43px;
-            border-radius:50%;
-            margin-left: 20px;
-            margin-top: 5px;
-          }
-          .userfeed-name {
-            font-family: $font;
-            font-size: 20px;
-            font-weight: 400;
-            margin-left: 10px;
-            margin-top: 18px;
-          }
-        }
-        .userfeed-image{
-          width: 100%;
-          height: auto;
-          padding-bottom: 5px;
-        }
-        .userfeed-title {
-          font-family: $font;
-          float: left;
-          margin-left: 20px;
-          color: $main-blue;
-          font-size: 18px;
-        }
-        .userfeed-favorite {
-          width: 100%;
-          .heart {
-            width: 25px;
-            height: 25px;
-            float: left;
-            margin-top: -4px;
-            &:hover {
-              background-color: red;
-            }
-          }
-          p {
-            font-family: $font;
-            font-size: 15px;
-            margin-left: -4px;
-            margin-top: 5px;
-            color: red;
-          }
-        }
+  }
+  .pe-previous-job {
+    float: right;
+    width: 45%;
+    text-align: center;
+    img {
+      width: 23px;
+      height: 23px;
+    }
+    h2 {
+      font-weight: 400;
+      font-size: 14px;
+      color: $gray;
+    }
+  }
+}
 
-        .comment_box {
-          width: 20px;
-          height: 20px;
-          float: left;
-          margin-right: 9px;
-          margin-top: -32px;
-          margin-left: 51px;
-        }
-        .share_icon {
-          width: 18px;
-          height: 18px;
-          float: left;
-          margin-right: 9px;
-          margin-top: -32px;
-          margin-left: 87px;
-        }
-        .flag_icon {
-          width: 18px;
-          height: 18px;
-          float: left;
-          margin-right: 9px;
-          margin-top: -31px;
-          margin-left: 122px;
-        }
-        .time{
-          width: 100%;
-          box-shadow: 0 21px 0px -7px rgba(220, 220, 220, 0.5);
-          .clock{
-            width: 18px;
-            height: 18px;
-            float:left;
-            padding-right: 4px;        
-            margin-left: 154px;
-            margin-top: -32px;
-          }
-          p {
-            font-family: $font;
-            padding-top: 3px;
-            font-weight: 100;
-            font-size: 14px;
-            margin-left: 174px;
-            margin-top: -32.5px;
-          }
-        }
-        .userfeed-description {
-          text-align: justify;
-          margin: 0px 8px;
-          width: 94%;
-          font-size: 16px;
-          padding:10px;
-          overflow: hidden;
-        }
-        button {
-          background-color: rgba(51, 153, 255, 0.3);
-          border: 1px solid $light-blue;
-          color: $main-blue;
-          padding: 3px 12px;
-          width: 105px;
-          height: 36px;
-          margin-top: 20px;
-          text-align: center;
-          cursor: pointer;
-          -webkit-transition-duration: 0.4s; 
-          transition-duration: 0.4s;
-          margin-left: 40%;
-          font-size: 14px;
-          margin-bottom: 20px;
-          font-family: $font;
-          &:hover {
-            background-color: white;
-            color: $medium-blue;
-            border: 1px solid $medium-blue;
-            padding: 3px 12px;
-            width: 105px;
-            height: 36px;
-            margin-top: 20px;
-            text-align: center;
-            cursor: pointer;
-            -webkit-transition-duration: 0.4s; 
-            transition-duration: 0.4s;
-            margin-left: 40%;
-            font-size: 14px;
-            margin-bottom: 20px;
-            font-family: $font;
-          }
-        }
-        .hidden-post {
-          max-height: 80px;
-        }
-        .revealed-post {
-          max-height: none;
-        }
-        .readMore {
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-          &:hover {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-          }
-        }
-      }
+
+
+.pe-nav {
+  width: 80%;
+  margin-top: 10%;
+  flex-wrap: wrap;
+  a {
+    font-family: $font;
+    margin-top: -15px;
+    text-decoration: none;
+    float: right;
+    width: 15%;
+    margin-right: 3%;
+    display: inline;
+    &:first-child {
+      font-family: $font;
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+    .p-tag {
+      font-family: $font;
+      text-align: center;
+      color: $gray;
+    }
+    .p-tag.active {
+      font-family: $font;
+      color: $main-blue;
+      border-bottom: 4px solid $main-blue;
+      padding-bottom: 15px;
+    }
+  }
+  #profile-postsbox {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 50px;
+    margin-top: 62px;
+    margin-left: 23%;
+    padding-bottom: 50%;
+    width: 80%;
+    height: 90%;
+    h1 {
+      font-family: $font;
+      margin-top: 110px;
+      font-weight: 100;
+      font-size: 30px;
+      text-align: center;
+      color: $main-blue;
     }
   }
   #profile-calendar {
@@ -580,8 +216,9 @@ $other-blue-light: #;*/
     overflow: hidden;
     padding-top: 50px;
     margin-top: 62px;
-    margin-left: 9%;
-    width: 74%;
+    margin-left: 23%;
+    padding-bottom: 50%;
+    width: 80%;
     height: 90%;
     h1 {
       font-family: $font;
@@ -603,8 +240,9 @@ $other-blue-light: #;*/
     overflow: hidden;
     padding-top: 50px;
     margin-top: 62px;
-    margin-left: 9%;
-    width: 74%;
+    margin-left: 23%;
+    padding-bottom: 50%;
+    width: 80%;
     height: 90%;
     h1 {
       font-family: $font;
@@ -613,34 +251,6 @@ $other-blue-light: #;*/
       font-size: 30px;
       text-align: center;
       color: $main-blue;
-    }
-    .follow {
-      width: 47%;
-      margin-top: -6%;
-      margin-bottom: 7%;
-      margin-left: 1.5%;
-      margin-right: 0.5%;
-      height: 82px;
-      border: 1px solid $light-gray;
-      display: inline-block;
-      img {
-        float: left;
-        width: 60px;
-        height: 60px;
-        margin-top: 2.5%;
-        margin-left: 4%;
-        margin-right: 3%;
-        border-radius: 50%;
-        border: 2px solid $main-blue;
-      }
-      p {
-        font: $font;
-        float: left;
-        margin-top: 33px;
-        display: inline;
-        font-weight: 400;
-        font-size: 13px;
-      }
     }
   }
   #profile-following {
@@ -654,8 +264,9 @@ $other-blue-light: #;*/
     overflow: hidden;
     padding-top: 50px;
     margin-top: 62px;
-    margin-left: 9%;
-    width: 74%;
+    margin-left: 23%;
+    padding-bottom: 50%;
+    width: 80%;
     height: 90%;
     h1 {
       font-family: $font;
@@ -665,41 +276,18 @@ $other-blue-light: #;*/
       text-align: center;
       color: $main-blue;
     }
-    .follow {
-      width: 47%;
-      margin-top: -6%;
-      margin-bottom: 7%;
-      margin-left: 1.5%;
-      margin-right: 0.5%;
-      height: 82px;
-      border: 1px solid $light-gray;
-      display: inline-block;
-      img {
-        float: left;
-        width: 60px;
-        height: 60px;
-        margin-top: 2.5%;
-        margin-left: 4%;
-        margin-right: 3%;
-        border-radius: 50%;
-        border: 2px solid $main-blue;
-      }
-      p {
-        font: $font;
-        float: left;
-        margin-top: 33px;
-        display: inline;
-        font-weight: 400;
-        font-size: 13px;
-      }
-    }
-  }
-  .follow-image{
-    width: 43px;
-    height: 43px;
-    border-radius:50%;
   }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

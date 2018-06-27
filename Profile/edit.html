@@ -30,6 +30,9 @@
         <a href="../Newsfeed/newsfeed.html">
           <img src="../images/rss@3x.png" width="19" height="19">&nbsp&nbsp Newsfeed
         </a>
+        <a href="#" id="myBtn">
+          <img src="../images/info@3x.png" width="19" height="19">&nbsp&nbsp Create 
+        </a>
         <a href="#">
           <img src="../images/calendar (1)@3x.png" width="19" height="19">&nbsp&nbsp Calendar
         </a>
@@ -164,7 +167,8 @@
     });
   </script>
 
-  <script>
+
+ <script>
      function openNav() {
        document.getElementById("mySidenav").style.width = "250px";
      }
@@ -172,6 +176,123 @@
        document.getElementById("mySidenav").style.width = "0";
      }
   </script>
+
+
+
+
+
+    <!-- ============ M I L E S T O N E S  M O D A L =============  -->
+    <!-- <div id="milestonesModal" class="modal-milestones">
+      <div id="milestonesModal" class="milestones-modal-content">
+      <h2>Add New Milestone</h2>
+      <span class="milestones-close"></span>
+    </div> -->
+
+<div id="createModal" class="create-modal">
+  <!-- Modal content -->
+
+  <div class="create-modal-content" id="create-modal-content">
+
+  <div id="milestonesModal" style="display: none;">
+    <h3>Add New Milestone</h3>
+  </div>
+  <div id="momentsModal" style="display: none;">
+    <h3>Add New Moments</h3>
+  </div>
+
+
+    <span class="create-close"></span>
+    <div class="column1">
+      <h3>Milestones</h3>
+      <h4>Small blurb about milestones: Lorem ipsum, etc etc etc</h4>
+      <div class="create-button-wrapper">
+        <button class="create-button" id="p2" onclick="myMilestonesFunction()"><a href="#" style="text-decoration: none;"><p>ADD NEW</p></a></button>
+      </div>
+    </div>
+    <div class="column2">
+      <h3>Moments</h3>
+      <h4>Small blurb about milestones: Lorem ipsum, etc etc etc</h4>
+      <div class="create-button-wrapper">
+        <button class="create-button" id="p2" onclick="myMomentsFunction()"><a href="#" style="text-decoration: none;"><p>ADD NEW</p></a></button>
+      </div>
+    </div>
+    <div class="column3">
+      <h3>Thing 3</h3>
+      <h4>Small blurb about milestones: Lorem ipsum, etc etc etc</h4>
+      <div class="create-button-wrapper">
+        <button class="create-button" id="p2" onclick="toggleVisibility('modal-thing3');"><a href="#" style="text-decoration: none;"><p>ADD NEW</p></a></button>
+      </div>
+    </div>
+    <div class="column4">
+      <h3>Thing 4</h3>
+      <h4>Small blurb about milestones: Lorem ipsum, etc etc etc</h4>
+      <div class="create-button-wrapper">
+        <button class="create-button" id="p2" onclick="toggleVisibility('modal-thing4');"><a href="#" style="text-decoration: none;"><p>ADD NEW</p></a></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  function myMilestonesFunction() {
+    var x = document.getElementById("milestonesModal");
+    var y = document.getElementById("create-modal-content")
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        // y.style.display === "none";
+    } else {
+        x.style.display = "none";
+        // y.style.display = "block";
+    }
+  }
+  function myMomentsFunction() {
+    var x = document.getElementById("momentsModal");
+    if (x.style.display === "none") {
+        x.style.display = "inherit";
+    } else {
+        x.style.display = "none";
+    }
+  }
+
+
+// open milestones modal
+// var modalmilestones = document.getElementById('milestonesModal');
+// var btnmilestones = document.getElementById("myBtnMilestones");
+// var spanmilestones = document.getElementsByClassName("milestones-close")[0];
+// btnmilestones.onclick = function() {
+//     modalmilestones.style.display = "block";
+// }
+// spanmilestones.onclick = function() {
+//     modalmilestones.style.display = "none";
+// }
+// window.onclick = function(event) {
+//     if (event.target == modalmilestones) {
+//         modalmilestones.style.display = "none";
+//     }
+// }
+
+//open general create modal
+var modal = document.getElementById('createModal');
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("create-close")[0];
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+
+
+
+
 
   <script src="../javascript/register.js"></script>
   <script type="text/javascript" src="../javascript/jsDate.js"></script>

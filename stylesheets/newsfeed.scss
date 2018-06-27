@@ -1262,9 +1262,53 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
 }
 
 /*===================== F U L L  S I D E N A V =====================*/
-
-
 .sidenav {
+  a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    margin-left: -5px;
+    &:hover {
+      color: #f1f1f1;
+    }
+  }
+  .sidenav-links {
+    background-color: #1e2e49;
+    padding-bottom: 30px;
+    padding-top: 7px;
+    margin-top: -26px;
+    height: auto;
+  }
+  .profile {
+    text-decoration: none;
+    a {
+      font-size: 14px;
+      color: rgb(19, 6, 209);
+      display: block;
+      transition: 0.3s;
+      margin-left: -20px
+    }
+  }
+  .closebtn {
+    position: absolute;
+    top: -9px;
+    left: 134px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .profile_pic {
+    border-radius: 50%;
+    margin-top: -40px;
+    width: 90px;
+    height: 90px;
+    border: 5px solid #226BE4;
+  }
+}
+
+/*.sidenav {
   .profile {
     text-decoration: none;
     #profile-a {
@@ -1318,7 +1362,7 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
     margin-top: -15px;
     height: auto;
   }
-}
+}*/
 
 /*===================== M O B I L E  S I D E N A V =====================*/
 

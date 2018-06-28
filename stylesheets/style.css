@@ -3447,20 +3447,22 @@ $other-blue-light: #;*/
     font-size: 24px;
   }
 }*/
-#milestonesModal {
+/*#milestonesModal {
   width: 100%;
   height: 100%;
-  z-index: 2; }
-  #milestonesModal h3 {
+  z-index: 2;
+  h3 {
     text-align: center;
-    color: #226BE4; }
-
+    color: $main-blue;
+  }
+}
 #momentsModal {
-  width: 60%; }
-  #momentsModal h3 {
+  width: 60%;
+  h3 {
     text-align: center;
-    color: #226BE4; }
-
+    color: $main-blue;
+  }
+}*/
 .create-modal {
   display: none;
   /* Hidden by default */
@@ -3485,13 +3487,21 @@ $other-blue-light: #;*/
 
 /* Modal Content */
 .create-modal-content {
+  position: absolute;
   background-color: #fefefe;
   margin: auto;
   margin-top: 4%;
   border: 1px solid #888;
   width: 60%;
   margin-left: 20%;
-  height: 60%; }
+  height: 60%;
+  z-index: 1;
+  /* Style the buttons inside the tab */
+  /* Create an active/current tablink class */
+  /*.tab button.active {
+      background-color: #ccc;
+  }*/
+  /* Style the tab content */ }
   .create-modal-content .column1 {
     width: 24.3%;
     height: 100%;
@@ -3505,39 +3515,44 @@ $other-blue-light: #;*/
       font-size: 28px;
       color: #18253B;
       font-weight: 400;
-      border-bottom: 1px solid #E9E9E9;
+      border-bottom: 1px solid #B2B2B2;
       padding-bottom: 5px;
       width: 80%;
       margin-left: 10%; }
+      .create-modal-content .column1 h3:hover {
+        color: #226BE4; }
+    .create-modal-content .column1 img {
+      width: 150px;
+      height: 100px;
+      margin-left: 11.5%;
+      border: 3px solid #226BE4; }
     .create-modal-content .column1 h4 {
-      text-align: center;
       font-size: 16px;
       text-align: justify;
       color: #18253B;
-      width: 70%;
+      width: 76%;
       margin-top: 30%;
-      margin-left: 10%;
+      margin-left: 13%;
       font-weight: 400; }
     .create-modal-content .column1 .create-button-wrapper {
       width: 100%;
       text-align: center;
-      margin-top: -16.5%;
+      margin-top: -60%;
       margin-left: -0.7%; }
       .create-modal-content .column1 .create-button-wrapper .create-button {
-        border-radius: 10%/62%;
-        background-color: #1e2e49;
-        border: 1px solid #F7FAFF;
+        border-radius: 24%/72%;
+        background-color: #1E2E49;
         color: white;
-        padding: 3px 12px;
-        width: 90px;
-        height: 30px;
+        padding: 5px 12px;
+        width: 100px;
+        height: 35px;
         margin-top: 200px;
         text-align: center;
         cursor: pointer;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         margin-left: 0%;
-        font-size: 12px;
+        font-size: 13px;
         margin-bottom: 10px;
         font-family: "Roboto", sans-serif; }
         .create-modal-content .column1 .create-button-wrapper .create-button p {
@@ -3546,27 +3561,287 @@ $other-blue-light: #;*/
           margin-top: 6px;
           font-size: 10px; }
         .create-modal-content .column1 .create-button-wrapper .create-button:hover {
-          border-radius: 10%/62%;
-          background-color: white;
+          border-radius: 24%/72%;
+          background-color: #226BE4;
           color: #99CCFF;
-          border: 1px solid #99CCFF;
-          padding: 3px 12px;
-          width: 90px;
-          height: 30px;
+          padding: 5px 12px;
+          width: 100px;
+          height: 35px;
           margin-top: 200px;
           text-align: center;
           cursor: pointer;
           -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
           margin-left: 0%;
-          font-size: 12px;
+          font-size: 13px;
           margin-bottom: 10px;
           font-family: "Roboto", sans-serif; }
           .create-modal-content .column1 .create-button-wrapper .create-button:hover p {
-            color: #226BE4;
+            color: white;
             font-weight: 100;
             margin-top: 6px;
             font-size: 10px; }
+  .create-modal-content .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1; }
+  .create-modal-content .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px; }
+    .create-modal-content .tab button:hover {
+      background-color: #ddd; }
+  .create-modal-content .tabcontent {
+    position: relative;
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    margin-top: -52%;
+    background-color: white;
+    width: 97%;
+    height: 84%; }
+  .create-modal-content #create-milestones {
+    background-color: white; }
+    .create-modal-content #create-milestones h3 {
+      font-weight: 400;
+      color: #226BE4;
+      font-size: 20px;
+      margin-left: 5%;
+      margin-top: 5%; }
+    .create-modal-content #create-milestones input[type=text] {
+      float: left;
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 0%;
+      height: 200px;
+      font-size: 14px;
+      border-radius: 1%/5%;
+      box-sizing: border-box;
+      padding: 22px 12px 175px;
+      border: 2px solid #226BE4; }
+    .create-modal-content #create-milestones .milestones-extra-buttons {
+      position: relative;
+      margin-left: 48px;
+      width: 90%;
+      border-bottom: 1px solid #E9E9E9;
+      padding-top: 151px;
+      z-index: 4; }
+      .create-modal-content #create-milestones .milestones-extra-buttons .attach-photo {
+        margin-left: 0%;
+        width: 18%;
+        float: left;
+        color: #B2B2B2;
+        font-size: 13px;
+        display: inline-block;
+        border-radius: 19%/72%;
+        background-color: #E9E9E9; }
+      .create-modal-content #create-milestones .milestones-extra-buttons .privacy-btn {
+        float: left;
+        margin-left: 20%;
+        width: 18%;
+        color: #B2B2B2;
+        font-size: 13px;
+        display: inline-block;
+        border-radius: 19%/72%;
+        background-color: #E9E9E9; }
+    .create-modal-content #create-milestones button {
+      float: right;
+      width: 10%;
+      margin-top: -41px;
+      margin-right: 56px;
+      background-color: #226BE4;
+      color: white;
+      padding: 5px 12px;
+      height: 31px;
+      text-align: center;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      font-size: 14px;
+      font-family: "Roboto", sans-serif; }
+  .create-modal-content #create-moments {
+    background-color: #f9d692; }
+    .create-modal-content #create-moments h3 {
+      font-weight: 400;
+      color: #226BE4;
+      font-size: 20px;
+      margin-left: 5%;
+      margin-top: 5%; }
+    .create-modal-content #create-moments input[type=text] {
+      float: left;
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 0%;
+      height: 200px;
+      font-size: 14px;
+      border-radius: 1%/5%;
+      box-sizing: border-box;
+      padding: 22px 12px 175px;
+      border: 2px solid #226BE4; }
+    .create-modal-content #create-moments .moments-extra-buttons {
+      position: relative;
+      margin-left: 48px;
+      width: 90%;
+      border-bottom: 1px solid #E9E9E9;
+      padding-top: 151px;
+      z-index: 4; }
+      .create-modal-content #create-moments .moments-extra-buttons .attach-photo {
+        margin-left: 0%;
+        width: 18%;
+        float: left;
+        color: #B2B2B2;
+        font-size: 13px;
+        display: inline-block;
+        border-radius: 19%/72%;
+        background-color: #E9E9E9; }
+      .create-modal-content #create-moments .moments-extra-buttons .privacy-btn {
+        float: left;
+        margin-left: 20%;
+        width: 18%;
+        color: #B2B2B2;
+        font-size: 13px;
+        display: inline-block;
+        border-radius: 19%/72%;
+        background-color: #E9E9E9; }
+    .create-modal-content #create-moments button {
+      float: right;
+      width: 10%;
+      margin-top: -41px;
+      margin-right: 56px;
+      background-color: #226BE4;
+      color: white;
+      padding: 5px 12px;
+      height: 31px;
+      text-align: center;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      font-size: 14px;
+      font-family: "Roboto", sans-serif; }
+  .create-modal-content #create-articles {
+    background-color: #E9E9E9; }
+    .create-modal-content #create-articles h3 {
+      font-weight: 400;
+      color: #226BE4;
+      font-size: 20px;
+      margin-left: 5%;
+      margin-top: 5%; }
+    .create-modal-content #create-articles input[type=text] {
+      float: left;
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 0%;
+      height: 200px;
+      font-size: 14px;
+      border-radius: 1%/5%;
+      box-sizing: border-box;
+      padding: 22px 12px 175px;
+      border: 2px solid #226BE4; }
+    .create-modal-content #create-articles .articles-extra-buttons {
+      position: relative;
+      margin-left: 48px;
+      width: 90%;
+      border-bottom: 1px solid #E9E9E9;
+      padding-top: 151px;
+      z-index: 4; }
+      .create-modal-content #create-articles .articles-extra-buttons .attach-photo {
+        margin-left: 0%;
+        width: 18%;
+        float: left;
+        color: #B2B2B2;
+        font-size: 13px;
+        display: inline-block;
+        border-radius: 19%/72%;
+        background-color: #E9E9E9; }
+      .create-modal-content #create-articles .articles-extra-buttons .privacy-btn {
+        float: left;
+        margin-left: 20%;
+        width: 18%;
+        color: #B2B2B2;
+        font-size: 13px;
+        display: inline-block;
+        border-radius: 19%/72%;
+        background-color: #E9E9E9; }
+    .create-modal-content #create-articles button {
+      float: right;
+      width: 10%;
+      margin-top: -41px;
+      margin-right: 56px;
+      background-color: #226BE4;
+      color: white;
+      padding: 5px 12px;
+      height: 31px;
+      text-align: center;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      font-size: 14px;
+      font-family: "Roboto", sans-serif; }
+  .create-modal-content #create-events {
+    background-color: #F7FAFF; }
+    .create-modal-content #create-events h3 {
+      font-weight: 400;
+      color: #226BE4;
+      font-size: 20px;
+      margin-left: 5%;
+      margin-top: 5%; }
+    .create-modal-content #create-events input[type=text] {
+      float: left;
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 0%;
+      height: 200px;
+      font-size: 14px;
+      border-radius: 1%/5%;
+      box-sizing: border-box;
+      padding: 22px 12px 175px;
+      border: 2px solid #226BE4; }
+    .create-modal-content #create-events .events-extra-buttons {
+      position: relative;
+      margin-left: 48px;
+      width: 90%;
+      border-bottom: 1px solid #E9E9E9;
+      padding-top: 151px;
+      z-index: 4; }
+      .create-modal-content #create-events .events-extra-buttons .attach-photo {
+        margin-left: 0%;
+        width: 18%;
+        float: left;
+        color: #B2B2B2;
+        font-size: 13px;
+        display: inline-block;
+        border-radius: 19%/72%;
+        background-color: #E9E9E9; }
+      .create-modal-content #create-events .events-extra-buttons .privacy-btn {
+        float: left;
+        margin-left: 20%;
+        width: 18%;
+        color: #B2B2B2;
+        font-size: 13px;
+        display: inline-block;
+        border-radius: 19%/72%;
+        background-color: #E9E9E9; }
+    .create-modal-content #create-events button {
+      float: right;
+      width: 10%;
+      margin-top: -41px;
+      margin-right: 56px;
+      background-color: #226BE4;
+      color: white;
+      padding: 5px 12px;
+      height: 31px;
+      text-align: center;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      font-size: 14px;
+      font-family: "Roboto", sans-serif; }
   .create-modal-content .column2 {
     width: 24.3%;
     height: 100%;
@@ -3579,39 +3854,44 @@ $other-blue-light: #;*/
       font-size: 28px;
       color: #18253B;
       font-weight: 400;
-      border-bottom: 1px solid #E9E9E9;
+      border-bottom: 1px solid #B2B2B2;
       padding-bottom: 5px;
       width: 80%;
       margin-left: 10%; }
+      .create-modal-content .column2 h3:hover {
+        color: #226BE4; }
+    .create-modal-content .column2 img {
+      width: 150px;
+      height: 100px;
+      margin-left: 11.5%;
+      border: 3px solid #226BE4; }
     .create-modal-content .column2 h4 {
-      text-align: center;
       font-size: 16px;
       text-align: justify;
       color: #18253B;
-      width: 70%;
+      width: 76%;
       margin-top: 30%;
-      margin-left: 10%;
+      margin-left: 13%;
       font-weight: 400; }
     .create-modal-content .column2 .create-button-wrapper {
       width: 100%;
       text-align: center;
-      margin-top: -16.5%;
+      margin-top: -60%;
       margin-left: -0.7%; }
       .create-modal-content .column2 .create-button-wrapper .create-button {
-        border-radius: 10%/62%;
-        background-color: #1e2e49;
-        border: 1px solid #F7FAFF;
+        border-radius: 24%/72%;
+        background-color: #1E2E49;
         color: #226BE4;
-        padding: 3px 12px;
-        width: 90px;
-        height: 30px;
+        padding: 5px 12px;
+        width: 100px;
+        height: 35px;
         margin-top: 200px;
         text-align: center;
         cursor: pointer;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         margin-left: 0%;
-        font-size: 12px;
+        font-size: 13px;
         margin-bottom: 10px;
         font-family: "Roboto", sans-serif; }
         .create-modal-content .column2 .create-button-wrapper .create-button p {
@@ -3620,24 +3900,23 @@ $other-blue-light: #;*/
           margin-top: 6px;
           font-size: 10px; }
         .create-modal-content .column2 .create-button-wrapper .create-button:hover {
-          border-radius: 10%/62%;
-          background-color: white;
+          border-radius: 24%/72%;
+          background-color: #226BE4;
           color: #99CCFF;
-          border: 1px solid #99CCFF;
-          padding: 3px 12px;
-          width: 90px;
-          height: 30px;
+          padding: 5px 12px;
+          width: 100px;
+          height: 35px;
           margin-top: 200px;
           text-align: center;
           cursor: pointer;
           -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
           margin-left: 0%;
-          font-size: 12px;
+          font-size: 13px;
           margin-bottom: 10px;
           font-family: "Roboto", sans-serif; }
           .create-modal-content .column2 .create-button-wrapper .create-button:hover p {
-            color: #226BE4;
+            color: white;
             font-weight: 100;
             margin-top: 6px;
             font-size: 10px; }
@@ -3645,7 +3924,7 @@ $other-blue-light: #;*/
     width: 24.3%;
     height: 100%;
     display: inline-block;
-    background-color: #F7FAFF;
+    background-color: #E9E9E9;
     border-right: 1px solid #E9E9E9; }
     .create-modal-content .column3 h3 {
       font-family: "Roboto", sans-serif;
@@ -3653,39 +3932,44 @@ $other-blue-light: #;*/
       font-size: 28px;
       color: #18253B;
       font-weight: 400;
-      border-bottom: 1px solid #E9E9E9;
+      border-bottom: 1px solid #B2B2B2;
       padding-bottom: 5px;
       width: 80%;
       margin-left: 10%; }
+      .create-modal-content .column3 h3:hover {
+        color: #226BE4; }
+    .create-modal-content .column3 img {
+      width: 150px;
+      height: 100px;
+      margin-left: 11.5%;
+      border: 3px solid #226BE4; }
     .create-modal-content .column3 h4 {
-      text-align: center;
       font-size: 16px;
       text-align: justify;
       color: #18253B;
-      width: 70%;
+      width: 76%;
       margin-top: 30%;
-      margin-left: 10%;
+      margin-left: 13%;
       font-weight: 400; }
     .create-modal-content .column3 .create-button-wrapper {
       width: 100%;
       text-align: center;
-      margin-top: -16.5%;
+      margin-top: -60%;
       margin-left: -0.7%; }
       .create-modal-content .column3 .create-button-wrapper .create-button {
-        border-radius: 10%/62%;
-        background-color: #1e2e49;
-        border: 1px solid #F7FAFF;
+        border-radius: 24%/72%;
+        background-color: #1E2E49;
         color: #226BE4;
-        padding: 3px 12px;
-        width: 90px;
-        height: 30px;
+        padding: 5px 12px;
+        width: 100px;
+        height: 35px;
         margin-top: 200px;
         text-align: center;
         cursor: pointer;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         margin-left: 0%;
-        font-size: 12px;
+        font-size: 13px;
         margin-bottom: 10px;
         font-family: "Roboto", sans-serif; }
         .create-modal-content .column3 .create-button-wrapper .create-button p {
@@ -3694,24 +3978,23 @@ $other-blue-light: #;*/
           margin-top: 6px;
           font-size: 10px; }
         .create-modal-content .column3 .create-button-wrapper .create-button:hover {
-          border-radius: 10%/62%;
-          background-color: white;
+          border-radius: 24%/72%;
+          background-color: #226BE4;
           color: #99CCFF;
-          border: 1px solid #99CCFF;
-          padding: 3px 12px;
-          width: 90px;
-          height: 30px;
+          padding: 5px 12px;
+          width: 100px;
+          height: 35px;
           margin-top: 200px;
           text-align: center;
           cursor: pointer;
           -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
           margin-left: 0%;
-          font-size: 12px;
+          font-size: 13px;
           margin-bottom: 10px;
           font-family: "Roboto", sans-serif; }
           .create-modal-content .column3 .create-button-wrapper .create-button:hover p {
-            color: #226BE4;
+            color: white;
             font-weight: 100;
             margin-top: 6px;
             font-size: 10px; }
@@ -3719,46 +4002,51 @@ $other-blue-light: #;*/
     width: 24.7%;
     height: 100%;
     display: inline-block;
-    background-color: #226BE4; }
+    background-color: #F7FAFF; }
     .create-modal-content .column4 h3 {
       font-family: "Roboto", sans-serif;
       text-align: center;
       font-size: 28px;
       color: #18253B;
       font-weight: 400;
-      border-bottom: 1px solid #E9E9E9;
+      border-bottom: 1px solid #B2B2B2;
       padding-bottom: 5px;
       width: 80%;
       margin-left: 10%; }
+      .create-modal-content .column4 h3:hover {
+        color: #226BE4; }
+    .create-modal-content .column4 img {
+      width: 150px;
+      height: 100px;
+      margin-left: 11.5%;
+      border: 3px solid #226BE4; }
     .create-modal-content .column4 h4 {
-      text-align: center;
       font-size: 16px;
       text-align: justify;
       color: #18253B;
-      width: 70%;
+      width: 76%;
       margin-top: 30%;
-      margin-left: 10%;
+      margin-left: 13%;
       font-weight: 400; }
     .create-modal-content .column4 .create-button-wrapper {
       width: 100%;
       text-align: center;
-      margin-top: -16.5%;
+      margin-top: -60%;
       margin-left: -0.7%; }
       .create-modal-content .column4 .create-button-wrapper .create-button {
-        border-radius: 10%/62%;
-        background-color: #1e2e49;
-        border: 1px solid #F7FAFF;
+        border-radius: 24%/72%;
+        background-color: #1E2E49;
         color: #226BE4;
-        padding: 3px 12px;
-        width: 90px;
-        height: 30px;
+        padding: 5px 12px;
+        width: 100px;
+        height: 35px;
         margin-top: 200px;
         text-align: center;
         cursor: pointer;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         margin-left: 0%;
-        font-size: 12px;
+        font-size: 13px;
         margin-bottom: 10px;
         font-family: "Roboto", sans-serif; }
         .create-modal-content .column4 .create-button-wrapper .create-button p {
@@ -3767,24 +4055,23 @@ $other-blue-light: #;*/
           margin-top: 6px;
           font-size: 10px; }
         .create-modal-content .column4 .create-button-wrapper .create-button:hover {
-          border-radius: 10%/62%;
-          background-color: white;
+          border-radius: 24%/72%;
+          background-color: #226BE4;
           color: #99CCFF;
-          border: 1px solid #99CCFF;
-          padding: 3px 12px;
-          width: 90px;
-          height: 30px;
+          padding: 5px 12px;
+          width: 100px;
+          height: 35px;
           margin-top: 200px;
           text-align: center;
           cursor: pointer;
           -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
           margin-left: 0%;
-          font-size: 10px;
+          font-size: 13px;
           margin-bottom: 10px;
           font-family: "Roboto", sans-serif; }
           .create-modal-content .column4 .create-button-wrapper .create-button:hover p {
-            color: #226BE4;
+            color: white;
             font-weight: 100;
             margin-top: 6px;
             font-size: 10px; }

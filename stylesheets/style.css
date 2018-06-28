@@ -2893,6 +2893,7 @@ $other-blue-light: #;*/
         border-bottom: 4px solid #226BE4;
         padding-bottom: 15px; }
     .profile_wrapper .second_nav_right #profile-postsbox {
+      min-height: 100%;
       background-color: #F7FAFF;
       display: flex;
       flex-direction: row;
@@ -3050,6 +3051,7 @@ $other-blue-light: #;*/
             margin-left: auto;
             margin-right: auto; }
   .profile_wrapper #profile-calendar {
+    min-height: 100%;
     display: none;
     background-color: white;
     flex-direction: row;
@@ -3725,64 +3727,126 @@ $other-blue-light: #;*/
       font-size: 14px;
       font-family: "Roboto", sans-serif; }
   .create-modal-content #create-articles {
+    width: 97%;
     background-color: #E9E9E9; }
     .create-modal-content #create-articles h3 {
+      display: none;
       font-weight: 400;
       color: #226BE4;
       font-size: 20px;
       margin-left: 5%;
       margin-top: 5%; }
-    .create-modal-content #create-articles input[type=text] {
+    .create-modal-content #create-articles .left {
+      width: 46%;
       float: left;
-      width: 90%;
-      margin-left: 5%;
-      margin-top: 0%;
-      height: 200px;
-      font-size: 14px;
-      border-radius: 1%/5%;
-      box-sizing: border-box;
-      padding: 22px 12px 175px;
-      border: 2px solid #226BE4; }
+      margin-top: 3%;
+      margin-bottom: 3%;
+      display: inline-block; }
+      .create-modal-content #create-articles .left #a-header {
+        margin-left: 33px;
+        color: #226BE4; }
+      .create-modal-content #create-articles .left #articles-header {
+        margin-left: 8%;
+        width: 86%;
+        height: 10px;
+        float: left;
+        margin-top: 3%;
+        margin-bottom: 2%;
+        border-radius: 3%/40%;
+        padding: 10px 12px 10px;
+        border: 2px solid #226BE4; }
+    .create-modal-content #create-articles .right {
+      width: 46%;
+      float: right;
+      margin-top: 3%;
+      margin-bottom: 3%;
+      display: inline-block; }
+      .create-modal-content #create-articles .right #a-title {
+        margin-left: -1px;
+        color: #226BE4; }
+      .create-modal-content #create-articles .right #articles-title {
+        margin-right: 8%;
+        width: 86%;
+        height: 10px;
+        float: right;
+        margin-top: 3%;
+        margin-bottom: 2%;
+        border-radius: 3%/40%;
+        padding: 10px 12px 10px;
+        border: 2px solid #226BE4; }
+    .create-modal-content #create-articles .center {
+      margin-top: 3%;
+      width: 100%;
+      float: left; }
+      .create-modal-content #create-articles .center #a-body {
+        margin-top: -40px;
+        margin-left: 33px;
+        float: left;
+        color: #226BE4; }
+      .create-modal-content #create-articles .center #articles-body {
+        float: left;
+        width: 92%;
+        margin-left: 4%;
+        margin-top: -10px;
+        height: 80px;
+        font-size: 14px;
+        border-radius: 1%/5%;
+        box-sizing: border-box;
+        padding: 22px 12px 80px;
+        border: 2px solid #226BE4; }
+      .create-modal-content #create-articles .center #a-tag {
+        margin-top: 15px;
+        margin-left: 33px;
+        float: left;
+        color: #226BE4; }
+      .create-modal-content #create-articles .center #articles-tag {
+        margin-left: 4%;
+        width: 88%;
+        height: 10px;
+        margin-top: 10px;
+        border-radius: 1%/40%;
+        padding: 10px 12px 10px;
+        border: 2px solid #226BE4; }
     .create-modal-content #create-articles .articles-extra-buttons {
-      position: relative;
       margin-left: 48px;
       width: 90%;
       border-bottom: 1px solid #E9E9E9;
-      padding-top: 151px;
+      padding-top: 50px;
       z-index: 4; }
       .create-modal-content #create-articles .articles-extra-buttons .attach-photo {
         margin-left: 0%;
+        margin-top: 15px;
         width: 18%;
         float: left;
-        color: #B2B2B2;
-        font-size: 13px;
-        display: inline-block;
-        border-radius: 19%/72%;
-        background-color: #E9E9E9; }
+        display: inline-block; }
+        .create-modal-content #create-articles .articles-extra-buttons .attach-photo img {
+          width: 35px;
+          height: 35px; }
       .create-modal-content #create-articles .articles-extra-buttons .privacy-btn {
-        float: left;
-        margin-left: 20%;
+        margin-top: 15px;
+        margin-left: -10%;
         width: 18%;
-        color: #B2B2B2;
-        font-size: 13px;
-        display: inline-block;
-        border-radius: 19%/72%;
-        background-color: #E9E9E9; }
-    .create-modal-content #create-articles button {
-      float: right;
-      width: 10%;
-      margin-top: -41px;
-      margin-right: 56px;
+        float: left;
+        display: inline-block; }
+        .create-modal-content #create-articles .articles-extra-buttons .privacy-btn img {
+          width: 35px;
+          height: 35px; }
+    .create-modal-content #create-articles .input-button {
+      text-align: center;
+      width: 102px;
+      height: 33px;
+      margin-left: 13%;
+      margin-top: 50px;
       background-color: #226BE4;
       color: white;
       padding: 5px 12px;
-      height: 31px;
       text-align: center;
       cursor: pointer;
       -webkit-transition-duration: 0.4s;
       transition-duration: 0.4s;
       font-size: 14px;
-      font-family: "Roboto", sans-serif; }
+      font-family: "Roboto", sans-serif;
+      border-radius: 25px; }
   .create-modal-content #create-events {
     background-color: #F7FAFF; }
     .create-modal-content #create-events h3 {

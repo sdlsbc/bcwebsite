@@ -386,6 +386,7 @@ $other-blue-light: #;*/
       }
     }
     #profile-postsbox {
+      min-height: 100%;
       background-color: $light-blue;
       display: flex;
       flex-direction: row;
@@ -570,6 +571,7 @@ $other-blue-light: #;*/
     }
   }
   #profile-calendar {
+    min-height: 100%;
     display: none;
     background-color: white;
     flex-direction: row;

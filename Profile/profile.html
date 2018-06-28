@@ -32,7 +32,7 @@
           <img src="../images/rss@3x.png" width="19" height="19">&nbsp&nbsp Newsfeed
         </a>
         <a href="#" id="myBtn">
-          <img src="../images/info@3x.png" width="19" height="19">&nbsp&nbsp Create 
+          <img src="../images/add-icon.png" width="20" height="20">&nbsp&nbsp Create 
         </a>
         <a href="#">
           <img src="../images/calendar (1)@3x.png" width="19" height="19">&nbsp&nbsp Calendar
@@ -194,9 +194,9 @@
   <!-- </div> -->
 
     <div id="create-milestones" class="tabcontent">
-      <h3>Add a Milestone</h3>
+      <h3>Keep and update the record of your theatrical footprint here!</h3>
       <form>
-        <input type="text" id="milestones-input" name="milestones" placeholder="New milestone goes here...">
+        <input type="text" id="milestones-input" name="milestones" placeholder="New moment goes here...">
         <div class="milestones-extra-buttons">
           <button class="attach-photo">Attach Photo</button>
           <button class="privacy-btn">Privacy Public</button>
@@ -206,7 +206,7 @@
     </div>
 
     <div id="create-moments" class="tabcontent">
-      <h3>Add a Moment</h3>
+      <h3>Share your most exciting theater snapshots here!</h3>
       <form>
         <input type="text" id="moments-input" name="moments" placeholder="New moment goes here...">
         <div class="moments-extra-buttons">
@@ -218,19 +218,41 @@
     </div>
 
     <div id="create-articles" class="tabcontent">
-      <h3>Add an Article</h3>
+      <h3>What do you want to write about? Post it here!</h3>
       <form>
-        <input type="text" id="articles-input" name="articles" placeholder="New article goes here...">
-        <div class="articles-extra-buttons">
-          <button class="attach-photo">Attach Photo</button>
-          <button class="privacy-btn">Privacy Public</button>
-        </div>
-        <button class="input-button">Post</button>
+      <span class="left">
+        <label id="a-header">Header</label>
+        <input type="text" id="articles-header" name="articles" placeholder="Header">
+      </span>
+      <span class="right">
+        <label id="a-title">Title</label>
+        <input type="text" id="articles-title" name="articles" placeholder="Title">
+      </span>
+      <span class="center">
+        <label id="a-body">Body</label>
+        <input type="text" id="articles-body" name="articles" placeholder="New article goes here...">
+
+        <label id="a-tag">Tags</label>
+        <input type="text" id="articles-tag" name="articles" placeholder="tags">
+      </span>
+
       </form>
+      <div class="articles-extra-buttons">
+        <!-- <button class="attach-photo">Attach Photo</button>
+        <button class="privacy-btn">Privacy Public</button>  -->
+        <a href="" class="attach-photo">
+          <img src="../images/image.png">
+        </a>
+        <a href="" class="privacy-btn">
+          <img src="../images/lock.png">
+        </a>
+        
+      </div>
+        <button class="input-button">Post</button>
     </div>
 
     <div id="create-events" class="tabcontent">
-      <h3>Add and Event</h3>
+      <h3>Hosting a theatrical event? Promote it here!</h3>
       <form>
         <input type="text" id="events-input" name="events" placeholder="New event goes here...">
         <div class="events-extra-buttons">

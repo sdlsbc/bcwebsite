@@ -181,114 +181,135 @@
 
 
 
-    <!-- ============ M I L E S T O N E S  M O D A L =============  -->
-    <!-- <div id="milestonesModal" class="modal-milestones">
-      <div id="milestonesModal" class="milestones-modal-content">
-      <h2>Add New Milestone</h2>
-      <span class="milestones-close"></span>
-    </div> -->
 
-<div id="createModal" class="create-modal">
-  <!-- Modal content -->
 
+
+
+<!-- ========== M I L E S T O N E S  M O D A L ===========  -->
+ <div id="createModal" class="create-modal">
   <div class="create-modal-content" id="create-modal-content">
-
-  <div id="milestonesModal" style="display: none;">
-    <h3>Add New Milestone</h3>
-  </div>
-  <div id="momentsModal" style="display: none;">
-    <h3>Add New Moments</h3>
-  </div>
-
-
-    <span class="create-close"></span>
+    <!-- <div class="tab"> -->
+    <span class="create-close">&times;</span>
     <div class="column1">
-      <h3>Milestones</h3>
-      <h4>Small blurb about milestones: Lorem ipsum, etc etc etc</h4>
+      <h3 onclick="openCity(event, 'create-milestones')">Milestones</h3>
+      <img src="../images/placeholder-bc.png">
+      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
       <div class="create-button-wrapper">
-        <button class="create-button" id="p2" onclick="myMilestonesFunction()"><a href="#" style="text-decoration: none;"><p>ADD NEW</p></a></button>
+        <button class="create-button" id="p2" onclick="openCity(event, 'create-milestones')"><a href="#" style="text-decoration: none;"><p>ADD NEW</p></a></button>
       </div>
     </div>
     <div class="column2">
-      <h3>Moments</h3>
-      <h4>Small blurb about milestones: Lorem ipsum, etc etc etc</h4>
+      <h3 onclick="openCity(event, 'create-moments')">Moments</h3>
+      <img src="../images/placeholder-bc.png">
+      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
       <div class="create-button-wrapper">
-        <button class="create-button" id="p2" onclick="myMomentsFunction()"><a href="#" style="text-decoration: none;"><p>ADD NEW</p></a></button>
+        <button class="create-button" id="p2" onclick="openCity(event, 'create-moments')"><a href="#" style="text-decoration: none;"><p>ADD NEW</p></a></button>
       </div>
     </div>
     <div class="column3">
-      <h3>Thing 3</h3>
-      <h4>Small blurb about milestones: Lorem ipsum, etc etc etc</h4>
+      <h3 onclick="openCity(event, 'create-articles')">Articles</h3>
+      <img src="../images/placeholder-bc.png">
+      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
       <div class="create-button-wrapper">
-        <button class="create-button" id="p2" onclick="toggleVisibility('modal-thing3');"><a href="#" style="text-decoration: none;"><p>ADD NEW</p></a></button>
+        <button class="create-button" id="p2" onclick="openCity(event, 'create-articles')"><a href="#" style="text-decoration: none;"><p>ADD NEW</p></a></button>
       </div>
     </div>
     <div class="column4">
-      <h3>Thing 4</h3>
-      <h4>Small blurb about milestones: Lorem ipsum, etc etc etc</h4>
+      <h3 onclick="openCity(event, 'create-events')">Events</h3>
+      <img src="../images/placeholder-bc.png">
+      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
       <div class="create-button-wrapper">
-        <button class="create-button" id="p2" onclick="toggleVisibility('modal-thing4');"><a href="#" style="text-decoration: none;"><p>ADD NEW</p></a></button>
+        <button class="create-button" id="p2" onclick="openCity(event, 'create-events')"><a href="#" style="text-decoration: none;"><p>ADD NEW</p></a></button>
       </div>
+    </div>
+  <!-- </div> -->
+
+    <div id="create-milestones" class="tabcontent">
+      <h3>Add a Milestone</h3>
+      <form>
+        <input type="text" id="milestones-input" name="milestones" placeholder="New milestone goes here...">
+        <div class="milestones-extra-buttons">
+          <button class="attach-photo">Attach Photo</button>
+          <button class="privacy-btn">Privacy Public</button>
+        </div>
+        <button class="input-button">Post</button>
+      </form>
+    </div>
+
+    <div id="create-moments" class="tabcontent">
+      <h3>Add a Moment</h3>
+      <form>
+        <input type="text" id="moments-input" name="moments" placeholder="New moment goes here...">
+        <div class="moments-extra-buttons">
+          <button class="attach-photo">Attach Photo</button>
+          <button class="privacy-btn">Privacy Public</button>
+        </div>
+        <button class="input-button">Post</button>
+      </form>
+    </div>
+
+    <div id="create-articles" class="tabcontent">
+      <h3>Add an Article</h3>
+      <form>
+        <input type="text" id="articles-input" name="articles" placeholder="New article goes here...">
+        <div class="articles-extra-buttons">
+          <button class="attach-photo">Attach Photo</button>
+          <button class="privacy-btn">Privacy Public</button>
+        </div>
+        <button class="input-button">Post</button>
+      </form>
+    </div>
+
+    <div id="create-events" class="tabcontent">
+      <h3>Add and Event</h3>
+      <form>
+        <input type="text" id="events-input" name="events" placeholder="New event goes here...">
+        <div class="events-extra-buttons">
+          <button class="attach-photo">Attach Photo</button>
+          <button class="privacy-btn">Privacy Public</button>
+        </div>
+        <button class="input-button">Post</button>
+      </form>
     </div>
   </div>
 </div>
 
 
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace("   active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+
+
+
 <script>
-  function myMilestonesFunction() {
-    var x = document.getElementById("milestonesModal");
-    var y = document.getElementById("create-modal-content")
-    if (x.style.display === "none") {
-        x.style.display = "block";
-        // y.style.display === "none";
-    } else {
-        x.style.display = "none";
-        // y.style.display = "block";
-    }
-  }
-  function myMomentsFunction() {
-    var x = document.getElementById("momentsModal");
-    if (x.style.display === "none") {
-        x.style.display = "inherit";
-    } else {
-        x.style.display = "none";
-    }
-  }
-
-
-// open milestones modal
-// var modalmilestones = document.getElementById('milestonesModal');
-// var btnmilestones = document.getElementById("myBtnMilestones");
-// var spanmilestones = document.getElementsByClassName("milestones-close")[0];
-// btnmilestones.onclick = function() {
-//     modalmilestones.style.display = "block";
-// }
-// spanmilestones.onclick = function() {
-//     modalmilestones.style.display = "none";
-// }
-// window.onclick = function(event) {
-//     if (event.target == modalmilestones) {
-//         modalmilestones.style.display = "none";
-//     }
-// }
-//open general create modal
-var modal = document.getElementById('createModal');
-var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("create-close")[0];
-btn.onclick = function() {
+  //open general create modal
+  var modal = document.getElementById('createModal');
+  var btn = document.getElementById("myBtn");
+  var span = document.getElementsByClassName("create-close")[0];
+  btn.onclick = function() {
     modal.style.display = "block";
-}
-span.onclick = function() {
+  }
+  span.onclick = function() {
     modal.style.display = "none";
-}
-window.onclick = function(event) {
+  }
+  window.onclick = function(event) {
     if (event.target == modal) {
-        modal.style.display = "none";
+      modal.style.display = "none";
     }
-}
-
-</script>
-
+  }
+</script>  
 
 
 
@@ -298,19 +319,6 @@ window.onclick = function(event) {
   <script type="text/javascript" src="../javascript/profile.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

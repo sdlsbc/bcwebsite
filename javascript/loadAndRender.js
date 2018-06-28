@@ -11,24 +11,57 @@ function checkLocalStorage(page) {
 	//window.location.href = "../../index.html";
 	PAGE = page;
 
-	if (PAGE == 'profile'){
+	if (PAGE == 'newsfeed') {
+		console.log(PAGE + " page");
+		loadProfile();
+		// loadAndShowPosts();
+		checkIfCompleteProfile();
+
+	} else if (PAGE == 'profile') {
 		console.log(PAGE);
 		loadProfileData();
 		loadProfile();
 
-	} else if (PAGE == 'discover'){
+	} else if (PAGE == 'discover') {
 		loadProfile();
-	} else if (PAGE == 'explore'){
+	} else if (PAGE == 'explore') {
 		loadProfile();
-	} else if (PAGE == 'bob'){
+	} else if (PAGE == 'bob') {
 		loadProfile();
 	}
 	//}else{
 	//local storage value"+localStorage.getItem("user_id");
-	loadAndShowPosts();
 	//}
-	loadProfile();
+}
 
+function checkIfCompleteProfile() {
+	
+	var usertype_id = localStorage.getItem("usertype_id");
+	var usertype = localStorage.getItem("usertype");
+	var user_id = localStorage.getItem("user_id");
+	var authorization_key = "Bearer " + localStorage.getItem("token");
+	var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/"+usertype+"_read";
+
+	var data = {
+		"usertype_id": usertype_id
+	};
+
+	fetch(url, {
+		method: 'POST',
+		body: JSON.stringify(data),
+		headers: {
+			'Content-Type': 'application/json',
+			'Authorization': authorization_key
+		}
+	})
+		.then(res => res.json())
+		.catch(error => console.error('Error:', error))
+		.then(response => {
+
+			if (response.status == "success") {
+				console.log('check profile complete response:', response);
+			}
+		})
 }
 
 function loadAndShowPosts() {
@@ -106,12 +139,12 @@ function favorite(post_id) {
 	}
 	console.log(url)
 	return fetch(url, params)
-		 .then(res => res.json());
-		
+		.then(res => res.json());
+
 }
 
 function likesUpdate(post_id) {
-console.log('update likes post id ',post_id);
+	console.log('update likes post id ', post_id);
 	let url = 'http://app.bwayconnected.com/api/post/detail?post_id=' + post_id;
 
 	fetch(url, {
@@ -139,12 +172,12 @@ console.log('update likes post id ',post_id);
 				fav_likes.innerHTML = likes;
 
 			}
-	})
+		})
 	// console.log('in likes update');
 }
 
 
-function showModal(body){
+function showModal(body) {
 	// console.log('showModal',body);
 	let user_id = localStorage.getItem("user_id");
 
@@ -234,7 +267,7 @@ function showModal(body){
 	if (body.favourites.some(fav => fav.user_id == user_id)) {
 		// console.log('this post is in favorites');
 		fav_button.classList.add('modal-favorite-clicked');
-	}else{
+	} else {
 		fav_button.classList.remove('modal-favorite-clicked');
 	}
 
@@ -245,7 +278,7 @@ function showModal(body){
 	fav_button.onclick = function (ev) {
 		favorite(body.id)
 			.then(body => {
-				console.log('body',body);
+				console.log('body', body);
 				if (body.Response == "2000") {
 					likesUpdate(body.Result.Posts[0].id);
 				}
@@ -336,7 +369,7 @@ function createPost(body) {
 	fav_button.onclick = function (ev) {
 		favorite(body.id)
 			.then(body => {
-				console.log('body of Create Post',body);
+				console.log('body of Create Post', body);
 				if (body.Response == "2000") {
 					likesUpdate(body.Result.Posts[0].id);
 				}
@@ -370,7 +403,7 @@ function createPost(body) {
 	button_div.appendChild(share_button)
 
 	share_button.onclick = function (ev) {
-    createCustomAlert("Sharing not currently available on web version, please download our IOS app");
+		createCustomAlert("Sharing not currently available on web version, please download our IOS app");
 	};
 
 	let flag_button = document.createElement('img');
@@ -379,15 +412,15 @@ function createPost(body) {
 	button_div.appendChild(flag_button);
 
 	flag_button.onclick = function (ev) {
-    createCustomAlert("Flagged not currently available on web version, please download our IOS app");
+		createCustomAlert("Flagged not currently available on web version, please download our IOS app");
 	};
 
 	let comment_button = document.createElement('img');
 	comment_button.src = '../images/newsfeed_buttons/comment.png';
 	comment_button.classList.add('comment_button');
 	button_div.appendChild(comment_button);
-  	comment_button.onclick = function(ev) {
-    	createCustomAlert("Comments not currently available on web version, please download our IOS app");
+	comment_button.onclick = function (ev) {
+		createCustomAlert("Comments not currently available on web version, please download our IOS app");
 		//setTimeout(function(){ createCustomAlert("Comments not currently available on web version, please download our IOS app").hide(); }, 1000,);
 
 		//setTimeout(function () { $("#modalContainer").fadeOut(); }, 5000);

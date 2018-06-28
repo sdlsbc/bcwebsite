@@ -1,23 +1,36 @@
 function register() {
+    console.log('in register: step1');
     var email = document.getElementById('signup-email').value;
     var password = document.getElementById('signup-password').value;
     var fname = document.getElementById('signup-firstname').value;
     var lname = document.getElementById('signup-lastname').value;
     var handle = document.getElementById('signup-handle').value;
-    let error_message = validateSignUpInput(email, password, fname, lname, handle);
+    var city = document.getElementById('signup-city').value;
+    var country = document.getElementById('signup-country').value;
+    var userType = document.getElementById("signup-usertype").value;
+    var phone = document.getElementById("signup-phone").value;
+    // if (userType == "personal") {
+    //     var fullNameField = fname + "" + lname;
+    // } else {
+    //     var fullNameField = document.getElementById("signup-fullname").value;
+    // }
+    let error_message = validateSignUpInput(email, password, fname, lname, handle, userType, city, country);
     if (error_message !== "") {
         console.log('error msg from function', error_message);
         createCustomAlert(error_message);
     } else {
-
-
-        var url = 'http://app.bwayconnected.com/api/register';
+        console.log('in register: step2');
+        var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_create';
         var data = {
+            "handle": handle,
             "email": email,
             "password": password,
-            "first_name": fname,
-            "last_name": lname,
-            "handle": handle
+            "firstname": fname,
+            "lastname": lname,
+            "phone": phone,
+            "city": city,
+            "country": country,
+            "usertype": userType
         };
 
         fetch(url, {
@@ -31,31 +44,32 @@ function register() {
             .catch(error => console.error('Error:', error))
             .then(response => {
 
-                // check if sign up successful
-                if (response.Response == "1000") {
-                    createCustomAlert("WARNING: User Already Exists");
-                } else {
-                    console.log('Success:', response)
-                    var id = response.Result.user_id;
-                    var first_name = response.Result.first_name;
-                    var last_name = response.Result.last_name;
-                    var profile_image = response.Result.profile_image;
-                    var token = response.Result.token;
-                    var handle = response.Result.handle;
+                if (response.status == "success") {
+                    createCustomAlert("you are logged in");
+                    console.log('Success:', response);
+                    var token = response.response.token;
+                    var res_user_id = response.response.user_id;
+                    var res_handle = response.response.user.handle;
+                    var res_usertype_id = response.response.personal._id;
+                    var res_usertype = response.response.user.usertype;
 
-                    localStorage.setItem("user_id", id);
-                    localStorage.setItem("first_name", first_name);
-                    localStorage.setItem("last_name", last_name);
-                    localStorage.setItem("profile_image", profile_image);
+
+                    localStorage.setItem("user_id", res_user_id);
+                    localStorage.setItem("usertype_id", res_usertype_id);
+                    localStorage.setItem("usertype", res_usertype);
                     localStorage.setItem("token", token);
-                    localStorage.setItem("handle", handle);
-                    console.log(localStorage.getItem("user_id"));
-                    if (localStorage.getItem("user_id") == "") {
+                    localStorage.setItem("handle", res_handle);
+
+                    console.log('token in local storage',localStorage.getItem("token"));
+                    if (localStorage.getItem("token") == "") {
                         createCustomAlert("WARNING: Not saved locally");
                     } else {
-                        console.log("redirected")
+                        console.log("redirected to newsfeed")
                         window.location.href = "Newsfeed/newsfeed.html";
-                    }
+                    } 
+
+                } else {
+                    createCustomAlert("WARNING: User Not Signed Up");
                 }
             })
     }
@@ -96,10 +110,15 @@ function signin() {
                 var token = response.response.token;
                 var user_id = response.response.user_id;
                 var handle = response.response.user.handle;
+                var res_usertype = response.response.user.usertype
+                var res_usertype_id = response.response.user.res_usertype
+
                 localStorage.setItem("token", token);
-                localStorage.setItem("user_id", token);
+                localStorage.setItem("user_id", user_id);
                 localStorage.setItem("handle", handle);
-                console.log('token: ', user_id);
+                localStorage.setItem("usertype", res_usertype);
+                localStorage.setItem("usertype_id", res_usertype_id);                
+                console.log('usertype_id is: ', res_usertype_id);
                 if (localStorage.getItem("token") == "") {
                     createCustomAlert("WARNING: Not saved locally");
                 } else {
@@ -183,7 +202,7 @@ function validateSigninInput(e, p) {
     }
 }
 
-function validateSignUpInput(e, p, fn, ln, h) {
+function validateSignUpInput(e, p, fn, ln, h, ut, city, country) {
     if (e == "" || e == null) {
         return 'Please Enter Email';
     } else if (p == "" || p == null) {
@@ -196,6 +215,12 @@ function validateSignUpInput(e, p, fn, ln, h) {
         return 'Please Enter Last Name';
     } else if (h == "" || h == null) {
         return 'Please Enter Handle';
+    } else if (ut == "" || ut == null) {
+        return 'Please Enter User Type';
+    } else if (city == "" || city == null) {
+        return 'Please Enter City';
+    } else if (country == "" || country == null) {
+        return 'Please Enter Country';
     } else {
         return '';
     }

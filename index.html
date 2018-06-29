@@ -1,16 +1,16 @@
 <html>
 
 <head>
-  <link rel="icon" href="./images/bc32_mcU_icon.ico" type="image/x-icon">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Broadway Connected</title>
-  <link href="./stylesheets/style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
+    <link rel="icon" href="./images/bc32_mcU_icon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Broadway Connected</title>
+    <link href="./stylesheets/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
         crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 </head>
 
@@ -20,6 +20,25 @@
         createCustomAlert('For the best experience, please browse our website with Google Chrome.');
     }
 </script>
+
+<!-- check user type -->
+<!-- <script>
+    function checkUsertype() {
+        var x = document.getElementById("signup-usertype").value;
+        if (x == "personal") {
+            document.getElementById("signin-fullname").style.display = "none";
+        } else if (x == "company") {
+            document.getElementById("signup-fullname").value = "";
+            document.getElementById("signin-fullname").style.display = "block";
+            document.getElementById("fullname_label").innerHTML = "Company Name:";
+            
+        } else if (x == "production") {
+            document.getElementById("signup-fullname").value = "";
+            document.getElementById("signin-fullname").style.display = "block";
+            document.getElementById("fullname_label").innerHTML = "Production Name";
+        }
+    }
+</script> -->
 
 <body class="body">
 
@@ -71,6 +90,15 @@
             <hr>
             <div class="signin" id="signin" data-type="signup">
                 <form class="signin-form">
+                    <p class="signin-usertype">
+                        <label class="signin-label">USERTYPE</label>
+                        <select id="signup-usertype">
+                            <option value="" disabled selected>Select User Type</option>
+                            <option value="personal">Personal</option>
+                            <option value="company">Company</option>
+                            <option value="production">Production</option>
+                        </select>
+                    </p>
                     <p class="first_name">
                         <label class="signin-label" for="signup-firstname">FIRST NAME</label>
                         <input class="signin-firstname" id="signup-firstname" type="text" placeholder=" Your First Name">
@@ -81,6 +109,10 @@
                         <input class="signin-lastname" id="signup-lastname" type="text" placeholder="Your Last Name">
                         <span class="signin-error">Error message here!</span>
                     </p>
+                    <!-- <p class="signin-fullname" id="signin-fullname" style="display: none;">
+                        <label id="fullname_label" class="signin-label"></label>
+                        <input class="signin-handle" id="signup-fullname" type="text" placeholder="">
+                    </p> -->
                     <p class="handle">
                         <label class="signin-label" for="signup-handle">USERNAME</label>
                         <input class="signin-handle" id="signup-handle" type="text" placeholder="Username">
@@ -96,6 +128,18 @@
                         <input class="input-account" id="signup-password" type="password" placeholder="Password">
                         <a href="#0" class="hide">Hide</a>
                         <span class="error">Error message here!</span>
+                    </p>
+                    <p class="signin-city">
+                        <label class="signin-label">CITY</label>
+                        <input class="signin-city" id="signup-city" type="text" placeholder="City">
+                    </p>
+                    <p class="signin-country">
+                        <label class="signin-label">COUNTRY</label>
+                        <input class="signin-country" id="signup-country" type="text" placeholder="Country">
+                    </p>
+                    <p class="signin-phone">
+                        <label class="signin-label">PHONE</label>
+                        <input class="signin-phone" id="signup-phone" type="text" placeholder="Phone">
                     </p>
                     <p class="signin-submit">
                         <input class="input-submit" type="button" value="SIGN UP" onclick="register()">

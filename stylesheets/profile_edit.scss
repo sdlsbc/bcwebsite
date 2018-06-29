@@ -637,17 +637,16 @@
     width: 97%;
     background-color: $light-gray;
     h3 {
-      display: none;
+      text-align: center;
       font-weight: 400;
-      color: $main-blue;
-      font-size: 20px;
-      margin-left: 5%;
-      margin-top: 5%;
+      color: $dark-blue;
+      font-size: 16px;
+      margin-top: 1%;
     }
     .left {
       width: 46%;
       float: left;
-      margin-top: 3%;
+      margin-top: 0%;
       margin-bottom: 3%;
       display: inline-block;
       #a-header {
@@ -669,7 +668,7 @@
     .right {
       width: 46%;
       float: right;
-      margin-top: 3%;
+      margin-top: 0%;
       margin-bottom: 3%;
       display: inline-block;
       #a-title {
@@ -776,68 +775,139 @@
   #create-events{
     background-color: $light-blue;
     h3 {
+      text-align: center;
       font-weight: 400;
-      color: $main-blue;
-      font-size: 20px;
-      margin-left: 5%;
-      margin-top: 5%;
+      color: $dark-blue;
+      font-size: 16px;
+      margin-top: 1%;
     }
-    input[type=text] {
+    .left {
+      width: 46%;
       float: left;
-      width: 90%;
-      margin-left: 5%;
       margin-top: 0%;
-      height: 200px;
-      font-size: 14px;
-      border-radius: 1%/5%;
-      box-sizing: border-box;
-      padding: 22px 12px 175px;
-      border: 2px solid $main-blue;
+      margin-bottom: 3%;
+      display: inline-block;
+      #e-header {
+        margin-left: 33px;
+        color: $main-blue;
+      }
+      #events-header {
+        margin-left: 8%;
+        width: 86%;
+        height: 10px;
+        float: left;
+        margin-top: 3%;
+        margin-bottom: 2%;
+        border-radius: 3%/40%;
+        padding: 10px 12px 10px;
+        border: 2px solid $main-blue;
+      }
+    }
+    .right {
+      width: 46%;
+      float: right;
+      margin-top: 0%;
+      margin-bottom: 3%;
+      display: inline-block;
+      #e-title {
+        margin-left: -1px;
+        color: $main-blue;
+      }
+      #events-title {
+        margin-right: 8%;
+        width: 86%;
+        height: 10px;
+        float: right;
+        margin-top: 3%;
+        margin-bottom: 2%;
+        border-radius: 3%/40%;
+        padding: 10px 12px 10px;
+        border: 2px solid $main-blue;
+      }
+    }
+    .center { 
+      margin-top: 3%;
+      width: 100%;
+      float: left;
+      #e-body {
+        margin-top: -40px;
+        margin-left: 33px;
+        float: left;
+        color: $main-blue;
+      }
+      #events-body {
+        float: left;
+        width: 92%;
+        margin-left: 4%;
+        margin-top: -10px;
+        height: 80px;
+        font-size: 14px;
+        border-radius: 1%/5%;
+        box-sizing: border-box;
+        padding: 22px 12px 80px;
+        border: 2px solid $main-blue;
+      }
+      #e-tag {
+        margin-top: 15px;
+        margin-left: 33px;
+        float: left;
+        color: $main-blue;
+      }
+      #events-tag {
+        margin-left: 4%;
+        width: 88%;
+        height: 10px;
+        margin-top: 10px;
+        border-radius: 1%/40%;
+        padding: 10px 12px 10px;
+        border: 2px solid $main-blue;
+      }
     }
     .events-extra-buttons {
-      position: relative;
       margin-left: 48px;
       width: 90%;
       border-bottom: 1px solid $light-gray;
-      padding-top: 151px;
+      padding-top: 50px;
       z-index: 4;
       .attach-photo {
         margin-left: 0%;
+        margin-top: 15px;
         width: 18%;
         float: left;
-        color: $gray;
-        font-size: 13px;
         display: inline-block;
-        border-radius: 19%/72%;
-        background-color: $light-gray;
-
+        img {
+          width: 35px;
+          height: 35px
+        }
       }
       .privacy-btn {
-        float: left;
-        margin-left: 20%;
+        margin-top: 15px;
+        margin-left: -10%;
         width: 18%;
-        color: $gray;
-        font-size: 13px;
+        float: left;
         display: inline-block;
-        border-radius: 19%/72%;
-        background-color: $light-gray;
+        img {
+          width: 35px;
+          height: 35px;
+        }
       }
     }
-    button {
-      float: right;
-      width: 10%;
-      margin-top: -41px;
-      margin-right: 56px;
+    .input-button {
+      text-align: center;
+      width: 102px;
+      height: 33px;
+      margin-left: 13%;
+      margin-top: 50px;
       background-color: #226BE4;
       color: white;
       padding: 5px 12px;
-      height: 31px;
       text-align: center;
       cursor: pointer;
       -webkit-transition-duration: 0.4s;
       transition-duration: 0.4s;
       font-size: 14px;
       font-family: $font;
+      border-radius: 25px;
     }
   }
 

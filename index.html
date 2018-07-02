@@ -140,7 +140,7 @@
                 <form class="signin-form">
                     <p class="c_name">
                         <label class="signin-label" for="signup-handle">Name of Company</label>
-                        <input class="signin-handle" id="signup-handle" type="text" placeholder="Enter Company Name">
+                        <input class="signin-handle" id="signup-companyname" type="text" placeholder="Enter Company Name">
                     </p>
                     <p class="c_signin-usertype">
                         <label class="signin-label">Type</label>
@@ -169,7 +169,103 @@
                         <input class="input-submit" type="button" value="Back" onclick="showSignUpModal()">
                     </p>
                     <p class="signin-submit">
-                        <input class="input-submit" type="button" value="Sign Up" onclick="showNextModal()">
+                        <input class="input-submit" type="button" value="Sign Up" onclick="register()">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal Production info -->
+    <div id="myProductionModal" class="index-modal">
+        <div class="index-modal-content">
+            <a href="#ProductionInfo" class="a-login">Production Info</a>
+            <hr>
+            <div class="signin" id="signin" data-type="signup">
+                <form class="signin-form">
+                    <p class="c_name">
+                        <label class="signin-label" for="signup-handle">Name of Production</label>
+                        <input class="signin-handle" id="signup-handle" type="text" placeholder="Enter Production Name">
+                    </p>
+                    <p class="c_signin-usertype">
+                        <label class="signin-label">Type</label>
+                        <select id="production-type">
+                            <option value="" disabled selected>Select Production Type</option>
+                            <option value="Broadway">Broadway</option>
+                            <option value="OffBroadway">Off Broadway</option>
+                            <option value="Regional">Regional</option>
+                            <option value="Equity">Equity</option>
+                            <option value="NonEquity">Non Equity</option>
+                            <option value="Community">Community</option>
+                            <option value="SpecialPerformance">Special Performance</option>
+                            <option value="Summerstock">Summerstock</option>
+                            <option value="FestivalPerformance">Festival Performance</option>
+
+                        </select>
+                    </p>
+                    <p class="c_description">
+                        <label class="signin-label" for="signup-firstname">Label 1 </label>
+                        <input class="signin-firstname" id="signup-firstname" type="text" placeholder=" Your First Name">
+                        <!-- <span class="signin-error">Error message here!</span> -->
+                    </p>
+                    <p class="c_link">
+                        <label class="signin-label" for="signup-lastname">Label 2 NAME</label>
+                        <input class="signin-lastname" id="signup-lastname" type="text" placeholder="Your Last Name">
+                        <!-- <span class="signin-error">Error message here!</span> -->
+                    </p>
+                    <p class="signin-submit">
+                        <input class="input-submit" type="button" value="Back" onclick="showSignUpModal()">
+                    </p>
+                    <p class="signin-submit">
+                        <input class="input-submit" type="button" value="Sign Up" onclick="register()">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal Personal info -->
+    <div id="myPersonalModal" class="index-modal">
+        <div class="index-modal-content">
+            <a href="#PersonalInfo" class="a-login">Production Info</a>
+            <hr>
+            <div class="signin" id="signin" data-type="signup">
+                <form class="signin-form">
+                    <p class="c_name">
+                        <label class="signin-label" for="signup-handle">Date Of Birth</label>
+                        <input class="signin-handle" id="signup-handle" type="text" placeholder="Enter Production Name">
+                    </p>
+                    <p class="c_signin-usertype">
+                        <label class="signin-label">Type</label>
+                        <select id="production-type">
+                            <option value="" disabled selected>Select Production Type</option>
+                            <option value="Broadway">Broadway</option>
+                            <option value="OffBroadway">Off Broadway</option>
+                            <option value="Regional">Regional</option>
+                            <option value="Equity">Equity</option>
+                            <option value="NonEquity">Non Equity</option>
+                            <option value="Community">Community</option>
+                            <option value="SpecialPerformance">Special Performance</option>
+                            <option value="Summerstock">Summerstock</option>
+                            <option value="FestivalPerformance">Festival Performance</option>
+
+                        </select>
+                    </p>
+                    <p class="c_description">
+                        <label class="signin-label" for="signup-firstname">Label 1 </label>
+                        <input class="signin-firstname" id="signup-firstname" type="text" placeholder=" Your First Name">
+                        <!-- <span class="signin-error">Error message here!</span> -->
+                    </p>
+                    <p class="c_link">
+                        <label class="signin-label" for="signup-lastname">Label 2 NAME</label>
+                        <input class="signin-lastname" id="signup-lastname" type="text" placeholder="Your Last Name">
+                        <!-- <span class="signin-error">Error message here!</span> -->
+                    </p>
+                    <p class="signin-submit">
+                        <input class="input-submit" type="button" value="Back" onclick="showSignUpModal()">
+                    </p>
+                    <p class="signin-submit">
+                        <input class="input-submit" type="button" value="Sign Up" onclick="register()">
                     </p>
                 </form>
             </div>
@@ -178,28 +274,36 @@
     <script>
         function showNextModal() {
             var x = document.getElementById("signup-usertype").value;
-            var modal_company = document.getElementById('myModalCompany');
-            var modal_signup = document.getElementById('myModal2');
+            // var modal_signup = document.getElementById('myModal2');
 
+            modal_signup.style.display = "none";
             if (x == "company") {
                 // show company modal
-                modal_signup.style.display = "none";
                 modal_company.style.display = "block";
-
             }
-        } 
+            if (x == "production") {
+                modal_production.style.display = "block";
+            }
+            if (x == "personal") {
+                modal_personal.style.display = "block";
+            }
+        }
         function showSignUpModal() {
             var modal_company = document.getElementById('myModalCompany');
+            var modal_production = document.getElementById('myProductionModal');
+            modal_production.style.display = "none";
             modal_company.style.display = "none";
             modal_signup.style.display = "block";
         }
     </script>
     <!--Modal Script-->
     <script>
-        // modals
+        // all modals
         var modal_login = document.getElementById('myModal1');
         var modal_signup = document.getElementById('myModal2');
         var modal_company = document.getElementById('myModalCompany');
+        var modal_production = document.getElementById('myProductionModal');
+        var modal_personal = document.getElementById('myPersonalModal');
         // navbar buttons
         var btn1 = document.getElementById("navbarLoginBtn");
         var btn2 = document.getElementById("navbarSignUpBtn");

@@ -4185,10 +4185,10 @@ $other-blue-light: #;*/
       margin-top: 0%;
       margin-bottom: 3%;
       display: inline-block; }
-      .create-modal-content #create-articles .left #a-header {
+      .create-modal-content #create-articles .left #a-title {
         margin-left: 33px;
         color: #226BE4; }
-      .create-modal-content #create-articles .left #articles-header {
+      .create-modal-content #create-articles .left #articles-title {
         margin-left: 8%;
         width: 86%;
         height: 10px;
@@ -4204,10 +4204,10 @@ $other-blue-light: #;*/
       margin-top: 0%;
       margin-bottom: 3%;
       display: inline-block; }
-      .create-modal-content #create-articles .right #a-title {
+      .create-modal-content #create-articles .right #a-header {
         margin-left: -1px;
         color: #226BE4; }
-      .create-modal-content #create-articles .right #articles-title {
+      .create-modal-content #create-articles .right #articles-header {
         margin-right: 8%;
         width: 86%;
         height: 10px;
@@ -4304,10 +4304,10 @@ $other-blue-light: #;*/
       margin-top: 0%;
       margin-bottom: 3%;
       display: inline-block; }
-      .create-modal-content #create-events .left #e-header {
+      .create-modal-content #create-events .left #e-title {
         margin-left: 33px;
         color: #226BE4; }
-      .create-modal-content #create-events .left #events-header {
+      .create-modal-content #create-events .left #events-title {
         margin-left: 8%;
         width: 86%;
         height: 10px;
@@ -4323,10 +4323,10 @@ $other-blue-light: #;*/
       margin-top: 0%;
       margin-bottom: 3%;
       display: inline-block; }
-      .create-modal-content #create-events .right #e-title {
+      .create-modal-content #create-events .right #e-header {
         margin-left: -1px;
         color: #226BE4; }
-      .create-modal-content #create-events .right #events-title {
+      .create-modal-content #create-events .right #events-header {
         margin-right: 8%;
         width: 86%;
         height: 10px;

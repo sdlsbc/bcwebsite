@@ -78,12 +78,12 @@ function checkIfCompleteProfile() {
 }
 
 function showCompleteProfileModal(usertype){
-	console.log('here', usertype);
-	var modal = document.getElementById('myModalProifleIncomplete');
-	modal.style.display = "block";
-	if (usertype == "company"){
-		companyProfileModal();
-	}
+	// console.log('here', usertype);
+	// var modal = document.getElementById('myModalProifleIncomplete');
+	// modal.style.display = "block";
+	// if (usertype == "company"){
+	// 	companyProfileModal();
+	// }
 
 }
 

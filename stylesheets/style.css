@@ -3169,6 +3169,203 @@ $other-blue-light: #;*/
     height: 43px;
     border-radius: 50%; }
 
+/* P R O F I L E  E D I T  M O D A L */
+#createModalx {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.create-modal-contentx {
+  position: absolute;
+  background-color: #F7FAFF;
+  margin: auto;
+  margin-top: 2%;
+  border: 1px solid #888;
+  width: 66%;
+  margin-left: 17%;
+  height: 66%;
+  z-index: 1;
+  border-radius: 19px; }
+  .create-modal-contentx h1 {
+    font-family: "Roboto", sans-serif;
+    color: #226BE4;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px; }
+  .create-modal-contentx .edit-left1 {
+    width: 42%;
+    float: left;
+    margin-left: 86px;
+    padding-bottom: 30px; }
+    .create-modal-contentx .edit-left1 #edit-first {
+      width: 80%;
+      font-size: 13px;
+      font-weight: 400;
+      color: #226BE4; }
+    .create-modal-contentx .edit-left1 input[type=text] {
+      width: 80%;
+      height: 40px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #226BE4;
+      padding-left: 15px;
+      border-radius: 22px;
+      border: 2px solid #226BE4; }
+  .create-modal-contentx .edit-right1 {
+    width: 42%;
+    float: right;
+    margin-left: -23px;
+    margin-right: 21px;
+    padding-bottom: 30px; }
+    .create-modal-contentx .edit-right1 #edit-last {
+      width: 86%;
+      font-size: 13px;
+      color: #226BE4;
+      font-weight: 400; }
+    .create-modal-contentx .edit-right1 input[type=text] {
+      width: 80%;
+      height: 40px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #226BE4;
+      padding-left: 15px;
+      border-radius: 22px;
+      border: 2px solid #226BE4; }
+  .create-modal-contentx .edit-center {
+    width: 100%;
+    text-align: center; }
+    .create-modal-contentx .edit-center #edit-email {
+      width: 80%;
+      font-size: 13px;
+      margin-left: 9.5%;
+      font-weight: 400;
+      color: #226BE4; }
+    .create-modal-contentx .edit-center input[type=text] {
+      width: 80%;
+      height: 40px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #226BE4;
+      margin-left: 9.5%;
+      padding-left: 15px;
+      border-radius: 22px;
+      margin-bottom: 30px;
+      border: 2px solid #226BE4; }
+    .create-modal-contentx .edit-center #edit-username {
+      width: 80%;
+      font-size: 13px;
+      margin-left: 9.5%;
+      font-weight: 400;
+      color: #226BE4; }
+    .create-modal-contentx .edit-center input[type=text] {
+      width: 80%;
+      height: 40px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #226BE4;
+      margin-left: 9.5%;
+      padding-left: 15px;
+      border-radius: 22px;
+      border: 2px solid #226BE4; }
+  .create-modal-contentx .edit-left2 {
+    width: 42%;
+    float: left;
+    margin-left: 86px;
+    padding-bottom: 30px; }
+    .create-modal-contentx .edit-left2 #edit-new-password {
+      width: 80%;
+      font-size: 13px;
+      color: #226BE4;
+      font-weight: 400; }
+    .create-modal-contentx .edit-left2 input[type=text] {
+      width: 80%;
+      height: 40px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #226BE4;
+      padding-left: 15px;
+      border-radius: 22px;
+      border: 2px solid #226BE4; }
+  .create-modal-contentx .edit-right2 {
+    width: 42%;
+    float: right;
+    margin-right: 21px;
+    padding-bottom: 30px; }
+    .create-modal-contentx .edit-right2 #edit-confirm-password {
+      width: 80%;
+      font-size: 13px;
+      color: #226BE4;
+      font-weight: 400; }
+    .create-modal-contentx .edit-right2 input[type=text] {
+      margin-left: -21px;
+      width: 86%;
+      height: 40px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #226BE4;
+      padding-left: 15px;
+      border-radius: 22px;
+      border: 2px solid #226BE4; }
+  .create-modal-contentx .save-changes {
+    margin-left: 41%;
+    background-color: #226BE4;
+    border: 2px solid #226BE4;
+    color: white;
+    padding: 3px 12px;
+    width: 146px;
+    height: 40px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 25px;
+    margin-right: 10%;
+    font-size: 14px; }
+    .create-modal-contentx .save-changes:hover {
+      width: 145px;
+      height: 40px;
+      font-weight: 400;
+      background-color: white;
+      border: 2px solid #226BE4;
+      border-radius: 25px;
+      margin-right: 10%;
+      color: #226BE4;
+      font-size: 14px; }
+
+/* The Close Button */
+.create-closex {
+  /*display: none;*/
+  color: #aaaaaa;
+  float: right;
+  margin-right: 2%;
+  font-size: 28px;
+  font-weight: bold; }
+
+.create-closex:hover,
+.create-closex:focus {
+  /*display: none;*/
+  color: #000;
+  text-decoration: none;
+  cursor: pointer; }
+
 .profile_wrapper {
   background-color: white;
   margin-top: 760px;
@@ -4963,6 +5160,147 @@ $other-blue-light: #;*/
               font-weight: 100;
               margin-top: 9px;
               font-size: 13px; } }
+@media screen and (max-width: 900px) {
+  .pe-nav {
+    width: 100%;
+    margin-top: 10%;
+    flex-wrap: wrap; }
+    .pe-nav a {
+      font-family: "Roboto", sans-serif;
+      margin-top: 15px;
+      text-decoration: none;
+      float: right;
+      width: 18%;
+      margin-right: 2%;
+      display: inline; }
+      .pe-nav a:first-child {
+        font-family: "Roboto", sans-serif;
+        margin-left: 0%;
+        margin-right: 0%; }
+      .pe-nav a .p-tag {
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+        color: #B2B2B2; }
+      .pe-nav a .p-tag.active {
+        font-family: "Roboto", sans-serif;
+        color: #226BE4;
+        border-bottom: 4px solid #226BE4;
+        padding-bottom: 15px; }
+
+  #profile-moments {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 20px;
+    margin-top: 62px;
+    margin-left: 23%;
+    padding-bottom: 30%;
+    width: 80%;
+    height: 90%; }
+    #profile-moments .pe-moments h1 {
+      font-family: "Roboto", sans-serif;
+      margin-top: 110px;
+      font-weight: 100;
+      font-size: 30px;
+      text-align: center;
+      color: #226BE4; }
+
+  #profile-postsbox {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 20px;
+    margin-top: 62px;
+    margin-left: 23%;
+    padding-bottom: 30%;
+    width: 80%;
+    height: 90%; }
+    #profile-postsbox .pe-milestones h1 {
+      font-family: "Roboto", sans-serif;
+      margin-top: 110px;
+      font-weight: 100;
+      font-size: 30px;
+      text-align: center;
+      color: #226BE4; }
+
+  #profile-calendar {
+    display: none;
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 20px;
+    margin-top: 62px;
+    margin-left: 23%;
+    padding-bottom: 30%;
+    width: 80%;
+    height: 90%; }
+    #profile-calendar .pe-articles h1 {
+      font-family: "Roboto", sans-serif;
+      margin-top: 110px;
+      font-weight: 100;
+      font-size: 30px;
+      text-align: center;
+      color: #226BE4; }
+
+  #profile-followers {
+    display: none;
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 20px;
+    margin-top: 62px;
+    margin-left: 23%;
+    padding-bottom: 30%;
+    width: 80%;
+    height: 90%; }
+    #profile-followers .pe-events h1 {
+      font-family: "Roboto", sans-serif;
+      margin-top: 110px;
+      font-weight: 100;
+      font-size: 30px;
+      text-align: center;
+      color: #226BE4; }
+
+  #profile-following {
+    display: none;
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 20px;
+    margin-top: 62px;
+    margin-left: 23%;
+    padding-bottom: 30%;
+    width: 80%;
+    height: 90%; }
+    #profile-following .pe-information h1 {
+      font-family: "Roboto", sans-serif;
+      margin-top: 110px;
+      font-weight: 100;
+      font-size: 30px;
+      text-align: center;
+      color: #226BE4; } }
 .pp-main-image img {
   width: 100%;
   height: 300px; }

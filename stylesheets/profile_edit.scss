@@ -2148,5 +2148,170 @@
 
 
 
+@media screen and (max-width: 900px) {
+  .pe-nav {
+    width: 100%;
+    margin-top: 10%;
+    flex-wrap: wrap;
+    a {
+      font-family: $font;
+      margin-top: 15px;
+      text-decoration: none;
+      float: right;
+      width: 18%;
+      margin-right: 2%;
+      display: inline;
+      &:first-child {
+        font-family: $font;
+        margin-left: 0%;
+        margin-right: 0%;
+      }
+      .p-tag {
+        font-family: $font;
+        text-align: center;
+        color: $gray;
+      }
+      .p-tag.active {
+        font-family: $font;
+        color: $main-blue;
+        border-bottom: 4px solid $main-blue;
+        padding-bottom: 15px;
+      }
+    }
+  }
+  #profile-moments {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 20px;
+    margin-top: 62px;
+    margin-left: 23%;
+    padding-bottom: 30%;
+    width: 80%;
+    height: 90%;
+    .pe-moments {
+      h1 {
+        font-family: $font;
+        margin-top: 110px;
+        font-weight: 100;
+        font-size: 30px;
+        text-align: center;
+        color: $main-blue;
+      }
+    }
+  }
+  #profile-postsbox {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 20px;
+    margin-top: 62px;
+    margin-left: 23%;
+    padding-bottom: 30%;
+    width: 80%;
+    height: 90%;
+    .pe-milestones {
+      h1 {
+        font-family: $font;
+        margin-top: 110px;
+        font-weight: 100;
+        font-size: 30px;
+        text-align: center;
+        color: $main-blue;
+      }
+    }
+  }
+  #profile-calendar {
+    display: none;
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 20px;
+    margin-top: 62px;
+    margin-left: 23%;
+    padding-bottom: 30%;
+    width: 80%;
+    height: 90%;
+    .pe-articles {
+      h1 {
+        font-family: $font;
+        margin-top: 110px;
+        font-weight: 100;
+        font-size: 30px;
+        text-align: center;
+        color: $main-blue;
+      }
+    }
+  }  
+  #profile-followers {
+    display: none;
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 20px;
+    margin-top: 62px;
+    margin-left: 23%;
+    padding-bottom: 30%;
+    width: 80%;
+    height: 90%;
+    .pe-events {
+      h1 {
+        font-family: $font;
+        margin-top: 110px;
+        font-weight: 100;
+        font-size: 30px;
+        text-align: center;
+        color: $main-blue;
+      }
+    }
+  }
+  #profile-following {
+    display: none;
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: auto;
+    overflow: hidden;
+    padding-top: 20px;
+    margin-top: 62px;
+    margin-left: 23%;
+    padding-bottom: 30%;
+    width: 80%;
+    height: 90%;
+    .pe-information {
+      h1 {
+        font-family: $font;
+        margin-top: 110px;
+        font-weight: 100;
+        font-size: 30px;
+        text-align: center;
+        color: $main-blue;
+      }
+    }
+  }
+}
+
+  
+
 
 

@@ -97,9 +97,82 @@
         <img src="../images/compass.png">
       </p>
       <p class="location" id="location"></p>
-      <center><button class="view-more"><a href="#"><p>View More</p></a></button></center>
-      <a href="../Profile/edit.html"><img src="../images/penciliconblue.png" class="edit-button"></a>
+      <center><button class="view-more"><a href="../Profile/edit.html"><p>Full Profile</p></a></button></center>
+      <a href="#" id="myModal"><img src="../images/penciliconblue.png" class="edit-button"></a>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =============== EDIT MODAL ================ -->
+<div id="createModalx" class="create-modal">
+  <div class="create-modal-contentx" id="create-modal-contentx">
+  <span class="create-closex">&times;</span>
+    <h1>Edit Information</h1>
+    <form>
+      <span class="edit-left1">
+        <label id="edit-first">FIRST NAME</label>
+        <br>
+        <input type="text" id="input-first" name="articles" placeholder="John">
+      </span>
+      <span class="edit-right1">
+        <label id="edit-last">LAST NAME</label>
+        <br>
+        <input type="text" id="input-last" name="articles" placeholder="Smith">
+      </span>
+      <span class="edit-center">
+        <label id="edit-email">EMAIL ADDRESS</label>
+        <br>
+        <input type="text" id="input-email" name="articles" placeholder="J.smith@gmail.com">
+
+        <label id="edit-username">USERNAME</label>
+        <br>
+        <input type="text" id="input-username" name="articles" placeholder="New York, NY">
+      </span>
+      <span class="edit-left2">
+        <label id="edit-new-password">NEW PASSWORD</label>
+        <br>
+        <input type="text" id="input-new" name="articles" placeholder="John">
+      </span>
+      <span class="edit-right2">
+        <label id="edit-confirm-password">CONFIRM PASSWORD</label>
+        <br>
+        <input type="text" id="input-confirm" name="articles" placeholder="John">
+      </span>
+      <button class="save-changes" onclick="signout()">Save Changes</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  var modalx = document.getElementById('createModalx');
+  var btnx = document.getElementById("myModal");
+  var spanx = document.getElementsByClassName("create-closex")[0];
+  btnx.onclick = function() {
+    modalx.style.display = "block";
+  }
+  spanx.onclick = function() {
+    modalx.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modalx) {
+      modalx.style.display = "none";
+    }
+  }
+</script>
+
+
     
     <div class="second_nav_right">
       <!-- <a href="#"><p>Milestones</p></a>

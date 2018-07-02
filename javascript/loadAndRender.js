@@ -1,14 +1,9 @@
 var fetchCount = 0;
 var wait = false;
 var PAGE = "";
+var checkProf = true; // user profile is complete
 
 function checkLocalStorage(page) {
-	//if (localStorage.getItem("user_id") == null)
-	//{
-	//alert("Please Sign Up First");
-	//redirect to login page
-
-	//window.location.href = "../../index.html";
 	PAGE = page;
 
 	if (PAGE == 'newsfeed') {
@@ -29,18 +24,16 @@ function checkLocalStorage(page) {
 	} else if (PAGE == 'bob') {
 		loadProfile();
 	}
-	//}else{
-	//local storage value"+localStorage.getItem("user_id");
-	//}
 }
 
 function checkIfCompleteProfile() {
-	
+
 	var usertype_id = localStorage.getItem("usertype_id");
+	console.log('usertype id  is : ', usertype_id);
 	var usertype = localStorage.getItem("usertype");
 	var user_id = localStorage.getItem("user_id");
 	var authorization_key = "Bearer " + localStorage.getItem("token");
-	var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/"+usertype+"_read";
+	var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/" + usertype + "_read";
 
 	var data = {
 		"usertype_id": usertype_id
@@ -60,8 +53,38 @@ function checkIfCompleteProfile() {
 
 			if (response.status == "success") {
 				console.log('check profile complete response:', response);
+
+				if (usertype == "company") {
+					if (response.response.company.name == "" || response.response.company.name == null) {
+						checkProf = false; // profile incomplete
+
+					}
+				}
+				if (usertype == "production") {
+					if (response.response.production.name == "" || response.response.production.name == null) {
+						checkProf = false; 
+					}
+				}
+				if (usertype == "personal") {
+					if (response.response.personal.date_of_birth == "" || response.response.personal.date_of_birth == null) {
+						checkProf = false; 
+					}
+				}
+				if (checkProf == true){
+					showCompleteProfileModal(usertype);
+				}
 			}
 		})
+}
+
+function showCompleteProfileModal(usertype){
+	// console.log('here', usertype);
+	// var modal = document.getElementById('myModalProifleIncomplete');
+	// modal.style.display = "block";
+	// if (usertype == "company"){
+	// 	companyProfileModal();
+	// }
+
 }
 
 function loadAndShowPosts() {

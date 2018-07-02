@@ -21,24 +21,6 @@
     }
 </script>
 
-<!-- check user type -->
-<!-- <script>
-    function checkUsertype() {
-        var x = document.getElementById("signup-usertype").value;
-        if (x == "personal") {
-            document.getElementById("signin-fullname").style.display = "none";
-        } else if (x == "company") {
-            document.getElementById("signup-fullname").value = "";
-            document.getElementById("signin-fullname").style.display = "block";
-            document.getElementById("fullname_label").innerHTML = "Company Name:";
-            
-        } else if (x == "production") {
-            document.getElementById("signup-fullname").value = "";
-            document.getElementById("signin-fullname").style.display = "block";
-            document.getElementById("fullname_label").innerHTML = "Production Name";
-        }
-    }
-</script> -->
 
 <body class="body">
 
@@ -142,18 +124,82 @@
                         <input class="signin-phone" id="signup-phone" type="text" placeholder="Phone">
                     </p>
                     <p class="signin-submit">
-                        <input class="input-submit" type="button" value="SIGN UP" onclick="register()">
+                        <input class="input-submit" type="button" value="Next >>>" onclick="showNextModal()">
                     </p>
                 </form>
             </div>
         </div>
     </div>
 
+    <!-- modal company info -->
+    <div id="myModalCompany" class="index-modal">
+        <div class="index-modal-content">
+            <a href="#login" class="a-login">Company Info</a>
+            <hr>
+            <div class="signin" id="signin" data-type="signup">
+                <form class="signin-form">
+                    <p class="c_name">
+                        <label class="signin-label" for="signup-handle">Name of Company</label>
+                        <input class="signin-handle" id="signup-handle" type="text" placeholder="Enter Company Name">
+                    </p>
+                    <p class="c_signin-usertype">
+                        <label class="signin-label">Type</label>
+                        <select id="signup-usertype">
+                            <option value="" disabled selected>Select Company Type</option>
+                            <option value="GeneralManagement">General Management</option>
+                            <option value="Production">Production</option>
+                            <option value="CompanyManagement">Company Management</option>
+                            <option value="Press">Press</option>
+                            <option value="MarketingAdvertising">Marketing/ Advertising</option>
+                            <option value="Casting">Casting</option>
+                            <option value="Organizations">Organizations</option>
+                        </select>
+                    </p>
+                    <p class="c_description">
+                        <label class="signin-label" for="signup-firstname">Label 1 </label>
+                        <input class="signin-firstname" id="signup-firstname" type="text" placeholder=" Your First Name">
+                        <!-- <span class="signin-error">Error message here!</span> -->
+                    </p>
+                    <p class="c_link">
+                        <label class="signin-label" for="signup-lastname">Label 2 NAME</label>
+                        <input class="signin-lastname" id="signup-lastname" type="text" placeholder="Your Last Name">
+                        <!-- <span class="signin-error">Error message here!</span> -->
+                    </p>
+                    <p class="signin-submit">
+                        <input class="input-submit" type="button" value="Back" onclick="showSignUpModal()">
+                    </p>
+                    <p class="signin-submit">
+                        <input class="input-submit" type="button" value="Sign Up" onclick="showNextModal()">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showNextModal() {
+            var x = document.getElementById("signup-usertype").value;
+            var modal_company = document.getElementById('myModalCompany');
+            var modal_signup = document.getElementById('myModal2');
+
+            if (x == "company") {
+                // show company modal
+                modal_signup.style.display = "none";
+                modal_company.style.display = "block";
+
+            }
+        } 
+        function showSignUpModal() {
+            var modal_company = document.getElementById('myModalCompany');
+            modal_company.style.display = "none";
+            modal_signup.style.display = "block";
+        }
+    </script>
     <!--Modal Script-->
     <script>
         // modals
         var modal_login = document.getElementById('myModal1');
         var modal_signup = document.getElementById('myModal2');
+        var modal_company = document.getElementById('myModalCompany');
         // navbar buttons
         var btn1 = document.getElementById("navbarLoginBtn");
         var btn2 = document.getElementById("navbarSignUpBtn");

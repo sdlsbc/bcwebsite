@@ -110,9 +110,22 @@ function signin() {
                 var token = response.response.token;
                 var user_id = response.response.user_id;
                 var handle = response.response.user.handle;
-                var res_usertype = response.response.user.usertype
-                var res_usertype_id = response.response.user.res_usertype
-
+                var res_usertype = response.response.user.usertype;
+                console.log(res_usertype);
+                var res_usertype_id = "";
+                if (res_usertype == "company"){
+                    res_usertype_id  = response.response.user.company;
+                    console.log('usertype id in register.js', res_usertype_id);
+                }
+                if (res_usertype == "production"){
+                    res_usertype_id  = response.response.user.production;
+                    console.log('usertype id in register.js', res_usertype_id);
+                } 
+                if (res_usertype == "personal"){
+                    res_usertype_id  = response.response.user.personal;
+                    console.log('usertype id in register.js', res_usertype_id);
+                }               
+                
                 localStorage.setItem("token", token);
                 localStorage.setItem("user_id", user_id);
                 localStorage.setItem("handle", handle);

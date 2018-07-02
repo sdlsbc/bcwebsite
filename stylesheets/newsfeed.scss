@@ -1311,7 +1311,6 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
     transition: 0.3s;
     margin-left: -5px;
     &:hover {
-      background-color: #226BE4;
       color: #f1f1f1;
     }
   }
@@ -1322,6 +1321,12 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
    /* margin-top: -26px;*/
     margin-top: 15px;
     height: auto;
+    a {
+      background-color: #18253B;
+      &:hover {
+        background-color: #226BE4;
+      }
+    }
   }
   .profile {
     text-decoration: none;
@@ -1418,8 +1423,7 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
       display: block;
       transition: 0.3s;
       margin-left: -5px;
-      &:hover {
-        background-color: #226BE4;
+      &:hover {;
         color: #f1f1f1;
       }
     }
@@ -1429,6 +1433,12 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
       padding-top: 7px;
       margin-top: -21px;
       height: auto;
+      a {
+        background-color: #18253B;
+        &:hover {
+          background-color: #226BE4;
+        }
+      }
     }
     .profile {
       text-decoration: none;
@@ -1465,9 +1475,6 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
       width: 90%;
       font-size: 15px;
       margin-bottom: 12px;
-      &:hover {
-        background-color: #226BE4;
-      }
     }
   }
 }

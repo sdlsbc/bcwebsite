@@ -1660,6 +1660,38 @@ hr {
   height: 2px;
   color: #226BE4; }
 
+.signin-usertype {
+  width: 80%;
+  text-align: center;
+  margin-top: 10px; }
+  .signin-usertype label {
+    font-family: "Roboto", sans-serif;
+    color: #0080FF;
+    font-size: 14px;
+    margin-left: 25px;
+    font-weight: 100; }
+  .signin-usertype .styled-select {
+    margin-left: 10px;
+    height: 29px;
+    background-color: #226BE4;
+    overflow: hidden;
+    width: 170px;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    padding-left: 15px;
+    color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; }
+  .signin-usertype .styled-select select {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    height: 29px;
+    padding: 5px;
+    width: 268px; }
+
 .first_name {
   width: 50%;
   float: left;
@@ -1788,6 +1820,80 @@ hr {
     display: none; }
   .signin-password a {
     display: none; }
+
+.signin-city {
+  width: 45%;
+  float: left;
+  margin-top: 0px; }
+  .signin-city label {
+    font-family: "Roboto", sans-serif;
+    color: #0080FF;
+    font-size: 14px;
+    margin-left: 25px;
+    font-weight: 100; }
+  .signin-city span {
+    display: none; }
+  .signin-city input[type=text] {
+    background-color: #E9E9E9;
+    border-radius: 13%/97%;
+    padding-left: 15px;
+    margin-left: 5px;
+    margin-top: 6px;
+    font-size: 14px;
+    border: none;
+    height: 40px;
+    width: 100%;
+    color: gray;
+    font-family: "Roboto", sans-serif; }
+
+.signin-country {
+  width: 45%;
+  float: right;
+  margin-top: 0px; }
+  .signin-country label {
+    color: #0080FF;
+    font-size: 14px;
+    margin-left: 18px;
+    font-weight: 100;
+    font-family: "Roboto", sans-serif; }
+  .signin-country input[type=text] {
+    background-color: #E9E9E9;
+    border-radius: 13%/97%;
+    padding-left: 18px;
+    margin-top: 6px;
+    font-size: 14px;
+    border: none;
+    height: 40px;
+    width: 100%;
+    color: gray;
+    font-family: "Roboto", sans-serif; }
+  .signin-country span {
+    display: none; }
+
+.signin-phone {
+  width: 45%;
+  float: left;
+  margin-top: 0px; }
+  .signin-phone label {
+    font-family: "Roboto", sans-serif;
+    color: #0080FF;
+    font-size: 14px;
+    margin-left: 25px;
+    font-weight: 100; }
+  .signin-phone span {
+    display: none; }
+  .signin-phone input[type=text] {
+    background-color: #E9E9E9;
+    border-radius: 13%/97%;
+    padding-left: 15px;
+    margin-left: 5px;
+    margin-top: 6px;
+    font-size: 14px;
+    border: none;
+    height: 40px;
+    width: 100%;
+    color: gray;
+    font-family: "Roboto", sans-serif; }
 
 .signin-submit input[type=button] {
   font-family: "Roboto", sans-serif;

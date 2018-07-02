@@ -289,6 +289,41 @@ hr {
   height: 2px;
   color: $main-blue;
 }
+.signin-usertype {
+  width: 80%;
+  text-align: center;
+  margin-top: 10px;
+  label {
+    font-family: $font;
+    color: #0080FF;
+    font-size: 14px;
+    margin-left: 25px;
+    font-weight: 100;
+  }
+  .styled-select {
+    margin-left: 10px;
+    height: 29px;
+    background-color: #226BE4;
+    overflow: hidden;
+    width: 170px;
+    font-size: 14px;
+    font-family: $font;
+    font-weight: 100;
+    padding-left: 15px;
+    color: white;
+     -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  .styled-select select {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    height: 29px;
+    padding: 5px; 
+    width: 268px;
+  }
+}
 .first_name {
   width: 50%;
   float: left;
@@ -434,6 +469,90 @@ hr {
     display: none;
   }
 }
+.signin-city {
+  width: 45%;
+  float: left;
+  margin-top: 0px;
+  label {
+    font-family: $font;
+    color: #0080FF;
+    font-size: 14px;
+    margin-left: 25px;
+    font-weight: 100;
+  }
+  span {
+    display: none;
+  }
+  input[type=text] {
+    background-color: $light-gray;
+    border-radius: 13%/97%;
+    padding-left: 15px;
+    margin-left: 5px;
+    margin-top: 6px;
+    font-size: 14px;
+    border: none;
+    height: 40px;
+    width: 100%;
+    color: gray;
+    font-family: $font;
+  }
+}
+.signin-country {
+  width: 45%;
+  float: right;
+  margin-top: 0px;
+  label {
+    color: #0080FF;
+    font-size: 14px;
+    margin-left: 18px;
+    font-weight: 100;
+    font-family: $font;
+  }
+  input[type=text] {
+    background-color: $light-gray;
+    border-radius: 13%/97%;
+    padding-left: 18px;
+    margin-top: 6px;
+    font-size: 14px;
+    border: none;
+    height: 40px;
+    width: 100%;
+    color:gray;
+    font-family: $font;
+  }
+  span {
+    display: none;
+  }
+}
+.signin-phone {
+  width: 45%;
+  float: left;
+  margin-top: 0px;
+  label {
+    font-family: $font;
+    color: #0080FF;
+    font-size: 14px;
+    margin-left: 25px;
+    font-weight: 100;
+  }
+  span {
+    display: none;
+  }
+  input[type=text] {
+    background-color: $light-gray;
+    border-radius: 13%/97%;
+    padding-left: 15px;
+    margin-left: 5px;
+    margin-top: 6px;
+    font-size: 14px;
+    border: none;
+    height: 40px;
+    width: 100%;
+    color: gray;
+    font-family: $font;
+  }
+}
+
 .signin-submit input[type=button] {
   font-family: $font;
   background-color: $main-blue;

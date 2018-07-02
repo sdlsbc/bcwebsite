@@ -9,11 +9,7 @@ function register() {
     var country = document.getElementById('signup-country').value;
     var userType = document.getElementById("signup-usertype").value;
     var phone = document.getElementById("signup-phone").value;
-    // if (userType == "personal") {
-    //     var fullNameField = fname + "" + lname;
-    // } else {
-    //     var fullNameField = document.getElementById("signup-fullname").value;
-    // }
+
     let error_message = validateSignUpInput(email, password, fname, lname, handle, userType, city, country);
     if (error_message !== "") {
         console.log('error msg from function', error_message);

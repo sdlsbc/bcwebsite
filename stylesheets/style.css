@@ -1124,11 +1124,45 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px; }
-  .sidenav a {
-    margin-left: 5px;
-    width: 90%;
-    font-size: 15px;
-    margin-bottom: 12px; }
+  .sidenav .my-profile-btn {
+    background-color: rgba(51, 153, 255, 0.7);
+    color: #226BE4;
+    padding: 3px 12px;
+    width: 92px;
+    height: 30px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 6px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    font-size: 14px; }
+    .sidenav .my-profile-btn a {
+      font-family: 'Roboto', sans-serif;
+      text-decoration: none; }
+      .sidenav .my-profile-btn a p {
+        font-family: 'Roboto', sans-serif;
+        margin-top: -2px;
+        margin-left: -8px;
+        color: white;
+        font-size: 12px; }
+    .sidenav .my-profile-btn:hover {
+      width: 92px;
+      height: 30px;
+      margin-top: 20px;
+      color: #1B5AC3;
+      font-size: 6px;
+      background-color: #3399ff; }
+      .sidenav .my-profile-btn:hover a {
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none; }
+        .sidenav .my-profile-btn:hover a p {
+          font-family: 'Roboto', sans-serif;
+          color: #99CCFF;
+          margin-top: -2px;
+          margin-left: -8px;
+          color: white;
+          font-size: 12px; }
 
 .navname {
   text-decoration: none;
@@ -1151,7 +1185,7 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
 
 /*===================== F U L L  S I D E N A V =====================*/
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 20px 32px;
   text-decoration: none;
   font-size: 16px;
   color: #818181;

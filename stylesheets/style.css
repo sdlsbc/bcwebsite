@@ -1193,6 +1193,7 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
   transition: 0.3s;
   margin-left: -5px; }
   .sidenav a:hover {
+    background-color: #226BE4;
     color: #f1f1f1; }
 .sidenav .sidenav-links {
   background-color: #1e2e49;
@@ -1288,6 +1289,7 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
     transition: 0.3s;
     margin-left: -5px; }
     .sidenav a:hover {
+      background-color: #226BE4;
       color: #f1f1f1; }
   .sidenav .sidenav-links {
     background-color: #1e2e49;
@@ -1322,7 +1324,9 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
       margin-left: 5px;
       width: 90%;
       font-size: 15px;
-      margin-bottom: 12px; } }
+      margin-bottom: 12px; }
+      .sidenav a:hover {
+        background-color: #226BE4; } }
 /* ===================== M A I N  A L E R T ===================== */
 #modalContainer {
   position: fixed;

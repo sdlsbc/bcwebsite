@@ -2,33 +2,17 @@
 <html>
 <head>
   <link rel="icon" href="../images/bc32_mcU_icon.ico" type="image/x-icon">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Broadway Connected</title>
   <link href="../stylesheets/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
 </head>
-<style>
-    /* The Close Modal Button */
-.close {
-    color: blue;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-.close:hover,
-.close:focus {
-    color: blue;
-    text-decoration: none;
-    cursor: pointer;
-}
-/* pointer on posts */
-.pointer {
-    cursor: pointer;
-}
-.ellipsis {
-  text-overflow:ellipsis;
-  white-space: nowrap;
-}
-</style>
-<body onload="checkLocalStorage('newsfeed')">
+
+<div class="body">
+<body onload="checkLocalStorage('explore')">
     <!-- sidebar. -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closeNav()">&times;</a>
@@ -39,7 +23,7 @@
         </center>
         <center>
           <p class="profile">
-            <a href="../Profile/profile.html" id="profile-a">My Profile</a>
+            <button class="my-profile-btn"><a href="../Profile/profile.html" id="profile-a"><p>My Profile</p></a></button>
           </p>
         </center>
         <br/>
@@ -68,91 +52,48 @@
         <a href="../B.O.B./bob.html">
           <img src="../images/briefcase@3x.png" width="19" height="19">&nbsp&nbsp Business of Broadway 
         </a>
-        <a href="../Contact/contact.html">
+        <a href="#">
           <img src="../images/info@3x.png" width="19" height="19">&nbsp&nbsp FAQ & Contact Us
         </a>
       </div>
     </div>
-    <!-- sidebar. -->
-    <div class="navbar">
-      <span class="open_sidenav" onclick="openNav()">
-        <img src="../images/side button2.png">
-      </span>
-      <img class="logo" src="../images/bc_solo_logo.png">
-      <a href='../Newsfeed/newsfeed.html'>
-        <p class="newsfeed-p-tag" style="border-bottom: 4px solid #226BE4; padding-bottom: 15px; color: #226BE4;">Newsfeed</p>
-      </a>
-      <a href='../Discover/discover.html'>
-        <p class="newsfeed-p-tagx">Discover</p>
-      </a>
-      <a href='../Explore/explore.html'>
-        <p class="newsfeed-p-tagx">Explore</p>
-      </a>
-        <div class="signout">
-          <button class="signout-button" onclick="signout()">Sign Out</button>
-        </div>
+
+  <div class="navbar">
+    <span class="open_sidenav" onclick="openNav()">
+      <img src="../images/side button2.png" style="margin-left: 8px;margin-top: -6px;">
+    </span>
+    <img class="logo" style="margin-left: 16px;" src="../images/bc_solo_logo.png">
+    <a href='../Newsfeed/newsfeed.html'>
+      <p>Newsfeed</p>
+    </a>
+    <a href='../Discover/discover.html'>
+      <p>Discover</p>
+    </a>
+    <a href='../Explore/explore.html'>
+      <p class="explore-p-tag" style="border-bottom: 4px solid #226BE4;
+      padding-bottom: 15px; color: #226BE4;">Explore</p>
+    </a>
+    <div class="signout">
+      <button class="signout-button" onclick="signout()">Sign Out</button>
     </div>
-    <div id="postsbox">
-    </div>
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-          
-        <!-- Modal content -->
-      <div class="modal-content">
-            <span class="close">&times;</span>
-        <div class="modal-image">
-            <!-- <span class="close"></span> -->
-        </div>
-        <div class="left">
-          <div class="modal-header"></div>
-          <div class="modal_h3"></div>
-        </div>
-        <div class="right">
-          <div class="modal-date"></div>
-          <div class="calendar">
-              <img src="../images/calendar.png">
-          </div>
-          <div class="modal-time"></div>
-          <div class="clock">
-            <img src="../images/clock.png">
-          </div>
-          <div class="modal-favorite">
-            <img id="modal-favorite-img" src="../images/newsfeed_buttons/heart2.png">
-          </div>
-          </div>
-          <center>
-              <div class="modal-title"></div>
-          </center>
-          <center>
-              <div class="modal-description"></div>
-          </center>
-          <center><a href="" target="_blank" id="modal-other">See More</a>  </center>
-          <br><br>
-          <div class="read_more">
-          </div>
-        </div>
-      </div>
-        <img id="loading" class='hidden' src='../images/BCloading.gif' />
-        <script>
-            var modal = document.getElementById('myModal');
-            var span = document.getElementsByClassName("close")[0];
-            span.onclick = function () {
-                modal.style.display = "none";
-            }
-            window.onclick = function (event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-        </script>
-        <script>
-            function openNav() {
-                document.getElementById("mySidenav").style.width = "250px";
-            }
-            function closeNav() {
-                document.getElementById("mySidenav").style.width = "0";
-            }
-        </script>
+  </div>
+  
+  
+  <div class="qod-coming-soon">
+    <h1>Please hold...</h1>
+    <h2>At this time Question Of The Day can be found only on our app for iOS.  To download click *here*.  For further information please feel free to check out our <a href="../Contact/contact.html">contact</a> page<h2>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+
+
 <!-- ========== M I L E S T O N E S  M O D A L ===========  -->
  <div id="createModal" class="create-modal">
   <div class="create-modal-content" id="create-modal-content">
@@ -191,6 +132,7 @@
       </div>
     </div>
   <!-- </div> -->
+
     <div id="create-milestones" class="tabcontent">
       <h3>Add a Milestone</h3>
       <form>
@@ -202,6 +144,7 @@
         <button class="input-button">Post</button>
       </form>
     </div>
+
     <div id="create-moments" class="tabcontent">
       <h3>Add a Moment</h3>
       <form>
@@ -213,6 +156,7 @@
         <button class="input-button">Post</button>
       </form>
     </div>
+
     <div id="create-articles" class="tabcontent">
       <h3>What do you want to write about? Post it here!</h3>
       <form>
@@ -276,6 +220,8 @@
     </div>
   </div>
 </div>
+
+
   <script>
     function openCity(evt, cityName) {
       var i, tabcontent, tablinks;
@@ -291,6 +237,9 @@
       evt.currentTarget.className += " active";
     }
   </script>
+
+
+
 <script>
   //open general create modal
   var modal = document.getElementById('createModal');
@@ -308,8 +257,9 @@
     }
   }
 </script>
-        <script src="../javascript/register.js"></script>
-        <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
+
+  <script src="../javascript/register.js"></script>
+  <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
+</div>
 </body>
 </html>
-

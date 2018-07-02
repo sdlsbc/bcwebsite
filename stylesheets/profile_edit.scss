@@ -506,7 +506,7 @@
       color: $main-blue;
       font-size: 20px;
       margin-left: 5%;
-      margin-top: 5%;
+      margin-top: 3%;
     }
     input[type=text] {
       float: left;
@@ -573,7 +573,7 @@
       color: $main-blue;
       font-size: 20px;
       margin-left: 5%;
-      margin-top: 5%;
+      margin-top: 3%;
     }
     input[type=text] {
       float: left;
@@ -637,11 +637,11 @@
     width: 97%;
     background-color: $light-gray;
     h3 {
-      text-align: center;
       font-weight: 400;
-      color: $dark-blue;
-      font-size: 16px;
-      margin-top: 1%;
+      color: $main-blue;
+      font-size: 20px;
+      margin-left: 4%;
+      margin-top: 3%;
     }
     .left {
       width: 46%;
@@ -702,11 +702,11 @@
         width: 92%;
         margin-left: 4%;
         margin-top: -10px;
-        height: 80px;
+        height: 40px;
         font-size: 14px;
         border-radius: 1%/5%;
         box-sizing: border-box;
-        padding: 22px 12px 80px;
+        padding: 22px 12px 50px;
         border: 2px solid $main-blue;
       }
       #a-tag {
@@ -775,11 +775,11 @@
   #create-events{
     background-color: $light-blue;
     h3 {
-      text-align: center;
       font-weight: 400;
-      color: $dark-blue;
-      font-size: 16px;
-      margin-top: 1%;
+      color: $main-blue;
+      font-size: 20px;
+      margin-left: 4%;
+      margin-top: 3%;
     }
     .left {
       width: 46%;
@@ -844,7 +844,7 @@
         font-size: 14px;
         border-radius: 1%/5%;
         box-sizing: border-box;
-        padding: 22px 12px 80px;
+        padding: 22px 12px 50px;
         border: 2px solid $main-blue;
       }
       #e-tag {

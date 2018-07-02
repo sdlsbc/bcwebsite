@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <head>
- <link rel="icon" href="../images/bc32_mcU_icon.ico" type="image/x-icon">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <meta charset="UTF-8">
- <meta name="google" content="notranslate">
- <meta http-equiv="Content-Language" content="en">
- <link href="../stylesheets/style.css" rel="stylesheet">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="icon" href="../images/bc32_mcU_icon.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Broadway Connected</title>
+  <link href="../stylesheets/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
 </head>
 
-<!-- <div class="body">
- -->
-<body onload="checkLocalStorage('discover')" style="background-color:#F7FAFF">
+<div class="body">
+<body onload="checkLocalStorage('explore')">
     <!-- sidebar. -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closeNav()">&times;</a>
@@ -54,7 +52,7 @@
         <a href="../B.O.B./bob.html">
           <img src="../images/briefcase@3x.png" width="19" height="19">&nbsp&nbsp Business of Broadway 
         </a>
-        <a href="../Contact/contact.html">
+        <a href="#">
           <img src="../images/info@3x.png" width="19" height="19">&nbsp&nbsp FAQ & Contact Us
         </a>
       </div>
@@ -62,7 +60,7 @@
 
   <div class="navbar">
     <span class="open_sidenav" onclick="openNav()">
-      <img src="../images/side button2.png" style="margin-left: 8px; margin-top: -6px;">
+      <img src="../images/side button2.png" style="margin-left: 8px;margin-top: -6px;">
     </span>
     <img class="logo" style="margin-left: 16px;" src="../images/bc_solo_logo.png">
     <a href='../Newsfeed/newsfeed.html'>
@@ -72,64 +70,19 @@
       <p>Discover</p>
     </a>
     <a href='../Explore/explore.html'>
-      <p>Explore</p>
+      <p class="explore-p-tag" style="border-bottom: 4px solid #226BE4;
+      padding-bottom: 15px; color: #226BE4;">Explore</p>
     </a>
     <div class="signout">
       <button class="signout-button" onclick="signout()">Sign Out</button>
     </div>
   </div>
   
-
-  <div class="about">
-    <h2>About</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id</p>
-    <p>Sed quis ipsum turpis. Aenean vitae ultrices urna, vitae pharetra turpis. Mauris lorem sem, venenatis quis imperdiet a, dictum quis nibh. In in mi nec purus dignissim consectetur ut ullamcorper lectus.</p>
-    <br><br><br>
+  
+  <div class="qod-coming-soon">
+    <h1>Please hold...</h1>
+    <h2>At this time Question Of The Day can be found only on our app for iOS.  To download click <a href="#">here</a>.  For further information please feel free to check out our <a href="../Contact/contact.html">contact</a> page<h2>
   </div>
-  <div class="faq">
-    <h2>Frequently Asked Questions</h2>
-    <h3>Question text goes here</h3>
-    <p>Sed quis ipsum turpis. Aenean vitae ultrices urna, vitae pharetra turpis. Mauris lorem sem, venenatis quis imperdiet a, dictum quis nibh. In in mi nec purus dignissim consectetur ut ullamcorper lectus.</p>
-    <h3>Question text goes here</h3>
-    <p>Sed quis ipsum turpis. Aenean vitae ultrices urna, vitae pharetra turpis. Mauris lorem sem, venenatis quis imperdiet a, dictum quis nibh. In in mi nec purus dignissim consectetur ut ullamcorper lectus.</p>
-    <h3>Question text goes here</h3>
-    <p>Sed quis ipsum turpis. Aenean vitae ultrices urna, vitae pharetra turpis. Mauris lorem sem, venenatis quis imperdiet a, dictum quis nibh. In in mi nec purus dignissim consectetur ut ullamcorper lectus.</p>
-    <h3>Question text goes here</h3>
-    <p>Sed quis ipsum turpis. Aenean vitae ultrices urna, vitae pharetra turpis. Mauris lorem sem, venenatis quis imperdiet a, dictum quis nibh. In in mi nec purus dignissim consectetur ut ullamcorper lectus.</p>
-    <h3>Question text goes here</h3>
-    <p>Sed quis ipsum turpis. Aenean vitae ultrices urna, vitae pharetra turpis. Mauris lorem sem, venenatis quis imperdiet a, dictum quis nibh. In in mi nec purus dignissim consectetur ut ullamcorper lectus.</p>
-    <h3>Question text goes here</h3>
-    <p>Sed quis ipsum turpis. Aenean vitae ultrices urna, vitae pharetra turpis. Mauris lorem sem, venenatis quis imperdiet a, dictum quis nibh. In in mi nec purus dignissim consectetur ut ullamcorper lectus.</p>
-  </div>
-
-  <div class="terms">
-    <button class="terms-button"><a href="#"><p>TERMS OF AGREEMENT</p></a></button> 
-    <br>
-    <button class="terms-button"><a href="#"><p>PRIVACY POLICY</p></a></button>
-  </div>
-
-  <div class="contact">
-    <h2>Contact</h2>
-    <p>Phone Number: (xxx) xxx - xxxx</p>
-    <p>Email: xx@xxx.com</p>
-    <br>
-    <form>
-      <span class="contact-mail">
-        <br>
-        <label id="c-email">Email</label>
-        <br><br>
-        <input type="text" id="input-c-email" name="articles" placeholder="Email">
-      </span>
-      <span class="contact-body">
-        <br><br>
-        <label id="c-body">Header</label>
-        <br><br>
-        <input type="text" id="input-c-body" name="articles" placeholder="Enter text here">
-      </span>
-    </form>
-    <button class="contact-submit"><a href="#">Submit</a></button>
-  </div>
-
 
   <script>
     function openNav() {
@@ -308,5 +261,5 @@
   <script src="../javascript/register.js"></script>
   <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
 </div>
-<!-- </body> -->
+</body>
 </html>

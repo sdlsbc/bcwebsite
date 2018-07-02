@@ -22,7 +22,7 @@
     </center>
     <center>
       <p class="profile">
-        <a href="../Profile/profile.html" id="profile-a">My Profile</a>
+        <button class="my-profile-btn"><a href="../Profile/profile.html" id="profile-a"><p>My Profile</p></a></button>
       </p>
     </center>
     <br/>
@@ -33,14 +33,14 @@
         <a href="#" id="myBtn">
           <img src="../images/add-icon.png" width="20" height="20">&nbsp&nbsp Create 
         </a>
+        <a href="../Q.O.D./qod.html">
+          <img src="../images/compass@3x.png" width="19" height="19">&nbsp&nbsp Q.O.D
+        </a>
         <a href="#">
           <img src="../images/calendar (1)@3x.png" width="19" height="19">&nbsp&nbsp Calendar
         </a>
         <a href="../Favorites/favorites.html">
           <img src="../images/heart@3x.png" width="19" height="19">&nbsp&nbsp My Favorites
-        </a>
-        <a href="#">
-          <img src="../images/compass@3x.png" width="19" height="19">&nbsp&nbsp Discover
         </a>
         <a href="../ProductionProfiles/production_profiles.html">
           <img src="../images/stage@3x.png" width="19" height="19">&nbsp&nbsp Production Profiles
@@ -78,21 +78,22 @@
 
 
   <br><br>
-  <center>
-    <div class="pp-show-more">
-      <button class="pp-button" id="p1" onclick="myNewFunction()"><a href="#" style="text-decoration: none;"><p>Show More</p></a></button>
-    </div>
-  </center>
+  
 
 
   <div class="pp-main-image">
     <img src="../images/profile-production-img.png">
   </div>
   <div class="pp-header">
-      <h2>Hamilton Broadway</h2>
-      <h3>@hamilton</h3>
-      <p>BROADWAY PRODUCTION</p>
+    <h2>Hamilton Broadway</h2>
+    <h3>@hamilton</h3>
+    <p>BROADWAY PRODUCTION</p>
+  </div>
+  <center>
+    <div class="pp-show-more">
+      <button class="pp-button" id="p1" onclick="myNewFunction()"><a href="#" style="text-decoration: none;"><p>Show More</p></a></button>
     </div>
+  </center>
   <div class="production-profiles-wrapper" id="pp-wrapper">
     
     
@@ -350,12 +351,12 @@
       <h3>What do you want to write about? Post it here!</h3>
       <form>
         <span class="left">
-          <label id="a-header">Header</label>
-          <input type="text" id="articles-header" name="articles" placeholder="Header">
-        </span>
-        <span class="right">
           <label id="a-title">Title</label>
           <input type="text" id="articles-title" name="articles" placeholder="Title">
+        </span>
+        <span class="right">
+          <label id="a-header">Header</label>
+          <input type="text" id="articles-header" name="articles" placeholder="header">
         </span>
         <span class="center">
           <label id="a-body">Body</label>
@@ -382,12 +383,12 @@
       <h3>Hosting a theatrical event? Promote it here!</h3>
       <form>
         <span class="left">
-          <label id="e-header">Header</label>
-          <input type="text" id="events-header" name="articles" placeholder="Header">
-        </span>
-        <span class="right">
           <label id="e-title">Title</label>
           <input type="text" id="events-title" name="articles" placeholder="Title">
+        </span>
+        <span class="right">
+          <label id="e-header">Header</label>
+          <input type="text" id="events-header" name="articles" placeholder="Header">
         </span>
         <span class="center">
           <label id="e-body">Body</label>

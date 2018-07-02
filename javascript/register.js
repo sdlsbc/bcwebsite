@@ -9,13 +9,28 @@ function register() {
     var country = document.getElementById('signup-country').value;
     var userType = document.getElementById("signup-usertype").value;
     var phone = document.getElementById("signup-phone").value;
-
+    var c_name = "";
+    var p_name = ""
+    var dob = "";
     let error_message = validateSignUpInput(email, password, fname, lname, handle, userType, city, country);
     if (error_message !== "") {
         console.log('error msg from function', error_message);
         createCustomAlert(error_message);
     } else {
         console.log('in register: step2');
+
+        switch (userType) {
+            case "company":
+                c_name = document.getElementById('signup-companyName').value;
+                break;
+            case "production":
+                p_name = document.getElementById('signup-productionName').value;
+                break;
+            case "personal":
+                dob = document.getElementById('signup-companyname').value;
+                break;
+        }
+
         var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_create';
         var data = {
             "handle": handle,
@@ -26,7 +41,10 @@ function register() {
             "phone": phone,
             "city": city,
             "country": country,
-            "usertype": userType
+            "usertype": userType,
+            "company_name": c_name,
+            "date_of_birth": dob,
+            "production_name": p_name,
         };
 
         fetch(url, {
@@ -56,13 +74,16 @@ function register() {
                     localStorage.setItem("token", token);
                     localStorage.setItem("handle", res_handle);
 
-                    console.log('token in local storage',localStorage.getItem("token"));
+                    // save usertype data 
+                    saveUserTypeData(token);
+
+                    console.log('token in local storage', localStorage.getItem("token"));
                     if (localStorage.getItem("token") == "") {
                         createCustomAlert("WARNING: Not saved locally");
                     } else {
                         console.log("redirected to newsfeed")
                         window.location.href = "Newsfeed/newsfeed.html";
-                    } 
+                    }
 
                 } else {
                     createCustomAlert("WARNING: User Not Signed Up");
@@ -71,17 +92,55 @@ function register() {
     }
 }
 
+function saveUserTypeData(token) {
+    console.log('in save user type data');
+    var user_id = localStorage.getItem("user_id");
+    var usertype = localStorage.getItem("usertype");
+    var authorization_key = "Bearer " + token;
+
+    console.log(authorization_key);
+
+    var data = "";
+    if (usertype == 'company') {
+        var c_type = document.getElementById('company-type').value;
+        var c_link = document.getElementById('company-link').value;
+        var c_description = document.getElementById('company-desc').value;
+
+        console.log('company type ',c_type);
+        data = {
+            "user_id": user_id,
+            "type": c_type,
+            "link": c_link,
+            "description": c_description
+        };
+    }
+    var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/company_update";
+
+    fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': authorization_key
+        }
+    })
+        .then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => {
+ 
+            if (response.status == "success") {
+                console.log('', response);
+            }
+        }) 
+
+}
+
 function signin() {
 
     var email = document.getElementById('signin-email').value;
     var password = document.getElementById('signin-password').value;
 
     var error_message = validateSigninInput(email, password);
-    // if (error_message !== "") {
-    //     console.log(error_message);
-    //     createCustomAlert(error_message);
-    // } else {
-
 
     var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/login';
     var data = {
@@ -109,24 +168,24 @@ function signin() {
                 var res_usertype = response.response.user.usertype;
                 console.log(res_usertype);
                 var res_usertype_id = "";
-                if (res_usertype == "company"){
-                    res_usertype_id  = response.response.user.company;
+                if (res_usertype == "company") {
+                    res_usertype_id = response.response.user.company;
                     console.log('usertype id in register.js', res_usertype_id);
                 }
-                if (res_usertype == "production"){
-                    res_usertype_id  = response.response.user.production;
+                if (res_usertype == "production") {
+                    res_usertype_id = response.response.user.production;
                     console.log('usertype id in register.js', res_usertype_id);
-                } 
-                if (res_usertype == "personal"){
-                    res_usertype_id  = response.response.user.personal;
+                }
+                if (res_usertype == "personal") {
+                    res_usertype_id = response.response.user.personal;
                     console.log('usertype id in register.js', res_usertype_id);
-                }               
-                
+                }
+
                 localStorage.setItem("token", token);
                 localStorage.setItem("user_id", user_id);
                 localStorage.setItem("handle", handle);
                 localStorage.setItem("usertype", res_usertype);
-                localStorage.setItem("usertype_id", res_usertype_id);                
+                localStorage.setItem("usertype_id", res_usertype_id);
                 console.log('usertype_id is: ', res_usertype_id);
                 if (localStorage.getItem("token") == "") {
                     createCustomAlert("WARNING: Not saved locally");

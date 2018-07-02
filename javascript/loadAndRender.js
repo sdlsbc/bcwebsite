@@ -26,67 +26,6 @@ function checkLocalStorage(page) {
 	}
 }
 
-function checkIfCompleteProfile() {
-
-	var usertype_id = localStorage.getItem("usertype_id");
-	console.log('usertype id  is : ', usertype_id);
-	var usertype = localStorage.getItem("usertype");
-	var user_id = localStorage.getItem("user_id");
-	var authorization_key = "Bearer " + localStorage.getItem("token");
-	var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/" + usertype + "_read";
-
-	var data = {
-		"usertype_id": usertype_id
-	};
-
-	fetch(url, {
-		method: 'POST',
-		body: JSON.stringify(data),
-		headers: {
-			'Content-Type': 'application/json',
-			'Authorization': authorization_key
-		}
-	})
-		.then(res => res.json())
-		.catch(error => console.error('Error:', error))
-		.then(response => {
-
-			if (response.status == "success") {
-				console.log('check profile complete response:', response);
-
-				if (usertype == "company") {
-					if (response.response.company.name == "" || response.response.company.name == null) {
-						checkProf = false; // profile incomplete
-
-					}
-				}
-				if (usertype == "production") {
-					if (response.response.production.name == "" || response.response.production.name == null) {
-						checkProf = false; 
-					}
-				}
-				if (usertype == "personal") {
-					if (response.response.personal.date_of_birth == "" || response.response.personal.date_of_birth == null) {
-						checkProf = false; 
-					}
-				}
-				if (checkProf == true){
-					showCompleteProfileModal(usertype);
-				}
-			}
-		})
-}
-
-function showCompleteProfileModal(usertype){
-	// console.log('here', usertype);
-	// var modal = document.getElementById('myModalProifleIncomplete');
-	// modal.style.display = "block";
-	// if (usertype == "company"){
-	// 	companyProfileModal();
-	// }
-
-}
-
 function loadAndShowPosts() {
 	wait = true;
 	document.getElementById('loading').classList.remove('hidden');

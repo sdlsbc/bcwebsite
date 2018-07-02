@@ -1164,7 +1164,8 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
   background-color: #1e2e49;
   padding-bottom: 30px;
   padding-top: 7px;
-  margin-top: -26px;
+  /* margin-top: -26px;*/
+  margin-top: 15px;
   height: auto; }
 .sidenav .profile {
   text-decoration: none; }
@@ -1258,7 +1259,7 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
     background-color: #1e2e49;
     padding-bottom: 30px;
     padding-top: 7px;
-    margin-top: -26px;
+    margin-top: -21px;
     height: auto; }
   .sidenav .profile {
     text-decoration: none; }
@@ -3200,11 +3201,13 @@ $other-blue-light: #;*/
     font-weight: 400;
     text-align: center;
     padding: 20px;
+    padding-bottom: 50px;
     font-size: 30px; }
   .create-modal-contentx .edit-left1 {
+    margin-top: -20px;
     width: 42%;
     float: left;
-    margin-left: 86px;
+    margin-left: 83px;
     padding-bottom: 30px; }
     .create-modal-contentx .edit-left1 #edit-first {
       width: 80%;
@@ -3226,6 +3229,7 @@ $other-blue-light: #;*/
     float: right;
     margin-left: -23px;
     margin-right: 21px;
+    margin-top: -20px;
     padding-bottom: 30px; }
     .create-modal-contentx .edit-right1 #edit-last {
       width: 86%;
@@ -3367,206 +3371,206 @@ $other-blue-light: #;*/
   cursor: pointer; }
 
 /* I P A D  V I E W  E D I T  M O D A L */
-#createModalx {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.4); }
-
-.create-modal-contentx {
-  position: absolute;
-  background-color: #F7FAFF;
-  margin: auto;
-  margin-top: 2%;
-  border: 1px solid #888;
-  width: 80%;
-  margin-left: 10%;
-  height: 66%;
-  z-index: 1;
-  border-radius: 19px; }
-  .create-modal-contentx h1 {
-    font-family: "Roboto", sans-serif;
-    color: #226BE4;
-    font-weight: 400;
-    text-align: center;
-    padding: 20px;
-    font-size: 30px;
-    padding-bottom: 55px; }
-  .create-modal-contentx .edit-left1 {
-    width: 43%;
-    float: left;
-    margin-left: 58px;
-    padding-bottom: 30px; }
-    .create-modal-contentx .edit-left1 #edit-first {
-      width: 80%;
-      font-size: 13px;
-      font-weight: 400;
-      color: #226BE4; }
-    .create-modal-contentx .edit-left1 input[type=text] {
-      width: 80%;
-      height: 40px;
-      margin-top: 6px;
-      font-size: 12px;
-      font-weight: 400;
-      color: #226BE4;
-      padding-left: 15px;
-      border-radius: 22px;
-      border: 2px solid #226BE4; }
-  .create-modal-contentx .edit-right1 {
-    width: 44%;
-    float: right;
-    margin-left: -23px;
-    margin-right: 17px;
-    padding-bottom: 30px; }
-    .create-modal-contentx .edit-right1 #edit-last {
-      width: 86%;
-      font-size: 13px;
-      color: #226BE4;
-      font-weight: 400; }
-    .create-modal-contentx .edit-right1 input[type=text] {
-      width: 80%;
-      height: 40px;
-      margin-top: 6px;
-      font-size: 12px;
-      font-weight: 400;
-      color: #226BE4;
-      padding-left: 15px;
-      border-radius: 22px;
-      border: 2px solid #226BE4; }
-  .create-modal-contentx .edit-center {
+@media screen and (max-width: 900px) {
+  #createModalx {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
     width: 100%;
-    text-align: center; }
-    .create-modal-contentx .edit-center #edit-email {
-      width: 80%;
-      font-size: 13px;
-      margin-left: 9.5%;
-      font-weight: 400;
-      color: #226BE4; }
-    .create-modal-contentx .edit-center input[type=text] {
-      width: 80%;
-      height: 40px;
-      margin-top: 6px;
-      font-size: 12px;
-      font-weight: 400;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4); }
+
+  .create-modal-contentx {
+    position: absolute;
+    background-color: #F7FAFF;
+    margin: auto;
+    margin-top: 2%;
+    border: 1px solid #888;
+    width: 80%;
+    margin-left: 10%;
+    height: 66%;
+    z-index: 1;
+    border-radius: 19px; }
+    .create-modal-contentx h1 {
+      font-family: "Roboto", sans-serif;
       color: #226BE4;
-      margin-left: 9.5%;
-      padding-left: 15px;
-      border-radius: 22px;
-      margin-bottom: 30px;
-      border: 2px solid #226BE4; }
-    .create-modal-contentx .edit-center #edit-username {
-      width: 80%;
-      font-size: 13px;
-      margin-left: 9.5%;
       font-weight: 400;
-      color: #226BE4; }
-    .create-modal-contentx .edit-center input[type=text] {
-      width: 80%;
-      height: 40px;
-      margin-top: 6px;
-      font-size: 12px;
-      font-weight: 400;
-      color: #226BE4;
-      margin-left: 9.5%;
-      padding-left: 15px;
-      border-radius: 22px;
-      border: 2px solid #226BE4; }
-  .create-modal-contentx .edit-left2 {
-    width: 42%;
-    float: left;
-    margin-left: 58px;
-    padding-bottom: 30px; }
-    .create-modal-contentx .edit-left2 #edit-new-password {
-      width: 80%;
-      font-size: 13px;
-      color: #226BE4;
-      font-weight: 400; }
-    .create-modal-contentx .edit-left2 input[type=text] {
-      width: 80%;
-      height: 40px;
-      margin-top: 6px;
-      font-size: 12px;
-      font-weight: 400;
-      color: #226BE4;
-      padding-left: 15px;
-      border-radius: 22px;
-      border: 2px solid #226BE4; }
-  .create-modal-contentx .edit-right2 {
-    width: 42%;
-    float: right;
-    margin-right: 21px;
-    padding-bottom: 30px; }
-    .create-modal-contentx .edit-right2 #edit-confirm-password {
-      width: 80%;
-      font-size: 13px;
-      color: #226BE4;
-      font-weight: 400; }
-    .create-modal-contentx .edit-right2 input[type=text] {
-      margin-left: -21px;
-      width: 86%;
-      height: 40px;
-      margin-top: 6px;
-      font-size: 12px;
-      font-weight: 400;
-      color: #226BE4;
-      padding-left: 15px;
-      border-radius: 22px;
-      border: 2px solid #226BE4; }
-  .create-modal-contentx .save-changes {
-    margin-left: 39%;
-    background-color: #226BE4;
-    border: 2px solid #226BE4;
-    color: white;
-    padding: 3px 12px;
-    width: 146px;
-    height: 40px;
-    font-weight: 400;
-    text-align: center;
-    font-size: 12px;
-    cursor: pointer;
-    -webkit-transition-duration: 0.4s;
-    /* Safari */
-    transition-duration: 0.4s;
-    border-radius: 25px;
-    margin-right: 10%;
-    font-size: 14px;
-    margin-top: 35px; }
-    .create-modal-contentx .save-changes:hover {
-      width: 145px;
-      height: 40px;
+      text-align: center;
+      padding: 20px;
+      font-size: 30px;
+      padding-bottom: 55px; }
+    .create-modal-contentx .edit-left1 {
+      width: 43%;
+      float: left;
+      margin-left: 58px;
+      padding-bottom: 30px; }
+      .create-modal-contentx .edit-left1 #edit-first {
+        width: 80%;
+        font-size: 13px;
+        font-weight: 400;
+        color: #226BE4; }
+      .create-modal-contentx .edit-left1 input[type=text] {
+        width: 80%;
+        height: 40px;
+        margin-top: 6px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #226BE4;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid #226BE4; }
+    .create-modal-contentx .edit-right1 {
+      width: 44%;
+      float: right;
+      margin-left: -23px;
+      margin-right: 17px;
+      padding-bottom: 30px; }
+      .create-modal-contentx .edit-right1 #edit-last {
+        width: 86%;
+        font-size: 13px;
+        color: #226BE4;
+        font-weight: 400; }
+      .create-modal-contentx .edit-right1 input[type=text] {
+        width: 80%;
+        height: 40px;
+        margin-top: 6px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #226BE4;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid #226BE4; }
+    .create-modal-contentx .edit-center {
+      width: 100%;
+      text-align: center; }
+      .create-modal-contentx .edit-center #edit-email {
+        width: 80%;
+        font-size: 13px;
+        margin-left: 9.5%;
+        font-weight: 400;
+        color: #226BE4; }
+      .create-modal-contentx .edit-center input[type=text] {
+        width: 80%;
+        height: 40px;
+        margin-top: 6px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #226BE4;
+        margin-left: 9.5%;
+        padding-left: 15px;
+        border-radius: 22px;
+        margin-bottom: 30px;
+        border: 2px solid #226BE4; }
+      .create-modal-contentx .edit-center #edit-username {
+        width: 80%;
+        font-size: 13px;
+        margin-left: 9.5%;
+        font-weight: 400;
+        color: #226BE4; }
+      .create-modal-contentx .edit-center input[type=text] {
+        width: 80%;
+        height: 40px;
+        margin-top: 6px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #226BE4;
+        margin-left: 9.5%;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid #226BE4; }
+    .create-modal-contentx .edit-left2 {
+      width: 42%;
+      float: left;
+      margin-left: 58px;
+      padding-bottom: 30px; }
+      .create-modal-contentx .edit-left2 #edit-new-password {
+        width: 80%;
+        font-size: 13px;
+        color: #226BE4;
+        font-weight: 400; }
+      .create-modal-contentx .edit-left2 input[type=text] {
+        width: 80%;
+        height: 40px;
+        margin-top: 6px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #226BE4;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid #226BE4; }
+    .create-modal-contentx .edit-right2 {
+      width: 42%;
+      float: right;
+      margin-right: 21px;
+      padding-bottom: 30px; }
+      .create-modal-contentx .edit-right2 #edit-confirm-password {
+        width: 80%;
+        font-size: 13px;
+        color: #226BE4;
+        font-weight: 400; }
+      .create-modal-contentx .edit-right2 input[type=text] {
+        margin-left: -21px;
+        width: 86%;
+        height: 40px;
+        margin-top: 6px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #226BE4;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid #226BE4; }
+    .create-modal-contentx .save-changes {
       margin-left: 39%;
-      font-weight: 400;
-      background-color: white;
+      background-color: #226BE4;
       border: 2px solid #226BE4;
+      color: white;
+      padding: 3px 12px;
+      width: 146px;
+      height: 40px;
+      font-weight: 400;
+      text-align: center;
+      font-size: 12px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      /* Safari */
+      transition-duration: 0.4s;
       border-radius: 25px;
       margin-right: 10%;
-      color: #226BE4;
       font-size: 14px;
       margin-top: 35px; }
+      .create-modal-contentx .save-changes:hover {
+        width: 145px;
+        height: 40px;
+        margin-left: 39%;
+        font-weight: 400;
+        background-color: white;
+        border: 2px solid #226BE4;
+        border-radius: 25px;
+        margin-right: 10%;
+        color: #226BE4;
+        font-size: 14px;
+        margin-top: 35px; }
 
-/* The Close Button */
-.create-closex {
-  /*display: none;*/
-  color: #aaaaaa;
-  float: right;
-  margin-right: 2%;
-  font-size: 28px;
-  font-weight: bold; }
+  /* The Close Button */
+  .create-closex {
+    /*display: none;*/
+    color: #aaaaaa;
+    float: right;
+    margin-right: 2%;
+    font-size: 28px;
+    font-weight: bold; }
 
-.create-closex:hover,
-.create-closex:focus {
-  /*display: none;*/
-  color: #000;
-  text-decoration: none;
-  cursor: pointer; }
-
+  .create-closex:hover,
+  .create-closex:focus {
+    /*display: none;*/
+    color: #000;
+    text-decoration: none;
+    cursor: pointer; } }
 .profile_wrapper {
   background-color: white;
   margin-top: 760px;

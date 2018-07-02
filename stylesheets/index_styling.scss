@@ -197,6 +197,33 @@ $font: 'Roboto', sans-serif;
   }
 }
 
+.qod-coming-soon {
+  width: 100%;
+  height: auto;
+  h1 {
+    font-family: $font;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 18%;
+    font-size: 46px;
+  }
+  h2 {
+    width: 80%;
+    margin-left: 8%;
+    font-family: $font;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 10px;
+    font-size: 30px;
+  }
+  a {
+    color: $yellow;
+    text-decoration: none;
+  }
+}
+
 /* ================ M O B I L E  C O M I N G  S O O N ================ */
 
 

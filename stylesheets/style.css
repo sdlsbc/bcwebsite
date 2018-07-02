@@ -1130,7 +1130,7 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
     padding: 3px 12px;
     width: 92px;
     height: 30px;
-    margin-top: 20px;
+    margin-top: -20px;
     text-align: center;
     font-size: 6px;
     cursor: pointer;
@@ -1579,6 +1579,29 @@ code {
     font-weight: 100;
     margin-top: 20%;
     font-size: 66px; }
+
+.qod-coming-soon {
+  width: 100%;
+  height: auto; }
+  .qod-coming-soon h1 {
+    font-family: "Roboto", sans-serif;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 18%;
+    font-size: 46px; }
+  .qod-coming-soon h2 {
+    width: 80%;
+    margin-left: 8%;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 10px;
+    font-size: 30px; }
+  .qod-coming-soon a {
+    color: #f9d692;
+    text-decoration: none; }
 
 /* ================ M O B I L E  C O M I N G  S O O N ================ */
 @media screen and (max-width: 700px) {

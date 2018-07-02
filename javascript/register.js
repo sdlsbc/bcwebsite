@@ -82,7 +82,7 @@ function register() {
                         createCustomAlert("WARNING: Not saved locally");
                     } else {
                         console.log("redirected to newsfeed")
-                        // window.location.href = "Newsfeed/newsfeed.html";
+                        window.location.href = "Newsfeed/newsfeed.html";
                     }
 
                 } else {

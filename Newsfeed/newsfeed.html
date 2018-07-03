@@ -295,18 +295,18 @@
   </script>
 <script>
   //open general create modal
-  var modal = document.getElementById('createModal');
-  var btn = document.getElementById("myBtn");
-  var span = document.getElementsByClassName("create-close")[0];
-  btn.onclick = function() {
-    modal.style.display = "block";
+  var modalx = document.getElementById('createModal');
+  var btnx = document.getElementById("myBtn");
+  var spanx = document.getElementsByClassName("create-close")[0];
+  btnx.onclick = function() {
+    modalx.style.display = "block";
   }
-  span.onclick = function() {
-    modal.style.display = "none";
+  spanx.onclick = function() {
+    modalx.style.display = "none";
   }
   window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
+    if (event.target == modalx) {
+      modalx.style.display = "none";
     }
   }
 </script>

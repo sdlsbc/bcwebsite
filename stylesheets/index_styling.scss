@@ -114,68 +114,6 @@ $font: 'Roboto', sans-serif;
   }
 }
 
-/* =============== M O B I L E  M A I N  H E A D E R =============== */
-
-
-@media screen and (max-width: 700px) {
-  .main-header {
-    background-color: white;
-    width: 100%;
-    margin-left: 0%;
-    margin-top: -35px;
-    height: 110px;
-    text-align: center;
-    button {
-      margin-top: -1px;
-      border-radius: 25px;
-      padding-top: 1px;
-      margin-right: 54px;
-      width: 70px;
-      height: 20px;
-      font-size: 12px;
-      border: 2px solid $main-blue;
-      font-family: 'Tajawal', sans-serif;
-      text-decoration: none;
-    }
-    .main-header span .logo {
-      height: 50px;
-      width: 91%;
-      text-align: center;
-    }
-    img {
-      margin-top: 38px;
-      margin-left: 10%;
-      width: 79%;
-      height: 42%;
-    }
-    span a {
-      font-family: $font;
-      text-decoration: none;
-      margin-top: 0px;
-      text-align: center;
-      width: 7%;
-      left: 27px;
-      padding-left: 30px;
-      color: #818181;
-      display: block;
-      transition: 0.3s;
-      &:hover {
-        color: $light-gray;
-      }
-      p {
-        font-family: $font;
-        font-size: 13px;
-      }
-    }
-  }
-  .main-header .button1 {
-    margin-left: 20px;
-  }
-  .main-header .button2 {
-    margin-left: 20px;
-  }
-}
-
 /* =============== C O M I N G  S O O N  P A G E =============== */
 
 
@@ -221,32 +159,6 @@ $font: 'Roboto', sans-serif;
   a {
     color: $yellow;
     text-decoration: none;
-  }
-}
-
-/* ================ M O B I L E  C O M I N G  S O O N ================ */
-
-
-@media screen and (max-width: 700px) {
-  .logo-image {
-    width: 300px;
-    height: 55px;
-    margin-left: 11%;
-    margin-bottom: 12px;
-  }
-  .coming-soon {
-    width: 100%;
-    height: auto;
-    h1 {
-      font-family: $font;
-      color: white;
-      text-align: center;
-      font-weight: 100;
-      margin-top: 50%;
-      margin-left: 5%;
-      width: 90%;
-      font-size: 36px;
-    }
   }
 }
 
@@ -594,238 +506,11 @@ hr {
   }
 }
 
-/* ============== M O B I L E  S I G N  I N  M O D A L ============== */
 
 
-@media screen and (max-width: 700px) { 
-  .index-modal {
-    display: none; 
-    position: fixed;
-    z-index: 1; 
-    padding-top: auto;
-    left: 0;
-    top: 0px;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    .index-modal-content {
-      background-color: white;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-      margin-left: 16px;
-      margin-top: 68%;
-      border-radius: 2%;
-      height: auto;
-      margin-bottom: 15px;
-     .a-login {
-        width: 100%;
-        margin-left: 30%;
-        text-align: center;
-        color: $main-blue;
-        margin-left: 36%;
-        font-size: 22px;
-        padding-bottom: 10px;
-        text-decoration: none;
-      }
-    }
-  }
-  hr {
-    width: 100%;
-    height: 2px;
-    color: $main-blue;
-    font-family: $font;
-  }
-  .first_name {
-    width: 50%;
-    float: left;
-    margin-top: 20px;
-    label {
-      font-family: $font;
-      color: #0080FF;
-      font-size: 14px;
-      margin-left: 6px;
-      font-weight: 100;
-    }
-    input[type=text] {
-      font-family: $font;
-      background-color: $light-gray;
-      border-radius: 13%/97%;
-      padding-left: 15px;
-      margin-left: 5px;
-      margin-top: 6px;
-      font-size: 12px;
-      border: none;
-      height: 40px;
-      width: 100%;
-      color: gray;
-    }
-    span {
-      display: none;
-    }
-  }
-  .last_name {
-    width: 45%;
-    float: right;
-    margin-top: 20px;
-    label {
-      font-family: $font;
-      color: #0080FF;
-      font-size: 14px;
-      margin-left: 6px;
-      font-weight: 100;
-    }
-    input[type=text] {
-      font-family: $font;
-      background-color: $light-gray;
-      border-radius: 13%/97%;
-      padding-left: 18px;
-      margin-top: 6px;
-      font-size: 12px;
-      border: none;
-      height: 40px;
-      width: 100%;
-      color: gray;
-    }
-    span {
-      display: none;
-    }
-  }
-  .handle {
-    width: 100%;
-    margin-top: 10px;
-    text-align: center;
-    label {
-      font-family: $font;
-      margin-top: 10px;
-      color: #0080FF;
-      font-size: 14px;
-      margin-left: 6px;
-      font-weight: 100;
-      float: left;
-    }
-    input[type=text] {
-      font-family: $font;
-      background-color: $light-gray;
-      border-radius: 13%/180%;
-      padding-left: 25px;
-      margin-top: 6px;
-      font-size: 12px;
-      border: none;
-      height: 40px;
-      width: 100%;
-      color: gray;
-    }
-    span {
-      display: none;
-    }
-  }
-  .signin-email {
-    width: 100%;
-    margin-top: 10px;
-    text-align: center;
-    label {
-      font-family: $font;
-      margin-top: 10px;
-      color: #0080FF;
-      font-size: 14px;
-      margin-left: 6px;
-      font-weight: 100;
-      float: left;
-    }
-    input[type=email] {
-      font-family: $font;
-      background-color: $light-gray;
-      border-radius: 13%/180%;
-      padding-left: 25px;
-      margin-top: 6px;
-      font-size: 12px;
-      border: none;
-      height: 40px;
-      width: 100%;
-      color: gray;
-    }
-    span {
-      display: none;
-    }
-  }
-  .signin-password {
-    width: 100%;
-    margin-top: 10px;
-    text-align: center;
-    label {
-      font-family: $font;
-      margin-top: 10px;
-      color: #0080FF;
-      font-size: 14px;
-      margin-left: 6px;
-      font-weight: 100;
-      float: left;
-    }
-    input[type=text] {
-      font-family: $font;
-      background-color: $light-gray;
-      border-radius: 13%/180%;
-      padding-left: 25px;
-      margin-top: 6px;
-      font-size: 12px;
-      border: none;
-      height: 40px;
-      width: 100%;
-      color: gray;
-    }
-    span {
-      display: none;
-    }
-    a {
-    display: none;
-   }
-  }
-  .signin-submit input[type=button] {
-    font-family: $font;
-    background-color: $main-blue;
-    padding: 12px; 
-    margin-left: 36%;
-    margin-bottom: -10px;
-    width: 28%;
-    border:0 none;
-    cursor:pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 25px;
-    font-size: 12px;
-    color: white;
-    font-weight: 100;
-    &:hover {
-      font-family: $font;
-      background-color: #0000CD;
-      padding: 12px; 
-      margin-left: 0%;
-      margin-bottom: -10px;
-      width: 28%;
-      border:0 none;
-      cursor:pointer;
-      -webkit-border-radius: 5px;
-      border-radius: 25px;
-      font-size: 12px;
-      color: white;
-      font-weight: 100;
-    }
-  }
-  .signin-agree {
-    margin-left: 3px;
-    font-size: 15px;
-    a {
-      font-family: $font;
-      font-size: 15px;
-      text-decoration: none;
-      color: $main-blue;
-    }
-  }
-}
+
 
 /* ===================== L O G I N  M O D A L ===================== */
-
 
 .login-email {
   width: 100%;
@@ -936,119 +621,6 @@ hr {
   font-size: 18px;
 }
 
-/* =============== M O B I L E  L O G I N  M O D A L =============== */ 
-
-  
-@media screen and (max-width: 700px) { 
-  .login-email {
-    width: 100%;
-    margin-top: 10px;
-    text-align: center;
-    label {
-      font-family: $font;
-      color: #0080FF;
-      font-size: 14px;
-      margin-left: 13px;
-      font-weight: 100;
-      float: left
-    }
-    input[type=email] {
-      font-family: $font;
-      background-image: url("../images/mail-icon.png");
-      background-position: 4.5% 50%;
-      background-repeat: no-repeat;
-      background-size: 20px;
-      padding-top: 2px;
-      background-color: #E0E0E0;
-      border-radius: 13%/180%;
-      padding-left: 47px; 
-      margin-top: 6px;
-      font-size: 14px;
-      border: none;
-      height: 40px;
-      width: 100%;
-      color: gray;
-    }
-    span {
-      display: none;
-    }
-  }
-  .login-password {
-    width: 100%;
-    margin-top: 10px;
-    text-align: center;
-    label {
-      font-family: $font;
-      margin-top: 10px;
-      color: #0080FF;
-      font-size: 14px;
-      margin-left: 13px;
-      font-weight: 100;
-      float: left;
-    }
-    input[type=text] {
-      font-family: $font;
-      background-image: url("../images/lock.png");
-      background-position: 4.5% 50%;
-      background-repeat: no-repeat;
-      background-size: 20px;
-      padding-top: 2px;
-      background-color: #E0E0E0;
-      border-radius: 13%/180%;
-      padding-left: 57px;
-      margin-top: 6px;
-      font-size: 14px;
-      border: none;
-      height: 40px;
-      width: 100%;
-      color: gray;
-    }
-    span {
-      display: none;
-    }
-    a {
-      display: none;
-    }
-    input[type=button] {
-      font-family: $font;
-      background-color: $main-blue;
-      padding: 12px; 
-      margin-left: 0%;
-      margin-bottom: -10px;
-      width: 28%;
-      border:0 none;
-      cursor:pointer;
-      -webkit-border-radius: 5px;
-      border-radius: 25px;
-      font-size: 14px;
-      color: white;
-      font-weight: 100;
-      &:hover {
-        font-family: $font;
-        background-color: #0000CD;
-        padding: 12px; 
-        margin-left: 0%;
-        width: 28%;
-        border:0 none;
-        cursor:pointer;
-        -webkit-border-radius: 5px;
-        border-radius: 25px;
-        color: white;
-        font-size: 14px;
-        font-weight: 100;
-      }
-    }
-  }
-  .forgot a {
-    font-family: $font;
-    margin-top: 20px;
-    color: #0080FF;;
-    text-align: center;
-    margin-left: 33%;
-    text-decoration: none;
-    font-size: 18px;
-  }
-}
 
 /* ====================== C L O S E  B T N ====================== */
 .close {
@@ -1545,6 +1117,523 @@ code {
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 900px) {
+  /*.main-header {
+    background-color: white;
+    width: 100%;
+    margin-left: 0%;
+    margin-top: -35px;
+    height: 110px;
+    text-align: center;
+    button {
+      margin-top: -1px;
+      border-radius: 25px;
+      padding-top: 1px;
+      margin-right: 54px;
+      width: 70px;
+      height: 20px;
+      font-size: 12px;
+      border: 2px solid $main-blue;
+      font-family: 'Tajawal', sans-serif;
+      text-decoration: none;
+    }
+    .main-header span .logo {
+      height: 50px;
+      width: 91%;
+      text-align: center;
+    }
+    img {
+      margin-top: 38px;
+      margin-left: 10%;
+      width: 79%;
+      height: 42%;
+    }
+    span a {
+      font-family: $font;
+      text-decoration: none;
+      margin-top: 0px;
+      text-align: center;
+      width: 7%;
+      left: 27px;
+      padding-left: 30px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+      &:hover {
+        color: $light-gray;
+      }
+      p {
+        font-family: $font;
+        font-size: 13px;
+      }
+    }
+  }
+  .main-header .button1 {
+    margin-left: 20px;
+  }
+  .main-header .button2 {
+    margin-left: 20px;
+  }*/
+  
+  
+  
+  
+ 
+  
+  /*.logo-image {
+    width: 300px;
+    height: 55px;
+    margin-left: 11%;
+    margin-bottom: 12px;
+  }
+  .coming-soon {
+    width: 100%;
+    height: auto;
+    h1 {
+      font-family: $font;
+      color: white;
+      text-align: center;
+      font-weight: 100;
+      margin-top: 50%;
+      margin-left: 5%;
+      width: 90%;
+      font-size: 36px;
+    }
+  }
+  */
+  
+  
+  
+  
+  
+  
+  .index-modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    padding-top: auto;
+    left: 0;
+    top: 0px;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    .index-modal-content {
+      background-color: white;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      margin-left: 56px;
+      margin-top: 37%;
+      border-radius: 2%;
+      height: auto;
+      margin-bottom: 15px;
+     .a-login {
+        width: 100%;
+        margin-left: 30%;
+        text-align: center;
+        color: $main-blue;
+        margin-left: 46%;
+        font-size: 26px;
+        padding-bottom: 10px;
+        text-decoration: none;
+      }
+    }
+  }
+  hr {
+    width: 100%;
+    height: 2px;
+    color: $main-blue;
+    font-family: $font;
+  }
+  .first_name {
+    width: 50%;
+    float: left;
+    margin-top: 20px;
+    label {
+      font-family: $font;
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 6px;
+      font-weight: 100;
+    }
+    input[type=text] {
+      font-family: $font;
+      background-color: $light-gray;
+      border-radius: 13%/97%;
+      padding-left: 15px;
+      margin-left: 5px;
+      margin-top: 6px;
+      font-size: 12px;
+      border: none;
+      height: 40px;
+      width: 100%;
+      color: gray;
+    }
+    span {
+      display: none;
+    }
+  }
+  .last_name {
+    width: 45%;
+    float: right;
+    margin-top: 20px;
+    label {
+      font-family: $font;
+      color: #0080FF;
+      font-size: 14px;
+      margin-left: 6px;
+      font-weight: 100;
+    }
+    input[type=text] {
+      font-family: $font;
+      background-color: $light-gray;
+      border-radius: 13%/97%;
+      padding-left: 18px;
+      margin-top: 6px;
+      font-size: 12px;
+      border: none;
+      height: 40px;
+      width: 100%;
+      color: gray;
+    }
+    span {
+      display: none;
+    }
+  }
+  .handle {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    label {
+      font-family: $font;
+      margin-top: 10px;
+      color: #0080FF;
+      font-size: 14px;
+      margin-left: 6px;
+      font-weight: 100;
+      float: left;
+    }
+    input[type=text] {
+      font-family: $font;
+      background-color: $light-gray;
+      border-radius: 13%/180%;
+      padding-left: 25px;
+      margin-top: 6px;
+      font-size: 12px;
+      border: none;
+      height: 40px;
+      width: 100%;
+      color: gray;
+    }
+    span {
+      display: none;
+    }
+  }
+  .signin-email {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    label {
+      font-family: $font;
+      margin-top: 10px;
+      color: #0080FF;
+      font-size: 14px;
+      margin-left: 6px;
+      font-weight: 100;
+      float: left;
+    }
+    input[type=email] {
+      font-family: $font;
+      background-color: $light-gray;
+      border-radius: 13%/180%;
+      padding-left: 25px;
+      margin-top: 6px;
+      font-size: 12px;
+      border: none;
+      height: 40px;
+      width: 100%;
+      color: gray;
+    }
+    span {
+      display: none;
+    }
+  }
+  .signin-password {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    label {
+      font-family: $font;
+      margin-top: 10px;
+      color: #0080FF;
+      font-size: 14px;
+      margin-left: 6px;
+      font-weight: 100;
+      float: left;
+    }
+    input[type=text] {
+      font-family: $font;
+      background-color: $light-gray;
+      border-radius: 13%/180%;
+      padding-left: 25px;
+      margin-top: 6px;
+      font-size: 12px;
+      border: none;
+      height: 40px;
+      width: 100%;
+      color: gray;
+    }
+    span {
+      display: none;
+    }
+    a {
+    display: none;
+   }
+  }
+  .signin-submit input[type=button] {
+    font-family: $font;
+    background-color: $main-blue;
+    padding: 12px; 
+    margin-left: 36%;
+    margin-bottom: -10px;
+    width: 28%;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 25px;
+    font-size: 12px;
+    color: white;
+    font-weight: 100;
+    &:hover {
+      font-family: $font;
+      background-color: #0000CD;
+      padding: 12px; 
+      margin-left: 0%;
+      margin-bottom: -10px;
+      width: 28%;
+      border:0 none;
+      cursor:pointer;
+      -webkit-border-radius: 5px;
+      border-radius: 25px;
+      font-size: 12px;
+      color: white;
+      font-weight: 100;
+    }
+  }
+  .signin-agree {
+    margin-left: 3px;
+    font-size: 15px;
+    a {
+      font-family: $font;
+      font-size: 15px;
+      text-decoration: none;
+      color: $main-blue;
+    }
+  }
+  
+  
+  
+  
+  
+
+  .login-email {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    label {
+      font-family: $font;
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 24px;
+      font-weight: 100;
+      float: left
+    }
+    input[type=email] {
+      font-family: $font;
+      background-image: url("../images/mail-icon.png");
+      background-position: 4.5% 50%;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      padding-top: 2px;
+      background-color: #E0E0E0;
+      border-radius: 13%/180%;
+      padding-left: 65px; 
+      margin-top: 6px;
+      font-size: 16px;
+      border: none;
+      height: 55px;
+      width: 100%;
+      color: gray;
+    }
+    span {
+      display: none;
+    }
+  }
+  .login-password {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    label {
+      font-family: $font;
+      margin-top: 10px;
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 24px;
+      font-weight: 100;
+      float: left;
+    }
+    input[type=password] {
+      font-family: $font;
+      background-image: url("../images/lock.png");
+      background-position: 4.5% 50%;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      padding-top: 2px;
+      background-color: $light-gray;
+      border-radius: 13%/180%;
+      padding-left: 65px;
+      margin-top: 6px;
+      font-size: 16px;
+      border: none;
+      height: 55px;
+      width: 100%;
+      color: gray;
+    }
+    span {
+      display: none;
+    }
+    a {
+      display: none;
+      font-family: $font;
+    }
+  }
+  .login-submit input[type=button] {
+    font-family: $font;
+    background-color: $main-blue;
+    padding: 14px; 
+    margin-left: 40%;
+    width: 20%;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 25px;
+    font-size: 16px;
+    color: white;
+    font-weight: 100;
+    &:hover {
+      font-family: $font;
+      background-color: #0000CD;
+      padding: 14px; 
+      margin-left: 40%;
+      width: 20%;
+      border:0 none;
+      cursor:pointer;
+      -webkit-border-radius: 5px;
+      border-radius: 25px;
+      color: white;
+      font-size: 16px;
+      font-weight: 100;
+    }
+  }
+  .forgot a {
+    font-family: $font;
+    margin-top: 20px;
+    color: #0080FF;;
+    text-align: center;
+    margin-left: 33%;
+    text-decoration: none;
+    font-size: 18px;
+  }
+}
+
+
+
+
+
+
+
+
 
 
 

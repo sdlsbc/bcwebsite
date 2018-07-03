@@ -100,7 +100,6 @@ function loadProfile() {
 
 function favorite(post_id, liked) {
 	//alert("totes fave" + id)
-	console.log(post_id);
 	let user_id = localStorage.getItem("user_id");
 	let url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/favorite"
 	let body = { 
@@ -115,14 +114,12 @@ function favorite(post_id, liked) {
 		body: JSON.stringify(body),
 		method: 'POST'
 	}
-	console.log(url)
 	return fetch(url, params)
 		.then(res => res.json());
 
 }
 
 function likesUpdate(post_id) {
-	console.log('update likes post id ', post_id);
 	let url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read';
 
 	fetch(url, {
@@ -140,15 +137,10 @@ function likesUpdate(post_id) {
 				console.log("request not successful");
 				// createCustomAlert("WARNING: User Already Exists");
 			} else {
-				console.log('Success in likes likesUpdate:', body)
 				var likes = body.response.favoriters;
-				console.log('Likes are', likes)
 
 				let parent = document.getElementById(post_id);
-				console.log('post id in likes', post_id)
 				let fav_likes = parent.querySelector('.fav_likes');
-				console.log(fav_likes);
-				console.log("length ", body.response.post.favoriters.length)
 				fav_likes.innerHTML = body.response.post.favoriters.length;
 
 			}
@@ -167,7 +159,7 @@ function showModal(body) {
 	var post_image = document.getElementsByClassName('modal-image');
 	post_image[0].innerHTML = '<img src=' + img_address + '>';
 
-	var profile_image_address = body.publisher.profile_image;
+	var profile_image_address = body.publisher_image;
 
 	// check if profile picture is default
 	if (profile_image_address == "http://app.bwayconnected.com/public/images/default.jpg") {
@@ -180,47 +172,47 @@ function showModal(body) {
 	var publisher_name = document.getElementsByClassName("modal_h3");
 
 	//var publisher_nameNode = document.createTextNode(body.publisher.first_name + ' ' + body.publisher.last_name);
-	publisher_name[0].innerHTML = body.publisher.first_name + ' ' + body.publisher.last_name;
+	publisher_name[0].innerHTML = body.publisher_name;
 	//publisher_name[0].appendChild(publisher_nameNode);
 
-	var dateTime = body.published_date;
-	var dateTime = dateTime.split(" ");
-	var date1 = dateTime[0];
-	var time1 = dateTime[1];
+	var dateTime = new Date(body["Created Date"]);
+	// var dateTime = dateTime.split(" ");
+	// var date1 = dateTime[0];
+	// var time1 = dateTime[1];
 
-	var real_date = Date(date1);
-	var real_date = real_date.split(" ");
-	var real_date0 = real_date[0];
-	var real_date1 = real_date[1];
-	var real_date2 = real_date[2];
-	var really_real_date = [real_date0] + " " + [real_date1] + " " + [real_date2];
+	// var real_date = Date(date1);
+	// var real_date = real_date.split(" ");
+	// var real_date0 = real_date[0];
+	// var real_date1 = real_date[1];
+	// var real_date2 = real_date[2];
+	// var really_real_date = [real_date0] + " " + [real_date1] + " " + [real_date2];
 
 	var date = document.getElementsByClassName("modal-date");
-	date[0].innerHTML = really_real_date;
+	date[0].innerHTML = dateTime.toDateString();
 	//  var time = document.getElementsByClassName("modal-time");
 	// time[0].innerHTML = time1;
 
-	var time_split = time1.split(':');
-	var hours = Number(time_split[0]);
-	var minutes = Number(time_split[1]);
-	var seconds = Number(time_split[2]);
+	// var time_split = time1.split(':');
+	// var hours = Number(time_split[0]);
+	// var minutes = Number(time_split[1]);
+	// var seconds = Number(time_split[2]);
 
-	var timeValue;
+	// var timeValue;
 
-	if (hours > 0 && hours <= 12) {
-		timeValue = "" + hours;
-	} else if (hours > 12) {
-		timeValue = "" + (hours - 12);
-	} else if (hours == 0) {
-		timeValue = "12";
-	}
+	// if (hours > 0 && hours <= 12) {
+	// 	timeValue = "" + hours;
+	// } else if (hours > 12) {
+	// 	timeValue = "" + (hours - 12);
+	// } else if (hours == 0) {
+	// 	timeValue = "12";
+	// }
 
-	timeValue += (minutes < 10) ? ":0" + minutes : ":" + minutes;  // get minutes
+	//timeValue += (minutes < 10) ? ":0" + minutes : ":" + minutes;  // get minutes
 	// timeValue += (seconds < 10) ? ":0" + seconds : ":" + seconds;  // get seconds
-	timeValue += (hours >= 12) ? " P.M." : " A.M.";  // get AM/PM
+	//timeValue += (hours >= 12) ? " P.M." : " A.M.";  // get AM/PM
 
 	var timexxx = document.getElementsByClassName("modal-time");
-	timexxx[0].innerHTML = timeValue;
+	timexxx[0].innerHTML = dateTime.toTimeString();
 
 	var title = document.getElementsByClassName("modal-title");
 	title[0].innerHTML = body.title;
@@ -258,7 +250,6 @@ function showModal(body) {
 	fav_button.onclick = function (ev) {
 		favorite(body._id)
 			.then(body => {
-				console.log('body', body);
 				if (body.Response == "2000") {
 					likesUpdate(body.Result.Posts[0].id);
 				}
@@ -353,7 +344,6 @@ function createPost(body) {
 		}
 	}
 	fav_button.onclick = function (ev) {
-		console.log("like before fetch ", liked)
 		favorite(body._id, liked)
 			.then(body => {
 				if(body.response.post.favoriters.some(fav => fav == "1530287074040x237806817283853900")){
@@ -361,10 +351,7 @@ function createPost(body) {
 				} else {
 					var new_like = false;
 				}
-				console.log("new like ", new_like)
-				console.log('body of Create Post', body);
 				if (body.status == "success") {
-					console.log("Success")
 					likesUpdate(body.response.post._id);
 				}
 				if (new_like) {

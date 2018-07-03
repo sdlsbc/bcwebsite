@@ -66,13 +66,17 @@ function register() {
                     var res_handle = response.response.user.handle;
                     var res_usertype_id = response.response.personal._id;
                     var res_usertype = response.response.user.usertype;
-
+                    var res_lastname = response.response.user.lastname;
+                    var res_firstname = response.response.user.firstname;
 
                     localStorage.setItem("user_id", res_user_id);
                     localStorage.setItem("usertype_id", res_usertype_id);
                     localStorage.setItem("usertype", res_usertype);
                     localStorage.setItem("token", token);
                     localStorage.setItem("handle", res_handle);
+                    localStorage.setItem("first_name", res_firstname);
+                    localStorage.setItem("last_name", res_lastname);
+
 
                     // save usertype data 
                     saveUserTypeData(token);

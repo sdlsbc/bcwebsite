@@ -10,8 +10,6 @@ function checkLocalStorage(page) {
 		console.log(PAGE + " page");
 		loadProfile();
 		// loadAndShowPosts();
-		checkIfCompleteProfile();
-
 	} else if (PAGE == 'profile') {
 		console.log(PAGE);
 		loadProfileData();
@@ -75,7 +73,7 @@ function loadProfile() {
 	pic.classList.add('profile_pic');
 	let source = localStorage.getItem('profile_image');
 
-	if (source == "http://app.bwayconnected.com/public/images/default.jpg") {
+	if (source == "http://app.bwayconnected.com/public/images/default.jpg" || source == "" || source == null) {
 		pic.src = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"
 	} else {
 		pic.src = source;

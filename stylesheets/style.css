@@ -96,7 +96,7 @@
     float: right;
     width: 10%;
     display: inline-block;
-    margin-left: 40%;
+    margin-left: 19%;
     margin-right: 5%;
     margin-top: 1px; }
   .navbar .signout-y {
@@ -1149,7 +1149,7 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
     .sidenav .my-profile-btn:hover {
       width: 92px;
       height: 30px;
-      margin-top: 20px;
+      margin-top: -20px;
       color: #1B5AC3;
       font-size: 6px;
       background-color: #3399ff; }
@@ -1513,57 +1513,6 @@ code {
       text-decoration: none;
       color: #226BE4; }
 
-/* =============== M O B I L E  M A I N  H E A D E R =============== */
-@media screen and (max-width: 700px) {
-  .main-header {
-    background-color: white;
-    width: 100%;
-    margin-left: 0%;
-    margin-top: -35px;
-    height: 110px;
-    text-align: center; }
-    .main-header button {
-      margin-top: -1px;
-      border-radius: 25px;
-      padding-top: 1px;
-      margin-right: 54px;
-      width: 70px;
-      height: 20px;
-      font-size: 12px;
-      border: 2px solid #226BE4;
-      font-family: 'Tajawal', sans-serif;
-      text-decoration: none; }
-    .main-header .main-header span .logo {
-      height: 50px;
-      width: 91%;
-      text-align: center; }
-    .main-header img {
-      margin-top: 38px;
-      margin-left: 10%;
-      width: 79%;
-      height: 42%; }
-    .main-header span a {
-      font-family: "Roboto", sans-serif;
-      text-decoration: none;
-      margin-top: 0px;
-      text-align: center;
-      width: 7%;
-      left: 27px;
-      padding-left: 30px;
-      color: #818181;
-      display: block;
-      transition: 0.3s; }
-      .main-header span a:hover {
-        color: #E9E9E9; }
-      .main-header span a p {
-        font-family: "Roboto", sans-serif;
-        font-size: 13px; }
-
-  .main-header .button1 {
-    margin-left: 20px; }
-
-  .main-header .button2 {
-    margin-left: 20px; } }
 /* =============== C O M I N G  S O O N  P A G E =============== */
 .logo-image {
   width: 300px;
@@ -1603,26 +1552,6 @@ code {
     color: #f9d692;
     text-decoration: none; }
 
-/* ================ M O B I L E  C O M I N G  S O O N ================ */
-@media screen and (max-width: 700px) {
-  .logo-image {
-    width: 300px;
-    height: 55px;
-    margin-left: 11%;
-    margin-bottom: 12px; }
-
-  .coming-soon {
-    width: 100%;
-    height: auto; }
-    .coming-soon h1 {
-      font-family: "Roboto", sans-serif;
-      color: white;
-      text-align: center;
-      font-weight: 100;
-      margin-top: 50%;
-      margin-left: 5%;
-      width: 90%;
-      font-size: 36px; } }
 /* ==================== S I G N  I N  M O D A L ==================== */
 .index-modal {
   display: none;
@@ -1933,211 +1862,6 @@ hr {
     text-decoration: none;
     color: #226BE4; }
 
-/* ============== M O B I L E  S I G N  I N  M O D A L ============== */
-@media screen and (max-width: 700px) {
-  .index-modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: auto;
-    left: 0;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    overflow: auto; }
-    .index-modal .index-modal-content {
-      background-color: white;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-      margin-left: 16px;
-      margin-top: 68%;
-      border-radius: 2%;
-      height: auto;
-      margin-bottom: 15px; }
-      .index-modal .index-modal-content .a-login {
-        width: 100%;
-        margin-left: 30%;
-        text-align: center;
-        color: #226BE4;
-        margin-left: 36%;
-        font-size: 22px;
-        padding-bottom: 10px;
-        text-decoration: none; }
-
-  hr {
-    width: 100%;
-    height: 2px;
-    color: #226BE4;
-    font-family: "Roboto", sans-serif; }
-
-  .first_name {
-    width: 50%;
-    float: left;
-    margin-top: 20px; }
-    .first_name label {
-      font-family: "Roboto", sans-serif;
-      color: #0080FF;
-      font-size: 14px;
-      margin-left: 6px;
-      font-weight: 100; }
-    .first_name input[type=text] {
-      font-family: "Roboto", sans-serif;
-      background-color: #E9E9E9;
-      border-radius: 13%/97%;
-      padding-left: 15px;
-      margin-left: 5px;
-      margin-top: 6px;
-      font-size: 12px;
-      border: none;
-      height: 40px;
-      width: 100%;
-      color: gray; }
-    .first_name span {
-      display: none; }
-
-  .last_name {
-    width: 45%;
-    float: right;
-    margin-top: 20px; }
-    .last_name label {
-      font-family: "Roboto", sans-serif;
-      color: #0080FF;
-      font-size: 14px;
-      margin-left: 6px;
-      font-weight: 100; }
-    .last_name input[type=text] {
-      font-family: "Roboto", sans-serif;
-      background-color: #E9E9E9;
-      border-radius: 13%/97%;
-      padding-left: 18px;
-      margin-top: 6px;
-      font-size: 12px;
-      border: none;
-      height: 40px;
-      width: 100%;
-      color: gray; }
-    .last_name span {
-      display: none; }
-
-  .handle {
-    width: 100%;
-    margin-top: 10px;
-    text-align: center; }
-    .handle label {
-      font-family: "Roboto", sans-serif;
-      margin-top: 10px;
-      color: #0080FF;
-      font-size: 14px;
-      margin-left: 6px;
-      font-weight: 100;
-      float: left; }
-    .handle input[type=text] {
-      font-family: "Roboto", sans-serif;
-      background-color: #E9E9E9;
-      border-radius: 13%/180%;
-      padding-left: 25px;
-      margin-top: 6px;
-      font-size: 12px;
-      border: none;
-      height: 40px;
-      width: 100%;
-      color: gray; }
-    .handle span {
-      display: none; }
-
-  .signin-email {
-    width: 100%;
-    margin-top: 10px;
-    text-align: center; }
-    .signin-email label {
-      font-family: "Roboto", sans-serif;
-      margin-top: 10px;
-      color: #0080FF;
-      font-size: 14px;
-      margin-left: 6px;
-      font-weight: 100;
-      float: left; }
-    .signin-email input[type=email] {
-      font-family: "Roboto", sans-serif;
-      background-color: #E9E9E9;
-      border-radius: 13%/180%;
-      padding-left: 25px;
-      margin-top: 6px;
-      font-size: 12px;
-      border: none;
-      height: 40px;
-      width: 100%;
-      color: gray; }
-    .signin-email span {
-      display: none; }
-
-  .signin-password {
-    width: 100%;
-    margin-top: 10px;
-    text-align: center; }
-    .signin-password label {
-      font-family: "Roboto", sans-serif;
-      margin-top: 10px;
-      color: #0080FF;
-      font-size: 14px;
-      margin-left: 6px;
-      font-weight: 100;
-      float: left; }
-    .signin-password input[type=text] {
-      font-family: "Roboto", sans-serif;
-      background-color: #E9E9E9;
-      border-radius: 13%/180%;
-      padding-left: 25px;
-      margin-top: 6px;
-      font-size: 12px;
-      border: none;
-      height: 40px;
-      width: 100%;
-      color: gray; }
-    .signin-password span {
-      display: none; }
-    .signin-password a {
-      display: none; }
-
-  .signin-submit input[type=button] {
-    font-family: "Roboto", sans-serif;
-    background-color: #226BE4;
-    padding: 12px;
-    margin-left: 36%;
-    margin-bottom: -10px;
-    width: 28%;
-    border: 0 none;
-    cursor: pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 25px;
-    font-size: 12px;
-    color: white;
-    font-weight: 100; }
-    .signin-submit input[type=button]:hover {
-      font-family: "Roboto", sans-serif;
-      background-color: #0000CD;
-      padding: 12px;
-      margin-left: 0%;
-      margin-bottom: -10px;
-      width: 28%;
-      border: 0 none;
-      cursor: pointer;
-      -webkit-border-radius: 5px;
-      border-radius: 25px;
-      font-size: 12px;
-      color: white;
-      font-weight: 100; }
-
-  .signin-agree {
-    margin-left: 3px;
-    font-size: 15px; }
-    .signin-agree a {
-      font-family: "Roboto", sans-serif;
-      font-size: 15px;
-      text-decoration: none;
-      color: #226BE4; } }
 /* ===================== L O G I N  M O D A L ===================== */
 .login-email {
   width: 100%;
@@ -2239,106 +1963,6 @@ hr {
   text-decoration: none;
   font-size: 18px; }
 
-/* =============== M O B I L E  L O G I N  M O D A L =============== */
-@media screen and (max-width: 700px) {
-  .login-email {
-    width: 100%;
-    margin-top: 10px;
-    text-align: center; }
-    .login-email label {
-      font-family: "Roboto", sans-serif;
-      color: #0080FF;
-      font-size: 14px;
-      margin-left: 13px;
-      font-weight: 100;
-      float: left; }
-    .login-email input[type=email] {
-      font-family: "Roboto", sans-serif;
-      background-image: url("../images/mail-icon.png");
-      background-position: 4.5% 50%;
-      background-repeat: no-repeat;
-      background-size: 20px;
-      padding-top: 2px;
-      background-color: #E0E0E0;
-      border-radius: 13%/180%;
-      padding-left: 47px;
-      margin-top: 6px;
-      font-size: 14px;
-      border: none;
-      height: 40px;
-      width: 100%;
-      color: gray; }
-    .login-email span {
-      display: none; }
-
-  .login-password {
-    width: 100%;
-    margin-top: 10px;
-    text-align: center; }
-    .login-password label {
-      font-family: "Roboto", sans-serif;
-      margin-top: 10px;
-      color: #0080FF;
-      font-size: 14px;
-      margin-left: 13px;
-      font-weight: 100;
-      float: left; }
-    .login-password input[type=text] {
-      font-family: "Roboto", sans-serif;
-      background-image: url("../images/lock.png");
-      background-position: 4.5% 50%;
-      background-repeat: no-repeat;
-      background-size: 20px;
-      padding-top: 2px;
-      background-color: #E0E0E0;
-      border-radius: 13%/180%;
-      padding-left: 57px;
-      margin-top: 6px;
-      font-size: 14px;
-      border: none;
-      height: 40px;
-      width: 100%;
-      color: gray; }
-    .login-password span {
-      display: none; }
-    .login-password a {
-      display: none; }
-    .login-password input[type=button] {
-      font-family: "Roboto", sans-serif;
-      background-color: #226BE4;
-      padding: 12px;
-      margin-left: 0%;
-      margin-bottom: -10px;
-      width: 28%;
-      border: 0 none;
-      cursor: pointer;
-      -webkit-border-radius: 5px;
-      border-radius: 25px;
-      font-size: 14px;
-      color: white;
-      font-weight: 100; }
-      .login-password input[type=button]:hover {
-        font-family: "Roboto", sans-serif;
-        background-color: #0000CD;
-        padding: 12px;
-        margin-left: 0%;
-        width: 28%;
-        border: 0 none;
-        cursor: pointer;
-        -webkit-border-radius: 5px;
-        border-radius: 25px;
-        color: white;
-        font-size: 14px;
-        font-weight: 100; }
-
-  .forgot a {
-    font-family: "Roboto", sans-serif;
-    margin-top: 20px;
-    color: #0080FF;
-    text-align: center;
-    margin-left: 33%;
-    text-decoration: none;
-    font-size: 18px; } }
 /* ====================== C L O S E  B T N ====================== */
 .close {
   font-family: "Roboto", sans-serif;
@@ -2795,6 +2419,492 @@ code {
         color: #226BE4;
         text-decoration: none; }
 
+@media screen and (max-width: 1200px) {
+  /*.main-header {
+    background-color: white;
+    width: 100%;
+    margin-left: 0%;
+    margin-top: -35px;
+    height: 110px;
+    text-align: center;
+    button {
+      margin-top: -1px;
+      border-radius: 25px;
+      padding-top: 1px;
+      margin-right: 54px;
+      width: 70px;
+      height: 20px;
+      font-size: 12px;
+      border: 2px solid $main-blue;
+      font-family: 'Tajawal', sans-serif;
+      text-decoration: none;
+    }
+    .main-header span .logo {
+      height: 50px;
+      width: 91%;
+      text-align: center;
+    }
+    img {
+      margin-top: 38px;
+      margin-left: 10%;
+      width: 79%;
+      height: 42%;
+    }
+    span a {
+      font-family: $font;
+      text-decoration: none;
+      margin-top: 0px;
+      text-align: center;
+      width: 7%;
+      left: 27px;
+      padding-left: 30px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+      &:hover {
+        color: $light-gray;
+      }
+      p {
+        font-family: $font;
+        font-size: 13px;
+      }
+    }
+  }
+  .main-header .button1 {
+    margin-left: 20px;
+  }
+  .main-header .button2 {
+    margin-left: 20px;
+  }*/
+  /*.logo-image {
+    width: 300px;
+    height: 55px;
+    margin-left: 11%;
+    margin-bottom: 12px;
+  }
+  .coming-soon {
+    width: 100%;
+    height: auto;
+    h1 {
+      font-family: $font;
+      color: white;
+      text-align: center;
+      font-weight: 100;
+      margin-top: 50%;
+      margin-left: 5%;
+      width: 90%;
+      font-size: 36px;
+    }
+  }
+  */
+  .index-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: auto;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: auto; }
+    .index-modal .index-modal-content {
+      background-color: white;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      margin-top: 175px;
+      border-radius: 2%;
+      height: auto;
+      margin-bottom: 15px; }
+
+  .a-login {
+    /*login and signup button*/
+    width: 100%;
+    text-align: center;
+    color: #226BE4;
+    margin-left: 44%;
+    font-size: 26px;
+    padding-bottom: 10px;
+    text-decoration: none; }
+
+  hr {
+    width: 100%;
+    height: 2px;
+    color: #226BE4; }
+
+  .signin-usertype {
+    width: 80%;
+    text-align: center;
+    margin-top: 10px; }
+    .signin-usertype label {
+      font-family: "Roboto", sans-serif;
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 25px;
+      font-weight: 100; }
+    .signin-usertype .styled-select {
+      margin-left: 10px;
+      height: 33px;
+      background-color: #226BE4;
+      overflow: hidden;
+      width: 170px;
+      font-size: 14px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 100;
+      padding-left: 15px;
+      color: white;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px; }
+    .signin-usertype .styled-select select {
+      background: transparent;
+      border: none;
+      font-size: 14px;
+      height: 29px;
+      padding: 5px;
+      width: 268px; }
+
+  .first_name {
+    width: 50%;
+    float: left;
+    margin-top: 20px; }
+    .first_name label {
+      font-family: "Roboto", sans-serif;
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 25px;
+      font-weight: 100; }
+    .first_name span {
+      display: none; }
+    .first_name input[type=text] {
+      background-color: #E9E9E9;
+      border-radius: 13%/97%;
+      padding-left: 15px;
+      margin-left: 5px;
+      margin-top: 6px;
+      font-size: 16px;
+      border: none;
+      height: 50px;
+      width: 100%;
+      color: gray;
+      font-family: "Roboto", sans-serif; }
+
+  .last_name {
+    width: 45%;
+    float: right;
+    margin-top: 20px; }
+    .last_name label {
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 18px;
+      font-weight: 100;
+      font-family: "Roboto", sans-serif; }
+    .last_name input[type=text] {
+      background-color: #E9E9E9;
+      border-radius: 13%/97%;
+      padding-left: 18px;
+      margin-top: 6px;
+      font-size: 16px;
+      border: none;
+      height: 50px;
+      width: 100%;
+      color: gray;
+      font-family: "Roboto", sans-serif; }
+    .last_name span {
+      display: none; }
+
+  .handle {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center; }
+    .handle label {
+      font-family: "Roboto", sans-serif;
+      margin-top: 10px;
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 25px;
+      font-weight: 100;
+      float: left; }
+    .handle input[type=text] {
+      font-family: "Roboto", sans-serif;
+      background-color: #E9E9E9;
+      border-radius: 13%/180%;
+      padding-left: 25px;
+      margin-top: 6px;
+      font-size: 16px;
+      border: none;
+      height: 50px;
+      width: 100%;
+      color: gray; }
+    .handle span {
+      display: none; }
+
+  .signin-email {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center; }
+    .signin-email label {
+      font-family: "Roboto", sans-serif;
+      margin-top: 10px;
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 25px;
+      font-weight: 100;
+      float: left; }
+    .signin-email input[type=email] {
+      font-family: "Roboto", sans-serif;
+      background-color: #E9E9E9;
+      border-radius: 13%/180%;
+      padding-left: 25px;
+      margin-top: 6px;
+      font-size: 16px;
+      border: none;
+      height: 50px;
+      width: 100%;
+      color: gray; }
+    .signin-email span {
+      display: none; }
+
+  .signin-password {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center; }
+    .signin-password label {
+      font-family: "Roboto", sans-serif;
+      margin-top: 10px;
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 25px;
+      font-weight: 100;
+      float: left; }
+    .signin-password input[type=password] {
+      font-family: "Roboto", sans-serif;
+      background-color: #E9E9E9;
+      border-radius: 13%/180%;
+      padding-left: 25px;
+      margin-top: 6px;
+      font-size: 16px;
+      border: none;
+      height: 50px;
+      width: 100%;
+      color: gray; }
+    .signin-password span {
+      display: none; }
+    .signin-password a {
+      display: none; }
+
+  .signin-city {
+    width: 45%;
+    float: left;
+    margin-top: 0px; }
+    .signin-city label {
+      font-family: "Roboto", sans-serif;
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 25px;
+      font-weight: 100; }
+    .signin-city span {
+      display: none; }
+    .signin-city input[type=text] {
+      background-color: #E9E9E9;
+      border-radius: 13%/97%;
+      padding-left: 15px;
+      margin-left: 5px;
+      margin-top: 6px;
+      font-size: 16px;
+      border: none;
+      height: 50px;
+      width: 100%;
+      color: gray;
+      font-family: "Roboto", sans-serif; }
+
+  .signin-country {
+    width: 45%;
+    float: right;
+    margin-top: 0px; }
+    .signin-country label {
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 18px;
+      font-weight: 100;
+      font-family: "Roboto", sans-serif; }
+    .signin-country input[type=text] {
+      background-color: #E9E9E9;
+      border-radius: 13%/97%;
+      padding-left: 18px;
+      margin-top: 6px;
+      font-size: 16px;
+      border: none;
+      height: 50px;
+      width: 100%;
+      color: gray;
+      font-family: "Roboto", sans-serif; }
+    .signin-country span {
+      display: none; }
+
+  .signin-phone {
+    width: 45%;
+    float: left;
+    margin-top: 0px; }
+    .signin-phone label {
+      font-family: "Roboto", sans-serif;
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 25px;
+      font-weight: 100; }
+    .signin-phone span {
+      display: none; }
+    .signin-phone input[type=text] {
+      background-color: #E9E9E9;
+      border-radius: 13%/97%;
+      padding-left: 15px;
+      margin-left: 5px;
+      margin-top: 6px;
+      font-size: 16px;
+      border: none;
+      height: 50px;
+      width: 100%;
+      color: gray;
+      font-family: "Roboto", sans-serif; }
+
+  .signin-submit input[type=button] {
+    font-family: "Roboto", sans-serif;
+    background-color: #226BE4;
+    padding: 14px;
+    margin-left: 40%;
+    margin-bottom: -10px;
+    width: 20%;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 25px;
+    font-size: 16px;
+    color: white;
+    font-weight: 100; }
+    .signin-submit input[type=button]:hover {
+      font-family: "Roboto", sans-serif;
+      background-color: #0000CD;
+      padding: 12px;
+      margin-left: 40%;
+      margin-bottom: -10px;
+      width: 20%;
+      border: 0 none;
+      cursor: pointer;
+      -webkit-border-radius: 5px;
+      border-radius: 25px;
+      font-size: 14px;
+      color: white;
+      font-weight: 100; }
+
+  .signin-agree {
+    margin-left: 3px;
+    font-size: 15px; }
+    .signin-agree a {
+      font-family: "Roboto", sans-serif;
+      font-size: 15px;
+      text-decoration: none;
+      color: #226BE4; }
+
+  .login-email {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center; }
+    .login-email label {
+      font-family: "Roboto", sans-serif;
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 24px;
+      font-weight: 100;
+      float: left; }
+    .login-email input[type=email] {
+      font-family: "Roboto", sans-serif;
+      background-image: url("../images/mail-icon.png");
+      background-position: 4.5% 50%;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      padding-top: 2px;
+      background-color: #E0E0E0;
+      border-radius: 13%/180%;
+      padding-left: 65px;
+      margin-top: 6px;
+      font-size: 16px;
+      border: none;
+      height: 55px;
+      width: 100%;
+      color: gray; }
+    .login-email span {
+      display: none; }
+
+  .login-password {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center; }
+    .login-password label {
+      font-family: "Roboto", sans-serif;
+      margin-top: 10px;
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 24px;
+      font-weight: 100;
+      float: left; }
+    .login-password input[type=password] {
+      font-family: "Roboto", sans-serif;
+      background-image: url("../images/lock.png");
+      background-position: 4.5% 50%;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      padding-top: 2px;
+      background-color: #E9E9E9;
+      border-radius: 13%/180%;
+      padding-left: 65px;
+      margin-top: 6px;
+      font-size: 16px;
+      border: none;
+      height: 55px;
+      width: 100%;
+      color: gray; }
+    .login-password span {
+      display: none; }
+    .login-password a {
+      display: none;
+      font-family: "Roboto", sans-serif; }
+
+  .login-submit input[type=button] {
+    font-family: "Roboto", sans-serif;
+    background-color: #226BE4;
+    padding: 14px;
+    margin-left: 40%;
+    width: 20%;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 25px;
+    font-size: 16px;
+    color: white;
+    font-weight: 100; }
+    .login-submit input[type=button]:hover {
+      font-family: "Roboto", sans-serif;
+      background-color: #0000CD;
+      padding: 14px;
+      margin-left: 40%;
+      width: 20%;
+      border: 0 none;
+      cursor: pointer;
+      -webkit-border-radius: 5px;
+      border-radius: 25px;
+      color: white;
+      font-size: 16px;
+      font-weight: 100; }
+
+  .forgot a {
+    font-family: "Roboto", sans-serif;
+    margin-top: 20px;
+    color: #0080FF;
+    text-align: center;
+    margin-left: 33%;
+    text-decoration: none;
+    font-size: 18px; } }
 /*$other-blue-dark: #226BE4;
 $other-blue-light: #;*/
 .hidden {
@@ -4052,7 +4162,7 @@ $other-blue-light: #;*/
       font-weight: 100;
       font-size: 30px;
       text-align: center;
-      color: #226BE4; }
+      color: #546e99; }
   .pe-nav #profile-following {
     display: none;
     background-color: white;
@@ -4150,7 +4260,7 @@ $other-blue-light: #;*/
     height: 100%;
     padding-right: 2px;
     display: inline-block;
-    background-color: white;
+    background-color: #546e99;
     border-right: 1px solid #E9E9E9; }
     .create-modal-content .column1 h3 {
       font-family: "Roboto", sans-serif;
@@ -4610,7 +4720,7 @@ $other-blue-light: #;*/
     width: 24.3%;
     height: 100%;
     display: inline-block;
-    background-color: #f9d692;
+    background-color: #cc8b5c;
     border-right: 1px solid #E9E9E9; }
     .create-modal-content .column2 h3 {
       font-family: "Roboto", sans-serif;
@@ -4688,7 +4798,7 @@ $other-blue-light: #;*/
     width: 24.3%;
     height: 100%;
     display: inline-block;
-    background-color: #E9E9E9;
+    background-color: #a67753;
     border-right: 1px solid #E9E9E9; }
     .create-modal-content .column3 h3 {
       font-family: "Roboto", sans-serif;
@@ -4766,7 +4876,7 @@ $other-blue-light: #;*/
     width: 24.7%;
     height: 100%;
     display: inline-block;
-    background-color: #F7FAFF; }
+    background-color: #4860a1; }
     .create-modal-content .column4 h3 {
       font-family: "Roboto", sans-serif;
       text-align: center;
@@ -6321,6 +6431,382 @@ $other-blue-light: #;*/
         height: 80%; }
 
 @media screen and (max-width: 700px) {
+  /* =============== M O B I L E  M A I N  H E A D E R =============== */
+  .main-header {
+    background-color: white;
+    width: 100%;
+    margin-left: 0%;
+    margin-top: -35px;
+    height: 110px;
+    text-align: center; }
+    .main-header button {
+      margin-top: -1px;
+      border-radius: 25px;
+      padding-top: 1px;
+      margin-right: 54px;
+      width: 70px;
+      height: 20px;
+      font-size: 12px;
+      border: 2px solid #226BE4;
+      font-family: 'Tajawal', sans-serif;
+      text-decoration: none; }
+    .main-header .main-header span .logo {
+      height: 50px;
+      width: 91%;
+      text-align: center; }
+    .main-header img {
+      margin-top: 38px;
+      margin-left: 10%;
+      width: 79%;
+      height: 42%; }
+    .main-header span a {
+      font-family: "Roboto", sans-serif;
+      text-decoration: none;
+      margin-top: 0px;
+      text-align: center;
+      width: 7%;
+      left: 27px;
+      padding-left: 30px;
+      color: #818181;
+      display: block;
+      transition: 0.3s; }
+      .main-header span a:hover {
+        color: #E9E9E9; }
+      .main-header span a p {
+        font-family: "Roboto", sans-serif;
+        font-size: 13px; }
+
+  .main-header .button1 {
+    margin-left: 20px; }
+
+  .main-header .button2 {
+    margin-left: 20px; }
+
+  /* ================ M O B I L E  C O M I N G  S O O N ================ */
+  .logo-image {
+    width: 300px;
+    height: 55px;
+    margin-left: 11%;
+    margin-bottom: 12px; }
+
+  .coming-soon {
+    width: 100%;
+    height: auto; }
+    .coming-soon h1 {
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: center;
+      font-weight: 100;
+      margin-top: 50%;
+      margin-left: 5%;
+      width: 90%;
+      font-size: 36px; }
+
+  /* ============== M O B I L E  S I G N  I N  M O D A L ============== */
+  .index-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: auto;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: auto; }
+    .index-modal .index-modal-content {
+      background-color: white;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      margin-left: 16px;
+      margin-top: 68%;
+      border-radius: 2%;
+      height: auto;
+      margin-bottom: 15px; }
+      .index-modal .index-modal-content .a-login {
+        width: 100%;
+        margin-left: 30%;
+        text-align: center;
+        color: #226BE4;
+        margin-left: 36%;
+        font-size: 22px;
+        padding-bottom: 10px;
+        text-decoration: none; }
+
+  hr {
+    width: 100%;
+    height: 2px;
+    color: #226BE4;
+    font-family: "Roboto", sans-serif; }
+
+  .first_name {
+    width: 50%;
+    float: left;
+    margin-top: 20px; }
+    .first_name label {
+      font-family: "Roboto", sans-serif;
+      color: #0080FF;
+      font-size: 14px;
+      margin-left: 6px;
+      font-weight: 100; }
+    .first_name input[type=text] {
+      font-family: "Roboto", sans-serif;
+      background-color: #E9E9E9;
+      border-radius: 13%/97%;
+      padding-left: 15px;
+      margin-left: 5px;
+      margin-top: 6px;
+      font-size: 12px;
+      border: none;
+      height: 40px;
+      width: 100%;
+      color: gray; }
+    .first_name span {
+      display: none; }
+
+  .last_name {
+    width: 45%;
+    float: right;
+    margin-top: 20px; }
+    .last_name label {
+      font-family: "Roboto", sans-serif;
+      color: #0080FF;
+      font-size: 14px;
+      margin-left: 6px;
+      font-weight: 100; }
+    .last_name input[type=text] {
+      font-family: "Roboto", sans-serif;
+      background-color: #E9E9E9;
+      border-radius: 13%/97%;
+      padding-left: 18px;
+      margin-top: 6px;
+      font-size: 12px;
+      border: none;
+      height: 40px;
+      width: 100%;
+      color: gray; }
+    .last_name span {
+      display: none; }
+
+  .handle {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center; }
+    .handle label {
+      font-family: "Roboto", sans-serif;
+      margin-top: 10px;
+      color: #0080FF;
+      font-size: 14px;
+      margin-left: 6px;
+      font-weight: 100;
+      float: left; }
+    .handle input[type=text] {
+      font-family: "Roboto", sans-serif;
+      background-color: #E9E9E9;
+      border-radius: 13%/180%;
+      padding-left: 25px;
+      margin-top: 6px;
+      font-size: 12px;
+      border: none;
+      height: 40px;
+      width: 100%;
+      color: gray; }
+    .handle span {
+      display: none; }
+
+  .signin-email {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center; }
+    .signin-email label {
+      font-family: "Roboto", sans-serif;
+      margin-top: 10px;
+      color: #0080FF;
+      font-size: 14px;
+      margin-left: 6px;
+      font-weight: 100;
+      float: left; }
+    .signin-email input[type=email] {
+      font-family: "Roboto", sans-serif;
+      background-color: #E9E9E9;
+      border-radius: 13%/180%;
+      padding-left: 25px;
+      margin-top: 6px;
+      font-size: 12px;
+      border: none;
+      height: 40px;
+      width: 100%;
+      color: gray; }
+    .signin-email span {
+      display: none; }
+
+  .signin-password {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center; }
+    .signin-password label {
+      font-family: "Roboto", sans-serif;
+      margin-top: 10px;
+      color: #0080FF;
+      font-size: 14px;
+      margin-left: 6px;
+      font-weight: 100;
+      float: left; }
+    .signin-password input[type=text] {
+      font-family: "Roboto", sans-serif;
+      background-color: #E9E9E9;
+      border-radius: 13%/180%;
+      padding-left: 25px;
+      margin-top: 6px;
+      font-size: 12px;
+      border: none;
+      height: 40px;
+      width: 100%;
+      color: gray; }
+    .signin-password span {
+      display: none; }
+    .signin-password a {
+      display: none; }
+
+  .signin-submit input[type=button] {
+    font-family: "Roboto", sans-serif;
+    background-color: #226BE4;
+    padding: 12px;
+    margin-left: 36%;
+    margin-bottom: -10px;
+    width: 28%;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 25px;
+    font-size: 12px;
+    color: white;
+    font-weight: 100; }
+    .signin-submit input[type=button]:hover {
+      font-family: "Roboto", sans-serif;
+      background-color: #0000CD;
+      padding: 12px;
+      margin-left: 0%;
+      margin-bottom: -10px;
+      width: 28%;
+      border: 0 none;
+      cursor: pointer;
+      -webkit-border-radius: 5px;
+      border-radius: 25px;
+      font-size: 12px;
+      color: white;
+      font-weight: 100; }
+
+  .signin-agree {
+    margin-left: 3px;
+    font-size: 15px; }
+    .signin-agree a {
+      font-family: "Roboto", sans-serif;
+      font-size: 15px;
+      text-decoration: none;
+      color: #226BE4; }
+
+  /* =============== M O B I L E  L O G I N  M O D A L =============== */
+  .login-email {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center; }
+    .login-email label {
+      font-family: "Roboto", sans-serif;
+      color: #0080FF;
+      font-size: 14px;
+      margin-left: 13px;
+      font-weight: 100;
+      float: left; }
+    .login-email input[type=email] {
+      font-family: "Roboto", sans-serif;
+      background-image: url("../images/mail-icon.png");
+      background-position: 4.5% 50%;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      padding-top: 2px;
+      background-color: #E0E0E0;
+      border-radius: 13%/180%;
+      padding-left: 47px;
+      margin-top: 6px;
+      font-size: 14px;
+      border: none;
+      height: 40px;
+      width: 100%;
+      color: gray; }
+    .login-email span {
+      display: none; }
+
+  .login-password {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center; }
+    .login-password label {
+      font-family: "Roboto", sans-serif;
+      margin-top: 10px;
+      color: #0080FF;
+      font-size: 14px;
+      margin-left: 13px;
+      font-weight: 100;
+      float: left; }
+    .login-password input[type=text] {
+      font-family: "Roboto", sans-serif;
+      background-image: url("../images/lock.png");
+      background-position: 4.5% 50%;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      padding-top: 2px;
+      background-color: #E0E0E0;
+      border-radius: 13%/180%;
+      padding-left: 57px;
+      margin-top: 6px;
+      font-size: 14px;
+      border: none;
+      height: 40px;
+      width: 100%;
+      color: gray; }
+    .login-password span {
+      display: none; }
+    .login-password a {
+      display: none; }
+    .login-password input[type=button] {
+      font-family: "Roboto", sans-serif;
+      background-color: #226BE4;
+      padding: 12px;
+      margin-left: 0%;
+      margin-bottom: -10px;
+      width: 28%;
+      border: 0 none;
+      cursor: pointer;
+      -webkit-border-radius: 5px;
+      border-radius: 25px;
+      font-size: 14px;
+      color: white;
+      font-weight: 100; }
+      .login-password input[type=button]:hover {
+        font-family: "Roboto", sans-serif;
+        background-color: #0000CD;
+        padding: 12px;
+        margin-left: 0%;
+        width: 28%;
+        border: 0 none;
+        cursor: pointer;
+        -webkit-border-radius: 5px;
+        border-radius: 25px;
+        color: white;
+        font-size: 14px;
+        font-weight: 100; }
+
+  .forgot a {
+    font-family: "Roboto", sans-serif;
+    margin-top: 20px;
+    color: #0080FF;
+    text-align: center;
+    margin-left: 33%;
+    text-decoration: none;
+    font-size: 18px; }
+
   .profile-signout-button {
     background-color: #1B5AC3;
     border: 2px solid #1B5AC3;

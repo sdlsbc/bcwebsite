@@ -432,16 +432,16 @@
   .tabcontent {
     position: relative;
     display: none;
-    padding: 6px 12px;
+    padding: 6px 9px;
     border: 1px solid #ccc;
     border-top: none;
-    margin-top: -52%;
+    margin-top: -54%;
     background-color: white;
     width: 97%;
     height: 84%;
   }
   #create-milestones {
-    background-color: white;
+    background-color: #f3c2a9;
     h3 {
       font-weight: 400;
       color: $main-blue;
@@ -508,7 +508,7 @@
     }
   }
   #create-moments{
-    background-color: $yellow;
+    background-color: #dc8357;
     h3 {
       font-weight: 400;
       color: $main-blue;
@@ -576,7 +576,7 @@
   }
   #create-articles{
     width: 97%;
-    background-color: $light-gray;
+    background-color: #f49260;
     h3 {
       font-weight: 400;
       color: $main-blue;
@@ -590,11 +590,11 @@
       margin-top: 0%;
       margin-bottom: 3%;
       display: inline-block;
-      #a-title {
+      #a-header {
         margin-left: 33px;
         color: $main-blue;
       }
-      #articles-title {
+      #articles-header{
         margin-left: 8%;
         width: 86%;
         height: 10px;
@@ -612,11 +612,11 @@
       margin-top: 0%;
       margin-bottom: 3%;
       display: inline-block;
-      #a-header {
+      #a-title {
         margin-left: -1px;
         color: $main-blue;
       }
-      #articles-header {
+      #articles-title {
         margin-right: 8%;
         width: 86%;
         height: 10px;
@@ -714,7 +714,7 @@
     }
   }
   #create-events{
-    background-color: $light-blue;
+    background-color: #d8896d;
     h3 {
       font-weight: 400;
       color: $main-blue;
@@ -728,11 +728,11 @@
       margin-top: 0%;
       margin-bottom: 3%;
       display: inline-block;
-      #e-title {
+      #e-header {
         margin-left: 33px;
         color: $main-blue;
       }
-      #events-title {
+      #events-header {
         margin-left: 8%;
         width: 86%;
         height: 10px;
@@ -750,11 +750,11 @@
       margin-top: 0%;
       margin-bottom: 3%;
       display: inline-block;
-      #e-header {
+      #e-title {
         margin-left: -1px;
         color: $main-blue;
       }
-      #events-header {
+      #events-title {
         margin-right: 8%;
         width: 86%;
         height: 10px;
@@ -1030,7 +1030,8 @@
     }
   }
   .column4 {
-    width: 24.7%;
+    width: 25.2%;
+    padding-top: 2px;
     height: 100%;
     display: inline-block;
     background-color: #d8896d;

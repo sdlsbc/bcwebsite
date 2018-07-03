@@ -402,7 +402,7 @@
 /* Modal Content */
 .create-modal-content {
   position: absolute;
-  background-color: #fefefe;
+  background-color: $gray;
   margin: auto;
   margin-top: 4%;
   border: 1px solid #888;
@@ -411,12 +411,13 @@
   height: 60%;
   z-index: 1;
   .column1 {
-    width: 23%;
+    width: 24%;
     height: 100%;
-    padding-right: 2px;
+    padding-top: 4px;
+    padding-right: 0px;
     display: inline-block;
-    background-color: white;
-    border-right: 1px solid $light-gray;
+    background-color: #f3c2a9;
+    border-right: 0px solid $light-gray;
     h3 {
       font-family: $font;
       text-align: center;
@@ -528,18 +529,18 @@
 
   /* Style the tab content */
   .tabcontent {
-    position: fixed;
+    position: inherit;
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
-    margin-top: -113%;
-    background-color: white;
-    width: 83%;
+    margin-top: -126%;
+    background-color: $gray;
+    width: 92%;
     height: 64.8%;
   }
   #create-milestones {
-    background-color: white;
+    background-color: #f3c2a9;
     h3 {
       font-weight: 400;
       color: $main-blue;
@@ -606,7 +607,7 @@
     }
   }
   #create-moments{
-    background-color: $yellow;
+    background-color: #dc8357;
     h3 {
       font-weight: 400;
       color: $main-blue;
@@ -673,8 +674,8 @@
     }
   }
   #create-articles{
-    width: 83%;
-    background-color: $light-gray;
+    width: 92.5%;
+    background-color: #f49260;
     h3 {
       text-align: center;
       font-weight: 400;
@@ -813,8 +814,8 @@
     }
   }
   #create-events{
-    width: 83%;
-    background-color: $light-blue;
+    width: 92.5%;
+    background-color: #d8896d;
     h3 {
       text-align: center;
       font-weight: 400;
@@ -955,11 +956,12 @@
 
 
   .column2 {
-    width: 23%;
+    width: 24%;
     height: 100%;
+    padding-top: 4px;
     display: inline-block;
-    background-color: $yellow;
-    border-right: 1px solid $light-gray;
+    background-color: #dc8357;
+    border-right: 0px solid $light-gray;
     h3 {
       font-family: $font;
       text-align: center;
@@ -1044,11 +1046,12 @@
     }
   }
   .column3 {
-    width: 23%;
+    width: 24%;
     height: 100%;
+    padding-top: 4px;
     display: inline-block;
-    background-color: $light-gray;
-    border-right: 1px solid $light-gray;
+    background-color: #f49260;
+    border-right: 0px solid $light-gray;
     h3 {
       font-family: $font;
       text-align: center;
@@ -1133,10 +1136,11 @@
     }
   }
   .column4 {
-    width: 23%;
+    width: 24%;
     height: 100%;
+    padding-top: 4px;
     display: inline-block;
-    background-color: $light-blue;
+    background-color: #d8896d;
     h3 {
       font-family: $font;
       text-align: center;

@@ -1197,7 +1197,7 @@ code {
 
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
   /*.main-header {
     background-color: white;
     width: 100%;
@@ -1303,28 +1303,60 @@ code {
       padding: 20px;
       border: 1px solid #888;
       width: 80%;
-      margin-left: 56px;
-      margin-top: 37%;
+      margin-top: 175px;
       border-radius: 2%;
       height: auto;
       margin-bottom: 15px;
-     .a-login {
-        width: 100%;
-        margin-left: 30%;
-        text-align: center;
-        color: $main-blue;
-        margin-left: 46%;
-        font-size: 26px;
-        padding-bottom: 10px;
-        text-decoration: none;
-      }
     }
+  }
+  .a-login {             /*login and signup button*/
+    width: 100%;
+    text-align: center;
+    color: $main-blue;
+    margin-left: 44%;
+    font-size: 26px;
+    padding-bottom: 10px;
+    text-decoration: none;
   }
   hr {
     width: 100%;
     height: 2px;
     color: $main-blue;
-    font-family: $font;
+  }
+  .signin-usertype {
+    width: 80%;
+    text-align: center;
+    margin-top: 10px;
+    label {
+      font-family: $font;
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 25px;
+      font-weight: 100;
+    }
+    .styled-select {
+      margin-left: 10px;
+      height: 33px;
+      background-color: #226BE4;
+      overflow: hidden;
+      width: 170px;
+      font-size: 14px;
+      font-family: $font;
+      font-weight: 100;
+      padding-left: 15px;
+      color: white;
+       -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+    }
+    .styled-select select {
+      background: transparent;
+      border: none;
+      font-size: 14px;
+      height: 29px;
+      padding: 5px; 
+      width: 268px;
+    }
   }
   .first_name {
     width: 50%;
@@ -1334,48 +1366,48 @@ code {
       font-family: $font;
       color: #0080FF;
       font-size: 18px;
-      margin-left: 6px;
+      margin-left: 25px;
       font-weight: 100;
     }
+    span {
+      display: none;
+    }
     input[type=text] {
-      font-family: $font;
       background-color: $light-gray;
       border-radius: 13%/97%;
       padding-left: 15px;
       margin-left: 5px;
       margin-top: 6px;
-      font-size: 12px;
+      font-size: 16px;
       border: none;
-      height: 40px;
+      height: 50px;
       width: 100%;
       color: gray;
+      font-family: $font;
     }
-    span {
-      display: none;
-    }
-  }
+  }  
   .last_name {
     width: 45%;
     float: right;
     margin-top: 20px;
     label {
-      font-family: $font;
       color: #0080FF;
-      font-size: 14px;
-      margin-left: 6px;
+      font-size: 18px;
+      margin-left: 18px;
       font-weight: 100;
+      font-family: $font;
     }
     input[type=text] {
-      font-family: $font;
       background-color: $light-gray;
       border-radius: 13%/97%;
       padding-left: 18px;
       margin-top: 6px;
-      font-size: 12px;
+      font-size: 16px;
       border: none;
-      height: 40px;
+      height: 50px;
       width: 100%;
-      color: gray;
+      color:gray;
+      font-family: $font;
     }
     span {
       display: none;
@@ -1383,14 +1415,14 @@ code {
   }
   .handle {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
     label {
       font-family: $font;
       margin-top: 10px;
       color: #0080FF;
-      font-size: 14px;
-      margin-left: 6px;
+      font-size: 18px;
+      margin-left: 25px;
       font-weight: 100;
       float: left;
     }
@@ -1400,9 +1432,9 @@ code {
       border-radius: 13%/180%;
       padding-left: 25px;
       margin-top: 6px;
-      font-size: 12px;
+      font-size: 16px;
       border: none;
-      height: 40px;
+      height: 50px;
       width: 100%;
       color: gray;
     }
@@ -1418,8 +1450,8 @@ code {
       font-family: $font;
       margin-top: 10px;
       color: #0080FF;
-      font-size: 14px;
-      margin-left: 6px;
+      font-size: 18px;
+      margin-left: 25px;
       font-weight: 100;
       float: left;
     }
@@ -1429,9 +1461,9 @@ code {
       border-radius: 13%/180%;
       padding-left: 25px;
       margin-top: 6px;
-      font-size: 12px;
+      font-size: 16px;
       border: none;
-      height: 40px;
+      height: 50px;
       width: 100%;
       color: gray;
     }
@@ -1447,20 +1479,20 @@ code {
       font-family: $font;
       margin-top: 10px;
       color: #0080FF;
-      font-size: 14px;
-      margin-left: 6px;
+      font-size: 18px;
+      margin-left: 25px;
       font-weight: 100;
       float: left;
     }
-    input[type=text] {
+    input[type=password] {
       font-family: $font;
       background-color: $light-gray;
       border-radius: 13%/180%;
       padding-left: 25px;
       margin-top: 6px;
-      font-size: 12px;
+      font-size: 16px;
       border: none;
-      height: 40px;
+      height: 50px;
       width: 100%;
       color: gray;
     }
@@ -1468,35 +1500,119 @@ code {
       display: none;
     }
     a {
-    display: none;
-   }
+      display: none;
+    }
   }
+  .signin-city {
+    width: 45%;
+    float: left;
+    margin-top: 0px;
+    label {
+      font-family: $font;
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 25px;
+      font-weight: 100;
+    }
+    span {
+      display: none;
+    }
+    input[type=text] {
+      background-color: $light-gray;
+      border-radius: 13%/97%;
+      padding-left: 15px;
+      margin-left: 5px;
+      margin-top: 6px;
+      font-size: 16px;
+      border: none;
+      height: 50px;
+      width: 100%;
+      color: gray;
+      font-family: $font;
+    }
+  }
+  .signin-country {
+    width: 45%;
+    float: right;
+    margin-top: 0px;
+    label {
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 18px;
+      font-weight: 100;
+      font-family: $font;
+    }
+    input[type=text] {
+      background-color: $light-gray;
+      border-radius: 13%/97%;
+      padding-left: 18px;
+      margin-top: 6px;
+      font-size: 16px;
+      border: none;
+      height: 50px;
+      width: 100%;
+      color:gray;
+      font-family: $font;
+    }
+    span {
+      display: none;
+    }
+  }
+  .signin-phone {
+    width: 45%;
+    float: left;
+    margin-top: 0px;
+    label {
+      font-family: $font;
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 25px;
+      font-weight: 100;
+    }
+    span {
+      display: none;
+    }
+    input[type=text] {
+      background-color: $light-gray;
+      border-radius: 13%/97%;
+      padding-left: 15px;
+      margin-left: 5px;
+      margin-top: 6px;
+      font-size: 16px;
+      border: none;
+      height: 50px;
+      width: 100%;
+      color: gray;
+      font-family: $font;
+    }
+  }
+  
   .signin-submit input[type=button] {
     font-family: $font;
     background-color: $main-blue;
-    padding: 12px; 
-    margin-left: 36%;
+    padding: 14px; 
+    margin-left: 40%;
     margin-bottom: -10px;
-    width: 28%;
+    width: 20%;
     border:0 none;
     cursor:pointer;
     -webkit-border-radius: 5px;
     border-radius: 25px;
-    font-size: 12px;
+    font-size: 16px;
     color: white;
     font-weight: 100;
     &:hover {
       font-family: $font;
       background-color: #0000CD;
       padding: 12px; 
-      margin-left: 0%;
+      margin-left: 40%;
       margin-bottom: -10px;
-      width: 28%;
+      width: 20%;
       border:0 none;
       cursor:pointer;
       -webkit-border-radius: 5px;
       border-radius: 25px;
-      font-size: 12px;
+      font-size: 14px;
       color: white;
       font-weight: 100;
     }
@@ -1511,6 +1627,7 @@ code {
       color: $main-blue;
     }
   }
+  
   
   
   

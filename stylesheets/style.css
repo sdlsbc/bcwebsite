@@ -2419,7 +2419,7 @@ code {
         color: #226BE4;
         text-decoration: none; }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
   /*.main-header {
     background-color: white;
     width: 100%;
@@ -2513,26 +2513,57 @@ code {
       padding: 20px;
       border: 1px solid #888;
       width: 80%;
-      margin-left: 56px;
-      margin-top: 37%;
+      margin-top: 175px;
       border-radius: 2%;
       height: auto;
       margin-bottom: 15px; }
-      .index-modal .index-modal-content .a-login {
-        width: 100%;
-        margin-left: 30%;
-        text-align: center;
-        color: #226BE4;
-        margin-left: 46%;
-        font-size: 26px;
-        padding-bottom: 10px;
-        text-decoration: none; }
+
+  .a-login {
+    /*login and signup button*/
+    width: 100%;
+    text-align: center;
+    color: #226BE4;
+    margin-left: 44%;
+    font-size: 26px;
+    padding-bottom: 10px;
+    text-decoration: none; }
 
   hr {
     width: 100%;
     height: 2px;
-    color: #226BE4;
-    font-family: "Roboto", sans-serif; }
+    color: #226BE4; }
+
+  .signin-usertype {
+    width: 80%;
+    text-align: center;
+    margin-top: 10px; }
+    .signin-usertype label {
+      font-family: "Roboto", sans-serif;
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 25px;
+      font-weight: 100; }
+    .signin-usertype .styled-select {
+      margin-left: 10px;
+      height: 33px;
+      background-color: #226BE4;
+      overflow: hidden;
+      width: 170px;
+      font-size: 14px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 100;
+      padding-left: 15px;
+      color: white;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px; }
+    .signin-usertype .styled-select select {
+      background: transparent;
+      border: none;
+      font-size: 14px;
+      height: 29px;
+      padding: 5px;
+      width: 268px; }
 
   .first_name {
     width: 50%;
@@ -2542,57 +2573,57 @@ code {
       font-family: "Roboto", sans-serif;
       color: #0080FF;
       font-size: 18px;
-      margin-left: 6px;
+      margin-left: 25px;
       font-weight: 100; }
+    .first_name span {
+      display: none; }
     .first_name input[type=text] {
-      font-family: "Roboto", sans-serif;
       background-color: #E9E9E9;
       border-radius: 13%/97%;
       padding-left: 15px;
       margin-left: 5px;
       margin-top: 6px;
-      font-size: 12px;
+      font-size: 16px;
       border: none;
-      height: 40px;
+      height: 50px;
       width: 100%;
-      color: gray; }
-    .first_name span {
-      display: none; }
+      color: gray;
+      font-family: "Roboto", sans-serif; }
 
   .last_name {
     width: 45%;
     float: right;
     margin-top: 20px; }
     .last_name label {
-      font-family: "Roboto", sans-serif;
       color: #0080FF;
-      font-size: 14px;
-      margin-left: 6px;
-      font-weight: 100; }
+      font-size: 18px;
+      margin-left: 18px;
+      font-weight: 100;
+      font-family: "Roboto", sans-serif; }
     .last_name input[type=text] {
-      font-family: "Roboto", sans-serif;
       background-color: #E9E9E9;
       border-radius: 13%/97%;
       padding-left: 18px;
       margin-top: 6px;
-      font-size: 12px;
+      font-size: 16px;
       border: none;
-      height: 40px;
+      height: 50px;
       width: 100%;
-      color: gray; }
+      color: gray;
+      font-family: "Roboto", sans-serif; }
     .last_name span {
       display: none; }
 
   .handle {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center; }
     .handle label {
       font-family: "Roboto", sans-serif;
       margin-top: 10px;
       color: #0080FF;
-      font-size: 14px;
-      margin-left: 6px;
+      font-size: 18px;
+      margin-left: 25px;
       font-weight: 100;
       float: left; }
     .handle input[type=text] {
@@ -2601,9 +2632,9 @@ code {
       border-radius: 13%/180%;
       padding-left: 25px;
       margin-top: 6px;
-      font-size: 12px;
+      font-size: 16px;
       border: none;
-      height: 40px;
+      height: 50px;
       width: 100%;
       color: gray; }
     .handle span {
@@ -2617,8 +2648,8 @@ code {
       font-family: "Roboto", sans-serif;
       margin-top: 10px;
       color: #0080FF;
-      font-size: 14px;
-      margin-left: 6px;
+      font-size: 18px;
+      margin-left: 25px;
       font-weight: 100;
       float: left; }
     .signin-email input[type=email] {
@@ -2627,9 +2658,9 @@ code {
       border-radius: 13%/180%;
       padding-left: 25px;
       margin-top: 6px;
-      font-size: 12px;
+      font-size: 16px;
       border: none;
-      height: 40px;
+      height: 50px;
       width: 100%;
       color: gray; }
     .signin-email span {
@@ -2643,19 +2674,19 @@ code {
       font-family: "Roboto", sans-serif;
       margin-top: 10px;
       color: #0080FF;
-      font-size: 14px;
-      margin-left: 6px;
+      font-size: 18px;
+      margin-left: 25px;
       font-weight: 100;
       float: left; }
-    .signin-password input[type=text] {
+    .signin-password input[type=password] {
       font-family: "Roboto", sans-serif;
       background-color: #E9E9E9;
       border-radius: 13%/180%;
       padding-left: 25px;
       margin-top: 6px;
-      font-size: 12px;
+      font-size: 16px;
       border: none;
-      height: 40px;
+      height: 50px;
       width: 100%;
       color: gray; }
     .signin-password span {
@@ -2663,32 +2694,106 @@ code {
     .signin-password a {
       display: none; }
 
+  .signin-city {
+    width: 45%;
+    float: left;
+    margin-top: 0px; }
+    .signin-city label {
+      font-family: "Roboto", sans-serif;
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 25px;
+      font-weight: 100; }
+    .signin-city span {
+      display: none; }
+    .signin-city input[type=text] {
+      background-color: #E9E9E9;
+      border-radius: 13%/97%;
+      padding-left: 15px;
+      margin-left: 5px;
+      margin-top: 6px;
+      font-size: 16px;
+      border: none;
+      height: 50px;
+      width: 100%;
+      color: gray;
+      font-family: "Roboto", sans-serif; }
+
+  .signin-country {
+    width: 45%;
+    float: right;
+    margin-top: 0px; }
+    .signin-country label {
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 18px;
+      font-weight: 100;
+      font-family: "Roboto", sans-serif; }
+    .signin-country input[type=text] {
+      background-color: #E9E9E9;
+      border-radius: 13%/97%;
+      padding-left: 18px;
+      margin-top: 6px;
+      font-size: 16px;
+      border: none;
+      height: 50px;
+      width: 100%;
+      color: gray;
+      font-family: "Roboto", sans-serif; }
+    .signin-country span {
+      display: none; }
+
+  .signin-phone {
+    width: 45%;
+    float: left;
+    margin-top: 0px; }
+    .signin-phone label {
+      font-family: "Roboto", sans-serif;
+      color: #0080FF;
+      font-size: 18px;
+      margin-left: 25px;
+      font-weight: 100; }
+    .signin-phone span {
+      display: none; }
+    .signin-phone input[type=text] {
+      background-color: #E9E9E9;
+      border-radius: 13%/97%;
+      padding-left: 15px;
+      margin-left: 5px;
+      margin-top: 6px;
+      font-size: 16px;
+      border: none;
+      height: 50px;
+      width: 100%;
+      color: gray;
+      font-family: "Roboto", sans-serif; }
+
   .signin-submit input[type=button] {
     font-family: "Roboto", sans-serif;
     background-color: #226BE4;
-    padding: 12px;
-    margin-left: 36%;
+    padding: 14px;
+    margin-left: 40%;
     margin-bottom: -10px;
-    width: 28%;
+    width: 20%;
     border: 0 none;
     cursor: pointer;
     -webkit-border-radius: 5px;
     border-radius: 25px;
-    font-size: 12px;
+    font-size: 16px;
     color: white;
     font-weight: 100; }
     .signin-submit input[type=button]:hover {
       font-family: "Roboto", sans-serif;
       background-color: #0000CD;
       padding: 12px;
-      margin-left: 0%;
+      margin-left: 40%;
       margin-bottom: -10px;
-      width: 28%;
+      width: 20%;
       border: 0 none;
       cursor: pointer;
       -webkit-border-radius: 5px;
       border-radius: 25px;
-      font-size: 12px;
+      font-size: 14px;
       color: white;
       font-weight: 100; }
 
@@ -4057,7 +4162,7 @@ $other-blue-light: #;*/
       font-weight: 100;
       font-size: 30px;
       text-align: center;
-      color: #226BE4; }
+      color: #546e99; }
   .pe-nav #profile-following {
     display: none;
     background-color: white;
@@ -4155,7 +4260,7 @@ $other-blue-light: #;*/
     height: 100%;
     padding-right: 2px;
     display: inline-block;
-    background-color: white;
+    background-color: #546e99;
     border-right: 1px solid #E9E9E9; }
     .create-modal-content .column1 h3 {
       font-family: "Roboto", sans-serif;
@@ -4615,7 +4720,7 @@ $other-blue-light: #;*/
     width: 24.3%;
     height: 100%;
     display: inline-block;
-    background-color: #f9d692;
+    background-color: #cc8b5c;
     border-right: 1px solid #E9E9E9; }
     .create-modal-content .column2 h3 {
       font-family: "Roboto", sans-serif;
@@ -4693,7 +4798,7 @@ $other-blue-light: #;*/
     width: 24.3%;
     height: 100%;
     display: inline-block;
-    background-color: #E9E9E9;
+    background-color: #a67753;
     border-right: 1px solid #E9E9E9; }
     .create-modal-content .column3 h3 {
       font-family: "Roboto", sans-serif;
@@ -4771,7 +4876,7 @@ $other-blue-light: #;*/
     width: 24.7%;
     height: 100%;
     display: inline-block;
-    background-color: #F7FAFF; }
+    background-color: #4860a1; }
     .create-modal-content .column4 h3 {
       font-family: "Roboto", sans-serif;
       text-align: center;

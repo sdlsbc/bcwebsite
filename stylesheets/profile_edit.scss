@@ -89,11 +89,11 @@
   .pe-city-country {
     width: 45%;
     float: left;
-    margin-top: -0.7%;
+    /*margin-top: -0.7%;*/
     text-align: center;
     img {
-      width: 30px;
-      height: 30px;
+      width: 25px;
+      height: 25px;
     }
     h2 {
       font-weight: 400;
@@ -310,15 +310,17 @@
   margin-top: 4%;
   border: 1px solid #888;
   width: 60%;
+ /* padding-bottom: 20px;*/
   margin-left: 20%;
   height: 60%;
   z-index: 1;
   .column1 {
-    width: 24.3%;
+    width: 23%;
     height: 100%;
+    margin-top: -10px;
     padding-right: 1px;
     display: inline-block;
-    background-color: #f3c2a9;
+    background-color: rgba(34,107,228,0.3);
     border-right: 0px solid $light-gray;
     h3 {
       font-family: $font;
@@ -337,16 +339,16 @@
     img {
       width: 150px;
       height: 100px;
+      margin-bottom: 20px;
       margin-left: 11.5%;
-      border: 3px solid $main-blue;
     }
     h4 {
       font-size: 16px;
       text-align: justify;
       color: $dark-blue;
-      width: 76%;
-      margin-top: 30%;
-      margin-left: 13%;
+      width: 88%;
+      margin-top: 10%;
+      margin-left: 4.5%;
       font-weight: 400;
     }
     .create-button-wrapper {
@@ -854,10 +856,11 @@
 
 
   .column2 {
-    width: 24.3%;
+    width: 25%;
     height: 100%;
+    /*margin-top: -10px;*/
     display: inline-block;
-    background-color: #dc8357;
+    background-color: rgba(34,107,228,0.4);
     border-right: 0px solid $light-gray;
     h3 {
       font-family: $font;
@@ -876,6 +879,7 @@
     img {
       width: 150px;
       height: 100px;
+      margin-bottom: 20px;
       margin-left: 11.5%;
       border: 3px solid $main-blue;
     }
@@ -883,9 +887,9 @@
       font-size: 16px;
       text-align: justify;
       color: $dark-blue;
-      width: 76%;
-      margin-top: 30%;
-      margin-left: 13%;
+      width: 88%;
+      margin-top: 10%;
+      margin-left: 4.5%;
       font-weight: 400;
     }
     .create-button-wrapper {
@@ -942,10 +946,11 @@
     }
   }
   .column3 {
-    width: 24.3%;
+    width: 23%;
     height: 100%;
+    margin-top: -10px;
     display: inline-block;
-    background-color: #f49260;
+    background-color: rgba(34,107,228,0.5);
     border-right: 0px solid $light-gray;
     h3 {
       font-family: $font;
@@ -965,15 +970,15 @@
       width: 150px;
       height: 100px;
       margin-left: 11.5%;
-      border: 3px solid $main-blue;
+      margin-bottom: 20px;
     }
     h4 {
       font-size: 16px;
       text-align: justify;
       color: $dark-blue;
-      width: 76%;
-      margin-top: 30%;
-      margin-left: 13%;
+      width: 88%;
+      margin-top: 10%;
+      margin-left: 4.5%;
       font-weight: 400;
     }
     .create-button-wrapper {
@@ -1030,11 +1035,11 @@
     }
   }
   .column4 {
-    width: 25.2%;
-    padding-top: 2px;
+    width: 23%;
+    margin-top: -1px;
     height: 100%;
     display: inline-block;
-    background-color: #d8896d;
+    background-color: rgba(34,107,228,0.6);
     h3 {
       font-family: $font;
       text-align: center;
@@ -1053,15 +1058,14 @@
       width: 150px;
       height: 100px;
       margin-left: 11.5%;
-      border: 3px solid $main-blue;
     }
     h4 {
       font-size: 16px;
       text-align: justify;
       color: $dark-blue;
-      width: 76%;
-      margin-top: 30%;
-      margin-left: 13%;
+      width: 88%;
+      margin-top: 10%;
+      margin-left: 4.5%;
       font-weight: 400;
     }
     .create-button-wrapper {

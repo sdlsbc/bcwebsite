@@ -3998,11 +3998,11 @@ $other-blue-light: #;*/
   .pe-wrapper2 .pe-city-country {
     width: 45%;
     float: left;
-    margin-top: -0.7%;
+    /*margin-top: -0.7%;*/
     text-align: center; }
     .pe-wrapper2 .pe-city-country img {
-      width: 30px;
-      height: 30px; }
+      width: 25px;
+      height: 25px; }
     .pe-wrapper2 .pe-city-country h2 {
       font-weight: 400;
       font-size: 14px;
@@ -4193,6 +4193,7 @@ $other-blue-light: #;*/
   margin-top: 4%;
   border: 1px solid #888;
   width: 60%;
+  /* padding-bottom: 20px;*/
   margin-left: 20%;
   height: 60%;
   z-index: 1;
@@ -4203,11 +4204,12 @@ $other-blue-light: #;*/
   }*/
   /* Style the tab content */ }
   .create-modal-content .column1 {
-    width: 24.3%;
+    width: 23%;
     height: 100%;
+    margin-top: -10px;
     padding-right: 1px;
     display: inline-block;
-    background-color: #f3c2a9;
+    background-color: rgba(34, 107, 228, 0.3);
     border-right: 0px solid #E9E9E9; }
     .create-modal-content .column1 h3 {
       font-family: "Roboto", sans-serif;
@@ -4224,15 +4226,15 @@ $other-blue-light: #;*/
     .create-modal-content .column1 img {
       width: 150px;
       height: 100px;
-      margin-left: 11.5%;
-      border: 3px solid #226BE4; }
+      margin-bottom: 20px;
+      margin-left: 11.5%; }
     .create-modal-content .column1 h4 {
       font-size: 16px;
       text-align: justify;
       color: #18253B;
-      width: 76%;
-      margin-top: 30%;
-      margin-left: 13%;
+      width: 88%;
+      margin-top: 10%;
+      margin-left: 4.5%;
       font-weight: 400; }
     .create-modal-content .column1 .create-button-wrapper {
       width: 100%;
@@ -4664,10 +4666,11 @@ $other-blue-light: #;*/
       font-family: "Roboto", sans-serif;
       border-radius: 25px; }
   .create-modal-content .column2 {
-    width: 24.3%;
+    width: 25%;
     height: 100%;
+    /*margin-top: -10px;*/
     display: inline-block;
-    background-color: #dc8357;
+    background-color: rgba(34, 107, 228, 0.4);
     border-right: 0px solid #E9E9E9; }
     .create-modal-content .column2 h3 {
       font-family: "Roboto", sans-serif;
@@ -4684,15 +4687,16 @@ $other-blue-light: #;*/
     .create-modal-content .column2 img {
       width: 150px;
       height: 100px;
+      margin-bottom: 20px;
       margin-left: 11.5%;
       border: 3px solid #226BE4; }
     .create-modal-content .column2 h4 {
       font-size: 16px;
       text-align: justify;
       color: #18253B;
-      width: 76%;
-      margin-top: 30%;
-      margin-left: 13%;
+      width: 88%;
+      margin-top: 10%;
+      margin-left: 4.5%;
       font-weight: 400; }
     .create-modal-content .column2 .create-button-wrapper {
       width: 100%;
@@ -4742,10 +4746,11 @@ $other-blue-light: #;*/
             margin-top: 6px;
             font-size: 10px; }
   .create-modal-content .column3 {
-    width: 24.3%;
+    width: 23%;
     height: 100%;
+    margin-top: -10px;
     display: inline-block;
-    background-color: #f49260;
+    background-color: rgba(34, 107, 228, 0.5);
     border-right: 0px solid #E9E9E9; }
     .create-modal-content .column3 h3 {
       font-family: "Roboto", sans-serif;
@@ -4763,14 +4768,14 @@ $other-blue-light: #;*/
       width: 150px;
       height: 100px;
       margin-left: 11.5%;
-      border: 3px solid #226BE4; }
+      margin-bottom: 20px; }
     .create-modal-content .column3 h4 {
       font-size: 16px;
       text-align: justify;
       color: #18253B;
-      width: 76%;
-      margin-top: 30%;
-      margin-left: 13%;
+      width: 88%;
+      margin-top: 10%;
+      margin-left: 4.5%;
       font-weight: 400; }
     .create-modal-content .column3 .create-button-wrapper {
       width: 100%;
@@ -4820,11 +4825,11 @@ $other-blue-light: #;*/
             margin-top: 6px;
             font-size: 10px; }
   .create-modal-content .column4 {
-    width: 25.2%;
-    padding-top: 2px;
+    width: 23%;
+    margin-top: -1px;
     height: 100%;
     display: inline-block;
-    background-color: #d8896d; }
+    background-color: rgba(34, 107, 228, 0.6); }
     .create-modal-content .column4 h3 {
       font-family: "Roboto", sans-serif;
       text-align: center;
@@ -4840,15 +4845,14 @@ $other-blue-light: #;*/
     .create-modal-content .column4 img {
       width: 150px;
       height: 100px;
-      margin-left: 11.5%;
-      border: 3px solid #226BE4; }
+      margin-left: 11.5%; }
     .create-modal-content .column4 h4 {
       font-size: 16px;
       text-align: justify;
       color: #18253B;
-      width: 76%;
-      margin-top: 30%;
-      margin-left: 13%;
+      width: 88%;
+      margin-top: 10%;
+      margin-left: 4.5%;
       font-weight: 400; }
     .create-modal-content .column4 .create-button-wrapper {
       width: 100%;
@@ -6457,6 +6461,29 @@ $other-blue-light: #;*/
       margin-left: 5%;
       width: 90%;
       font-size: 36px; }
+
+  .qod-coming-soon {
+    width: 100%;
+    height: auto; }
+    .qod-coming-soon h1 {
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: center;
+      font-weight: 100;
+      margin-top: 46%;
+      font-size: 42px; }
+    .qod-coming-soon h2 {
+      width: 80%;
+      margin-left: 8%;
+      font-family: "Roboto", sans-serif;
+      color: white;
+      text-align: center;
+      font-weight: 100;
+      margin-top: 10px;
+      font-size: 26px; }
+    .qod-coming-soon a {
+      color: #f9d692;
+      text-decoration: none; }
 
   /* ============== M O B I L E  S I G N  I N  M O D A L ============== */
   .index-modal {

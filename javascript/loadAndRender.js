@@ -2,12 +2,13 @@ var fetchCount = 0;
 var wait = false;
 var PAGE = "";
 var checkProf = true; // user profile is complete
+//global array of booleans for all the articles
+var favs = {};
 
 function checkLocalStorage(page) {
 	PAGE = page;
 
 	if (PAGE == 'newsfeed') {
-		console.log(PAGE + " page");
 		//loadProfile();
 		loadAndShowPosts();
 		//checkIfCompleteProfile();
@@ -36,6 +37,7 @@ function loadAndShowPosts() {
 				createPost(element);
 			});
 		}).then(res => {
+			console.log(favs)
 			if (fetchCount > 1) {
 				window.scrollBy({ top: 40, behavior: "smooth" });
 			}
@@ -73,7 +75,6 @@ function getPostsItems() {
 		.then(res => res.json())
 		.then(body => {
 			wait = false;
-			console.log(body)
 			return body.response.post;
 		})
 }
@@ -116,7 +117,6 @@ function favorite(post_id, liked) {
 	}
 	return fetch(url, params)
 		.then(res => res.json());
-
 }
 
 function likesUpdate(post_id) {
@@ -129,33 +129,31 @@ function likesUpdate(post_id) {
 		},
 		body: JSON.stringify({ 'post_id': post_id })
 	})
-		.then(res => res.json())
-		.catch(error => console.error('Error:', error))
-		.then(body => {
-
-			if (body.status != "success") {
-				console.log("request not successful");
-				// createCustomAlert("WARNING: User Already Exists");
-			} else {
-				var likes = body.response.favoriters;
-
-				let parent = document.getElementById(post_id);
-				let fav_likes = parent.querySelector('.fav_likes');
-				fav_likes.innerHTML = body.response.post.favoriters.length;
-
-			}
-		})
-	// console.log('in likes update');
+	.then(res => res.json())
+	.catch(error => console.error('Error:', error))
+	.then(body => {
+		if (body.status != "success") {
+			console.log("request not successful");
+			// createCustomAlert("WARNING: User Already Exists");
+		} else {
+			console.log("request successful")
+			var likes = body.response.favoriters;
+			let parent = document.getElementById(post_id);
+			let fav_likes = parent.querySelector('.fav_likes');
+			fav_likes.innerHTML = body.response.post.favoriters.length;
+		}
+	})
 }
 
 
 function showModal(body) {
-	// console.log('showModal',body);
+	console.log("showModal",body);
+	console.log(favs)
 	let user_id = localStorage.getItem("user_id");
 
 	// start building the modal
 
-	var img_address = body.post_image;
+	var img_address = "https://"+ body.image.substr(2);
 	var post_image = document.getElementsByClassName('modal-image');
 	post_image[0].innerHTML = '<img src=' + img_address + '>';
 
@@ -176,43 +174,42 @@ function showModal(body) {
 	//publisher_name[0].appendChild(publisher_nameNode);
 
 	var dateTime = new Date(body["Created Date"]);
-	// var dateTime = dateTime.split(" ");
-	// var date1 = dateTime[0];
-	// var time1 = dateTime[1];
-
-	// var real_date = Date(date1);
-	// var real_date = real_date.split(" ");
-	// var real_date0 = real_date[0];
-	// var real_date1 = real_date[1];
-	// var real_date2 = real_date[2];
-	// var really_real_date = [real_date0] + " " + [real_date1] + " " + [real_date2];
-
+	//var dateTime = dateTime.split(" ");
+	var date1 = dateTime.toDateString();
+	var time1 = dateTime.toTimeString();
+	console.log("date1 ", date1)
+	//var real_date = Date(date1);
+	var real_date = date1.split(" ");
+	var real_date0 = real_date[0];
+	var real_date1 = real_date[1];
+	var real_date2 = real_date[2];
+	var really_real_date = [real_date0] + " " + [real_date1] + " " + [real_date2];
+	console.log("really_real_date ", really_real_date)
 	var date = document.getElementsByClassName("modal-date");
 	date[0].innerHTML = dateTime.toDateString();
-	//  var time = document.getElementsByClassName("modal-time");
-	// time[0].innerHTML = time1;
+	 var time = document.getElementsByClassName("modal-time");
+	time[0].innerHTML = time1;
 
-	// var time_split = time1.split(':');
-	// var hours = Number(time_split[0]);
-	// var minutes = Number(time_split[1]);
-	// var seconds = Number(time_split[2]);
+	var time_split = time1.split(':');
+	var hours = Number(time_split[0]);
+	var minutes = Number(time_split[1]);
+	//var seconds = Number(time_split[2]);
+	var timeValue;
 
-	// var timeValue;
+	if (hours > 0 && hours <= 12) {
+		timeValue = "" + hours;
+	} else if (hours > 12) {
+		timeValue = "" + (hours - 12);
+	} else if (hours == 0) {
+		timeValue = "12";
+	}
 
-	// if (hours > 0 && hours <= 12) {
-	// 	timeValue = "" + hours;
-	// } else if (hours > 12) {
-	// 	timeValue = "" + (hours - 12);
-	// } else if (hours == 0) {
-	// 	timeValue = "12";
-	// }
-
-	//timeValue += (minutes < 10) ? ":0" + minutes : ":" + minutes;  // get minutes
-	// timeValue += (seconds < 10) ? ":0" + seconds : ":" + seconds;  // get seconds
-	//timeValue += (hours >= 12) ? " P.M." : " A.M.";  // get AM/PM
+	timeValue += (minutes < 10) ? ":0" + minutes : ":" + minutes;  // get minutes
+	//timeValue += (seconds < 10) ? ":0" + seconds : ":" + seconds;  // get seconds
+	timeValue += (hours >= 12) ? " P.M." : " A.M.";  // get AM/PM
 
 	var timexxx = document.getElementsByClassName("modal-time");
-	timexxx[0].innerHTML = dateTime.toTimeString();
+	timexxx[0].innerHTML = timeValue;
 
 	var title = document.getElementsByClassName("modal-title");
 	title[0].innerHTML = body.title;
@@ -234,35 +231,48 @@ function showModal(body) {
 
 	modal.style.display = "block";
 
-	let fav_button = document.getElementById('modal-favorite-img')
+	console.log(body)
 
-	if (body.favourites.some(fav => fav.user_id == user_id)) {
-		// console.log('this post is in favorites');
+	let fav_button = document.getElementById('modal-favorite-img')
+	var liked = false;
+	if (favs[body._id]) {
+		console.log('this post is in favorites');
 		fav_button.classList.add('modal-favorite-clicked');
+		liked = true;
 	} else {
 		fav_button.classList.remove('modal-favorite-clicked');
+		liked = false
 	}
 
-	let parent = document.getElementById(body.id);
+	let parent = document.getElementById(body._id);
 	let fav_from_newsfeed = parent.querySelector('.favorite');
 	let fav_likes = parent.querySelector('.fav_likes');
 
 	fav_button.onclick = function (ev) {
-		favorite(body._id)
-			.then(body => {
-				if (body.Response == "2000") {
-					likesUpdate(body.Result.Posts[0].id);
+		console.log("was it already liked?",liked)
+		favorite(body._id, liked)
+			.then(res => {
+				console.log(body)
+				if(res.response.post.favoriters.some(fav => fav == "1530287074040x237806817283853900")){
+					var new_like = true;
+					favs[res.response.post._id] = true;
+				} else {
+					var new_like = false;
+					favs[res.response.post._id] = false;
 				}
-				if (body.Message === "Added to user favourite successfully") {
+				likesUpdate(res.response.post._id);
+				if (new_like) {
 					var target = ev.srcElement || ev.target;
 					target.classList.add('modal-favorite-clicked');
 					// reflect this change on same article on Newsfeed
 					fav_from_newsfeed.classList.add('favorite_click');
+					liked = true;
 				} else {
 					var target = ev.srcElement || ev.target;
 					target.classList.remove('modal-favorite-clicked');
 					// reflect this change on same article on Newsfeed
 					fav_from_newsfeed.classList.remove('favorite_click');
+					liked = false;
 				}
 			})
 	};
@@ -318,10 +328,12 @@ function createPost(body) {
 	})();
 	//adding modal .click end
 
-	let main_image = document.createElement('img');
-	main_image.src = "https://"+ body.image.substr(2);
-	main_image.classList.add('main_image')
-	center1.appendChild(main_image);
+	if(body.image){
+		let main_image = document.createElement('img');
+		main_image.src = "https://"+ body.image.substr(2);
+		main_image.classList.add('main_image');
+		center1.appendChild(main_image);
+	}
 	div.appendChild(center1);
 
 	let button_div = document.createElement('div');
@@ -338,33 +350,43 @@ function createPost(body) {
 		if (body.favoriters.some(fav => fav == "1530287074040x237806817283853900")) {
 			fav_button.classList.add('favorite_click');
 			liked = true;
+			favs[body._id] = true;
 		} else {
 			fav_button.classList.add('button');
 			liked = false;
+			favs[body._id] = false;
 		}
 	}
 	fav_button.onclick = function (ev) {
 		favorite(body._id, liked)
 			.then(body => {
 				if(body.response.post.favoriters.some(fav => fav == "1530287074040x237806817283853900")){
+					console.log("line 364")
 					var new_like = true;
 				} else {
+					console.log("line 367")
 					var new_like = false;
 				}
 				if (body.status == "success") {
+					console.log("line 371")
 					likesUpdate(body.response.post._id);
 				}
 				if (new_like) {
+					console.log("line 375")
 					var target = ev.srcElement || ev.target
 					target.classList.remove('button');
 					target.classList.add('favorite_click');
 					liked = true;
-
+					favs[body.response.post._id] = true;
+					console.log(favs)
 				} else {
+					console.log("line 383")
 					var target = ev.srcElement || ev.target
 					target.classList.add('button');
 					target.classList.remove('favorite_click');
 					liked = false;
+					favs[body.response.post._id] = false;
+					console.log(favs)
 				}
 			})
 	};

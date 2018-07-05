@@ -3,7 +3,8 @@ var visibleDivId = null;
 var followers = false;
 var followings = false;
 var user_id = localStorage.getItem("user_id");
-//var user_id = 12;
+var token = localStorage.getItem("token");
+
 function toggleAndLoadFollowers() {
     toggleVisibility('profile-followers');
     if(followers == false){
@@ -109,20 +110,22 @@ function checkBrowser(){
     }
 }
 
+function loadThese(){
+    loadAndShowPosts();
+    loadProfileData();
+}
+
 function loadProfileData(){
     loadProfile();
     var urlParams = new URLSearchParams(window.location.search);
     console.log(urlParams.toString());
     console.log('in loadProfileData');
-    // let user_id = localStorage.getItem("user_id");
-    //let user_id = 12;
     //api call and get data
 
-     let url = 'http://app.bwayconnected.com/api/user/profile?user_id='+user_id+'&profile_id='+user_id;
-    //let url = 'http://app.bwayconnected.com/api/user/profile?user_id=12&profile_id=12';
+    let url = 'http://app.bwayconnected.com/api/user/profile?user_id='+user_id+'&profile_id='+user_id;
 
     fetch(url, {
-        method: 'GET',
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         }
@@ -192,21 +195,19 @@ function loadAndShowPosts(){
 }
 
 function getPostsItems(){
-    let user_id = localStorage.getItem("user_id");
-    //let url = "http://app.bwayconnected.com/api/user/profile?user_id=12&profile_id=12"
-
-    // var url = "http://app.bwayconnected.com/api/user/profile?user_id="+user_id+"&profile_id="+user_id;
-    var url = "http://app.bwayconnected.com/api/user/profile?user_id=12&profile_id=12";
+    var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/favorite_read";
     let params = {
         headers: {
-            'content-type': 'application/json'
+            'content-type': 'application/json',
+            'Authorization': 'Bearer ' + token
         },
-        method: 'GET'
+        method: 'POST',
+        body: {}
     };
     console.log(url);
     return fetch(url, params)
         .then(res => res.json())
-        .then(body => body.Result.articles)
+        .then(body => body.response.favs)
 }
 
 function createPost(body){
@@ -412,9 +413,3 @@ function showUsers(user, divId) {
     console.log(user.first_name);
 
 }
-
-function loadThese(){
-    loadAndShowPosts();
-    loadProfileData();
-}
-

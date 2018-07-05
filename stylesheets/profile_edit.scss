@@ -434,30 +434,29 @@
 
   /* Style the tab content */
   .tabcontent {
-    position: relative;
+    position: inherit;
     display: none;
     padding: 6px 9px;
     border: 1px solid #ccc;
     border-top: none;
-    margin-top: -54%;
-    background-color: white;
-    width: 97%;
+    margin-top: 8%;
+    /*background-color: white;*/
+    width: 97.5%;
     height: 84%;
   }
   #create-milestones {
-    background-color: #f3c2a9;
+    background-color: rgb(34,107,228);
     h3 {
+      color: white;
+      font-size: 18px;
       font-weight: 400;
-      color: $main-blue;
-      font-size: 20px;
-      margin-left: 5%;
-      margin-top: 3%;
+      margin-left: 6%;
     }
     input[type=text] {
       float: left;
       width: 90%;
       margin-left: 5%;
-      margin-top: 0%;
+      margin-top: -35%;
       height: 200px;
       font-size: 14px;
       border-radius: 1%/5%;
@@ -467,14 +466,14 @@
     }
     .milestones-extra-buttons {
       position: relative;
-      margin-left: 48px;
+      margin-left: 50px;
       width: 90%;
+      margin-top: 20%;
       border-bottom: 1px solid $light-gray;
-      padding-top: 151px;
-      z-index: 4;
       .attach-photo {
         margin-left: 0%;
         width: 18%;
+        margin-top: -17.5%;
         float: left;
         color: $gray;
         font-size: 13px;
@@ -487,6 +486,7 @@
         float: left;
         margin-left: 20%;
         width: 18%;
+        margin-top: -17.5%;
         color: $gray;
         font-size: 13px;
         display: inline-block;
@@ -497,7 +497,7 @@
     button {
       float: right;
       width: 10%;
-      margin-top: -41px;
+      margin-top: -130px;
       margin-right: 56px;
       background-color: #226BE4;
       color: white;

@@ -31,7 +31,7 @@ function register() {
                 break;
         }
 
-        var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_create';
+        var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_create';
         var data = {
             "handle": handle,
             "email": email,
@@ -59,28 +59,34 @@ function register() {
             .then(response => {
 
                 if (response.status == "success") {
-                    createCustomAlert("you are logged in");
+
+                   
                     console.log('Success:', response);
-                    var token = response.response.token;
-                    var res_user_id = response.response.user_id;
-                    var res_handle = response.response.user.handle;
-                    var res_usertype_id = response.response.personal._id;
-                    var res_usertype = response.response.user.usertype;
-                    var res_lastname = response.response.user.lastname;
-                    var res_firstname = response.response.user.firstname;
 
-                    localStorage.setItem("user_id", res_user_id);
-                    localStorage.setItem("usertype_id", res_usertype_id);
-                    localStorage.setItem("usertype", res_usertype);
-                    localStorage.setItem("token", token);
-                    localStorage.setItem("handle", res_handle);
-                    localStorage.setItem("first_name", res_firstname);
-                    localStorage.setItem("last_name", res_lastname);
+                    if (response.response.message == "Username not unique") {
+                        createCustomAlert("Username not Unique, Try again");
+                    } else {
+                        createCustomAlert("you are logged in");
 
+                        var token = response.response.token;
+                        var res_user_id = response.response.user_id;
+                        var res_handle = response.response.user.handle;
+                        var res_usertype_id = response.response.personal._id;
+                        var res_usertype = response.response.user.usertype;
+                        var res_lastname = response.response.user.lastname;
+                        var res_firstname = response.response.user.firstname;
 
-                    // save usertype data 
-                    saveUserTypeData(token);
+                        localStorage.setItem("user_id", res_user_id);
+                        localStorage.setItem("usertype_id", res_usertype_id);
+                        localStorage.setItem("usertype", res_usertype);
+                        localStorage.setItem("token", token);
+                        localStorage.setItem("handle", res_handle);
+                        localStorage.setItem("first_name", res_firstname);
+                        localStorage.setItem("last_name", res_lastname);
 
+                        // save usertype data 
+                        saveUserTypeData(token);
+                    }
                 } else {
                     createCustomAlert("WARNING: User Not Signed Up");
                 }
@@ -102,7 +108,7 @@ function saveUserTypeData(token) {
         var c_link = document.getElementById('company-link').value;
         var c_description = document.getElementById('company-desc').value;
 
-        console.log('company type ',c_type);
+        console.log('company type ', c_type);
         data = {
             "user_id": user_id,
             "type": c_type,
@@ -120,7 +126,7 @@ function saveUserTypeData(token) {
         var p_closing = document.getElementById('production-closing').value;
 
 
-        console.log('production type ',p_type);
+        console.log('production type ', p_type);
         data = {
             "user_id": user_id,
             "description": p_desc,
@@ -129,7 +135,7 @@ function saveUserTypeData(token) {
             "status": p_status,
             "opening_date": p_opening,
             "closing_date": p_closing
-          };
+        };
     }
 
     if (usertype == "personal") {
@@ -145,11 +151,11 @@ function saveUserTypeData(token) {
             "headline": per_headline,
             // "career": per_career_list,
             "profile_type": per_type
-          };
+        };
     }
 
 
-    var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/"+usertype+"_update";
+    var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/"+usertype+"_update";
 
     fetch(url, {
         method: 'POST',
@@ -162,7 +168,7 @@ function saveUserTypeData(token) {
         .then(res => res.json())
         .catch(error => console.error('Error:', error))
         .then(response => {
- 
+
             if (response.status == "success") {
                 console.log('', response);
 
@@ -170,7 +176,7 @@ function saveUserTypeData(token) {
                 window.location.href = "Newsfeed/newsfeed.html";
 
             }
-        }) 
+        })
 
 }
 
@@ -181,7 +187,7 @@ function signin() {
 
     var error_message = validateSigninInput(email, password);
 
-    var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/login';
+    var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/login';
     var data = {
         "email": email,
         "password": password

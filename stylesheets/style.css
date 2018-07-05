@@ -4204,10 +4204,10 @@ $other-blue-light: #;*/
   }*/
   /* Style the tab content */ }
   .create-modal-content .column1 {
-    width: 23%;
+    text-align: center;
+    float: left;
+    width: 25%;
     height: 100%;
-    margin-top: -10px;
-    padding-right: 1px;
     display: inline-block;
     background-color: rgba(34, 107, 228, 0.3);
     border-right: 0px solid #E9E9E9; }
@@ -4215,31 +4215,31 @@ $other-blue-light: #;*/
       font-family: "Roboto", sans-serif;
       text-align: center;
       font-size: 28px;
-      color: #18253B;
-      font-weight: 400;
+      color: #E9E9E9;
+      font-weight: 100;
       border-bottom: 1px solid #B2B2B2;
       padding-bottom: 5px;
       width: 80%;
       margin-left: 10%; }
       .create-modal-content .column1 h3:hover {
-        color: #226BE4; }
+        color: #99CCFF; }
     .create-modal-content .column1 img {
       width: 150px;
       height: 100px;
-      margin-bottom: 20px;
-      margin-left: 11.5%; }
+      margin-bottom: 10px;
+      border-radius: 12px; }
     .create-modal-content .column1 h4 {
-      font-size: 16px;
-      text-align: justify;
-      color: #18253B;
       width: 88%;
-      margin-top: 10%;
+      height: 35%;
+      font-size: 16px;
+      font-weight: 400;
       margin-left: 4.5%;
-      font-weight: 400; }
+      color: #18253B;
+      text-align: justify; }
     .create-modal-content .column1 .create-button-wrapper {
       width: 100%;
       text-align: center;
-      margin-top: -60%;
+      margin-top: -180px;
       margin-left: -0.7%; }
       .create-modal-content .column1 .create-button-wrapper .create-button {
         border-radius: 24%/72%;
@@ -4251,6 +4251,7 @@ $other-blue-light: #;*/
         margin-top: 200px;
         text-align: center;
         cursor: pointer;
+        border: 1px solid #1E2E49;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         margin-left: 0%;
@@ -4272,6 +4273,7 @@ $other-blue-light: #;*/
           margin-top: 200px;
           text-align: center;
           cursor: pointer;
+          border: 1px solid #226BE4;
           -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
           margin-left: 0%;
@@ -4668,7 +4670,8 @@ $other-blue-light: #;*/
   .create-modal-content .column2 {
     width: 25%;
     height: 100%;
-    /*margin-top: -10px;*/
+    text-align: center;
+    float: left;
     display: inline-block;
     background-color: rgba(34, 107, 228, 0.4);
     border-right: 0px solid #E9E9E9; }
@@ -4676,32 +4679,31 @@ $other-blue-light: #;*/
       font-family: "Roboto", sans-serif;
       text-align: center;
       font-size: 28px;
-      color: #18253B;
-      font-weight: 400;
+      color: #E9E9E9;
+      font-weight: 100;
       border-bottom: 1px solid #B2B2B2;
       padding-bottom: 5px;
       width: 80%;
       margin-left: 10%; }
       .create-modal-content .column2 h3:hover {
-        color: #226BE4; }
+        color: #99CCFF; }
     .create-modal-content .column2 img {
       width: 150px;
       height: 100px;
-      margin-bottom: 20px;
-      margin-left: 11.5%;
-      border: 3px solid #226BE4; }
+      margin-bottom: 10px;
+      border-radius: 12px; }
     .create-modal-content .column2 h4 {
-      font-size: 16px;
-      text-align: justify;
-      color: #18253B;
       width: 88%;
-      margin-top: 10%;
+      height: 35%;
+      font-size: 16px;
+      font-weight: 400;
       margin-left: 4.5%;
-      font-weight: 400; }
+      color: #18253B;
+      text-align: justify; }
     .create-modal-content .column2 .create-button-wrapper {
       width: 100%;
       text-align: center;
-      margin-top: -60%;
+      margin-top: -180px;
       margin-left: -0.7%; }
       .create-modal-content .column2 .create-button-wrapper .create-button {
         border-radius: 24%/72%;
@@ -4713,6 +4715,7 @@ $other-blue-light: #;*/
         margin-top: 200px;
         text-align: center;
         cursor: pointer;
+        border: 1px solid #1E2E49;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         margin-left: 0%;
@@ -4734,6 +4737,7 @@ $other-blue-light: #;*/
           margin-top: 200px;
           text-align: center;
           cursor: pointer;
+          border: 1px solid #226BE4;
           -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
           margin-left: 0%;
@@ -4746,9 +4750,10 @@ $other-blue-light: #;*/
             margin-top: 6px;
             font-size: 10px; }
   .create-modal-content .column3 {
-    width: 23%;
+    width: 25%;
     height: 100%;
-    margin-top: -10px;
+    text-align: center;
+    float: left;
     display: inline-block;
     background-color: rgba(34, 107, 228, 0.5);
     border-right: 0px solid #E9E9E9; }
@@ -4756,31 +4761,31 @@ $other-blue-light: #;*/
       font-family: "Roboto", sans-serif;
       text-align: center;
       font-size: 28px;
-      color: #18253B;
-      font-weight: 400;
+      color: #E9E9E9;
+      font-weight: 100;
       border-bottom: 1px solid #B2B2B2;
       padding-bottom: 5px;
       width: 80%;
       margin-left: 10%; }
       .create-modal-content .column3 h3:hover {
-        color: #226BE4; }
+        color: #99CCFF; }
     .create-modal-content .column3 img {
       width: 150px;
       height: 100px;
-      margin-left: 11.5%;
-      margin-bottom: 20px; }
+      margin-bottom: 10px;
+      border-radius: 12px; }
     .create-modal-content .column3 h4 {
-      font-size: 16px;
-      text-align: justify;
-      color: #18253B;
       width: 88%;
-      margin-top: 10%;
+      height: 35%;
+      font-size: 16px;
+      font-weight: 400;
       margin-left: 4.5%;
-      font-weight: 400; }
+      color: #18253B;
+      text-align: justify; }
     .create-modal-content .column3 .create-button-wrapper {
       width: 100%;
       text-align: center;
-      margin-top: -60%;
+      margin-top: -180px;
       margin-left: -0.7%; }
       .create-modal-content .column3 .create-button-wrapper .create-button {
         border-radius: 24%/72%;
@@ -4792,6 +4797,7 @@ $other-blue-light: #;*/
         margin-top: 200px;
         text-align: center;
         cursor: pointer;
+        border: 1px solid #1E2E49;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         margin-left: 0%;
@@ -4813,6 +4819,7 @@ $other-blue-light: #;*/
           margin-top: 200px;
           text-align: center;
           cursor: pointer;
+          border: 1px solid #226BE4;
           -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
           margin-left: 0%;
@@ -4825,8 +4832,9 @@ $other-blue-light: #;*/
             margin-top: 6px;
             font-size: 10px; }
   .create-modal-content .column4 {
-    width: 23%;
-    margin-top: -1px;
+    text-align: center;
+    float: left;
+    width: 25%;
     height: 100%;
     display: inline-block;
     background-color: rgba(34, 107, 228, 0.6); }
@@ -4834,30 +4842,31 @@ $other-blue-light: #;*/
       font-family: "Roboto", sans-serif;
       text-align: center;
       font-size: 28px;
-      color: #18253B;
-      font-weight: 400;
+      color: #E9E9E9;
+      font-weight: 100;
       border-bottom: 1px solid #B2B2B2;
       padding-bottom: 5px;
       width: 80%;
       margin-left: 10%; }
       .create-modal-content .column4 h3:hover {
-        color: #226BE4; }
+        color: #99CCFF; }
     .create-modal-content .column4 img {
       width: 150px;
       height: 100px;
-      margin-left: 11.5%; }
+      margin-bottom: 10px;
+      border-radius: 12px; }
     .create-modal-content .column4 h4 {
-      font-size: 16px;
-      text-align: justify;
-      color: #18253B;
       width: 88%;
-      margin-top: 10%;
+      height: 35%;
+      font-size: 16px;
+      font-weight: 400;
       margin-left: 4.5%;
-      font-weight: 400; }
+      color: #18253B;
+      text-align: justify; }
     .create-modal-content .column4 .create-button-wrapper {
       width: 100%;
       text-align: center;
-      margin-top: -60%;
+      margin-top: -180px;
       margin-left: -0.7%; }
       .create-modal-content .column4 .create-button-wrapper .create-button {
         border-radius: 24%/72%;
@@ -4869,6 +4878,7 @@ $other-blue-light: #;*/
         margin-top: 200px;
         text-align: center;
         cursor: pointer;
+        border: 1px solid #1E2E49;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         margin-left: 0%;
@@ -4890,6 +4900,7 @@ $other-blue-light: #;*/
           margin-top: 200px;
           text-align: center;
           cursor: pointer;
+          border: 1px solid #226BE4;
           -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
           margin-left: 0%;
@@ -5431,7 +5442,7 @@ $other-blue-light: #;*/
         font-family: "Roboto", sans-serif;
         border-radius: 25px; }
     .create-modal-content .column2 {
-      width: 24.3%;
+      width: 24%;
       height: 100%;
       display: inline-block;
       background-color: #f9d692;

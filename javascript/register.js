@@ -136,14 +136,14 @@ function saveUserTypeData(token) {
         var per_dob = document.getElementById('personal-dateOfBirth').value;
         var per_type = document.getElementById('personal-type').value;
         var per_headline = document.getElementById('personal-headline').value;
-        var per_career = document.getElementById('personal-career').value;
-
-        console.log('personal profile type ',per_type);
+        // var per_career = document.getElementById('personal-career').value;
+        // var per_career_list = '['+'"'+per_career+'"'+']';
+        // console.log('personal profile type ',per_career_list);
         data = {
             "user_id": user_id,
             "date_of_birth": per_dob,
             "headline": per_headline,
-            "career": per_career,
+            // "career": per_career_list,
             "profile_type": per_type
           };
     }

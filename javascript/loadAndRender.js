@@ -165,7 +165,7 @@ function showModal(body) {
 	// check if profile picture is default
 
 	var profile_image = document.getElementsByClassName("modal-header");
-	profile_image[0].innerHTML = '<img src=' + profile_image_address + '>';
+	profile_image[0].innerHTML = '<img src=https:' + profile_image_address + '>';
 
 	var publisher_name = document.getElementsByClassName("modal_h3");
 

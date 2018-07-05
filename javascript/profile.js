@@ -422,7 +422,10 @@ function updateUser() {
     let password = document.getElementById('input-new').value;
     let password_confirm = document.getElementById('input-confirm').value;
 
-    
+    let url;
+
+    fetch(url, params)
+    .then()
 }
 
 

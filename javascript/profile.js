@@ -411,5 +411,27 @@ function showUsers(user, divId) {
     
     document.getElementById(divId).appendChild(div);
     console.log(user.first_name);
-
 }
+
+function updateUser() {
+    console.log("WE'RE GOING TO UPDATE YOU");
+    let first_name = document.getElementById('input-first').value;
+    let last_name = document.getElementById('input-last').value;
+    let email = document.getElementById('input-email').value;
+    let handle = document.getElementById('input-username').value;
+    let password = document.getElementById('input-new').value;
+    let password_confirm = document.getElementById('input-confirm').value;
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -3946,7 +3946,7 @@ $other-blue-light: #;*/
       margin-left: 95px;
       text-align: center;
       font-weight: 100;
-      font-size: 22px;
+      font-size: 24px;
       color: #226BE4; }
     .profile_wrapper .pe-header .pe-handle h3 {
       margin-top: 0.2%;
@@ -3959,12 +3959,12 @@ $other-blue-light: #;*/
       margin-top: 0.5%;
       text-align: center;
       margin-left: 9%;
-      font-size: 14px;
+      font-size: 18px;
       font-weight: 400;
       color: #B2B2B2; }
     .profile_wrapper .pe-header .pe-company h5 {
       width: 41%;
-      margin-top: 4%;
+      margin-top: 3%;
       text-align: center;
       margin-left: 33%;
       font-size: 14px;
@@ -4304,7 +4304,7 @@ $other-blue-light: #;*/
     border-top: none;
     margin-top: 8%;
     /*background-color: white;*/
-    width: 97.5%;
+    width: 97%;
     height: 85%; }
   .create-modal-content #create-milestones {
     background-color: #c0d0f6; }
@@ -6395,6 +6395,214 @@ $other-blue-light: #;*/
         width: 100%;
         height: 45%; }
 
+.cp-edit {
+  margin-top: -521px;
+  margin-left: 89%;
+  float: right;
+  display: inline;
+  width: 50px;
+  height: 50px;
+  position: fixed; }
+  .cp-edit img {
+    width: 26px; }
+
+#createModalx {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.create-modal-contentx {
+  position: absolute;
+  background-color: #F7FAFF;
+  margin: auto;
+  margin-top: 2%;
+  border: 1px solid #888;
+  width: 66%;
+  margin-left: 17%;
+  height: 66%;
+  z-index: 1;
+  border-radius: 19px; }
+  .create-modal-contentx h1 {
+    font-family: "Roboto", sans-serif;
+    color: #226BE4;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 50px;
+    font-size: 30px; }
+  .create-modal-contentx .cp-left1 {
+    margin-top: -5px;
+    width: 42%;
+    float: left;
+    margin-left: 83px;
+    padding-bottom: 30px; }
+    .create-modal-contentx .cp-left1 #edit-name {
+      width: 80%;
+      font-size: 13px;
+      font-weight: 400;
+      color: #226BE4; }
+    .create-modal-contentx .cp-left1 input[type=text] {
+      width: 80%;
+      height: 40px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #226BE4;
+      padding-left: 15px;
+      border-radius: 22px;
+      border: 2px solid #226BE4; }
+  .create-modal-contentx .cp-right1 {
+    width: 42%;
+    float: right;
+    margin-left: -23px;
+    margin-right: 21px;
+    margin-top: -5px;
+    padding-bottom: 30px; }
+    .create-modal-contentx .cp-right1 #edit-type {
+      width: 86%;
+      font-size: 13px;
+      color: #226BE4;
+      font-weight: 400; }
+    .create-modal-contentx .cp-right1 input[type=text] {
+      width: 80%;
+      height: 40px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #226BE4;
+      padding-left: 15px;
+      border-radius: 22px;
+      border: 2px solid #226BE4; }
+  .create-modal-contentx .cp-center {
+    width: 100%;
+    text-align: center; }
+    .create-modal-contentx .cp-center #edit-desc {
+      width: 80%;
+      font-size: 13px;
+      margin-left: 9.5%;
+      font-weight: 400;
+      color: #226BE4; }
+    .create-modal-contentx .cp-center input[type=text] {
+      width: 80%;
+      height: 120px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #226BE4;
+      margin-left: 9.5%;
+      padding-left: 15px;
+      border-radius: 22px;
+      margin-bottom: 30px;
+      border: 2px solid #226BE4; }
+  .create-modal-contentx .cp-left2 {
+    width: 42%;
+    float: left;
+    margin-left: 86px;
+    padding-bottom: 30px; }
+    .create-modal-contentx .cp-left2 #cp-new-password {
+      width: 80%;
+      font-size: 13px;
+      color: #226BE4;
+      font-weight: 400; }
+    .create-modal-contentx .cp-left2 input[type=text] {
+      width: 80%;
+      height: 40px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #226BE4;
+      padding-left: 15px;
+      border-radius: 22px;
+      border: 2px solid #226BE4; }
+  .create-modal-contentx .cp-right2 {
+    width: 42%;
+    float: right;
+    margin-right: 21px;
+    padding-bottom: 30px; }
+    .create-modal-contentx .cp-right2 #cp-confirm-password {
+      width: 80%;
+      font-size: 13px;
+      color: #226BE4;
+      font-weight: 400; }
+    .create-modal-contentx .cp-right2 input[type=text] {
+      margin-left: -21px;
+      width: 86%;
+      height: 40px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #226BE4;
+      padding-left: 15px;
+      border-radius: 22px;
+      border: 2px solid #226BE4; }
+  .create-modal-contentx .save-changes {
+    margin-top: 10px;
+    margin-left: 41%;
+    background-color: #226BE4;
+    border: 2px solid #226BE4;
+    color: white;
+    padding: 3px 12px;
+    width: 146px;
+    height: 40px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 25px;
+    margin-right: 10%;
+    font-size: 14px; }
+    .create-modal-contentx .save-changes:hover {
+      margin-top: 10px;
+      width: 145px;
+      height: 40px;
+      font-weight: 400;
+      background-color: white;
+      border: 2px solid #226BE4;
+      border-radius: 25px;
+      margin-right: 10%;
+      color: #226BE4;
+      font-size: 14px; }
+
+/* The Close Button */
+.create-closex {
+  /*display: none;*/
+  color: #aaaaaa;
+  float: right;
+  margin-right: 2%;
+  font-size: 28px;
+  font-weight: bold; }
+
+.create-closex:hover,
+.create-closex:focus {
+  /*display: none;*/
+  color: #000;
+  text-decoration: none;
+  cursor: pointer; }
+
+/*.cp-employee-edit {
+  margin-top: -180px;
+  margin-left: 16%;
+  float: right;
+  display: inline;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  img {
+    width: 26px;
+  }
+}
+*/
 @media screen and (max-width: 700px) {
   /* =============== M O B I L E  M A I N  H E A D E R =============== */
   .main-header {
@@ -7732,8 +7940,8 @@ $other-blue-light: #;*/
       border-top: none;
       margin-top: 13%;
       /*background-color: white;*/
-      width: 97.5%;
-      height: 88.5%; }
+      width: 95%;
+      height: 89.5%; }
     .create-modal-content #create-milestones {
       background-color: #c0d0f6; }
       .create-modal-content #create-milestones h3 {
@@ -7856,7 +8064,7 @@ $other-blue-light: #;*/
         font-size: 14px;
         font-family: "Roboto", sans-serif; }
     .create-modal-content #create-articles {
-      width: 97%;
+      width: 95%;
       background-color: #95b0f0; }
       .create-modal-content #create-articles h3 {
         font-weight: 400;
@@ -8609,6 +8817,215 @@ $other-blue-light: #;*/
         border: 1px solid #E9E9E9; }
         .profile_wrapper .client-list-row1 .cp-clients img {
           width: 100%;
-          height: 45%; } }
+          height: 45%; }
+
+  .cp-edit {
+    margin-top: -521px;
+    margin-left: 89%;
+    float: right;
+    display: inline;
+    width: 50px;
+    height: 50px;
+    position: fixed; }
+    .cp-edit img {
+      width: 26px; }
+
+  #createModalx {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4); }
+
+  .create-modal-contentx {
+    position: absolute;
+    background-color: #F7FAFF;
+    margin: auto;
+    margin-top: 2%;
+    border: 1px solid #888;
+    width: 66%;
+    margin-left: 17%;
+    height: 66%;
+    z-index: 1;
+    border-radius: 19px; }
+    .create-modal-contentx h1 {
+      font-family: "Roboto", sans-serif;
+      color: #226BE4;
+      font-weight: 400;
+      text-align: center;
+      padding: 20px;
+      padding-bottom: 50px;
+      font-size: 30px; }
+    .create-modal-contentx .cp-left1 {
+      margin-top: -5px;
+      width: 42%;
+      float: left;
+      margin-left: 83px;
+      padding-bottom: 30px; }
+      .create-modal-contentx .cp-left1 #edit-name {
+        width: 80%;
+        font-size: 13px;
+        font-weight: 400;
+        color: #226BE4; }
+      .create-modal-contentx .cp-left1 input[type=text] {
+        width: 80%;
+        height: 40px;
+        margin-top: 6px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #226BE4;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid #226BE4; }
+    .create-modal-contentx .cp-right1 {
+      width: 42%;
+      float: right;
+      margin-left: -23px;
+      margin-right: 21px;
+      margin-top: -5px;
+      padding-bottom: 30px; }
+      .create-modal-contentx .cp-right1 #edit-type {
+        width: 86%;
+        font-size: 13px;
+        color: #226BE4;
+        font-weight: 400; }
+      .create-modal-contentx .cp-right1 input[type=text] {
+        width: 80%;
+        height: 40px;
+        margin-top: 6px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #226BE4;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid #226BE4; }
+    .create-modal-contentx .cp-center {
+      width: 100%;
+      text-align: center; }
+      .create-modal-contentx .cp-center #edit-desc {
+        width: 80%;
+        font-size: 13px;
+        margin-left: 9.5%;
+        font-weight: 400;
+        color: #226BE4; }
+      .create-modal-contentx .cp-center input[type=text] {
+        width: 80%;
+        height: 120px;
+        margin-top: 6px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #226BE4;
+        margin-left: 9.5%;
+        padding-left: 15px;
+        border-radius: 22px;
+        margin-bottom: 30px;
+        border: 2px solid #226BE4; }
+    .create-modal-contentx .cp-left2 {
+      width: 42%;
+      float: left;
+      margin-left: 86px;
+      padding-bottom: 30px; }
+      .create-modal-contentx .cp-left2 #cp-new-password {
+        width: 80%;
+        font-size: 13px;
+        color: #226BE4;
+        font-weight: 400; }
+      .create-modal-contentx .cp-left2 input[type=text] {
+        width: 80%;
+        height: 40px;
+        margin-top: 6px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #226BE4;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid #226BE4; }
+    .create-modal-contentx .cp-right2 {
+      width: 42%;
+      float: right;
+      margin-right: 21px;
+      padding-bottom: 30px; }
+      .create-modal-contentx .cp-right2 #cp-confirm-password {
+        width: 80%;
+        font-size: 13px;
+        color: #226BE4;
+        font-weight: 400; }
+      .create-modal-contentx .cp-right2 input[type=text] {
+        margin-left: -21px;
+        width: 86%;
+        height: 40px;
+        margin-top: 6px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #226BE4;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid #226BE4; }
+    .create-modal-contentx .save-changes {
+      margin-top: 10px;
+      margin-left: 41%;
+      background-color: #226BE4;
+      border: 2px solid #226BE4;
+      color: white;
+      padding: 3px 12px;
+      width: 146px;
+      height: 40px;
+      font-weight: 400;
+      text-align: center;
+      font-size: 12px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      /* Safari */
+      transition-duration: 0.4s;
+      border-radius: 25px;
+      margin-right: 10%;
+      font-size: 14px; }
+      .create-modal-contentx .save-changes:hover {
+        margin-top: 10px;
+        width: 145px;
+        height: 40px;
+        font-weight: 400;
+        background-color: white;
+        border: 2px solid #226BE4;
+        border-radius: 25px;
+        margin-right: 10%;
+        color: #226BE4;
+        font-size: 14px; }
+
+  /* The Close Button */
+  .create-closex {
+    /*display: none;*/
+    color: #aaaaaa;
+    float: right;
+    margin-right: 2%;
+    font-size: 28px;
+    font-weight: bold; }
+
+  .create-closex:hover,
+  .create-closex:focus {
+    /*display: none;*/
+    color: #000;
+    text-decoration: none;
+    cursor: pointer; }
+
+  /*.cp-employee-edit {
+    margin-top: -180px;
+    margin-left: 16%;
+    float: right;
+    display: inline;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    img {
+      width: 26px;
+    }
+  }
+  */ }
 
 /*# sourceMappingURL=style.css.map */

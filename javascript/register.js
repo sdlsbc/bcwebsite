@@ -17,17 +17,17 @@ function register() {
         console.log('error msg from function', error_message);
         createCustomAlert(error_message);
     } else {
-        console.log('in register: step2');
 
         switch (userType) {
             case "company":
                 c_name = document.getElementById('signup-companyName').value;
+                console.log('c_name', c_name);
                 break;
             case "production":
                 p_name = document.getElementById('signup-productionName').value;
                 break;
             case "personal":
-                dob = document.getElementById('signup-companyname').value;
+                dob = document.getElementById('personal-dateOfBirth').value;
                 break;
         }
 
@@ -81,14 +81,6 @@ function register() {
                     // save usertype data 
                     saveUserTypeData(token);
 
-                    console.log('token in local storage', localStorage.getItem("token"));
-                    if (localStorage.getItem("token") == "") {
-                        createCustomAlert("WARNING: Not saved locally");
-                    } else {
-                        console.log("redirected to newsfeed")
-                        window.location.href = "Newsfeed/newsfeed.html";
-                    }
-
                 } else {
                     createCustomAlert("WARNING: User Not Signed Up");
                 }
@@ -118,7 +110,51 @@ function saveUserTypeData(token) {
             "description": c_description
         };
     }
-    var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/company_update";
+
+    if (usertype == "production") {
+        var p_type = document.getElementById('production-type').value;
+        var p_desc = document.getElementById('production-desc').value;
+        var p_status = document.getElementById('production-status').value;
+        var p_link = document.getElementById('production-link').value;
+        var p_opening = document.getElementById('production-opening').value;
+        var p_closing = document.getElementById('production-closing').value;
+
+
+        console.log('production type ',p_type);
+        data = {
+            "user_id": user_id,
+            "description": p_desc,
+            "type": p_type,
+            "link": p_link,
+            "status": p_status,
+            "opening_date": p_opening,
+            "closing_date": p_closing
+          };
+    }
+
+    if (usertype == "personal") {
+        var p_type = document.getElementById('production-type').value;
+        var p_desc = document.getElementById('production-desc').value;
+        var p_status = document.getElementById('production-status').value;
+        var p_link = document.getElementById('production-link').value;
+        var p_opening = document.getElementById('production-opening').value;
+        var p_closing = document.getElementById('production-closing').value;
+
+
+        console.log('production type ',p_type);
+        data = {
+            "user_id": user_id,
+            "description": p_desc,
+            "type": p_type,
+            "link": p_link,
+            "status": p_status,
+            "opening_date": p_opening,
+            "closing_date": p_closing
+          };
+    }
+
+
+    var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/"+usertype+"_update";
 
     fetch(url, {
         method: 'POST',
@@ -134,6 +170,10 @@ function saveUserTypeData(token) {
  
             if (response.status == "success") {
                 console.log('', response);
+
+                // go to newsfeed
+                window.location.href = "Newsfeed/newsfeed.html";
+
             }
         }) 
 

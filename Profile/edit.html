@@ -36,7 +36,7 @@
         <a href="../Q.O.D./qod.html">
           <img src="../images/compass@3x.png" width="19" height="19">&nbsp&nbsp Q.O.D
         </a>
-        <a href="#">
+        <a href="../Calendar/calendar.html">
           <img src="../images/calendar (1)@3x.png" width="19" height="19">&nbsp&nbsp Calendar
         </a>
         <a href="../Favorites/favorites.html">
@@ -99,9 +99,9 @@
     <div class="pe-role">
       <h6>Entrepreneur</h6>
     </div>
-  </div>
-  <div class="pe-show-more">
-    <button class="pe-button" id="p2" onclick="myNewFunction()"><a href="#" style="text-decoration: none;"><p>Show Less</p></a></button>
+    <div class="pe-show-more">
+      <a href="#" id="myModal"><img src="../images/penciliconblue.png" class="edit-button"></a>
+    </div>
   </div>
 </div>
 <div class="pe-wrapper2">
@@ -116,12 +116,69 @@
     <h2>Executive Intern @ Marathon Digital</h2>
   </div>
 </div>
+
+
+<!-- =============== EDIT MODAL ================ -->
+<div id="createModalx" class="create-modal">
+  <div class="create-modal-contentx" id="create-modal-contentx">
+  <span class="create-closex">&times;</span>
+    <h1>Edit Information</h1>
+    <form>
+      <span class="edit-left1">
+        <label id="edit-first">FIRST NAME</label>
+        <br>
+        <input type="text" id="input-first" name="articles" placeholder="John">
+      </span>
+      <span class="edit-right1">
+        <label id="edit-last">LAST NAME</label>
+        <!-- <br> -->
+        <input type="text" id="input-last" name="articles" placeholder="Smith">
+      </span>
+      <span class="edit-center">
+        <label id="edit-email">EMAIL ADDRESS</label>
+        <br>
+        <input type="text" id="input-email" name="articles" placeholder="J.smith@gmail.com">
+
+        <label id="edit-username">USERNAME</label>
+        <br>
+        <input type="text" id="input-username" name="articles" placeholder="New York, NY">
+      </span>
+      <span class="edit-left2">
+        <label id="edit-new-password">NEW PASSWORD</label>
+        <br>
+        <input type="text" id="input-new" name="articles" placeholder="John">
+      </span>
+      <span class="edit-right2">
+        <label id="edit-confirm-password">CONFIRM PASSWORD</label>
+        <br>
+        <input type="text" id="input-confirm" name="articles" placeholder="John">
+      </span>
+      <button class="save-changes" onclick="signout()">Save Changes</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  var modalx = document.getElementById('createModalx');
+  var btnx = document.getElementById("myModal");
+  var spanx = document.getElementsByClassName("create-closex")[0];
+  btnx.onclick = function() {
+    modalx.style.display = "block";
+  }
+  spanx.onclick = function() {
+    modalx.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modalx) {
+      modalx.style.display = "none";
+    }
+  }
+</script>
+
+
 <div class="pe-nav">
-  <a href="#" onclick="toggleVisibility('profile-following');">
-    <p class="p-tag" id="following">Information</p>
-  </a>
   <a href="#" onclick="toggleVisibility('profile-followers');">
-    <p class="p-tag" id="followers">Events</p>
+    <p class="p-tag" id="followers">Calendar</p>
   </a>
   <a href="#" onclick="toggleVisibility('profile-calendar');">
     <p class="p-tag" id="calendar">Articles</p>
@@ -151,11 +208,6 @@
   <div id="profile-followers">
     <div class="pe-events">
       <h1>Events...</h1>
-    </div>
-  </div>
-  <div id="profile-following">
-    <div class="pe-information">
-      <h1>Information...</h1>
     </div>
   </div>
 </div>
@@ -252,12 +304,12 @@
       <h3>What do you want to write about? Post it here!</h3>
       <form>
         <span class="left">
-          <label id="a-title">Title</label>
-          <input type="text" id="articles-title" name="articles" placeholder="Title">
+          <label id="a-header">Header</label>
+          <input type="text" id="articles-header" name="articles" placeholder="Header">
         </span>
         <span class="right">
-          <label id="a-header">Header</label>
-          <input type="text" id="articles-header" name="articles" placeholder="header">
+          <label id="a-title">Title</label>
+          <input type="text" id="articles-title" name="articles" placeholder="Title">
         </span>
         <span class="center">
           <label id="a-body">Body</label>
@@ -284,12 +336,12 @@
       <h3>Hosting a theatrical event? Promote it here!</h3>
       <form>
         <span class="left">
-          <label id="e-title">Title</label>
-          <input type="text" id="events-title" name="articles" placeholder="Title">
-        </span>
-        <span class="right">
           <label id="e-header">Header</label>
           <input type="text" id="events-header" name="articles" placeholder="Header">
+        </span>
+        <span class="right">
+          <label id="e-title">Title</label>
+          <input type="text" id="events-title" name="articles" placeholder="Title">
         </span>
         <span class="center">
           <label id="e-body">Body</label>

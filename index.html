@@ -74,11 +74,11 @@
                 <form class="signin-form">
                     <p class="signin-usertype">
                         <label class="signin-label">USER TYPE</label>
-                        <select class="styled-select blue semi-square">
-                          <option value="" disabled selected>Select User Type</option>
-                          <option value="personal">Personal</option>
-                          <option value="company">Company</option>
-                          <option value="production">Production</option>
+                        <select id="signup-usertype" class="styled-select blue semi-square">
+                            <option value="" disabled selected>Select User Type</option>
+                            <option value="personal">Personal</option>
+                            <option value="company">Company</option>
+                            <option value="production">Production</option>
                         </select>
                     </p>
                     <p class="first_name">
@@ -133,44 +133,6 @@
 
     <!-- modal company info -->
     <div id="myModalCompany" class="index-modal">
-      <div class="index-modal-content">
-        <a href="#login" class="a-login">Company Info</a>
-          <hr>
-          <div class="signin" id="signin" data-type="signup">
-            <form class="signin-form">
-              <p class="c_name">
-                <label class="signin-label" for="signup-handle">Name of Company</label>
-                <input class="signin-handle" id="signup-companyname" type="text" placeholder="Enter Company Name">
-              </p>
-              <p class="c_signin-usertype">
-                <label class="signin-label">Type</label>
-                <select id="signup-usertype">
-                  <option value="" disabled selected>Select Company Type</option>
-                  <option value="GeneralManagement">General Management</option>
-                  <option value="Production">Production</option>
-                  <option value="CompanyManagement">Company Management</option>
-                  <option value="Press">Press</option>
-                  <option value="MarketingAdvertising">Marketing/ Advertising</option>
-                  <option value="Casting">Casting</option>
-                  <option value="Organizations">Organizations</option>
-                </select>
-              </p>
-              <p class="c_description">
-                <label class="signin-label" for="signup-firstname">Label 1 </label>
-                <input class="signin-firstname" id="signup-firstname" type="text" placeholder=" Your First Name">
-              </p>
-              <p class="c_link">
-                <label class="signin-label" for="signup-lastname">Label 2 NAME</label>
-                <input class="signin-lastname" id="signup-lastname" type="text" placeholder="Your Last Name">
-              </p>
-              <p class="signin-submit">
-                <input class="input-submit" type="button" value="Back" onclick="showSignUpModal()">
-              </p>
-              <p class="signin-submit">
-                <input class="input-submit" type="button" value="Sign Up" onclick="register()">
-              </p>
-            </form>
-          </div>
         <div class="index-modal-content">
             <a href="#login" class="a-login">Company Info</a>
             <hr>
@@ -194,14 +156,12 @@
                         </select>
                     </p>
                     <p class="c_description">
-                        <label class="signin-label" for="signup-firstname">Link</label>
-                        <input class="signin-firstname" id="company-link" type="text" placeholder=" Your First Name">
-                        <!-- <span class="signin-error">Error message here!</span> -->
+                        <label class="signin-label" for="signup-firstname">Description</label>
+                        <input class="signin-firstname" id="company-desc" type="text" placeholder="About The Company">
                     </p>
                     <p class="c_link">
-                        <label class="signin-label" for="signup-lastname">Company Description</label>
-                        <input class="signin-lastname" id="company-desc" type="text" placeholder="Your Last Name">
-                        <!-- <span class="signin-error">Error message here!</span> -->
+                        <label class="signin-label" for="signup-lastname">Link</label>
+                        <input class="signin-lastname" id="company-link" type="text" placeholder="Your Link">
                     </p>
                     <p class="signin-submit">
                         <input class="input-submit" type="button" value="Back" onclick="showSignUpModal()">
@@ -213,7 +173,6 @@
             </div>
         </div>
     </div>
-
     <!-- modal Production info -->
     <div id="myProductionModal" class="index-modal">
         <div class="index-modal-content">
@@ -241,14 +200,33 @@
 
                         </select>
                     </p>
-                    <p class="c_description">
-                        <label class="signin-label" for="signup-firstname">Label 1 </label>
-                        <input class="signin-firstname" id="signup-firstname" type="text" placeholder=" Your First Name">
+                    <p class="">
+                        <label class="signin-label" for="signup-firstname">Description</label>
+                        <input class="signin-firstname" id="production-desc" type="text" placeholder="Enter Description">
                         <!-- <span class="signin-error">Error message here!</span> -->
                     </p>
-                    <p class="c_link">
-                        <label class="signin-label" for="signup-lastname">Label 2 NAME</label>
-                        <input class="signin-lastname" id="signup-lastname" type="text" placeholder="Your Last Name">
+                    <p class="">
+                        <label class="signin-label" for="signup-lastname">Status</label>
+                        <select id="production-status">
+                            <option value="" disabled selected>Select Production Status</option>
+                            <option value="a">a</option>
+                            <option value="b">b</option>
+                        </select>
+                        <!-- <span class="signin-error">Error message here!</span> -->
+                    </p>
+                    <p class="">
+                        <label class="signin-label" for="signup-firstname">Opening Date</label>
+                        <input class="signin-firstname" id="production-opening" type="text" placeholder="Enter Opening Date">
+                        <!-- <span class="signin-error">Error message here!</span> -->
+                    </p>
+                    <p class="">
+                        <label class="signin-label" for="signup-firstname">Closing Date</label>
+                        <input class="signin-firstname" id="production-closing" type="text" placeholder="Enter Closing Date">
+                        <!-- <span class="signin-error">Error message here!</span> -->
+                    </p>
+                    <p class="">
+                        <label class="signin-label" for="signup-firstname">Production Link</label>
+                        <input class="signin-firstname" id="production-link" type="text" placeholder="Enter Link">
                         <!-- <span class="signin-error">Error message here!</span> -->
                     </p>
                     <p class="signin-submit">
@@ -271,7 +249,7 @@
                 <form class="signin-form">
                     <p class="c_name">
                         <label class="signin-label" for="signup-handle">Date Of Birth</label>
-                        <input class="signin-handle" id="signup-handle" type="text" placeholder="Enter Production Name">
+                        <input class="signin-handle" id="personal-dateOfBirth" type="text" placeholder="Enter Your Date of Birth">
                     </p>
                     <p class="c_signin-usertype">
                         <label class="signin-label">Type</label>
@@ -295,7 +273,7 @@
                         <!-- <span class="signin-error">Error message here!</span> -->
                     </p>
                     <p class="c_link">
-                        <label class="signin-label" for="signup-lastname">Label 2 NAME</label>
+                        <label class="signin-label" for="signup-lastname">Label 2</label>
                         <input class="signin-lastname" id="signup-lastname" type="text" placeholder="Your Last Name">
                         <!-- <span class="signin-error">Error message here!</span> -->
                     </p>
@@ -312,8 +290,9 @@
     <script>
         function showNextModal() {
             var x = document.getElementById("signup-usertype").value;
+            var modal_personal = document.getElementById('myPersonalModal');
             // var modal_signup = document.getElementById('myModal2');
-
+            console.log('usertype value', x)
             modal_signup.style.display = "none";
             if (x == "company") {
                 // show company modal
@@ -323,6 +302,7 @@
                 modal_production.style.display = "block";
             }
             if (x == "personal") {
+                console.log('in personal modal');
                 modal_personal.style.display = "block";
             }
         }
@@ -331,6 +311,7 @@
             var modal_production = document.getElementById('myProductionModal');
             modal_production.style.display = "none";
             modal_company.style.display = "none";
+            modal_personal.style.display = "none";
             modal_signup.style.display = "block";
         }
     </script>

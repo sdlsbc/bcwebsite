@@ -18,7 +18,7 @@ function checkLocalStorage(page) {
 		//checkIfCompleteProfile();
 
 	} else if (PAGE == 'favs') {
-
+		loadAndShowPosts();
 	} 
 	else if (PAGE == 'profile') {
 		console.log(PAGE);
@@ -61,13 +61,14 @@ function getPostsItems() {
 	if (PAGE == 'newsfeed') {
 		url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read";
 	}
-	if (PAGE == 'fav') {
+	if (PAGE == 'favs') {
 		url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/favorite_read"
 	}
 	fetchCount += 1;
 	let params = {
 		headers: {
-			'content-type': 'application/json'
+			'content-type': 'application/json',
+			'Authorization': 'Bearer ' + token
 		},
 		method: 'POST',
 		body: JSON.stringify(body)
@@ -102,7 +103,7 @@ function loadProfile() {
 
 function favorite(post_id, liked) {
 	//alert("totes fave" + id)
-	let url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/favorite"
+	let url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/favorite"
 	let body = { 
 		'post_id': post_id,
 		'liked': liked
@@ -123,7 +124,7 @@ function favorite(post_id, liked) {
 }
 
 function likesUpdate(post_id) {
-	let url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read';
+	let url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read';
 
 	fetch(url, {
 		method: 'POST',
@@ -162,9 +163,6 @@ function showModal(body) {
 	var profile_image_address = body.publisher_image;
 
 	// check if profile picture is default
-	if (profile_image_address == "http://app.bwayconnected.com/public/images/default.jpg") {
-		profile_image_address = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"
-	}
 
 	var profile_image = document.getElementsByClassName("modal-header");
 	profile_image[0].innerHTML = '<img src=' + profile_image_address + '>';
@@ -282,7 +280,6 @@ function showModal(body) {
 }
 
 function createPost(body) {
-	//console.log(body)
 	let div = document.createElement('div');
 	div.classList.add('rcorners');
 
@@ -291,11 +288,9 @@ function createPost(body) {
 	publisher_div.classList.add('pointer');
 
 	let publisher_image = document.createElement('img');
-	// if (body.publisher.profile_image == "http://app.bwayconnected.com/public/images/default.jpg") {
-	// 	publisher_image.src = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"
-	// } else {
-	// 	publisher_image.src = body.publisher.profile_image;
-	// }
+	if (body.publisher_image){
+		publisher_image.src = "https:" + body.publisher_image
+	}
 	
 	publisher_image.classList.add('publisher_image');
 	publisher_div.appendChild(publisher_image);
@@ -480,10 +475,6 @@ function createPost(body) {
 
 	//img.src = 
 }
-
-
-
-
 
 window.onscroll = function (ev) {
 	if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {

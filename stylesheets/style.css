@@ -4208,20 +4208,18 @@ $other-blue-light: #;*/
     width: 25%;
     height: 100%;
     display: inline-block;
-    background-color: rgba(34, 107, 228, 0.3);
-    border-right: 0px solid #E9E9E9; }
+    background-color: #c0d0f6; }
     .create-modal-content .column1 h3 {
       font-family: "Roboto", sans-serif;
       text-align: center;
       font-size: 28px;
-      color: #E9E9E9;
+      color: white;
       font-weight: 100;
-      border-bottom: 1px solid #B2B2B2;
       padding-bottom: 5px;
       width: 80%;
       margin-left: 10%; }
       .create-modal-content .column1 h3:hover {
-        color: #99CCFF; }
+        color: #18253B; }
     .create-modal-content .column1 img {
       width: 150px;
       height: 100px;
@@ -4302,15 +4300,14 @@ $other-blue-light: #;*/
   .create-modal-content .tabcontent {
     position: inherit;
     display: none;
-    padding: 6px 9px;
-    border: 1px solid #ccc;
+    padding: 6px 11px;
     border-top: none;
     margin-top: 8%;
     /*background-color: white;*/
     width: 97.5%;
-    height: 84%; }
+    height: 85%; }
   .create-modal-content #create-milestones {
-    background-color: #899dc1; }
+    background-color: #c0d0f6; }
     .create-modal-content #create-milestones h3 {
       margin-top: 2%;
       color: white;
@@ -4321,7 +4318,7 @@ $other-blue-light: #;*/
       float: left;
       width: 90%;
       margin-left: 5%;
-      margin-top: 8%;
+      margin-top: 10%;
       height: 200px;
       font-size: 16px;
       border-radius: 1%/5%;
@@ -4370,7 +4367,7 @@ $other-blue-light: #;*/
       font-size: 14px;
       font-family: "Roboto", sans-serif; }
   .create-modal-content #create-moments {
-    background-color: #7c93c6; }
+    background-color: #abc1f4; }
     .create-modal-content #create-moments h3 {
       font-weight: 400;
       color: white;
@@ -4381,7 +4378,7 @@ $other-blue-light: #;*/
       float: left;
       width: 90%;
       margin-left: 5%;
-      margin-top: 0%;
+      margin-top: 10%;
       height: 200px;
       font-size: 14px;
       border-radius: 1%/5%;
@@ -4430,7 +4427,7 @@ $other-blue-light: #;*/
       font-family: "Roboto", sans-serif; }
   .create-modal-content #create-articles {
     width: 97%;
-    background-color: #6e8bca; }
+    background-color: #95b0f0; }
     .create-modal-content #create-articles h3 {
       font-weight: 400;
       color: white;
@@ -4553,7 +4550,7 @@ $other-blue-light: #;*/
       font-family: "Roboto", sans-serif;
       border-radius: 25px; }
   .create-modal-content #create-events {
-    background-color: #6184d0; }
+    background-color: #7fa2ed; }
     .create-modal-content #create-events h3 {
       font-weight: 400;
       color: white;
@@ -4681,20 +4678,19 @@ $other-blue-light: #;*/
     text-align: center;
     float: left;
     display: inline-block;
-    background-color: rgba(34, 107, 228, 0.4);
+    background-color: #abc1f4;
     border-right: 0px solid #E9E9E9; }
     .create-modal-content .column2 h3 {
       font-family: "Roboto", sans-serif;
       text-align: center;
       font-size: 28px;
-      color: #E9E9E9;
+      color: white;
       font-weight: 100;
-      border-bottom: 1px solid #B2B2B2;
       padding-bottom: 5px;
       width: 80%;
       margin-left: 10%; }
       .create-modal-content .column2 h3:hover {
-        color: #99CCFF; }
+        color: #18253B; }
     .create-modal-content .column2 img {
       width: 150px;
       height: 100px;
@@ -4763,20 +4759,19 @@ $other-blue-light: #;*/
     text-align: center;
     float: left;
     display: inline-block;
-    background-color: rgba(34, 107, 228, 0.5);
+    background-color: #95b0f0;
     border-right: 0px solid #E9E9E9; }
     .create-modal-content .column3 h3 {
       font-family: "Roboto", sans-serif;
       text-align: center;
       font-size: 28px;
-      color: #E9E9E9;
+      color: white;
       font-weight: 100;
-      border-bottom: 1px solid #B2B2B2;
       padding-bottom: 5px;
       width: 80%;
       margin-left: 10%; }
       .create-modal-content .column3 h3:hover {
-        color: #99CCFF; }
+        color: #18253B; }
     .create-modal-content .column3 img {
       width: 150px;
       height: 100px;
@@ -4845,19 +4840,18 @@ $other-blue-light: #;*/
     width: 25%;
     height: 100%;
     display: inline-block;
-    background-color: rgba(34, 107, 228, 0.6); }
+    background-color: #7fa2ed; }
     .create-modal-content .column4 h3 {
       font-family: "Roboto", sans-serif;
       text-align: center;
       font-size: 28px;
-      color: #E9E9E9;
+      color: white;
       font-weight: 100;
-      border-bottom: 1px solid #B2B2B2;
       padding-bottom: 5px;
       width: 80%;
       margin-left: 10%; }
       .create-modal-content .column4 h3:hover {
-        color: #99CCFF; }
+        color: #18253B; }
     .create-modal-content .column4 img {
       width: 150px;
       height: 100px;
@@ -4968,8 +4962,8 @@ $other-blue-light: #;*/
     margin: auto;
     margin-top: 4%;
     border: 1px solid #888;
-    width: 90%;
-    margin-left: 4.5%;
+    width: 80%;
+    margin-left: 9.5%;
     height: 60%;
     z-index: 1;
     /* Style the buttons inside the tab */
@@ -4979,53 +4973,52 @@ $other-blue-light: #;*/
     }*/
     /* Style the tab content */ }
     .create-modal-content .column1 {
-      width: 24.3%;
+      text-align: center;
+      float: left;
+      width: 25%;
       height: 100%;
-      padding-right: 2px;
       display: inline-block;
-      background-color: white;
-      border-right: 1px solid #E9E9E9; }
+      background-color: #c0d0f6; }
       .create-modal-content .column1 h3 {
         font-family: "Roboto", sans-serif;
         text-align: center;
-        font-size: 26px;
-        color: #18253B;
-        font-weight: 400;
-        border-bottom: 1px solid #B2B2B2;
+        font-size: 28px;
+        color: white;
+        font-weight: 100;
         padding-bottom: 5px;
         width: 80%;
         margin-left: 10%; }
         .create-modal-content .column1 h3:hover {
-          color: #226BE4; }
+          color: #18253B; }
       .create-modal-content .column1 img {
-        width: 80%;
-        height: 19%;
-        margin-top: 25%;
-        margin-left: 10%;
-        border: 3px solid #226BE4; }
+        width: 150px;
+        height: 100px;
+        margin-bottom: 10px;
+        border-radius: 12px; }
       .create-modal-content .column1 h4 {
-        font-size: 12px;
-        text-align: justify;
+        width: 88%;
+        height: 35%;
+        font-size: 16px;
+        font-weight: 400;
+        margin-left: 4.5%;
         color: #18253B;
-        width: 80%;
-        margin-top: 30%;
-        margin-left: 13%;
-        font-weight: 400; }
+        text-align: justify; }
       .create-modal-content .column1 .create-button-wrapper {
         width: 100%;
         text-align: center;
-        margin-top: 60%;
+        margin-top: -180px;
         margin-left: -0.7%; }
         .create-modal-content .column1 .create-button-wrapper .create-button {
           border-radius: 24%/72%;
           background-color: #1E2E49;
           color: white;
           padding: 5px 12px;
-          width: 86%;
-          height: 10%;
-          margin-top: 135px;
+          width: 100px;
+          height: 35px;
+          margin-top: 200px;
           text-align: center;
           cursor: pointer;
+          border: 1px solid #1E2E49;
           -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
           margin-left: 0%;
@@ -5035,18 +5028,19 @@ $other-blue-light: #;*/
           .create-modal-content .column1 .create-button-wrapper .create-button p {
             color: white;
             font-weight: 100;
-            margin-top: 9px;
-            font-size: 13px; }
+            margin-top: 6px;
+            font-size: 10px; }
           .create-modal-content .column1 .create-button-wrapper .create-button:hover {
             border-radius: 24%/72%;
             background-color: #226BE4;
             color: #99CCFF;
             padding: 5px 12px;
-            width: 86%;
-            height: 10%;
-            margin-top: 135px;
+            width: 100px;
+            height: 35px;
+            margin-top: 200px;
             text-align: center;
             cursor: pointer;
+            border: 1px solid #226BE4;
             -webkit-transition-duration: 0.4s;
             transition-duration: 0.4s;
             margin-left: 0%;
@@ -5056,8 +5050,8 @@ $other-blue-light: #;*/
             .create-modal-content .column1 .create-button-wrapper .create-button:hover p {
               color: white;
               font-weight: 100;
-              margin-top: 0px;
-              font-size: 13px; }
+              margin-top: 6px;
+              font-size: 10px; }
     .create-modal-content .tab {
       overflow: hidden;
       border: 1px solid #ccc;
@@ -5074,91 +5068,87 @@ $other-blue-light: #;*/
       .create-modal-content .tab button:hover {
         background-color: #ddd; }
     .create-modal-content .tabcontent {
-      position: fixed;
+      position: inherit;
       display: none;
-      padding: 6px 12px;
-      border: 1px solid #ccc;
+      padding: 6px 9px;
       border-top: none;
-      margin-top: -78%;
-      background-color: white;
-      width: 87.4%;
-      height: 58%; }
+      margin-top: 13%;
+      /*background-color: white;*/
+      width: 97.5%;
+      height: 87%; }
     .create-modal-content #create-milestones {
-      background-color: white; }
+      background-color: #c0d0f6; }
       .create-modal-content #create-milestones h3 {
-        text-align: center;
+        margin-top: 2%;
+        color: white;
+        font-size: 20px;
         font-weight: 400;
-        color: #18253B;
-        font-size: 22px;
-        margin-top: 3%;
-        margin-left: 5%;
-        margin-right: 5%; }
+        margin-left: 6%; }
       .create-modal-content #create-milestones input[type=text] {
         float: left;
         width: 90%;
         margin-left: 5%;
-        margin-top: 4%;
+        margin-top: 10%;
         height: 200px;
-        font-size: 14px;
+        font-size: 16px;
         border-radius: 1%/5%;
         box-sizing: border-box;
         padding: 22px 12px 175px;
         border: 2px solid #226BE4; }
       .create-modal-content #create-milestones .milestones-extra-buttons {
         position: relative;
-        margin-left: 48px;
-        width: 90%;
-        border-bottom: 1px solid #E9E9E9;
-        padding-top: 151px;
-        z-index: 4; }
+        margin-left: 53px;
+        width: 88%;
+        padding-top: 220px;
+        border-bottom: 1px solid #E9E9E9; }
         .create-modal-content #create-milestones .milestones-extra-buttons .attach-photo {
-          margin-left: 2%;
-          width: 14%;
+          margin-left: 0%;
+          width: 20%;
+          margin-top: -5.5%;
           float: left;
           color: #B2B2B2;
-          font-size: 12px;
+          font-size: 13px;
           display: inline-block;
           border-radius: 19%/72%;
           background-color: #E9E9E9; }
         .create-modal-content #create-milestones .milestones-extra-buttons .privacy-btn {
           float: left;
-          margin-left: 18%;
-          width: 14%;
+          margin-left: 20%;
+          width: 22%;
+          margin-top: -5.5%;
           color: #B2B2B2;
-          font-size: 12px;
+          font-size: 13px;
           display: inline-block;
           border-radius: 19%/72%;
           background-color: #E9E9E9; }
       .create-modal-content #create-milestones button {
         float: right;
-        width: 23%;
-        margin-top: -48px;
-        margin-right: 66px;
+        width: 10%;
+        margin-top: -40px;
+        margin-right: 56px;
         background-color: #226BE4;
         color: white;
-        padding: -1px 12px;
-        height: 37px;
+        padding: 5px 12px;
+        height: 31px;
         text-align: center;
         cursor: pointer;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
-        font-size: 16px;
+        font-size: 14px;
         font-family: "Roboto", sans-serif; }
     .create-modal-content #create-moments {
-      background-color: #f9d692; }
+      background-color: #abc1f4; }
       .create-modal-content #create-moments h3 {
-        text-align: center;
         font-weight: 400;
-        color: #18253B;
-        font-size: 22px;
-        margin-top: 3%;
+        color: white;
+        font-size: 20px;
         margin-left: 5%;
-        margin-right: 5%; }
+        margin-top: 3%; }
       .create-modal-content #create-moments input[type=text] {
         float: left;
         width: 90%;
         margin-left: 5%;
-        margin-top: 4%;
+        margin-top: 10%;
         height: 200px;
         font-size: 14px;
         border-radius: 1%/5%;
@@ -5173,58 +5163,57 @@ $other-blue-light: #;*/
         padding-top: 151px;
         z-index: 4; }
         .create-modal-content #create-moments .moments-extra-buttons .attach-photo {
-          margin-left: 2%;
-          width: 14%;
+          margin-left: 0%;
+          width: 20%;
           float: left;
           color: #B2B2B2;
-          font-size: 12px;
+          font-size: 13px;
           display: inline-block;
           border-radius: 19%/72%;
           background-color: #E9E9E9; }
         .create-modal-content #create-moments .moments-extra-buttons .privacy-btn {
           float: left;
-          margin-left: 18%;
-          width: 14%;
+          margin-left: 20%;
+          width: 22%;
           color: #B2B2B2;
-          font-size: 12px;
+          font-size: 13px;
           display: inline-block;
           border-radius: 19%/72%;
           background-color: #E9E9E9; }
       .create-modal-content #create-moments button {
         float: right;
-        width: 23%;
-        margin-top: -48px;
-        margin-right: 66px;
+        width: 10%;
+        margin-top: -41px;
+        margin-right: 56px;
         background-color: #226BE4;
         color: white;
-        padding: -1px 12px;
-        height: 37px;
+        padding: 5px 12px;
+        height: 31px;
         text-align: center;
         cursor: pointer;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
-        font-size: 16px;
+        font-size: 14px;
         font-family: "Roboto", sans-serif; }
     .create-modal-content #create-articles {
-      width: 87.2%;
-      background-color: #E9E9E9; }
+      width: 97%;
+      background-color: #95b0f0; }
       .create-modal-content #create-articles h3 {
-        text-align: center;
         font-weight: 400;
-        color: #18253B;
-        font-size: 22px;
-        margin-top: 3%;
-        margin-left: 5%;
-        margin-right: 5%; }
+        color: white;
+        font-size: 20px;
+        margin-left: 4%;
+        margin-top: 3%; }
       .create-modal-content #create-articles .left {
         width: 46%;
         float: left;
-        margin-top: 0%;
+        margin-top: 5%;
         margin-bottom: 3%;
         display: inline-block; }
         .create-modal-content #create-articles .left #a-header {
-          margin-left: 33px;
-          color: #226BE4; }
+          color: #99CCFF;
+          font-size: 14px;
+          margin-left: 45px; }
         .create-modal-content #create-articles .left #articles-header {
           margin-left: 8%;
           width: 86%;
@@ -5238,12 +5227,13 @@ $other-blue-light: #;*/
       .create-modal-content #create-articles .right {
         width: 46%;
         float: right;
-        margin-top: 0%;
+        margin-top: 5%;
         margin-bottom: 3%;
         display: inline-block; }
         .create-modal-content #create-articles .right #a-title {
-          margin-left: -1px;
-          color: #226BE4; }
+          color: #99CCFF;
+          font-size: 14px;
+          margin-left: 45px; }
         .create-modal-content #create-articles .right #articles-title {
           margin-right: 8%;
           width: 86%;
@@ -5259,49 +5249,50 @@ $other-blue-light: #;*/
         width: 100%;
         float: left; }
         .create-modal-content #create-articles .center #a-body {
-          margin-top: -26px;
-          margin-left: 33px;
           float: left;
-          color: #226BE4; }
+          color: #99CCFF;
+          font-size: 14px;
+          margin-top: -40px;
+          margin-left: 45px; }
         .create-modal-content #create-articles .center #articles-body {
           float: left;
-          width: 92%;
-          margin-left: 4%;
-          margin-top: 2px;
-          height: 150px;
+          width: 93%;
+          margin-left: 3.4%;
+          margin-top: -14px;
+          height: 130px;
           font-size: 14px;
-          border-radius: 1%/5%;
+          border-radius: 3%/40%;
           box-sizing: border-box;
-          padding: 22px 12px 80px;
+          padding: 22px 12px 50px;
           border: 2px solid #226BE4; }
         .create-modal-content #create-articles .center #a-tag {
-          margin-top: 18px;
-          margin-left: 33px;
+          margin-top: 15px;
           float: left;
-          color: #226BE4; }
+          color: #99CCFF;
+          font-size: 14px;
+          margin-left: 45px; }
         .create-modal-content #create-articles .center #articles-tag {
           margin-left: 4%;
           width: 88%;
           height: 20px;
-          margin-top: 12px;
+          margin-top: 10px;
           border-radius: 1%/40%;
           padding: 10px 12px 10px;
           border: 2px solid #226BE4; }
       .create-modal-content #create-articles .articles-extra-buttons {
         margin-left: 48px;
         width: 90%;
-        border-bottom: 1px solid #E9E9E9;
         padding-top: 50px;
         z-index: 4; }
         .create-modal-content #create-articles .articles-extra-buttons .attach-photo {
-          margin-left: -3%;
+          margin-left: 0%;
           margin-top: 15px;
           width: 18%;
           float: left;
           display: inline-block; }
           .create-modal-content #create-articles .articles-extra-buttons .attach-photo img {
-            width: 40px;
-            height: 40px; }
+            width: 35px;
+            height: 35px; }
         .create-modal-content #create-articles .articles-extra-buttons .privacy-btn {
           margin-top: 15px;
           margin-left: -10%;
@@ -5309,44 +5300,43 @@ $other-blue-light: #;*/
           float: left;
           display: inline-block; }
           .create-modal-content #create-articles .articles-extra-buttons .privacy-btn img {
-            width: 40px;
-            height: 40px; }
+            width: 35px;
+            height: 35px; }
       .create-modal-content #create-articles .input-button {
         text-align: center;
-        width: 102px;
-        height: 38px;
-        margin-left: 13%;
-        margin-top: 67px;
+        width: 119px;
+        height: 40px;
+        margin-left: 10%;
+        margin-top: 50px;
         background-color: #226BE4;
+        border: 1px solid #226BE4;
         color: white;
         padding: 5px 12px;
         text-align: center;
         cursor: pointer;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
-        font-size: 16px;
+        font-size: 14px;
         font-family: "Roboto", sans-serif;
         border-radius: 25px; }
     .create-modal-content #create-events {
-      width: 87.2%;
-      background-color: #F7FAFF; }
+      background-color: #7fa2ed; }
       .create-modal-content #create-events h3 {
-        text-align: center;
         font-weight: 400;
-        color: #18253B;
-        font-size: 22px;
-        margin-top: 3%;
-        margin-left: 5%;
-        margin-right: 5%; }
+        color: white;
+        font-size: 20px;
+        margin-left: 4%;
+        margin-top: 3%; }
       .create-modal-content #create-events .left {
         width: 46%;
         float: left;
-        margin-top: 0%;
+        margin-top: 5%;
         margin-bottom: 3%;
         display: inline-block; }
         .create-modal-content #create-events .left #e-header {
-          margin-left: 33px;
-          color: #226BE4; }
+          color: #99CCFF;
+          font-size: 14px;
+          margin-left: 45px; }
         .create-modal-content #create-events .left #events-header {
           margin-left: 8%;
           width: 86%;
@@ -5360,12 +5350,13 @@ $other-blue-light: #;*/
       .create-modal-content #create-events .right {
         width: 46%;
         float: right;
-        margin-top: 0%;
+        margin-top: 5%;
         margin-bottom: 3%;
         display: inline-block; }
         .create-modal-content #create-events .right #e-title {
-          margin-left: -1px;
-          color: #226BE4; }
+          color: #99CCFF;
+          font-size: 14px;
+          margin-left: 45px; }
         .create-modal-content #create-events .right #events-title {
           margin-right: 8%;
           width: 86%;
@@ -5381,49 +5372,50 @@ $other-blue-light: #;*/
         width: 100%;
         float: left; }
         .create-modal-content #create-events .center #e-body {
-          margin-top: -26px;
-          margin-left: 33px;
           float: left;
-          color: #226BE4; }
+          color: #99CCFF;
+          font-size: 14px;
+          margin-top: -40px;
+          margin-left: 45px; }
         .create-modal-content #create-events .center #events-body {
           float: left;
-          width: 92%;
-          margin-left: 4%;
-          margin-top: 2px;
-          height: 150px;
+          width: 93%;
+          margin-left: 3.4%;
+          margin-top: -14px;
+          height: 130px;
           font-size: 14px;
-          border-radius: 1%/5%;
+          border-radius: 3%/40%;
           box-sizing: border-box;
-          padding: 22px 12px 80px;
+          padding: 22px 12px 50px;
           border: 2px solid #226BE4; }
         .create-modal-content #create-events .center #e-tag {
-          margin-top: 18px;
-          margin-left: 33px;
+          margin-top: 15px;
           float: left;
-          color: #226BE4; }
+          color: #99CCFF;
+          font-size: 14px;
+          margin-left: 45px; }
         .create-modal-content #create-events .center #events-tag {
           margin-left: 4%;
           width: 88%;
           height: 20px;
-          margin-top: 12px;
+          margin-top: 10px;
           border-radius: 1%/40%;
           padding: 10px 12px 10px;
           border: 2px solid #226BE4; }
       .create-modal-content #create-events .events-extra-buttons {
         margin-left: 48px;
         width: 90%;
-        border-bottom: 1px solid #E9E9E9;
         padding-top: 50px;
         z-index: 4; }
         .create-modal-content #create-events .events-extra-buttons .attach-photo {
-          margin-left: -3%;
+          margin-left: 0%;
           margin-top: 15px;
           width: 18%;
           float: left;
           display: inline-block; }
           .create-modal-content #create-events .events-extra-buttons .attach-photo img {
-            width: 40px;
-            height: 40px; }
+            width: 35px;
+            height: 35px; }
         .create-modal-content #create-events .events-extra-buttons .privacy-btn {
           margin-top: 15px;
           margin-left: -10%;
@@ -5431,71 +5423,73 @@ $other-blue-light: #;*/
           float: left;
           display: inline-block; }
           .create-modal-content #create-events .events-extra-buttons .privacy-btn img {
-            width: 40px;
-            height: 40px; }
+            width: 35px;
+            height: 35px; }
       .create-modal-content #create-events .input-button {
-        /*text-align: center;*/
-        width: 102px;
-        height: 38px;
-        margin-left: 13%;
-        margin-top: 67px;
+        text-align: center;
+        width: 119px;
+        height: 40px;
+        margin-left: 10%;
+        margin-top: 50px;
         background-color: #226BE4;
         color: white;
         padding: 5px 12px;
         text-align: center;
         cursor: pointer;
+        border: 1px solid #226BE4;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
-        font-size: 16px;
+        font-size: 14px;
         font-family: "Roboto", sans-serif;
         border-radius: 25px; }
     .create-modal-content .column2 {
-      width: 24%;
+      width: 25%;
       height: 100%;
+      text-align: center;
+      float: left;
       display: inline-block;
-      background-color: #f9d692;
-      border-right: 1px solid #E9E9E9; }
+      background-color: #abc1f4;
+      border-right: 0px solid #E9E9E9; }
       .create-modal-content .column2 h3 {
         font-family: "Roboto", sans-serif;
         text-align: center;
-        font-size: 26px;
-        color: #18253B;
-        font-weight: 400;
-        border-bottom: 1px solid #B2B2B2;
+        font-size: 28px;
+        color: white;
+        font-weight: 100;
         padding-bottom: 5px;
         width: 80%;
         margin-left: 10%; }
         .create-modal-content .column2 h3:hover {
-          color: #226BE4; }
+          color: #18253B; }
       .create-modal-content .column2 img {
-        width: 80%;
-        height: 19%;
-        margin-top: 25%;
-        margin-left: 10%;
-        border: 3px solid #226BE4; }
+        width: 150px;
+        height: 100px;
+        margin-bottom: 10px;
+        border-radius: 12px; }
       .create-modal-content .column2 h4 {
-        font-size: 12px;
-        text-align: justify;
+        width: 88%;
+        height: 35%;
+        font-size: 16px;
+        font-weight: 400;
+        margin-left: 4.5%;
         color: #18253B;
-        width: 80%;
-        margin-top: 30%;
-        margin-left: 13%;
-        font-weight: 400; }
+        text-align: justify; }
       .create-modal-content .column2 .create-button-wrapper {
         width: 100%;
         text-align: center;
-        margin-top: 60%;
+        margin-top: -180px;
         margin-left: -0.7%; }
         .create-modal-content .column2 .create-button-wrapper .create-button {
           border-radius: 24%/72%;
           background-color: #1E2E49;
           color: #226BE4;
           padding: 5px 12px;
-          width: 86%;
-          height: 10%;
-          margin-top: 135px;
+          width: 100px;
+          height: 35px;
+          margin-top: 200px;
           text-align: center;
           cursor: pointer;
+          border: 1px solid #1E2E49;
           -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
           margin-left: 0%;
@@ -5505,18 +5499,19 @@ $other-blue-light: #;*/
           .create-modal-content .column2 .create-button-wrapper .create-button p {
             color: white;
             font-weight: 100;
-            margin-top: 9px;
-            font-size: 13px; }
+            margin-top: 6px;
+            font-size: 10px; }
           .create-modal-content .column2 .create-button-wrapper .create-button:hover {
             border-radius: 24%/72%;
             background-color: #226BE4;
             color: #99CCFF;
             padding: 5px 12px;
-            width: 86%;
-            height: 10%;
-            margin-top: 135px;
+            width: 100px;
+            height: 35px;
+            margin-top: 200px;
             text-align: center;
             cursor: pointer;
+            border: 1px solid #226BE4;
             -webkit-transition-duration: 0.4s;
             transition-duration: 0.4s;
             margin-left: 0%;
@@ -5526,55 +5521,56 @@ $other-blue-light: #;*/
             .create-modal-content .column2 .create-button-wrapper .create-button:hover p {
               color: white;
               font-weight: 100;
-              margin-top: 9px;
-              font-size: 13px; }
+              margin-top: 6px;
+              font-size: 10px; }
     .create-modal-content .column3 {
-      width: 24.3%;
+      width: 25%;
       height: 100%;
+      text-align: center;
+      float: left;
       display: inline-block;
-      background-color: #E9E9E9;
-      border-right: 1px solid #E9E9E9; }
+      background-color: #95b0f0;
+      border-right: 0px solid #E9E9E9; }
       .create-modal-content .column3 h3 {
         font-family: "Roboto", sans-serif;
         text-align: center;
-        font-size: 26px;
-        color: #18253B;
-        font-weight: 400;
-        border-bottom: 1px solid #B2B2B2;
+        font-size: 28px;
+        color: white;
+        font-weight: 100;
         padding-bottom: 5px;
         width: 80%;
         margin-left: 10%; }
         .create-modal-content .column3 h3:hover {
-          color: #226BE4; }
+          color: #18253B; }
       .create-modal-content .column3 img {
-        width: 80%;
-        height: 19%;
-        margin-top: 25%;
-        margin-left: 10%;
-        border: 3px solid #226BE4; }
+        width: 150px;
+        height: 100px;
+        margin-bottom: 10px;
+        border-radius: 12px; }
       .create-modal-content .column3 h4 {
-        font-size: 12px;
-        text-align: justify;
+        width: 88%;
+        height: 35%;
+        font-size: 16px;
+        font-weight: 400;
+        margin-left: 4.5%;
         color: #18253B;
-        width: 80%;
-        margin-top: 30%;
-        margin-left: 13%;
-        font-weight: 400; }
+        text-align: justify; }
       .create-modal-content .column3 .create-button-wrapper {
         width: 100%;
         text-align: center;
-        margin-top: 60%;
+        margin-top: -180px;
         margin-left: -0.7%; }
         .create-modal-content .column3 .create-button-wrapper .create-button {
           border-radius: 24%/72%;
           background-color: #1E2E49;
           color: #226BE4;
           padding: 5px 12px;
-          width: 86%;
-          height: 10%;
-          margin-top: 135px;
+          width: 100px;
+          height: 35px;
+          margin-top: 200px;
           text-align: center;
           cursor: pointer;
+          border: 1px solid #1E2E49;
           -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
           margin-left: 0%;
@@ -5584,18 +5580,19 @@ $other-blue-light: #;*/
           .create-modal-content .column3 .create-button-wrapper .create-button p {
             color: white;
             font-weight: 100;
-            margin-top: 9px;
-            font-size: 13px; }
+            margin-top: 6px;
+            font-size: 10px; }
           .create-modal-content .column3 .create-button-wrapper .create-button:hover {
             border-radius: 24%/72%;
             background-color: #226BE4;
             color: #99CCFF;
             padding: 5px 12px;
-            width: 86%;
-            height: 10%;
-            margin-top: 135px;
+            width: 100px;
+            height: 35px;
+            margin-top: 200px;
             text-align: center;
             cursor: pointer;
+            border: 1px solid #226BE4;
             -webkit-transition-duration: 0.4s;
             transition-duration: 0.4s;
             margin-left: 0%;
@@ -5605,54 +5602,55 @@ $other-blue-light: #;*/
             .create-modal-content .column3 .create-button-wrapper .create-button:hover p {
               color: white;
               font-weight: 100;
-              margin-top: 9px;
-              font-size: 13px; }
+              margin-top: 6px;
+              font-size: 10px; }
     .create-modal-content .column4 {
-      width: 24.3%;
+      text-align: center;
+      float: left;
+      width: 25%;
       height: 100%;
       display: inline-block;
-      background-color: #F7FAFF; }
+      background-color: #7fa2ed; }
       .create-modal-content .column4 h3 {
         font-family: "Roboto", sans-serif;
         text-align: center;
-        font-size: 26px;
-        color: #18253B;
-        font-weight: 400;
-        border-bottom: 1px solid #B2B2B2;
+        font-size: 28px;
+        color: white;
+        font-weight: 100;
         padding-bottom: 5px;
         width: 80%;
         margin-left: 10%; }
         .create-modal-content .column4 h3:hover {
-          color: #226BE4; }
+          color: #18253B; }
       .create-modal-content .column4 img {
-        width: 80%;
-        height: 19%;
-        margin-top: 25%;
-        margin-left: 10%;
-        border: 3px solid #226BE4; }
+        width: 150px;
+        height: 100px;
+        margin-bottom: 10px;
+        border-radius: 12px; }
       .create-modal-content .column4 h4 {
-        font-size: 12px;
-        text-align: justify;
+        width: 88%;
+        height: 35%;
+        font-size: 16px;
+        font-weight: 400;
+        margin-left: 4.5%;
         color: #18253B;
-        width: 80%;
-        margin-top: 30%;
-        margin-left: 13%;
-        font-weight: 400; }
+        text-align: justify; }
       .create-modal-content .column4 .create-button-wrapper {
         width: 100%;
         text-align: center;
-        margin-top: 60%;
+        margin-top: -180px;
         margin-left: -0.7%; }
         .create-modal-content .column4 .create-button-wrapper .create-button {
           border-radius: 24%/72%;
           background-color: #1E2E49;
           color: #226BE4;
           padding: 5px 12px;
-          width: 86%;
-          height: 10%;
-          margin-top: 135px;
+          width: 100px;
+          height: 35px;
+          margin-top: 200px;
           text-align: center;
           cursor: pointer;
+          border: 1px solid #1E2E49;
           -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
           margin-left: 0%;
@@ -5662,18 +5660,19 @@ $other-blue-light: #;*/
           .create-modal-content .column4 .create-button-wrapper .create-button p {
             color: white;
             font-weight: 100;
-            margin-top: 9px;
-            font-size: 13px; }
+            margin-top: 6px;
+            font-size: 10px; }
           .create-modal-content .column4 .create-button-wrapper .create-button:hover {
             border-radius: 24%/72%;
             background-color: #226BE4;
             color: #99CCFF;
             padding: 5px 12px;
-            width: 86%;
-            height: 10%;
-            margin-top: 135px;
+            width: 100px;
+            height: 35px;
+            margin-top: 200px;
             text-align: center;
             cursor: pointer;
+            border: 1px solid #226BE4;
             -webkit-transition-duration: 0.4s;
             transition-duration: 0.4s;
             margin-left: 0%;
@@ -5683,8 +5682,8 @@ $other-blue-light: #;*/
             .create-modal-content .column4 .create-button-wrapper .create-button:hover p {
               color: white;
               font-weight: 100;
-              margin-top: 9px;
-              font-size: 13px; } }
+              margin-top: 6px;
+              font-size: 10px; } }
 @media screen and (max-width: 900px) {
   .pe-nav {
     width: 100%;

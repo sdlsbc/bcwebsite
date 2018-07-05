@@ -133,23 +133,18 @@ function saveUserTypeData(token) {
     }
 
     if (usertype == "personal") {
-        var p_type = document.getElementById('production-type').value;
-        var p_desc = document.getElementById('production-desc').value;
-        var p_status = document.getElementById('production-status').value;
-        var p_link = document.getElementById('production-link').value;
-        var p_opening = document.getElementById('production-opening').value;
-        var p_closing = document.getElementById('production-closing').value;
-
-
-        console.log('production type ',p_type);
+        var per_dob = document.getElementById('personal-dateOfBirth').value;
+        var per_type = document.getElementById('personal-type').value;
+        var per_headline = document.getElementById('personal-headline').value;
+        // var per_career = document.getElementById('personal-career').value;
+        // var per_career_list = '['+'"'+per_career+'"'+']';
+        // console.log('personal profile type ',per_career_list);
         data = {
             "user_id": user_id,
-            "description": p_desc,
-            "type": p_type,
-            "link": p_link,
-            "status": p_status,
-            "opening_date": p_opening,
-            "closing_date": p_closing
+            "date_of_birth": per_dob,
+            "headline": per_headline,
+            // "career": per_career_list,
+            "profile_type": per_type
           };
     }
 

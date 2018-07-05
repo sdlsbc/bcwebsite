@@ -4,9 +4,13 @@ var PAGE = "";
 var checkProf = true; // user profile is complete
 //global array of booleans for all the articles
 var favs = {};
+var user_id = "";
+var token = "";
 
 function checkLocalStorage(page) {
 	PAGE = page;
+	user_id = localStorage.getItem("user_id");
+	token = localStorage.getItem("token");
 
 	if (PAGE == 'newsfeed') {
 		//loadProfile();
@@ -49,7 +53,7 @@ function getPostsItems() {
 	let url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read";
 	var body = {
 		'offset': 0,
-		'limit': 100
+		'limit': 0
 	};
 	if (PAGE == 'newsfeed') {
 		body = {
@@ -57,12 +61,10 @@ function getPostsItems() {
 			'limit': 12*(fetchCount+1)
 		};
 	}
-	// if (PAGE == 'fav') {
-	// 	let user_id = localStorage.getItem("user_id");
-	// 	url = url + "post/favourites?user_id=" + user_id + "&offset=" + (12 * fetchCount) + "&limit=12";
-	// }
+	if (PAGE == 'fav') {
+		//url = url + "post/favourites?user_id=" + user_id + "&offset=" + (12 * fetchCount) + "&limit=12";
+	}
 	fetchCount += 1;
-	//url = url + offset;
 	let params = {
 		headers: {
 			'content-type': 'application/json'
@@ -70,7 +72,6 @@ function getPostsItems() {
 		method: 'POST',
 		body: JSON.stringify(body)
 	}
-
 	return fetch(url, params)
 		.then(res => res.json())
 		.then(body => {
@@ -101,20 +102,22 @@ function loadProfile() {
 
 function favorite(post_id, liked) {
 	//alert("totes fave" + id)
-	let user_id = localStorage.getItem("user_id");
 	let url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/favorite"
 	let body = { 
 		'post_id': post_id,
 		'liked': liked
 		}
+	console.log(token)
+	let bearer = "Bearer " + token;
 	let params = {
 		headers: {
 			'content-type': 'application/json',
-			'Authorization': 'Bearer 1530626498553x745134971104562300'
+			'Authorization': bearer
 		},
 		body: JSON.stringify(body),
 		method: 'POST'
 	}
+	console.log(params)
 	return fetch(url, params)
 		.then(res => res.json());
 }
@@ -149,7 +152,6 @@ function likesUpdate(post_id) {
 function showModal(body) {
 	console.log("showModal",body);
 	console.log(favs)
-	let user_id = localStorage.getItem("user_id");
 
 	// start building the modal
 
@@ -253,7 +255,7 @@ function showModal(body) {
 		favorite(body._id, liked)
 			.then(res => {
 				console.log(body)
-				if(res.response.post.favoriters.some(fav => fav == "1530287074040x237806817283853900")){
+				if(res.response.post.favoriters.some(fav => fav == user_id)){
 					var new_like = true;
 					favs[res.response.post._id] = true;
 				} else {
@@ -340,14 +342,13 @@ function createPost(body) {
 	button_div.setAttribute("id", body._id);
 	button_div.classList.add('button_row');
 
-	let user_id = localStorage.getItem("user_id");
 	let fav_button = document.createElement('img');
 	// fav_button.setAttribute("id", body.id);
 	fav_button.src = '../images/newsfeed_buttons/heart2.png';
 	fav_button.classList.add('pointer');
 	var liked = false;
 	if(body.favoriters){
-		if (body.favoriters.some(fav => fav == "1530287074040x237806817283853900")) {
+		if (body.favoriters.some(fav => fav == user_id)) {
 			fav_button.classList.add('favorite_click');
 			liked = true;
 			favs[body._id] = true;
@@ -360,33 +361,26 @@ function createPost(body) {
 	fav_button.onclick = function (ev) {
 		favorite(body._id, liked)
 			.then(body => {
-				if(body.response.post.favoriters.some(fav => fav == "1530287074040x237806817283853900")){
-					console.log("line 364")
+				if(body.response.post.favoriters.some(fav => fav == user_id)){
 					var new_like = true;
 				} else {
-					console.log("line 367")
 					var new_like = false;
 				}
 				if (body.status == "success") {
-					console.log("line 371")
 					likesUpdate(body.response.post._id);
 				}
 				if (new_like) {
-					console.log("line 375")
 					var target = ev.srcElement || ev.target
 					target.classList.remove('button');
 					target.classList.add('favorite_click');
 					liked = true;
 					favs[body.response.post._id] = true;
-					console.log(favs)
 				} else {
-					console.log("line 383")
 					var target = ev.srcElement || ev.target
 					target.classList.add('button');
 					target.classList.remove('favorite_click');
 					liked = false;
 					favs[body.response.post._id] = false;
-					console.log(favs)
 				}
 			})
 	};

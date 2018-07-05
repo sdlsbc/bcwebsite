@@ -17,7 +17,10 @@ function checkLocalStorage(page) {
 		loadAndShowPosts();
 		//checkIfCompleteProfile();
 
-	} else if (PAGE == 'profile') {
+	} else if (PAGE == 'favs') {
+
+	} 
+	else if (PAGE == 'profile') {
 		console.log(PAGE);
 		loadProfileData();
 		loadProfile();
@@ -50,19 +53,16 @@ function loadAndShowPosts() {
 }
 
 function getPostsItems() {
-	let url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read";
-	var body = {
-		'offset': 0,
-		'limit': 0
+	let url = "";
+	let body = {
+		'offset': 12*fetchCount,
+		'limit': 12*(fetchCount+1)
 	};
 	if (PAGE == 'newsfeed') {
-		body = {
-			'offset': 12*fetchCount,
-			'limit': 12*(fetchCount+1)
-		};
+		url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read";
 	}
 	if (PAGE == 'fav') {
-		//url = url + "post/favourites?user_id=" + user_id + "&offset=" + (12 * fetchCount) + "&limit=12";
+		url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/favorite_read"
 	}
 	fetchCount += 1;
 	let params = {
@@ -108,7 +108,7 @@ function favorite(post_id, liked) {
 		'liked': liked
 		}
 	console.log(token)
-	let bearer = "Bearer " + token;
+	var bearer = "Bearer " + token;
 	let params = {
 		headers: {
 			'content-type': 'application/json',
@@ -361,6 +361,7 @@ function createPost(body) {
 	fav_button.onclick = function (ev) {
 		favorite(body._id, liked)
 			.then(body => {
+				console.log(body)
 				if(body.response.post.favoriters.some(fav => fav == user_id)){
 					var new_like = true;
 				} else {

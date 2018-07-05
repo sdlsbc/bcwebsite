@@ -155,7 +155,7 @@ function saveUserTypeData(token) {
     }
 
 
-    var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/" + usertype + "_update";
+    var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/"+usertype+"_update";
 
     fetch(url, {
         method: 'POST',

@@ -338,7 +338,8 @@
   /*close button*/
   color: white;
   float: right;
-  font-size: 28px;
+  margin-right: 13px;
+  font-size: 30px;
   font-weight: bold; }
 
 .close:hover,
@@ -508,12 +509,12 @@
   width: 50%; }
   .right .modal-date {
     float: left;
-    width: 22%;
+    width: 27%;
     display: inline-block;
     margin-top: 25px;
     font-size: 14px;
     color: gray;
-    margin-left: 48px; }
+    margin-left: 35px; }
   .right .calendar {
     float: left;
     width: 8%;
@@ -3960,11 +3961,11 @@ $other-blue-light: #;*/
       text-align: center;
       margin-left: 9%;
       font-size: 18px;
-      font-weight: 400;
+      font-weight: 900;
       color: #B2B2B2; }
     .profile_wrapper .pe-header .pe-company h5 {
-      width: 41%;
-      margin-top: 3%;
+      width: 42%;
+      margin-top: 3.5%;
       text-align: center;
       margin-left: 33%;
       font-size: 14px;
@@ -4226,13 +4227,13 @@ $other-blue-light: #;*/
       margin-bottom: 10px;
       border-radius: 12px; }
     .create-modal-content .column1 h4 {
-      width: 88%;
+      width: 90%;
       height: 35%;
       font-size: 16px;
       font-weight: 400;
       margin-left: 4.5%;
       color: #18253B;
-      text-align: justify; }
+      text-align: center; }
     .create-modal-content .column1 .create-button-wrapper {
       width: 100%;
       text-align: center;
@@ -4697,13 +4698,13 @@ $other-blue-light: #;*/
       margin-bottom: 10px;
       border-radius: 12px; }
     .create-modal-content .column2 h4 {
-      width: 88%;
+      width: 90%;
       height: 35%;
       font-size: 16px;
       font-weight: 400;
       margin-left: 4.5%;
       color: #18253B;
-      text-align: justify; }
+      text-align: center; }
     .create-modal-content .column2 .create-button-wrapper {
       width: 100%;
       text-align: center;
@@ -4778,13 +4779,13 @@ $other-blue-light: #;*/
       margin-bottom: 10px;
       border-radius: 12px; }
     .create-modal-content .column3 h4 {
-      width: 88%;
+      width: 90%;
       height: 35%;
       font-size: 16px;
       font-weight: 400;
       margin-left: 4.5%;
       color: #18253B;
-      text-align: justify; }
+      text-align: center; }
     .create-modal-content .column3 .create-button-wrapper {
       width: 100%;
       text-align: center;
@@ -4858,13 +4859,13 @@ $other-blue-light: #;*/
       margin-bottom: 10px;
       border-radius: 12px; }
     .create-modal-content .column4 h4 {
-      width: 88%;
+      width: 90%;
       height: 35%;
       font-size: 16px;
       font-weight: 400;
       margin-left: 4.5%;
       color: #18253B;
-      text-align: justify; }
+      text-align: center; }
     .create-modal-content .column4 .create-button-wrapper {
       width: 100%;
       text-align: center;
@@ -4996,13 +4997,13 @@ $other-blue-light: #;*/
         margin-bottom: 10px;
         border-radius: 12px; }
       .create-modal-content .column1 h4 {
-        width: 88%;
+        width: 90%;
         height: 35%;
         font-size: 16px;
         font-weight: 400;
         margin-left: 4.5%;
         color: #18253B;
-        text-align: justify; }
+        text-align: center; }
       .create-modal-content .column1 .create-button-wrapper {
         width: 100%;
         text-align: center;
@@ -5467,13 +5468,13 @@ $other-blue-light: #;*/
         margin-bottom: 10px;
         border-radius: 12px; }
       .create-modal-content .column2 h4 {
-        width: 88%;
+        width: 90%;
         height: 35%;
         font-size: 16px;
         font-weight: 400;
         margin-left: 4.5%;
         color: #18253B;
-        text-align: justify; }
+        text-align: center; }
       .create-modal-content .column2 .create-button-wrapper {
         width: 100%;
         text-align: center;
@@ -5548,13 +5549,13 @@ $other-blue-light: #;*/
         margin-bottom: 10px;
         border-radius: 12px; }
       .create-modal-content .column3 h4 {
-        width: 88%;
+        width: 90%;
         height: 35%;
         font-size: 16px;
         font-weight: 400;
         margin-left: 4.5%;
         color: #18253B;
-        text-align: justify; }
+        text-align: center; }
       .create-modal-content .column3 .create-button-wrapper {
         width: 100%;
         text-align: center;
@@ -5628,13 +5629,13 @@ $other-blue-light: #;*/
         margin-bottom: 10px;
         border-radius: 12px; }
       .create-modal-content .column4 h4 {
-        width: 88%;
+        width: 90%;
         height: 35%;
         font-size: 16px;
         font-weight: 400;
         margin-left: 4.5%;
         color: #18253B;
-        text-align: justify; }
+        text-align: center; }
       .create-modal-content .column4 .create-button-wrapper {
         width: 100%;
         text-align: center;
@@ -5827,7 +5828,7 @@ $other-blue-light: #;*/
       color: #226BE4; } }
 .pp-main-image img {
   width: 100%;
-  height: 300px; }
+  height: 335px; }
 
 .pp-header {
   width: 100%;
@@ -7580,21 +7581,21 @@ $other-blue-light: #;*/
         margin-left: 34px;
         text-align: center;
         font-weight: 100;
-        font-size: 22px;
+        font-size: 24px;
         color: #226BE4; }
       .profile_wrapper .pe-header .pe-handle h3 {
         margin-top: 0.2%;
         text-align: center;
         margin-left: 9%;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 20px;
         color: #B2B2B2; }
       .profile_wrapper .pe-header .pe-title h4 {
         margin-top: 0%;
         text-align: center;
         margin-left: 9%;
-        font-size: 14px;
-        font-weight: 400;
+        font-size: 20px;
+        font-weight: 900;
         color: #B2B2B2; }
       .profile_wrapper .pe-header .pe-company h5 {
         width: 80%;

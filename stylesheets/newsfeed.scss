@@ -373,7 +373,8 @@
 .close { /*close button*/
   color: white;
   float: right;
-  font-size: 28px;
+  margin-right: 13px;
+  font-size: 30px;
   font-weight: bold;
 }
         
@@ -571,12 +572,12 @@
   width: 50%;
   .modal-date {
     float:left;
-    width: 22%;
+    width: 27%;
     display: inline-block;
     margin-top: 25px;
     font-size: 14px;
     color: gray;
-    margin-left: 48px;
+    margin-left: 35px;
   } 
   .calendar {
     float:left;

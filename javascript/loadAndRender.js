@@ -484,6 +484,3 @@ window.onscroll = function (ev) {
 		}
 	}
 };
-
-
-

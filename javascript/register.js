@@ -75,6 +75,7 @@ function register() {
                         var token = response.response.token;
                         var res_user_id = response.response.user_id;
                         var res_handle = response.response.user.handle;
+                        var res_profileimage = response.response.user.image;
                         var res_usertype_id = response.response.personal._id;
                         var res_usertype = response.response.user.usertype;
                         var res_lastname = response.response.user.lastname;
@@ -87,6 +88,8 @@ function register() {
                         localStorage.setItem("handle", res_handle);
                         localStorage.setItem("first_name", res_firstname);
                         localStorage.setItem("last_name", res_lastname);
+                        localStorage.setItem("profile_image", res_profileimage);
+
 
                         // save usertype data 
                         saveUserTypeData(token);

@@ -6591,19 +6591,96 @@ $other-blue-light: #;*/
   text-decoration: none;
   cursor: pointer; }
 
-/*.cp-employee-edit {
-  margin-top: -180px;
-  margin-left: 16%;
-  float: right;
+.cp-employee-edit {
+  margin-top: 55px;
+  margin-left: 2%;
   display: inline;
   width: 50px;
   height: 50px;
-  position: fixed;
-  img {
-    width: 26px;
-  }
-}
-*/
+  position: inherit; }
+  .cp-employee-edit img {
+    width: 26px; }
+
+.employee-edit-wrapper {
+  width: 80%;
+  width: 80%;
+  margin-left: 11%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  white-space: nowrap;
+  overflow: hidden; }
+  .employee-edit-wrapper .employee-col1 {
+    padding-top: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 30px; }
+    .employee-edit-wrapper .employee-col1 .columns {
+      height: 90px; }
+      .employee-edit-wrapper .employee-col1 .columns .basic-info {
+        width: 40%;
+        float: left;
+        margin-bottom: 10px;
+        display: inline-block; }
+        .employee-edit-wrapper .employee-col1 .columns .basic-info input[type=text] {
+          width: 100%;
+          height: 40px;
+          font-size: 14px;
+          padding-left: 10px;
+          margin-left: -40px;
+          border-radius: 20px;
+          border: 1px solid #226BE4; }
+      .employee-edit-wrapper .employee-col1 .columns .role {
+        width: 40%;
+        float: right;
+        margin-right: 50px;
+        margin-bottom: 10px;
+        display: inline-block; }
+        .employee-edit-wrapper .employee-col1 .columns .role input[type=text] {
+          width: 98%;
+          height: 40px;
+          font-size: 14px;
+          padding-left: 10px;
+          margin-left: -85px;
+          border-radius: 20px;
+          border: 1px solid #226BE4; }
+      .employee-edit-wrapper .employee-col1 .columns .up {
+        width: 30%;
+        font-size: 16px;
+        margin-left: 42%;
+        font-weight: 900;
+        color: #226BE4;
+        text-decoration: none; }
+      .employee-edit-wrapper .employee-col1 .columns .down {
+        width: 30%;
+        font-size: 16px;
+        margin-left: 42%;
+        font-weight: 900;
+        color: #226BE4;
+        text-decoration: none; }
+
+ul p:first-child a.up,
+ul p:last-child a.down {
+  display: none; }
+
+/* The Close Button */
+.create-closey {
+  /*display: none;*/
+  color: #aaaaaa;
+  float: right;
+  margin-right: 2%;
+  font-size: 28px;
+  font-weight: bold; }
+
+.create-closey:hover,
+.create-closey:focus {
+  /*display: none;*/
+  color: #000;
+  text-decoration: none;
+  cursor: pointer; }
+
 @media screen and (max-width: 700px) {
   /* =============== M O B I L E  M A I N  H E A D E R =============== */
   .main-header {
@@ -9015,18 +9092,94 @@ $other-blue-light: #;*/
     text-decoration: none;
     cursor: pointer; }
 
-  /*.cp-employee-edit {
-    margin-top: -180px;
-    margin-left: 16%;
-    float: right;
+  .cp-employee-edit {
+    margin-top: 55px;
+    margin-left: 2%;
     display: inline;
     width: 50px;
     height: 50px;
-    position: fixed;
-    img {
-      width: 26px;
-    }
-  }
-  */ }
+    position: inherit; }
+    .cp-employee-edit img {
+      width: 26px; }
+
+  .employee-edit-wrapper {
+    width: 80%;
+    width: 80%;
+    margin-left: 11%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    white-space: nowrap;
+    overflow: hidden; }
+    .employee-edit-wrapper .employee-col1 {
+      padding-top: 10px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 100%;
+      padding-bottom: 30px; }
+      .employee-edit-wrapper .employee-col1 .columns {
+        height: 90px; }
+        .employee-edit-wrapper .employee-col1 .columns .basic-info {
+          width: 40%;
+          float: left;
+          margin-bottom: 10px;
+          display: inline-block; }
+          .employee-edit-wrapper .employee-col1 .columns .basic-info input[type=text] {
+            width: 100%;
+            height: 40px;
+            font-size: 14px;
+            padding-left: 10px;
+            margin-left: -40px;
+            border-radius: 20px;
+            border: 1px solid #226BE4; }
+        .employee-edit-wrapper .employee-col1 .columns .role {
+          width: 40%;
+          float: right;
+          margin-right: 50px;
+          margin-bottom: 10px;
+          display: inline-block; }
+          .employee-edit-wrapper .employee-col1 .columns .role input[type=text] {
+            width: 98%;
+            height: 40px;
+            font-size: 14px;
+            padding-left: 10px;
+            margin-left: -85px;
+            border-radius: 20px;
+            border: 1px solid #226BE4; }
+        .employee-edit-wrapper .employee-col1 .columns .up {
+          width: 30%;
+          font-size: 16px;
+          margin-left: 42%;
+          font-weight: 900;
+          color: #226BE4;
+          text-decoration: none; }
+        .employee-edit-wrapper .employee-col1 .columns .down {
+          width: 30%;
+          font-size: 16px;
+          margin-left: 42%;
+          font-weight: 900;
+          color: #226BE4;
+          text-decoration: none; }
+
+  ul p:first-child a.up,
+  ul p:last-child a.down {
+    display: none; }
+
+  /* The Close Button */
+  .create-closey {
+    /*display: none;*/
+    color: #aaaaaa;
+    float: right;
+    margin-right: 2%;
+    font-size: 28px;
+    font-weight: bold; }
+
+  .create-closey:hover,
+  .create-closey:focus {
+    /*display: none;*/
+    color: #000;
+    text-decoration: none;
+    cursor: pointer; } }
 
 /*# sourceMappingURL=style.css.map */

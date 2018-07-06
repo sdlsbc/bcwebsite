@@ -95,9 +95,9 @@
   </div>
 
   <h4>Employee Roster</h4>
- <!--  <div class="cp-employee-edit">
-    <a href="#" id="myModal"><img src="../images/penciliconblue.png" class="edit-button"></a>
-  </div> -->
+  <div class="cp-employee-edit">
+    <a href="#" id="myModaly"><img src="../images/penciliconblue.png" class="edit-button"></a>
+  </div>
   <div class="cp-row1">
     <div class="cp-current-cast">
       <img src="../images/icon8.png">
@@ -261,6 +261,101 @@
   }
 </script>
 
+
+
+
+
+
+
+
+
+
+<!-- =============== EMPLOYEE EDIT MODAL ================ -->
+<div id="createModaly" class="create-modal">
+  <div class="create-modal-contentx" id="create-modal-contenty">
+  <span class="create-closey">&times;</span>
+    <h1>Edit Information</h1>
+    <div class="employee-edit-wrapper">
+      <form>
+        <span class="employee-col1">
+          <ul>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Employee Handle1">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Employee Role1">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Employee Handle2">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Employee Role2">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Employee Handle3">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Employee Role3">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Employee Handle4">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Employee Role4">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+
+          </ul>
+        </span>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+$(function() {
+  $('.up').on('click', function(e) {
+    var wrapper = $(this).closest('.columns')
+    wrapper.insertBefore(wrapper.prev())
+  })
+  $('.down').on('click', function(e) {
+    var wrapper = $(this).closest('.columns')
+    wrapper.insertAfter(wrapper.next())
+  })
+})
+</script>
+
+<script>
+  var modaly = document.getElementById('createModaly');
+  var btny = document.getElementById("myModaly");
+  var spany = document.getElementsByClassName("create-closey")[0];
+  btny.onclick = function() {
+    modaly.style.display = "block";
+  }
+  spany.onclick = function() {
+    modaly.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modaly) {
+      modaly.style.display = "none";
+    }
+  }
+</script>
 
 
 

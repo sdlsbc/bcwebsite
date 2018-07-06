@@ -6547,7 +6547,7 @@ $other-blue-light: #;*/
       border-radius: 22px;
       border: 2px solid #226BE4; }
   .create-modal-contentx .save-changes {
-    margin-top: 10px;
+    margin-top: 25px;
     margin-left: 41%;
     background-color: #226BE4;
     border: 2px solid #226BE4;
@@ -6605,7 +6605,7 @@ $other-blue-light: #;*/
 
 .employee-edit-wrapper {
   width: 80%;
-  height: 75%;
+  height: 65%;
   margin-left: 11%;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -6659,6 +6659,38 @@ $other-blue-light: #;*/
         font-weight: 900;
         color: #226BE4;
         text-decoration: none; }
+
+.save-changes {
+  margin-top: 30px;
+  margin-left: 34%;
+  padding-top: 40px;
+  background-color: #226BE4;
+  border: 2px solid #226BE4;
+  color: white;
+  padding: 3px 12px;
+  width: 146px;
+  height: 40px;
+  font-weight: 400;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 25px;
+  margin-right: 10%;
+  font-size: 14px; }
+  .save-changes:hover {
+    margin-top: 10px;
+    width: 145px;
+    height: 40px;
+    font-weight: 400;
+    background-color: white;
+    border: 2px solid #226BE4;
+    border-radius: 25px;
+    margin-right: 10%;
+    color: #226BE4;
+    font-size: 14px; }
 
 ul p:first-child a.up,
 ul p:last-child a.down {
@@ -6837,8 +6869,8 @@ ul p:last-child a.down {
     margin: auto;
     margin-top: 2%;
     border: 1px solid #888;
-    width: 66%;
-    margin-left: 17%;
+    width: 80%;
+    margin-left: 10%;
     height: 66%;
     z-index: 1;
     border-radius: 19px; }
@@ -6958,7 +6990,8 @@ ul p:last-child a.down {
         border-radius: 22px;
         border: 2px solid #226BE4; }
     .create-modal-contentx .save-changes {
-      margin-top: 10px;
+      margin-top: 43px;
+      padding-top: 75px;
       margin-left: 35%;
       background-color: #226BE4;
       border: 2px solid #226BE4;
@@ -6977,9 +7010,10 @@ ul p:last-child a.down {
       margin-right: 10%;
       font-size: 14px; }
       .create-modal-contentx .save-changes:hover {
-        margin-top: 10px;
-        width: 145px;
-        height: 40px;
+        margin-top: 43px;
+        margin-left: 35%;
+        width: 148px;
+        height: 48px;
         font-weight: 400;
         background-color: white;
         border: 2px solid #226BE4;
@@ -7017,7 +7051,7 @@ ul p:last-child a.down {
 
   .employee-edit-wrapper {
     width: 80%;
-    height: 75%;
+    height: 65%;
     margin-left: 11%;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -7071,6 +7105,38 @@ ul p:last-child a.down {
           font-weight: 900;
           color: #226BE4;
           text-decoration: none; }
+
+  .save-changes {
+    margin-top: 10px;
+    margin-left: 36%;
+    padding-top: 20px;
+    background-color: #226BE4;
+    border: 2px solid #226BE4;
+    color: white;
+    padding: 3px 12px;
+    width: 146px;
+    height: 40px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 25px;
+    margin-right: 10%;
+    font-size: 14px; }
+    .save-changes:hover {
+      margin-top: 10px;
+      width: 145px;
+      height: 40px;
+      font-weight: 400;
+      background-color: white;
+      border: 2px solid #226BE4;
+      border-radius: 25px;
+      margin-right: 10%;
+      color: #226BE4;
+      font-size: 14px; }
 
   ul p:first-child a.up,
   ul p:last-child a.down {
@@ -9347,16 +9413,16 @@ ul p:last-child a.down {
     border-radius: 19px; }
     .create-modal-contentx h1 {
       padding: 20px;
-      font-size: 30px;
+      font-size: 25px;
       font-weight: 400;
-      margin-top: 10px;
+      margin-top: 5px;
       margin-left: 10px;
       color: #226BE4;
       font-family: "Roboto", sans-serif;
       text-align: center;
       padding-bottom: 50px; }
     .create-modal-contentx .cp-left1 {
-      margin-top: -5px;
+      margin-top: -35px;
       width: 40%;
       float: left;
       margin-left: 30px;
@@ -9381,7 +9447,7 @@ ul p:last-child a.down {
       float: right;
       margin-left: -23px;
       margin-right: 21px;
-      margin-top: -5px;
+      margin-top: -35px;
       padding-bottom: 30px; }
       .create-modal-contentx .cp-right1 #edit-type {
         width: 86%;
@@ -9462,7 +9528,8 @@ ul p:last-child a.down {
         border-radius: 22px;
         border: 2px solid #226BE4; }
     .create-modal-contentx .save-changes {
-      margin-top: 10px;
+      margin-top: 6px;
+      padding-top: 20px;
       margin-left: 27%;
       background-color: #226BE4;
       border: 2px solid #226BE4;
@@ -9520,7 +9587,7 @@ ul p:last-child a.down {
 
   .employee-edit-wrapper {
     width: 80%;
-    height: 75%;
+    height: 60%;
     margin-left: 11%;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -9531,33 +9598,33 @@ ul p:last-child a.down {
       height: 100%;
       padding-bottom: 30px; }
       .employee-edit-wrapper .employee-col1 .columns {
-        margin-top: 5px;
+        margin-top: -15px;
         height: 100px; }
         .employee-edit-wrapper .employee-col1 .columns .basic-info {
-          width: 40%;
+          width: 37%;
           float: left;
           margin-bottom: 10px;
           display: inline-block; }
           .employee-edit-wrapper .employee-col1 .columns .basic-info input[type=text] {
             width: 100%;
-            height: 40px;
-            font-size: 14px;
+            height: 27px;
+            font-size: 8px;
             padding-left: 15px;
             margin-left: -35px;
             border-radius: 20px;
             border: 1px solid #226BE4; }
         .employee-edit-wrapper .employee-col1 .columns .role {
-          width: 40%;
+          width: 38%;
           float: right;
           margin-right: 50px;
           margin-bottom: 10px;
           display: inline-block; }
           .employee-edit-wrapper .employee-col1 .columns .role input[type=text] {
             width: 98%;
-            height: 40px;
-            font-size: 14px;
+            height: 27px;
+            font-size: 8px;
             padding-left: 15px;
-            margin-left: -35px;
+            margin-left: -10px;
             border-radius: 20px;
             border: 1px solid #226BE4; }
         .employee-edit-wrapper .employee-col1 .columns .up {
@@ -9574,6 +9641,37 @@ ul p:last-child a.down {
           font-weight: 900;
           color: #226BE4;
           text-decoration: none; }
+
+  .save-changes {
+    margin-top: -4px;
+    margin-left: 27%;
+    background-color: #226BE4;
+    border: 2px solid #226BE4;
+    color: white;
+    padding: 3px 12px;
+    width: 146px;
+    height: 40px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 25px;
+    margin-right: 10%;
+    font-size: 14px; }
+    .save-changes:hover {
+      margin-top: 10px;
+      width: 145px;
+      height: 40px;
+      font-weight: 400;
+      background-color: white;
+      border: 2px solid #226BE4;
+      border-radius: 25px;
+      margin-right: 10%;
+      color: #226BE4;
+      font-size: 14px; }
 
   ul p:first-child a.up,
   ul p:last-child a.down {

@@ -327,7 +327,7 @@
     }
   }
   .save-changes {
-    margin-top: 10px;
+    margin-top: 25px;
     margin-left: 41%;
     background-color: #226BE4;
     border: 2px solid #226BE4;
@@ -391,7 +391,7 @@
 }
 .employee-edit-wrapper {
   width: 80%;
-  height: 75%;
+  height: 65%;
   margin-left: 11%;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -454,6 +454,39 @@
     }
   }
 }
+.save-changes {
+  margin-top: 30px;
+  margin-left: 34%;
+  padding-top: 40px;
+  background-color: #226BE4;
+  border: 2px solid #226BE4;
+  color: white;
+  padding: 3px 12px;
+  width: 146px;
+  height: 40px;
+  font-weight: 400;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 25px;
+  margin-right: 10%;
+  font-size: 14px;
+  &:hover {
+    margin-top: 10px;
+    width: 145px;
+    height: 40px;
+    font-weight: 400;
+    background-color: white;
+    border: 2px solid #226BE4;
+    border-radius: 25px;
+    margin-right: 10%; 
+    color: #226BE4;
+    font-size: 14px;
+  }
+}
+
 
 ul p:first-child a.up,
 ul p:last-child a.down {
@@ -702,8 +735,8 @@ ul p:last-child a.down {
     margin: auto;
     margin-top: 2%;
     border: 1px solid #888;
-    width: 66%;
-    margin-left: 17%;
+    width: 80%;
+    margin-left: 10%;
     height: 66%;
     z-index: 1;
     border-radius: 19px;
@@ -839,7 +872,8 @@ ul p:last-child a.down {
       }
     }
     .save-changes {
-      margin-top: 10px;
+      margin-top: 43px;
+      padding-top: 75px;
       margin-left: 35%;
       background-color: #226BE4;
       border: 2px solid #226BE4;
@@ -857,9 +891,10 @@ ul p:last-child a.down {
       margin-right: 10%;
       font-size: 14px;
       &:hover {
-        margin-top: 10px;
-        width: 145px;
-        height: 40px;
+        margin-top: 43px;
+        margin-left: 35%;
+        width: 148px;
+        height: 48px;
         font-weight: 400;
         background-color: white;
         border: 2px solid #226BE4;
@@ -903,7 +938,7 @@ ul p:last-child a.down {
   }
   .employee-edit-wrapper {
     width: 80%;
-    height: 75%;
+    height: 65%;
     margin-left: 11%;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -964,6 +999,38 @@ ul p:last-child a.down {
           text-decoration: none;
         }
       }
+    }
+  }
+  .save-changes {
+    margin-top: 10px;
+    margin-left: 36%;
+    padding-top: 20px;
+    background-color: #226BE4;
+    border: 2px solid #226BE4;
+    color: white;
+    padding: 3px 12px;
+    width: 146px;
+    height: 40px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 25px;
+    margin-right: 10%;
+    font-size: 14px;
+    &:hover {
+      margin-top: 10px;
+      width: 145px;
+      height: 40px;
+      font-weight: 400;
+      background-color: white;
+      border: 2px solid #226BE4;
+      border-radius: 25px;
+      margin-right: 10%; 
+      color: #226BE4;
+      font-size: 14px;
     }
   }
   

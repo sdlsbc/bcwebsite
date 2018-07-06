@@ -481,3 +481,145 @@ ul p:last-child a.down {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========== E M P L O Y E E  E D I T  I P A D  V I E W =========== */
+@media screen and (max-width: 1200px) {
+  .cp-employee-edit {
+    margin-top: 55px;
+    margin-left: 2%;
+    display: inline;
+    width: 50px;
+    height: 50px;
+    position: inherit;
+    img {
+      width: 26px;
+    }
+  }
+  .employee-edit-wrapper {
+    width: 80%;
+    height: 75%;
+    margin-left: 11%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    white-space: nowrap;
+    .employee-col1 {
+      padding-top: 10px;
+      width:100%;
+      height: 100%;
+      padding-bottom: 30px;
+      .columns {
+        margin-top: 5px;
+        height: 100px;
+        .basic-info {
+          width: 40%;
+          float: left;
+          margin-bottom: 10px;
+          display: inline-block;
+          input[type=text] {
+            width: 100%;
+            height: 40px;
+            font-size: 14px;
+            padding-left: 15px;
+            margin-left: -35px;
+            border-radius: 20px;
+            border: 1px solid $main-blue;
+          }
+        }
+        .role {
+          width: 40%;
+          float: right;
+          margin-right: 50px;
+          margin-bottom: 10px;
+          display: inline-block;
+          input[type=text]{
+            width: 98%;
+            height: 40px;
+            font-size: 14px;
+            padding-left: 15px;
+            margin-left: -35px;
+            border-radius: 20px;
+            border: 1px solid $main-blue;
+          }
+        }
+        .up {
+          width: 30%;
+          font-size: 16px;
+          margin-left: 50%;
+          font-weight: 900;
+          color: $main-blue;
+          text-decoration: none;
+        }
+        .down {
+          width: 30%;
+          font-size: 16px;
+          margin-left: 50%;
+          font-weight: 900;
+          color: $main-blue;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  
+  ul p:first-child a.up,
+  ul p:last-child a.down {
+    display: none;
+  }
+  
+  
+  
+  /* The Close Button */
+  .create-closey {
+    /*display: none;*/
+    color: #aaaaaa;
+    float: right;
+    margin-right: 2%;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .create-closey:hover,
+  .create-closey:focus {
+    /*display: none;*/
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+

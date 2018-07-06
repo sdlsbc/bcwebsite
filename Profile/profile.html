@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="icon" href="../images/bc32_mcU_icon.ico" type="image/x-icon">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="../stylesheets/style.css" rel="stylesheet">
+</head>
+
+<body onload="loadAndShowPosts()">
+    <!-- sidebar. -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <p> </p>
+      <center id="profile_pic"></center>
+      <center>
+          <p class="navname"></p>
+      </center>
+      <center>
+        <p class="profile">
+          <a href="../Profile/profile.html">Your Profile</a>
+        </p>
+      </center>
+      <br/>
+      <a href="../Favorites/favorites.html">
+          <img src="../images/heart.png" width="19" height="19">&nbsp&nbsp My Favorites</a>
+
+  </div>
+  <!-- sidebar. -->    <!-- sidebar. -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <p></p>
+    <center id="user_pic"></center>
+    <center>
+      <p class="user_name"></p>
+    </center>
+    <center>
+    <p class="profile">
+      <a href="../Profile/profile.html">Your Profile</a>
+    </p>
+    </center>
+    <br/>
+    <a href="../Favorites/favorites.html">
+      <img src="../images/heart.png" width="19" height="19">&nbsp&nbsp My Favorites</a>
+
+  </div>
+    <!-- sidebar. -->
+  <div class="navbar">
+    <span class="open_sidenav" onclick="openNav()">
+      <img src="../images/side button2.png">
+    </span>
+    <img class="logo" src="../images/bc_solo_logo.png">
+    <a href='../Newsfeed/newsfeed.html'>
+      <p>Newsfeed</p>
+    </a>
+    <a href='../Discover/discover.html'>
+      <p>Discover</p>
+    </a>
+    <a href='../Explore/explore.html'>
+      <p>Explore</p>
+    </a>
+    <div class="signout">
+      <button class="signout-button" onclick="signout()">Sign Out</button>
+    </div>
+  </div>
+ 
+  <div class="profile_wrapper">
+    <div class="user_profile_left">
+      <div class="user_img" id="user_img">
+        <img src="../images/play1.png">
+      </div>
+      <p class="name" id="name">John Smith</p>
+      <p class="username" id="username"></p>
+      <p class="title" id="headline_position"></p>
+      <!-- <p class="organization">@BroadwayConnectedInc</p> -->
+      <p class="user_type" id="user_type">Entrepreneur</p>
+      <p class="briefcase_icon">
+        <img src="../images/briefcase.png">
+      </p>
+      <p class="previous">Previous:</p>
+      <p class="previous_job">Executive Intern @ Marathon Digital</p>
+      <p class="location_icon">
+        <img src="../images/compass.png">
+      </p>
+      <p class="location" id="location"></p>
+      <center><button class="view-more"><a href="#"><p>View More</p></a></button></center>
+    </div>
+    
+    <div class="second_nav_right">
+      <!-- <a href="#"><p>Milestones</p></a>
+      <a href="#"><p>Moments</p></a> -->
+      <a href="#"><p>Following</p></a>
+      <a href="#"><p>Followers</p></a>
+      <a href="../Calendar/calendar.html"><p>Calendar</p></a>
+      <a href="./profile.html"><p>User Feed</p></a>
+      
+      <div id="profile-postsbox">
+      </div>
+      
+    </div>
+  </div>
+
+
+ <script>
+   function openNav() {
+     document.getElementById("mySidenav").style.width = "250px";
+   }
+   function closeNav() {
+     document.getElementById("mySidenav").style.width = "0";
+   }
+ </script>
+
+ <script src="../javascript/register.js"></script>
+ <script type="text/javascript" src="../javascript/profile.js"></script>
+</body>
+</html>

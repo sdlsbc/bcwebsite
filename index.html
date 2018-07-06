@@ -1,129 +1,396 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
-
-	<link rel="stylesheet" href="stylesheets/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="stylesheets/style.css"> <!-- Resource style -->
-	
-	<title>Broadway Connected</title>
+    <link rel="icon" href="./images/bc32_mcU_icon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Broadway Connected</title>
+    <link href="./stylesheets/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 </head>
 
-<body>
-	<header class="cd-main-header">
-		<img onclick="run()" class="logo" src="images/bc_solo_logo.png" alt="logo" width="360" height="60">
+<script src="./javascript/register.js"></script>
+<script>
+    if (navigator.userAgent.indexOf("MSIE") != -1) {
+        createCustomAlert('For the best experience, please browse our website with Google Chrome.');
+    }
+</script>
 
-		<nav class="cd-main-nav js-main-nav">
-			<ul class="cd-main-nav__list js-signin-modal-trigger">
-				<!-- inser more links here -->
-				<li><a class="cd-main-nav__item cd-main-nav__item--signin" href="#0" data-signin="login">Sign in</a></li>
-				<li><a class="cd-main-nav__item cd-main-nav__item--signup" href="#0" data-signin="signup">Sign up</a></li>
-			</ul>
-		</nav>
-	</header>
+<body class="body">
 
-	
-
-	<div class="cd-signin-modal js-signin-modal"> <!-- this is the entire modal form, including the background -->
-		<div class="cd-signin-modal__container"> <!-- this is the container wrapper -->
-			<ul class="cd-signin-modal__switcher js-signin-modal-switcher js-signin-modal-trigger">
-				<li><a href="#0" data-signin="login" data-type="login">Sign in</a></li>
-				<li><a href="#0" data-signin="signup" data-type="signup">New account</a></li>
-			</ul>
-
-			<div class="cd-signin-modal__block js-signin-modal-block" data-type="login"> <!-- log in form -->
-				<form class="cd-signin-modal__form">
-					<p class="cd-signin-modal__fieldset">
-						<label class="cd-signin-modal__label cd-signin-modal__label--email cd-signin-modal__label--image-replace" for="signin-email">E-mail</label>
-						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="E-mail">
-						<span class="cd-signin-modal__error">Error message here!</span>
-					</p>
-
-					<p class="cd-signin-modal__fieldset">
-						<label class="cd-signin-modal__label cd-signin-modal__label--password cd-signin-modal__label--image-replace" for="signin-password">Password</label>
-						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Password">
-						<a href="#0" class="cd-signin-modal__hide-password js-hide-password">Hide</a>
-						<span class="cd-signin-modal__error">Error message here!</span>
-					</p>
-
-					<p class="cd-signin-modal__fieldset">
-						<input type="checkbox" id="remember-me" checked class="cd-signin-modal__input ">
-						<label for="remember-me">Remember me</label>
-					</p>
-
-					<p class="cd-signin-modal__fieldset">
-						<input class="cd-signin-modal__input cd-signin-modal__input--full-width" type="submit" value="Login" onclick="signin()">
-					</p>
-				</form>
-				
-				<p class="cd-signin-modal__bottom-message js-signin-modal-trigger"><a href="#0" data-signin="reset">Forgot your password?</a></p>
-			</div> <!-- cd-signin-modal__block -->
-
-			<div class="cd-signin-modal__block js-signin-modal-block" data-type="signup"> <!-- sign up form -->
-				<form class="cd-signin-modal__form">
-					<p class="cd-signin-modal__fieldset">
-						<label class="cd-signin-modal__label cd-signin-modal__label--username cd-signin-modal__label--image-replace" for="signup-username">Username</label>
-						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-username" type="text" placeholder="Username">
-						<span class="cd-signin-modal__error">Error message here!</span>
-					</p>
-
-					<p class="cd-signin-modal__fieldset">
-						<label class="cd-signin-modal__label cd-signin-modal__label--email cd-signin-modal__label--image-replace" for="signup-email">E-mail</label>
-						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-email" type="email" placeholder="E-mail">
-						<span class="cd-signin-modal__error">Error message here!</span>
-					</p>
-
-					<p class="cd-signin-modal__fieldset">
-						<label class="cd-signin-modal__label cd-signin-modal__label--password cd-signin-modal__label--image-replace" for="signup-password">Password</label>
-						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-password" type="text"  placeholder="Password">
-						<a href="#0" class="cd-signin-modal__hide-password js-hide-password">Hide</a>
-						<span class="cd-signin-modal__error">Error message here!</span>
-					</p>
-
-					<p class="cd-signin-modal__fieldset">
-						<input type="checkbox" id="accept-terms" class="cd-signin-modal__input ">
-						<label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
-					</p>
-
-					<p class="cd-signin-modal__fieldset">
-						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding" type="submit" value="Create account" onclick="register()">
-					</p>
-				</form>
-			</div> <!-- cd-signin-modal__block -->
-
-			<div class="cd-signin-modal__block js-signin-modal-block" data-type="reset"> <!-- reset password form -->
-				<p class="cd-signin-modal__message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
-
-				<form class="cd-signin-modal__form">
-					<p class="cd-signin-modal__fieldset">
-						<label class="cd-signin-modal__label cd-signin-modal__label--email cd-signin-modal__label--image-replace" for="reset-email">E-mail</label>
-						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="reset-email" type="email" placeholder="E-mail">
-						<span class="cd-signin-modal__error">Error message here!</span>
-					</p>
-
-					<p class="cd-signin-modal__fieldset">
-						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding" type="submit" value="Reset password">
-					</p>
-				</form>
-
-				<p class="cd-signin-modal__bottom-message js-signin-modal-trigger"><a href="#0" data-signin="login">Back to log-in</a></p>
-			</div> <!-- cd-signin-modal__block -->
-			<a href="#0" class="cd-signin-modal__close js-close">Close</a>
-		</div> <!-- cd-signin-modal__container -->
-	</div> <!-- cd-signin-modal -->
-	  <div class="container">
-        <img class="background" src="images/Group 3@2x.png">
-        <div class="centered">Theater: Anywhere, Anytime, For Anyone</div>
-        <div class="centered2"> Connecting the World Of Theater, while increasing collaboration and improving efficiency</div>
+    <!-- navigation bar -->
+    <div class="navbar" id="myTopnav">
+        <img class="logo-image" src="./images/bc_solo_logo.png" alt="Broadway Connected">
+        <div class="signout-x">
+            <button class="signout-button" id="navbarLoginBtn">Login</button>
+        </div>
+        <div class="signout-y">
+            <button class="signout-button" id="navbarSignUpBtn">Sign Up</button>
+        </div>
     </div>
-      
-<script src="./javascript/register.js"></script> <!-- Resource JavaScript -->
-<script src="./javascript/placeholders.min.js"></script> <!-- polyfill for the HTML5 placeholder attribute -->
-<script src="./javascript/main.js"></script> <!-- Resource JavaScript -->
 
+    <!-- modal login -->
+    <div id="myModal1" class="index-modal">
+        <div class="index-modal-content">
+            <a href="#login" class="a-login">Login</a>
+            <hr>
+            <br>
+            <span class="close"></span>
+            <div class="create">
+                <div class="login-create" data-type="login">
+                    <form class="login-create">
+                        <p class="login-email">
+                            <label class="label-email" for="signin-email">YOUR E-MAIL</label>
+                            <input class="input-email" id="signin-email" type="email" placeholder="E-mail">
+                            <span class="input-error">Error message here!</span>
+                        </p>
+                        <p class="login-password">
+                            <label class="label-password" for="signin-password">PASSWORD</label>
+                            <input class="input-password" id="signin-password" type="password" placeholder="Password">
+                            <a href="#0" class="hide">Hide</a>
+                            <span class="error">Error message here!</span>
+                        </p>
+                        <p class="login-submit">
+                            <input class="input-submit" type="button" id="loginBtn" value="Login" onclick="signin()">
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal sign-up -->
+    <div id="myModal2" class="index-modal">
+        <div class="index-modal-content">
+            <a href="#login" class="a-login">Sign Up</a>
+            <hr>
+            <div class="signin" id="signin" data-type="signup">
+                <form class="signin-form">
+                    <p class="first_name">
+                        <input type="file" id="imageinput" onchange="testit(event)" />
+                        <canvas width="300" height="300" id="mycanvas" style="display: none;"></canvas>
+                    </p>
+                    <p class="signin-usertype">
+                        <label class="signin-label">USER TYPE</label>
+                        <select id="signup-usertype" class="styled-select blue semi-square">
+                            <option value="" disabled selected>Select User Type</option>
+                            <option value="personal">Personal</option>
+                            <option value="company">Company</option>
+                            <option value="production">Production</option>
+                        </select>
+                    </p>
+                    <p class="first_name">
+                        <label class="signin-label" for="signup-firstname">FIRST NAME</label>
+                        <input class="signin-firstname" id="signup-firstname" type="text" placeholder=" Your First Name">
+                        <span class="signin-error">Error message here!</span>
+                    </p>
+                    <p class="last_name">
+                        <label class="signin-label" for="signup-lastname">LAST NAME</label>
+                        <input class="signin-lastname" id="signup-lastname" type="text" placeholder="Your Last Name">
+                        <span class="signin-error">Error message here!</span>
+                    </p>
+                    <!-- <p class="signin-fullname" id="signin-fullname" style="display: none;">
+                        <label id="fullname_label" class="signin-label"></label>
+                        <input class="signin-handle" id="signup-fullname" type="text" placeholder="">
+                    </p> -->
+                    <p class="handle">
+                        <label class="signin-label" for="signup-handle">USERNAME</label>
+                        <input class="signin-handle" id="signup-handle" type="text" placeholder="Username">
+                        <span class="signin-error">Error message here!</span>
+                    </p>
+                    <p class="signin-email">
+                        <label class="email">E-MAIL</label>
+                        <input class="input-email" id="signup-email" type="email" placeholder="E-mail">
+                        <span class="email">Error message here!</span>
+                    </p>
+                    <p class="signin-password">
+                        <label class="account-password">PASSWORD</label>
+                        <input class="input-account" id="signup-password" type="password" placeholder="Password">
+                        <a href="#0" class="hide">Hide</a>
+                        <span class="error">Error message here!</span>
+                    </p>
+                    <p class="signin-city">
+                        <label class="signin-label">CITY</label>
+                        <input class="signin-city" id="signup-city" type="text" placeholder="City">
+                    </p>
+                    <p class="signin-country">
+                        <label class="signin-label">COUNTRY</label>
+                        <input class="signin-country" id="signup-country" type="text" placeholder="Country">
+                    </p>
+                    <p class="signin-phone">
+                        <label class="signin-label">PHONE</label>
+                        <input class="signin-phone" id="signup-phone" type="text" placeholder="Phone">
+                    </p>
+                    <p class="signin-submit">
+                        <input class="input-submit" type="button" value="Next >>>" onclick="showNextModal()">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal company info -->
+    <div id="myModalCompany" class="index-modal">
+        <div class="index-modal-content">
+            <a href="#login" class="a-login">Company Info</a>
+            <hr>
+            <div class="signin" id="signin" data-type="signup">
+                <form class="signin-form">
+                    <p class="c_name">
+                        <label class="signin-label" for="signup-handle">Name of Company</label>
+                        <input class="signin-handle" id="signup-companyName" type="text" placeholder="Enter Company Name">
+                    </p>
+                    <p class="c_signin-usertype">
+                        <label class="signin-label">Type</label>
+                        <select id="company-type">
+                            <option value="" disabled selected>Select Company Type</option>
+                            <option value="GeneralManagement">General Management</option>
+                            <option value="Production">Production</option>
+                            <option value="CompanyManagement">Company Management</option>
+                            <option value="Press">Press</option>
+                            <option value="MarketingAdvertising">Marketing/ Advertising</option>
+                            <option value="Casting">Casting</option>
+                            <option value="Organizations">Organizations</option>
+                        </select>
+                    </p>
+                    <p class="c_description">
+                        <label class="signin-label" for="signup-firstname">Description</label>
+                        <input class="signin-firstname" id="company-desc" type="text" placeholder="About The Company">
+                    </p>
+                    <p class="c_link">
+                        <label class="signin-label" for="signup-lastname">Link</label>
+                        <input class="signin-lastname" id="company-link" type="text" placeholder="Your Link">
+                    </p>
+                    <p class="signin-submit">
+                        <input class="input-submit" type="button" value="Back" onclick="showSignUpModal()">
+                    </p>
+                    <p class="signin-submit">
+                        <input class="input-submit" type="button" value="Sign Up" onclick="register()">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- modal Production info -->
+    <div id="myProductionModal" class="index-modal">
+        <div class="index-modal-content">
+            <a href="#ProductionInfo" class="a-login">Production Info</a>
+            <hr>
+            <div class="signin" id="signin" data-type="signup">
+                <form class="signin-form">
+                    <p class="c_name">
+                        <label class="signin-label" for="signup-handle">Name of Production</label>
+                        <input class="signin-handle" id="signup-productionName" type="text" placeholder="Enter Production Name">
+                    </p>
+                    <p class="c_signin-usertype">
+                        <label class="signin-label">Type</label>
+                        <select id="production-type">
+                            <option value="" disabled selected>Select Production Type</option>
+                            <option value="Broadway">Broadway</option>
+                            <option value="OffBroadway">Off Broadway</option>
+                            <option value="Regional">Regional</option>
+                            <option value="Equity">Equity</option>
+                            <option value="NonEquity">Non Equity</option>
+                            <option value="Community">Community</option>
+                            <option value="SpecialPerformance">Special Performance</option>
+                            <option value="Summerstock">Summerstock</option>
+                            <option value="FestivalPerformance">Festival Performance</option>
+
+                        </select>
+                    </p>
+                    <p class="">
+                        <label class="signin-label" for="signup-firstname">Description</label>
+                        <input class="signin-firstname" id="production-desc" type="text" placeholder="Enter Description">
+                        <!-- <span class="signin-error">Error message here!</span> -->
+                    </p>
+                    <p class="">
+                        <label class="signin-label" for="signup-lastname">Status</label>
+                        <select id="production-status">
+                            <option value="" disabled selected>Select Production Status</option>
+                            <option value="a">a</option>
+                            <option value="b">b</option>
+                        </select>
+                        <!-- <span class="signin-error">Error message here!</span> -->
+                    </p>
+                    <p class="">
+                        <label class="signin-label" for="signup-firstname">Opening Date</label>
+                        <input class="signin-firstname" id="production-opening" type="text" placeholder="Enter Opening Date">
+                        <!-- <span class="signin-error">Error message here!</span> -->
+                    </p>
+                    <p class="">
+                        <label class="signin-label" for="signup-firstname">Closing Date</label>
+                        <input class="signin-firstname" id="production-closing" type="text" placeholder="Enter Closing Date">
+                        <!-- <span class="signin-error">Error message here!</span> -->
+                    </p>
+                    <p class="">
+                        <label class="signin-label" for="signup-firstname">Production Link</label>
+                        <input class="signin-firstname" id="production-link" type="text" placeholder="Enter Link">
+                        <!-- <span class="signin-error">Error message here!</span> -->
+                    </p>
+                    <p class="signin-submit">
+                        <input class="input-submit" type="button" value="Back" onclick="showSignUpModal()">
+                    </p>
+                    <p class="signin-submit">
+                        <input class="input-submit" type="button" value="Sign Up" onclick="register()">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal Personal info -->
+    <div id="myPersonalModal" class="index-modal">
+        <div class="index-modal-content">
+            <a href="#PersonalInfo" class="a-login">Personal Info</a>
+            <hr>
+            <div class="signin" id="signin" data-type="signup">
+                <form class="signin-form">
+                    <p class="">
+                        <label class="signin-label" for="signup-handle">Date Of Birth</label>
+                        <input class="signin-handle" id="personal-dateOfBirth" type="text" placeholder="Enter Your Date of Birth">
+                    </p>
+                    <p class="">
+                        <label class="signin-label">Profile Type</label>
+                        <select id="personal-type">
+                            <option value="" disabled selected>Select Profile Type</option>
+                            <option value="yes">Private</option>
+                            <option value="no">Public</option>
+                        </select>
+                    </p>
+                    <p class="">
+                        <label class="signin-label" for="signup-firstname">Headline</label>
+                        <input class="signin-firstname" id="personal-headline" type="text" placeholder="Enter Your Profile Headline">
+                        <!-- <span class="signin-error">Error message here!</span> -->
+                    </p>
+                    <p class="signin-submit">
+                        <input class="input-submit" type="button" value="Back" onclick="showSignUpModal()">
+                    </p>
+                    <p class="signin-submit">
+                        <input class="input-submit" type="button" value="Sign Up" onclick="register()">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showNextModal() {
+            var x = document.getElementById("signup-usertype").value;
+            var modal_personal = document.getElementById('myPersonalModal');
+            // var modal_signup = document.getElementById('myModal2');
+            console.log('usertype value', x)
+            modal_signup.style.display = "none";
+            if (x == "company") {
+                // show company modal
+                modal_company.style.display = "block";
+            }
+            if (x == "production") {
+                modal_production.style.display = "block";
+            }
+            if (x == "personal") {
+                console.log('in personal modal');
+                modal_personal.style.display = "block";
+            }
+        }
+        function showSignUpModal() {
+            var modal_company = document.getElementById('myModalCompany');
+            var modal_production = document.getElementById('myProductionModal');
+            modal_production.style.display = "none";
+            modal_company.style.display = "none";
+            modal_personal.style.display = "none";
+            modal_signup.style.display = "block";
+        }
+    </script>
+    <!--Modal Script-->
+    <script>
+        // all modals
+        var modal_login = document.getElementById('myModal1');
+        var modal_signup = document.getElementById('myModal2');
+        var modal_company = document.getElementById('myModalCompany');
+        var modal_production = document.getElementById('myProductionModal');
+        var modal_personal = document.getElementById('myPersonalModal');
+        // navbar buttons
+        var btn1 = document.getElementById("navbarLoginBtn");
+        var btn2 = document.getElementById("navbarSignUpBtn");
+
+        btn1.onclick = function () {
+            console.log('button login clicked');
+            modal_signup.style.display = "none";
+            modal_login.style.display = "block";
+        }
+
+        btn2.onclick = function () {
+            console.log('button sign up clicked');
+            modal_login.style.display = "none";
+            modal_signup.style.display = "block";
+        }
+
+        window.onclick = function (event) {
+            console.log("close modals")
+            if (event.target == modal_login) {
+                modal_login.style.display = "none";
+            }
+            if (event.target == modal_signup) {
+                modal_signup.style.display = "none";
+            }
+        }
+    </script>
+    <!-- log in submit button event listener -->
+    <script>
+        var input1 = document.getElementById("signin-email");
+        input1.addEventListener("keyup", function (event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                document.getElementById("loginBtn").click();
+            }
+        });
+
+        var input2 = document.getElementById("signin-password");
+        input2.addEventListener("keyup", function (event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                document.getElementById("loginBtn").click();
+            }
+        });
+
+    </script>
+
+    <div class="jumbotron">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <p class="big">Theater: Anywhere, Anytime, For Anyone</h1>
+            <p class="small"> Connecting the World Of Theater, while increasing collaboration and improving efficiency.</p>
+    </div>
+    <script>
+        function testit(event) {
+            var myCanvas = document.getElementById('mycanvas');
+            var ctx = myCanvas.getContext('2d');
+            var img = new Image();
+            img.onload = function () {
+                myCanvas.width = img.width;
+                myCanvas.height = img.height;
+
+                ctx.drawImage(img, 0, 0);
+                upload_image_base64 = myCanvas.toDataURL('image/jpeg');
+                console.log('upload_image_base64 ---', upload_image_base64);
+            };
+
+            img.src = URL.createObjectURL(event.target.files[0]);
+        }
+    </script>
+    <!-- Resource JavaScript -->
+    <script src="./javascript/placeholders.min.js"></script>
+    <!-- polyfill for the HTML5 placeholder attribute -->
+    <script src="./javascript/main.js"></script>
+    <!-- Resource JavaScript -->
 </body>
+
 </html>

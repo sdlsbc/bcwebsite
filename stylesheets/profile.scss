@@ -843,14 +843,14 @@ $other-blue-light: #;*/
   .edit-center {
     width: 100%;
     text-align: center;
-    #edit-email {
+    #edit-phone-number {
       width: 80%;
       font-size: 13px;
       margin-left: 9.5%;
       font-weight: 400;
       color: $main-blue;
     }
-    input[type=text] {
+    input[type=number] {
       width: 80%;
       height: 40px;
       margin-top: 6px;
@@ -860,7 +860,7 @@ $other-blue-light: #;*/
       margin-left: 9.5%;
       padding-left: 15px;
       border-radius: 22px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       border: 2px solid $main-blue;
     }
     #edit-username {
@@ -886,6 +886,7 @@ $other-blue-light: #;*/
   .edit-left2 {
     width: 42%;
     float: left;
+    margin-top: 18px;
     margin-left: 86px;
     padding-bottom: 30px;
     #edit-new-password {
@@ -909,6 +910,7 @@ $other-blue-light: #;*/
   .edit-right2 {
     width: 42%;
     float: right;
+    margin-top: 18px;
     margin-right: 21px;
     padding-bottom: 30px;
     #edit-confirm-password {
@@ -1098,14 +1100,14 @@ $other-blue-light: #;*/
     .edit-center {
       width: 100%;
       text-align: center;
-      #edit-email {
+      #edit-phone-number {
         width: 80%;
         font-size: 13px;
         margin-left: 9.5%;
         font-weight: 400;
         color: $main-blue;
       }
-      input[type=text] {
+      input[type=number] {
         width: 80%;
         height: 40px;
         margin-top: 6px;

@@ -28,7 +28,7 @@
       margin-left: 34px;
       text-align: center;
       font-weight: 100;
-      font-size: 22px;
+      font-size: 24px;
       color: $main-blue;
     }
     .pe-handle h3 {
@@ -36,15 +36,15 @@
       text-align: center;
       margin-left: 9%;
       font-weight: 400;
-      font-size: 18px;
+      font-size: 20px;
       color: $gray;
     }
     .pe-title h4 {
       margin-top: 0%;
       text-align: center;
       margin-left: 9%;
-      font-size: 14px;
-      font-weight: 400;
+      font-size: 20px;
+      font-weight: 900;
       color: $gray;
     }
     .pe-company h5 {
@@ -386,105 +386,104 @@
 
 
 .create-modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.create-modal-content {
-  position: absolute;
-  background-color: $gray;
-  margin: auto;
-  margin-top: 4%;
-  border: 1px solid #888;
-  width: 90%;
-  margin-left: 4.5%;
-  height: 60%;
-  z-index: 1;
-  .column1 {
-    width: 24%;
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .create-modal-content {
+    position: absolute;
+    background-color: #fefefe;
+    margin: auto;
+    margin-top: 10%;
+    border: 1px solid #888;
+    width: 90%;
+    margin-left: 4.5%;
+    height: 60%;
+    z-index: 1;
+    .column1 {
+    text-align: center;
+    float: left;
+    width: 25%;
     height: 100%;
-    padding-top: 4px;
-    padding-right: 0px;
     display: inline-block;
-    background-color: #f3c2a9;
-    border-right: 0px solid $light-gray;
+    background-color: #c0d0f6;
     h3 {
       font-family: $font;
       text-align: center;
       font-size: 14px;
-      color: $dark-blue;
-      font-weight: 400;
-      border-bottom: 1px solid $gray;
+      color: white;
+      font-weight: 100;
       padding-bottom: 5px;
       width: 80%;
       margin-left: 10%;
       &:hover {
-        color: $main-blue;
+        color: $dark-blue;
       }
     }
     img {
-      width: 74%;
-      height: 15%;
-      margin-top: 25%;
-      margin-left: 12%;
-      border: 3px solid $main-blue;
+      width: 74px;
+      height: 60px;
+      margin-bottom: 10px;
+      border-radius: 12px;
     }
     h4 {
-      font-size: 12px;
-      text-align: justify;
-      color: $dark-blue;
-      width: 80%;
-      margin-top: 30%;
-      margin-left: 13%;
+      width: 90%;
+      height: 50%;
+      font-size: 11px;
       font-weight: 400;
+      margin-left: 4.5%;
+      color: $dark-blue;
+      text-align: center;
     }
     .create-button-wrapper {
       width: 100%;
       text-align: center;
-      margin-top: -20%;
+      margin-top: -180px;
       margin-left: -0.7%;
       .create-button {
         border-radius: 24%/72%;
         background-color: #1E2E49;
         color: white;
-        padding: 5px 12px;
-        width: 86%;
-        height: 10%;
-        margin-top: 125px;
+        padding: 0px 1px;
+        width: 68px;
+        height: 30px;
+        margin-top: 200px;
         text-align: center;
         cursor: pointer;
+        border: 1px solid #1E2E49;
         -webkit-transition-duration: 0.4s; 
         transition-duration: 0.4s;
         margin-left: 0%;
-        font-size: 13px;
+        font-size: 6px;
         margin-bottom: 10px;
         font-family: $font;
         p {
           color: white;
           font-weight: 100;
           margin-top: 6px;
-          font-size: 8px;
+          font-size: 10px;
         }
         &:hover {
           border-radius: 24%/72%;
           background-color: $main-blue;
           color: $medium-blue;
           padding: 5px 12px;
-          width: 86%;
-          height: 10%;
-          margin-top: 165px;
+          width: 100px;
+          height: 35px;
+          margin-top: 200px;
           text-align: center;
           cursor: pointer;
+          border: 1px solid $main-blue;
           -webkit-transition-duration: 0.4s; 
           transition-duration: 0.4s;
           margin-left: 0%;
@@ -495,7 +494,7 @@
             color: white;
             font-weight: 100;
             margin-top: 6px;
-            font-size: 8px;
+            font-size: 10px;
           }
         }
       }
@@ -531,30 +530,29 @@
   .tabcontent {
     position: inherit;
     display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
+    padding: 6px 9px;
     border-top: none;
-    margin-top: -126%;
-    background-color: $gray;
-    width: 92%;
-    height: 64.8%;
+    margin-top: 13%;
+    /*background-color: white;*/
+    width: 95%;
+    height: 89.5%;
   }
   #create-milestones {
-    background-color: #f3c2a9;
+    background-color: #c0d0f6;
     h3 {
+      margin-top: 2%;
+      color: white;
+      font-size: 20px;
       font-weight: 400;
-      color: $main-blue;
-      font-size: 13px;
-      margin-left: 5%;
-      margin-top: 7%;
+      margin-left: 6%;
     }
     input[type=text] {
       float: left;
       width: 90%;
       margin-left: 5%;
-      margin-top: 4%;
+      margin-top: 10%;
       height: 200px;
-      font-size: 14px;
+      font-size: 16px;
       border-radius: 1%/5%;
       box-sizing: border-box;
       padding: 22px 12px 175px;
@@ -562,17 +560,17 @@
     }
     .milestones-extra-buttons {
       position: relative;
-      margin-left: 48px;
-      width: 90%;
+      margin-left: 53px;
+      width: 88%;
+      padding-top: 220px;
       border-bottom: 1px solid $light-gray;
-      padding-top: 151px;
-      z-index: 4;
       .attach-photo {
-        margin-left: -6%;
-        width: 21%;
+        margin-left: -10%;
+        width: 29%;
+        margin-top: -13.5%;
         float: left;
         color: $gray;
-        font-size: 10px;
+        font-size: 13px;
         display: inline-block;
         border-radius: 19%/72%;
         background-color: $light-gray;
@@ -581,9 +579,10 @@
       .privacy-btn {
         float: left;
         margin-left: 20%;
-        width: 21%;
+        width: 31%;
+        margin-top: -13.5%;
         color: $gray;
-        font-size: 10px;
+        font-size: 13px;
         display: inline-block;
         border-radius: 19%/72%;
         background-color: $light-gray;
@@ -591,9 +590,9 @@
     }
     button {
       float: right;
-      width: 23%;
-      margin-top: -41px;
-      margin-right: 31px;
+      width: 18%;
+      margin-top: -40px;
+      margin-right: 27px;
       background-color: #226BE4;
       color: white;
       padding: 5px 12px;
@@ -607,19 +606,19 @@
     }
   }
   #create-moments{
-    background-color: #dc8357;
+    background-color: #abc1f4;
     h3 {
       font-weight: 400;
-      color: $main-blue;
-      font-size: 13px;
+      color: white;
+      font-size: 20px;
       margin-left: 5%;
-      margin-top: 7%;
+      margin-top: 3%;
     }
     input[type=text] {
       float: left;
       width: 90%;
       margin-left: 5%;
-      margin-top: 4%;
+      margin-top: 10%;
       height: 200px;
       font-size: 14px;
       border-radius: 1%/5%;
@@ -635,11 +634,12 @@
       padding-top: 151px;
       z-index: 4;
       .attach-photo {
-        margin-left: -6%;
-        width: 21%;
+        margin-left: -10%;
+        width: 29%;
+        margin-top: -13.5%;
         float: left;
         color: $gray;
-        font-size: 10px;
+        font-size: 13px;
         display: inline-block;
         border-radius: 19%/72%;
         background-color: $light-gray;
@@ -648,9 +648,10 @@
       .privacy-btn {
         float: left;
         margin-left: 20%;
-        width: 21%;
+        width: 31%;
+        margin-top: -13.5%;
         color: $gray;
-        font-size: 10px;
+        font-size: 13px;
         display: inline-block;
         border-radius: 19%/72%;
         background-color: $light-gray;
@@ -658,9 +659,9 @@
     }
     button {
       float: right;
-      width: 23%;
-      margin-top: -41px;
-      margin-right: 31px;
+      width: 18%;
+      margin-top: -40px;
+      margin-right: 27px;
       background-color: #226BE4;
       color: white;
       padding: 5px 12px;
@@ -674,29 +675,29 @@
     }
   }
   #create-articles{
-    width: 92.5%;
-    background-color: #f49260;
+    width: 95%;
+    background-color: #95b0f0;
     h3 {
-      text-align: center;
       font-weight: 400;
-      color: $dark-blue;   
-      font-size: 13px;
-      margin-left: 5%;
-      margin-right: 5%;
+      color: white;
+      font-size: 20px;
+      margin-left: 4%;
+      margin-top: 3%;
     }
     .left {
-      width: 41%;
+      width: 46%;
       float: left;
       margin-top: 0%;
       margin-bottom: 3%;
       display: inline-block;
       #a-header {
-        margin-left: 23px;
-        color: $main-blue;
+        color: $medium-blue;
+        font-size: 14px;
+        margin-left: 22px;
       }
-      #articles-header {
-        margin-left: 8%;
-        width: 86%;
+      #articles-header{
+        margin-left: 6%;
+        width: 74%;
         height: 10px;
         float: left;
         margin-top: 3%;
@@ -707,18 +708,19 @@
       }
     }
     .right {
-      width: 41%;
+      width: 46%;
       float: right;
       margin-top: 0%;
       margin-bottom: 3%;
       display: inline-block;
       #a-title {
-        margin-left: -10px;
-        color: $main-blue;
+        color: $medium-blue;
+        font-size: 14px;
+        margin-left: 22px;
       }
       #articles-title {
-        margin-right: 8%;
-        width: 86%;
+        margin-right: 6%;
+        width: 74%;
         height: 10px;
         float: right;
         margin-top: 3%;
@@ -733,34 +735,36 @@
       width: 100%;
       float: left;
       #a-body {
-        margin-top: -5px;
-        margin-left: 24px;
         float: left;
-        color: $main-blue;
+        color: $medium-blue;
+        font-size: 14px;
+        margin-top: -13px;
+        margin-left: 22px;
       }
       #articles-body {
         float: left;
-        width: 92%;
-        margin-left: 4%;
-        margin-top: 4px;
-        height: 80px;
+        width: 93%;
+        margin-left: 3.4%;
+        margin-top: 6px;
+        height: 75px;
         font-size: 14px;
-        border-radius: 1%/5%;
+        border-radius: 3%/40%;
         box-sizing: border-box;
-        padding: 22px 12px 80px;
+        padding: 22px 12px 50px;
         border: 2px solid $main-blue;
       }
       #a-tag {
-        margin-top: 18px;
-        margin-left: 23px;
+        margin-top: 15px;
         float: left;
-        color: $main-blue;
+        color: $medium-blue;
+        font-size: 14px;
+        margin-left: 22px;
       }
       #articles-tag {
         margin-left: 4%;
-        width: 84%;
+        width: 85%;
         height: 10px;
-        margin-top: 10px;
+        margin-top: 7px;
         border-radius: 1%/40%;
         padding: 10px 12px 10px;
         border: 2px solid $main-blue;
@@ -769,12 +773,11 @@
     .articles-extra-buttons {
       margin-left: 48px;
       width: 90%;
-      border-bottom: 1px solid $light-gray;
       padding-top: 50px;
       z-index: 4;
       .attach-photo {
         margin-left: -11%;
-        margin-top: 29px;
+        margin-top: 15px;
         width: 18%;
         float: left;
         display: inline-block;
@@ -784,8 +787,8 @@
         }
       }
       .privacy-btn {
-        margin-top: 27px;
-        margin-left: -2%;
+        margin-top: 15px;
+        margin-left: -4%;
         width: 18%;
         float: left;
         display: inline-block;
@@ -797,11 +800,12 @@
     }
     .input-button {
       text-align: center;
-      width: 102px;
-      height: 33px;
-      margin-left: 0%;
-      margin-top: 81px;
+      width: 119px;
+      height: 40px;
+      margin-left: -4%;
+      margin-top: 50px;
       background-color: #226BE4;
+      border: 1px solid $main-blue;
       color: white;
       padding: 5px 12px;
       text-align: center;
@@ -814,29 +818,28 @@
     }
   }
   #create-events{
-    width: 92.5%;
-    background-color: #d8896d;
+    background-color: #7fa2ed;
     h3 {
-      text-align: center;
       font-weight: 400;
-      color: $dark-blue;    
-      font-size: 13px;
-      margin-left: 5%;
-      margin-right: 5%;
+      color: white;
+      font-size: 20px;
+      margin-left: 4%;
+      margin-top: 3%;
     }
     .left {
-      width: 41%;
+      width: 46%;
       float: left;
       margin-top: 0%;
       margin-bottom: 3%;
       display: inline-block;
       #e-header {
-        margin-left: 23px;
-        color: $main-blue;
+        color: $medium-blue;
+        font-size: 14px;
+        margin-left: 22px;
       }
-      #events-header {
-        margin-left: 8%;
-        width: 86%;
+      #events-header{
+        margin-left: 6%;
+        width: 74%;
         height: 10px;
         float: left;
         margin-top: 3%;
@@ -847,18 +850,19 @@
       }
     }
     .right {
-      width: 41%;
+      width: 46%;
       float: right;
       margin-top: 0%;
       margin-bottom: 3%;
       display: inline-block;
       #e-title {
-        margin-left: -10px;
-        color: $main-blue;
+        color: $medium-blue;
+        font-size: 14px;
+        margin-left: 22px;
       }
       #events-title {
-        margin-right: 8%;
-        width: 86%;
+        margin-right: 6%;
+        width: 74%;
         height: 10px;
         float: right;
         margin-top: 3%;
@@ -873,34 +877,36 @@
       width: 100%;
       float: left;
       #e-body {
-        margin-top: -5px;
-        margin-left: 24px;
         float: left;
-        color: $main-blue;
+        color: $medium-blue;
+        font-size: 14px;
+        margin-top: -13px;
+        margin-left: 22px;
       }
       #events-body {
         float: left;
-        width: 92%;
-        margin-left: 4%;
-        margin-top: 4px;
-        height: 80px;
+        width: 93%;
+        margin-left: 3.4%;
+        margin-top: 6px;
+        height: 75px;
         font-size: 14px;
-        border-radius: 1%/5%;
+        border-radius: 3%/40%;
         box-sizing: border-box;
-        padding: 22px 12px 80px;
+        padding: 22px 12px 50px;
         border: 2px solid $main-blue;
       }
       #e-tag {
-        margin-top: 18px;
-        margin-left: 23px;
+        margin-top: 15px;
         float: left;
-        color: $main-blue;
+        color: $medium-blue;
+        font-size: 14px;
+        margin-left: 22px;
       }
       #events-tag {
         margin-left: 4%;
-        width: 84%;
+        width: 85%;
         height: 10px;
-        margin-top: 10px;
+        margin-top: 7px;
         border-radius: 1%/40%;
         padding: 10px 12px 10px;
         border: 2px solid $main-blue;
@@ -909,12 +915,11 @@
     .events-extra-buttons {
       margin-left: 48px;
       width: 90%;
-      border-bottom: 1px solid $light-gray;
       padding-top: 50px;
       z-index: 4;
       .attach-photo {
         margin-left: -11%;
-        margin-top: 29px;
+        margin-top: 15px;
         width: 18%;
         float: left;
         display: inline-block;
@@ -924,8 +929,8 @@
         }
       }
       .privacy-btn {
-        margin-top: 27px;
-        margin-left: -2%;
+        margin-top: 15px;
+        margin-left: -4%;
         width: 18%;
         float: left;
         display: inline-block;
@@ -937,11 +942,12 @@
     }
     .input-button {
       text-align: center;
-      width: 102px;
-      height: 33px;
-      margin-left: 0%;
-      margin-top: 81px;
+      width: 119px;
+      height: 40px;
+      margin-left: -4%;
+      margin-top: 50px;
       background-color: #226BE4;
+      border: 1px solid $main-blue;
       color: white;
       padding: 5px 12px;
       text-align: center;
@@ -956,79 +962,80 @@
 
 
   .column2 {
-    width: 24%;
+    width: 25%;
     height: 100%;
-    padding-top: 4px;
+    text-align: center;
+    float: left;
     display: inline-block;
-    background-color: #dc8357;
+    background-color: #abc1f4;
     border-right: 0px solid $light-gray;
     h3 {
       font-family: $font;
       text-align: center;
       font-size: 14px;
-      color: $dark-blue;
-      font-weight: 400;
-      border-bottom: 1px solid $gray;
+      color: white;
+      font-weight: 100;
       padding-bottom: 5px;
       width: 80%;
       margin-left: 10%;
       &:hover {
-        color: $main-blue;
+        color: $dark-blue;
       }
     }
     img {
-      width: 74%;
-      height: 15%;
-      margin-top: 25%;
-      margin-left: 12%;
-      border: 3px solid $main-blue;
+      width: 74px;
+      height: 60px;
+      margin-bottom: 10px;
+      border-radius: 12px;
     }
     h4 {
-      font-size: 12px;
-      text-align: justify;
-      color: $dark-blue;
-      width: 80%;
-      margin-top: 30%;
-      margin-left: 13%;
+      width: 90%;
+      height: 50%;
+      font-size: 11px;
       font-weight: 400;
+      margin-left: 4.5%;
+      color: $dark-blue;
+      text-align: center;
     }
     .create-button-wrapper {
       width: 100%;
       text-align: center;
-      margin-top: -20%;
+      margin-top: -180px;
       margin-left: -0.7%;
       .create-button {
         border-radius: 24%/72%;
         background-color: #1E2E49;
         color: $main-blue;
-        padding: 5px 12px;
-        width: 86%;
-        height: 10%;
-        margin-top: 125px;
+        padding: 0px 1px;
+        width: 68px;
+        height: 30px;
+        margin-top: 200px;
         text-align: center;
         cursor: pointer;
+        border: 1px solid #1E2E49;
         -webkit-transition-duration: 0.4s; 
         transition-duration: 0.4s;
         margin-left: 0%;
-        font-size: 13px;
+        font-size: 6px;
         margin-bottom: 10px;
         font-family: $font;
         p {
           color: white;
           font-weight: 100;
           margin-top: 6px;
-          font-size: 8px;
+          font-size: 10px;
         }
         &:hover {
           border-radius: 24%/72%;
           background-color: $main-blue;
           color: $medium-blue;
           padding: 5px 12px;
-          width: 86%;
-          height: 10%;
-          margin-top: 165px;
+          width: 100px;
+          height: 35px;
+          margin-top: 200px;
           text-align: center;
           cursor: pointer;
+          border: 1px solid $main-blue;
           -webkit-transition-duration: 0.4s; 
           transition-duration: 0.4s;
           margin-left: 0%;
@@ -1039,86 +1046,87 @@
             color: white;
             font-weight: 100;
             margin-top: 6px;
-            font-size: 8px;
+            font-size: 10px;
           }
         }
       }
     }
   }
   .column3 {
-    width: 24%;
+    width: 25%;
     height: 100%;
-    padding-top: 4px;
+    text-align: center;
+    float: left;
     display: inline-block;
-    background-color: #f49260;
+    background-color: #95b0f0;
     border-right: 0px solid $light-gray;
     h3 {
       font-family: $font;
       text-align: center;
       font-size: 14px;
-      color: $dark-blue;
-      font-weight: 400;
-      border-bottom: 1px solid $gray;
+      color: white;
+      font-weight: 100;
       padding-bottom: 5px;
       width: 80%;
       margin-left: 10%;
       &:hover {
-        color: $main-blue;
+        color: $dark-blue;
       }
     }
     img {
-      width: 74%;
-      height: 15%;
-      margin-top: 25%;
-      margin-left: 12%;
-      border: 3px solid $main-blue;
+      width: 74px;
+      height: 60px;
+      margin-bottom: 10px;
+      border-radius: 12px;
     }
     h4 {
-      font-size: 12px;
-      text-align: justify;
-      color: $dark-blue;
-      width: 80%;
-      margin-top: 30%;
-      margin-left: 13%;
+      width: 90%;
+      height: 50%;
+      font-size: 11px;
       font-weight: 400;
+      margin-left: 4.5%;
+      color: $dark-blue;
+      text-align: center;
     }
     .create-button-wrapper {
       width: 100%;
       text-align: center;
-      margin-top: -20%;
+      margin-top: -180px;
       margin-left: -0.7%;
       .create-button {
         border-radius: 24%/72%;
         background-color: #1E2E49;
         color: $main-blue;
-        padding: 5px 12px;
-        width: 86%;
-        height: 10%;
-        margin-top: 125px;
+        padding: 0px 1px;
+        width: 68px;
+        height: 30px;
+        margin-top: 200px;
         text-align: center;
         cursor: pointer;
+        border: 1px solid #1E2E49;
         -webkit-transition-duration: 0.4s; 
         transition-duration: 0.4s;
         margin-left: 0%;
-        font-size: 13px;
+        font-size: 6px;
         margin-bottom: 10px;
         font-family: $font;
         p {
           color: white;
           font-weight: 100;
           margin-top: 6px;
-          font-size: 8px;
+          font-size: 10px;
         }
         &:hover {
           border-radius: 24%/72%;
           background-color: $main-blue;
           color: $medium-blue;
           padding: 5px 12px;
-          width: 86%;
-          height: 10%;
-          margin-top: 165px;
+          width: 100px;
+          height: 35px;
+          margin-top: 200px;
           text-align: center;
           cursor: pointer;
+          border: 1px solid $main-blue;
           -webkit-transition-duration: 0.4s; 
           transition-duration: 0.4s;
           margin-left: 0%;
@@ -1129,85 +1137,86 @@
             color: white;
             font-weight: 100;
             margin-top: 6px;
-            font-size: 8px;
+            font-size: 10px;
           }
         }
       }
     }
   }
   .column4 {
-    width: 24%;
+    text-align: center;
+    float: left;
+    width: 25%;
     height: 100%;
-    padding-top: 4px;
     display: inline-block;
-    background-color: #d8896d;
+    background-color: #7fa2ed;
     h3 {
       font-family: $font;
       text-align: center;
       font-size: 14px;
-      color: $dark-blue;
-      font-weight: 400;
-      border-bottom: 1px solid $gray;
+      color: white;
+      font-weight: 100;
       padding-bottom: 5px;
       width: 80%;
       margin-left: 10%;
       &:hover {
-        color: $main-blue;
+        color: $dark-blue;
       }
     }
     img {
-      width: 74%;
-      height: 15%;
-      margin-top: 25%;
-      margin-left: 12%;
-      border: 3px solid $main-blue;
+      width: 74px;
+      height: 60px;
+      margin-bottom: 10px;
+      border-radius: 12px;
     }
     h4 {
-      font-size: 12px;
-      text-align: justify;
-      color: $dark-blue;
-      width: 80%;
-      margin-top: 30%;
-      margin-left: 13%;
+      width: 90%;
+      height: 50%;
+      font-size: 11px;
       font-weight: 400;
+      margin-left: 4.5%;
+      color: $dark-blue;
+      text-align: center;
     }
     .create-button-wrapper {
       width: 100%;
       text-align: center;
-      margin-top: -20%;
+      margin-top: -180px;
       margin-left: -0.7%;
       .create-button {
         border-radius: 24%/72%;
         background-color: #1E2E49;
         color: $main-blue;
-        padding: 5px 12px;
-        width: 86%;
-        height: 10%;
-        margin-top: 125px;
+        padding: 0px 1px;
+        width: 68px;
+        height: 30px;
+        margin-top: 200px;
         text-align: center;
         cursor: pointer;
+        border: 1px solid #1E2E49;
         -webkit-transition-duration: 0.4s; 
         transition-duration: 0.4s;
         margin-left: 0%;
-        font-size: 13px;
+        font-size: 6px;
         margin-bottom: 10px;
         font-family: $font;
         p {
           color: white;
           font-weight: 100;
           margin-top: 6px;
-          font-size: 8px;
+          font-size: 10px;
         }
         &:hover {
           border-radius: 24%/72%;
           background-color: $main-blue;
           color: $medium-blue;
           padding: 5px 12px;
-          width: 86%;
-          height: 10%;
-          margin-top: 165px;
+          width: 100px;
+          height: 35px;
+          margin-top: 200px;
           text-align: center;
           cursor: pointer;
+          border: 1px solid $main-blue;
           -webkit-transition-duration: 0.4s; 
           transition-duration: 0.4s;
           margin-left: 0%;
@@ -1218,15 +1227,10 @@
             color: white;
             font-weight: 100;
             margin-top: 6px;
-            font-size: 8px;
+            font-size: 10px;
           }
         }
       }
     }
   }
 }
-
-
-
-
-

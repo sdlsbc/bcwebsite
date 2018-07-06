@@ -150,3 +150,334 @@
     }
   }
 }
+
+
+
+
+
+
+
+
+.cp-edit {
+  margin-top: -521px;
+  margin-left: 89%;
+  float: right;
+  display: inline;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  img {
+    width: 26px;
+  }
+}
+
+
+
+#createModalx {
+  display: none; 
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+.create-modal-contentx {
+  position: absolute;
+  background-color: $light-blue;
+  margin: auto;
+  margin-top: 2%;
+  border: 1px solid #888;
+  width: 66%;
+  margin-left: 17%;
+  height: 66%;
+  z-index: 1;
+  border-radius: 19px;
+  h1 {
+    font-family: $font;
+    color: $main-blue;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 50px;
+    font-size: 30px;
+  }
+  .cp-left1 {
+    margin-top: -5px;
+    width: 42%;
+    float: left;
+    margin-left: 83px;
+    padding-bottom: 30px;
+    #edit-name {
+      width: 80%;
+      font-size: 13px;
+      font-weight: 400;
+      color: $main-blue;
+    }
+    input[type=text] {
+      width: 80%;
+      height: 40px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      color: $main-blue;
+      padding-left: 15px;
+      border-radius: 22px;
+      border: 2px solid $main-blue;
+    }
+  }
+  .cp-right1 {
+    width: 42%;
+    float: right;
+    margin-left: -23px;
+    margin-right: 21px;
+    margin-top: -5px;
+    padding-bottom: 30px;
+    #edit-type {
+      width: 86%;
+      font-size: 13px;
+      color: $main-blue;
+      font-weight: 400;
+    }
+    input[type=text] {
+      width: 80%;
+      height: 40px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      color: $main-blue;
+      padding-left: 15px;
+      border-radius: 22px;
+      border: 2px solid $main-blue;
+    }
+  }
+  .cp-center {
+    width: 100%;
+    text-align: center;
+    #edit-desc {
+      width: 80%;
+      font-size: 13px;
+      margin-left: 9.5%;
+      font-weight: 400;
+      color: $main-blue;
+    }
+    input[type=text] {
+      width: 80%;
+      height: 120px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      color: $main-blue;
+      margin-left: 9.5%;
+      padding-left: 15px;
+      border-radius: 22px;
+      margin-bottom: 30px;
+      border: 2px solid $main-blue;
+    }
+  }
+  .cp-left2 {
+    width: 42%;
+    float: left;
+    margin-left: 86px;
+    padding-bottom: 30px;
+    #cp-new-password {
+      width: 80%;
+      font-size: 13px;
+      color: $main-blue;
+      font-weight: 400;
+    }
+    input[type=text] {
+      width: 80%;
+      height: 40px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      color: $main-blue;
+      padding-left: 15px;
+      border-radius: 22px;
+      border: 2px solid $main-blue;
+    }
+  }
+  .cp-right2 {
+    width: 42%;
+    float: right;
+    margin-right: 21px;
+    padding-bottom: 30px;
+    #cp-confirm-password {
+      width: 80%;
+      font-size: 13px;
+      color: $main-blue;
+      font-weight: 400;
+    }
+    input[type=text] {
+      margin-left: -21px;
+      width: 86%;
+      height: 40px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      color: $main-blue;
+      padding-left: 15px;
+      border-radius: 22px;
+      border: 2px solid $main-blue;
+    }
+  }
+  .save-changes {
+    margin-top: 10px;
+    margin-left: 41%;
+    background-color: #226BE4;
+    border: 2px solid #226BE4;
+    color: white;
+    padding: 3px 12px;
+    width: 146px;
+    height: 40px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 25px;
+    margin-right: 10%;
+    font-size: 14px;
+    &:hover {
+      margin-top: 10px;
+      width: 145px;
+      height: 40px;
+      font-weight: 400;
+      background-color: white;
+      border: 2px solid #226BE4;
+      border-radius: 25px;
+      margin-right: 10%; 
+      color: #226BE4;
+      font-size: 14px;
+    }
+  }
+}
+/* The Close Button */
+.create-closex {
+  /*display: none;*/
+  color: #aaaaaa;
+  float: right;
+  margin-right: 2%;
+  font-size: 28px;
+  font-weight: bold;
+}
+.create-closex:hover,
+.create-closex:focus {
+  /*display: none;*/
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+.cp-employee-edit {
+  margin-top: 55px;
+  margin-left: 2%;
+  display: inline;
+  width: 50px;
+  height: 50px;
+  position: inherit;
+  img {
+    width: 26px;
+  }
+}
+.employee-edit-wrapper {
+  width: 80%;
+  height: 75%;
+  margin-left: 11%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  white-space: nowrap;
+  .employee-col1 {
+    padding-top: 10px;
+    width:100%;
+    height: 100%;
+    padding-bottom: 30px;
+    .columns {
+      margin-top: 5px;
+      height: 100px;
+      .basic-info {
+        width: 40%;
+        float: left;
+        margin-bottom: 10px;
+        display: inline-block;
+        input[type=text] {
+          width: 100%;
+          height: 40px;
+          font-size: 14px;
+          padding-left: 10px;
+          margin-left: -10px;
+          border-radius: 20px;
+          border: 1px solid $main-blue;
+        }
+      }
+      .role {
+        width: 40%;
+        float: right;
+        margin-right: 50px;
+        margin-bottom: 10px;
+        display: inline-block;
+        input[type=text]{
+          width: 98%;
+          height: 40px;
+          font-size: 14px;
+          padding-left: 10px;
+          margin-left: -55px;
+          border-radius: 20px;
+          border: 1px solid $main-blue;
+        }
+      }
+      .up {
+        width: 30%;
+        font-size: 16px;
+        margin-left: 50%;
+        font-weight: 900;
+        color: $main-blue;
+        text-decoration: none;
+      }
+      .down {
+        width: 30%;
+        font-size: 16px;
+        margin-left: 50%;
+        font-weight: 900;
+        color: $main-blue;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+ul p:first-child a.up,
+ul p:last-child a.down {
+  display: none;
+}
+
+
+
+/* The Close Button */
+.create-closey {
+  /*display: none;*/
+  color: #aaaaaa;
+  float: right;
+  margin-right: 2%;
+  font-size: 28px;
+  font-weight: bold;
+}
+.create-closey:hover,
+.create-closey:focus {
+  /*display: none;*/
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+

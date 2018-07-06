@@ -90,7 +90,14 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
     </p>
   </div>
+  <div class="cp-edit">
+    <a href="#" id="myModal"><img src="../images/penciliconblue.png" class="edit-button"></a>
+  </div>
+
   <h4>Employee Roster</h4>
+  <div class="cp-employee-edit">
+    <a href="#" id="myModaly"><img src="../images/penciliconblue.png" class="edit-button"></a>
+  </div>
   <div class="cp-row1">
     <div class="cp-current-cast">
       <img src="../images/icon8.png">
@@ -198,6 +205,179 @@
        document.getElementById("mySidenav").style.width = "0";
      }
   </script>
+
+
+
+<!-- =============== EDIT MODAL ================ -->
+<div id="createModalx" class="create-modal">
+  <div class="create-modal-contentx" id="create-modal-contentx">
+  <span class="create-closex">&times;</span>
+    <h1>Edit Information</h1>
+    <form>
+      <span class="cp-left1">
+        <label id="edit-name">COMPANY NAME</label>
+        <br>
+        <input type="text" id="input-first" name="articles">
+      </span>
+      <span class="cp-right1">
+        <label id="edit-type">TYPE OF COMPANY</label>
+        <!-- <br> -->
+        <input type="text" id="input-last" name="articles">
+      </span>
+      <span class="cp-center">
+        <label id="edit-desc">DESCRIPTION</label>
+        <br>
+        <input type="text" id="input-email" name="articles">
+      </span>
+      <span class="cp-left2">
+        <label id="cp-new-password">NEW PASSWORD</label>
+        <br>
+        <input type="text" id="input-new" name="articles" placeholder="John">
+      </span>
+      <span class="cp-right2">
+        <label id="cp-confirm-password">CONFIRM PASSWORD</label>
+        <br>
+        <input type="text" id="input-confirm" name="articles" placeholder="John">
+      </span>
+      <button class="save-changes" onclick="signout()">Save Changes</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  var modalx = document.getElementById('createModalx');
+  var btnx = document.getElementById("myModal");
+  var spanx = document.getElementsByClassName("create-closex")[0];
+  btnx.onclick = function() {
+    modalx.style.display = "block";
+  }
+  spanx.onclick = function() {
+    modalx.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modalx) {
+      modalx.style.display = "none";
+    }
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- =============== EMPLOYEE EDIT MODAL ================ -->
+<div id="createModaly" class="create-modal">
+  <div class="create-modal-contentx" id="create-modal-contenty">
+  <span class="create-closey">&times;</span>
+    <h1>Edit Employee Information</h1>
+    <div class="employee-edit-wrapper">
+      <form>
+        <span class="employee-col1">
+          <ul>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Employee Handle1">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Employee Role1">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Employee Handle2">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Employee Role2">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Employee Handle3">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Employee Role3">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Employee Handle4">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Employee Role4">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Employee Handle5">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Employee Role5">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Employee Handle6">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Employee Role6">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+
+          </ul>
+        </span>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+$(function() {
+  $('.up').on('click', function(e) {
+    var wrapper = $(this).closest('.columns')
+    wrapper.insertBefore(wrapper.prev())
+  })
+  $('.down').on('click', function(e) {
+    var wrapper = $(this).closest('.columns')
+    wrapper.insertAfter(wrapper.next())
+  })
+})
+</script>
+
+<script>
+  var modaly = document.getElementById('createModaly');
+  var btny = document.getElementById("myModaly");
+  var spany = document.getElementsByClassName("create-closey")[0];
+  btny.onclick = function() {
+    modaly.style.display = "block";
+  }
+  spany.onclick = function() {
+    modaly.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modaly) {
+      modaly.style.display = "none";
+    }
+  }
+</script>
+
+
 
 
 
@@ -354,6 +534,7 @@
   var span = document.getElementsByClassName("create-close")[0];
   btn.onclick = function() {
     modal.style.display = "block";
+    document.getElementById("mySidenav").style.width = "0";
   }
   span.onclick = function() {
     modal.style.display = "none";

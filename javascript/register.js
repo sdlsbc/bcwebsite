@@ -179,7 +179,7 @@ function saveUserTypeData(token) {
                 console.log('', response);
 
                 // go to newsfeed
-                window.location.href = "Newsfeed/newsfeed.html";
+                // window.location.href = "Newsfeed/newsfeed.html";
 
             }
         })

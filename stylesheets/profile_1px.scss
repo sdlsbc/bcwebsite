@@ -495,15 +495,14 @@
   .edit-center {
     width: 100%;
     text-align: center;
-    #edit-email {
+    #edit-phone-number {
       margin-top: 20px;
-      width: 80%;
-      /*font-size: 11px;*/    
+      width: 80%;   
       margin-left: 9.5%;
       font-weight: 400;
       color: $main-blue;
     }
-    input[type=text] {
+    input[type=number] {
       width: 80%;
       height: 30px;
       margin-top: 2px;

@@ -112,7 +112,32 @@ function checkBrowser(){
 
 function loadThese(){
     loadAndShowPosts();
-    loadProfileData();
+    //loadProfileData();
+    fillProfileEditor();
+}
+
+function fillProfileEditor(){
+    
+    let firstnameEl = document.getElementById("input-first");
+    if( !(localStorage.getItem("first_name") == null || localStorage.getItem("first_name") == "null") ) {
+        firstnameEl.value = localStorage.getItem("first_name");
+    }
+    let lastnameEl = document.getElementById("input-last");
+    if ( !(localStorage.getItem("last_name") == null || localStorage.getItem("last_name") == "null") ) {
+        lastnameEl.value = localStorage.getItem("last_name");
+    }
+    let phoneEl = document.getElementById("input-email");
+    if ( !(localStorage.getItem("phone") == undefined) ) {
+        phoneEl.value = localStorage.getItem("phone");
+    }
+    let cityEl = document.getElementById("input-new")
+    if ( !(localStorage.getItem("city") == null || localStorage.getItem("city") == "null") ) {
+        cityEl.value = localStorage.getItem("city");
+    }
+    let countryEl = document.getElementById("input-confirm")
+    if( !(localStorage.getItem("country") == null || localStorage.getItem("country") == "null") ) {
+        countryEl.value = localStorage.getItem("country");
+    }
 }
 
 function loadProfileData(){
@@ -195,7 +220,7 @@ function loadAndShowPosts(){
 }
 
 function getPostsItems(){
-    var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/favorite_read";
+    var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/favorite_read";
     let params = {
         headers: {
             'content-type': 'application/json',
@@ -411,5 +436,62 @@ function showUsers(user, divId) {
     
     document.getElementById(divId).appendChild(div);
     console.log(user.first_name);
-
 }
+
+function updateUser() {
+
+    let first_name = document.getElementById('input-first').value;
+    let last_name = document.getElementById('input-last').value;
+    let phone = document.getElementById('input-email').value;
+    let handle = document.getElementById('input-username').value;
+    let city = document.getElementById('input-new').value;
+    let country = document.getElementById('input-confirm').value;
+
+    let url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_update";
+
+    let body = {
+        'user_id': localStorage.getItem("user_id"),
+        'phone': phone,
+        'first_name': first_name,
+        'last_name': last_name,
+        'handle': handle,
+        'city': city,
+        'country': country
+    }
+    let params = {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        },
+        method: 'POST',
+        body: JSON.stringify(body)
+    }
+
+    fetch(url, params)
+    .then(res => res.json())
+    .then(body => {
+        console.log(body)
+        if(body.response.message == "Username must be unique") {
+            createCustomAlert("Username is not unique.")
+            console.log("username is bad!!!!")
+        } else {
+            localStorage.setItem("handle", body.response.user.handle);
+            localStorage.setItem("first_name", body.response.user.firstname);
+            localStorage.setItem("last_name", body.response.user.lastname);
+            localStorage.setItem("city", body.response.user.city);
+            localStorage.setItem("country", body.response.user.country);
+            localStorage.setItem("phone", body.response.user.phone);
+        }
+    })
+}
+
+
+
+
+
+
+
+
+
+
+

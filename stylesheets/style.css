@@ -7157,6 +7157,67 @@ ul p:last-child a.down {
     color: #000;
     text-decoration: none;
     cursor: pointer; } }
+.cp-client-edit {
+  margin-top: 55px;
+  margin-left: 2%;
+  display: inline;
+  width: 50px;
+  height: 50px;
+  position: inherit; }
+  .cp-client-edit img {
+    width: 26px; }
+
+#createModalz {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.create-modal-contentz {
+  position: absolute;
+  background-color: #F7FAFF;
+  margin: auto;
+  margin-top: 2%;
+  border: 1px solid #888;
+  width: 80%;
+  margin-left: 10%;
+  height: 66%;
+  z-index: 1;
+  border-radius: 19px; }
+  .create-modal-contentz h1 {
+    font-family: "Roboto", sans-serif;
+    color: #226BE4;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+    margin-left: 15px;
+    margin-top: 5px;
+    padding-bottom: 50px;
+    font-size: 30px; }
+
+/* The Close Button */
+.create-closez {
+  /*display: none;*/
+  color: #aaaaaa;
+  float: right;
+  margin-right: 2%;
+  font-size: 28px;
+  font-weight: bold; }
+
+.create-closez:hover,
+.create-closez:focus {
+  /*display: none;*/
+  color: #000;
+  text-decoration: none;
+  cursor: pointer; }
+
 @media screen and (max-width: 700px) {
   /* =============== M O B I L E  M A I N  H E A D E R =============== */
   .main-header {

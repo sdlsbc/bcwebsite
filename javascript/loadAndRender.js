@@ -36,21 +36,21 @@ function checkLocalStorage(page) {
 }
 
 function loadAndShowPosts() {
-    wait = true;
-    document.getElementById('loading').classList.remove('hidden');
-    getPostsItems()
-        .then(newsRaw => {
-            //console.log(newsRaw)
-            newsRaw.forEach(element => {
-                createPost(element);
-            });
-        }).then(res => {
-            console.log(favs)
-            if (fetchCount > 1) {
-                window.scrollBy({ top: 40, behavior: "smooth" });
-            }
-            document.getElementById('loading').classList.add('hidden');
-        })
+	wait = true;
+	document.getElementById('loading').classList.remove('hidden');
+	getPostsItems()
+		.then(newsRaw => {
+			//console.log(newsRaw)
+			newsRaw.forEach(element => {
+				createPost(element);
+			});
+		}).then(res => {
+			console.log(favs)
+			if (fetchCount > 1) {
+				window.scrollBy({ top: 40, behavior: "smooth" });
+			}
+			document.getElementById('loading').classList.add('hidden');
+		})
 }
 
 function getPostsItems() {
@@ -83,23 +83,24 @@ function getPostsItems() {
 }
 
 function loadProfile() {
-    let div = document.getElementById('profile_pic');
-    let pic = document.createElement('img');
-    pic.classList.add('profile_pic');
-    let source = localStorage.getItem('profile_image');
+	let div = document.getElementById('profile_pic');
+	let pic = document.createElement('img');
+	pic.classList.add('profile_pic');
+	let source = localStorage.getItem('profile_image');
 
-    if (source == "http://app.bwayconnected.com/public/images/default.jpg" || source == "" || source == null) {
-        pic.src = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"
-    } else {
-        pic.src = source;
-    }
+	if (source == "http://app.bwayconnected.com/public/images/default.jpg" || source == "" || source == null) {
+		pic.src = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"
+	} else {
+		pic.src = source;
+	}
 
-    div.appendChild(pic);
+	div.appendChild(pic);
 
-    let namep = document.getElementsByClassName('navname')[0];
-    let name = document.createTextNode(localStorage.getItem('first_name') + " " + localStorage.getItem('last_name'));
-    namep.appendChild(name);
+	let namep = document.getElementsByClassName('navname')[0];
+	let name = document.createTextNode(localStorage.getItem('first_name') + " " + localStorage.getItem('last_name'));
+	namep.appendChild(name);
 }
+
 
 function favorite(post_id, liked) {
 	//alert("totes fave" + id)
@@ -124,30 +125,31 @@ function favorite(post_id, liked) {
 }
 
 function likesUpdate(post_id) {
-    let url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read';
+	let url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read';
 
-    fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ 'post_id': post_id })
-    })
-    .then(res => res.json())
-    .catch(error => console.error('Error:', error))
-    .then(body => {
-        if (body.status != "success") {
-            console.log("request not successful");
-            // createCustomAlert("WARNING: User Already Exists");
-        } else {
-            console.log("request successful")
-            var likes = body.response.favoriters;
-            let parent = document.getElementById(post_id);
-            let fav_likes = parent.querySelector('.fav_likes');
-            fav_likes.innerHTML = body.response.post.favoriters.length;
-        }
-    })
+	fetch(url, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({ 'post_id': post_id })
+	})
+	.then(res => res.json())
+	.catch(error => console.error('Error:', error))
+	.then(body => {
+		if (body.status != "success") {
+			console.log("request not successful");
+			// createCustomAlert("WARNING: User Already Exists");
+		} else {
+			console.log("request successful")
+			var likes = body.response.favoriters;
+			let parent = document.getElementById(post_id);
+			let fav_likes = parent.querySelector('.fav_likes');
+			fav_likes.innerHTML = body.response.post.favoriters.length;
+		}
+	})
 }
+
 
 function showModal(body) {
 	console.log("showModal",body);
@@ -476,9 +478,9 @@ function createPost(body) {
 }
 
 window.onscroll = function (ev) {
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        if (!wait) {
-            loadAndShowPosts()
-        }
-    }
+	if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+		if (!wait) {
+			loadAndShowPosts()
+		}
+	}
 };

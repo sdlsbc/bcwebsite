@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function register() {
     console.log('in register: step1');
     var email = document.getElementById('signup-email').value;
@@ -29,6 +30,58 @@ function register() {
             case "personal":
                 dob = document.getElementById('personal-dateOfBirth').value;
                 break;
+=======
+function register()
+{ 
+var email=document.getElementById('signup-email').value;
+var password=document.getElementById('signup-password').value;
+// var fname=document.getElementById('signup-firstname').value;
+// var lname=document.getElementById('signup-lastname').value;
+
+var url = 'http://app.bwayconnected.com/api/register';
+var data = {
+    "email": email,
+    "password": password,
+    "first_name": "A",
+    "last_name": "M"
+  };
+
+fetch(url, {
+  method: 'POST', 
+  body: JSON.stringify(data), 
+  headers:{
+    'Content-Type': 'application/json'
+  }
+}).then(res => res.json())
+.catch(error => console.error('Error:', error))
+.then(response =>{
+
+    // check if sign up successful
+    if(response.Response == "1000")
+    {
+        alert("User Already Exists");
+    }else{
+        
+        console.log('Success:', response)
+        var id = response.Result.user_id;
+        var first_name = response.Result.first_name;
+        var last_name = response.Result.last_name;
+        var profile_image = response.Result.profile_image;
+        var token = response.Result.token;
+
+        localStorage.setItem("user_id", id);
+        localStorage.setItem("first_name", first_name);
+        localStorage.setItem("last_name", last_name);
+        localStorage.setItem("profile_image", profile_image);
+        localStorage.setItem("token", token);
+
+        if (localStorage.getItem("user_id") == "")
+        {
+            alert("not saved locally");
+        }else{
+
+            window.location.href = "file:///C:/Users/Ankita%20Mhatre/Documents/BC-repo/bcwebsite//Newsfeed/newsfeed.html";
+>>>>>>> upload user
         }
 
         var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_create';
@@ -100,6 +153,7 @@ function register() {
     }
 }
 
+<<<<<<< HEAD
 function saveUserTypeData(token) {
     console.log('in save user type data');
     var user_id = localStorage.getItem("user_id");
@@ -204,6 +258,57 @@ function signin() {
         body: JSON.stringify(data),
         headers: {
             'Content-Type': 'application/json'
+=======
+function signin(){
+
+    var email=document.getElementById('signin-email').value;
+    var password=document.getElementById('signin-password').value;
+
+    // verify email
+    var url = 'http://app.bwayconnected.com/api/login';
+var data = {
+    "email": email,
+    "password": password
+  };
+
+  fetch(url, {
+  method: 'POST', 
+  body: JSON.stringify(data), 
+  headers:{
+    'Content-Type': 'application/json'
+  }
+}).then(res => res.json())
+.catch(error => console.error('Error:', error))
+.then(response =>{
+
+    console.log('Success:', response);
+
+    // check if sign in successful
+    if(response.Response == "1000")
+    {
+        alert("Invalid Credentials");
+    }else{
+
+        console.log('Success:', response);
+        var id = response.Result.user_id;
+        var first_name = response.Result.first_name;
+        var last_name = response.Result.last_name;
+        var profile_image = response.Result.profile_image;
+        var token = response.Result.token;
+
+        localStorage.setItem("user_id", id);
+        localStorage.setItem("first_name", first_name);
+        localStorage.setItem("last_name", last_name);
+        localStorage.setItem("profile_image", profile_image);
+        localStorage.setItem("token", token);
+
+        if (localStorage.getItem("user_id") == "")
+        {
+            alert("not saved locally");
+        }else{
+            // alert(localStorage.getItem("user_id"));
+            window.location.href = "file:///C:/Users/Ankita%20Mhatre/Documents/BC-repo/bcwebsite//Newsfeed/newsfeed.html";
+>>>>>>> upload user
         }
     }).then(res => res.json())
         .catch(error => console.error('Error:', error))
@@ -354,6 +459,7 @@ function validateSignUpInput(e, p, fn, ln, h, ut, city, country) {
     } else {
         return '';
     }
+<<<<<<< HEAD
 }
 
 function validateEmail(e) {
@@ -366,4 +472,15 @@ function validateEmail(e) {
     } else {
         return true;
     }
+=======
+})
+
+
+}
+
+function signout(){
+    localStorage.clear();
+    alert("Logged out");
+    window.location.href = "file:///C:/Users/Ankita%20Mhatre/Documents/BC-repo/bcwebsite/index.html";
+>>>>>>> upload user
 }

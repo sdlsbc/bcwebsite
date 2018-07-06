@@ -11,6 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
+<<<<<<< HEAD
 <style>
     /* The Close Modal Button */
 .close {
@@ -35,6 +36,9 @@
 }
 </style>
 <body onload="checkLocalStorage('newsfeed')">
+=======
+<body onload="checkLocalStorage()">
+>>>>>>> upload user
     <!-- sidebar. -->
     <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closeNav()">&times;</a>
@@ -236,6 +240,7 @@
           <label id="a-body">Body</label>
           <input type="text" id="articles-body" name="articles" placeholder="New article goes here...">
 
+<<<<<<< HEAD
           <label id="a-tag">Tags</label>
           <input type="text" id="articles-tag" name="articles" placeholder="tags">
         </span>
@@ -251,6 +256,23 @@
         
       </div>
         <button class="input-button">Post</button>
+=======
+        <a href="#"><img class="topright" src="../images/messages.png" width="115" height="25"></a> 
+        <a href="#"><img class="topright2" src="../images/notifications.png" width="115" height="25"></a>
+        <a href="#"><img class="topright3" src="../images/settings.png" width="115" height="25" onclick="signout()"></a>
+ 
+    <!--blog posts-->
+    <!--<div id="wrapper">-->
+    <!--
+    <a href="#">
+    <div class="rcorners1">
+        &nbsp<img src="images/icon1.png">   
+        <br/>
+        <center><img src="images/play1.png"/></center> 
+        <center><img src="images/action bar2.png"></center>
+        <p class="article">Title goes here</p>
+        <p class="subarticle"> lorem upsum blah blah blah blah blah</p>
+>>>>>>> upload user
     </div>
 
     <div id="create-events" class="tabcontent">
@@ -326,3 +348,14 @@
 </body>
 </html>
 
+<<<<<<< HEAD
+=======
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <script src="../javascript/register.js"></script>
+    <script type="text/javascript" src="js/newsfeed.js"></script>
+    </body>
+</html>
+>>>>>>> upload user

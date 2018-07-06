@@ -6603,22 +6603,19 @@ $other-blue-light: #;*/
 
 .employee-edit-wrapper {
   width: 80%;
-  width: 80%;
+  height: 75%;
   margin-left: 11%;
   overflow-y: scroll;
   overflow-x: hidden;
-  white-space: nowrap;
-  overflow: hidden; }
+  white-space: nowrap; }
   .employee-edit-wrapper .employee-col1 {
     padding-top: 10px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    white-space: nowrap;
-    overflow: hidden;
     width: 100%;
+    height: 100%;
     padding-bottom: 30px; }
     .employee-edit-wrapper .employee-col1 .columns {
-      height: 90px; }
+      margin-top: 5px;
+      height: 100px; }
       .employee-edit-wrapper .employee-col1 .columns .basic-info {
         width: 40%;
         float: left;
@@ -6629,7 +6626,7 @@ $other-blue-light: #;*/
           height: 40px;
           font-size: 14px;
           padding-left: 10px;
-          margin-left: -40px;
+          margin-left: -10px;
           border-radius: 20px;
           border: 1px solid #226BE4; }
       .employee-edit-wrapper .employee-col1 .columns .role {
@@ -6643,20 +6640,20 @@ $other-blue-light: #;*/
           height: 40px;
           font-size: 14px;
           padding-left: 10px;
-          margin-left: -85px;
+          margin-left: -55px;
           border-radius: 20px;
           border: 1px solid #226BE4; }
       .employee-edit-wrapper .employee-col1 .columns .up {
         width: 30%;
         font-size: 16px;
-        margin-left: 42%;
+        margin-left: 50%;
         font-weight: 900;
         color: #226BE4;
         text-decoration: none; }
       .employee-edit-wrapper .employee-col1 .columns .down {
         width: 30%;
         font-size: 16px;
-        margin-left: 42%;
+        margin-left: 50%;
         font-weight: 900;
         color: #226BE4;
         text-decoration: none; }
@@ -9104,22 +9101,19 @@ ul p:last-child a.down {
 
   .employee-edit-wrapper {
     width: 80%;
-    width: 80%;
+    height: 75%;
     margin-left: 11%;
     overflow-y: scroll;
     overflow-x: hidden;
-    white-space: nowrap;
-    overflow: hidden; }
+    white-space: nowrap; }
     .employee-edit-wrapper .employee-col1 {
       padding-top: 10px;
-      overflow-y: scroll;
-      overflow-x: hidden;
-      white-space: nowrap;
-      overflow: hidden;
       width: 100%;
+      height: 100%;
       padding-bottom: 30px; }
       .employee-edit-wrapper .employee-col1 .columns {
-        height: 90px; }
+        margin-top: 5px;
+        height: 100px; }
         .employee-edit-wrapper .employee-col1 .columns .basic-info {
           width: 40%;
           float: left;
@@ -9130,7 +9124,7 @@ ul p:last-child a.down {
             height: 40px;
             font-size: 14px;
             padding-left: 10px;
-            margin-left: -40px;
+            margin-left: -10px;
             border-radius: 20px;
             border: 1px solid #226BE4; }
         .employee-edit-wrapper .employee-col1 .columns .role {
@@ -9144,20 +9138,20 @@ ul p:last-child a.down {
             height: 40px;
             font-size: 14px;
             padding-left: 10px;
-            margin-left: -85px;
+            margin-left: -55px;
             border-radius: 20px;
             border: 1px solid #226BE4; }
         .employee-edit-wrapper .employee-col1 .columns .up {
           width: 30%;
           font-size: 16px;
-          margin-left: 42%;
+          margin-left: 50%;
           font-weight: 900;
           color: #226BE4;
           text-decoration: none; }
         .employee-edit-wrapper .employee-col1 .columns .down {
           width: 30%;
           font-size: 16px;
-          margin-left: 42%;
+          margin-left: 50%;
           font-weight: 900;
           color: #226BE4;
           text-decoration: none; }

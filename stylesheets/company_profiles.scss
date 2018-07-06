@@ -328,7 +328,7 @@
   }
   .save-changes {
     margin-top: 25px;
-    margin-left: 41%;
+    margin-left: 39%;
     background-color: #226BE4;
     border: 2px solid #226BE4;
     color: white;
@@ -345,7 +345,9 @@
     margin-right: 10%;
     font-size: 14px;
     &:hover {
-      margin-top: 10px;
+      margin-top: 25px;
+      padding: 3px 12px;
+      margin-left: 39%;
       width: 145px;
       height: 40px;
       font-weight: 400;
@@ -455,8 +457,8 @@
   }
 }
 .save-changes {
-  margin-top: 30px;
-  margin-left: 34%;
+  margin-top: 25px;
+  margin-left: 42%;
   padding-top: 40px;
   background-color: #226BE4;
   border: 2px solid #226BE4;
@@ -474,7 +476,10 @@
   margin-right: 10%;
   font-size: 14px;
   &:hover {
-    margin-top: 10px;
+    margin-left: 42%;
+    padding-top: 40px;
+    padding: 3px 12px;
+    margin-top: 25px;
     width: 145px;
     height: 40px;
     font-weight: 400;

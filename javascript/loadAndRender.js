@@ -14,7 +14,7 @@ function checkLocalStorage(page) {
 	token = localStorage.getItem("token");
 
 	if (PAGE == 'newsfeed') {
-		//loadProfile();
+		loadProfile();
 		loadAndShowPosts();
 		//checkIfCompleteProfile();
 

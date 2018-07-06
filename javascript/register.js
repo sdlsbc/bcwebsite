@@ -220,6 +220,8 @@ function signin() {
                 var user_id = response.response.user_id;
                 var handle = response.response.user.handle;
                 var res_usertype = response.response.user.usertype;
+                var firstname = response.response.user.lastname;
+                var lastname = response.response.user.firstname;
                 console.log(res_usertype);
                 var res_usertype_id = "";
                 if (res_usertype == "company") {
@@ -241,7 +243,11 @@ function signin() {
                 localStorage.setItem("handle", handle);
                 localStorage.setItem("usertype", res_usertype);
                 localStorage.setItem("usertype_id", res_usertype_id);
+                localStorage.setItem("first_name", firstname);
+                localStorage.setItem("last_name", lastname);
                 console.log('usertype_id is: ', res_usertype_id);
+                                        var res_lastname = response.response.user.lastname;
+                        var res_firstname = response.response.user.firstname;
                 if (localStorage.getItem("token") == "") {
                     createCustomAlert("WARNING: Not saved locally");
                 } else {

@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+var upload_image_base64 = "";
+
 function register() {
     console.log('in register: step1');
     var email = document.getElementById('signup-email').value;
@@ -30,61 +31,11 @@ function register() {
             case "personal":
                 dob = document.getElementById('personal-dateOfBirth').value;
                 break;
-=======
-function register()
-{ 
-var email=document.getElementById('signup-email').value;
-var password=document.getElementById('signup-password').value;
-// var fname=document.getElementById('signup-firstname').value;
-// var lname=document.getElementById('signup-lastname').value;
-
-var url = 'http://app.bwayconnected.com/api/register';
-var data = {
-    "email": email,
-    "password": password,
-    "first_name": "A",
-    "last_name": "M"
-  };
-
-fetch(url, {
-  method: 'POST', 
-  body: JSON.stringify(data), 
-  headers:{
-    'Content-Type': 'application/json'
-  }
-}).then(res => res.json())
-.catch(error => console.error('Error:', error))
-.then(response =>{
-
-    // check if sign up successful
-    if(response.Response == "1000")
-    {
-        alert("User Already Exists");
-    }else{
-        
-        console.log('Success:', response)
-        var id = response.Result.user_id;
-        var first_name = response.Result.first_name;
-        var last_name = response.Result.last_name;
-        var profile_image = response.Result.profile_image;
-        var token = response.Result.token;
-
-        localStorage.setItem("user_id", id);
-        localStorage.setItem("first_name", first_name);
-        localStorage.setItem("last_name", last_name);
-        localStorage.setItem("profile_image", profile_image);
-        localStorage.setItem("token", token);
-
-        if (localStorage.getItem("user_id") == "")
-        {
-            alert("not saved locally");
-        }else{
-
-            window.location.href = "file:///C:/Users/Ankita%20Mhatre/Documents/BC-repo/bcwebsite//Newsfeed/newsfeed.html";
->>>>>>> upload user
         }
 
+        // var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_create';
         var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_create';
+
         var data = {
             "handle": handle,
             "email": email,
@@ -98,6 +49,7 @@ fetch(url, {
             "company_name": c_name,
             "date_of_birth": dob,
             "production_name": p_name,
+            "contents": upload_image_base64
         };
 
         fetch(url, {
@@ -113,7 +65,6 @@ fetch(url, {
 
                 if (response.status == "success") {
 
-                   
                     console.log('Success:', response);
 
                     if (response.response.message == "Username not unique") {
@@ -128,9 +79,6 @@ fetch(url, {
                         var res_usertype = response.response.user.usertype;
                         var res_lastname = response.response.user.lastname;
                         var res_firstname = response.response.user.firstname;
-                        var res_city = response.response.user.city;
-                        var res_country = response.response.user.country;
-                        var res_phone = response.response.user.phone;
 
                         localStorage.setItem("user_id", res_user_id);
                         localStorage.setItem("usertype_id", res_usertype_id);
@@ -139,9 +87,6 @@ fetch(url, {
                         localStorage.setItem("handle", res_handle);
                         localStorage.setItem("first_name", res_firstname);
                         localStorage.setItem("last_name", res_lastname);
-                        localStorage.setItem("city", res_city);
-                        localStorage.setItem("country", res_country);
-                        localStorage.setItem("phone", res_phone);
 
                         // save usertype data 
                         saveUserTypeData(token);
@@ -153,7 +98,6 @@ fetch(url, {
     }
 }
 
-<<<<<<< HEAD
 function saveUserTypeData(token) {
     console.log('in save user type data');
     var user_id = localStorage.getItem("user_id");
@@ -185,7 +129,6 @@ function saveUserTypeData(token) {
         var p_opening = document.getElementById('production-opening').value;
         var p_closing = document.getElementById('production-closing').value;
 
-
         console.log('production type ', p_type);
         data = {
             "user_id": user_id,
@@ -214,8 +157,8 @@ function saveUserTypeData(token) {
         };
     }
 
-
-    var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/"+usertype+"_update";
+    // var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/" + usertype + "_update";
+    var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/" + usertype + "_update";
 
     fetch(url, {
         method: 'POST',
@@ -233,7 +176,7 @@ function saveUserTypeData(token) {
                 console.log('', response);
 
                 // go to newsfeed
-                window.location.href = "Newsfeed/newsfeed.html";
+                // window.location.href = "Newsfeed/newsfeed.html";
 
             }
         })
@@ -247,7 +190,9 @@ function signin() {
 
     var error_message = validateSigninInput(email, password);
 
+    // var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/login';
     var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/login';
+
     var data = {
         "email": email,
         "password": password
@@ -258,76 +203,20 @@ function signin() {
         body: JSON.stringify(data),
         headers: {
             'Content-Type': 'application/json'
-=======
-function signin(){
-
-    var email=document.getElementById('signin-email').value;
-    var password=document.getElementById('signin-password').value;
-
-    // verify email
-    var url = 'http://app.bwayconnected.com/api/login';
-var data = {
-    "email": email,
-    "password": password
-  };
-
-  fetch(url, {
-  method: 'POST', 
-  body: JSON.stringify(data), 
-  headers:{
-    'Content-Type': 'application/json'
-  }
-}).then(res => res.json())
-.catch(error => console.error('Error:', error))
-.then(response =>{
-
-    console.log('Success:', response);
-
-    // check if sign in successful
-    if(response.Response == "1000")
-    {
-        alert("Invalid Credentials");
-    }else{
-
-        console.log('Success:', response);
-        var id = response.Result.user_id;
-        var first_name = response.Result.first_name;
-        var last_name = response.Result.last_name;
-        var profile_image = response.Result.profile_image;
-        var token = response.Result.token;
-
-        localStorage.setItem("user_id", id);
-        localStorage.setItem("first_name", first_name);
-        localStorage.setItem("last_name", last_name);
-        localStorage.setItem("profile_image", profile_image);
-        localStorage.setItem("token", token);
-
-        if (localStorage.getItem("user_id") == "")
-        {
-            alert("not saved locally");
-        }else{
-            // alert(localStorage.getItem("user_id"));
-            window.location.href = "file:///C:/Users/Ankita%20Mhatre/Documents/BC-repo/bcwebsite//Newsfeed/newsfeed.html";
->>>>>>> upload user
         }
     }).then(res => res.json())
         .catch(error => console.error('Error:', error))
         .then(response => {
 
-            console.log('Success:', response);
+            console.log('Success: On login', response);
 
             if (response.status == "success") {
                 createCustomAlert("you are logged in");
                 var token = response.response.token;
+                var user_image = response.response.user.image;
                 var user_id = response.response.user_id;
                 var handle = response.response.user.handle;
                 var res_usertype = response.response.user.usertype;
-                var res_lastname = response.response.user.lastname;
-                var res_firstname = response.response.user.firstname;
-                var res_city = response.response.user.city;
-                var res_country = response.response.user.country;
-                var res_phone = response.response.user.phone;
-
                 console.log(res_usertype);
                 var res_usertype_id = "";
                 if (res_usertype == "company") {
@@ -343,16 +232,12 @@ var data = {
                     console.log('usertype id in register.js', res_usertype_id);
                 }
 
-                localStorage.setItem("first_name", res_firstname);
-                localStorage.setItem("last_name", res_lastname);
                 localStorage.setItem("token", token);
+                localStorage.setItem("profile_image", user_image);
                 localStorage.setItem("user_id", user_id);
                 localStorage.setItem("handle", handle);
                 localStorage.setItem("usertype", res_usertype);
                 localStorage.setItem("usertype_id", res_usertype_id);
-                localStorage.setItem("city", res_city);
-                localStorage.setItem("country", res_country);
-                localStorage.setItem("phone", res_phone);
                 console.log('usertype_id is: ', res_usertype_id);
                 if (localStorage.getItem("token") == "") {
                     createCustomAlert("WARNING: Not saved locally");
@@ -374,7 +259,6 @@ function signout() {
 
 
 
-
 // var ALERT_TITLE = "Oops!";
 var ALERT_BUTTON_TEXT = "x";
 
@@ -383,7 +267,6 @@ if (document.getElementById) {
         createCustomAlert(txt);
     }
 }
-
 
 function createCustomAlert(txt) {
     d = document;
@@ -459,7 +342,6 @@ function validateSignUpInput(e, p, fn, ln, h, ut, city, country) {
     } else {
         return '';
     }
-<<<<<<< HEAD
 }
 
 function validateEmail(e) {
@@ -472,15 +354,4 @@ function validateEmail(e) {
     } else {
         return true;
     }
-=======
-})
-
-
-}
-
-function signout(){
-    localStorage.clear();
-    alert("Logged out");
-    window.location.href = "file:///C:/Users/Ankita%20Mhatre/Documents/BC-repo/bcwebsite/index.html";
->>>>>>> upload user
 }

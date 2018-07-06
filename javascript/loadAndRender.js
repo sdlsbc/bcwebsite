@@ -8,6 +8,7 @@ var user_id = "";
 var token = "";
 
 function checkLocalStorage(page) {
+	console.log(localStorage.getItem("first_name"))
 	PAGE = page;
 	user_id = localStorage.getItem("user_id");
 	token = localStorage.getItem("token");
@@ -59,10 +60,10 @@ function getPostsItems() {
 		'limit': 12*(fetchCount+1)
 	};
 	if (PAGE == 'newsfeed') {
-		url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read";
+		url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read";
 	}
 	if (PAGE == 'favs') {
-		url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/favorite_read"
+		url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/favorite_read"
 	}
 	fetchCount += 1;
 	let params = {
@@ -107,7 +108,7 @@ function favorite(post_id, liked) {
 	let body = { 
 		'post_id': post_id,
 		'liked': liked
-		}
+	}
 	console.log(token)
 	var bearer = "Bearer " + token;
 	let params = {

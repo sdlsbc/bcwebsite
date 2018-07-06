@@ -31,7 +31,7 @@ function register() {
                 break;
         }
 
-        var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_create';
+        var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_create';
         var data = {
             "handle": handle,
             "email": email,
@@ -75,6 +75,9 @@ function register() {
                         var res_usertype = response.response.user.usertype;
                         var res_lastname = response.response.user.lastname;
                         var res_firstname = response.response.user.firstname;
+                        var res_city = response.response.user.city;
+                        var res_country = response.response.user.country;
+                        var res_phone = response.response.user.phone;
 
                         localStorage.setItem("user_id", res_user_id);
                         localStorage.setItem("usertype_id", res_usertype_id);
@@ -83,6 +86,9 @@ function register() {
                         localStorage.setItem("handle", res_handle);
                         localStorage.setItem("first_name", res_firstname);
                         localStorage.setItem("last_name", res_lastname);
+                        localStorage.setItem("city", res_city);
+                        localStorage.setItem("country", res_country);
+                        localStorage.setItem("phone", res_phone);
 
                         // save usertype data 
                         saveUserTypeData(token);
@@ -155,7 +161,7 @@ function saveUserTypeData(token) {
     }
 
 
-    var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/"+usertype+"_update";
+    var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/"+usertype+"_update";
 
     fetch(url, {
         method: 'POST',
@@ -187,7 +193,7 @@ function signin() {
 
     var error_message = validateSigninInput(email, password);
 
-    var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/login';
+    var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/login';
     var data = {
         "email": email,
         "password": password
@@ -211,6 +217,12 @@ function signin() {
                 var user_id = response.response.user_id;
                 var handle = response.response.user.handle;
                 var res_usertype = response.response.user.usertype;
+                var res_lastname = response.response.user.lastname;
+                var res_firstname = response.response.user.firstname;
+                var res_city = response.response.user.city;
+                var res_country = response.response.user.country;
+                var res_phone = response.response.user.phone;
+
                 console.log(res_usertype);
                 var res_usertype_id = "";
                 if (res_usertype == "company") {
@@ -226,11 +238,16 @@ function signin() {
                     console.log('usertype id in register.js', res_usertype_id);
                 }
 
+                localStorage.setItem("first_name", res_firstname);
+                localStorage.setItem("last_name", res_lastname);
                 localStorage.setItem("token", token);
                 localStorage.setItem("user_id", user_id);
                 localStorage.setItem("handle", handle);
                 localStorage.setItem("usertype", res_usertype);
                 localStorage.setItem("usertype_id", res_usertype_id);
+                localStorage.setItem("city", res_city);
+                localStorage.setItem("country", res_country);
+                localStorage.setItem("phone", res_phone);
                 console.log('usertype_id is: ', res_usertype_id);
                 if (localStorage.getItem("token") == "") {
                     createCustomAlert("WARNING: Not saved locally");

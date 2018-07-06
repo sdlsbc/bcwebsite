@@ -6680,6 +6680,94 @@ ul p:last-child a.down {
   text-decoration: none;
   cursor: pointer; }
 
+/* =========== E M P L O Y E E  E D I T  I P A D  V I E W =========== */
+@media screen and (max-width: 1200px) {
+  .cp-employee-edit {
+    margin-top: 55px;
+    margin-left: 2%;
+    display: inline;
+    width: 50px;
+    height: 50px;
+    position: inherit; }
+    .cp-employee-edit img {
+      width: 26px; }
+
+  .employee-edit-wrapper {
+    width: 80%;
+    height: 75%;
+    margin-left: 11%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    white-space: nowrap; }
+    .employee-edit-wrapper .employee-col1 {
+      padding-top: 10px;
+      width: 100%;
+      height: 100%;
+      padding-bottom: 30px; }
+      .employee-edit-wrapper .employee-col1 .columns {
+        margin-top: 5px;
+        height: 100px; }
+        .employee-edit-wrapper .employee-col1 .columns .basic-info {
+          width: 40%;
+          float: left;
+          margin-bottom: 10px;
+          display: inline-block; }
+          .employee-edit-wrapper .employee-col1 .columns .basic-info input[type=text] {
+            width: 100%;
+            height: 40px;
+            font-size: 14px;
+            padding-left: 15px;
+            margin-left: -35px;
+            border-radius: 20px;
+            border: 1px solid #226BE4; }
+        .employee-edit-wrapper .employee-col1 .columns .role {
+          width: 40%;
+          float: right;
+          margin-right: 50px;
+          margin-bottom: 10px;
+          display: inline-block; }
+          .employee-edit-wrapper .employee-col1 .columns .role input[type=text] {
+            width: 98%;
+            height: 40px;
+            font-size: 14px;
+            padding-left: 15px;
+            margin-left: -35px;
+            border-radius: 20px;
+            border: 1px solid #226BE4; }
+        .employee-edit-wrapper .employee-col1 .columns .up {
+          width: 30%;
+          font-size: 16px;
+          margin-left: 50%;
+          font-weight: 900;
+          color: #226BE4;
+          text-decoration: none; }
+        .employee-edit-wrapper .employee-col1 .columns .down {
+          width: 30%;
+          font-size: 16px;
+          margin-left: 50%;
+          font-weight: 900;
+          color: #226BE4;
+          text-decoration: none; }
+
+  ul p:first-child a.up,
+  ul p:last-child a.down {
+    display: none; }
+
+  /* The Close Button */
+  .create-closey {
+    /*display: none;*/
+    color: #aaaaaa;
+    float: right;
+    margin-right: 2%;
+    font-size: 28px;
+    font-weight: bold; }
+
+  .create-closey:hover,
+  .create-closey:focus {
+    /*display: none;*/
+    color: #000;
+    text-decoration: none;
+    cursor: pointer; } }
 @media screen and (max-width: 700px) {
   /* =============== M O B I L E  M A I N  H E A D E R =============== */
   .main-header {
@@ -8785,14 +8873,14 @@ ul p:last-child a.down {
         .profile_wrapper .company_profiles_wrapper .user_img img {
           border: 4px solid #226BE4;
           border-radius: 50%;
-          width: 150px;
-          height: 150px; }
+          width: 100px;
+          height: 100px; }
     .profile_wrapper .cp-header {
       width: 90%;
-      margin-top: -64px; }
+      margin-top: -124px; }
       .profile_wrapper .cp-header h2 {
         margin-top: -250px;
-        margin-left: 95px;
+        margin-left: 40px;
         text-align: center;
         font-weight: 100;
         font-size: 22px;
@@ -8811,17 +8899,17 @@ ul p:last-child a.down {
         font-size: 12px;
         color: #B2B2B2; }
       .profile_wrapper .cp-header p {
-        width: 41%;
+        width: 80%;
         margin-top: 1%;
-        text-align: center;
-        margin-left: 33%;
+        text-align: justify;
+        margin-left: 15%;
         font-size: 14px; }
     .profile_wrapper h4 {
       margin-top: 5%;
       font-weight: 100;
       margin-left: 5.8%;
       color: #226BE4;
-      margin-bottom: -35px; }
+      margin-bottom: 30px; }
     .profile_wrapper .cp-row1 {
       overflow-x: scroll;
       overflow-y: hidden;
@@ -8844,10 +8932,12 @@ ul p:last-child a.down {
           height: 45%; }
         .profile_wrapper .cp-row1 .cp-current-cast h3 {
           margin-top: 5px;
+          font-size: 12px;
           text-align: center;
           color: #226BE4; }
         .profile_wrapper .cp-row1 .cp-current-cast p {
-          margin-top: -4px; }
+          margin-top: -11px;
+          font-size: 10px; }
     .profile_wrapper .cp-row2 {
       overflow-x: scroll;
       overflow-y: hidden;
@@ -8870,10 +8960,12 @@ ul p:last-child a.down {
           height: 45%; }
         .profile_wrapper .cp-row2 .cp-current-cast h3 {
           margin-top: 5px;
+          font-size: 12px;
           text-align: center;
           color: #226BE4; }
         .profile_wrapper .cp-row2 .cp-current-cast p {
-          margin-top: -4px; }
+          margin-top: -11px;
+          font-size: 10px; }
     .profile_wrapper .client-list-row1 {
       overflow-x: scroll;
       overflow-y: hidden;
@@ -9091,14 +9183,14 @@ ul p:last-child a.down {
     cursor: pointer; }
 
   .cp-employee-edit {
-    margin-top: 55px;
-    margin-left: 2%;
+    margin-top: 15px;
+    margin-left: 3%;
     display: inline;
     width: 50px;
     height: 50px;
     position: inherit; }
     .cp-employee-edit img {
-      width: 26px; }
+      width: 22px; }
 
   .employee-edit-wrapper {
     width: 80%;
@@ -9124,8 +9216,8 @@ ul p:last-child a.down {
             width: 100%;
             height: 40px;
             font-size: 14px;
-            padding-left: 10px;
-            margin-left: -10px;
+            padding-left: 15px;
+            margin-left: -35px;
             border-radius: 20px;
             border: 1px solid #226BE4; }
         .employee-edit-wrapper .employee-col1 .columns .role {
@@ -9138,8 +9230,8 @@ ul p:last-child a.down {
             width: 98%;
             height: 40px;
             font-size: 14px;
-            padding-left: 10px;
-            margin-left: -55px;
+            padding-left: 15px;
+            margin-left: -35px;
             border-radius: 20px;
             border: 1px solid #226BE4; }
         .employee-edit-wrapper .employee-col1 .columns .up {

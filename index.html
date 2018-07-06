@@ -21,7 +21,6 @@
     }
 </script>
 
-
 <body class="body">
 
     <!-- navigation bar -->
@@ -72,6 +71,10 @@
             <hr>
             <div class="signin" id="signin" data-type="signup">
                 <form class="signin-form">
+                    <p class="first_name">
+                        <input type="file" id="imageinput" onchange="testit(event)" />
+                        <canvas width="300" height="300" id="mycanvas" style="display: none;"></canvas>
+                    </p>
                     <p class="signin-usertype">
                         <label class="signin-label">USER TYPE</label>
                         <select id="signup-usertype" class="styled-select blue semi-square">
@@ -356,7 +359,6 @@
 
     </script>
 
-
     <div class="jumbotron">
         <br/>
         <br/>
@@ -367,7 +369,23 @@
         <p class="big">Theater: Anywhere, Anytime, For Anyone</h1>
             <p class="small"> Connecting the World Of Theater, while increasing collaboration and improving efficiency.</p>
     </div>
+    <script>
+        function testit(event) {
+            var myCanvas = document.getElementById('mycanvas');
+            var ctx = myCanvas.getContext('2d');
+            var img = new Image();
+            img.onload = function () {
+                myCanvas.width = img.width;
+                myCanvas.height = img.height;
 
+                ctx.drawImage(img, 0, 0);
+                upload_image_base64 = myCanvas.toDataURL('image/jpeg');
+                console.log('upload_image_base64 ---', upload_image_base64);
+            };
+
+            img.src = URL.createObjectURL(event.target.files[0]);
+        }
+    </script>
     <!-- Resource JavaScript -->
     <script src="./javascript/placeholders.min.js"></script>
     <!-- polyfill for the HTML5 placeholder attribute -->

@@ -1,3 +1,5 @@
+var upload_image_base64 = "";
+
 function register() {
     console.log('in register: step1');
     var email = document.getElementById('signup-email').value;
@@ -31,7 +33,9 @@ function register() {
                 break;
         }
 
+        // var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_create';
         var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_create';
+
         var data = {
             "handle": handle,
             "email": email,
@@ -45,6 +49,7 @@ function register() {
             "company_name": c_name,
             "date_of_birth": dob,
             "production_name": p_name,
+            "contents": upload_image_base64
         };
 
         fetch(url, {
@@ -60,7 +65,6 @@ function register() {
 
                 if (response.status == "success") {
 
-                   
                     console.log('Success:', response);
 
                     if (response.response.message == "Username not unique") {
@@ -71,6 +75,7 @@ function register() {
                         var token = response.response.token;
                         var res_user_id = response.response.user_id;
                         var res_handle = response.response.user.handle;
+                        var res_profileimage = response.response.user.image;
                         var res_usertype_id = response.response.personal._id;
                         var res_usertype = response.response.user.usertype;
                         var res_lastname = response.response.user.lastname;
@@ -83,6 +88,8 @@ function register() {
                         localStorage.setItem("handle", res_handle);
                         localStorage.setItem("first_name", res_firstname);
                         localStorage.setItem("last_name", res_lastname);
+                        localStorage.setItem("profile_image", res_profileimage);
+
 
                         // save usertype data 
                         saveUserTypeData(token);
@@ -125,7 +132,6 @@ function saveUserTypeData(token) {
         var p_opening = document.getElementById('production-opening').value;
         var p_closing = document.getElementById('production-closing').value;
 
-
         console.log('production type ', p_type);
         data = {
             "user_id": user_id,
@@ -154,8 +160,8 @@ function saveUserTypeData(token) {
         };
     }
 
-
-    var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/"+usertype+"_update";
+    // var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/" + usertype + "_update";
+    var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/" + usertype + "_update";
 
     fetch(url, {
         method: 'POST',
@@ -187,7 +193,9 @@ function signin() {
 
     var error_message = validateSigninInput(email, password);
 
+    // var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/login';
     var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/login';
+
     var data = {
         "email": email,
         "password": password
@@ -203,11 +211,12 @@ function signin() {
         .catch(error => console.error('Error:', error))
         .then(response => {
 
-            console.log('Success:', response);
+            console.log('Success: On login', response);
 
             if (response.status == "success") {
                 createCustomAlert("you are logged in");
                 var token = response.response.token;
+                var user_image = response.response.user.image;
                 var user_id = response.response.user_id;
                 var handle = response.response.user.handle;
                 var res_usertype = response.response.user.usertype;
@@ -227,6 +236,7 @@ function signin() {
                 }
 
                 localStorage.setItem("token", token);
+                localStorage.setItem("profile_image", user_image);
                 localStorage.setItem("user_id", user_id);
                 localStorage.setItem("handle", handle);
                 localStorage.setItem("usertype", res_usertype);
@@ -252,7 +262,6 @@ function signout() {
 
 
 
-
 // var ALERT_TITLE = "Oops!";
 var ALERT_BUTTON_TEXT = "x";
 
@@ -261,7 +270,6 @@ if (document.getElementById) {
         createCustomAlert(txt);
     }
 }
-
 
 function createCustomAlert(txt) {
     d = document;

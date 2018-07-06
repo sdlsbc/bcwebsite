@@ -60,10 +60,10 @@ function getPostsItems() {
 		'limit': 12*(fetchCount+1)
 	};
 	if (PAGE == 'newsfeed') {
-		url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read";
+		url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read";
 	}
 	if (PAGE == 'favs') {
-		url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/favorite_read"
+		url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/favorite_read"
 	}
 	fetchCount += 1;
 	let params = {
@@ -104,7 +104,7 @@ function loadProfile() {
 
 function favorite(post_id, liked) {
 	//alert("totes fave" + id)
-	let url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/favorite"
+	let url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/favorite"
 	let body = { 
 		'post_id': post_id,
 		'liked': liked
@@ -125,7 +125,7 @@ function favorite(post_id, liked) {
 }
 
 function likesUpdate(post_id) {
-	let url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read';
+	let url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read';
 
 	fetch(url, {
 		method: 'POST',

@@ -175,6 +175,9 @@
   </div>
 
   <h4>Clients</h4>
+  <div class="cp-client-edit">
+    <a href="#" id="myModalz"><img src="../images/penciliconblue.png" class="edit-button"></a>
+  </div>
   <div class="client-list-row1">
     <div class="cp-clients">
       <img src="../images/placeholder-bc.png">
@@ -339,11 +342,11 @@
               <a class='up' href='#'>&uArr;</a><br>
               <a class='down' href='#'>&dArr;</a>
             </div>
-
           </ul>
         </span>
       </form>
     </div>
+        <button class="save-changes" onclick="#">Save Changes</button>
   </div>
 </div>
 
@@ -373,6 +376,123 @@ $(function() {
   window.onclick = function(event) {
     if (event.target == modaly) {
       modaly.style.display = "none";
+    }
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =============== CLIENT EDIT MODAL ================ -->
+<div id="createModalz" class="create-modal">
+  <div class="create-modal-contentz" id="create-modal-contentz">
+  <span class="create-closez">&times;</span>
+    <h1>Edit Employee Information</h1>
+    <div class="employee-edit-wrapper">
+      <form>
+        <span class="employee-col1">
+          <ul>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Client Handle1">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Client Info1">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Client Handle2">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Client Info2">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Client Handle3">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Client Info3">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Client Handle4">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Client Info4">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Client Handle5">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Clinet Info5">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Client Handle6">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Client Info6">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+          </ul>
+        </span>
+      </form>
+    </div>
+        <button class="save-changes" onclick="#">Save Changes</button>
+  </div>
+</div>
+
+ 
+<!-- $(function() {
+  $('.up').on('click', function(e) {
+    var wrapper = $(this).closest('.columns')
+    wrapper.insertBefore(wrapper.prev())
+  })
+  $('.down').on('click', function(e) {
+    var wrapper = $(this).closest('.columns')
+    wrapper.insertAfter(wrapper.next())
+  })
+}) -->
+<script>
+  var modalz = document.getElementById('createModalz');
+  var btnz = document.getElementById("myModalz");
+  var spanz = document.getElementsByClassName("create-closez")[0];
+  btnz.onclick = function() {
+    modalz.style.display = "block";
+  }
+  spanz.onclick = function() {
+    modalz.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modalz) {
+      modalz.style.display = "none";
     }
   }
 </script>
@@ -545,6 +665,8 @@ $(function() {
     }
   }
 </script>
+
+
 
   <script src="../javascript/register.js"></script>
   <script type="text/javascript" src="../javascript/jsDate.js"></script>

@@ -160,8 +160,8 @@
 
 
 .cp-edit {
-  margin-top: -521px;
-  margin-left: 89%;
+  margin-top: -490px;
+  margin-left: 86%;
   float: right;
   display: inline;
   width: 50px;
@@ -193,29 +193,31 @@
   margin: auto;
   margin-top: 2%;
   border: 1px solid #888;
-  width: 66%;
-  margin-left: 17%;
+  width: 80%;
+  margin-left: 10%;
   height: 66%;
   z-index: 1;
   border-radius: 19px;
   h1 {
-    font-family: $font;
-    color: $main-blue;
-    font-weight: 400;
-    text-align: center;
     padding: 20px;
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-left: 10px;
+    color: $main-blue;
+    font-family: $font;
+    text-align: center;
     padding-bottom: 50px;
-    font-size: 30px;
   }
   .cp-left1 {
-    margin-top: -5px;
-    width: 42%;
+    margin-top: -35px;
+    width: 40%;
     float: left;
-    margin-left: 83px;
+    margin-left: 30px;
     padding-bottom: 30px;
     #edit-name {
       width: 80%;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 400;
       color: $main-blue;
     }
@@ -236,11 +238,11 @@
     float: right;
     margin-left: -23px;
     margin-right: 21px;
-    margin-top: -5px;
+    margin-top: -35px;
     padding-bottom: 30px;
     #edit-type {
       width: 86%;
-      font-size: 13px;
+      font-size: 12px;
       color: $main-blue;
       font-weight: 400;
     }
@@ -261,7 +263,7 @@
     text-align: center;
     #edit-desc {
       width: 80%;
-      font-size: 13px;
+      font-size: 12px;
       margin-left: 9.5%;
       font-weight: 400;
       color: $main-blue;
@@ -281,13 +283,13 @@
     }
   }
   .cp-left2 {
-    width: 42%;
+    width: 40%;
     float: left;
-    margin-left: 86px;
+    margin-left: 30px;
     padding-bottom: 30px;
     #cp-new-password {
       width: 80%;
-      font-size: 13px;
+      font-size: 12px;
       color: $main-blue;
       font-weight: 400;
     }
@@ -304,15 +306,16 @@
     }
   }
   .cp-right2 {
-    width: 42%;
+    width: 40%;
     float: right;
-    margin-right: 21px;
+    margin-right: 6px;
     padding-bottom: 30px;
     #cp-confirm-password {
-      width: 80%;
-      font-size: 13px;
-      color: $main-blue;
+      width: 100%;
+      font-size: 12px;
       font-weight: 400;
+      color: $main-blue;
+      margin-left: -19px;
     }
     input[type=text] {
       margin-left: -21px;
@@ -328,8 +331,9 @@
     }
   }
   .save-changes {
-    margin-top: 10px;
-    margin-left: 41%;
+    margin-top: 6px;
+    padding-top: 20px;
+    margin-left: 27%;
     background-color: #226BE4;
     border: 2px solid #226BE4;
     color: white;
@@ -364,7 +368,7 @@
   /*display: none;*/
   color: #aaaaaa;
   float: right;
-  margin-right: 2%;
+  margin-right: 4%;
   font-size: 28px;
   font-weight: bold;
 }
@@ -394,7 +398,7 @@
 }
 .employee-edit-wrapper {
   width: 80%;
-  height: 75%;
+  height: 60%;
   margin-left: 11%;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -405,17 +409,17 @@
     height: 100%;
     padding-bottom: 30px;
     .columns {
-      margin-top: 5px;
+      margin-top: -15px;
       height: 100px;
       .basic-info {
-        width: 40%;
+        width: 37%;
         float: left;
         margin-bottom: 10px;
         display: inline-block;
         input[type=text] {
           width: 100%;
-          height: 40px;
-          font-size: 14px;
+          height: 27px;
+          font-size: 8px;
           padding-left: 15px;
           margin-left: -35px;
           border-radius: 20px;
@@ -423,17 +427,17 @@
         }
       }
       .role {
-        width: 40%;
+        width: 38%;
         float: right;
         margin-right: 50px;
         margin-bottom: 10px;
         display: inline-block;
         input[type=text]{
           width: 98%;
-          height: 40px;
-          font-size: 14px;
+          height: 27px;
+          font-size: 8px;
           padding-left: 15px;
-          margin-left: -35px;
+          margin-left: -10px;
           border-radius: 20px;
           border: 1px solid $main-blue;
         }
@@ -457,6 +461,37 @@
     }
   }
 }
+.save-changes {
+    margin-top: -4px;
+    margin-left: 27%;
+    background-color: #226BE4;
+    border: 2px solid #226BE4;
+    color: white;
+    padding: 3px 12px;
+    width: 146px;
+    height: 40px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 25px;
+    margin-right: 10%;
+    font-size: 14px;
+    &:hover {
+      margin-top: 10px;
+      width: 145px;
+      height: 40px;
+      font-weight: 400;
+      background-color: white;
+      border: 2px solid #226BE4;
+      border-radius: 25px;
+      margin-right: 10%; 
+      color: #226BE4;
+      font-size: 14px;
+    }
+  }
 
 ul p:first-child a.up,
 ul p:last-child a.down {

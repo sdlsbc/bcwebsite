@@ -327,8 +327,8 @@
     }
   }
   .save-changes {
-    margin-top: 10px;
-    margin-left: 41%;
+    margin-top: 25px;
+    margin-left: 39%;
     background-color: #226BE4;
     border: 2px solid #226BE4;
     color: white;
@@ -345,7 +345,9 @@
     margin-right: 10%;
     font-size: 14px;
     &:hover {
-      margin-top: 10px;
+      margin-top: 25px;
+      padding: 3px 12px;
+      margin-left: 39%;
       width: 145px;
       height: 40px;
       font-weight: 400;
@@ -391,7 +393,7 @@
 }
 .employee-edit-wrapper {
   width: 80%;
-  height: 75%;
+  height: 65%;
   margin-left: 11%;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -454,6 +456,42 @@
     }
   }
 }
+.save-changes {
+  margin-top: 25px;
+  margin-left: 42%;
+  padding-top: 40px;
+  background-color: #226BE4;
+  border: 2px solid #226BE4;
+  color: white;
+  padding: 3px 12px;
+  width: 146px;
+  height: 40px;
+  font-weight: 400;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 25px;
+  margin-right: 10%;
+  font-size: 14px;
+  &:hover {
+    margin-left: 42%;
+    padding-top: 40px;
+    padding: 3px 12px;
+    margin-top: 25px;
+    width: 145px;
+    height: 40px;
+    font-weight: 400;
+    background-color: white;
+    border: 2px solid #226BE4;
+    border-radius: 25px;
+    margin-right: 10%; 
+    color: #226BE4;
+    font-size: 14px;
+  }
+}
+
 
 ul p:first-child a.up,
 ul p:last-child a.down {
@@ -520,8 +558,380 @@ ul p:last-child a.down {
 
 /* =========== E M P L O Y E E  E D I T  I P A D  V I E W =========== */
 @media screen and (max-width: 1200px) {
+ .profile_wrapper {
+    background-color: $light-blue;
+    margin-top: 600px;
+    padding-bottom: 63%;
+    height: 200%;
+    width: 100%;
+    .company_profiles_wrapper {
+      margin-top: -490px;
+      width: 30%;
+      margin-left: 34%;
+      .user_img {   
+        text-align: center;
+        img {
+          border: 4px solid $main-blue;
+          border-radius: 50%;
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+    .cp-header {
+      width: 90%;
+      margin-top: -64px;
+      h2 {
+        margin-top: -250px;
+        margin-left: 95px;
+        text-align: center;
+        font-weight: 100;
+        font-size: 22px;
+        color: $main-blue;
+      }
+      h3 {
+        margin-top: 0.2%;
+        text-align: center;
+        margin-left: 9%;
+        font-weight: 100;
+        font-size: 18px;
+        color: black;
+      }
+      h5 {
+        margin-top: -0.9%;
+        text-align: center;
+        margin-left: 9%;
+        font-size: 12px;
+        color: $gray;
+      }
+      p {
+        width: 60%;
+        margin-top: 1%;
+        text-align: justify;
+        margin-left: 26%;
+        font-size: 14px;
+      }
+    }
+    h4 {
+      margin-top: 5%;
+      font-weight: 100;
+      margin-left: 5.8%;
+      color: $main-blue;
+      margin-bottom: 30px;
+    }
+    .cp-row1 {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      width: 90%;
+      height: 20%;
+      margin-left: 4%;
+      .cp-current-cast {
+        width: 18%;
+        margin-top: 4%;
+        margin-left: 2%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        display: inline-block;
+        text-align: center;
+        border: 1px solid $light-gray;
+        img {
+          width: 100%;
+          height: 45%;
+        }
+        h3 {
+          margin-top: 5px;
+          text-align: center;
+          color: $main-blue;
+        }
+        p {
+          margin-top: -12px;
+        }
+      }
+    }
+    .cp-row2 {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      width: 90%;
+      height: 20%;
+      margin-left: 4%;
+      .cp-current-cast {
+        width: 18%;
+        margin-top: 4%;
+        margin-left: 2%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        display: inline-block;
+        text-align: center;
+        border: 1px solid $light-gray;
+        img {
+          width: 100%;
+          height: 45%;
+        }
+        h3 {
+          margin-top: 5px;
+          text-align: center;
+          color: $main-blue;
+        }
+        p {
+          margin-top: -4px;
+        }
+      }
+    }
+    .client-list-row1 {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      width: 90%;
+      height: 20%;
+      margin-left: 4%;
+      .cp-clients {
+        width: 15%;
+        margin-top: 4%;
+        margin-left: 2%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        display: inline-block;
+        text-align: center;
+        border: 1px solid $light-gray;
+        img {
+          width: 100%;
+          height: 45%;
+        }
+      }
+    }
+  }
+
+  .cp-edit {
+    margin-top: -521px;
+    margin-left: 89%;
+    float: right;
+    display: inline;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    img {
+      width: 26px;
+    }
+  }
+
+
+
+  #createModalx {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  .create-modal-contentx {
+    position: absolute;
+    background-color: $light-blue;
+    margin: auto;
+    margin-top: 2%;
+    border: 1px solid #888;
+    width: 80%;
+    margin-left: 10%;
+    height: 66%;
+    z-index: 1;
+    border-radius: 19px;
+    h1 {
+      font-family: $font;
+      color: $main-blue;
+      font-weight: 400;
+      text-align: center;
+      padding: 20px;
+      margin-left: 15px;
+      margin-top: 35px;
+      padding-bottom: 50px;
+      font-size: 30px;
+    }
+    .cp-left1 {
+      margin-top: -5px;
+      width: 42%;
+      float: left;
+      margin-left: 45px;
+      padding-bottom: 30px;
+      #edit-name {
+        width: 80%;
+        font-size: 13px;
+        font-weight: 400;
+        color: $main-blue;
+      }
+      input[type=text] {
+        width: 80%;
+        height: 40px;
+        margin-top: 6px;
+        font-size: 12px;
+        font-weight: 400;
+        color: $main-blue;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid $main-blue;
+      }
+    }
+    .cp-right1 {
+      width: 42%;
+      float: right;
+      margin-left: -23px;
+      margin-right: 26px;
+      margin-top: -5px;
+      padding-bottom: 30px;
+      #edit-type {
+        width: 86%;
+        font-size: 13px;
+        color: $main-blue;
+        font-weight: 400;
+      }
+      input[type=text] {
+        width: 80%;
+        height: 40px;
+        margin-top: 6px;
+        font-size: 12px;
+        font-weight: 400;
+        color: $main-blue;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid $main-blue;
+      }
+    }
+    .cp-center {
+      width: 100%;
+      text-align: center;
+      #edit-desc {
+        width: 80%;
+        font-size: 13px;
+        margin-left: 9.5%;
+        font-weight: 400;
+        color: $main-blue;
+      }
+      input[type=text] {
+        width: 77%;
+        height: 120px;
+        margin-top: 6px;
+        font-size: 12px;
+        font-weight: 400;
+        color: $main-blue;
+        margin-left: 9.5%;
+        padding-left: 15px;
+        border-radius: 22px;
+        margin-bottom: 30px;
+        border: 2px solid $main-blue;
+      }
+    }
+    .cp-left2 {
+      width: 40%;
+      float: left;
+      margin-left: 47px;
+      padding-bottom: 30px;
+      #cp-new-password {
+        width: 80%;
+        font-size: 13px;
+        color: $main-blue;
+        font-weight: 400;
+      }
+      input[type=text] {
+        width: 80%;
+        height: 40px;
+        margin-top: 6px;
+        font-size: 12px;
+        font-weight: 400;
+        color: $main-blue;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid $main-blue;
+      }
+    }
+    .cp-right2 {
+      width: 40%;
+      float: right;
+      margin-right: 14px;
+      padding-bottom: 30px;
+      #cp-confirm-password {
+        width: 80%;
+        font-size: 13px;
+        color: $main-blue;
+        font-weight: 400;
+      }
+      input[type=text] {
+        margin-left: -21px;
+        width: 86%;
+        height: 40px;
+        margin-top: 6px;
+        font-size: 12px;
+        font-weight: 400;
+        color: $main-blue;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid $main-blue;
+      }
+    }
+    .save-changes {
+      margin-top: 43px;
+      padding-top: 75px;
+      margin-left: 35%;
+      background-color: #226BE4;
+      border: 2px solid #226BE4;
+      color: white;
+      padding: 3px 12px;
+      width: 148px;
+      height: 48px;
+      font-weight: 400;
+      text-align: center;
+      font-size: 12px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      border-radius: 25px;
+      margin-right: 10%;
+      font-size: 14px;
+      &:hover {
+        margin-top: 43px;
+        margin-left: 35%;
+        width: 148px;
+        height: 48px;
+        font-weight: 400;
+        background-color: white;
+        border: 2px solid #226BE4;
+        border-radius: 25px;
+        margin-right: 10%; 
+        color: #226BE4;
+        font-size: 14px;
+      }
+    }
+  }
+  /* The Close Button */
+  .create-closex {
+    /*display: none;*/
+    color: #aaaaaa;
+    float: right;
+    margin-right: 4%;
+    margin-top: 5px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .create-closex:hover,
+  .create-closex:focus {
+    /*display: none;*/
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+
   .cp-employee-edit {
-    margin-top: 55px;
+    margin-top: 32px;
     margin-left: 2%;
     display: inline;
     width: 50px;
@@ -533,7 +943,7 @@ ul p:last-child a.down {
   }
   .employee-edit-wrapper {
     width: 80%;
-    height: 75%;
+    height: 65%;
     margin-left: 11%;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -596,6 +1006,38 @@ ul p:last-child a.down {
       }
     }
   }
+  .save-changes {
+    margin-top: 10px;
+    margin-left: 36%;
+    padding-top: 20px;
+    background-color: #226BE4;
+    border: 2px solid #226BE4;
+    color: white;
+    padding: 3px 12px;
+    width: 146px;
+    height: 40px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 25px;
+    margin-right: 10%;
+    font-size: 14px;
+    &:hover {
+      margin-top: 10px;
+      width: 145px;
+      height: 40px;
+      font-weight: 400;
+      background-color: white;
+      border: 2px solid #226BE4;
+      border-radius: 25px;
+      margin-right: 10%; 
+      color: #226BE4;
+      font-size: 14px;
+    }
+  }
   
   ul p:first-child a.up,
   ul p:last-child a.down {
@@ -623,3 +1065,85 @@ ul p:last-child a.down {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cp-client-edit {
+  margin-top: 55px;
+  margin-left: 2%;
+  display: inline;
+  width: 50px;
+  height: 50px;
+  position: inherit;
+  img {
+    width: 26px;
+  }
+}
+
+#createModalz {
+  display: none; 
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+.create-modal-contentz {
+  position: absolute;
+  background-color: $light-blue;
+  margin: auto;
+  margin-top: 2%;
+  border: 1px solid #888;
+  width: 80%;
+  margin-left: 10%;
+  height: 66%;
+  z-index: 1;
+  border-radius: 19px;
+  h1 {
+    font-family: $font;
+    color: $main-blue;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+    margin-left: 15px;
+    margin-top: 5px;
+    padding-bottom: 50px;
+    font-size: 30px;
+  }
+}
+
+/* The Close Button */
+.create-closez {
+  /*display: none;*/
+  color: #aaaaaa;
+  float: right;
+  margin-right: 2%;
+  font-size: 28px;
+  font-weight: bold;
+}
+.create-closez:hover,
+.create-closez:focus {
+  /*display: none;*/
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

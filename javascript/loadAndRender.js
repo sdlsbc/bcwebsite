@@ -45,7 +45,6 @@ function loadAndShowPosts() {
 				createPost(element);
 			});
 		}).then(res => {
-			console.log(favs)
 			if (fetchCount > 1) {
 				window.scrollBy({ top: 40, behavior: "smooth" });
 			}
@@ -54,18 +53,24 @@ function loadAndShowPosts() {
 }
 
 function getPostsItems() {
+
 	let url = "";
 	let body = {
-		'offset': 12*fetchCount,
-		'limit': 12*(fetchCount+1)
+		'offset': (fetchCount == 0 ? 1 : (12*fetchCount)+1),
+		'limit': 12
 	};
+	
 	if (PAGE == 'newsfeed') {
 		url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read";
 	}
 	if (PAGE == 'favs') {
 		url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/favorite_read"
 	}
+	console.log("fetch ", fetchCount)
+	console.log("offset and limit")
+	console.log(body)
 	fetchCount += 1;
+
 	let params = {
 		headers: {
 			'content-type': 'application/json',
@@ -78,6 +83,7 @@ function getPostsItems() {
 		.then(res => res.json())
 		.then(body => {
 			wait = false;
+			console.log(body.response.post)
 			return body.response.post;
 		})
 }

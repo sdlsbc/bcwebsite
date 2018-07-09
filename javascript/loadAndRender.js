@@ -60,10 +60,10 @@ function getPostsItems() {
 		'limit': 12*(fetchCount+1)
 	};
 	if (PAGE == 'newsfeed') {
-		url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read";
+		url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read";
 	}
 	if (PAGE == 'favs') {
-		url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/favorite_read"
+		url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/favorite_read"
 	}
 	fetchCount += 1;
 	let params = {
@@ -104,7 +104,7 @@ function loadProfile() {
 
 function favorite(post_id, liked) {
 	//alert("totes fave" + id)
-	let url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/favorite"
+	let url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/favorite"
 	let body = { 
 		'post_id': post_id,
 		'liked': liked
@@ -125,7 +125,7 @@ function favorite(post_id, liked) {
 }
 
 function likesUpdate(post_id) {
-	let url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read';
+	let url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read';
 
 	fetch(url, {
 		method: 'POST',
@@ -156,17 +156,29 @@ function showModal(body) {
 	console.log(favs)
 
 	// start building the modal
+	var image_address = "";
+	if(body.image.substr(0,4) == "data"){
+		image_address = body.image;
+	} else {
+		image_address = "https:"+ body.image;
+	}
 
-	var img_address = "https://"+ body.image.substr(2);
 	var post_image = document.getElementsByClassName('modal-image');
-	post_image[0].innerHTML = '<img src=' + img_address + '>';
+	post_image[0].innerHTML = '<img src=' + image_address + '>';
 
-	var profile_image_address = body.publisher_image;
-
+	var profile_image_address = "body.publisher_image";
+	if(body.publisher_image){
+		if(body.publisher_image.substr(0,4) == "data"){
+			image_address = body.publisher_image;
+		} else {
+			image_address = "https:"+ body.publisher_image;
+		}
+	}
+	profile_image_address = image_address;
 	// check if profile picture is default
 
 	var profile_image = document.getElementsByClassName("modal-header");
-	profile_image[0].innerHTML = '<img src=https:' + profile_image_address + '>';
+	profile_image[0].innerHTML = '<img src=' + profile_image_address + '>';
 
 	var publisher_name = document.getElementsByClassName("modal_h3");
 
@@ -288,13 +300,21 @@ function createPost(body) {
 	publisher_div.classList.add('publisher');
 	publisher_div.classList.add('pointer');
 
+	var image_address = "";
+
 	let publisher_image = document.createElement('img');
 	if (body.publisher_image){
-		publisher_image.src = "https:" + body.publisher_image
+		if(body.publisher_image.substr(0,4) == "data"){
+			image_address = body.publisher_image;
+		} else {
+			image_address = "https:"+ body.publisher_image;
+		}
+		publisher_image.src = image_address;
 	}
 	
 	publisher_image.classList.add('publisher_image');
 	publisher_div.appendChild(publisher_image);
+	image_address = "";
 
 	// adding modal .click event
 	publisher_div.onclick = (function () {
@@ -328,10 +348,18 @@ function createPost(body) {
 
 	if(body.image){
 		let main_image = document.createElement('img');
-		main_image.src = "https://"+ body.image.substr(2);
+
+		if(body.image.substr(0,4) == "data"){
+			image_address = body.image;
+		} else {
+			image_address = "https:"+ body.image;
+		}
+		main_image.src = image_address;
 		main_image.classList.add('main_image');
 		center1.appendChild(main_image);
 	}
+
+	image_address = "";
 	div.appendChild(center1);
 
 	let button_div = document.createElement('div');

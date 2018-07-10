@@ -1199,7 +1199,7 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
   padding-bottom: 30px;
   padding-top: 7px;
   /* margin-top: -26px;*/
-  margin-top: 15px;
+  margin-top: -20px;
   height: auto; }
   .sidenav .sidenav-links a {
     background-color: #18253B; }
@@ -2354,27 +2354,11 @@ code {
     text-align: center;
     margin-bottom: 10px;
     margin-top: 25px; }
-  .contact .contact-mail {
-    text-align: center; }
-    .contact .contact-mail #c-email {
-      margin-left: 48%;
-      color: #226BE4;
-      font-size: 16px;
-      font-weight: 400; }
-    .contact .contact-mail input[type=text] {
-      margin-left: 39%;
-      width: 20%;
-      height: 30px;
-      padding-left: 15px;
-      border-radius: 20px;
-      border: 2px solid #226BE4; }
+  .contact .checkbox {
+    margin-left: 46%;
+    text-align: justify; }
   .contact .contact-body {
     text-align: center; }
-    .contact .contact-body #c-body {
-      margin-left: 48%;
-      color: #226BE4;
-      font-size: 16px;
-      font-weight: 400; }
     .contact .contact-body input[type=text] {
       margin-left: 25%;
       padding-top: -20px;
@@ -3251,7 +3235,7 @@ $other-blue-light: #;*/
   background: white;
   margin-left: -8px;
   padding-left: 4px;
-  top: 0;
+  top: -1;
   width: 100%;
   z-index: 3;
   display: flex;
@@ -3296,7 +3280,7 @@ $other-blue-light: #;*/
     font-family: "Roboto", sans-serif;
     width: 24%;
     margin-left: 5px;
-    margin-top: -2px; }
+    margin-top: -31px; }
     .navbar a p {
       font-family: "Roboto", sans-serif;
       font-size: 14px;
@@ -8188,6 +8172,119 @@ ul p:last-child a.down {
     margin-left: 33%;
     text-decoration: none;
     font-size: 18px; }
+
+  .contact {
+    border-top: 2px solid #E9E9E9;
+    padding-bottom: 50px;
+    padding-top: 4%; }
+    .contact h2 {
+      margin-left: 5%;
+      width: 90%;
+      font-size: 28px;
+      color: #226BE4;
+      font-weight: 300;
+      text-align: center; }
+    .contact p {
+      width: 80%;
+      margin-left: 9.7%;
+      color: black;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 10px;
+      margin-top: 25px; }
+    .contact .checkbox {
+      margin-left: 20%;
+      text-align: justify; }
+    .contact .contact-body {
+      text-align: center; }
+      .contact .contact-body input[type=text] {
+        margin-left: 8%;
+        padding-top: -20px;
+        width: 80%;
+        height: 175px;
+        padding-left: 15px;
+        border-radius: 20px;
+        border: 2px solid #226BE4; }
+    .contact .contact-submit {
+      margin-top: 6%;
+      margin-left: 38%;
+      background-color: #226BE4;
+      border: 2px solid #226BE4;
+      color: white;
+      padding: 3px 12px;
+      width: 106px;
+      height: 36px;
+      text-align: center;
+      font-size: 12px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      /* Safari */
+      transition-duration: 0.4s;
+      border-radius: 25px;
+      margin-right: 10%;
+      font-size: 14px; }
+      .contact .contact-submit a {
+        color: white;
+        text-decoration: none; }
+      .contact .contact-submit:hover {
+        margin-top: 2%;
+        margin-left: 46%;
+        width: 105px;
+        height: 36px;
+        background-color: white;
+        border: 2px solid #226BE4;
+        border-radius: 25px;
+        margin-right: 10%;
+        color: #226BE4;
+        font-size: 14px; }
+        .contact .contact-submit:hover a {
+          color: #226BE4;
+          text-decoration: none; }
+
+  .navbar {
+    position: fixed;
+    background: white;
+    margin-left: -8px;
+    padding-left: 4px;
+    top: -1;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-right: 4px;
+    padding-bottom: 5px; }
+    .navbar a {
+      font-family: "Roboto", sans-serif;
+      text-decoration: none; }
+      .navbar a p {
+        color: #B2B2B2; }
+        .navbar a p:hover {
+          font-family: "Roboto", sans-serif;
+          text-decoration: none;
+          color: #E9E9E9;
+          font-size: 16px;
+          font-weight: 100;
+          margin-left: 25px;
+          margin-top: 19px; }
+      .navbar a .discover-p-tag {
+        margin-top: 39px; }
+        .navbar a .discover-p-tag:hover {
+          margin-top: 39px; }
+      .navbar a .explore-p-tag {
+        margin-top: 39px; }
+        .navbar a .explore-p-tag:hover {
+          margin-top: 39px; }
+    .navbar p {
+      font-family: "Roboto", sans-serif;
+      color: #B2B2B2;
+      font-size: 16px;
+      font-weight: 100;
+      margin-left: 25px;
+      margin-top: 19px; }
+      .navbar p:hover {
+        color: #E9E9E9; }
 
   .profile-signout-button {
     background-color: #1B5AC3;

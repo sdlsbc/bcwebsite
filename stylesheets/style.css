@@ -9132,121 +9132,238 @@ ul p:last-child a.down {
       .create-modal-content #create-milestones h3 {
         margin-top: 2%;
         color: white;
-        font-size: 20px;
+        font-size: 24px;
         font-weight: 400;
         margin-left: 6%; }
-      .create-modal-content #create-milestones input[type=text] {
+      .create-modal-content #create-milestones .milestone-left {
+        width: 50%;
         float: left;
-        width: 90%;
-        margin-left: 5%;
-        margin-top: 10%;
-        height: 200px;
-        font-size: 16px;
-        border-radius: 1%/5%;
-        box-sizing: border-box;
-        padding: 22px 12px 175px;
-        border: 2px solid #226BE4; }
-      .create-modal-content #create-milestones .milestones-extra-buttons {
-        position: relative;
-        margin-left: 53px;
-        width: 88%;
-        padding-top: 220px;
-        border-bottom: 1px solid #E9E9E9; }
-        .create-modal-content #create-milestones .milestones-extra-buttons .attach-photo {
-          margin-left: -10%;
-          width: 29%;
-          margin-top: -13.5%;
-          float: left;
-          color: #B2B2B2;
-          font-size: 13px;
-          display: inline-block;
-          border-radius: 19%/72%;
-          background-color: #E9E9E9; }
-        .create-modal-content #create-milestones .milestones-extra-buttons .privacy-btn {
-          float: left;
-          margin-left: 20%;
-          width: 31%;
-          margin-top: -13.5%;
-          color: #B2B2B2;
-          font-size: 13px;
-          display: inline-block;
-          border-radius: 19%/72%;
-          background-color: #E9E9E9; }
-      .create-modal-content #create-milestones button {
+        margin-top: -2px;
+        margin-left: 15px;
+        display: inline-block; }
+        .create-modal-content #create-milestones .milestone-left .milestone-label {
+          font-size: 16px;
+          font-weight: 400;
+          margin-left: 9px;
+          font-family: "Roboto", sans-serif;
+          color: #226BE4; }
+        .create-modal-content #create-milestones .milestone-left #milestone-type {
+          width: 100%;
+          color: white;
+          height: 35px;
+          margin-top: 6px;
+          font-size: 12px;
+          font-weight: 400;
+          padding-left: 10px;
+          border-radius: 50px;
+          background-color: #226BE4;
+          border: 1px solid #226BE4; }
+      .create-modal-content #create-milestones .milestone-right {
+        width: 40%;
         float: right;
-        width: 18%;
-        margin-top: -40px;
-        margin-right: 27px;
+        margin-top: -22px;
+        display: inline-block; }
+        .create-modal-content #create-milestones .milestone-right img {
+          width: 70%;
+          height: 75px;
+          margin-left: 20px;
+          border: 2px solid #226BE4; }
+      .create-modal-content #create-milestones .milestone-left2 {
+        width: 46%;
+        float: left;
+        margin-top: 25px;
+        margin-left: 2px;
+        display: inline-block; }
+        .create-modal-content #create-milestones .milestone-left2 .milestone-label {
+          font-size: 16px;
+          font-weight: 400;
+          margin-left: 16px;
+          font-family: "Roboto", sans-serif;
+          color: #226BE4; }
+        .create-modal-content #create-milestones .milestone-left2 input[type=text] {
+          width: 95%;
+          height: 35px;
+          font-size: 12px;
+          margin-top: 5px;
+          font-weight: 400;
+          border-radius: 25px;
+          padding-left: 15px;
+          border: 1px solid #226BE4; }
+      .create-modal-content #create-milestones .milestone-right2 {
+        width: 43%;
+        float: right;
+        margin-top: 20px;
+        margin-right: 14px;
+        display: inline-block; }
+        .create-modal-content #create-milestones .milestone-right2 .milestone-label {
+          font-size: 16px;
+          font-weight: 400;
+          margin-left: 16px;
+          font-family: "Roboto", sans-serif;
+          color: #226BE4; }
+        .create-modal-content #create-milestones .milestone-right2 input[type=text] {
+          width: 95%;
+          height: 35px;
+          font-size: 12px;
+          margin-top: 5px;
+          font-weight: 400;
+          border-radius: 25px;
+          padding-left: 15px;
+          border: 1px solid #226BE4; }
+      .create-modal-content #create-milestones .milestone-center {
+        width: 89%;
+        margin-top: 8px;
+        margin-left: 2%;
+        display: inline-block; }
+        .create-modal-content #create-milestones .milestone-center .milestone-label {
+          font-size: 16px;
+          font-weight: 400;
+          margin-left: 15px;
+          font-family: "Roboto", sans-serif;
+          color: #226BE4; }
+        .create-modal-content #create-milestones .milestone-center input[type=text] {
+          width: 100%;
+          height: 80px;
+          font-size: 16px;
+          margin-top: 5px;
+          font-weight: 400;
+          border-radius: 25px;
+          padding-left: 15px;
+          border: 1px solid #226BE4; }
+      .create-modal-content #create-milestones button {
+        float: none;
+        width: 30%;
+        margin-top: 2px;
+        margin-right: 0px;
+        margin-left: 36%;
+        border-radius: 25px;
         background-color: #226BE4;
         color: white;
         padding: 5px 12px;
-        height: 31px;
+        height: 35px;
         text-align: center;
         cursor: pointer;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
-        font-size: 14px;
+        font-size: 18px;
         font-family: "Roboto", sans-serif; }
     .create-modal-content #create-moments {
       background-color: #abc1f4; }
       .create-modal-content #create-moments h3 {
-        font-weight: 400;
+        margin-top: 2%;
         color: white;
-        font-size: 20px;
-        margin-left: 5%;
-        margin-top: 3%; }
-      .create-modal-content #create-moments input[type=text] {
+        font-size: 24px;
+        font-weight: 400;
+        margin-left: 6%; }
+      .create-modal-content #create-moments .moments-left {
+        width: 50%;
         float: left;
-        width: 90%;
-        margin-left: 5%;
-        margin-top: 10%;
-        height: 200px;
-        font-size: 14px;
-        border-radius: 1%/5%;
-        box-sizing: border-box;
-        padding: 22px 12px 175px;
-        border: 2px solid #226BE4; }
-      .create-modal-content #create-moments .moments-extra-buttons {
-        position: relative;
-        margin-left: 48px;
-        width: 90%;
-        border-bottom: 1px solid #E9E9E9;
-        padding-top: 151px;
-        z-index: 4; }
-        .create-modal-content #create-moments .moments-extra-buttons .attach-photo {
-          margin-left: -10%;
-          width: 29%;
-          margin-top: -13.5%;
-          float: left;
-          color: #B2B2B2;
-          font-size: 13px;
-          display: inline-block;
-          border-radius: 19%/72%;
-          background-color: #E9E9E9; }
-        .create-modal-content #create-moments .moments-extra-buttons .privacy-btn {
-          float: left;
-          margin-left: 20%;
-          width: 31%;
-          margin-top: -13.5%;
-          color: #B2B2B2;
-          font-size: 13px;
-          display: inline-block;
-          border-radius: 19%/72%;
-          background-color: #E9E9E9; }
-      .create-modal-content #create-moments button {
+        margin-top: -2px;
+        margin-left: 2px;
+        display: inline-block; }
+        .create-modal-content #create-moments .moments-left .moments-label {
+          font-size: 16px;
+          font-weight: 400;
+          margin-left: 9px;
+          font-family: "Roboto", sans-serif;
+          color: #226BE4; }
+        .create-modal-content #create-moments .moments-left #moments-type {
+          width: 100%;
+          color: white;
+          height: 35px;
+          margin-top: 6px;
+          font-size: 12px;
+          font-weight: 400;
+          padding-left: 10px;
+          border-radius: 50px;
+          background-color: #226BE4;
+          border: 1px solid #226BE4; }
+      .create-modal-content #create-moments .moments-right {
+        width: 31%;
         float: right;
-        width: 18%;
-        margin-top: -40px;
-        margin-right: 27px;
+        padding-bottom: 36px;
+        margin-top: 26px;
+        display: inline-block; }
+        .create-modal-content #create-moments .moments-right input[type=file] {
+          font-size: 11px; }
+      .create-modal-content #create-moments .moments-left2 {
+        width: 46%;
+        float: left;
+        margin-top: 25px;
+        margin-left: 2px;
+        display: inline-block; }
+        .create-modal-content #create-moments .moments-left2 .moments-label {
+          font-size: 16px;
+          font-weight: 400;
+          margin-left: 16px;
+          font-family: "Roboto", sans-serif;
+          color: #226BE4; }
+        .create-modal-content #create-moments .moments-left2 input[type=text] {
+          width: 95%;
+          height: 35px;
+          font-size: 12px;
+          margin-top: 5px;
+          font-weight: 400;
+          border-radius: 25px;
+          padding-left: 15px;
+          border: 1px solid #226BE4; }
+      .create-modal-content #create-moments .moments-right2 {
+        width: 43%;
+        float: right;
+        margin-top: 1px;
+        margin-right: 14px;
+        display: inline-block; }
+        .create-modal-content #create-moments .moments-right2 .moments-label {
+          font-size: 16px;
+          font-weight: 400;
+          margin-left: 16px;
+          font-family: "Roboto", sans-serif;
+          color: #226BE4; }
+        .create-modal-content #create-moments .moments-right2 input[type=text] {
+          width: 95%;
+          height: 35px;
+          font-size: 12px;
+          margin-top: 5px;
+          font-weight: 400;
+          border-radius: 25px;
+          padding-left: 15px;
+          border: 1px solid #226BE4; }
+      .create-modal-content #create-moments .moments-center {
+        width: 89%;
+        margin-top: 8px;
+        margin-left: 2%;
+        display: inline-block; }
+        .create-modal-content #create-moments .moments-center .moments-label {
+          font-size: 16px;
+          font-weight: 400;
+          margin-left: 15px;
+          font-family: "Roboto", sans-serif;
+          color: #226BE4; }
+        .create-modal-content #create-moments .moments-center input[type=text] {
+          width: 100%;
+          height: 80px;
+          font-size: 16px;
+          margin-top: 5px;
+          font-weight: 400;
+          border-radius: 25px;
+          padding-left: 15px;
+          border: 1px solid #226BE4; }
+      .create-modal-content #create-moments button {
+        float: none;
+        width: 30%;
+        margin-top: 2px;
+        margin-right: 0px;
+        margin-left: 36%;
+        border-radius: 25px;
         background-color: #226BE4;
         color: white;
         padding: 5px 12px;
-        height: 31px;
+        height: 35px;
         text-align: center;
         cursor: pointer;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
-        font-size: 14px;
+        font-size: 18px;
         font-family: "Roboto", sans-serif; }
     .create-modal-content #create-articles {
       width: 95%;
@@ -9274,9 +9391,9 @@ ul p:last-child a.down {
           float: left;
           margin-top: 3%;
           margin-bottom: 2%;
-          border-radius: 3%/40%;
+          border-radius: 25px;
           padding: 10px 12px 10px;
-          border: 2px solid #226BE4; }
+          border: 1px solid #226BE4; }
       .create-modal-content #create-articles .right {
         width: 46%;
         float: right;
@@ -9294,9 +9411,9 @@ ul p:last-child a.down {
           float: right;
           margin-top: 3%;
           margin-bottom: 2%;
-          border-radius: 3%/40%;
+          border-radius: 25px;
           padding: 10px 12px 10px;
-          border: 2px solid #226BE4; }
+          border: 1px solid #226BE4; }
       .create-modal-content #create-articles .center {
         margin-top: 3%;
         width: 100%;
@@ -9314,10 +9431,10 @@ ul p:last-child a.down {
           margin-top: 6px;
           height: 75px;
           font-size: 14px;
-          border-radius: 3%/40%;
+          border-radius: 25px;
           box-sizing: border-box;
           padding: 22px 12px 50px;
-          border: 2px solid #226BE4; }
+          border: 1px solid #226BE4; }
         .create-modal-content #create-articles .center #a-tag {
           margin-top: 15px;
           float: left;
@@ -9329,9 +9446,9 @@ ul p:last-child a.down {
           width: 85%;
           height: 10px;
           margin-top: 7px;
-          border-radius: 1%/40%;
+          border-radius: 25px;
           padding: 10px 12px 10px;
-          border: 2px solid #226BE4; }
+          border: 1px solid #226BE4; }
       .create-modal-content #create-articles .articles-extra-buttons {
         margin-left: 48px;
         width: 90%;
@@ -9397,9 +9514,9 @@ ul p:last-child a.down {
           float: left;
           margin-top: 3%;
           margin-bottom: 2%;
-          border-radius: 3%/40%;
+          border-radius: 25px;
           padding: 10px 12px 10px;
-          border: 2px solid #226BE4; }
+          border: 1px solid #226BE4; }
       .create-modal-content #create-events .right {
         width: 46%;
         float: right;
@@ -9417,9 +9534,9 @@ ul p:last-child a.down {
           float: right;
           margin-top: 3%;
           margin-bottom: 2%;
-          border-radius: 3%/40%;
+          border-radius: 25px;
           padding: 10px 12px 10px;
-          border: 2px solid #226BE4; }
+          border: 1px solid #226BE4; }
       .create-modal-content #create-events .center {
         margin-top: 3%;
         width: 100%;
@@ -9437,10 +9554,10 @@ ul p:last-child a.down {
           margin-top: 6px;
           height: 75px;
           font-size: 14px;
-          border-radius: 3%/40%;
+          border-radius: 25px;
           box-sizing: border-box;
           padding: 22px 12px 50px;
-          border: 2px solid #226BE4; }
+          border: 1px solid #226BE4; }
         .create-modal-content #create-events .center #e-tag {
           margin-top: 15px;
           float: left;
@@ -9452,9 +9569,9 @@ ul p:last-child a.down {
           width: 85%;
           height: 10px;
           margin-top: 7px;
-          border-radius: 1%/40%;
+          border-radius: 25px;
           padding: 10px 12px 10px;
-          border: 2px solid #226BE4; }
+          border: 1px solid #226BE4; }
       .create-modal-content #create-events .events-extra-buttons {
         margin-left: 48px;
         width: 90%;

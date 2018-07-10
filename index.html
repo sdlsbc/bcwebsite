@@ -97,7 +97,7 @@
                     </p>
                     <p class="signin-usertype">
                         <label class="signin-label">USER TYPE</label>
-                        <select id="signup-usertype" class="styled-select blue semi-square">
+                        <select id="signup-usertype" class="styled-select blue semi-square"  onchange="checkUserType()">
                             <option value="" disabled selected>Select User Type</option>
                             <option value="personal">Personal</option>
                             <option value="company">Company</option>
@@ -171,6 +171,11 @@
                         <label class="signin-label" for="signup-handle">Name of Company</label><br>
                         <input class="signin-handle" id="signup-companyName" type="text" placeholder="Enter Company Name">
                     </p>
+                    <p class="c_handle">
+                            <label class="signin-label" for="signup-handle">Company Handle</label>
+                            <input class="signin-handle" id="signup-companyName" type="text" placeholder="Enter Company Handle">
+                        </p>
+
                     <p class="c-right">
                         <label class="signin-label">Type</label><br>
                         <select id="company-type">
@@ -191,16 +196,72 @@
                         <label class="signin-label2" for="signup-lastname">Link</label><br>
                         <input class="signin-lastname" id="company-link" type="text" placeholder="Your Link">
                     </p>
+                    <p class="c_image">
+                            <input type="file" id="company-image" onchange="companyImage(event)" />
+                            <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
+                        </p>
                     <p class="signin-submit">
-                        <input class="input-submit" type="button" value="Back" onclick="showSignUpModal()">
+                        <input class="input-submit" type="button" value=" <<< Back" onclick="showSignUpModal()">
                     </p>
                     <p class="signin-submit">
-                        <input class="input-submit" type="button" value="Sign Up" onclick="register()">
+                        <input class="input-submit" type="button" value="Next >>>" onclick="nextCompanyModal()">
                     </p>
                 </form>
-            </div>
+            </div> 
         </div>
     </div>
+
+    <!-- modal Company Account Manager -->
+        <div id="myCompanyModal" class="index-modal">
+            <div class="index-modal-content">
+                <a href="#login" class="company-login">Company Info</a>
+                <hr>
+                <div class="signin" id="signin" data-type="signup">
+                    <form class="signin-form">
+                        <p class="c_name">
+                            <label class="signin-label" for="signup-handle">Name of Company</label>
+                            <input class="signin-handle" id="signup-companyName" type="text" placeholder="Enter Company Name">
+                        </p>
+                        <p class="c_handle">
+                                <label class="signin-label" for="signup-handle">Company Handle</label>
+                                <input class="signin-handle" id="signup-companyName" type="text" placeholder="Enter Company Handle">
+                            </p>
+                        <p class="c_signin-usertype">
+                            <label class="signin-label">Type</label>
+                            <select id="company-type">
+                                <option value="" disabled selected>Select Company Type</option>
+                                <option value="GeneralManagement">General Management</option>
+                                <option value="Production">Production</option>
+                                <option value="CompanyManagement">Company Management</option>
+                                <option value="Press">Press</option>
+                                <option value="MarketingAdvertising">Marketing/ Advertising</option>
+                                <option value="Casting">Casting</option>
+                                <option value="Organizations">Organizations</option>
+                            </select>
+                        </p>
+                        <p class="c_description">
+                            <label class="signin-label" for="signup-firstname">Description</label>
+                            <input class="signin-firstname" id="company-desc" type="text" placeholder="About The Company">
+                        </p>
+                        <p class="c_link">
+                            <label class="signin-label" for="signup-lastname">Link</label>
+                            <input class="signin-lastname" id="company-link" type="text" placeholder="Your Link">
+                        </p>
+                        <p class="c_image">
+                                <input type="file" id="company-image" onchange="companyImage(event)" />
+                                <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
+                            </p>
+                        <p class="signin-submit">
+                            <input class="input-submit" type="button" value=" <<< Back" onclick="showSignUpModal()">
+                        </p>
+                        <p class="signin-submit">
+                            <input class="input-submit" type="button" value="Next >>>" onclick="nextCompanyModal()">
+                        </p>
+                    </form>
+                </div> 
+            </div>
+        </div>
+
     <!-- modal Production info -->
     <div id="myProductionModal" class="index-modal">
         <div class="index-modal-content">
@@ -303,16 +364,20 @@
         </div>
     </div>
     <script>
+        function checkUserType(){
+            var x = document.getElementById("signup-usertype").value;
+            if (x == "company") {
+                // show company modal
+                modal_signup.style.display = "none";
+                modal_company.style.display = "block";
+
+            }
+        }
         function showNextModal() {
             var x = document.getElementById("signup-usertype").value;
-            var modal_personal = document.getElementById('myPersonalModal');
             // var modal_signup = document.getElementById('myModal2');
             console.log('usertype value', x)
             modal_signup.style.display = "none";
-            if (x == "company") {
-                // show company modal
-                modal_company.style.display = "block";
-            }
             if (x == "production") {
                 modal_production.style.display = "block";
             }
@@ -321,9 +386,13 @@
                 modal_personal.style.display = "block";
             }
         }
+
+        function nextCompanyModal() {
+            modal_company.style.display = "none";
+
+        }
+
         function showSignUpModal() {
-            var modal_company = document.getElementById('myModalCompany');
-            var modal_production = document.getElementById('myProductionModal');
             modal_production.style.display = "none";
             modal_company.style.display = "none";
             modal_personal.style.display = "none";
@@ -395,6 +464,23 @@
             <p class="small"> Connecting the World Of Theater, while increasing collaboration and improving efficiency.</p>
     </div>
     <script>
+
+        function companyImage(event){
+            var myCanvas = document.getElementById('mycanvascompany');
+            var ctx = myCanvas.getContext('2d');
+            var img = new Image();
+            img.onload = function () {
+                myCanvas.width = img.width;
+                myCanvas.height = img.height;
+
+                ctx.drawImage(img, 0, 0);
+                upload_image_base64 = myCanvas.toDataURL('image/jpeg');
+                // console.log('upload_image_base64 ---', upload_image_base64);
+            };
+
+            img.src = URL.createObjectURL(event.target.files[0]);
+        }
+
         function testit(event) {
             var myCanvas = document.getElementById('mycanvas');
             var ctx = myCanvas.getContext('2d');

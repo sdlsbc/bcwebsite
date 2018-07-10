@@ -386,7 +386,7 @@ function validateEmail(e) {
     }
 }
 
-function handleIsUnique() {
+function handleIsUnique(fetched_handle) {
     var fetched_handle = document.getElementById("signup-handle").value;
 
     // api call to check if unique

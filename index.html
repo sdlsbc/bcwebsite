@@ -120,7 +120,7 @@
                     </p> -->
                     <p class="handle">
                         <label class="signin-label" for="signup-handle">HANDLE</label>
-                        <input class="signin-handle" id="signup-handle" type="text" placeholder="Handle" onfocusout="handleIsUnique()">
+                        <input class="signin-handle" id="signup-handle" type="text" placeholder="Handle" onfocusout="handleIsUnique(document.getElementById('signup-handle').value)">
                         <span class="signin-error">Error message here!</span>
                     </p>
                     <p class="signin-email">
@@ -173,7 +173,7 @@
                     </p>
                     <p class="c-right">
                             <label class="signin-label" for="signup-handle">Company Handle</label>
-                            <input class="signin-handle" id="signup-companyHandle" type="text" placeholder="Enter Company Handle">
+                            <input class="signin-handle" id="signup-companyHandle" type="text" placeholder="Enter Company Handle"  onfocusout="handleIsUnique(document.getElementById('signup-companyHandle').value)">
                         </p>
 
                     <p class="c-left2">

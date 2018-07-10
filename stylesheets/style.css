@@ -2905,14 +2905,291 @@ code {
     margin-left: 33%;
     text-decoration: none;
     font-size: 18px; } }
-.company-login {
+.production-login {
   width: 100%;
   text-align: center;
   color: #226BE4;
-  margin-left: 39%;
+  margin-left: 37%;
   font-size: 22px;
   padding-bottom: 10px;
   text-decoration: none; }
+
+#myModalCompany .index-modal-content .company-login {
+  width: 100%;
+  text-align: center;
+  color: #226BE4;
+  margin-left: 37%;
+  font-size: 22px;
+  padding-bottom: 10px;
+  text-decoration: none; }
+#myModalCompany .index-modal-content .signin .signin-form {
+  width: 90%; }
+  #myModalCompany .index-modal-content .signin .signin-form .c-left {
+    width: 50%;
+    float: left;
+    /*margin-top: -10px;*/
+    display: inline-block; }
+    #myModalCompany .index-modal-content .signin .signin-form .c-left .signin-label {
+      font-size: 16px;
+      color: #226BE4;
+      margin-left: 15px; }
+    #myModalCompany .index-modal-content .signin .signin-form .c-left input[type=text] {
+      width: 100%;
+      height: 35px;
+      font-size: 12px;
+      margin-top: 5px;
+      font-weight: 400;
+      border-radius: 25px;
+      padding-left: 23px;
+      border: 1px solid #226BE4; }
+  #myModalCompany .index-modal-content .signin .signin-form .c-right {
+    width: 40%;
+    float: right;
+    /*margin-top: -10px;*/
+    display: inline-block; }
+    #myModalCompany .index-modal-content .signin .signin-form .c-right .signin-label {
+      color: #226BE4;
+      font-size: 16px; }
+    #myModalCompany .index-modal-content .signin .signin-form .c-right #company-type {
+      width: 100%;
+      color: white;
+      height: 35px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      padding-left: 23px;
+      border-radius: 50px;
+      background-color: #226BE4;
+      border: 1px solid #226BE4; }
+  #myModalCompany .index-modal-content .signin .signin-form .c-center {
+    width: 100%;
+    float: left;
+    text-align: center;
+    display: inline-block; }
+    #myModalCompany .index-modal-content .signin .signin-form .c-center .signin-label {
+      font-size: 16px;
+      color: #226BE4;
+      margin-left: -84px;
+      margin-left: -380px; }
+    #myModalCompany .index-modal-content .signin .signin-form .c-center input[type=text] {
+      width: 100%;
+      height: 35px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      padding-left: 23px;
+      border-radius: 25px;
+      margin-bottom: 30px;
+      border: 1px solid #226BE4; }
+    #myModalCompany .index-modal-content .signin .signin-form .c-center .signin-label2 {
+      font-size: 16px;
+      color: #226BE4;
+      margin-left: -429px; }
+  #myModalCompany .index-modal-content .signin .signin-form .signin-submit {
+    margin-left: 9%; }
+
+#myProductionModal .index-modal-content .production-login {
+  width: 100%;
+  text-align: center;
+  color: #226BE4;
+  margin-left: 37%;
+  font-size: 22px;
+  padding-bottom: 10px;
+  text-decoration: none; }
+#myProductionModal .index-modal-content .signin .signin-form {
+  width: 90%; }
+  #myProductionModal .index-modal-content .signin .signin-form .pro-left {
+    width: 50%;
+    float: left;
+    /*margin-top: -10px;*/
+    display: inline-block; }
+    #myProductionModal .index-modal-content .signin .signin-form .pro-left .signin-label {
+      font-size: 16px;
+      color: #226BE4;
+      margin-left: 15px; }
+    #myProductionModal .index-modal-content .signin .signin-form .pro-left input[type=text] {
+      width: 100%;
+      height: 35px;
+      font-size: 12px;
+      margin-top: 5px;
+      font-weight: 400;
+      border-radius: 25px;
+      padding-left: 15px;
+      border: 1px solid #226BE4; }
+  #myProductionModal .index-modal-content .signin .signin-form .pro-right {
+    width: 40%;
+    float: right;
+    display: inline-block; }
+    #myProductionModal .index-modal-content .signin .signin-form .pro-right .signin-label {
+      color: #226BE4;
+      font-size: 16px; }
+    #myProductionModal .index-modal-content .signin .signin-form .pro-right #production-type {
+      width: 100%;
+      color: white;
+      height: 35px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      padding-left: 15px;
+      border-radius: 50px;
+      background-color: #226BE4;
+      border: 1px solid #226BE4; }
+  #myProductionModal .index-modal-content .signin .signin-form .pro-left2 {
+    width: 50%;
+    float: left;
+    /*margin-top: -10px;*/
+    display: inline-block; }
+    #myProductionModal .index-modal-content .signin .signin-form .pro-left2 .signin-label {
+      font-size: 16px;
+      color: #226BE4;
+      margin-left: 15px; }
+    #myProductionModal .index-modal-content .signin .signin-form .pro-left2 input[type=text] {
+      width: 100%;
+      height: 35px;
+      font-size: 12px;
+      margin-top: 5px;
+      font-weight: 400;
+      border-radius: 25px;
+      padding-left: 15px;
+      border: 1px solid #226BE4; }
+  #myProductionModal .index-modal-content .signin .signin-form .pro-right2 {
+    width: 40%;
+    float: right;
+    display: inline-block; }
+    #myProductionModal .index-modal-content .signin .signin-form .pro-right2 .signin-label {
+      color: #226BE4;
+      font-size: 16px; }
+    #myProductionModal .index-modal-content .signin .signin-form .pro-right2 #production-status {
+      width: 100%;
+      color: white;
+      height: 35px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      padding-left: 15px;
+      border-radius: 50px;
+      background-color: #226BE4;
+      border: 1px solid #226BE4; }
+  #myProductionModal .index-modal-content .signin .signin-form .pro-left3 {
+    width: 50%;
+    float: left;
+    /*margin-top: -10px;*/
+    display: inline-block; }
+    #myProductionModal .index-modal-content .signin .signin-form .pro-left3 .signin-label {
+      font-size: 16px;
+      color: #226BE4;
+      margin-left: 15px; }
+    #myProductionModal .index-modal-content .signin .signin-form .pro-left3 input[type=text] {
+      width: 100%;
+      height: 35px;
+      font-size: 12px;
+      margin-top: 5px;
+      font-weight: 400;
+      border-radius: 25px;
+      padding-left: 15px;
+      border: 1px solid #226BE4; }
+  #myProductionModal .index-modal-content .signin .signin-form .pro-right3 {
+    width: 40%;
+    float: right;
+    display: inline-block; }
+    #myProductionModal .index-modal-content .signin .signin-form .pro-right3 .signin-label {
+      font-size: 16px;
+      color: #226BE4;
+      margin-left: 15px; }
+    #myProductionModal .index-modal-content .signin .signin-form .pro-right3 input[type=text] {
+      width: 100%;
+      height: 35px;
+      font-size: 12px;
+      margin-top: 5px;
+      font-weight: 400;
+      border-radius: 25px;
+      padding-left: 15px;
+      border: 1px solid #226BE4; }
+  #myProductionModal .index-modal-content .signin .signin-form .pro-left4 {
+    width: 50%;
+    float: left;
+    /*margin-top: -10px;*/
+    display: inline-block; }
+    #myProductionModal .index-modal-content .signin .signin-form .pro-left4 .signin-label {
+      font-size: 16px;
+      color: #226BE4;
+      margin-left: 15px; }
+    #myProductionModal .index-modal-content .signin .signin-form .pro-left4 input[type=text] {
+      width: 100%;
+      height: 35px;
+      font-size: 12px;
+      margin-top: 5px;
+      font-weight: 400;
+      border-radius: 25px;
+      padding-left: 15px;
+      border: 1px solid #226BE4; }
+
+#myPersonalModal .index-modal-content .personal-login {
+  width: 100%;
+  text-align: center;
+  color: #226BE4;
+  margin-left: 37%;
+  font-size: 22px;
+  padding-bottom: 10px;
+  text-decoration: none; }
+#myPersonalModal .index-modal-content .signin .signin-form {
+  width: 90%; }
+  #myPersonalModal .index-modal-content .signin .signin-form .p-left {
+    width: 50%;
+    float: left;
+    /*margin-top: -10px;*/
+    display: inline-block; }
+    #myPersonalModal .index-modal-content .signin .signin-form .p-left .signin-label {
+      font-size: 16px;
+      color: #226BE4;
+      margin-left: 15px; }
+    #myPersonalModal .index-modal-content .signin .signin-form .p-left input[type=text] {
+      width: 100%;
+      height: 35px;
+      font-size: 12px;
+      margin-top: 5px;
+      font-weight: 400;
+      border-radius: 25px;
+      padding-left: 15px;
+      border: 1px solid #226BE4; }
+  #myPersonalModal .index-modal-content .signin .signin-form .p-right {
+    width: 40%;
+    float: right;
+    display: inline-block; }
+    #myPersonalModal .index-modal-content .signin .signin-form .p-right .signin-label {
+      color: #226BE4;
+      font-size: 16px; }
+    #myPersonalModal .index-modal-content .signin .signin-form .p-right #personal-type {
+      width: 100%;
+      color: white;
+      height: 35px;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      padding-left: 15px;
+      border-radius: 50px;
+      background-color: #226BE4;
+      border: 1px solid #226BE4; }
+  #myPersonalModal .index-modal-content .signin .signin-form .p-center {
+    width: 100%;
+    float: left;
+    text-align: center;
+    display: inline-block; }
+    #myPersonalModal .index-modal-content .signin .signin-form .p-center .signin-label {
+      font-size: 16px;
+      color: #226BE4;
+      margin-left: -380px; }
+    #myPersonalModal .index-modal-content .signin .signin-form .p-center input[type=text] {
+      width: 100%;
+      height: 35px;
+      font-size: 12px;
+      margin-top: 6px;
+      font-weight: 400;
+      border-radius: 25px;
+      padding-left: 15px;
+      border: 1px solid #226BE4; }
+  #myPersonalModal .index-modal-content .signin .signin-form .signin-submit {
+    margin-left: 9%; }
 
 /*$other-blue-dark: #226BE4;
 $other-blue-light: #;*/

@@ -123,38 +123,39 @@
   <div class="create-modal-contentx" id="create-modal-contentx">
   <span class="create-closex">&times;</span>
     <h1>Edit Information</h1>
-    <form>
       <span class="edit-left1">
         <label id="edit-first">FIRST NAME</label>
         <br>
-        <input type="text" id="input-first" name="articles" placeholder="John">
+        <input type="text" id="input-first" name="articles" placeholder="First">
       </span>
       <span class="edit-right1">
         <label id="edit-last">LAST NAME</label>
         <!-- <br> -->
-        <input type="text" id="input-last" name="articles" placeholder="Smith">
+        <input type="text" id="input-last" name="articles" placeholder="Last">
       </span>
       <span class="edit-center">
-        <label id="edit-email">EMAIL ADDRESS</label>
+        <label id="edit-phone-number">PHONE NUMBER</label>
         <br>
-        <input type="text" id="input-email" name="articles" placeholder="J.smith@gmail.com">
+        <input type="number" id="input-email" name="articles" placeholder="Phone">
 
         <label id="edit-username">USERNAME</label>
         <br>
-        <input type="text" id="input-username" name="articles" placeholder="New York, NY">
+        <input type="text" id="input-username" name="articles" placeholder="Username">
       </span>
+
       <span class="edit-left2">
-        <label id="edit-new-password">NEW PASSWORD</label>
+        <label id="edit-new-password">CITY</label>
         <br>
-        <input type="text" id="input-new" name="articles" placeholder="John">
+        <input type="text" id="input-new" name="articles" placeholder="City">
       </span>
+
       <span class="edit-right2">
-        <label id="edit-confirm-password">CONFIRM PASSWORD</label>
+        <label id="edit-confirm-password">COUNTRY</label>
         <br>
-        <input type="text" id="input-confirm" name="articles" placeholder="John">
+        <input type="text" id="input-confirm" name="articles" placeholder="Country">
       </span>
-      <button class="save-changes" onclick="signout()">Save Changes</button>
-    </form>
+
+      <button class="save-changes" onclick="updateUser()">Save Changes</button>
   </div>
 </div>
 

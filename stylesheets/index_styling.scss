@@ -1760,17 +1760,361 @@ code {
 
 
 
-
-.company-login {
+.production-login {
   width: 100%;
   text-align: center;
   color: #226BE4;
-  margin-left: 39%;
+  margin-left: 37%;
   font-size: 22px;
   padding-bottom: 10px;
   text-decoration: none;
+  .signin-form {
+
+  }
+}
+#myModalCompany {
+  .index-modal-content {
+    .company-login {
+      width: 100%;
+      text-align: center;
+      color: #226BE4;
+      margin-left: 37%;
+      font-size: 22px;
+      padding-bottom: 10px;
+      text-decoration: none;
+    }
+    .signin {
+      .signin-form {
+        width: 90%;
+        .c-left {
+          width: 50%;
+          float: left;
+          /*margin-top: -10px;*/
+          display: inline-block;
+          .signin-label {
+            font-size: 16px;
+            color: $main-blue;
+            margin-left: 15px;
+          }
+          input[type=text] {
+            width: 100%;
+            height: 35px;
+            font-size: 12px;
+            margin-top: 5px;
+            font-weight: 400;
+            border-radius: 25px;
+            padding-left: 23px;
+            border: 1px solid $main-blue;
+          }
+        }
+        .c-right {
+          width: 40%;
+          float: right;
+          /*margin-top: -10px;*/
+          display: inline-block;
+          .signin-label {
+            color: $main-blue;
+            font-size: 16px
+          }
+          #company-type {
+            width: 100%;
+            color: white;
+            height: 35px;
+            margin-top: 6px;
+            font-size: 12px;
+            font-weight: 400;
+            padding-left: 23px;
+            border-radius: 50px;
+            background-color: $main-blue;
+            border: 1px solid $main-blue;
+          }
+        }
+        .c-center {
+          width: 100%;
+          float: left;
+          text-align: center;
+          display: inline-block;
+          .signin-label {
+            font-size: 16px;
+            color: $main-blue;
+            margin-left: -84px;
+            margin-left: -380px;
+          }
+          input[type=text] {
+            width: 100%;
+            height: 35px;
+            margin-top: 6px;
+            font-size: 12px;
+            font-weight: 400;
+            padding-left: 23px;
+            border-radius: 25px;
+            margin-bottom: 30px;
+            border: 1px solid $main-blue;
+          }
+          .signin-label2 {
+            font-size: 16px;
+            color: $main-blue;
+            margin-left: -429px;
+          }
+        }
+        .signin-submit {
+          margin-left: 9%;
+        }
+      }
+    }
+  }
 }
 
+
+#myProductionModal {
+  .index-modal-content {
+    .production-login {
+      width: 100%;
+      text-align: center;
+      color: #226BE4;
+      margin-left: 37%;
+      font-size: 22px;
+      padding-bottom: 10px;
+      text-decoration: none;
+    }
+    .signin {
+      .signin-form {
+        width: 90%;
+        .pro-left {
+          width: 50%;
+          float: left;
+          /*margin-top: -10px;*/
+          display: inline-block;
+          .signin-label {
+            font-size: 16px;
+            color: $main-blue;
+            margin-left: 15px;
+          }
+          input[type=text] {
+            width: 100%;
+            height: 35px;
+            font-size: 12px;
+            margin-top: 5px;
+            font-weight: 400;
+            border-radius: 25px;
+            padding-left: 15px;
+            border: 1px solid $main-blue;
+          }
+        }
+        .pro-right {
+          width: 40%;
+          float: right;
+          display: inline-block;
+          .signin-label {
+            color: $main-blue;
+            font-size: 16px
+          }
+          #production-type {
+            width: 100%;
+            color: white;
+            height: 35px;
+            margin-top: 6px;
+            font-size: 12px;
+            font-weight: 400;
+            padding-left: 15px;
+            border-radius: 50px;
+            background-color: $main-blue;
+            border: 1px solid $main-blue;
+          }
+        }
+        .pro-left2 {
+          width: 50%;
+          float: left;
+          /*margin-top: -10px;*/
+          display: inline-block;
+          .signin-label {
+            font-size: 16px;
+            color: $main-blue;
+            margin-left: 15px;
+          }
+          input[type=text] {
+            width: 100%;
+            height: 35px;
+            font-size: 12px;
+            margin-top: 5px;
+            font-weight: 400;
+            border-radius: 25px;
+            padding-left: 15px;
+            border: 1px solid $main-blue;
+          }
+        }
+        .pro-right2 {
+          width: 40%;
+          float: right;
+          display: inline-block;
+          .signin-label {
+            color: $main-blue;
+            font-size: 16px
+          }
+          #production-status {
+            width: 100%;
+            color: white;
+            height: 35px;
+            margin-top: 6px;
+            font-size: 12px;
+            font-weight: 400;
+            padding-left: 15px;
+            border-radius: 50px;
+            background-color: $main-blue;
+            border: 1px solid $main-blue;
+          }
+        }
+        .pro-left3 {
+          width: 50%;
+          float: left;
+          /*margin-top: -10px;*/
+          display: inline-block;
+          .signin-label {
+            font-size: 16px;
+            color: $main-blue;
+            margin-left: 15px;
+          }
+          input[type=text] {
+            width: 100%;
+            height: 35px;
+            font-size: 12px;
+            margin-top: 5px;
+            font-weight: 400;
+            border-radius: 25px;
+            padding-left: 15px;
+            border: 1px solid $main-blue;
+          }
+        }
+        .pro-right3 {
+          width: 40%;
+          float: right;
+          display: inline-block;
+          .signin-label {
+            font-size: 16px;
+            color: $main-blue;
+            margin-left: 15px;
+          }
+          input[type=text] {
+            width: 100%;
+            height: 35px;
+            font-size: 12px;
+            margin-top: 5px;
+            font-weight: 400;
+            border-radius: 25px;
+            padding-left: 15px;
+            border: 1px solid $main-blue;
+          }
+        }
+        .pro-left4 {
+          width: 50%;
+          float: left;
+          /*margin-top: -10px;*/
+          display: inline-block;
+          .signin-label {
+            font-size: 16px;
+            color: $main-blue;
+            margin-left: 15px;
+          }
+          input[type=text] {
+            width: 100%;
+            height: 35px;
+            font-size: 12px;
+            margin-top: 5px;
+            font-weight: 400;
+            border-radius: 25px;
+            padding-left: 15px;
+            border: 1px solid $main-blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+#myPersonalModal {
+  .index-modal-content {
+    .personal-login {
+      width: 100%;
+      text-align: center;
+      color: #226BE4;
+      margin-left: 37%;
+      font-size: 22px;
+      padding-bottom: 10px;
+      text-decoration: none;
+    }
+    .signin {
+      .signin-form {
+        width: 90%;
+        .p-left {
+          width: 50%;
+          float: left;
+          /*margin-top: -10px;*/
+          display: inline-block;
+          .signin-label {
+            font-size: 16px;
+            color: $main-blue;
+            margin-left: 15px;
+          }
+          input[type=text] {
+            width: 100%;
+            height: 35px;
+            font-size: 12px;
+            margin-top: 5px;
+            font-weight: 400;
+            border-radius: 25px;
+            padding-left: 15px;
+            border: 1px solid $main-blue;
+          }
+        }
+        .p-right {
+          width: 40%;
+          float: right;
+          display: inline-block;
+          .signin-label {
+            color: $main-blue;
+            font-size: 16px
+          }
+          #personal-type {
+            width: 100%;
+            color: white;
+            height: 35px;
+            margin-top: 6px;
+            font-size: 12px;
+            font-weight: 400;
+            padding-left: 15px;
+            border-radius: 50px;
+            background-color: $main-blue;
+            border: 1px solid $main-blue;
+          }
+        }
+        .p-center {
+          width: 100%;
+          float: left;
+          text-align: center;
+          display: inline-block;
+          .signin-label {
+            font-size: 16px;
+            color: $main-blue;
+            margin-left: -380px;
+          }
+          input[type=text] {
+            width: 100%;
+            height: 35px;
+            font-size: 12px;
+            margin-top: 6px;
+            font-weight: 400;
+            border-radius: 25px;
+            padding-left: 15px;
+            border: 1px solid $main-blue;
+          }
+        }
+        .signin-submit {
+          margin-left: 9%;
+        }
+      }
+    }
+  }
+}
 
 
 

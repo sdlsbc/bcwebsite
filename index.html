@@ -171,12 +171,12 @@
                       <label class="signin-label" for="signup-handle">Name of Company</label><br>
                       <input class="signin-handle" id="signup-companyName" type="text" placeholder="Enter Company Name">
                     </p>
-                    <p class="c_handle">
+                    <p class="c-right">
                             <label class="signin-label" for="signup-handle">Company Handle</label>
                             <input class="signin-handle" id="signup-companyName" type="text" placeholder="Enter Company Handle">
                         </p>
 
-                    <p class="c-right">
+                    <p class="c-left2">
                         <label class="signin-label">Type</label><br>
                         <select id="company-type">
                             <option value="" disabled selected>Select Company Type</option>
@@ -189,6 +189,10 @@
                             <option value="Organizations">Organizations</option>
                         </select>
                     </p>
+                    <p class="c-right2">
+                            <input type="file" id="company-image" onchange="companyImage(event)" />
+                            <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
+                    </p>
                     <p class="c-center">
                         <label class="signin-label" for="signup-firstname">Description</label><br>
                         <input class="signin-firstname" id="company-desc" type="text" placeholder="About The Company">
@@ -196,10 +200,6 @@
                         <label class="signin-label2" for="signup-lastname">Link</label><br>
                         <input class="signin-lastname" id="company-link" type="text" placeholder="Your Link">
                     </p>
-                    <p class="c_image">
-                            <input type="file" id="company-image" onchange="companyImage(event)" />
-                            <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
-                        </p>
                     <p class="signin-submit">
                         <input class="input-submit" type="button" value=" <<< Back" onclick="showSignUpModal()">
                     </p>

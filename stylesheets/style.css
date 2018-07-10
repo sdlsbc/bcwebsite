@@ -4730,19 +4730,21 @@ $other-blue-light: #;*/
         border: 1px solid #226BE4; }
     .create-modal-content #create-milestones button {
       float: right;
-      width: 10%;
-      margin-top: -4px;
-      margin-right: 50px;
+      width: 102px;
+      height: 33px;
+      margin-right: 6%;
+      margin-top: -5px;
       background-color: #226BE4;
+      border: 1px solid #226BE4;
       color: white;
       padding: 5px 12px;
-      height: 31px;
       text-align: center;
       cursor: pointer;
       -webkit-transition-duration: 0.4s;
       transition-duration: 0.4s;
       font-size: 14px;
-      font-family: "Roboto", sans-serif; }
+      font-family: "Roboto", sans-serif;
+      border-radius: 25px; }
   .create-modal-content #create-moments {
     background-color: #abc1f4; }
     .create-modal-content #create-moments h3 {
@@ -4847,19 +4849,21 @@ $other-blue-light: #;*/
         border: 1px solid #226BE4; }
     .create-modal-content #create-moments button {
       float: right;
-      width: 10%;
-      margin-top: -4px;
-      margin-right: 50px;
+      width: 102px;
+      height: 33px;
+      margin-right: 6%;
+      margin-top: -5px;
       background-color: #226BE4;
+      border: 1px solid #226BE4;
       color: white;
       padding: 5px 12px;
-      height: 31px;
       text-align: center;
       cursor: pointer;
       -webkit-transition-duration: 0.4s;
       transition-duration: 0.4s;
       font-size: 14px;
-      font-family: "Roboto", sans-serif; }
+      font-family: "Roboto", sans-serif;
+      border-radius: 25px; }
   .create-modal-content #create-articles {
     width: 97%;
     background-color: #95b0f0; }
@@ -4884,13 +4888,13 @@ $other-blue-light: #;*/
       .create-modal-content #create-articles .left #articles-header {
         margin-left: 8%;
         width: 86%;
-        height: 10px;
+        height: 16px;
         float: left;
         margin-top: 3%;
         margin-bottom: 2%;
-        border-radius: 3%/40%;
+        border-radius: 25px;
         padding: 10px 12px 10px;
-        border: 2px solid #226BE4; }
+        border: 1px solid #226BE4; }
     .create-modal-content #create-articles .right {
       width: 46%;
       float: right;
@@ -4906,13 +4910,13 @@ $other-blue-light: #;*/
       .create-modal-content #create-articles .right #articles-title {
         margin-right: 8%;
         width: 86%;
-        height: 10px;
+        height: 16px;
         float: right;
         margin-top: 3%;
         margin-bottom: 2%;
-        border-radius: 3%/40%;
+        border-radius: 25px;
         padding: 10px 12px 10px;
-        border: 2px solid #226BE4; }
+        border: 1px solid #226BE4; }
     .create-modal-content #create-articles .center {
       margin-top: 3%;
       width: 100%;
@@ -4932,10 +4936,10 @@ $other-blue-light: #;*/
         margin-top: -14px;
         height: 40px;
         font-size: 14px;
-        border-radius: 3%/40%;
+        border-radius: 25px;
         box-sizing: border-box;
         padding: 22px 12px 50px;
-        border: 2px solid #226BE4; }
+        border: 1px solid #226BE4; }
       .create-modal-content #create-articles .center #a-tag {
         margin-top: 15px;
         float: left;
@@ -4947,11 +4951,11 @@ $other-blue-light: #;*/
       .create-modal-content #create-articles .center #articles-tag {
         margin-left: 4%;
         width: 88%;
-        height: 10px;
+        height: 16px;
         margin-top: 10px;
-        border-radius: 1%/40%;
+        border-radius: 25px;
         padding: 10px 12px 10px;
-        border: 2px solid #226BE4; }
+        border: 1px solid #226BE4; }
     .create-modal-content #create-articles .articles-extra-buttons {
       margin-left: 48px;
       width: 90%;
@@ -5015,13 +5019,13 @@ $other-blue-light: #;*/
       .create-modal-content #create-events .left #events-header {
         margin-left: 8%;
         width: 86%;
-        height: 10px;
+        height: 16px;
         float: left;
         margin-top: 3%;
         margin-bottom: 2%;
-        border-radius: 3%/40%;
+        border-radius: 25px;
         padding: 10px 12px 10px;
-        border: 2px solid #226BE4; }
+        border: 1px solid #226BE4; }
     .create-modal-content #create-events .right {
       width: 46%;
       float: right;
@@ -5037,13 +5041,13 @@ $other-blue-light: #;*/
       .create-modal-content #create-events .right #events-title {
         margin-right: 8%;
         width: 86%;
-        height: 10px;
+        height: 16px;
         float: right;
         margin-top: 3%;
         margin-bottom: 2%;
-        border-radius: 3%/40%;
+        border-radius: 25px;
         padding: 10px 12px 10px;
-        border: 2px solid #226BE4; }
+        border: 1px solid #226BE4; }
     .create-modal-content #create-events .center {
       margin-top: 3%;
       width: 100%;
@@ -5063,10 +5067,10 @@ $other-blue-light: #;*/
         margin-top: -14px;
         height: 40px;
         font-size: 14px;
-        border-radius: 3%/40%;
+        border-radius: 25px;
         box-sizing: border-box;
         padding: 22px 12px 50px;
-        border: 2px solid #226BE4; }
+        border: 1px solid #226BE4; }
       .create-modal-content #create-events .center #e-tag {
         margin-top: 15px;
         float: left;
@@ -5078,11 +5082,11 @@ $other-blue-light: #;*/
       .create-modal-content #create-events .center #events-tag {
         margin-left: 4%;
         width: 88%;
-        height: 10px;
+        height: 16px;
         margin-top: 10px;
-        border-radius: 1%/40%;
+        border-radius: 25px;
         padding: 10px 12px 10px;
-        border: 2px solid #226BE4; }
+        border: 1px solid #226BE4; }
     .create-modal-content #create-events .events-extra-buttons {
       margin-left: 48px;
       width: 90%;

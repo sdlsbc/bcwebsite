@@ -242,15 +242,17 @@
 
       </form>
       <div class="articles-extra-buttons">
-        <a href="" class="attach-photo">
+        <!-- <a href="" class="attach-photo">
+          
           <img src="../images/image.png">
-        </a>
-        <a href="" class="privacy-btn">
+        </a> -->
+        <!-- <a href="" class="privacy-btn">
           <img src="../images/lock.png">
-        </a>
-        
+        </a> -->
+        <input type="file" id="article-image" onchange="getArticleImage(event)" />
+        <canvas width="300" height="300" id="myArticleCanvas" style="display: none;"></canvas>
       </div>
-        <button class="input-button">Post</button>
+        <button class="input-button" id="btn-post-article" onclick="create_article()">Post</button>
     </div>
 
     <div id="create-events" class="tabcontent">
@@ -323,5 +325,7 @@
   <script type="text/javascript" src="../javascript/jsDate.js"></script>
   <script type="text/javascript" src="../javascript/profile.js"></script>
   <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
+  <script type="text/javascript" src="../javascript/article.js"></script>
+
 </body>
 </html>

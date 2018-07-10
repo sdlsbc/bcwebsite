@@ -33,8 +33,8 @@ function register() {
                 break;
         }
 
-        // var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_create';
-        var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_create';
+        var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_create';
+        // var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_create';
 
         var data = {
             "handle": handle,
@@ -160,8 +160,8 @@ function saveUserTypeData(token) {
         };
     }
 
-    // var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/" + usertype + "_update";
-    var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/" + usertype + "_update";
+    var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/" + usertype + "_update";
+    // var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/" + usertype + "_update";
 
     fetch(url, {
         method: 'POST',
@@ -193,8 +193,8 @@ function signin() {
 
     var error_message = validateSigninInput(email, password);
 
-    // var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/login';
-    var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/login';
+    var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/login';
+    // var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/login';
 
     var data = {
         "email": email,
@@ -246,8 +246,8 @@ function signin() {
                 localStorage.setItem("first_name", firstname);
                 localStorage.setItem("last_name", lastname);
                 console.log('usertype_id is: ', res_usertype_id);
-                                        var res_lastname = response.response.user.lastname;
-                        var res_firstname = response.response.user.firstname;
+                var res_lastname = response.response.user.lastname;
+                var res_firstname = response.response.user.firstname;
                 if (localStorage.getItem("token") == "") {
                     createCustomAlert("WARNING: Not saved locally");
                 } else {
@@ -262,11 +262,6 @@ function signout() {
     createCustomAlert("WARNING: Logged out");
     window.location.href = "../index.html";
 }
-
-
-
-
-
 
 // var ALERT_TITLE = "Oops!";
 var ALERT_BUTTON_TEXT = "x";
@@ -363,4 +358,81 @@ function validateEmail(e) {
     } else {
         return true;
     }
+}
+
+function handleIsUnique() {
+    var fetched_handle = document.getElementById("signup-handle").value;
+
+    // api call to check if unique
+
+
+    var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/is_unique';
+    // var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/is_unique';
+
+    var data = {
+        "handle": fetched_handle
+    };
+
+    fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => {
+
+            console.log('Success unique handle request:', response);
+
+            if (response.status == "success") {
+
+                console.log(response);
+                if (response.response.message == "yes") {
+                    console.log('username unique');
+                }
+                if (response.response.message == "no") {
+                    createCustomAlert("Username Not Unique");
+                }
+            }
+        })
+}
+
+function checkPasswordsMatch() {
+    var fetched_password = document.getElementById("signup-password").value;
+    var fetched_confirm_password = document.getElementById("signup-confirm-password").value;
+
+    if (fetched_password == "") {
+        createCustomAlert("Please Enter Password");
+    } else if (fetched_password !== fetched_confirm_password) {
+        createCustomAlert("Your Passwords Don't Match");
+    }
+}
+
+function checkPhoneNumber() {
+    var fetched_phone_number = document.getElementById("signup-phone").value;
+
+    var regex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;  //international phone number
+
+    if (regex.test(fetched_phone_number)) {
+        // Valid international phone number
+        var regex_next = /^([0-9])\1*$/; // check if all numbers are same
+        if (regex_next.test(fetched_phone_number)) {
+            createCustomAlert("Please Enter Valid Phone Number");
+        }
+
+    } else {
+        // Invalid international phone number
+        createCustomAlert("Please Enter Valid Phone Number");
+    }
+}
+
+function checkEmail() {
+    var fetched_email = document.getElementById("signup-email").value;
+    var atpos = fetched_email.indexOf("@");
+    var dotpos = fetched_email.lastIndexOf(".");
+    console.log('In validate email inside', fetched_email);
+    if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= fetched_email.length) {
+        createCustomAlert("Please Enter Valid Email Address");
+    } 
 }

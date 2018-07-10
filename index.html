@@ -12,6 +12,11 @@
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
+    <!-- Datepicker JQuery -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 </head>
 
 <script src="./javascript/register.js"></script>
@@ -19,6 +24,21 @@
     if (navigator.userAgent.indexOf("MSIE") != -1) {
         createCustomAlert('For the best experience, please browse our website with Google Chrome.');
     }
+</script>
+
+<!-- Datepicker js -->
+<script>
+    $(function () {
+        $("#personal-dateOfBirth").datepicker();
+    });
+
+        $(function () {
+        $("#production-opening").datepicker();
+    });
+
+        $(function () {
+        $("#production-closing").datepicker();
+    });
 </script>
 
 <body class="body">
@@ -99,18 +119,24 @@
                         <input class="signin-handle" id="signup-fullname" type="text" placeholder="">
                     </p> -->
                     <p class="handle">
-                        <label class="signin-label" for="signup-handle">USERNAME</label>
-                        <input class="signin-handle" id="signup-handle" type="text" placeholder="Username">
+                        <label class="signin-label" for="signup-handle">HANDLE</label>
+                        <input class="signin-handle" id="signup-handle" type="text" placeholder="Handle" onfocusout="handleIsUnique()">
                         <span class="signin-error">Error message here!</span>
                     </p>
                     <p class="signin-email">
                         <label class="email">E-MAIL</label>
-                        <input class="input-email" id="signup-email" type="email" placeholder="E-mail">
+                        <input class="input-email" id="signup-email" type="email" placeholder="E-mail" onfocusout="checkEmail()">
                         <span class="email">Error message here!</span>
                     </p>
                     <p class="signin-password">
                         <label class="account-password">PASSWORD</label>
                         <input class="input-account" id="signup-password" type="password" placeholder="Password">
+                        <a href="#0" class="hide">Hide</a>
+                        <span class="error">Error message here!</span>
+                    </p>
+                    <p class="signin-password">
+                        <label class="account-password">CONFIRM PASSWORD</label>
+                        <input class="input-account" id="signup-confirm-password" type="password" placeholder="Confirm Password" onfocusout="checkPasswordsMatch()">
                         <a href="#0" class="hide">Hide</a>
                         <span class="error">Error message here!</span>
                     </p>
@@ -124,7 +150,7 @@
                     </p>
                     <p class="signin-phone">
                         <label class="signin-label">PHONE</label>
-                        <input class="signin-phone" id="signup-phone" type="text" placeholder="Phone">
+                        <input class="signin-phone" id="signup-phone" type="text" placeholder="Phone" onfocusout = "checkPhoneNumber()">
                     </p>
                     <p class="signin-submit">
                         <input class="input-submit" type="button" value="Next >>>" onclick="showNextModal()">
@@ -379,7 +405,7 @@
 
                 ctx.drawImage(img, 0, 0);
                 upload_image_base64 = myCanvas.toDataURL('image/jpeg');
-                console.log('upload_image_base64 ---', upload_image_base64);
+                // console.log('upload_image_base64 ---', upload_image_base64);
             };
 
             img.src = URL.createObjectURL(event.target.files[0]);

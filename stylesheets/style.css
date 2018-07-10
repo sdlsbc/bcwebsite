@@ -4777,13 +4777,11 @@ $other-blue-light: #;*/
     .create-modal-content #create-moments .moments-right {
       width: 40%;
       float: right;
-      margin-top: -37px;
+      padding-bottom: 36px;
+      margin-top: 26px;
       display: inline-block; }
-      .create-modal-content #create-moments .moments-right img {
-        width: 70%;
-        height: 110px;
-        margin-left: 20px;
-        border: 2px solid #226BE4; }
+      .create-modal-content #create-moments .moments-right input[type=file] {
+        font-size: 16px; }
     .create-modal-content #create-moments .moments-left2 {
       width: 40%;
       float: left;

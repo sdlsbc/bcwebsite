@@ -614,13 +614,11 @@
     .moments-right {
       width: 40%;
       float: right;
-      margin-top: -37px;
+      padding-bottom: 36px;
+      margin-top: 26px;
       display: inline-block;
-      img {
-        width: 70%;
-        height: 110px;
-        margin-left: 20px;
-        border: 2px solid $main-blue;
+      input[type=file] {
+        font-size: 16px;
       }
     }
     .moments-left2 {

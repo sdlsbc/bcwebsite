@@ -178,7 +178,8 @@
           </select>
         </p>
         <p class="moments-right">
-          <img src="../images/placeholder-bc.png">
+          <input type="file" id="company-image" onchange="companyImage(event)" />
+          <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
         </p>
         <p class="moments-left2">
           <label class="moments-label" for="moments-label1">Fixed Text</label><br>

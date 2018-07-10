@@ -49,8 +49,8 @@ function register() {
                 break;
         }
 
-        // var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_create';
-        var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_create';
+        var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_create';
+        // var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_create';
 
         var data = {
             "handle": handle,
@@ -177,8 +177,8 @@ function saveUserTypeData(token) {
         };
     }
 
-    // var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/" + usertype + "_update";
-    var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/" + usertype + "_update";
+    var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/" + usertype + "_update";
+    // var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/" + usertype + "_update";
 
     fetch(url, {
         method: 'POST',
@@ -210,8 +210,8 @@ function signin() {
 
     var error_message = validateSigninInput(email, password);
 
-    // var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/login';
-    var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/login';
+    var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/login';
+    // var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/login';
 
     var data = {
         "email": email,
@@ -387,13 +387,13 @@ function validateEmail(e) {
 }
 
 function handleIsUnique(fetched_handle) {
-    var fetched_handle = document.getElementById("signup-handle").value;
+    var fetched_handle = document.getElementById('signup-handle').value;
 
     // api call to check if unique
 
 
-    // var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/is_unique';
-    var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/is_unique';
+    var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/is_unique';
+    // var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/is_unique';
 
     var data = {
         "handle": fetched_handle

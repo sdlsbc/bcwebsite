@@ -136,7 +136,7 @@
                     </p>
                     <p class="signin-password">
                         <label class="account-password">CONFIRM PASSWORD</label>
-                        <input class="input-account" id="signup-confirm-password" type="password" placeholder="Confirm Password" onfocusout="checkPasswordsMatch('signup-password').value,document.getElementById('signup-confirm-password')">
+                        <input class="input-account" id="signup-confirm-password" type="password" placeholder="Confirm Password" onfocusout="checkPasswordsMatch(document.getElementById('signup-password').value,document.getElementById('signup-confirm-password'))">
                         <a href="#0" class="hide">Hide</a>
                         <span class="error">Error message here!</span>
                     </p>
@@ -168,16 +168,18 @@
             <div class="signin" id="signin" data-type="signup">
                 <form class="signin-form">
                     <p class="c-left">
-                      <label class="signin-label" for="signup-handle">Name of Company</label><br>
-                      <input class="signin-handle" id="signup-companyName" type="text" placeholder="Enter Company Name">
+                        <label class="signin-label" for="signup-handle">Name of Company</label>
+                        <br>
+                        <input class="signin-handle" id="signup-companyName" type="text" placeholder="Enter Company Name">
                     </p>
                     <p class="c-right">
-                            <label class="signin-label" for="signup-handle">Company Handle</label>
-                            <input class="signin-handle" id="signup-companyHandle" type="text" placeholder="Enter Company Handle"  onfocusout="handleIsUnique(document.getElementById('signup-companyHandle').value)">
-                        </p>
+                        <label class="signin-label" for="signup-handle">Company Handle</label>
+                        <input class="signin-handle" id="signup-companyHandle" type="text" placeholder="Enter Company Handle" onfocusout="handleIsUnique(document.getElementById('signup-companyHandle').value)">
+                    </p>
 
                     <p class="c-left2">
-                        <label class="signin-label">Type</label><br>
+                        <label class="signin-label">Type</label>
+                        <br>
                         <select id="company-type">
                             <option value="" disabled selected>Select Company Type</option>
                             <option value="GeneralManagement">General Management</option>
@@ -190,8 +192,8 @@
                         </select>
                     </p>
                     <p class="c-right2">
-                            <input type="file" id="company-image" onchange="companyImage(event)" />
-                            <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
+                        <input type="file" id="company-image" onchange="companyImage(event)" />
+                        <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
                     </p>
                     <p class="c-center">
                         <label class="signin-label" for="signup-firstname">Description</label>
@@ -378,6 +380,49 @@
             </div>
         </div>
     </div>
+    <!--Modal Script-->
+    <script>
+        // all modals
+        var modal_login = document.getElementById('myModal1');
+        var modal_signup = document.getElementById('myModal2');
+        var modal_company = document.getElementById('myModalCompany');
+        var modal_company2 = document.getElementById('myCompanyModalAccountManager');
+        var modal_production = document.getElementById('myProductionModal');
+        var modal_personal = document.getElementById('myPersonalModal');
+        // navbar buttons
+        var btn1 = document.getElementById("navbarLoginBtn");
+        var btn2 = document.getElementById("navbarSignUpBtn");
+
+        btn1.onclick = function () {
+            console.log('button login clicked');
+            modal_personal.style.display = "none"
+            modal_production.style.display = "none"
+            modal_company.style.display = "none";
+            modal_company2.style.display = "none";
+            modal_signup.style.display = "none";
+            modal_login.style.display = "block";
+        }
+
+        btn2.onclick = function () {
+            console.log('button sign up clicked');
+            modal_personal.style.display = "none"
+            modal_production.style.display = "none"
+            modal_company.style.display = "none";
+            modal_company2.style.display = "none";
+            modal_login.style.display = "none";
+            modal_signup.style.display = "block";
+        }
+
+        window.onclick = function (event) {
+            console.log("close modals")
+            if (event.target == modal_login) {
+                modal_login.style.display = "none";
+            }
+            if (event.target == modal_signup) {
+                modal_signup.style.display = "none";
+            }
+        }
+    </script>
     <script>
         function checkUserType() {
             var x = document.getElementById("signup-usertype").value;
@@ -458,7 +503,7 @@
             var c_name = document.getElementById('signup-companyName').value;
             var c_handle = document.getElementById('signup-companyHandle').value;
             var c_type = document.getElementById('company-type').value;
-            
+
             if (checkIfFieldEmpty(c_name)) {
                 createCustomAlert("Please Enter Company Name");
                 return
@@ -478,6 +523,7 @@
 
         function showSignUpModal() {
             modal_production.style.display = "none";
+
             modal_company.style.display = "none";
             modal_company2.style.display = "none";
             modal_personal.style.display = "none";
@@ -485,41 +531,7 @@
 
         }
     </script>
-    <!--Modal Script-->
-    <script>
-        // all modals
-        var modal_login = document.getElementById('myModal1');
-        var modal_signup = document.getElementById('myModal2');
-        var modal_company = document.getElementById('myModalCompany');
-        var modal_company2 = document.getElementById('myCompanyModalAccountManager');
-        var modal_production = document.getElementById('myProductionModal');
-        var modal_personal = document.getElementById('myPersonalModal');
-        // navbar buttons
-        var btn1 = document.getElementById("navbarLoginBtn");
-        var btn2 = document.getElementById("navbarSignUpBtn");
 
-        btn1.onclick = function () {
-            console.log('button login clicked');
-            modal_signup.style.display = "none";
-            modal_login.style.display = "block";
-        }
-
-        btn2.onclick = function () {
-            console.log('button sign up clicked');
-            modal_login.style.display = "none";
-            modal_signup.style.display = "block";
-        }
-
-        window.onclick = function (event) {
-            console.log("close modals")
-            if (event.target == modal_login) {
-                modal_login.style.display = "none";
-            }
-            if (event.target == modal_signup) {
-                modal_signup.style.display = "none";
-            }
-        }
-    </script>
     <!-- log in submit button event listener -->
     <script>
         var input1 = document.getElementById("signin-email");

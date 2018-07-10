@@ -391,7 +391,7 @@ function handleIsUnique(fetched_handle) {
 
     // api call to check if unique
 
-
+console.log(fetched_handle);
     // var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/is_unique';
     var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/is_unique';
 

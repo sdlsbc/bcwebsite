@@ -131,6 +131,7 @@ function favorite(post_id, liked) {
 }
 
 function likesUpdate(post_id) {
+	//let url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read';
 	let url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read';
 
 	fetch(url, {

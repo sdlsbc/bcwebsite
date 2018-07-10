@@ -220,7 +220,7 @@ function loadAndShowPosts(){
 }
 
 function getPostsItems(){
-    var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/favorite_read";
+    var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/favorite_read";
     let params = {
         headers: {
             'content-type': 'application/json',
@@ -447,7 +447,7 @@ function updateUser() {
     let city = document.getElementById('input-new').value;
     let country = document.getElementById('input-confirm').value;
 
-    let url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_update";
+    let url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_update";
 
     let body = {
         'user_id': localStorage.getItem("user_id"),

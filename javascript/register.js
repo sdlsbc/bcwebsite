@@ -2,15 +2,31 @@ var upload_image_base64 = "";
 
 function register() {
     console.log('in register: step1');
-    var email = document.getElementById('signup-email').value;
-    var password = document.getElementById('signup-password').value;
-    var fname = document.getElementById('signup-firstname').value;
-    var lname = document.getElementById('signup-lastname').value;
-    var handle = document.getElementById('signup-handle').value;
-    var city = document.getElementById('signup-city').value;
-    var country = document.getElementById('signup-country').value;
     var userType = document.getElementById("signup-usertype").value;
-    var phone = document.getElementById("signup-phone").value;
+
+    if (userType == "company") {
+
+        var email = document.getElementById('signup-company-email').value;
+        var password = document.getElementById('signup-company-password').value;
+        var fname = document.getElementById('signup-company-firstname').value;
+        var lname = document.getElementById('signup-company-lastname').value;
+        var handle = document.getElementById('signup-companyHandle').value;
+        var city = document.getElementById('signup-company-city').value;
+        var country = document.getElementById('signup-company-country').value;
+        var phone = document.getElementById("signup-company-phone").value;
+
+    } else if (userType == "production" || userType == "personal") {
+
+        var email = document.getElementById('signup-email').value;
+        var password = document.getElementById('signup-password').value;
+        var fname = document.getElementById('signup-firstname').value;
+        var lname = document.getElementById('signup-lastname').value;
+        var handle = document.getElementById('signup-handle').value;
+        var city = document.getElementById('signup-city').value;
+        var country = document.getElementById('signup-country').value;
+        var phone = document.getElementById("signup-phone").value;
+        
+    }
     var c_name = "";
     var p_name = ""
     var dob = "";
@@ -33,8 +49,8 @@ function register() {
                 break;
         }
 
-        // var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_create';
-        var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_create';
+        var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_create';
+        // var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_create';
 
         var data = {
             "handle": handle,
@@ -52,6 +68,7 @@ function register() {
             "contents": upload_image_base64
         };
 
+        console.log('data : ', data)
         fetch(url, {
             method: 'POST',
             body: JSON.stringify(data),
@@ -160,8 +177,8 @@ function saveUserTypeData(token) {
         };
     }
 
-    // var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/" + usertype + "_update";
-    var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/" + usertype + "_update";
+    var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/" + usertype + "_update";
+    // var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/" + usertype + "_update";
 
     fetch(url, {
         method: 'POST',
@@ -179,7 +196,7 @@ function saveUserTypeData(token) {
                 console.log('', response);
 
                 // go to newsfeed
-                // window.location.href = "Newsfeed/newsfeed.html";
+                window.location.href = "Newsfeed/newsfeed.html";
 
             }
         })
@@ -193,8 +210,8 @@ function signin() {
 
     var error_message = validateSigninInput(email, password);
 
-    // var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/login';
-    var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/login';
+    var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/login';
+    // var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/login';
 
     var data = {
         "email": email,
@@ -348,6 +365,15 @@ function validateSignUpInput(e, p, fn, ln, h, ut, city, country) {
     }
 }
 
+function checkIfFieldEmpty(x) {
+
+    if (x == "" || x == null) {
+        return true; // is empty
+    } else {
+        return false;
+    }
+}
+
 function validateEmail(e) {
     var atpos = e.indexOf("@");
     var dotpos = e.lastIndexOf(".");
@@ -398,9 +424,7 @@ function handleIsUnique() {
         })
 }
 
-function checkPasswordsMatch() {
-    var fetched_password = document.getElementById("signup-password").value;
-    var fetched_confirm_password = document.getElementById("signup-confirm-password").value;
+function checkPasswordsMatch(fetched_password,fetched_confirm_password) {
 
     if (fetched_password == "") {
         createCustomAlert("Please Enter Password");
@@ -409,9 +433,7 @@ function checkPasswordsMatch() {
     }
 }
 
-function checkPhoneNumber() {
-    var fetched_phone_number = document.getElementById("signup-phone").value;
-
+function checkPhoneNumber(fetched_phone_number) {
     var regex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;  //international phone number
 
     if (regex.test(fetched_phone_number)) {
@@ -427,12 +449,12 @@ function checkPhoneNumber() {
     }
 }
 
-function checkEmail() {
-    var fetched_email = document.getElementById("signup-email").value;
+function checkEmail(fetched_email) {
+    // var fetched_email = document.getElementById("signup-email").value;
     var atpos = fetched_email.indexOf("@");
     var dotpos = fetched_email.lastIndexOf(".");
     console.log('In validate email inside', fetched_email);
     if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= fetched_email.length) {
         createCustomAlert("Please Enter Valid Email Address");
-    } 
+    }
 }

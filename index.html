@@ -32,11 +32,11 @@
         $("#personal-dateOfBirth").datepicker();
     });
 
-        $(function () {
+    $(function () {
         $("#production-opening").datepicker();
     });
 
-        $(function () {
+    $(function () {
         $("#production-closing").datepicker();
     });
 </script>
@@ -97,7 +97,7 @@
                     </p>
                     <p class="signin-usertype">
                         <label class="signin-label">USER TYPE</label>
-                        <select id="signup-usertype" class="styled-select blue semi-square"  onchange="checkUserType()">
+                        <select id="signup-usertype" class="styled-select blue semi-square" onchange="checkUserType()">
                             <option value="" disabled selected>Select User Type</option>
                             <option value="personal">Personal</option>
                             <option value="company">Company</option>
@@ -125,7 +125,7 @@
                     </p>
                     <p class="signin-email">
                         <label class="email">E-MAIL</label>
-                        <input class="input-email" id="signup-email" type="email" placeholder="E-mail" onfocusout="checkEmail()">
+                        <input class="input-email" id="signup-email" type="email" placeholder="E-mail" onfocusout="checkEmail(document.getElementById('signup-email').value)">
                         <span class="email">Error message here!</span>
                     </p>
                     <p class="signin-password">
@@ -136,7 +136,7 @@
                     </p>
                     <p class="signin-password">
                         <label class="account-password">CONFIRM PASSWORD</label>
-                        <input class="input-account" id="signup-confirm-password" type="password" placeholder="Confirm Password" onfocusout="checkPasswordsMatch()">
+                        <input class="input-account" id="signup-confirm-password" type="password" placeholder="Confirm Password" onfocusout="checkPasswordsMatch('signup-password').value,document.getElementById('signup-confirm-password')">
                         <a href="#0" class="hide">Hide</a>
                         <span class="error">Error message here!</span>
                     </p>
@@ -150,7 +150,7 @@
                     </p>
                     <p class="signin-phone">
                         <label class="signin-label">PHONE</label>
-                        <input class="signin-phone" id="signup-phone" type="text" placeholder="Phone" onfocusout = "checkPhoneNumber()">
+                        <input class="signin-phone" id="signup-phone" type="text" placeholder="Phone" onfocusout="checkPhoneNumber(document.getElementById('signup-phone').value)">
                     </p>
                     <p class="signin-submit">
                         <input class="input-submit" type="button" value="Next >>>" onclick="showNextModal()">
@@ -168,16 +168,18 @@
             <div class="signin" id="signin" data-type="signup">
                 <form class="signin-form">
                     <p class="c-left">
-                        <label class="signin-label" for="signup-handle">Name of Company</label><br>
+                        <label class="signin-label" for="signup-handle">Name of Company</label>
+                        <br>
                         <input class="signin-handle" id="signup-companyName" type="text" placeholder="Enter Company Name">
                     </p>
                     <p class="c_handle">
-                            <label class="signin-label" for="signup-handle">Company Handle</label>
-                            <input class="signin-handle" id="signup-companyName" type="text" placeholder="Enter Company Handle">
-                        </p>
+                        <label class="signin-label" for="signup-handle">Company Handle</label>
+                        <input class="signin-handle" id="signup-companyHandle" type="text" placeholder="Enter Company Handle">
+                    </p>
 
                     <p class="c-right">
-                        <label class="signin-label">Type</label><br>
+                        <label class="signin-label">Type</label>
+                        <br>
                         <select id="company-type">
                             <option value="" disabled selected>Select Company Type</option>
                             <option value="GeneralManagement">General Management</option>
@@ -190,16 +192,18 @@
                         </select>
                     </p>
                     <p class="c-center">
-                        <label class="signin-label" for="signup-firstname">Description</label><br>
+                        <label class="signin-label" for="signup-firstname">Description</label>
+                        <br>
                         <input class="signin-firstname" id="company-desc" type="text" placeholder="About The Company">
-                        
-                        <label class="signin-label2" for="signup-lastname">Link</label><br>
+
+                        <label class="signin-label2" for="signup-lastname">Link</label>
+                        <br>
                         <input class="signin-lastname" id="company-link" type="text" placeholder="Your Link">
                     </p>
                     <p class="c_image">
-                            <input type="file" id="company-image" onchange="companyImage(event)" />
-                            <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
-                        </p>
+                        <input type="file" id="company-image" onchange="companyImage(event)" />
+                        <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
+                    </p>
                     <p class="signin-submit">
                         <input class="input-submit" type="button" value=" <<< Back" onclick="showSignUpModal()">
                     </p>
@@ -207,60 +211,70 @@
                         <input class="input-submit" type="button" value="Next >>>" onclick="nextCompanyModal()">
                     </p>
                 </form>
-            </div> 
+            </div>
         </div>
     </div>
 
     <!-- modal Company Account Manager -->
-        <div id="myCompanyModal" class="index-modal">
-            <div class="index-modal-content">
-                <a href="#login" class="company-login">Company Info</a>
-                <hr>
-                <div class="signin" id="signin" data-type="signup">
-                    <form class="signin-form">
-                        <p class="c_name">
-                            <label class="signin-label" for="signup-handle">Name of Company</label>
-                            <input class="signin-handle" id="signup-companyName" type="text" placeholder="Enter Company Name">
-                        </p>
-                        <p class="c_handle">
-                                <label class="signin-label" for="signup-handle">Company Handle</label>
-                                <input class="signin-handle" id="signup-companyName" type="text" placeholder="Enter Company Handle">
-                            </p>
-                        <p class="c_signin-usertype">
-                            <label class="signin-label">Type</label>
-                            <select id="company-type">
-                                <option value="" disabled selected>Select Company Type</option>
-                                <option value="GeneralManagement">General Management</option>
-                                <option value="Production">Production</option>
-                                <option value="CompanyManagement">Company Management</option>
-                                <option value="Press">Press</option>
-                                <option value="MarketingAdvertising">Marketing/ Advertising</option>
-                                <option value="Casting">Casting</option>
-                                <option value="Organizations">Organizations</option>
-                            </select>
-                        </p>
-                        <p class="c_description">
-                            <label class="signin-label" for="signup-firstname">Description</label>
-                            <input class="signin-firstname" id="company-desc" type="text" placeholder="About The Company">
-                        </p>
-                        <p class="c_link">
-                            <label class="signin-label" for="signup-lastname">Link</label>
-                            <input class="signin-lastname" id="company-link" type="text" placeholder="Your Link">
-                        </p>
-                        <p class="c_image">
-                                <input type="file" id="company-image" onchange="companyImage(event)" />
-                                <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
-                            </p>
-                        <p class="signin-submit">
-                            <input class="input-submit" type="button" value=" <<< Back" onclick="showSignUpModal()">
-                        </p>
-                        <p class="signin-submit">
-                            <input class="input-submit" type="button" value="Next >>>" onclick="nextCompanyModal()">
-                        </p>
-                    </form>
-                </div> 
+    <div id="myCompanyModalAccountManager" class="index-modal">
+        <div class="index-modal-content">
+            <a href="#login" class="a-login">Company User Account Info</a>
+            <hr>
+            <div class="signin" id="signin" data-type="signup">
+                <form class="signin-form">
+                    <p class="first_name">
+                        <label class="signin-label" for="signup-firstname">Please use the email associated with your company. You may not use the same email address to manage
+                            your personal and company profile.</label>
+                    </p>
+                    <p class="first_name">
+                        <label class="signin-label" for="signup-firstname">FIRST NAME</label>
+                        <input class="signin-firstname" id="signup-company-firstname" type="text" placeholder=" Your First Name">
+                        <span class="signin-error">Error message here!</span>
+                    </p>
+                    <p class="last_name">
+                        <label class="signin-label" for="signup-lastname">LAST NAME</label>
+                        <input class="signin-lastname" id="signup-company-lastname" type="text" placeholder="Your Last Name">
+                        <span class="signin-error">Error message here!</span>
+                    </p>
+                    <p class="signin-email">
+                        <label class="email">E-MAIL</label>
+                        <input class="input-email" id="signup-company-email" type="email" placeholder="E-mail" onfocusout="checkEmail(document.getElementById('signup-company-email').value)">
+                        <span class="email">Error message here!</span>
+                    </p>
+                    <p class="signin-password">
+                        <label class="account-password">PASSWORD</label>
+                        <input class="input-account" id="signup-company-password" type="password" placeholder="Password">
+                        <a href="#0" class="hide">Hide</a>
+                        <span class="error">Error message here!</span>
+                    </p>
+                    <p class="signin-password">
+                        <label class="account-password">CONFIRM PASSWORD</label>
+                        <input class="input-account" id="signup-company-confirm-password" type="password" placeholder="Confirm Password" onfocusout="checkPasswordsMatch(document.getElementById('signup-company-password').value,document.getElementById('signup-company-confirm-password').value)">
+                        <a href="#0" class="hide">Hide</a>
+                        <span class="error">Error message here!</span>
+                    </p>
+                    <p class="signin-city">
+                        <label class="signin-label">CITY</label>
+                        <input class="signin-city" id="signup-company-city" type="text" placeholder="City">
+                    </p>
+                    <p class="signin-country">
+                        <label class="signin-label">COUNTRY</label>
+                        <input class="signin-country" id="signup-company-country" type="text" placeholder="Country">
+                    </p>
+                    <p class="signin-phone">
+                        <label class="signin-label">PHONE</label>
+                        <input class="signin-phone" id="signup-company-phone" type="text" placeholder="Phone" onfocusout="checkPhoneNumber(document.getElementById('signup-company-phone').value)">
+                    </p>
+                    <p class="signin-submit">
+                        <input class="input-submit" type="button" value=" <<< Back" onclick="showSignUpModal()">
+                    </p>
+                    <p class="signin-submit">
+                        <input class="input-submit" type="button" value="Sign Up" onclick="register()">
+                    </p>
+                </form>
             </div>
         </div>
+    </div>
 
     <!-- modal Production info -->
     <div id="myProductionModal" class="index-modal">
@@ -337,11 +351,13 @@
             <div class="signin" id="signin" data-type="signup">
                 <form class="signin-form">
                     <p class="p-left">
-                        <label class="signin-label" for="signup-handle">Date Of Birth</label><br>
+                        <label class="signin-label" for="signup-handle">Date Of Birth</label>
+                        <br>
                         <input class="signin-handle" id="personal-dateOfBirth" type="text" placeholder="Enter Your Date of Birth">
                     </p>
                     <p class="p-right">
-                        <label class="signin-label">Profile Type</label><br>
+                        <label class="signin-label">Profile Type</label>
+                        <br>
                         <select id="personal-type">
                             <option value="" disabled selected>Select Profile Type</option>
                             <option value="yes">Private</option>
@@ -349,7 +365,8 @@
                         </select>
                     </p>
                     <p class="p-center">
-                        <label class="signin-label" for="signup-firstname">Headline</label><br>
+                        <label class="signin-label" for="signup-firstname">Headline</label>
+                        <br>
                         <input class="signin-firstname" id="personal-headline" type="text" placeholder="Enter Your Profile Headline">
                         <!-- <span class="signin-error">Error message here!</span> -->
                     </p>
@@ -364,7 +381,7 @@
         </div>
     </div>
     <script>
-        function checkUserType(){
+        function checkUserType() {
             var x = document.getElementById("signup-usertype").value;
             if (x == "company") {
                 // show company modal
@@ -374,29 +391,100 @@
             }
         }
         function showNextModal() {
+
+            // check if all fields are filled
+
+            var email = document.getElementById('signup-email').value;
+            var password = document.getElementById('signup-password').value;
+            var confirm_password = document.getElementById('signup-confirm-password').value;
+            var fname = document.getElementById('signup-firstname').value;
+            var lname = document.getElementById('signup-lastname').value;
+            var handle = document.getElementById('signup-handle').value;
             var x = document.getElementById("signup-usertype").value;
-            // var modal_signup = document.getElementById('myModal2');
+
+            if (checkIfFieldEmpty(x)) {
+                createCustomAlert("Please Select User Type");
+                return
+            }
+            if (checkIfFieldEmpty(fname)) {
+                createCustomAlert("Please Enter First Name");
+                return
+            }
+            if (checkIfFieldEmpty(lname)) {
+                createCustomAlert("Please Enter Last Name");
+                return
+            }
+            if (checkIfFieldEmpty(handle)) {
+                createCustomAlert("Please Enter Handle");
+                return
+            }
+            if (checkIfFieldEmpty(email)) {
+                createCustomAlert("Please Enter Email");
+                return
+            }
+            if (!validateEmail(email)) {
+                createCustomAlert("Please Enter Valid Email Address");
+                return
+            }
+            if (checkIfFieldEmpty(password)) {
+                createCustomAlert("Please Enter Password");
+                return
+            }
+            if (checkIfFieldEmpty(confirm_password)) {
+                createCustomAlert("Please Enter Confirm Password");
+                return
+            }
+            if (password !== confirm_password) {
+                createCustomAlert("Your Passwords Don't Match");
+                return
+            }
+
             console.log('usertype value', x)
-            modal_signup.style.display = "none";
             if (x == "production") {
                 modal_production.style.display = "block";
+                modal_signup.style.display = "none";
             }
             if (x == "personal") {
                 console.log('in personal modal');
                 modal_personal.style.display = "block";
+                modal_signup.style.display = "none";
+            }
+            if (x == "" || x == "company") {
+                createCustomAlert("Please Select UserType");
             }
         }
 
         function nextCompanyModal() {
-            modal_company.style.display = "none";
 
+            // mandatory fields checks
+            var c_name = document.getElementById('signup-companyName').value;
+            var c_handle = document.getElementById('signup-companyHandle').value;
+            var c_type = document.getElementById('company-type').value;
+            
+            if (checkIfFieldEmpty(c_name)) {
+                createCustomAlert("Please Enter Company Name");
+                return
+            }
+            if (checkIfFieldEmpty(c_handle)) {
+                createCustomAlert("Please Enter Company Handle");
+                return
+            }
+            if (checkIfFieldEmpty(c_type)) {
+                createCustomAlert("Please Enter Company Type");
+                return
+            }
+
+            modal_company.style.display = "none";
+            modal_company2.style.display = "block";
         }
 
         function showSignUpModal() {
             modal_production.style.display = "none";
             modal_company.style.display = "none";
+            modal_company2.style.display = "none";
             modal_personal.style.display = "none";
             modal_signup.style.display = "block";
+
         }
     </script>
     <!--Modal Script-->
@@ -405,6 +493,7 @@
         var modal_login = document.getElementById('myModal1');
         var modal_signup = document.getElementById('myModal2');
         var modal_company = document.getElementById('myModalCompany');
+        var modal_company2 = document.getElementById('myCompanyModalAccountManager');
         var modal_production = document.getElementById('myProductionModal');
         var modal_personal = document.getElementById('myPersonalModal');
         // navbar buttons
@@ -465,7 +554,7 @@
     </div>
     <script>
 
-        function companyImage(event){
+        function companyImage(event) {
             var myCanvas = document.getElementById('mycanvascompany');
             var ctx = myCanvas.getContext('2d');
             var img = new Image();

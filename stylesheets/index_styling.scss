@@ -1043,31 +1043,12 @@ code {
     margin-bottom: 10px;
     margin-top: 25px;
   }
-  .contact-mail {
-    text-align: center;
-    #c-email {
-      margin-left: 48%;
-      color: #226BE4;
-      font-size: 16px;
-      font-weight: 400;
-    }
-    input[type=text] {
-      margin-left: 39%;
-      width: 20%;
-      height: 30px;
-      padding-left: 15px;
-      border-radius: 20px;
-      border: 2px solid #226BE4;
-    }
+  .checkbox {
+    margin-left: 46%;
+    text-align: justify;
   }
   .contact-body {
     text-align: center;
-    #c-body {
-      margin-left: 48%;
-      color: #226BE4;
-      font-size: 16px;
-      font-weight: 400;
-    }
     input[type=text] {
       margin-left: 25%;
       padding-top: -20px;
@@ -1117,6 +1098,8 @@ code {
     }
   }
 }
+
+
 
 
 

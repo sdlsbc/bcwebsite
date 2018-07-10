@@ -20,6 +20,7 @@ function checkLocalStorage(page) {
 
 	} else if (PAGE == 'favs') {
 		loadAndShowPosts();
+		loadProfile();
 	} 
 	else if (PAGE == 'profile') {
 		console.log(PAGE);
@@ -66,9 +67,7 @@ function getPostsItems() {
 	if (PAGE == 'favs') {
 		url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/favorite_read"
 	}
-	console.log("fetch ", fetchCount)
-	console.log("offset and limit")
-	console.log(body)
+
 	fetchCount += 1;
 
 	let params = {

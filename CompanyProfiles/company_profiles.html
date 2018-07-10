@@ -11,16 +11,16 @@
  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
-<body onload="loadThese()">
+<body onload="checkLocalStorage('explore')">
     <!-- sidebar. -->
     <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closeNav()">&times;</a>
-    <p></p>
-    <center id="profile_pic"></center>
-    <center>
-      <p class="navname"></p>
-    </center>
-    <center>
+        <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closeNav()">&times;</a>
+        <p> </p>
+        <center id="profile_pic"></center>
+        <center>
+            <p class="navname"></p>
+        </center>
+        <center>
       <p class="profile">
         <button class="my-profile-btn"><a href="../Profile/profile.html" id="profile-a"><p>My Profile</p></a></button>
       </p>
@@ -671,6 +671,7 @@ $(function() {
   <script src="../javascript/register.js"></script>
   <script type="text/javascript" src="../javascript/jsDate.js"></script>
   <script type="text/javascript" src="../javascript/profile.js"></script>
+  <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
 
 
 </body>

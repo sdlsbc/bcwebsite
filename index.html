@@ -168,18 +168,16 @@
             <div class="signin" id="signin" data-type="signup">
                 <form class="signin-form">
                     <p class="c-left">
-                        <label class="signin-label" for="signup-handle">Name of Company</label>
-                        <br>
-                        <input class="signin-handle" id="signup-companyName" type="text" placeholder="Enter Company Name">
+                      <label class="signin-label" for="signup-handle">Name of Company</label><br>
+                      <input class="signin-handle" id="signup-companyName" type="text" placeholder="Enter Company Name">
                     </p>
-                    <p class="c_handle">
-                        <label class="signin-label" for="signup-handle">Company Handle</label>
-                        <input class="signin-handle" id="signup-companyHandle" type="text" placeholder="Enter Company Handle">
-                    </p>
-
                     <p class="c-right">
-                        <label class="signin-label">Type</label>
-                        <br>
+                            <label class="signin-label" for="signup-handle">Company Handle</label>
+                            <input class="signin-handle" id="signup-companyHandle" type="text" placeholder="Enter Company Handle">
+                        </p>
+
+                    <p class="c-left2">
+                        <label class="signin-label">Type</label><br>
                         <select id="company-type">
                             <option value="" disabled selected>Select Company Type</option>
                             <option value="GeneralManagement">General Management</option>
@@ -190,6 +188,10 @@
                             <option value="Casting">Casting</option>
                             <option value="Organizations">Organizations</option>
                         </select>
+                    </p>
+                    <p class="c-right2">
+                            <input type="file" id="company-image" onchange="companyImage(event)" />
+                            <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
                     </p>
                     <p class="c-center">
                         <label class="signin-label" for="signup-firstname">Description</label>

@@ -1787,14 +1787,16 @@ code {
       .signin-form {
         width: 90%;
         .c-left {
-          width: 50%;
+          width: 48%;
+          float: left;
+          margin-left: 15px;
           float: left;
           /*margin-top: -10px;*/
           display: inline-block;
           .signin-label {
             font-size: 16px;
             color: $main-blue;
-            margin-left: 15px;
+            margin-left: 24px;
           }
           input[type=text] {
             width: 100%;
@@ -1808,13 +1810,37 @@ code {
           }
         }
         .c-right {
-          width: 40%;
+          width: 48%;
           float: right;
-          /*margin-top: -10px;*/
+          margin-right: -41px;
+          float: right;
           display: inline-block;
           .signin-label {
             color: $main-blue;
-            font-size: 16px
+            font-size: 16px;
+            margin-left: 24px;
+          }
+          input[type=text] {
+            width: 100%;
+            height: 35px;
+            font-size: 12px;
+            margin-top: 5px;
+            font-weight: 400;
+            border-radius: 25px;
+            padding-left: 23px;
+            border: 1px solid $main-blue;
+          }
+        }
+        .c-left2 {
+          width: 48%;
+          float: left;        
+          margin-left: 15px;
+          /*margin-top: -10px;*/
+          display: inline-block;
+          .signin-label {
+            font-size: 16px;
+            color: $main-blue;
+            margin-left: 24px;
           }
           #company-type {
             width: 100%;
@@ -1829,16 +1855,24 @@ code {
             border: 1px solid $main-blue;
           }
         }
-        .c-center {
-          width: 100%;
+        .c-right2 {
+          width: 38%;
           float: left;
+          margin-top: 46px;
+          margin-left: 48px;
+          display: inline-block;
+        }
+        .c-center {
+          width: 104%;
+          float: left;
+          margin-left: 18px;
           text-align: center;
           display: inline-block;
           .signin-label {
             font-size: 16px;
             color: $main-blue;
             margin-left: -84px;
-            margin-left: -380px;
+            margin-left: -400px;
           }
           input[type=text] {
             width: 100%;
@@ -1854,7 +1888,7 @@ code {
           .signin-label2 {
             font-size: 16px;
             color: $main-blue;
-            margin-left: -429px;
+            margin-left: -452px;
           }
         }
         .signin-submit {

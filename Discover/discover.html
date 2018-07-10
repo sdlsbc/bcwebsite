@@ -137,11 +137,30 @@
     <div id="create-milestones" class="tabcontent">
       <h3>Add a Milestone</h3>
       <form>
-        <input type="text" id="milestones-input" name="milestones" placeholder="New milestone goes here...">
-        <div class="milestones-extra-buttons">
-          <button class="attach-photo">Attach Photo</button>
-          <button class="privacy-btn">Privacy Public</button>
-        </div>
+        <p class="milestone-left">
+          <label class="milestone-label">Type</label><br>
+          <select id="milestone-type">
+            <option value="" disabled selected>Select Milestone Type</option>
+            <option value="option1">Milestone Option 1</option>
+            <option value="option2">Milestone Option 2</option>
+            <option value="option3">Milestone Option 3</option>
+          </select>
+        </p>
+        <p class="milestone-right">
+          <img src="../images/placeholder-bc.png">
+        </p>
+        <p class="milestone-left2">
+          <label class="milestone-label" for="milestone-label1">Fixed Text</label><br>
+          <input class="milestone-text" id="milestone-text1" type="text" placeholder="Enter Company Name">
+        </p>
+        <p class="milestone-right2">
+          <label class="milestone-label" for="milestone-label2">Fixed Text</label><br>
+          <input class="milestone-text" id="milestone-text2" type="text" placeholder="Enter Company Name">
+        </p>
+        <p class="milestone-center">
+          <label class="milestone-label" for="mileston-description">Description</label><br>
+          <input class="milestone-text" id="milestone-text1" type="text" placeholder="Enter Company Name">
+        </p>
         <button class="input-button">Post</button>
       </form>
     </div>
@@ -149,11 +168,31 @@
     <div id="create-moments" class="tabcontent">
       <h3>Add a Moment</h3>
       <form>
-        <input type="text" id="moments-input" name="moments" placeholder="New moment goes here...">
-        <div class="moments-extra-buttons">
-          <button class="attach-photo">Attach Photo</button>
-          <button class="privacy-btn">Privacy Public</button>
-        </div>
+        <p class="moments-left">
+          <label class="moments-label">Type</label><br>
+          <select id="moments-type">
+            <option value="" disabled selected>Select Moments Type</option>
+            <option value="option1">Moments Option 1</option>
+            <option value="option2">Moments Option 2</option>
+            <option value="option3">Moments Option 3</option>
+          </select>
+        </p>
+        <p class="moments-right">
+          <input type="file" id="company-image" onchange="companyImage(event)" />
+          <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
+        </p>
+        <p class="moments-left2">
+          <label class="moments-label" for="moments-label1">Fixed Text</label><br>
+          <input class="moments-text" id="moments-text1" type="text" placeholder="Moments Fixed Text">
+        </p>
+        <p class="moments-right2">
+          <label class="moments-label" for="moments-label2">Fixed Text</label><br>
+          <input class="moments-text" id="moments-text2" type="text" placeholder="Moments Fixed Text">
+        </p>
+        <p class="moments-center">
+          <label class="moments-label" for="mileston-description">Description</label><br>
+          <input class="moments-text" id="moments-text1" type="text" placeholder="Moments Description">
+        </p>
         <button class="input-button">Post</button>
       </form>
     </div>

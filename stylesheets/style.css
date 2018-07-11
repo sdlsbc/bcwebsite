@@ -3976,8 +3976,55 @@ $other-blue-light: #;*/
       padding-left: 15px;
       border-radius: 22px;
       border: 2px solid #226BE4; }
+  .create-modal-contentx .toggle {
+    float: left;
+    margin-top: -2%;
+    margin-left: 9%;
+    text-align: center; }
+    .create-modal-contentx .toggle p {
+      font-size: 14px;
+      color: #226BE4; }
+    .create-modal-contentx .toggle .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px; }
+      .create-modal-contentx .toggle .switch input {
+        display: none; }
+    .create-modal-contentx .toggle .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s; }
+      .create-modal-contentx .toggle .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s; }
+    .create-modal-contentx .toggle input:checked + .slider {
+      background-color: #99CCFF; }
+    .create-modal-contentx .toggle input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3; }
+    .create-modal-contentx .toggle input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px); }
+    .create-modal-contentx .toggle .slider.round {
+      border-radius: 34px; }
+      .create-modal-contentx .toggle .slider.round:before {
+        border-radius: 50%; }
   .create-modal-contentx .save-changes {
-    margin-left: 41%;
+    margin-left: 26%;
     background-color: #226BE4;
     border: 2px solid #226BE4;
     color: white;
@@ -7098,7 +7145,7 @@ $other-blue-light: #;*/
       border: 2px solid #226BE4; }
   .create-modal-contentx .save-changes {
     margin-top: 25px;
-    margin-left: 39%;
+    margin-left: 22%;
     background-color: #226BE4;
     border: 2px solid #226BE4;
     color: white;

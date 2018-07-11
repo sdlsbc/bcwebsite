@@ -12,7 +12,7 @@
 
 </head>
 
-<body onload="loadThese()">
+<body onload="checkLocalStorage('explore')">
     <!-- sidebar. -->
     <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closeNav()">&times;</a>
@@ -110,6 +110,7 @@
   <div class="create-modal-contentx" id="create-modal-contentx">
   <span class="create-closex">&times;</span>
     <h1>Edit Information</h1>
+    <form>
       <span class="edit-left1">
         <label id="edit-first">FIRST NAME</label>
         <br>
@@ -141,7 +142,14 @@
         <br>
         <input type="text" id="input-confirm" name="articles">
       </span>
-
+      <span class="toggle">
+        <p>Public / Private</p>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </span>
+    </form>
       <button class="save-changes" onclick="updateUser()">Save Changes</button>
   </div>
 </div>
@@ -426,5 +434,6 @@
   <script src="../javascript/register.js"></script>
   <script type="text/javascript" src="../javascript/jsDate.js"></script>
   <script type="text/javascript" src="../javascript/profile.js"></script>
+  <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
 </body>
 </html>

@@ -16,7 +16,11 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
+    <style>
+        .wait {
+            cursor: wait;
+        }
+    </style>
 </head>
 
 <script src="./javascript/register.js"></script>
@@ -41,7 +45,7 @@
     });
 </script>
 
-<body class="body">
+<body class="body" id="body">
 
     <!-- navigation bar -->
     <div class="navbar" id="myTopnav">
@@ -57,7 +61,7 @@
     <!-- modal login -->
     <div id="myModal1" class="index-modal">
         <div class="index-modal-content">
-            <a href="#login" class="a-login">Login</a>
+            <a href="#login" class="a-login">Log In</a>
             <hr>
             <br>
             <span class="close"></span>
@@ -76,7 +80,7 @@
                             <span class="error">Error message here!</span>
                         </p>
                         <p class="login-submit">
-                            <input class="input-submit" type="button" id="loginBtn" value="Login" onclick="signin()">
+                            <input class="input-submit" type="button" id="loginBtn" value="Log In" onclick="signin()">
                         </p>
                     </form>
                 </div>

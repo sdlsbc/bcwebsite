@@ -165,9 +165,7 @@ function saveUserTypeData(token) {
         var per_dob = document.getElementById('personal-dateOfBirth').value;
         var per_type = document.getElementById('personal-type').value;
         var per_headline = document.getElementById('personal-headline').value;
-        // var per_career = document.getElementById('personal-career').value;
-        // var per_career_list = '['+'"'+per_career+'"'+']';
-        // console.log('personal profile type ',per_career_list);
+
         data = {
             "user_id": user_id,
             "date_of_birth": per_dob,
@@ -207,8 +205,9 @@ function signin() {
 
     var email = document.getElementById('signin-email').value;
     var password = document.getElementById('signin-password').value;
-
     var error_message = validateSigninInput(email, password);
+    document.getElementById("loginBtn").disabled = true; 
+    
 
     var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/login';
     // var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/login';
@@ -229,6 +228,9 @@ function signin() {
         .then(response => {
 
             console.log('Success: On login', response);
+
+            document.getElementById("loginBtn").disabled = false; 
+            document.getElementById("body").style.cursor = "wait";
 
             if (response.status == "success") {
                 createCustomAlert("you are logged in");
@@ -268,6 +270,8 @@ function signin() {
                 if (localStorage.getItem("token") == "") {
                     createCustomAlert("WARNING: Not saved locally");
                 } else {
+                    document.getElementById("loginBtn").disabled = false; 
+                    document.getElementById("body").style.cursor = "pointer";
                     window.location.href = "Newsfeed/newsfeed.html";
                 }
             }

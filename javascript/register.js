@@ -387,8 +387,12 @@ function validateEmail(e) {
 }
 
 function handleIsUnique(fetched_handle) {
-    var fetched_handle = document.getElementById("signup-handle").value;
 
+    if(fetched_handle == "" || fetched_handle == null)
+    {
+        createCustomAlert("Please Enter Username");
+        return
+    }
     // api call to check if unique
 
 console.log(fetched_handle);
@@ -425,10 +429,13 @@ console.log(fetched_handle);
 }
 
 function checkPasswordsMatch(fetched_password,fetched_confirm_password) {
+console.log('pwd 1:',fetched_password);
+console.log('pwd 2:',fetched_confirm_password);
 
     if (fetched_password == "") {
         createCustomAlert("Please Enter Password");
     } else if (fetched_password !== fetched_confirm_password) {
+        console.log('here');
         createCustomAlert("Your Passwords Don't Match");
     }
 }

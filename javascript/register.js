@@ -5,6 +5,9 @@ function register() {
     var userType = document.getElementById("signup-usertype").value;
 
     if (userType == "company") {
+        document.getElementById("btnSignUpCompany").disabled = true; 
+        document.getElementById("btnSignUpCompany").classList.add('btnDisabled');
+        document.getElementById("body").style.cursor = "wait";
 
         var email = document.getElementById('signup-company-email').value;
         var password = document.getElementById('signup-company-password').value;
@@ -16,6 +19,14 @@ function register() {
         var phone = document.getElementById("signup-company-phone").value;
 
     } else if (userType == "production" || userType == "personal") {
+
+        document.getElementById("btnProductionSubmit").disabled = true; 
+        document.getElementById("btnProductionSubmit").classList.add('btnDisabled');
+
+        document.getElementById("btnSignupPersonal").disabled = true; 
+        document.getElementById("btnSignupPersonal").classList.add('btnDisabled');
+
+        document.getElementById("body").style.cursor = "wait";
 
         var email = document.getElementById('signup-email').value;
         var password = document.getElementById('signup-password').value;
@@ -83,6 +94,14 @@ function register() {
                 if (response.status == "success") {
 
                     console.log('Success:', response);
+
+                    document.getElementById("btnProductionSubmit").disabled = false; 
+                    document.getElementById("btnProductionSubmit").classList.remove('btnDisabled');
+            
+                    document.getElementById("btnSignupPersonal").disabled = false; 
+                    document.getElementById("btnSignupPersonal").classList.remove('btnDisabled');
+            
+                    document.getElementById("body").style.cursor = "pointer";
 
                     if (response.response.message == "Username not unique") {
                         createCustomAlert("Username not Unique, Try again");
@@ -165,9 +184,7 @@ function saveUserTypeData(token) {
         var per_dob = document.getElementById('personal-dateOfBirth').value;
         var per_type = document.getElementById('personal-type').value;
         var per_headline = document.getElementById('personal-headline').value;
-        // var per_career = document.getElementById('personal-career').value;
-        // var per_career_list = '['+'"'+per_career+'"'+']';
-        // console.log('personal profile type ',per_career_list);
+
         data = {
             "user_id": user_id,
             "date_of_birth": per_dob,
@@ -207,8 +224,13 @@ function signin() {
 
     var email = document.getElementById('signin-email').value;
     var password = document.getElementById('signin-password').value;
-
     var error_message = validateSigninInput(email, password);
+
+
+    document.getElementById("loginBtn").disabled = true; 
+    document.getElementById("loginBtn").classList.add('btnDisabled');
+    document.getElementById("body").style.cursor = "wait";
+
 
     // var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/login';
     var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/login';
@@ -229,6 +251,8 @@ function signin() {
         .then(response => {
 
             console.log('Success: On login', response);
+
+            document.getElementById("loginBtn").disabled = false; 
 
             if (response.status == "success") {
                 createCustomAlert("you are logged in");
@@ -268,7 +292,14 @@ function signin() {
                 if (localStorage.getItem("token") == "") {
                     createCustomAlert("WARNING: Not saved locally");
                 } else {
+                    document.getElementById("loginBtn").disabled = false; 
+                    document.getElementById("body").style.cursor = "pointer";
                     window.location.href = "Newsfeed/newsfeed.html";
+
+
+                    document.getElementById("loginBtn").disabled = false; 
+                    document.getElementById("loginBtn").classList.remove('btnDisabled');
+                    document.getElementById("body").style.cursor = "pointer";
                 }
             }
         })
@@ -395,7 +426,6 @@ function handleIsUnique(fetched_handle) {
     }
     // api call to check if unique
 
-console.log(fetched_handle);
     // var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/is_unique';
     var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/is_unique';
 

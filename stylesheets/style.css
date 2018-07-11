@@ -235,27 +235,20 @@
     margin-top: 3px; } }
 /* ===================== M A I N  M O D A L ===================== */
 .modal {
+  display: none;
+  position: fixed;
   text-align: center;
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   padding-top: 100px;
-  /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: navy;
-  /* Fallback color */
-  background-color: rgba(34, 107, 228, 0.5);
-  /* Black w/ opacity */ }
+  background-color: rgba(34, 107, 228, 0.5); }
   .modal .modal-content {
     position: relative;
     background-color: #fefefe;
@@ -272,6 +265,21 @@
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s; }
+
+.create-close {
+  display: none;
+  color: #aaaaaa;
+  float: right;
+  margin-left: -20px;
+  font-size: 28px;
+  font-weight: bold; }
+
+.create-close:hover,
+.create-close:focus {
+  display: none;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer; }
 
 #modal-other {
   text-decoration: none;
@@ -4690,13 +4698,12 @@ $other-blue-light: #;*/
     .create-modal-content #create-milestones .milestone-right {
       width: 40%;
       float: right;
-      margin-top: -37px;
+      margin-top: -45px;
       display: inline-block; }
       .create-modal-content #create-milestones .milestone-right img {
-        width: 70%;
-        height: 110px;
-        margin-left: -8px;
-        border: 2px solid #226BE4; }
+        width: 60%;
+        height: 130px;
+        margin-left: 18px; }
     .create-modal-content #create-milestones .milestone-left2 {
       width: 40%;
       float: left;
@@ -4721,7 +4728,7 @@ $other-blue-light: #;*/
     .create-modal-content #create-milestones .milestone-right2 {
       width: 40%;
       float: right;
-      margin-top: 0px;
+      margin-top: -8px;
       margin-right: 55px;
       display: inline-block; }
       .create-modal-content #create-milestones .milestone-right2 .milestone-label {

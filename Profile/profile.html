@@ -12,7 +12,7 @@
 
 </head>
 
-<body onload="loadThese()">
+<body onload="checkLocalStorage('explore')">
     <!-- sidebar. -->
     <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closeNav()">&times;</a>
@@ -62,7 +62,9 @@
     <span class="open_sidenav" onclick="openNav()">
       <img src="../images/side button2.png">
     </span>
-    <img class="logo" src="../images/bc_solo_logo.png">
+    <a href="../Newsfeed/newsfeed.html">
+      <img class="logo" src="../images/bc_solo_logo.png">
+    </a>
     <a href='../Newsfeed/newsfeed.html'>
       <p>Newsfeed</p>
     </a>
@@ -108,6 +110,7 @@
   <div class="create-modal-contentx" id="create-modal-contentx">
   <span class="create-closex">&times;</span>
     <h1>Edit Information</h1>
+    <form>
       <span class="edit-left1">
         <label id="edit-first">FIRST NAME</label>
         <br>
@@ -121,25 +124,32 @@
       <span class="edit-center">
         <label id="edit-phone-number">PHONE NUMBER</label>
         <br>
-        <input type="number" id="input-email" name="articles" placeholder="Phone">
+        <input type="number" id="input-email" name="articles">
 
         <label id="edit-username">USERNAME</label>
         <br>
-        <input type="text" id="input-username" name="articles" placeholder="Username">
+        <input type="text" id="input-username" name="articles">
       </span>
 
       <span class="edit-left2">
         <label id="edit-new-password">CITY</label>
         <br>
-        <input type="text" id="input-new" name="articles" placeholder="City">
+        <input type="text" id="input-new" name="articles">
       </span>
 
       <span class="edit-right2">
         <label id="edit-confirm-password">COUNTRY</label>
         <br>
-        <input type="text" id="input-confirm" name="articles" placeholder="Country">
+        <input type="text" id="input-confirm" name="articles">
       </span>
-
+      <span class="toggle">
+        <p>Public / Private</p>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </span>
+    </form>
       <button class="save-changes" onclick="updateUser()">Save Changes</button>
   </div>
 </div>
@@ -424,5 +434,6 @@
   <script src="../javascript/register.js"></script>
   <script type="text/javascript" src="../javascript/jsDate.js"></script>
   <script type="text/javascript" src="../javascript/profile.js"></script>
+  <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
 </body>
 </html>

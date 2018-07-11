@@ -1199,7 +1199,7 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
   padding-bottom: 30px;
   padding-top: 7px;
   /* margin-top: -26px;*/
-  margin-top: 15px;
+  margin-top: -20px;
   height: auto; }
   .sidenav .sidenav-links a {
     background-color: #18253B; }
@@ -2354,27 +2354,11 @@ code {
     text-align: center;
     margin-bottom: 10px;
     margin-top: 25px; }
-  .contact .contact-mail {
-    text-align: center; }
-    .contact .contact-mail #c-email {
-      margin-left: 48%;
-      color: #226BE4;
-      font-size: 16px;
-      font-weight: 400; }
-    .contact .contact-mail input[type=text] {
-      margin-left: 39%;
-      width: 20%;
-      height: 30px;
-      padding-left: 15px;
-      border-radius: 20px;
-      border: 2px solid #226BE4; }
+  .contact .checkbox {
+    margin-left: 46%;
+    text-align: justify; }
   .contact .contact-body {
     text-align: center; }
-    .contact .contact-body #c-body {
-      margin-left: 48%;
-      color: #226BE4;
-      font-size: 16px;
-      font-weight: 400; }
     .contact .contact-body input[type=text] {
       margin-left: 25%;
       padding-top: -20px;
@@ -3251,7 +3235,7 @@ $other-blue-light: #;*/
   background: white;
   margin-left: -8px;
   padding-left: 4px;
-  top: 0;
+  top: -1;
   width: 100%;
   z-index: 3;
   display: flex;
@@ -3296,7 +3280,7 @@ $other-blue-light: #;*/
     font-family: "Roboto", sans-serif;
     width: 24%;
     margin-left: 5px;
-    margin-top: -2px; }
+    margin-top: -31px; }
     .navbar a p {
       font-family: "Roboto", sans-serif;
       font-size: 14px;
@@ -3992,8 +3976,55 @@ $other-blue-light: #;*/
       padding-left: 15px;
       border-radius: 22px;
       border: 2px solid #226BE4; }
+  .create-modal-contentx .toggle {
+    float: left;
+    margin-top: -2%;
+    margin-left: 9%;
+    text-align: center; }
+    .create-modal-contentx .toggle p {
+      font-size: 14px;
+      color: #226BE4; }
+    .create-modal-contentx .toggle .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px; }
+      .create-modal-contentx .toggle .switch input {
+        display: none; }
+    .create-modal-contentx .toggle .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s; }
+      .create-modal-contentx .toggle .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s; }
+    .create-modal-contentx .toggle input:checked + .slider {
+      background-color: #99CCFF; }
+    .create-modal-contentx .toggle input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3; }
+    .create-modal-contentx .toggle input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px); }
+    .create-modal-contentx .toggle .slider.round {
+      border-radius: 34px; }
+      .create-modal-contentx .toggle .slider.round:before {
+        border-radius: 50%; }
   .create-modal-contentx .save-changes {
-    margin-left: 41%;
+    margin-left: 26%;
     background-color: #226BE4;
     border: 2px solid #226BE4;
     color: white;
@@ -7114,7 +7145,7 @@ $other-blue-light: #;*/
       border: 2px solid #226BE4; }
   .create-modal-contentx .save-changes {
     margin-top: 25px;
-    margin-left: 39%;
+    margin-left: 22%;
     background-color: #226BE4;
     border: 2px solid #226BE4;
     color: white;
@@ -8189,6 +8220,119 @@ ul p:last-child a.down {
     text-decoration: none;
     font-size: 18px; }
 
+  .contact {
+    border-top: 2px solid #E9E9E9;
+    padding-bottom: 50px;
+    padding-top: 4%; }
+    .contact h2 {
+      margin-left: 5%;
+      width: 90%;
+      font-size: 28px;
+      color: #226BE4;
+      font-weight: 300;
+      text-align: center; }
+    .contact p {
+      width: 80%;
+      margin-left: 9.7%;
+      color: black;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 10px;
+      margin-top: 25px; }
+    .contact .checkbox {
+      margin-left: 20%;
+      text-align: justify; }
+    .contact .contact-body {
+      text-align: center; }
+      .contact .contact-body input[type=text] {
+        margin-left: 8%;
+        padding-top: -20px;
+        width: 80%;
+        height: 175px;
+        padding-left: 15px;
+        border-radius: 20px;
+        border: 2px solid #226BE4; }
+    .contact .contact-submit {
+      margin-top: 6%;
+      margin-left: 38%;
+      background-color: #226BE4;
+      border: 2px solid #226BE4;
+      color: white;
+      padding: 3px 12px;
+      width: 106px;
+      height: 36px;
+      text-align: center;
+      font-size: 12px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      /* Safari */
+      transition-duration: 0.4s;
+      border-radius: 25px;
+      margin-right: 10%;
+      font-size: 14px; }
+      .contact .contact-submit a {
+        color: white;
+        text-decoration: none; }
+      .contact .contact-submit:hover {
+        margin-top: 2%;
+        margin-left: 46%;
+        width: 105px;
+        height: 36px;
+        background-color: white;
+        border: 2px solid #226BE4;
+        border-radius: 25px;
+        margin-right: 10%;
+        color: #226BE4;
+        font-size: 14px; }
+        .contact .contact-submit:hover a {
+          color: #226BE4;
+          text-decoration: none; }
+
+  .navbar {
+    position: fixed;
+    background: white;
+    margin-left: -8px;
+    padding-left: 4px;
+    top: -1;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-right: 4px;
+    padding-bottom: 5px; }
+    .navbar a {
+      font-family: "Roboto", sans-serif;
+      text-decoration: none; }
+      .navbar a p {
+        color: #B2B2B2; }
+        .navbar a p:hover {
+          font-family: "Roboto", sans-serif;
+          text-decoration: none;
+          color: #E9E9E9;
+          font-size: 16px;
+          font-weight: 100;
+          margin-left: 25px;
+          margin-top: 19px; }
+      .navbar a .discover-p-tag {
+        margin-top: 39px; }
+        .navbar a .discover-p-tag:hover {
+          margin-top: 39px; }
+      .navbar a .explore-p-tag {
+        margin-top: 39px; }
+        .navbar a .explore-p-tag:hover {
+          margin-top: 39px; }
+    .navbar p {
+      font-family: "Roboto", sans-serif;
+      color: #B2B2B2;
+      font-size: 16px;
+      font-weight: 100;
+      margin-left: 25px;
+      margin-top: 19px; }
+      .navbar p:hover {
+        color: #E9E9E9; }
+
   .profile-signout-button {
     background-color: #1B5AC3;
     border: 2px solid #1B5AC3;
@@ -9132,121 +9276,238 @@ ul p:last-child a.down {
       .create-modal-content #create-milestones h3 {
         margin-top: 2%;
         color: white;
-        font-size: 20px;
+        font-size: 24px;
         font-weight: 400;
         margin-left: 6%; }
-      .create-modal-content #create-milestones input[type=text] {
+      .create-modal-content #create-milestones .milestone-left {
+        width: 50%;
         float: left;
-        width: 90%;
-        margin-left: 5%;
-        margin-top: 10%;
-        height: 200px;
-        font-size: 16px;
-        border-radius: 1%/5%;
-        box-sizing: border-box;
-        padding: 22px 12px 175px;
-        border: 2px solid #226BE4; }
-      .create-modal-content #create-milestones .milestones-extra-buttons {
-        position: relative;
-        margin-left: 53px;
-        width: 88%;
-        padding-top: 220px;
-        border-bottom: 1px solid #E9E9E9; }
-        .create-modal-content #create-milestones .milestones-extra-buttons .attach-photo {
-          margin-left: -10%;
-          width: 29%;
-          margin-top: -13.5%;
-          float: left;
-          color: #B2B2B2;
-          font-size: 13px;
-          display: inline-block;
-          border-radius: 19%/72%;
-          background-color: #E9E9E9; }
-        .create-modal-content #create-milestones .milestones-extra-buttons .privacy-btn {
-          float: left;
-          margin-left: 20%;
-          width: 31%;
-          margin-top: -13.5%;
-          color: #B2B2B2;
-          font-size: 13px;
-          display: inline-block;
-          border-radius: 19%/72%;
-          background-color: #E9E9E9; }
-      .create-modal-content #create-milestones button {
+        margin-top: -2px;
+        margin-left: 15px;
+        display: inline-block; }
+        .create-modal-content #create-milestones .milestone-left .milestone-label {
+          font-size: 16px;
+          font-weight: 400;
+          margin-left: 9px;
+          font-family: "Roboto", sans-serif;
+          color: #226BE4; }
+        .create-modal-content #create-milestones .milestone-left #milestone-type {
+          width: 100%;
+          color: white;
+          height: 35px;
+          margin-top: 6px;
+          font-size: 12px;
+          font-weight: 400;
+          padding-left: 10px;
+          border-radius: 50px;
+          background-color: #226BE4;
+          border: 1px solid #226BE4; }
+      .create-modal-content #create-milestones .milestone-right {
+        width: 40%;
         float: right;
-        width: 18%;
-        margin-top: -40px;
-        margin-right: 27px;
+        margin-top: -22px;
+        display: inline-block; }
+        .create-modal-content #create-milestones .milestone-right img {
+          width: 70%;
+          height: 75px;
+          margin-left: 20px;
+          border: 2px solid #226BE4; }
+      .create-modal-content #create-milestones .milestone-left2 {
+        width: 46%;
+        float: left;
+        margin-top: 25px;
+        margin-left: 2px;
+        display: inline-block; }
+        .create-modal-content #create-milestones .milestone-left2 .milestone-label {
+          font-size: 16px;
+          font-weight: 400;
+          margin-left: 16px;
+          font-family: "Roboto", sans-serif;
+          color: #226BE4; }
+        .create-modal-content #create-milestones .milestone-left2 input[type=text] {
+          width: 95%;
+          height: 35px;
+          font-size: 12px;
+          margin-top: 5px;
+          font-weight: 400;
+          border-radius: 25px;
+          padding-left: 15px;
+          border: 1px solid #226BE4; }
+      .create-modal-content #create-milestones .milestone-right2 {
+        width: 43%;
+        float: right;
+        margin-top: 20px;
+        margin-right: 14px;
+        display: inline-block; }
+        .create-modal-content #create-milestones .milestone-right2 .milestone-label {
+          font-size: 16px;
+          font-weight: 400;
+          margin-left: 16px;
+          font-family: "Roboto", sans-serif;
+          color: #226BE4; }
+        .create-modal-content #create-milestones .milestone-right2 input[type=text] {
+          width: 95%;
+          height: 35px;
+          font-size: 12px;
+          margin-top: 5px;
+          font-weight: 400;
+          border-radius: 25px;
+          padding-left: 15px;
+          border: 1px solid #226BE4; }
+      .create-modal-content #create-milestones .milestone-center {
+        width: 89%;
+        margin-top: 8px;
+        margin-left: 2%;
+        display: inline-block; }
+        .create-modal-content #create-milestones .milestone-center .milestone-label {
+          font-size: 16px;
+          font-weight: 400;
+          margin-left: 15px;
+          font-family: "Roboto", sans-serif;
+          color: #226BE4; }
+        .create-modal-content #create-milestones .milestone-center input[type=text] {
+          width: 100%;
+          height: 80px;
+          font-size: 16px;
+          margin-top: 5px;
+          font-weight: 400;
+          border-radius: 25px;
+          padding-left: 15px;
+          border: 1px solid #226BE4; }
+      .create-modal-content #create-milestones button {
+        float: none;
+        width: 30%;
+        margin-top: 2px;
+        margin-right: 0px;
+        margin-left: 36%;
+        border-radius: 25px;
         background-color: #226BE4;
         color: white;
         padding: 5px 12px;
-        height: 31px;
+        height: 35px;
         text-align: center;
         cursor: pointer;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
-        font-size: 14px;
+        font-size: 18px;
         font-family: "Roboto", sans-serif; }
     .create-modal-content #create-moments {
       background-color: #abc1f4; }
       .create-modal-content #create-moments h3 {
-        font-weight: 400;
+        margin-top: 2%;
         color: white;
-        font-size: 20px;
-        margin-left: 5%;
-        margin-top: 3%; }
-      .create-modal-content #create-moments input[type=text] {
+        font-size: 24px;
+        font-weight: 400;
+        margin-left: 6%; }
+      .create-modal-content #create-moments .moments-left {
+        width: 50%;
         float: left;
-        width: 90%;
-        margin-left: 5%;
-        margin-top: 10%;
-        height: 200px;
-        font-size: 14px;
-        border-radius: 1%/5%;
-        box-sizing: border-box;
-        padding: 22px 12px 175px;
-        border: 2px solid #226BE4; }
-      .create-modal-content #create-moments .moments-extra-buttons {
-        position: relative;
-        margin-left: 48px;
-        width: 90%;
-        border-bottom: 1px solid #E9E9E9;
-        padding-top: 151px;
-        z-index: 4; }
-        .create-modal-content #create-moments .moments-extra-buttons .attach-photo {
-          margin-left: -10%;
-          width: 29%;
-          margin-top: -13.5%;
-          float: left;
-          color: #B2B2B2;
-          font-size: 13px;
-          display: inline-block;
-          border-radius: 19%/72%;
-          background-color: #E9E9E9; }
-        .create-modal-content #create-moments .moments-extra-buttons .privacy-btn {
-          float: left;
-          margin-left: 20%;
-          width: 31%;
-          margin-top: -13.5%;
-          color: #B2B2B2;
-          font-size: 13px;
-          display: inline-block;
-          border-radius: 19%/72%;
-          background-color: #E9E9E9; }
-      .create-modal-content #create-moments button {
+        margin-top: -2px;
+        margin-left: 2px;
+        display: inline-block; }
+        .create-modal-content #create-moments .moments-left .moments-label {
+          font-size: 16px;
+          font-weight: 400;
+          margin-left: 9px;
+          font-family: "Roboto", sans-serif;
+          color: #226BE4; }
+        .create-modal-content #create-moments .moments-left #moments-type {
+          width: 100%;
+          color: white;
+          height: 35px;
+          margin-top: 6px;
+          font-size: 12px;
+          font-weight: 400;
+          padding-left: 10px;
+          border-radius: 50px;
+          background-color: #226BE4;
+          border: 1px solid #226BE4; }
+      .create-modal-content #create-moments .moments-right {
+        width: 31%;
         float: right;
-        width: 18%;
-        margin-top: -40px;
-        margin-right: 27px;
+        padding-bottom: 36px;
+        margin-top: 26px;
+        display: inline-block; }
+        .create-modal-content #create-moments .moments-right input[type=file] {
+          font-size: 11px; }
+      .create-modal-content #create-moments .moments-left2 {
+        width: 46%;
+        float: left;
+        margin-top: 25px;
+        margin-left: 2px;
+        display: inline-block; }
+        .create-modal-content #create-moments .moments-left2 .moments-label {
+          font-size: 16px;
+          font-weight: 400;
+          margin-left: 16px;
+          font-family: "Roboto", sans-serif;
+          color: #226BE4; }
+        .create-modal-content #create-moments .moments-left2 input[type=text] {
+          width: 95%;
+          height: 35px;
+          font-size: 12px;
+          margin-top: 5px;
+          font-weight: 400;
+          border-radius: 25px;
+          padding-left: 15px;
+          border: 1px solid #226BE4; }
+      .create-modal-content #create-moments .moments-right2 {
+        width: 43%;
+        float: right;
+        margin-top: 1px;
+        margin-right: 14px;
+        display: inline-block; }
+        .create-modal-content #create-moments .moments-right2 .moments-label {
+          font-size: 16px;
+          font-weight: 400;
+          margin-left: 16px;
+          font-family: "Roboto", sans-serif;
+          color: #226BE4; }
+        .create-modal-content #create-moments .moments-right2 input[type=text] {
+          width: 95%;
+          height: 35px;
+          font-size: 12px;
+          margin-top: 5px;
+          font-weight: 400;
+          border-radius: 25px;
+          padding-left: 15px;
+          border: 1px solid #226BE4; }
+      .create-modal-content #create-moments .moments-center {
+        width: 89%;
+        margin-top: 8px;
+        margin-left: 2%;
+        display: inline-block; }
+        .create-modal-content #create-moments .moments-center .moments-label {
+          font-size: 16px;
+          font-weight: 400;
+          margin-left: 15px;
+          font-family: "Roboto", sans-serif;
+          color: #226BE4; }
+        .create-modal-content #create-moments .moments-center input[type=text] {
+          width: 100%;
+          height: 80px;
+          font-size: 16px;
+          margin-top: 5px;
+          font-weight: 400;
+          border-radius: 25px;
+          padding-left: 15px;
+          border: 1px solid #226BE4; }
+      .create-modal-content #create-moments button {
+        float: none;
+        width: 30%;
+        margin-top: 2px;
+        margin-right: 0px;
+        margin-left: 36%;
+        border-radius: 25px;
         background-color: #226BE4;
         color: white;
         padding: 5px 12px;
-        height: 31px;
+        height: 35px;
         text-align: center;
         cursor: pointer;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
-        font-size: 14px;
+        font-size: 18px;
         font-family: "Roboto", sans-serif; }
     .create-modal-content #create-articles {
       width: 95%;
@@ -9274,9 +9535,9 @@ ul p:last-child a.down {
           float: left;
           margin-top: 3%;
           margin-bottom: 2%;
-          border-radius: 3%/40%;
+          border-radius: 25px;
           padding: 10px 12px 10px;
-          border: 2px solid #226BE4; }
+          border: 1px solid #226BE4; }
       .create-modal-content #create-articles .right {
         width: 46%;
         float: right;
@@ -9294,9 +9555,9 @@ ul p:last-child a.down {
           float: right;
           margin-top: 3%;
           margin-bottom: 2%;
-          border-radius: 3%/40%;
+          border-radius: 25px;
           padding: 10px 12px 10px;
-          border: 2px solid #226BE4; }
+          border: 1px solid #226BE4; }
       .create-modal-content #create-articles .center {
         margin-top: 3%;
         width: 100%;
@@ -9314,10 +9575,10 @@ ul p:last-child a.down {
           margin-top: 6px;
           height: 75px;
           font-size: 14px;
-          border-radius: 3%/40%;
+          border-radius: 25px;
           box-sizing: border-box;
           padding: 22px 12px 50px;
-          border: 2px solid #226BE4; }
+          border: 1px solid #226BE4; }
         .create-modal-content #create-articles .center #a-tag {
           margin-top: 15px;
           float: left;
@@ -9329,9 +9590,9 @@ ul p:last-child a.down {
           width: 85%;
           height: 10px;
           margin-top: 7px;
-          border-radius: 1%/40%;
+          border-radius: 25px;
           padding: 10px 12px 10px;
-          border: 2px solid #226BE4; }
+          border: 1px solid #226BE4; }
       .create-modal-content #create-articles .articles-extra-buttons {
         margin-left: 48px;
         width: 90%;
@@ -9397,9 +9658,9 @@ ul p:last-child a.down {
           float: left;
           margin-top: 3%;
           margin-bottom: 2%;
-          border-radius: 3%/40%;
+          border-radius: 25px;
           padding: 10px 12px 10px;
-          border: 2px solid #226BE4; }
+          border: 1px solid #226BE4; }
       .create-modal-content #create-events .right {
         width: 46%;
         float: right;
@@ -9417,9 +9678,9 @@ ul p:last-child a.down {
           float: right;
           margin-top: 3%;
           margin-bottom: 2%;
-          border-radius: 3%/40%;
+          border-radius: 25px;
           padding: 10px 12px 10px;
-          border: 2px solid #226BE4; }
+          border: 1px solid #226BE4; }
       .create-modal-content #create-events .center {
         margin-top: 3%;
         width: 100%;
@@ -9437,10 +9698,10 @@ ul p:last-child a.down {
           margin-top: 6px;
           height: 75px;
           font-size: 14px;
-          border-radius: 3%/40%;
+          border-radius: 25px;
           box-sizing: border-box;
           padding: 22px 12px 50px;
-          border: 2px solid #226BE4; }
+          border: 1px solid #226BE4; }
         .create-modal-content #create-events .center #e-tag {
           margin-top: 15px;
           float: left;
@@ -9452,9 +9713,9 @@ ul p:last-child a.down {
           width: 85%;
           height: 10px;
           margin-top: 7px;
-          border-radius: 1%/40%;
+          border-radius: 25px;
           padding: 10px 12px 10px;
-          border: 2px solid #226BE4; }
+          border: 1px solid #226BE4; }
       .create-modal-content #create-events .events-extra-buttons {
         margin-left: 48px;
         width: 90%;

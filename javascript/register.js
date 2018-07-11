@@ -391,8 +391,16 @@ function validateEmail(e) {
 }
 
 function handleIsUnique(fetched_handle) {
+<<<<<<< HEAD
     var fetched_handle = document.getElementById('signup-handle').value;
+=======
+>>>>>>> 13e13384b900e48c6592055de2e811bebc927b56
 
+    if(fetched_handle == "" || fetched_handle == null)
+    {
+        createCustomAlert("Please Enter Username");
+        return
+    }
     // api call to check if unique
 
     var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/is_unique';
@@ -428,10 +436,13 @@ function handleIsUnique(fetched_handle) {
 }
 
 function checkPasswordsMatch(fetched_password,fetched_confirm_password) {
+console.log('pwd 1:',fetched_password);
+console.log('pwd 2:',fetched_confirm_password);
 
     if (fetched_password == "") {
         createCustomAlert("Please Enter Password");
     } else if (fetched_password !== fetched_confirm_password) {
+        console.log('here');
         createCustomAlert("Your Passwords Don't Match");
     }
 }

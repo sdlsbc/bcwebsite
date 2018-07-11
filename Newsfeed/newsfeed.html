@@ -36,7 +36,7 @@
 </style>
 <body onload="checkLocalStorage('newsfeed')">
     <!-- sidebar. -->
-    <div id="mySidenav" class="sidenav">
+  <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closeNav()">&times;</a>
     <p></p>
     <center id="profile_pic"></center>
@@ -45,7 +45,7 @@
     </center>
     <center>
       <p class="profile">
-        <a href="../Profile/profile.html" id="profile-a">My Profile</a>
+        <button class="my-profile-btn"><a href="../Profile/profile.html" id="profile-a"><p>My Profile</p></a></button>
       </p>
     </center>
     <br/>
@@ -84,7 +84,11 @@
       <span class="open_sidenav" onclick="openNav()">
         <img src="../images/side button2.png">
       </span>
-      <img class="logo" src="../images/bc_solo_logo.png">
+
+      <a href="../Newsfeed/newsfeed.html">
+        <img class="logo" src="../images/bc_solo_logo.png">
+      </a>
+      <!-- <img class="logo" src="../images/bc_solo_logo.png"> -->
       <a href='../Newsfeed/newsfeed.html'>
         <p class="newsfeed-p-tag" style="border-bottom: 4px solid #226BE4; padding-bottom: 15px; color: #226BE4;">Newsfeed</p>
       </a>

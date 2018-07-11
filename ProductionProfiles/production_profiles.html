@@ -346,13 +346,27 @@
           <label class="milestone-label">Type</label><br>
           <select id="milestone-type">
             <option value="" disabled selected>Select Milestone Type</option>
-            <option value="option1">Milestone Option 1</option>
-            <option value="option2">Milestone Option 2</option>
-            <option value="option3">Milestone Option 3</option>
+            <option value="../images/milestones-img1.png">Casted as Photo</option>
+            <option value="../images/milestones-img2.png">First Rehearsal</option>
+            <option value="../images/milestones-img3.png">Opening Night</option>
+            <option value="../images/milestones-img4.png">First Day Of Work</option>
+            <option value="../images/milestones-img5.png">First Broadway Show</option>
+            <option value="../images/milestones-img6.png">Audition</option>
+            <option value="../images/milestones-img7.png">Call Back</option>
+            <option value="../images/milestones-img8.png">Offer</option>
           </select>
         </p>
+        <script>
+          function setMilestoneImg() {
+            var img = document.getElementById("image");
+            img.src = this.value;
+            return false;
+          }
+          document.getElementById("milestone-type").onchange = setMilestoneImg;
+        </script>
+
         <p class="milestone-right">
-          <img src="../images/placeholder-bc.png">
+          <img id="image" src="../images/placeholder-bc.png">
         </p>
         <p class="milestone-left2">
           <label class="milestone-label" for="milestone-label1">Fixed Text</label><br>

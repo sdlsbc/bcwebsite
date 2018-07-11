@@ -4701,13 +4701,13 @@ $other-blue-light: #;*/
       margin-top: -45px;
       display: inline-block; }
       .create-modal-content #create-milestones .milestone-right img {
-        width: 60%;
-        height: 130px;
+        width: 55%;
+        height: 115px;
         margin-left: 18px; }
     .create-modal-content #create-milestones .milestone-left2 {
       width: 40%;
       float: left;
-      margin-top: 29px;
+      margin-top: 14px;
       margin-left: 50px;
       display: inline-block; }
       .create-modal-content #create-milestones .milestone-left2 .milestone-label {
@@ -4748,7 +4748,7 @@ $other-blue-light: #;*/
         border: 1px solid #226BE4; }
     .create-modal-content #create-milestones .milestone-center {
       width: 86%;
-      margin-top: 8px;
+      margin-top: -2px;
       margin-left: 6%;
       display: inline-block; }
       .create-modal-content #create-milestones .milestone-center .milestone-label {
@@ -4766,6 +4766,11 @@ $other-blue-light: #;*/
         border-radius: 25px;
         padding-left: 15px;
         border: 1px solid #226BE4; }
+    .create-modal-content #create-milestones .only-me-checkbox {
+      float: left;
+      margin-left: 6%;
+      font-size: 14px;
+      color: #226BE4; }
     .create-modal-content #create-milestones button {
       float: right;
       width: 102px;

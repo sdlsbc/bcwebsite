@@ -1962,14 +1962,16 @@ hr {
     font-size: 14px;
     font-weight: 100; }
 
-.forgot a {
+.forgot-password a {
   font-family: "Roboto", sans-serif;
   margin-top: 20px;
   color: #0080FF;
   text-align: center;
-  margin-left: 33%;
+  margin-left: 40%;
   text-decoration: none;
-  font-size: 18px; }
+  font-size: 14px; }
+  .forgot-password a:hover {
+    color: #99CCFF; }
 
 /* ====================== C L O S E  B T N ====================== */
 .close {

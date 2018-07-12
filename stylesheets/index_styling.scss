@@ -611,14 +611,17 @@ hr {
     font-weight: 100;
   }
 }
-.forgot a {
+.forgot-password a {
   font-family: $font;
   margin-top: 20px;
   color: #0080FF;;
   text-align: center;
-  margin-left: 33%;
+  margin-left: 40%;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 14px;
+  &:hover {
+    color: $medium-blue;
+  }
 }
 
 

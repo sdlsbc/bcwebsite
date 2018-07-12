@@ -482,15 +482,15 @@
       margin-top: -45px;
       display: inline-block;
       img {
-        width: 60%;
-        height: 130px;
+        width: 55%;
+        height: 115px;
         margin-left: 18px;
       }
     }
     .milestone-left2 {
       width: 40%;
       float: left;
-      margin-top: 29px;
+      margin-top: 14px;
       margin-left: 50px;
       display: inline-block;
       .milestone-label {
@@ -537,7 +537,7 @@
     }
     .milestone-center {
       width: 86%;
-      margin-top: 8px;
+      margin-top: -2px;
       margin-left: 6%;
       display: inline-block;
       .milestone-label {
@@ -558,6 +558,13 @@
         border: 1px solid $main-blue;
       }
     }
+    .only-me-checkbox {
+      float: left;
+      margin-left: 6%;
+      font-size: 14px;
+      color: $main-blue;
+    }
+      
     button {
       float: right;
       width: 102px;

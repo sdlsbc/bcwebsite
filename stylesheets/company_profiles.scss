@@ -470,7 +470,7 @@
     }
   }
 }
-.save-changes {
+.save-changesx {
   margin-top: 25px;
   margin-left: 42%;
   padding-top: 40px;
@@ -534,6 +534,41 @@ ul p:last-child a.down {
 
 
 
+.save-changesz {
+  margin-top: 25px;
+  margin-left: 42%;
+  padding-top: 40px;
+  background-color: #226BE4;
+  border: 2px solid #226BE4;
+  color: white;
+  padding: 3px 12px;
+  width: 146px;
+  height: 40px;
+  font-weight: 400;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 25px;
+  margin-right: 10%;
+  font-size: 14px;
+  &:hover {
+    margin-left: 42%;
+    padding-top: 40px;
+    padding: 3px 12px;
+    margin-top: 25px;
+    width: 145px;
+    height: 40px;
+    font-weight: 400;
+    background-color: white;
+    border: 2px solid #226BE4;
+    border-radius: 25px;
+    margin-right: 10%; 
+    color: #226BE4;
+    font-size: 14px;
+  }
+}
 
 
 
@@ -703,7 +738,7 @@ ul p:last-child a.down {
       height: 20%;
       margin-left: 4%;
       .cp-clients {
-        width: 15%;
+        width: 22%;
         margin-top: 4%;
         margin-left: 2%;
         overflow-x: scroll;
@@ -842,9 +877,9 @@ ul p:last-child a.down {
       }
       input[type=text] {
         width: 77%;
-        height: 120px;
+        height: 180px;
         margin-top: 6px;
-        font-size: 12px;
+        font-size: 16px;
         font-weight: 400;
         color: $main-blue;
         margin-left: 9.5%;
@@ -904,7 +939,7 @@ ul p:last-child a.down {
     .save-changes {
       margin-top: 43px;
       padding-top: 75px;
-      margin-left: 35%;
+      margin-left: 38%;
       background-color: #226BE4;
       border: 2px solid #226BE4;
       color: white;
@@ -1031,8 +1066,8 @@ ul p:last-child a.down {
       }
     }
   }
-  .save-changes {
-    margin-top: 10px;
+  .save-changesx {
+    margin-top: 45px;
     margin-left: 36%;
     padding-top: 20px;
     background-color: #226BE4;
@@ -1064,6 +1099,39 @@ ul p:last-child a.down {
     }
   }
   
+
+  .save-changesz {
+    margin-top: 80px;
+    margin-left: 36%;
+    padding-top: 20px;
+    background-color: #226BE4;
+    border: 2px solid #226BE4;
+    color: white;
+    padding: 3px 12px;
+    width: 146px;
+    height: 40px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 25px;
+    margin-right: 10%;
+    font-size: 14px;
+    &:hover {
+      margin-top: 10px;
+      width: 145px;
+      height: 40px;
+      font-weight: 400;
+      background-color: white;
+      border: 2px solid #226BE4;
+      border-radius: 25px;
+      margin-right: 10%; 
+      color: #226BE4;
+      font-size: 14px;
+    }
+  }
   ul p:first-child a.up,
   ul p:last-child a.down {
     display: none;
@@ -1077,7 +1145,7 @@ ul p:last-child a.down {
     color: #aaaaaa;
     float: right;
     margin-right: 2%;
-    font-size: 28px;
+    font-size: 40px;
     font-weight: bold;
   }
   .create-closey:hover,
@@ -1162,7 +1230,7 @@ ul p:last-child a.down {
   color: #aaaaaa;
   float: right;
   margin-right: 2%;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
 }
 .create-closez:hover,

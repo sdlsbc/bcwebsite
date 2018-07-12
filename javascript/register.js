@@ -247,15 +247,15 @@ function signin() {
             'Content-Type': 'application/json'
         }
     }).then(res => res.json())
-        .catch(error => console.error('Error:', error))
+        .catch(error => {
+            createCustomAlert(error);
+            console.error('Error:', error);
+        })
         .then(response => {
-
-            console.log('Success: On login', response);
 
             document.getElementById("loginBtn").disabled = false; 
 
             if (response.status == "success") {
-                createCustomAlert("you are logged in");
                 var token = response.response.token;
                 var user_image = response.response.user.image;
                 var user_id = response.response.user_id;
@@ -263,8 +263,8 @@ function signin() {
                 var res_usertype = response.response.user.usertype;
                 var firstname = response.response.user.lastname;
                 var lastname = response.response.user.firstname;
-                console.log(res_usertype);
-                var res_usertype_id = "";
+                var res_usertype_id = "";               
+
                 if (res_usertype == "company") {
                     res_usertype_id = response.response.user.company;
                     console.log('usertype id in register.js', res_usertype_id);

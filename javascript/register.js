@@ -246,7 +246,8 @@ function signin() {
         headers: {
             'Content-Type': 'application/json'
         }
-    }).then(res => res.json())
+    })
+    .then(res => res.json())
         .catch(error => {
             createCustomAlert(error);
             console.error('Error:', error);
@@ -254,8 +255,14 @@ function signin() {
         .then(response => {
 
             document.getElementById("loginBtn").disabled = false; 
+            document.getElementById("body").style.cursor = "default";
 
-            if (response.status == "success") {
+            if (response.statusCode == 400 && response.reason == "WRONG_PASSWORD") {
+
+                createCustomAlert(response.message);
+
+
+            } else if (response.status == "success") {
                 var token = response.response.token;
                 var user_image = response.response.user.image;
                 var user_id = response.response.user_id;
@@ -302,6 +309,10 @@ function signin() {
                     document.getElementById("body").style.cursor = "pointer";
                 }
             }
+        })
+        .then(error => {
+            console.log('error bad request', error);
+            createCustomAlert('This Account Does Not Exits');
         })
 }
 

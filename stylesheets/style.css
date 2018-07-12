@@ -42,10 +42,11 @@
       color: #B2B2B2;
       font-size: 16px;
       font-weight: 100;
-      margin-left: 25px;
+      margin-left: 40px;
       margin-top: 19px; }
       .navbar a .newsfeed-p-tagx:hover {
-        color: #E9E9E9; }
+        color: #E9E9E9;
+        margin-left: 40px; }
     .navbar a .newsfeed-p-tag {
       font-size: 16px;
       font-weight: 100;
@@ -54,7 +55,8 @@
       font-family: 'Roboto', sans-serif;
       text-align: center; }
       .navbar a .newsfeed-p-tag:hover {
-        margin-top: 39px; }
+        margin-top: 39px;
+        margin-left: 25px; }
   .navbar .signout-x {
     float: right;
     width: 10%;
@@ -68,6 +70,17 @@
     display: inline-block;
     margin-top: 1px; }
 
+@media screen and (max-width: 1000px) {
+  .navbar .logo-a {
+    height: 57%;
+    width: 44%;
+    margin-top: 3px; }
+    .navbar .logo-a .logo {
+      height: 42px;
+      width: 80%;
+      margin-left: 28px;
+      margin-right: -10px;
+      margin-top: 1px; } }
 @media screen and (max-width: 900px) {
   .navbar a {
     width: 14%;
@@ -104,40 +117,41 @@
     display: inline-block;
     margin-top: 1px; } }
 @media screen and (max-width: 700px) {
-  .navbar a {
-    width: 20%;
-    margin-left: 5px;
-    text-decoration: none; }
-    .navbar a .p-tagx {
-      color: #B2B2B2;
-      font-size: 16px;
-      font-weight: 100;
-      margin-left: 25px;
-      margin-top: 19px; }
-      .navbar a .p-tagx:hover {
-        color: #E9E9E9; }
-    .navbar a .p-tag {
-      color: #226BE4;
-      font-size: 16px;
-      font-weight: 100;
-      margin-left: 25px;
-      margin-top: 39px;
-      font-family: 'Roboto', sans-serif;
-      text-align: center;
-      border-bottom: 4px solid #226BE4;
-      padding-bottom: 15px; }
-  .navbar .signout-x {
-    float: right;
-    width: 20%;
-    display: inline-block;
-    margin-left: 25%;
-    margin-right: 10%;
-    margin-top: 1px; }
-  .navbar .signout-y {
-    float: right;
-    width: 20%;
-    display: inline-block;
-    margin-top: 1px; } }
+  .navbar {
+    position: fixed;
+    background: white;
+    margin-left: -8px;
+    padding-left: 4px;
+    height: 60px;
+    margin-top: 1px;
+    top: -6px;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-right: 4px; }
+    .navbar a {
+      text-decoration: none; }
+      .navbar a .newsfeed-p-tagx {
+        color: #B2B2B2;
+        font-size: 14px;
+        font-weight: 100;
+        margin-left: 17px;
+        margin-top: 19px; }
+        .navbar a .newsfeed-p-tagx:hover {
+          color: #E9E9E9;
+          margin-left: 17px; }
+      .navbar a .newsfeed-p-tag {
+        font-size: 16px;
+        font-weight: 100;
+        margin-left: 25px;
+        margin-top: 39px;
+        font-family: 'Roboto', sans-serif;
+        text-align: center; }
+        .navbar a .newsfeed-p-tag:hover {
+          margin-top: 39px;
+          margin-left: 25px; } }
 /* ===================== S I G N  O U T ===================== */
 .signout {
   display: flex;
@@ -235,7 +249,8 @@
   .navbar .logo-a {
     height: 57%;
     width: 83%;
-    margin-top: 3px; }
+    margin-top: 3px;
+    margin-left: 12px; }
     .navbar .logo-a .logo {
       height: 42px;
       width: 80%;
@@ -3274,7 +3289,7 @@ $other-blue-light: #;*/
         color: #E9E9E9;
         font-size: 16px;
         font-weight: 100;
-        margin-left: 25px;
+        margin-left: 44px;
         margin-top: 19px; }
     .navbar a .discover-p-tag {
       margin-top: 39px; }
@@ -3289,7 +3304,7 @@ $other-blue-light: #;*/
     color: #B2B2B2;
     font-size: 16px;
     font-weight: 100;
-    margin-left: 25px;
+    margin-left: 44px;
     margin-top: 19px; }
     .navbar p:hover {
       color: #E9E9E9; }
@@ -3298,14 +3313,14 @@ $other-blue-light: #;*/
   .navbar a {
     font-family: "Roboto", sans-serif;
     width: 24%;
-    margin-left: 5px;
-    margin-top: -31px; }
+    margin-left: 0px;
+    margin-top: -33px; }
     .navbar a p {
       font-family: "Roboto", sans-serif;
       font-size: 14px;
       font-weight: 100;
-      margin-left: 10px;
-      margin-top: 10px; }
+      margin-left: 36px;
+      margin-top: 22px; }
     .navbar a .discover-p-tag {
       margin-top: 27px; }
     .navbar a .explore-p-tag {
@@ -3313,7 +3328,7 @@ $other-blue-light: #;*/
     .navbar a .newsfeed-p-tag {
       margin-top: 36px;
       margin-left: 11px;
-      font-size: 12px; }
+      font-size: 14px; }
 
   .open_sidenav {
     width: 36px;
@@ -5505,17 +5520,18 @@ $other-blue-light: #;*/
         margin-bottom: 10px;
         border-radius: 12px; }
       .create-modal-content .column1 h4 {
-        width: 90%;
-        height: 35%;
+        width: 80%;
+        height: 55%;
         font-size: 16px;
         font-weight: 400;
-        margin-left: 4.5%;
+        margin-left: 9.5%;
+        margin-top: 30px;
         color: #18253B;
         text-align: center; }
       .create-modal-content .column1 .create-button-wrapper {
         width: 100%;
         text-align: center;
-        margin-top: -180px;
+        margin-top: -220px;
         margin-left: -0.7%; }
         .create-modal-content .column1 .create-button-wrapper .create-button {
           border-radius: 24%/72%;
@@ -5619,13 +5635,12 @@ $other-blue-light: #;*/
       .create-modal-content #create-milestones .milestone-right {
         width: 40%;
         float: right;
-        margin-top: -22px;
+        margin-top: -52px;
         display: inline-block; }
         .create-modal-content #create-milestones .milestone-right img {
           width: 70%;
-          height: 110px;
-          margin-left: 20px;
-          border: 2px solid #226BE4; }
+          height: 140px;
+          margin-left: -8px; }
       .create-modal-content #create-milestones .milestone-left2 {
         width: 40%;
         float: left;
@@ -5799,7 +5814,7 @@ $other-blue-light: #;*/
           color: #226BE4; }
         .create-modal-content #create-moments .moments-center input[type=text] {
           width: 100%;
-          height: 250px;
+          height: 178px;
           font-size: 12px;
           margin-top: 5px;
           font-weight: 400;
@@ -5808,21 +5823,20 @@ $other-blue-light: #;*/
           border: 1px solid #226BE4; }
       .create-modal-content #create-moments button {
         float: none;
-        width: 20%;
-        margin-top: 20px;
+        width: 22%;
+        margin-top: 24px;
         margin-right: 0px;
-        margin-left: 41%;
+        margin-left: 38.5%;
         border-radius: 25px;
         background-color: #226BE4;
         color: white;
-        height: 50px;
+        height: 44px;
         padding: 5px 12px;
         text-align: center;
         cursor: pointer;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
-        font-size: 18px;
-        font-family: "Roboto", sans-serif; }
+        font-size: 16px; }
     .create-modal-content #create-articles {
       width: 97%;
       background-color: #95b0f0; }
@@ -5934,8 +5948,8 @@ $other-blue-light: #;*/
         text-align: center;
         width: 129px;
         height: 45px;
-        margin-left: 10%;
-        margin-top: 90px;
+        margin-left: 39%;
+        margin-top: 17px;
         background-color: #226BE4;
         border: 1px solid #226BE4;
         color: white;
@@ -6036,29 +6050,29 @@ $other-blue-light: #;*/
         padding-top: 50px;
         z-index: 4; }
         .create-modal-content #create-events .events-extra-buttons .attach-photo {
-          margin-left: 0%;
+          margin-left: -4%;
           margin-top: 30px;
           width: 18%;
           float: left;
           display: inline-block; }
           .create-modal-content #create-events .events-extra-buttons .attach-photo img {
-            width: 55px;
-            height: 55px; }
+            width: 45px;
+            height: 45px; }
         .create-modal-content #create-events .events-extra-buttons .privacy-btn {
           margin-top: 30px;
-          margin-left: -10%;
+          margin-left: -9%;
           width: 18%;
           float: left;
           display: inline-block; }
           .create-modal-content #create-events .events-extra-buttons .privacy-btn img {
-            width: 55px;
-            height: 55px; }
+            width: 45px;
+            height: 45px; }
       .create-modal-content #create-events .input-button {
         text-align: center;
         width: 129px;
         height: 45px;
-        margin-left: 10%;
-        margin-top: 90px;
+        margin-left: 11%;
+        margin-top: 35px;
         background-color: #226BE4;
         border: 1px solid #226BE4;
         color: white;
@@ -6095,17 +6109,18 @@ $other-blue-light: #;*/
         margin-bottom: 10px;
         border-radius: 12px; }
       .create-modal-content .column2 h4 {
-        width: 90%;
-        height: 35%;
+        width: 80%;
+        height: 55%;
         font-size: 16px;
         font-weight: 400;
-        margin-left: 4.5%;
+        margin-left: 9.5%;
+        margin-top: 30px;
         color: #18253B;
         text-align: center; }
       .create-modal-content .column2 .create-button-wrapper {
         width: 100%;
         text-align: center;
-        margin-top: -180px;
+        margin-top: -220px;
         margin-left: -0.7%; }
         .create-modal-content .column2 .create-button-wrapper .create-button {
           border-radius: 24%/72%;
@@ -6176,17 +6191,18 @@ $other-blue-light: #;*/
         margin-bottom: 10px;
         border-radius: 12px; }
       .create-modal-content .column3 h4 {
-        width: 90%;
-        height: 35%;
+        width: 80%;
+        height: 55%;
         font-size: 16px;
         font-weight: 400;
-        margin-left: 4.5%;
+        margin-left: 9.5%;
+        margin-top: 30px;
         color: #18253B;
         text-align: center; }
       .create-modal-content .column3 .create-button-wrapper {
         width: 100%;
         text-align: center;
-        margin-top: -180px;
+        margin-top: -220px;
         margin-left: -0.7%; }
         .create-modal-content .column3 .create-button-wrapper .create-button {
           border-radius: 24%/72%;
@@ -6256,17 +6272,18 @@ $other-blue-light: #;*/
         margin-bottom: 10px;
         border-radius: 12px; }
       .create-modal-content .column4 h4 {
-        width: 90%;
-        height: 35%;
+        width: 80%;
+        height: 55%;
         font-size: 16px;
         font-weight: 400;
-        margin-left: 4.5%;
+        margin-left: 9.5%;
+        margin-top: 30px;
         color: #18253B;
         text-align: center; }
       .create-modal-content .column4 .create-button-wrapper {
         width: 100%;
         text-align: center;
-        margin-top: -180px;
+        margin-top: -220px;
         margin-left: -0.7%; }
         .create-modal-content .column4 .create-button-wrapper .create-button {
           border-radius: 24%/72%;
@@ -9332,13 +9349,12 @@ ul p:last-child a.down {
       .create-modal-content #create-milestones .milestone-right {
         width: 40%;
         float: right;
-        margin-top: -22px;
+        margin-top: -15px;
         display: inline-block; }
         .create-modal-content #create-milestones .milestone-right img {
           width: 70%;
           height: 75px;
-          margin-left: 20px;
-          border: 2px solid #226BE4; }
+          margin-left: 20px; }
       .create-modal-content #create-milestones .milestone-left2 {
         width: 46%;
         float: left;
@@ -9647,8 +9663,8 @@ ul p:last-child a.down {
         text-align: center;
         width: 119px;
         height: 40px;
-        margin-left: -4%;
-        margin-top: 50px;
+        margin-left: 32%;
+        margin-top: 38px;
         background-color: #226BE4;
         border: 1px solid #226BE4;
         color: white;

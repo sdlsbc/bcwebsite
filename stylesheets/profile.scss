@@ -49,7 +49,7 @@ $other-blue-light: #;*/
         text-decoration:none; color: $light-gray;
         font-size: 16px;
         font-weight: 100;
-        margin-left: 25px;
+        margin-left: 44px;
         margin-top: 19px;
       }
     }
@@ -71,7 +71,7 @@ $other-blue-light: #;*/
     color: $gray;
     font-size: 16px;
     font-weight: 100;
-    margin-left: 25px;
+    margin-left: 44px;
     margin-top: 19px;
     &:hover {
       color: $light-gray;
@@ -84,14 +84,14 @@ $other-blue-light: #;*/
     a {
       font-family: $font;
       width: 24%;
-      margin-left: 5px;
-      margin-top: -31px;
+      margin-left: 0px;
+      margin-top: -33px;
       p {
         font-family: $font;
         font-size: 14px;
         font-weight: 100;
-        margin-left: 10px;
-        margin-top: 10px;
+        margin-left: 36px;
+        margin-top: 22px;
       }
       .discover-p-tag {
         margin-top: 27px; 
@@ -102,7 +102,7 @@ $other-blue-light: #;*/
       .newsfeed-p-tag {
         margin-top: 36px;
         margin-left: 11px;
-        font-size: 12px;
+        font-size: 14px;
       }
     }
   }

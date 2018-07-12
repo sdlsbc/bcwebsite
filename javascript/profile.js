@@ -4,6 +4,8 @@ var followers = false;
 var followings = false;
 var user_id = localStorage.getItem("user_id");
 var token = localStorage.getItem("token");
+var favs = {};
+
 
 function toggleAndLoadFollowers() {
     toggleVisibility('profile-followers');
@@ -196,9 +198,10 @@ function loadAndShowPosts(){
 
     getPostsItems()
         .then(newsRaw => {
+            console.log(newsRaw)
             var oldDate = new Date();
             newsRaw.forEach(element => {
-                var newDate = new Date(Date.parse(element.published_date));
+                var newDate = new Date(element["Created Date"]);
                 newDate.setHours(0,0,0,0)
 
                 if(newDate < oldDate){
@@ -209,9 +212,7 @@ function loadAndShowPosts(){
                     date.appendChild(dateNode);
                     document.getElementById('profile-postsbox').appendChild(date);
                 }
-
                 createPost(element);
-
             })
         })
 }
@@ -221,18 +222,22 @@ function getPostsItems(){
     // var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read";
     let params = {
         headers: {
-            'content-type': 'application/json',
+            'Content-type': 'application/json',
             'Authorization': 'Bearer ' + token
         },
         method: 'POST',
-        body: {
+        body: JSON.stringify({
             'user_id': user_id
-        }
+        })
     };
+    console.log(user_id)
     console.log(url);
     return fetch(url, params)
         .then(res => res.json())
-        .then(body => body.response.post)
+        .then(body => {
+            console.log(body)
+            return body.response.post
+        })
 }
 
 function createPost(body){
@@ -244,16 +249,13 @@ function createPost(body){
     publisher_div.classList.add('publisher');
 
     let publisher_image = document.createElement('img');
-    if (body.publisher.profile_image == "http://app.bwayconnected.com/public/images/default.jpg") {
-        publisher_image.src = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"
-    } else {
-        publisher_image.src = body.publisher.profile_image;
-    }
+    
+    publisher_image.src = body.publisher_image;
     publisher_image.classList.add('userfeed-publisher-image');
     publisher_div.appendChild(publisher_image);
 
     let name = document.createElement('p');
-    let nameNode = document.createTextNode(body.publisher.first_name+" "+body.publisher.last_name)
+    let nameNode = document.createTextNode(body.publisher_name)
     name.appendChild(nameNode);
     name.classList.add('userfeed-name');
 
@@ -263,11 +265,7 @@ function createPost(body){
 
     let image_div = document.createElement('div');
     let image = document.createElement('img');
-    if(body.post_image == "http://app.bwayconnected.com/public/images/articles/default.jpg"){
-        image.src = "http://app.bwayconnected.com/public/images/articles/unHla8zj9ZQK.jpg"
-    }else{
-        image.src = body.post_image;
-    }
+    image.src = body.image;
     image.classList.add('userfeed-image');
     image_div.appendChild(image);
     div.appendChild(image_div);
@@ -283,10 +281,27 @@ function createPost(body){
     favorite.appendChild(heart);
     button_row.appendChild(favorite);
 
+    // if(body.favoriters){
+    //     if (body.favoriters.some(fav => fav == user_id)) {
+    //         fav_button.classList.add('favorite_click');
+    //         liked = true;
+    //         favs[body._id] = true;
+    //     } else {
+    //         fav_button.classList.add('button');
+    //         liked = false;
+    //         favs[body._id] = false;
+    //     }
+    // }
+
 
     let favorite_num = document.createElement('p');
-    let favorite_numText = document.createTextNode(body.likes);
-    favorite_num.appendChild(favorite_numText);
+
+    if(body.favoriters){
+        var fav_button_numNode = document.createTextNode(body.favoriters.length);
+    } else {
+        var fav_button_numNode = document.createTextNode(0);
+    }
+    favorite_num.appendChild(fav_button_numNode);
     favorite.appendChild(favorite_num);
 
     div.appendChild(favorite);
@@ -321,7 +336,8 @@ function createPost(body){
     time.appendChild(clock);
 
     let timeSince = document.createElement('p');
-    let timeSinceText = document.createTextNode(howLongAgo(body.published_date));
+    console.log(body["Created Date"])
+    let timeSinceText = document.createTextNode(howLongAgo(new Date(body["Created Date"])));
     timeSince.appendChild(timeSinceText);
     time.appendChild(timeSince);
 
@@ -368,7 +384,7 @@ function createPost(body){
 
 function howLongAgo(date){
     let now = new Date();
-    let postDate = new Date(Date.parse(date));
+    let postDate = new Date(date);
     let years = DateDiff('yyyy', postDate, now);
     if(years >= 1){
         if(years == 1){
@@ -391,6 +407,13 @@ function howLongAgo(date){
             return "1 day ago"
         }
         return days + " days ago"
+    }
+    let hours = DateDiff('h', postDate, now);
+    if(hours >= 1){
+        if(hours == 1){
+            return "1 hour ago"
+        }
+        return hours + " hours ago"
     }
     return "Just now"
 }

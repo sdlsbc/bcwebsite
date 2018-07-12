@@ -1299,18 +1299,21 @@
 
 /* The Close Button */
 .create-close {
-  display: none;
-  color: #aaaaaa;
+  color: white;
   float: right;
-  margin-left: -20px;
+  display: block;
   font-size: 28px;
   font-weight: bold;
+  margin-top: -35px;
+  margin-left: -20px;
+  margin-right: -26px;
 }
 
 .create-close:hover,
 .create-close:focus {
-  display: none;
-  color: #000;
+  /*display: none;*/
+  display: block;
+  color: $light-gray;
   text-decoration: none;
   cursor: pointer;
 }
@@ -1454,7 +1457,7 @@
     h3 {
       font-family: $font;
       text-align: center;
-      font-size: 28px;
+      font-size: 26px;
       color: white;
       font-weight: 100;
       padding-bottom: 5px;
@@ -2140,7 +2143,7 @@
     h3 {
       font-family: $font;
       text-align: center;
-      font-size: 28px;
+      font-size: 26px;
       color: white;
       font-weight: 100;
       padding-bottom: 5px;
@@ -2232,7 +2235,7 @@
     h3 {
       font-family: $font;
       text-align: center;
-      font-size: 28px;
+      font-size: 26px;
       color: white;
       font-weight: 100;
       padding-bottom: 5px;
@@ -2323,7 +2326,7 @@
     h3 {
       font-family: $font;
       text-align: center;
-      font-size: 28px;
+      font-size: 26px;
       color: white;
       font-weight: 100;
       padding-bottom: 5px;

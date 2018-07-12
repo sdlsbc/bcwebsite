@@ -1368,3 +1368,25 @@
     }
   }
 }
+
+
+/* The Close Button */
+.create-close {
+  color: white;
+  float: right;
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: -37px;
+  margin-left: -25px;
+  margin-right: -8px;
+}
+
+.create-close:hover,
+.create-close:focus {
+  /*display: none;*/
+  display: block;
+  color: $light-gray;
+  text-decoration: none;
+  cursor: pointer;
+}

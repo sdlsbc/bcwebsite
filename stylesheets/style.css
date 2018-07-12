@@ -5440,17 +5440,20 @@ $other-blue-light: #;*/
 
 /* The Close Button */
 .create-close {
-  display: none;
-  color: #aaaaaa;
+  color: white;
   float: right;
-  margin-left: -20px;
+  display: block;
   font-size: 28px;
-  font-weight: bold; }
+  font-weight: bold;
+  margin-top: -35px;
+  margin-left: -20px;
+  margin-right: -26px; }
 
 .create-close:hover,
 .create-close:focus {
-  display: none;
-  color: #000;
+  /*display: none;*/
+  display: block;
+  color: #E9E9E9;
   text-decoration: none;
   cursor: pointer; }
 
@@ -5505,7 +5508,7 @@ $other-blue-light: #;*/
       .create-modal-content .column1 h3 {
         font-family: "Roboto", sans-serif;
         text-align: center;
-        font-size: 28px;
+        font-size: 26px;
         color: white;
         font-weight: 100;
         padding-bottom: 5px;
@@ -6094,7 +6097,7 @@ $other-blue-light: #;*/
       .create-modal-content .column2 h3 {
         font-family: "Roboto", sans-serif;
         text-align: center;
-        font-size: 28px;
+        font-size: 26px;
         color: white;
         font-weight: 100;
         padding-bottom: 5px;
@@ -6176,7 +6179,7 @@ $other-blue-light: #;*/
       .create-modal-content .column3 h3 {
         font-family: "Roboto", sans-serif;
         text-align: center;
-        font-size: 28px;
+        font-size: 26px;
         color: white;
         font-weight: 100;
         padding-bottom: 5px;
@@ -6257,7 +6260,7 @@ $other-blue-light: #;*/
       .create-modal-content .column4 h3 {
         font-family: "Roboto", sans-serif;
         text-align: center;
-        font-size: 28px;
+        font-size: 26px;
         color: white;
         font-weight: 100;
         padding-bottom: 5px;
@@ -10053,6 +10056,25 @@ ul p:last-child a.down {
               font-weight: 100;
               margin-top: 6px;
               font-size: 10px; }
+
+  /* The Close Button */
+  .create-close {
+    color: white;
+    float: right;
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -37px;
+    margin-left: -25px;
+    margin-right: -8px; }
+
+  .create-close:hover,
+  .create-close:focus {
+    /*display: none;*/
+    display: block;
+    color: #E9E9E9;
+    text-decoration: none;
+    cursor: pointer; }
 
   .pp-main-image img {
     width: 100%;

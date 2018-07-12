@@ -211,37 +211,44 @@
   }
 }
 @media screen and (max-width: 700px) {
-  .signout-button {
-    background-color: #226BE4;
-    border: 2px solid #226BE4;
-    color: white;
-    padding: 3px 12px;
-    width: 85px;
-    height: 28px;
-    text-align: center;
-    font-size: 12px;
-    cursor: pointer;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    border-radius: 25px;
-    margin-right: 4%;
-    margin-top: -7px;
-    font-size: 13px;
-    &:hover {
-      background-color: white;
+  .signout {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 2;
+    margin-top: -27px;
+    /* margin-left: 16%; */
+    .signout-button {
+      background-color: #226BE4;
       border: 2px solid #226BE4;
-      color: #1B5AC3;
+      color: white;
       padding: 3px 12px;
       width: 85px;
       height: 28px;
       text-align: center;
+      font-size: 12px;
       cursor: pointer;
       -webkit-transition-duration: 0.4s; /* Safari */
       transition-duration: 0.4s;
       border-radius: 25px;
-      margin-right: 25%;
-      margin-top: -14px;
+      margin-right: 4%;
+      margin-top: -7px;
       font-size: 13px;
+      &:hover {
+        background-color: white;
+        border: 2px solid #226BE4;
+        color: #1B5AC3;
+        padding: 3px 12px;
+        width: 85px;
+        height: 28px;
+        text-align: center;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        border-radius: 25px;
+        margin-right: 25%;
+        margin-top: -14px;
+        font-size: 13px;
+      }
     }
   }
 }
@@ -259,18 +266,25 @@
   margin-top: 4px;
 }
 @media screen and (max-width: 700px) {
-  .open_sidenav {
-    width: 20px;
-    font-size: 30px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  .logo {
-    height: 42px;
-    width: 80%;
-    margin-left: 20px;
-    margin-right: -10px;
-    margin-top: 3px;
+  .navbar {
+    .open_sidenav {
+      width: 20px;
+      font-size: 30px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .logo-a {
+      height: 57%;
+      width: 83%;
+      margin-top: 3px;
+      .logo {
+        height: 42px;
+        width: 80%;
+        margin-left: 36px;
+        margin-right: -10px;
+        margin-top: 3px;
+      }
+    }
   }
 }
 

@@ -220,6 +220,7 @@ function loadAndShowPosts(){
 function getPostsItems(){
     var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read";
     // var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read";
+
     let params = {
         headers: {
             'Content-type': 'application/json',
@@ -467,6 +468,7 @@ function updateUser() {
 
     let url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_update";
     // let url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_update";
+
 
     let body = {
         'user_id': localStorage.getItem("user_id"),

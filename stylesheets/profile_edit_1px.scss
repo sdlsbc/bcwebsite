@@ -575,13 +575,12 @@
     .milestone-right {
       width: 40%;
       float: right;
-      margin-top: -22px;
+      margin-top: -15px;
       display: inline-block;
       img {
         width: 70%;
         height: 75px;
         margin-left: 20px;
-        border: 2px solid $main-blue;
       }
     }
     .milestone-left2 {
@@ -937,8 +936,8 @@
       text-align: center;
       width: 119px;
       height: 40px;
-      margin-left: -4%;
-      margin-top: 50px;
+      margin-left: 32%;
+      margin-top: 38px;
       background-color: #226BE4;
       border: 1px solid $main-blue;
       color: white;
@@ -1368,4 +1367,26 @@
       }
     }
   }
+}
+
+
+/* The Close Button */
+.create-close {
+  color: white;
+  float: right;
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: -37px;
+  margin-left: -25px;
+  margin-right: -8px;
+}
+
+.create-close:hover,
+.create-close:focus {
+  /*display: none;*/
+  display: block;
+  color: $light-gray;
+  text-decoration: none;
+  cursor: pointer;
 }

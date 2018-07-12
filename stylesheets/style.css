@@ -6504,15 +6504,15 @@ $other-blue-light: #;*/
     height: 24%;
     margin-left: 4%; }
     .production-profiles-wrapper .pp-row1 .pp-current-cast {
-      width: 18%;
-      padding-bottom: 40px;
-      margin-top: 4%;
+      width: 22%;
+      margin-top: 7%;
       margin-left: 2%;
+      text-align: center;
       overflow-x: scroll;
       overflow-y: hidden;
       white-space: nowrap;
       display: inline-block;
-      text-align: center;
+      padding-bottom: 50px;
       border: 1px solid #E9E9E9; }
       .production-profiles-wrapper .pp-row1 .pp-current-cast img {
         width: 100%;
@@ -6540,15 +6540,15 @@ $other-blue-light: #;*/
       color: #226BE4;
       margin-bottom: -35px; }
     .production-profiles-wrapper .pp-row2 .pp-current-cast {
-      width: 18%;
-      padding-bottom: 40px;
-      margin-top: 4%;
+      width: 22%;
+      margin-top: 7%;
       margin-left: 2%;
+      text-align: center;
       overflow-x: scroll;
       overflow-y: hidden;
       white-space: nowrap;
       display: inline-block;
-      text-align: center;
+      padding-bottom: 50px;
       border: 1px solid #E9E9E9; }
       .production-profiles-wrapper .pp-row2 .pp-current-cast img {
         width: 100%;
@@ -6959,7 +6959,7 @@ $other-blue-light: #;*/
       margin-left: 33%;
       font-size: 14px; }
   .profile_wrapper h4 {
-    margin-top: 5%;
+    margin-top: 11%;
     font-weight: 100;
     margin-left: 5.8%;
     color: #226BE4;
@@ -7902,7 +7902,7 @@ ul p:last-child a.down {
     text-decoration: none;
     cursor: pointer; } }
 .cp-client-edit {
-  margin-top: 62px;
+  margin-top: 11%;
   margin-left: 2%;
   display: inline;
   width: 50px;
@@ -10347,7 +10347,7 @@ ul p:last-child a.down {
         margin-left: 15%;
         font-size: 14px; }
     .profile_wrapper h4 {
-      margin-top: 5%;
+      margin-top: 11%;
       font-weight: 100;
       margin-left: 5.8%;
       color: #226BE4;
@@ -10361,6 +10361,7 @@ ul p:last-child a.down {
       margin-left: 4%; }
       .profile_wrapper .cp-row1 .cp-current-cast {
         width: 30%;
+        height: 185px;
         margin-top: 4%;
         margin-left: 2%;
         overflow-x: scroll;
@@ -10371,9 +10372,9 @@ ul p:last-child a.down {
         border: 1px solid #E9E9E9; }
         .profile_wrapper .cp-row1 .cp-current-cast img {
           width: 100%;
-          height: 45%; }
+          height: 40%; }
         .profile_wrapper .cp-row1 .cp-current-cast h3 {
-          margin-top: 5px;
+          margin-top: 17px;
           font-size: 16px;
           text-align: center;
           color: #226BE4; }
@@ -10392,6 +10393,7 @@ ul p:last-child a.down {
       margin-left: 4%; }
       .profile_wrapper .cp-row2 .cp-current-cast {
         width: 30%;
+        height: 185px;
         margin-top: 4%;
         margin-left: 2%;
         overflow-x: scroll;
@@ -10402,9 +10404,9 @@ ul p:last-child a.down {
         border: 1px solid #E9E9E9; }
         .profile_wrapper .cp-row2 .cp-current-cast img {
           width: 100%;
-          height: 45%; }
+          height: 40%; }
         .profile_wrapper .cp-row2 .cp-current-cast h3 {
-          margin-top: 5px;
+          margin-top: 17px;
           font-size: 16px;
           text-align: center;
           color: #226BE4; }
@@ -10441,7 +10443,7 @@ ul p:last-child a.down {
           color: #226BE4;
           font-weight: 900; }
     .profile_wrapper .cp-client-edit {
-      margin-top: 17px;
+      margin-top: 10%;
       margin-left: 4%;
       display: inline;
       width: 30px;

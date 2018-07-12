@@ -110,7 +110,7 @@ function checkBrowser(){
     }
 }
 
-function loadThese(){
+function loadUserData(){
     loadAndShowPosts();
     //loadProfileData();
     fillProfileEditor();
@@ -171,9 +171,6 @@ function loadProfileData(){
 
             var profile_image = body.profile_image;
 
-            if (profile_image == "http://app.bwayconnected.com/public/images/default.jpg") {
-                profile_image = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"
-            } 
             var headline_position = body.headline_position;
             document.getElementById('name').innerHTML = fn;
             document.getElementById('username').innerHTML = handle;
@@ -220,19 +217,22 @@ function loadAndShowPosts(){
 }
 
 function getPostsItems(){
-    var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/favorite_read";
+    var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read";
+    // var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read";
     let params = {
         headers: {
             'content-type': 'application/json',
             'Authorization': 'Bearer ' + token
         },
         method: 'POST',
-        body: {}
+        body: {
+            'user_id': user_id
+        }
     };
     console.log(url);
     return fetch(url, params)
         .then(res => res.json())
-        .then(body => body.response.favs)
+        .then(body => body.response.post)
 }
 
 function createPost(body){
@@ -401,12 +401,7 @@ function loadProfile() {
 	pic.classList.add('profile_pic');
 	let source = localStorage.getItem('profile_image');
 
-	if (source == "http://app.bwayconnected.com/public/images/default.jpg") {
-		pic.src = "http://app.bwayconnected.com/public/images/T3uVwB96tW07.png"
-	} else {
-		pic.src = source;
-	}
-
+    pic.src = source;
 	div.appendChild(pic);
 
 	let namep = document.getElementsByClassName('navname')[0];
@@ -448,6 +443,7 @@ function updateUser() {
     let country = document.getElementById('input-confirm').value;
 
     let url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_update";
+    // let url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_update";
 
     let body = {
         'user_id': localStorage.getItem("user_id"),

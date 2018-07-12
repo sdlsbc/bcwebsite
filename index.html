@@ -101,10 +101,6 @@
             <hr>
             <div class="signin" id="signin" data-type="signup">
                 <form class="signin-form">
-                    <p class="first_name">
-                        <input type="file" id="imageinput" onchange="testit(event)" />
-                        <canvas width="300" height="300" id="mycanvas" style="display: none;"></canvas>
-                    </p>
                     <p class="signin-usertype">
                         <label class="signin-label">USER TYPE</label>
                         <select id="signup-usertype" class="styled-select blue semi-square" onchange="checkUserType()">
@@ -150,7 +146,7 @@
                         <a href="#0" class="hide">Hide</a>
                         <span class="error">Error message here!</span>
                     </p>
-                    <p class="signin-city">
+                    <!-- <p class="signin-city">
                         <label class="signin-label">CITY</label>
                         <input class="signin-city" id="signup-city" type="text" placeholder="City">
                     </p>
@@ -161,6 +157,10 @@
                     <p class="signin-phone">
                         <label class="signin-label">PHONE</label>
                         <input class="signin-phone" id="signup-phone" type="text" placeholder="Phone" onfocusout="checkPhoneNumber(document.getElementById('signup-phone').value)">
+                    </p> -->
+                    <p class="choose-img">
+                        <input type="file" id="imageinput" onchange="testit(event)" />
+                        <canvas width="300" height="300" id="mycanvas" style="display: none;"></canvas>
                     </p>
                     <p class="signin-submit">
                         <input class="input-submit" type="button" value="Next >>>" onclick="showNextModal()">

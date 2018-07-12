@@ -805,7 +805,7 @@ $other-blue-light: #;*/
     }
     input[type=text] {
       width: 80%;
-      height: 40px;
+      height: 34px;
       margin-top: 6px;
       font-size: 12px;
       font-weight: 400;
@@ -830,7 +830,7 @@ $other-blue-light: #;*/
     }
     input[type=text] {
       width: 80%;
-      height: 40px;
+      height: 34px;
       margin-top: 6px;
       font-size: 12px;
       font-weight: 400;
@@ -852,7 +852,7 @@ $other-blue-light: #;*/
     }
     input[type=number] {
       width: 80%;
-      height: 40px;
+      height: 34px;
       margin-top: 6px;
       font-size: 12px;
       font-weight: 400;
@@ -872,7 +872,7 @@ $other-blue-light: #;*/
     }
     input[type=text] {
       width: 80%;
-      height: 40px;
+      height: 34px;
       margin-top: 6px;
       font-size: 12px;
       font-weight: 400;
@@ -897,7 +897,7 @@ $other-blue-light: #;*/
     }
     input[type=text] {
       width: 80%;
-      height: 40px;
+      height: 34px;
       margin-top: 6px;
       font-size: 12px;
       font-weight: 400;
@@ -922,7 +922,7 @@ $other-blue-light: #;*/
     input[type=text] {
       margin-left: -21px;
       width: 86%;
-      height: 40px;
+      height: 34px;
       margin-top: 6px;
       font-size: 12px;
       font-weight: 400;
@@ -934,22 +934,49 @@ $other-blue-light: #;*/
   }
   .toggle {
     float: left;
+    width: 36%;
     margin-top: -2%;
     margin-left: 9%;
     text-align: center;
-    p {
-      font-size: 14px;
-      color: $main-blue;
-    }
-    .switch {
+    padding-bottom: 15px;
+    .switch1 {
+      float: left;
+      width: 18%;
+      height: 34px;
+      margin-top: 11px;
       position: relative;
       display: inline-block;
-      width: 60px;
-      height: 34px;
       input {
         display: none;
       }
+      p {
+        margin-left: 14px;
+        margin-top: 12px;
+        width: 200px;
+        font-size: 14px;
+        color: $main-blue;
+      }
     }
+    .switch2 {
+      float: right;
+      width: 18%;
+      height: 34px;
+      margin-top: 11px;
+      margin-right: 70px;
+      position: relative;
+      display: inline-block;
+      input {
+        display: none;
+      }
+      p {
+        margin-left: 62px;
+        margin-top: 12px;
+        width: 200px;
+        font-size: 14px;
+        color: $main-blue;
+      }
+    }
+    
     .slider {
       position: absolute;
       cursor: pointer;

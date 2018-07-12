@@ -126,7 +126,11 @@
       }
       p {
         margin-top: -4px;
-
+      }
+      h4 {
+        margin-top: -12px;
+        font-size: 14px;
+        color: $dark-blue;
       }
     }
   }
@@ -164,12 +168,12 @@
 
 .cp-edit {
   margin-top: -521px;
-  margin-left: 89%;
+  margin-left: 90.7%;
   float: right;
   display: inline;
   width: 50px;
   height: 50px;
-  position: fixed;
+  position: inherit;
   img {
     width: 26px;
   }
@@ -385,7 +389,7 @@
 
 
 .cp-employee-edit {
-  margin-top: 55px;
+  margin-top: 66px;
   margin-left: 2%;
   display: inline;
   width: 50px;
@@ -562,7 +566,7 @@ ul p:last-child a.down {
 
 /* =========== E M P L O Y E E  E D I T  I P A D  V I E W =========== */
 @media screen and (max-width: 1200px) {
- .profile_wrapper {
+  .profile_wrapper {
     background-color: $light-blue;
     margin-top: 600px;
     padding-bottom: 63%;
@@ -708,6 +712,17 @@ ul p:last-child a.down {
         }
       }
     }
+    .cp-client-edit {
+      margin-top: 44px;
+      margin-left: 2%;
+      display: inline;
+      width: 50px;
+      height: 50px;
+      position: inherit;
+      img {
+        width: 26px;
+      }
+    }
   }
 
   .cp-edit {
@@ -717,7 +732,7 @@ ul p:last-child a.down {
     display: inline;
     width: 50px;
     height: 50px;
-    position: fixed;
+    position: inherit;
     img {
       width: 26px;
     }
@@ -935,7 +950,7 @@ ul p:last-child a.down {
 
 
   .cp-employee-edit {
-    margin-top: 32px;
+    margin-top: 40px;
     margin-left: 2%;
     display: inline;
     width: 50px;
@@ -1087,7 +1102,7 @@ ul p:last-child a.down {
 
 
 .cp-client-edit {
-  margin-top: 55px;
+  margin-top: 62px;
   margin-left: 2%;
   display: inline;
   width: 50px;

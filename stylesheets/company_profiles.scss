@@ -71,6 +71,7 @@
     margin-left: 4%;
     .cp-current-cast {
       width: 18%;
+      height: 204px;
       margin-top: 4%;
       margin-left: 2%;
       overflow-x: scroll;
@@ -81,15 +82,17 @@
       border: 1px solid $light-gray;
       img {
         width: 100%;
-        height: 45%;
+        height: 62%;
       }
       h3 {
         margin-top: 5px;
         text-align: center;
-        color: $main-blue;
+        color: #226BE4;
+        font-size: 18px;
       }
       p {
-        margin-top: -4px;
+        margin-top: -14px;
+        font-size: 16px;
       }
       h4 {
         margin-top: -12px;
@@ -107,6 +110,7 @@
     margin-left: 4%;
     .cp-current-cast {
       width: 18%;
+      height: 204px;
       margin-top: 4%;
       margin-left: 2%;
       overflow-x: scroll;
@@ -117,15 +121,17 @@
       border: 1px solid $light-gray;
       img {
         width: 100%;
-        height: 45%;
+        height: 62%;
       }
       h3 {
         margin-top: 5px;
         text-align: center;
         color: $main-blue;
+        font-size: 18px;
       }
       p {
-        margin-top: -4px;
+        margin-top: -14px;
+        font-size: 16px;
       }
       h4 {
         margin-top: -12px;
@@ -335,8 +341,8 @@
     }
   }
   .save-changes {
-    margin-top: 25px;
-    margin-left: 22%;
+    margin-top: 10px;
+    margin-left: 41%;
     background-color: #226BE4;
     border: 2px solid #226BE4;
     color: white;
@@ -353,9 +359,9 @@
     margin-right: 10%;
     font-size: 14px;
     &:hover {
-      margin-top: 25px;
+      margin-top: 10px;
       padding: 3px 12px;
-      margin-left: 39%;
+      margin-left: 41%;
       width: 145px;
       height: 40px;
       font-weight: 400;
@@ -635,7 +641,7 @@ ul p:last-child a.down {
       height: 20%;
       margin-left: 4%;
       .cp-current-cast {
-        width: 18%;
+        width: 22%;
         margin-top: 4%;
         margin-left: 2%;
         overflow-x: scroll;
@@ -666,7 +672,7 @@ ul p:last-child a.down {
       height: 20%;
       margin-left: 4%;
       .cp-current-cast {
-        width: 18%;
+        width: 22%;
         margin-top: 4%;
         margin-left: 2%;
         overflow-x: scroll;

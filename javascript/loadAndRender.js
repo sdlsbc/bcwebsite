@@ -69,7 +69,7 @@ function getPostsItems() {
 	}
 	if (PAGE == 'favs') {
 		// url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/favorite_read"
-		url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read";
+		url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/favorite_read";
 	}
 
 	fetchCount += 1;
@@ -162,10 +162,12 @@ function showModal(body) {
 
 	// start building the modal
 	var image_address = "";
-	if(body.image.substr(0,4) == "data"){
-		image_address = body.image;
-	} else {
-		image_address = "https:"+ body.image;
+	if(body.image){
+		if(body.image.substr(0,4) == "data" || body.publisher_image.substr(0,4) == "http"){
+			image_address = body.image;
+		} else {
+			image_address = "https:"+ body.image;
+		}
 	}
 
 	var post_image = document.getElementsByClassName('modal-image');
@@ -173,7 +175,7 @@ function showModal(body) {
 
 	var profile_image_address = "body.publisher_image";
 	if(body.publisher_image){
-		if(body.publisher_image.substr(0,4) == "data"){
+		if(body.publisher_image.substr(0,4) == "data" || body.publisher_image.substr(0,4) == "http"){
 			image_address = body.publisher_image;
 		} else {
 			image_address = "https:"+ body.publisher_image;
@@ -309,7 +311,7 @@ function createPost(body) {
 
 	let publisher_image = document.createElement('img');
 	if (body.publisher_image){
-		if(body.publisher_image.substr(0,4) == "data"){
+		if(body.publisher_image.substr(0,4) == "data" || body.publisher_image.substr(0,4) == "http") {
 			image_address = body.publisher_image;
 		} else {
 			image_address = "https:"+ body.publisher_image;
@@ -354,7 +356,7 @@ function createPost(body) {
 	if(body.image){
 		let main_image = document.createElement('img');
 
-		if(body.image.substr(0,4) == "data"){
+		if(body.image.substr(0,4) == "data" || body.image.substr(0,4) == "http"){
 			image_address = body.image;
 		} else {
 			image_address = "https:"+ body.image;
@@ -372,7 +374,6 @@ function createPost(body) {
 	button_div.classList.add('button_row');
 
 	let fav_button = document.createElement('img');
-	// fav_button.setAttribute("id", body.id);
 	fav_button.src = '../images/newsfeed_buttons/heart2.png';
 	fav_button.classList.add('pointer');
 	var liked = false;

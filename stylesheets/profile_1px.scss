@@ -483,7 +483,7 @@
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4);
 }
-.create-modal-contentx {
+.create-modal-contenty {
   position: absolute;
   background-color: $light-blue;
   margin: auto;
@@ -491,7 +491,7 @@
   border: 1px solid #888;
   width: 80%;
   margin-left: 10%;
-  height: 66%;
+  height: 75%;
   z-index: 1;
   border-radius: 19px;
   h1 {
@@ -500,146 +500,410 @@
     font-weight: 400;
     text-align: center;
     padding: 20px;
-    font-size: 26px;
+    font-size: 18px;
   }
   .edit-left1 {
-    width: 36%;
-    float: left;
-    margin-left: 28px;
-    padding-bottom: 35px;
-    #edit-first {
-      width: 80%;
-      font-size: 11px;
-      font-weight: 400;
-      color: $main-blue;
+      margin-top: -5px;
+      width: 42%;
+      float: left;
+      margin-left: 22px;
+      padding-bottom: 18px;
+      #edit-first {
+        width: 80%;
+        font-size: 10px;
+        font-weight: 400;
+        color: $main-blue;
+      }
+      input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: $main-blue;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid $main-blue;
+      }
     }
-    input[type=text] {
-      width: 90%;
-      height: 30px;
-      margin-top: 6px;
-      font-size: 12px;
-      font-weight: 400;
-      color: $main-blue;
-      padding-left: 15px;
-      border-radius: 22px;
-      border: 2px solid $main-blue;
+    .edit-right1 {
+      width: 42%;
+      float: right;
+      margin-left: -23px;
+      margin-right: 15px;
+      margin-top: -5px;
+      padding-bottom: 18px;
+      #edit-last {
+        width: 86%;
+        font-size: 10px;
+        color: $main-blue;
+        font-weight: 400;
+      }
+      input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: $main-blue;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid $main-blue;
+      }
     }
-  }
-  .edit-right1 {
-    width: 36%;
-    float: right;
-    padding-bottom: 35px;
-    #edit-last {
-      width: 86%;
-      font-size: 11px;
-      color: $main-blue;
-      font-weight: 400;
+    .edit-left2 {
+      width: 42%;
+      float: left;
+      margin-top: -5px;
+      margin-left: 22px;
+      padding-bottom: 18px;
+      #edit-username {
+        width: 80%;
+        font-size: 10px;
+        font-weight: 400;
+        color: $main-blue;
+      }
+      input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: $main-blue;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid $main-blue;
+      }
     }
-    input[type=text] {
-      width: 90%;
-      height: 30px;
-      margin-top: 6px;
-      font-size: 12px;
-      font-weight: 400;
-      color: $main-blue;
-      padding-left: 15px;
-      border-radius: 22px;
-      border: 2px solid $main-blue;
+    .edit-right2 {
+      width: 42%;
+      float: right;
+      margin-top: -5px;
+      margin-left: -23px;
+      margin-right: 15px;
+      padding-bottom: 18px;
+      #edit-headline {
+        width: 86%;
+        font-size: 10px;
+        color: $main-blue;
+        font-weight: 400;
+      }
+      input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: $main-blue;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid $main-blue;
+      }
     }
-  }
-  .edit-center {
-    width: 100%;
-    text-align: center;
-    #edit-phone-number {
-      margin-top: 20px;
-      width: 80%;   
-      margin-left: 9.5%;
-      font-weight: 400;
-      color: $main-blue;
+    .edit-left3 {
+      margin-top: -5px;
+      width: 42%;
+      float: left;
+      margin-left: 22px;
+      padding-bottom: 18px;
+      #edit-job-title {
+        width: 80%;
+        font-size: 10px;
+        font-weight: 400;
+        color: $main-blue;
+      }
+      input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: $main-blue;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid $main-blue;
+      }
     }
-    input[type=number] {
-      width: 80%;
-      height: 30px;
-      margin-top: 2px;
-      font-size: 12px;
-      font-weight: 400;
-      color: $main-blue;
-      margin-left: 9.5%;
-      padding-left: 15px;
-      border-radius: 22px;
-      border: 2px solid $main-blue;
+    .edit-right3 {
+      width: 42%;
+      float: right;
+      margin-left: -23px;
+      margin-right: 15px;
+      margin-top: -5px;
+      padding-bottom: 18px;
+      #edit-company {
+        width: 86%;
+        font-size: 10px;
+        color: $main-blue;
+        font-weight: 400;
+      }
+      input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: $main-blue;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid $main-blue;
+      }
     }
-    #edit-username {
-      width: 80%;
-      font-size: 11px;
-      margin-left: 9.5%;
-      font-weight: 400;
-      color: $main-blue;
+    .edit-left4 {
+      margin-top: -5px;
+      width: 42%;
+      float: left;
+      margin-left: 22px;
+      padding-bottom: 18px;
+      #edit-previous-job {
+        width: 80%;
+        font-size: 10px;
+        font-weight: 400;
+        color: $main-blue;
+      }
+      input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: $main-blue;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid $main-blue;
+      }
     }
-    input[type=text] {
-      width: 80%;
-      height: 30px;
-      margin-top: 2px;
-      font-size: 12px;
-      font-weight: 400;
-      color: $main-blue;
-      margin-left: 9.5%;
-      padding-left: 15px;
-      border-radius: 22px;
-      border: 2px solid $main-blue;
+    .edit-right4 {
+      width: 42%;
+      float: right;
+      margin-left: -23px;
+      margin-right: 15px;
+      margin-top: -5px;
+      padding-bottom: 18px;
+      #edit-previous-company {
+        width: 86%;
+        font-size: 10px;
+        color: $main-blue;
+        font-weight: 400;
+      }
+      input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: $main-blue;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid $main-blue;
+      }
     }
-  }
-  .edit-left2 {
-    width: 36%;
-    float: left;
-    margin-left: 26px;
-    padding-bottom: 15px;
-    #edit-new-password {
-      width: 80%;
-      font-size: 11px;
-      color: $main-blue;
-      font-weight: 400;
+    .edit-left5 {
+      margin-top: -5px;
+      width: 42%;
+      float: left;
+      margin-left: 22px;
+      padding-bottom: 18px;
+      #edit-email {
+        width: 80%;
+        font-size: 10px;
+        font-weight: 400;
+        color: $main-blue;
+      }
+      input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: $main-blue;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid $main-blue;
+      }
     }
-    input[type=text] {
-      width: 80%;
-      height: 30px;
-      margin-top: 6px;
-      font-size: 12px;
-      font-weight: 400;
-      color: $main-blue;
-      padding-left: 15px;
-      border-radius: 22px;
-      border: 2px solid $main-blue;
+    .edit-right5 {
+      width: 42%;
+      float: right;
+      margin-left: -23px;
+      margin-right: 15px;
+      margin-top: -5px;
+      padding-bottom: 18px;
+      #edit-phone {
+        width: 86%;
+        font-size: 10px;
+        color: $main-blue;
+        font-weight: 400;
+      }
+      input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: $main-blue;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid $main-blue;
+      }
     }
-  }
-  .edit-right2 {
-    width: 36%;
-    float: right;
-    margin-left: -10px;
-    padding-bottom: 15px;
-    #edit-confirm-password {
-      width: 80%;
-      font-size: 10px;
-      font-weight: 400;
-      color: $main-blue;
-      margin-left: -18px;
+    .edit-left6 {
+      margin-top: -5px;
+      width: 42%;
+      float: left;
+      margin-left: 22px;
+      padding-bottom: 18px;
+      #edit-city {
+        width: 80%;
+        font-size: 10px;
+        font-weight: 400;
+        color: $main-blue;
+      }
+      input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: $main-blue;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid $main-blue;
+      }
     }
-    input[type=text] {
-      margin-left: -21px;
-      width: 86%;
-      height: 30px;
-      margin-top: 6px;
-      font-size: 12px;
-      font-weight: 400;
-      color: $main-blue;
-      padding-left: 15px;
-      border-radius: 22px;
-      border: 2px solid $main-blue;
+    .edit-right6 {
+      width: 42%;
+      float: right;
+      margin-left: -23px;
+      margin-right: 15px;
+      margin-top: -5px;
+      padding-bottom: 18px;
+      #edit-country {
+        width: 86%;
+        font-size: 10px;
+        color: $main-blue;
+        font-weight: 400;
+      }
+      input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: $main-blue;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid $main-blue;
+      }
     }
-  }
+    .articles-extra-buttons {
+      width: 100%;
+      float: left;
+      margin-top: -11px;
+      margin-left: 22px;
+      .attach-photo {
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+    .toggle {
+      width: 32%;
+      float: left;
+      margin-top: -2%;
+      margin-left: 35%;
+      text-align: center;
+      padding-bottom: 5px;
+      .switch1 {
+        float: left;
+        width: 27%;
+        height: 34px;
+        margin-top: 11px;
+        margin-left: -15px;
+        position: relative;
+        display: inline-block;
+        input {
+          display: none;
+        }
+        p {
+          margin-left: -82px;
+          margin-top: -24px;
+          width: 200px;
+          font-size: 10px;
+          color: $main-blue;
+        }
+      }
+      .switch2 {
+        float: right;
+        width: 27%;
+        height: 34px;
+        margin-top: 11px;
+        margin-right: 0px;
+        position: relative;
+        display: inline-block;
+        input {
+          display: none;
+        }
+        p {
+          margin-left: -53px;
+          margin-top: -24px;
+          width: 200px;
+          font-size: 10px;
+          color: $main-blue;
+        }
+      }
+      
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 22px;
+        width: 33px;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+        &:before {
+          position: absolute;
+          content: "";
+          height: 16px;
+          width: 16px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+      }
+      
+      input:checked + .slider {
+        background-color: $medium-blue;
+      }
+      
+      input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+      }
+      
+      input:checked + .slider:before {
+        -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        transform: translateX(10px);
+      }
+      
+      .slider.round {
+        border-radius: 34px;
+        &:before {
+          border-radius: 50%;
+        }
+      }
+    }
+
+  /*SLIDER ENDS HERE*/
   .save-changes {
-    margin-top: 5%;
-    margin-left: 26%;
+    margin-left: 27%;
     background-color: #226BE4;
     border: 2px solid #226BE4;
     color: white;

@@ -4275,7 +4275,7 @@ $other-blue-light: #;*/
   text-decoration: none;
   cursor: pointer; }
 
-/* I P A D  V I E W  E D I T  M O D A L */
+/* S M A L L  I P A D  V I E W  E D I T  M O D A L */
 @media screen and (max-width: 1200px) {
   #createModalx {
     display: none;
@@ -4323,7 +4323,7 @@ $other-blue-light: #;*/
         color: #226BE4; }
       .create-modal-contenty .edit-left1 input[type=text] {
         width: 80%;
-        height: 30px;
+        height: 35px;
         margin-top: 6px;
         font-size: 12px;
         font-weight: 400;
@@ -4345,7 +4345,7 @@ $other-blue-light: #;*/
         font-weight: 400; }
       .create-modal-contenty .edit-right1 input[type=text] {
         width: 80%;
-        height: 30px;
+        height: 35px;
         margin-top: 6px;
         font-size: 12px;
         font-weight: 400;
@@ -4366,7 +4366,7 @@ $other-blue-light: #;*/
         color: #226BE4; }
       .create-modal-contenty .edit-left2 input[type=text] {
         width: 80%;
-        height: 30px;
+        height: 35px;
         margin-top: 6px;
         font-size: 12px;
         font-weight: 400;
@@ -4388,7 +4388,7 @@ $other-blue-light: #;*/
         font-weight: 400; }
       .create-modal-contenty .edit-right2 input[type=text] {
         width: 80%;
-        height: 30px;
+        height: 35px;
         margin-top: 6px;
         font-size: 12px;
         font-weight: 400;
@@ -4409,7 +4409,7 @@ $other-blue-light: #;*/
         color: #226BE4; }
       .create-modal-contenty .edit-left3 input[type=text] {
         width: 80%;
-        height: 30px;
+        height: 35px;
         margin-top: 6px;
         font-size: 12px;
         font-weight: 400;
@@ -4431,7 +4431,7 @@ $other-blue-light: #;*/
         font-weight: 400; }
       .create-modal-contenty .edit-right3 input[type=text] {
         width: 80%;
-        height: 30px;
+        height: 35px;
         margin-top: 6px;
         font-size: 12px;
         font-weight: 400;
@@ -4452,7 +4452,7 @@ $other-blue-light: #;*/
         color: #226BE4; }
       .create-modal-contenty .edit-left4 input[type=text] {
         width: 80%;
-        height: 30px;
+        height: 35px;
         margin-top: 6px;
         font-size: 12px;
         font-weight: 400;
@@ -4474,7 +4474,7 @@ $other-blue-light: #;*/
         font-weight: 400; }
       .create-modal-contenty .edit-right4 input[type=text] {
         width: 80%;
-        height: 30px;
+        height: 35px;
         margin-top: 6px;
         font-size: 12px;
         font-weight: 400;
@@ -4495,7 +4495,7 @@ $other-blue-light: #;*/
         color: #226BE4; }
       .create-modal-contenty .edit-left5 input[type=text] {
         width: 80%;
-        height: 30px;
+        height: 35px;
         margin-top: 6px;
         font-size: 12px;
         font-weight: 400;
@@ -4517,7 +4517,7 @@ $other-blue-light: #;*/
         font-weight: 400; }
       .create-modal-contenty .edit-right5 input[type=text] {
         width: 80%;
-        height: 30px;
+        height: 35px;
         margin-top: 6px;
         font-size: 12px;
         font-weight: 400;
@@ -4538,7 +4538,7 @@ $other-blue-light: #;*/
         color: #226BE4; }
       .create-modal-contenty .edit-left6 input[type=text] {
         width: 80%;
-        height: 30px;
+        height: 35px;
         margin-top: 6px;
         font-size: 12px;
         font-weight: 400;
@@ -4560,7 +4560,7 @@ $other-blue-light: #;*/
         font-weight: 400; }
       .create-modal-contenty .edit-right6 input[type=text] {
         width: 80%;
-        height: 30px;
+        height: 35px;
         margin-top: 6px;
         font-size: 12px;
         font-weight: 400;
@@ -4582,7 +4582,7 @@ $other-blue-light: #;*/
       margin-top: -2%;
       margin-left: 35%;
       text-align: center;
-      padding-bottom: 30px; }
+      padding-bottom: 15px; }
       .create-modal-contenty .toggle .switch1 {
         float: left;
         width: 27%;
@@ -9229,7 +9229,7 @@ ul p:last-child a.down {
     background-color: black;
     background-color: rgba(0, 0, 0, 0.4); }
 
-  .create-modal-contentx {
+  .create-modal-contenty {
     position: absolute;
     background-color: #F7FAFF;
     margin: auto;
@@ -9237,137 +9237,358 @@ ul p:last-child a.down {
     border: 1px solid #888;
     width: 80%;
     margin-left: 10%;
-    height: 66%;
+    height: 75%;
     z-index: 1;
-    border-radius: 19px; }
-    .create-modal-contentx h1 {
+    border-radius: 19px;
+    /*SLIDER ENDS HERE*/ }
+    .create-modal-contenty h1 {
       font-family: "Roboto", sans-serif;
       color: #226BE4;
       font-weight: 400;
       text-align: center;
       padding: 20px;
-      font-size: 26px; }
-    .create-modal-contentx .edit-left1 {
-      width: 36%;
+      font-size: 18px; }
+    .create-modal-contenty .edit-left1 {
+      margin-top: -5px;
+      width: 42%;
       float: left;
-      margin-left: 28px;
-      padding-bottom: 35px; }
-      .create-modal-contentx .edit-left1 #edit-first {
-        width: 80%;
-        font-size: 11px;
-        font-weight: 400;
-        color: #226BE4; }
-      .create-modal-contentx .edit-left1 input[type=text] {
-        width: 90%;
-        height: 30px;
-        margin-top: 6px;
-        font-size: 12px;
-        font-weight: 400;
-        color: #226BE4;
-        padding-left: 15px;
-        border-radius: 22px;
-        border: 2px solid #226BE4; }
-    .create-modal-contentx .edit-right1 {
-      width: 36%;
-      float: right;
-      padding-bottom: 35px; }
-      .create-modal-contentx .edit-right1 #edit-last {
-        width: 86%;
-        font-size: 11px;
-        color: #226BE4;
-        font-weight: 400; }
-      .create-modal-contentx .edit-right1 input[type=text] {
-        width: 90%;
-        height: 30px;
-        margin-top: 6px;
-        font-size: 12px;
-        font-weight: 400;
-        color: #226BE4;
-        padding-left: 15px;
-        border-radius: 22px;
-        border: 2px solid #226BE4; }
-    .create-modal-contentx .edit-center {
-      width: 100%;
-      text-align: center; }
-      .create-modal-contentx .edit-center #edit-phone-number {
-        margin-top: 20px;
-        width: 80%;
-        margin-left: 9.5%;
-        font-weight: 400;
-        color: #226BE4; }
-      .create-modal-contentx .edit-center input[type=number] {
-        width: 80%;
-        height: 30px;
-        margin-top: 2px;
-        font-size: 12px;
-        font-weight: 400;
-        color: #226BE4;
-        margin-left: 9.5%;
-        padding-left: 15px;
-        border-radius: 22px;
-        border: 2px solid #226BE4; }
-      .create-modal-contentx .edit-center #edit-username {
-        width: 80%;
-        font-size: 11px;
-        margin-left: 9.5%;
-        font-weight: 400;
-        color: #226BE4; }
-      .create-modal-contentx .edit-center input[type=text] {
-        width: 80%;
-        height: 30px;
-        margin-top: 2px;
-        font-size: 12px;
-        font-weight: 400;
-        color: #226BE4;
-        margin-left: 9.5%;
-        padding-left: 15px;
-        border-radius: 22px;
-        border: 2px solid #226BE4; }
-    .create-modal-contentx .edit-left2 {
-      width: 36%;
-      float: left;
-      margin-left: 26px;
-      padding-bottom: 15px; }
-      .create-modal-contentx .edit-left2 #edit-new-password {
-        width: 80%;
-        font-size: 11px;
-        color: #226BE4;
-        font-weight: 400; }
-      .create-modal-contentx .edit-left2 input[type=text] {
-        width: 80%;
-        height: 30px;
-        margin-top: 6px;
-        font-size: 12px;
-        font-weight: 400;
-        color: #226BE4;
-        padding-left: 15px;
-        border-radius: 22px;
-        border: 2px solid #226BE4; }
-    .create-modal-contentx .edit-right2 {
-      width: 36%;
-      float: right;
-      margin-left: -10px;
-      padding-bottom: 15px; }
-      .create-modal-contentx .edit-right2 #edit-confirm-password {
+      margin-left: 22px;
+      padding-bottom: 18px; }
+      .create-modal-contenty .edit-left1 #edit-first {
         width: 80%;
         font-size: 10px;
         font-weight: 400;
-        color: #226BE4;
-        margin-left: -18px; }
-      .create-modal-contentx .edit-right2 input[type=text] {
-        margin-left: -21px;
-        width: 86%;
-        height: 30px;
-        margin-top: 6px;
-        font-size: 12px;
+        color: #226BE4; }
+      .create-modal-contenty .edit-left1 input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
         font-weight: 400;
         color: #226BE4;
         padding-left: 15px;
         border-radius: 22px;
         border: 2px solid #226BE4; }
-    .create-modal-contentx .save-changes {
-      margin-top: 5%;
-      margin-left: 26%;
+    .create-modal-contenty .edit-right1 {
+      width: 42%;
+      float: right;
+      margin-left: -23px;
+      margin-right: 15px;
+      margin-top: -5px;
+      padding-bottom: 18px; }
+      .create-modal-contenty .edit-right1 #edit-last {
+        width: 86%;
+        font-size: 10px;
+        color: #226BE4;
+        font-weight: 400; }
+      .create-modal-contenty .edit-right1 input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: #226BE4;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid #226BE4; }
+    .create-modal-contenty .edit-left2 {
+      width: 42%;
+      float: left;
+      margin-top: -5px;
+      margin-left: 22px;
+      padding-bottom: 18px; }
+      .create-modal-contenty .edit-left2 #edit-username {
+        width: 80%;
+        font-size: 10px;
+        font-weight: 400;
+        color: #226BE4; }
+      .create-modal-contenty .edit-left2 input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: #226BE4;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid #226BE4; }
+    .create-modal-contenty .edit-right2 {
+      width: 42%;
+      float: right;
+      margin-top: -5px;
+      margin-left: -23px;
+      margin-right: 15px;
+      padding-bottom: 18px; }
+      .create-modal-contenty .edit-right2 #edit-headline {
+        width: 86%;
+        font-size: 10px;
+        color: #226BE4;
+        font-weight: 400; }
+      .create-modal-contenty .edit-right2 input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: #226BE4;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid #226BE4; }
+    .create-modal-contenty .edit-left3 {
+      margin-top: -5px;
+      width: 42%;
+      float: left;
+      margin-left: 22px;
+      padding-bottom: 18px; }
+      .create-modal-contenty .edit-left3 #edit-job-title {
+        width: 80%;
+        font-size: 10px;
+        font-weight: 400;
+        color: #226BE4; }
+      .create-modal-contenty .edit-left3 input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: #226BE4;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid #226BE4; }
+    .create-modal-contenty .edit-right3 {
+      width: 42%;
+      float: right;
+      margin-left: -23px;
+      margin-right: 15px;
+      margin-top: -5px;
+      padding-bottom: 18px; }
+      .create-modal-contenty .edit-right3 #edit-company {
+        width: 86%;
+        font-size: 10px;
+        color: #226BE4;
+        font-weight: 400; }
+      .create-modal-contenty .edit-right3 input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: #226BE4;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid #226BE4; }
+    .create-modal-contenty .edit-left4 {
+      margin-top: -5px;
+      width: 42%;
+      float: left;
+      margin-left: 22px;
+      padding-bottom: 18px; }
+      .create-modal-contenty .edit-left4 #edit-previous-job {
+        width: 80%;
+        font-size: 10px;
+        font-weight: 400;
+        color: #226BE4; }
+      .create-modal-contenty .edit-left4 input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: #226BE4;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid #226BE4; }
+    .create-modal-contenty .edit-right4 {
+      width: 42%;
+      float: right;
+      margin-left: -23px;
+      margin-right: 15px;
+      margin-top: -5px;
+      padding-bottom: 18px; }
+      .create-modal-contenty .edit-right4 #edit-previous-company {
+        width: 86%;
+        font-size: 10px;
+        color: #226BE4;
+        font-weight: 400; }
+      .create-modal-contenty .edit-right4 input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: #226BE4;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid #226BE4; }
+    .create-modal-contenty .edit-left5 {
+      margin-top: -5px;
+      width: 42%;
+      float: left;
+      margin-left: 22px;
+      padding-bottom: 18px; }
+      .create-modal-contenty .edit-left5 #edit-email {
+        width: 80%;
+        font-size: 10px;
+        font-weight: 400;
+        color: #226BE4; }
+      .create-modal-contenty .edit-left5 input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: #226BE4;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid #226BE4; }
+    .create-modal-contenty .edit-right5 {
+      width: 42%;
+      float: right;
+      margin-left: -23px;
+      margin-right: 15px;
+      margin-top: -5px;
+      padding-bottom: 18px; }
+      .create-modal-contenty .edit-right5 #edit-phone {
+        width: 86%;
+        font-size: 10px;
+        color: #226BE4;
+        font-weight: 400; }
+      .create-modal-contenty .edit-right5 input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: #226BE4;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid #226BE4; }
+    .create-modal-contenty .edit-left6 {
+      margin-top: -5px;
+      width: 42%;
+      float: left;
+      margin-left: 22px;
+      padding-bottom: 18px; }
+      .create-modal-contenty .edit-left6 #edit-city {
+        width: 80%;
+        font-size: 10px;
+        font-weight: 400;
+        color: #226BE4; }
+      .create-modal-contenty .edit-left6 input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: #226BE4;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid #226BE4; }
+    .create-modal-contenty .edit-right6 {
+      width: 42%;
+      float: right;
+      margin-left: -23px;
+      margin-right: 15px;
+      margin-top: -5px;
+      padding-bottom: 18px; }
+      .create-modal-contenty .edit-right6 #edit-country {
+        width: 86%;
+        font-size: 10px;
+        color: #226BE4;
+        font-weight: 400; }
+      .create-modal-contenty .edit-right6 input[type=text] {
+        width: 80%;
+        height: 20px;
+        margin-top: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        color: #226BE4;
+        padding-left: 15px;
+        border-radius: 22px;
+        border: 2px solid #226BE4; }
+    .create-modal-contenty .articles-extra-buttons {
+      width: 100%;
+      float: left;
+      margin-top: -11px;
+      margin-left: 22px; }
+      .create-modal-contenty .articles-extra-buttons .attach-photo img {
+        width: 25px;
+        height: 25px; }
+    .create-modal-contenty .toggle {
+      width: 32%;
+      float: left;
+      margin-top: -2%;
+      margin-left: 35%;
+      text-align: center;
+      padding-bottom: 5px; }
+      .create-modal-contenty .toggle .switch1 {
+        float: left;
+        width: 27%;
+        height: 34px;
+        margin-top: 11px;
+        margin-left: -15px;
+        position: relative;
+        display: inline-block; }
+        .create-modal-contenty .toggle .switch1 input {
+          display: none; }
+        .create-modal-contenty .toggle .switch1 p {
+          margin-left: -82px;
+          margin-top: -24px;
+          width: 200px;
+          font-size: 10px;
+          color: #226BE4; }
+      .create-modal-contenty .toggle .switch2 {
+        float: right;
+        width: 27%;
+        height: 34px;
+        margin-top: 11px;
+        margin-right: 0px;
+        position: relative;
+        display: inline-block; }
+        .create-modal-contenty .toggle .switch2 input {
+          display: none; }
+        .create-modal-contenty .toggle .switch2 p {
+          margin-left: -53px;
+          margin-top: -24px;
+          width: 200px;
+          font-size: 10px;
+          color: #226BE4; }
+      .create-modal-contenty .toggle .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 22px;
+        width: 33px;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s; }
+        .create-modal-contenty .toggle .slider:before {
+          position: absolute;
+          content: "";
+          height: 16px;
+          width: 16px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s; }
+      .create-modal-contenty .toggle input:checked + .slider {
+        background-color: #99CCFF; }
+      .create-modal-contenty .toggle input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3; }
+      .create-modal-contenty .toggle input:checked + .slider:before {
+        -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        transform: translateX(10px); }
+      .create-modal-contenty .toggle .slider.round {
+        border-radius: 34px; }
+        .create-modal-contenty .toggle .slider.round:before {
+          border-radius: 50%; }
+    .create-modal-contenty .save-changes {
+      margin-left: 27%;
       background-color: #226BE4;
       border: 2px solid #226BE4;
       color: white;
@@ -9384,7 +9605,7 @@ ul p:last-child a.down {
       border-radius: 25px;
       margin-right: 10%;
       font-size: 14px; }
-      .create-modal-contentx .save-changes:hover {
+      .create-modal-contenty .save-changes:hover {
         width: 145px;
         height: 40px;
         font-weight: 400;

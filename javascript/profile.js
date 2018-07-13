@@ -3,6 +3,10 @@ var visibleDivId = null;
 var followers = false;
 var followings = false;
 var user_id = localStorage.getItem("user_id");
+// var visiting = getParameterByName('user_id');
+if(getParameterByName('user_id') != "" || getParameterByName('user_id') != null){
+    var visiting = getParameterByName('user_id');
+}
 var token = localStorage.getItem("token");
 var favs = {};
 
@@ -59,7 +63,6 @@ function toggleAndLoadFollowings() {
                 showUsers(user, 'profile-following')
             )
         })
-
 }
 
 function toggleVisibility(divId) {
@@ -114,7 +117,7 @@ function checkBrowser(){
 
 function loadUserData(){
     loadAndShowPosts();
-    //loadProfileData();
+    loadProfileData();
     fillProfileEditor();
 }
 
@@ -143,51 +146,76 @@ function fillProfileEditor(){
 }
 
 function loadProfileData(){
-    loadProfile();
-    var urlParams = new URLSearchParams(window.location.search);
-    console.log(urlParams.toString());
+    //loadProfile();
     console.log('in loadProfileData');
     //api call and get data
 
-    let url = 'http://app.bwayconnected.com/api/user/profile?user_id='+user_id+'&profile_id='+user_id;
+    let url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_read";
 
     fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
-        }
+        },
+        body: JSON.stringify({
+            "user_id": visiting
+        })
     })
     .then(res => res.json())
     .catch(error => console.error('Error:', error))
-    .then(response => {
+    .then(body => {
 
-        if (response.Response == "1000") {
+        if (body.status != "success") {
             console.log("request not successful in loadProfileData");
             // createCustomAlert("WARNING: User Already Exists");
         } else {
-            console.log('Success in loadProfileData', response)
-            var body = response.Result.profile;
-            var fn = body.first_name;
-            var ln = body.last_name;
-            var handle = body.handle;
+            console.log('Success in loadProfileData', body)
+            let company = body.response.company;
+            let production = body.response.production;
+            let user = body.response.user;
+            let personal = body.response.personal;
+            
+            
+            switch(user.usertype) {
+                case "company":
+                    console.log("this is a company");
+                    break;
+                case "production":
+                    console.log("this one's a company");
+                    break;
+                case "personal":
+                    console.log("just some dude");
+                    break;
+            }
+            let profile_image_el = document.createElement('img');
+            let profile_image = "";
+            if(!(user.image == null || user.image == "")){
+                if(user.image.substr(0,4) == "data" || user.image.substr(0,4) == "http"){
+                    profile_image = user.image;
+                } else {
+                    profile_image = "https:"+ user.image;
+                }
+            }
 
-            var profile_image = body.profile_image;
+            profile_image_el.src = profile_image;
+            document.getElementById("user_img").appendChild(profile_image_el);
 
-            var headline_position = body.headline_position;
-            document.getElementById('name').innerHTML = fn;
+            let location = document.createTextNode(user.city + ", " + user.country);
+            document.getElementById("location").appendChild(location);
+
+
+            document.getElementById('name').appendChild(document.createTextNode(" "));
             document.getElementById('username').innerHTML = handle;
             document.getElementById('headline_position').innerHTML = headline_position;
             var user_img = document.getElementsByClassName('user_img');
             user_img.innerHTML = '<img src=' + profile_image + '>';
             
             var field_of_work = body.field_of_work;
-            var location = body.city+","+body.country;
 
             var user_img = document.getElementById("user_img");
             user_img.innerHTML = '<img src=' + profile_image + '>';
             document.getElementById('name').innerHTML = fn;
             document.getElementById('user_type').innerHTML = field_of_work;
-            document.getElementById('location').innerHTML = location;
             console.log('fn is', fn);
         }
     }) 
@@ -220,6 +248,7 @@ function loadAndShowPosts(){
 function getPostsItems(){
     // var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read";
     var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read";
+
     let params = {
         headers: {
             'Content-type': 'application/json',
@@ -227,10 +256,9 @@ function getPostsItems(){
         },
         method: 'POST',
         body: JSON.stringify({
-            'user_id': user_id
+            'user_id': visiting
         })
     };
-    console.log(user_id)
     console.log(url);
     return fetch(url, params)
         .then(res => res.json())
@@ -336,7 +364,6 @@ function createPost(body){
     time.appendChild(clock);
 
     let timeSince = document.createElement('p');
-    console.log(body["Created Date"])
     let timeSinceText = document.createTextNode(howLongAgo(new Date(body["Created Date"])));
     timeSince.appendChild(timeSinceText);
     time.appendChild(timeSince);
@@ -419,7 +446,7 @@ function howLongAgo(date){
 }
 
 function loadProfile() {
-	let div = document.getElementById('profile_pic');
+	let div = document.getElementById('user_img');
 	let pic = document.createElement('img');
 	pic.classList.add('profile_pic');
 	let source = localStorage.getItem('profile_image');
@@ -468,6 +495,7 @@ function updateUser() {
     // let url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_update";
     let url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_update";
 
+
     let body = {
         'user_id': localStorage.getItem("user_id"),
         'phone': phone,
@@ -504,7 +532,12 @@ function updateUser() {
     })
 }
 
-
+function getParameterByName(name, url) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
 
 
 

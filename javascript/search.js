@@ -1,14 +1,10 @@
-//<div id="showSearchResults"> </div>
+function redirectToResultsPage(query_string) {
+    window.location.href = "../SearchResults/searchResults.html?query="+query_string;
 
-// <div class="search-container">
-// <input type="text" id="search_query" placeholder="Search.." name="search">
-// <button onclick="getSearchResults()">
-//   <i class="fa fa-search"></i>
-// </button>
-// </div>
-
-function getSearchResults() {
-    var query_string = document.getElementById('search_query').value;
+}
+function getSearchResults(query_string) {
+    document.getElementById('searchResultsDisplay').innerHTML = "";
+    // var query_string = document.getElementById('search_query').value;
     console.log('query_string ', query_string);
     var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/search_functionality';
     // var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/search_functionality';
@@ -79,7 +75,7 @@ function displayUsersFound(array1) {
         }
 
         divUsers.appendChild(user_image);
-        document.getElementById('showSearchResults').appendChild(divUsers);
+        document.getElementById('searchResultsDisplay').appendChild(divUsers);
     });
 
 }
@@ -113,7 +109,7 @@ console.log('array2',array2)
         }
 
         divPosts.appendChild(post_image);
-        document.getElementById('showSearchResults').appendChild(divPosts);
+        document.getElementById('searchResultsDisplay').appendChild(divPosts);
     });
 
 }

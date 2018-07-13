@@ -35,7 +35,7 @@ function checkLocalStorage(page) {
 		loadProfile();
 	} else if (PAGE == 'bob') {
 		loadProfile();
-	}
+	} 
 }
 
 function loadAndShowPosts() {

@@ -56,10 +56,18 @@
     }
   }
   h4 {
+    margin-top: 5.5%;
+    font-weight: 100;
+    margin-left: 5.8%;
+    color: $main-blue;
+    margin-bottom: -35px;
+  }
+  h6 {
     margin-top: 11%;
     font-weight: 100;
     margin-left: 5.8%;
     color: $main-blue;
+    font-size: 16px;
     margin-bottom: -35px;
   }
   .cp-row1 {
@@ -214,7 +222,7 @@
   border: 1px solid #888;
   width: 66%;
   margin-left: 17%;
-  height: 106%;
+  height: 66%;
   z-index: 1;
   border-radius: 19px;
   h1 {

@@ -222,8 +222,8 @@ function loadAndShowPosts(){
 }
 
 function getPostsItems(){
-    var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read";
-    // var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read";
+    // var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read";
+    var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read";
 
     let params = {
         headers: {
@@ -235,7 +235,6 @@ function getPostsItems(){
             'user_id': visiting
         })
     };
-    console.log(user_id)
     console.log(url);
     return fetch(url, params)
         .then(res => res.json())
@@ -470,8 +469,8 @@ function updateUser() {
     let city = document.getElementById('input-new').value;
     let country = document.getElementById('input-confirm').value;
 
-    let url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_update";
-    // let url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_update";
+    // let url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_update";
+    let url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_update";
 
 
     let body = {

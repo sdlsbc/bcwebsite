@@ -5475,14 +5475,15 @@ $other-blue-light: #;*/
         margin-left: 16px;
         font-family: "Roboto", sans-serif;
         color: #226BE4; }
-      .create-modal-content #create-milestones .milestone-center input[type=text] {
+      .create-modal-content #create-milestones .milestone-center .milestone-text {
         width: 100%;
         height: 100px;
-        font-size: 12px;
+        font-size: 14px;
         margin-top: 5px;
         font-weight: 400;
         border-radius: 25px;
         padding-left: 15px;
+        padding-top: 15px;
         border: 1px solid #226BE4; }
     .create-modal-content #create-milestones .only-me-checkbox {
       float: left;
@@ -5599,14 +5600,15 @@ $other-blue-light: #;*/
         margin-left: 16px;
         font-family: "Roboto", sans-serif;
         color: #226BE4; }
-      .create-modal-content #create-moments .moments-center input[type=text] {
+      .create-modal-content #create-moments .moments-center .moments-text {
         width: 100%;
         height: 100px;
-        font-size: 12px;
+        font-size: 14px;
         margin-top: 5px;
         font-weight: 400;
         border-radius: 25px;
         padding-left: 15px;
+        padding-top: 15px;
         border: 1px solid #226BE4; }
     .create-modal-content #create-moments button {
       float: right;
@@ -6389,7 +6391,7 @@ $other-blue-light: #;*/
           margin-left: 15px;
           font-family: "Roboto", sans-serif;
           color: #226BE4; }
-        .create-modal-content #create-milestones .milestone-center input[type=text] {
+        .create-modal-content #create-milestones .milestone-center .milestone-text {
           width: 100%;
           height: 250px;
           font-size: 16px;
@@ -6507,7 +6509,7 @@ $other-blue-light: #;*/
           margin-left: 15px;
           font-family: "Roboto", sans-serif;
           color: #226BE4; }
-        .create-modal-content #create-moments .moments-center input[type=text] {
+        .create-modal-content #create-moments .moments-center .moments-text {
           width: 100%;
           height: 178px;
           font-size: 12px;
@@ -10445,7 +10447,7 @@ ul p:last-child a.down {
           margin-left: 15px;
           font-family: "Roboto", sans-serif;
           color: #226BE4; }
-        .create-modal-content #create-milestones .milestone-center input[type=text] {
+        .create-modal-content #create-milestones .milestone-center .milestone-text {
           width: 100%;
           height: 80px;
           font-size: 16px;
@@ -10563,7 +10565,7 @@ ul p:last-child a.down {
           margin-left: 15px;
           font-family: "Roboto", sans-serif;
           color: #226BE4; }
-        .create-modal-content #create-moments .moments-center input[type=text] {
+        .create-modal-content #create-moments .moments-center .moments-text {
           width: 100%;
           height: 80px;
           font-size: 16px;

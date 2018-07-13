@@ -1,0 +1,28 @@
+<html>
+
+<head>
+
+</head>
+<script>
+    var urlParam = function (name, w) {
+        w = w || window;
+        var rx = new RegExp('[\&|\?]' + name + '=([^\&\#]+)'),
+            val = w.location.search.match(rx);
+        return !val ? '' : val[1];
+    }
+    var query = urlParam('query');
+    // console.log(query);
+    function myFunction() {
+        getSearchResults(query);
+}
+</script>
+
+<body onload="myFunction()">
+    <div id="searchResultsDisplay">
+
+    </div>
+    <script type="text/javascript" src="../javascript/search.js"></script>
+
+</body>
+
+</html>

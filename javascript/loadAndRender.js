@@ -69,7 +69,7 @@ function getPostsItems() {
 	}
 	if (PAGE == 'favs') {
 		// url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/favorite_read"
-		url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read";
+		url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/favorite_read";
 	}
 
 	fetchCount += 1;
@@ -159,13 +159,15 @@ function likesUpdate(post_id) {
 function showModal(body) {
 	console.log("showModal",body);
 	console.log(favs)
-
+	let visiting = body.user;
 	// start building the modal
 	var image_address = "";
-	if(body.image.substr(0,4) == "data"){
-		image_address = body.image;
-	} else {
-		image_address = "https:"+ body.image;
+	if(!(body.image == null || body.image == "")){
+		if(body.image.substr(0,4) == "data" || body.image.substr(0,4) == "http"){
+			image_address = body.image;
+		} else {
+			image_address = "https:"+ body.image;
+		}
 	}
 
 	var post_image = document.getElementsByClassName('modal-image');
@@ -173,7 +175,7 @@ function showModal(body) {
 
 	var profile_image_address = "body.publisher_image";
 	if(body.publisher_image){
-		if(body.publisher_image.substr(0,4) == "data"){
+		if(body.publisher_image.substr(0,4) == "data" || body.publisher_image.substr(0,4) == "http"){
 			image_address = body.publisher_image;
 		} else {
 			image_address = "https:"+ body.publisher_image;
@@ -190,6 +192,8 @@ function showModal(body) {
 	//var publisher_nameNode = document.createTextNode(body.publisher.first_name + ' ' + body.publisher.last_name);
 	publisher_name[0].innerHTML = body.publisher_name;
 	//publisher_name[0].appendChild(publisher_nameNode);
+	var profile_link = document.getElementById("profile_link");
+	profile_link.href = "../Profile/profile.html?user_id="+ visiting;
 
 	var dateTime = new Date(body["Created Date"]);
 	//var dateTime = dateTime.split(" ");
@@ -305,11 +309,14 @@ function createPost(body) {
 	publisher_div.classList.add('publisher');
 	publisher_div.classList.add('pointer');
 
+	var publisher_link = document.createElement('a');
+	publisher_link.href = "../Profile/profile.html?user_id=" + body._id
+
 	var image_address = "";
 
 	let publisher_image = document.createElement('img');
 	if (body.publisher_image){
-		if(body.publisher_image.substr(0,4) == "data"){
+		if(body.publisher_image.substr(0,4) == "data" || body.publisher_image.substr(0,4) == "http") {
 			image_address = body.publisher_image;
 		} else {
 			image_address = "https:"+ body.publisher_image;
@@ -354,7 +361,7 @@ function createPost(body) {
 	if(body.image){
 		let main_image = document.createElement('img');
 
-		if(body.image.substr(0,4) == "data"){
+		if(body.image.substr(0,4) == "data" || body.image.substr(0,4) == "http"){
 			image_address = body.image;
 		} else {
 			image_address = "https:"+ body.image;
@@ -372,7 +379,6 @@ function createPost(body) {
 	button_div.classList.add('button_row');
 
 	let fav_button = document.createElement('img');
-	// fav_button.setAttribute("id", body.id);
 	fav_button.src = '../images/newsfeed_buttons/heart2.png';
 	fav_button.classList.add('pointer');
 	var liked = false;

@@ -6,6 +6,8 @@ $light-blue: #F7FAFF;
 $dark-blue: #18253B;
 $light-gray: #E9E9E9;
 $gray: #B2B2B2;
+$green: #367f41;
+$purple: #4e0f7d;
 $font: 'Roboto', sans-serif;
 .body {
   position: fixed;
@@ -200,6 +202,14 @@ hr {
   width: 100%;
   height: 2px;
   color: $main-blue;
+}
+.choose-img {
+  width: 50%;
+  float: left;
+  color: #0080FF;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-left: 15px;
 }
 .signin-usertype {
   width: 80%;

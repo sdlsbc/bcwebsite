@@ -39,6 +39,34 @@
       }
     }
   }
+  .search {
+    width: 90%;
+    position: fixed;
+    margin-top: 16%;
+    margin-left: 43px;
+    margin-right: 16px;
+    padding-bottom: 15px;
+    .search-icon {
+      width: 16px;
+      height: 16px;
+      right: 16.5%;
+      margin-top: 75px;
+      z-index: 2;
+      position: fixed;
+    }
+    input[type=text] {
+      width: 76%;
+      padding: 5px;
+      font-size: 14px;
+      padding-top: 8px;
+      position: relative;
+      padding-left: 15px;
+      padding-right: 5px;
+      padding-bottom: 9px;
+      border-radius: 25px;
+      border: 2px solid $main-blue;
+    }
+  }
   p {
     font-family: $font;
     color: $gray;

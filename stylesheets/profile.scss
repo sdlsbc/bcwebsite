@@ -49,7 +49,7 @@ $other-blue-light: #;*/
         text-decoration:none; color: $light-gray;
         font-size: 16px;
         font-weight: 100;
-        margin-left: 44px;
+        margin-left: 30px;
         margin-top: 19px;
       }
     }
@@ -66,6 +66,33 @@ $other-blue-light: #;*/
       }
     }
   }
+  .search {
+    margin-left: 722px;
+    margin-top: 2px;
+    margin-right: 16px;
+    width: 27%;
+    position: inherit;
+    .search-icon {
+      width: 18px;
+      height: 18px;
+      right: -79%;
+      top: 3%;
+      z-index: 2;
+      position: relative;
+    }
+    input[type=text] {
+      padding: 5px; 
+      width: 76%;
+      padding-right: 5px;
+      padding-top: 11px;
+      padding-bottom: 9px;
+      padding-left: 15px;
+      position: relative;
+      border-radius: 25px;
+      font-size: 14px;
+      border: 2px solid $main-blue;
+    }
+  }
   p {
     font-family: $font;
     color: $gray;
@@ -78,6 +105,119 @@ $other-blue-light: #;*/
     }
   }
 }
+
+
+ /* .open_sidenav {
+    width: 36px;
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+  }*/
+/*  .logo {
+    height: 50%;
+    width: auto;
+    margin-right: -10px;
+    margin-top: 3px;
+  }*/
+/*}*/
+@media screen and (max-width: 995px) {
+  .navbar {
+    position: fixed;
+    background: white;
+    margin-left: -8px;
+    padding-left: 4px;
+    top: -1;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-right: 4px;
+    padding-bottom: 5px;
+    a { 
+      width: 7%;
+      font-family: $font;
+      text-decoration: none;
+      p {
+        color: $gray;
+        font-size: 12px;
+        margin-left: -111px;
+        &:hover { 
+          font-family: $font;
+          text-decoration:none; color: $light-gray;
+          font-size: 16px;
+          font-weight: 100;
+          margin-left: 30px;
+          margin-top: 19px;
+        }
+      }
+      .discover-p-tag {
+        margin-top: 39px; 
+        &:hover {
+          margin-top: 39px;
+        }
+      }
+      .explore-p-tag {
+        margin-top: 39px;
+        &:hover {
+          margin-top: 39px;
+        }
+      }
+    }
+    .logo-a {
+      height: 57%;
+      width: 44%;
+      margin-top: 3px;
+      .logo {
+        height: 42px;
+        width: 80%;
+        margin-left: -11px;
+        margin-right: -10px;
+        margin-top: -4px;
+      }
+    }
+    .search {
+      margin-left: 570px;
+      margin-top: 4px;
+      margin-right: 16px;
+      width: 30%;
+      position: fixed;
+      .search-icon {
+        width: 16px;
+        height: 16px;
+        right: 18.5%;
+        margin-top: 8px;
+        z-index: 2;
+        position: fixed;
+      }
+      input[type=text] {
+        width: 76%;
+        padding: 5px;
+        font-size: 14px;
+        padding-top: 8px;
+        position: relative;
+        padding-left: 15px;
+        padding-right: 5px;
+        padding-bottom: 9px;
+        border-radius: 25px;
+        border: 2px solid $main-blue;
+      }
+    }
+    p {
+      font-family: $font;
+      color: $gray;
+      font-size: 16px;
+      font-weight: 100;
+      margin-left: 15px;
+      margin-top: 19px;
+      &:hover {
+        color: $light-gray;
+      }
+    }
+  }
+}
+
 
 @media screen and (max-width: 700px) {
   .navbar { 
@@ -105,21 +245,203 @@ $other-blue-light: #;*/
         font-size: 14px;
       }
     }
-  }
-
-  .open_sidenav {
-    width: 36px;
-    font-size: 30px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  .logo {
-    height: 50%;
-    width: auto;
-    margin-right: -10px;
-    margin-top: 3px;
+    .logo-a {
+      height: 55%;
+      width: 82%;
+      margin-top: 3px;
+      .logo {
+        height: 42px;
+        width: 100%;
+        margin-left: -11px;
+        margin-right: -10px;
+        margin-top: -4px;
+      }
+    }
+    .open_sidenav {
+      width: 36px;
+      font-size: 30px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .navbar {
+    position: fixed;
+    background: white;
+    margin-left: -8px;
+    padding-left: 4px;
+    top: -1;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-right: 4px;
+    padding-bottom: 5px;
+    a { 
+      font-family: $font;
+      text-decoration: none;
+      p {
+        color: $gray;
+        &:hover { 
+          font-family: $font;
+          text-decoration:none; color: $light-gray;
+          font-size: 16px;
+          font-weight: 100;
+          margin-left: 30px;
+          margin-top: 19px;
+        }
+      }
+      .discover-p-tag {
+        margin-top: 39px; 
+        &:hover {
+          margin-top: 39px;
+        }
+      }
+      .explore-p-tag {
+        margin-top: 39px;
+        &:hover {
+          margin-top: 39px;
+        }
+      }
+    }
+    .search {
+      margin-left: 592px;
+      margin-top: 2px;
+      margin-right: 16px;
+      width: 24%;
+      position: inherit;
+      .search-icon {
+        width: 18px;
+        height: 18px;
+        right: -79%;
+        top: 3%;
+        z-index: 2;
+        position: relative;
+      }
+      input[type=text] {
+        padding: 5px; 
+        width: 76%;
+        padding-right: 5px;
+        padding-top: 11px;
+        padding-bottom: 9px;
+        padding-left: 15px;
+        position: relative;
+        border-radius: 25px;
+        font-size: 14px;
+        border: 2px solid $main-blue;
+      }
+    }
+    p {
+      font-family: $font;
+      color: $gray;
+      font-size: 16px;
+      font-weight: 100;
+      margin-left: 15px;
+      margin-top: 19px;
+      &:hover {
+        color: $light-gray;
+      }
+    }
+  }
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+  .navbar {
+    position: fixed;
+    background: white;
+    margin-left: -8px;
+    padding-left: 4px;
+    top: -1;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-right: 4px;
+    padding-bottom: 5px;
+    a { 
+      font-family: $font;
+      text-decoration: none;
+      p {
+        color: $gray;
+        font-size: 12px;
+        margin-left: 38px;
+        &:hover { 
+          font-family: $font;
+          text-decoration:none; color: $light-gray;
+          font-size: 16px;
+          font-weight: 100;
+          margin-left: 30px;
+          margin-top: 19px;
+        }
+      }
+      .discover-p-tag {
+        margin-top: 39px; 
+        &:hover {
+          margin-top: 39px;
+        }
+      }
+      .explore-p-tag {
+        margin-top: 39px;
+        &:hover {
+          margin-top: 39px;
+        }
+      }
+    }
+    .search {
+      margin-left: 489px;
+      margin-top: 4px;
+      margin-right: 16px;
+      width: 23%;
+      position: fixed;
+      .search-icon {
+        width: 16px;
+        height: 16px;
+        right: 17%;
+        margin-top: -10px;
+        z-index: 6;
+        position: fixed;
+      }
+      input[type=text] {
+        width: 76%;
+        padding: 5px;
+        font-size: 14px;
+        padding-top: 8px;
+        position: relative;
+        padding-left: 15px;
+        padding-right: 5px;
+        padding-bottom: 9px;
+        border-radius: 25px;
+        border: 2px solid $main-blue;
+      }
+    }
+    p {
+      font-family: $font;
+      color: $gray;
+      font-size: 16px;
+      font-weight: 100;
+      margin-left: 15px;
+      margin-top: 19px;
+      &:hover {
+        color: $light-gray;
+      }
+    }
+  }
+}
+
+
+
+
+
+
 
 /* ===================== S I G N  O U T ===================== */
 
@@ -217,7 +539,7 @@ $other-blue-light: #;*/
   width: 100%;
   .user_profile_left {
     float: left;
-    margin-top: -4%;
+    margin-top: -6%;
     width: 30%;
     margin-left: 4%;
     .user_img {   
@@ -1190,7 +1512,7 @@ $other-blue-light: #;*/
 
   /*SLIDER ENDS HERE*/
   .save-changes {
-    margin-left: 26%;
+    margin-left: 42%;
     background-color: #226BE4;
     border: 2px solid #226BE4;
     color: white;

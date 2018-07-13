@@ -227,13 +227,14 @@
     display: flex;
     justify-content: flex-end;
     flex-grow: 2;
-    margin-top: -8px; }
+    margin-top: -8px;
+    margin-left: -125%; }
     .signout .signout-button {
       background-color: #226BE4;
       border: 2px solid #226BE4;
       color: white;
       padding: 3px 12px;
-      width: 85px;
+      width: 78px;
       height: 28px;
       text-align: center;
       font-size: 12px;
@@ -244,7 +245,7 @@
       border-radius: 25px;
       margin-right: 4%;
       margin-top: -7px;
-      font-size: 13px; }
+      font-size: 12px; }
       .signout .signout-button:hover {
         background-color: white;
         border: 2px solid #226BE4;
@@ -3602,7 +3603,7 @@ $other-blue-light: #;*/
       .navbar a p {
         color: #B2B2B2;
         font-size: 12px;
-        margin-left: 38px; }
+        margin-left: 23px; }
         .navbar a p:hover {
           font-family: "Roboto", sans-serif;
           text-decoration: none;
@@ -9125,7 +9126,7 @@ ul p:last-child a.down {
   .navbar {
     position: fixed;
     background: white;
-    margin-left: -8px;
+    margin-left: -5px;
     padding-left: 4px;
     top: -1;
     width: 100%;
@@ -9135,7 +9136,7 @@ ul p:last-child a.down {
     align-items: center;
     flex-wrap: wrap;
     padding-right: 4px;
-    padding-bottom: 5px; }
+    padding-bottom: 52px; }
     .navbar a {
       font-family: "Roboto", sans-serif;
       text-decoration: none; }
@@ -9160,15 +9161,15 @@ ul p:last-child a.down {
     .navbar .search {
       width: 90%;
       position: fixed;
-      margin-top: 16%;
-      margin-left: 43px;
+      margin-top: 20%;
+      margin-left: 45px;
       margin-right: 16px;
       padding-bottom: 15px; }
       .navbar .search .search-icon {
         width: 16px;
         height: 16px;
-        right: 16.5%;
-        margin-top: 75px;
+        right: 19.5%;
+        margin-top: 80px;
         z-index: 2;
         position: fixed; }
       .navbar .search input[type=text] {
@@ -9246,16 +9247,16 @@ ul p:last-child a.down {
     width: 100%; }
     .profile_wrapper .user_profile_left {
       float: left;
-      margin-top: -50%;
+      margin-top: -11%;
       width: 100%;
-      margin-left: 4%; }
+      margin-left: -4%; }
       .profile_wrapper .user_profile_left .user_img {
         text-align: center; }
         .profile_wrapper .user_profile_left .user_img img {
           border: 4px solid #226BE4;
           border-radius: 50%;
-          width: 100px;
-          height: 100px; }
+          width: 80px;
+          height: 80px; }
       .profile_wrapper .user_profile_left .name {
         text-align: center;
         width: 100%;

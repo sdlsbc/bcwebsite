@@ -159,11 +159,11 @@ function likesUpdate(post_id) {
 function showModal(body) {
 	console.log("showModal",body);
 	console.log(favs)
-
+	let visiting = body.user;
 	// start building the modal
 	var image_address = "";
-	if(body.image){
-		if(body.image.substr(0,4) == "data" || body.publisher_image.substr(0,4) == "http"){
+	if(!(body.image == null || body.image == "")){
+		if(body.image.substr(0,4) == "data" || body.image.substr(0,4) == "http"){
 			image_address = body.image;
 		} else {
 			image_address = "https:"+ body.image;
@@ -192,6 +192,8 @@ function showModal(body) {
 	//var publisher_nameNode = document.createTextNode(body.publisher.first_name + ' ' + body.publisher.last_name);
 	publisher_name[0].innerHTML = body.publisher_name;
 	//publisher_name[0].appendChild(publisher_nameNode);
+	var profile_link = document.getElementById("profile_link");
+	profile_link.href = "../Profile/profile.html?user_id="+ visiting;
 
 	var dateTime = new Date(body["Created Date"]);
 	//var dateTime = dateTime.split(" ");
@@ -306,6 +308,9 @@ function createPost(body) {
 	let publisher_div = document.createElement('div');
 	publisher_div.classList.add('publisher');
 	publisher_div.classList.add('pointer');
+
+	var publisher_link = document.createElement('a');
+	publisher_link.href = "../Profile/profile.html?user_id=" + body._id
 
 	var image_address = "";
 

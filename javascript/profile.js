@@ -3,6 +3,10 @@ var visibleDivId = null;
 var followers = false;
 var followings = false;
 var user_id = localStorage.getItem("user_id");
+// var visiting = getParameterByName('user_id');
+if(getParameterByName('user_id') != "" || getParameterByName('user_id') != null){
+    var visiting = getParameterByName('user_id');
+}
 var token = localStorage.getItem("token");
 var favs = {};
 
@@ -228,7 +232,7 @@ function getPostsItems(){
         },
         method: 'POST',
         body: JSON.stringify({
-            'user_id': user_id
+            'user_id': visiting
         })
     };
     console.log(user_id)
@@ -506,7 +510,12 @@ function updateUser() {
     })
 }
 
-
+function getParameterByName(name, url) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
 
 
 

@@ -14,9 +14,9 @@ function register() {
         var fname = document.getElementById('signup-company-firstname').value;
         var lname = document.getElementById('signup-company-lastname').value;
         var handle = document.getElementById('signup-companyHandle').value;
-        var city = document.getElementById('signup-company-city').value;
-        var country = document.getElementById('signup-company-country').value;
-        var phone = document.getElementById("signup-company-phone").value;
+        // var city = document.getElementById('signup-company-city').value;
+        // var country = document.getElementById('signup-company-country').value;
+        // var phone = document.getElementById("signup-company-phone").value;
 
     } else if (userType == "production" || userType == "personal") {
 
@@ -33,15 +33,15 @@ function register() {
         var fname = document.getElementById('signup-firstname').value;
         var lname = document.getElementById('signup-lastname').value;
         var handle = document.getElementById('signup-handle').value;
-        var city = document.getElementById('signup-city').value;
-        var country = document.getElementById('signup-country').value;
-        var phone = document.getElementById("signup-phone").value;
+        //var city = document.getElementById('signup-city').value;
+        //var country = document.getElementById('signup-country').value;
+        //var phone = document.getElementById("signup-phone").value;
         
     }
     var c_name = "";
     var p_name = ""
     var dob = "";
-    let error_message = validateSignUpInput(email, password, fname, lname, handle, userType, city, country);
+    let error_message = validateSignUpInput(email, password, fname, lname, handle, userType);
     if (error_message !== "") {
         console.log('error msg from function', error_message);
         createCustomAlert(error_message);
@@ -69,9 +69,6 @@ function register() {
             "password": password,
             "firstname": fname,
             "lastname": lname,
-            "phone": phone,
-            "city": city,
-            "country": country,
             "usertype": userType,
             "company_name": c_name,
             "date_of_birth": dob,
@@ -116,6 +113,8 @@ function register() {
                         var res_usertype = response.response.user.usertype;
                         var res_lastname = response.response.user.lastname;
                         var res_firstname = response.response.user.firstname;
+                        var city = response.response.user.city;
+                        var country = response.response.user.country;
 
                         localStorage.setItem("user_id", res_user_id);
                         localStorage.setItem("usertype_id", res_usertype_id);
@@ -125,6 +124,8 @@ function register() {
                         localStorage.setItem("first_name", res_firstname);
                         localStorage.setItem("last_name", res_lastname);
                         localStorage.setItem("profile_image", res_profileimage);
+                        localStorage.setItem("city", city);
+                        localStorage.setItem("country", country);
 
 
                         // save usertype data 
@@ -268,9 +269,10 @@ function signin() {
                 var user_id = response.response.user_id;
                 var handle = response.response.user.handle;
                 var res_usertype = response.response.user.usertype;
-                var firstname = response.response.user.lastname;
-                var lastname = response.response.user.firstname;
-                var res_usertype_id = "";               
+                var firstname = response.response.user.firstname;
+                var lastname = response.response.user.lastname;
+                var city = response.response.user.city;
+                var country = response.response.user.country;
 
                 if (res_usertype == "company") {
                     res_usertype_id = response.response.user.company;
@@ -282,6 +284,12 @@ function signin() {
                 }
                 if (res_usertype == "personal") {
                     res_usertype_id = response.response.user.personal;
+                    console.log(response.response)
+                    localStorage.setItem("headline", response.response.personal.headline)
+                    localStorage.setItem("job_title", response.response.personal.job_title)
+                    localStorage.setItem("job_company", response.response.personal.job_company)
+                    localStorage.setItem("prev_job", response.response.personal.prev_job)
+                    localStorage.setItem("prev_company", response.response.personal.prev_company)
                     console.log('usertype id in register.js', res_usertype_id);
                 }
 
@@ -290,10 +298,11 @@ function signin() {
                 localStorage.setItem("user_id", user_id);
                 localStorage.setItem("handle", handle);
                 localStorage.setItem("usertype", res_usertype);
-                localStorage.setItem("usertype_id", res_usertype_id);
+                //localStorage.setItem("usertype_id", res_usertype_id);
                 localStorage.setItem("first_name", firstname);
                 localStorage.setItem("last_name", lastname);
-                console.log('usertype_id is: ', res_usertype_id);
+                localStorage.setItem("city", city);
+                localStorage.setItem("country", country);
                 var res_lastname = response.response.user.lastname;
                 var res_firstname = response.response.user.firstname;
                 if (localStorage.getItem("token") == "") {
@@ -383,7 +392,7 @@ function validateSigninInput(e, p) {
     }
 }
 
-function validateSignUpInput(e, p, fn, ln, h, ut, city, country) {
+function validateSignUpInput(e, p, fn, ln, h, ut) {
     if (e == "" || e == null) {
         return 'Please Enter Email';
     } else if (p == "" || p == null) {
@@ -398,10 +407,6 @@ function validateSignUpInput(e, p, fn, ln, h, ut, city, country) {
         return 'Please Enter Handle';
     } else if (ut == "" || ut == null) {
         return 'Please Enter User Type';
-    } else if (city == "" || city == null) {
-        return 'Please Enter City';
-    } else if (country == "" || country == null) {
-        return 'Please Enter Country';
     } else {
         return '';
     }

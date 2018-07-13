@@ -5380,7 +5380,7 @@ $other-blue-light: #;*/
     border-top: none;
     margin-top: 8%;
     /*background-color: white;*/
-    width: 97%;
+    width: 97.4%;
     height: 85%; }
   .create-modal-content #create-milestones {
     background-color: #c0d0f6; }
@@ -5626,7 +5626,7 @@ $other-blue-light: #;*/
       font-family: "Roboto", sans-serif;
       border-radius: 25px; }
   .create-modal-content #create-articles {
-    width: 97%;
+    width: 97.4%;
     background-color: #95b0f0; }
     .create-modal-content #create-articles h3 {
       font-weight: 400;

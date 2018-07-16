@@ -5683,8 +5683,11 @@ $other-blue-light: #;*/
       margin-right: 54px;
       padding-bottom: 36px;
       display: inline-block; }
-      .create-modal-content #create-moments .moments-right input[type=file] {
-        font-size: 16px; }
+      .create-modal-content #create-moments .moments-right .attach-photo {
+        width: 56px;
+        margin-left: 41%;
+        margin-top: 9px;
+        margin-top: -44px; }
     .create-modal-content #create-moments .moments-left2 {
       width: 40%;
       float: left;

@@ -3339,7 +3339,7 @@ $other-blue-light: #;*/
         color: #E9E9E9;
         font-size: 16px;
         font-weight: 100;
-        margin-left: 30px;
+        margin-left: 44px;
         margin-top: 19px; }
     .navbar a .discover-p-tag {
       margin-top: 39px; }
@@ -3517,7 +3517,8 @@ $other-blue-light: #;*/
     margin-left: 44px;
     margin-top: 19px; }
     .navbar p:hover {
-      color: #E9E9E9; }
+      color: #E9E9E9;
+      margin-left: 44px; }
 
 /* .open_sidenav {
    width: 36px;

@@ -10,6 +10,12 @@ if(getParameterByName('user_id') != "" || getParameterByName('user_id') != null)
 var token = localStorage.getItem("token");
 var favs = {};
 
+console.log("looky looky what went through ",localStorage.getItem("headline"),
+                    localStorage.getItem("job_title"),
+                    localStorage.getItem("job_company"),
+                    localStorage.getItem("prev_job"),
+                    localStorage.getItem("prev_company"))
+
 
 function toggleAndLoadFollowers() {
     toggleVisibility('profile-followers');
@@ -121,29 +127,7 @@ function loadUserData(){
     fillProfileEditor();
 }
 
-function fillProfileEditor(){
-    
-    let firstnameEl = document.getElementById("input-first");
-    if( !(localStorage.getItem("first_name") == null || localStorage.getItem("first_name") == "null") ) {
-        firstnameEl.value = localStorage.getItem("first_name");
-    }
-    let lastnameEl = document.getElementById("input-last");
-    if ( !(localStorage.getItem("last_name") == null || localStorage.getItem("last_name") == "null") ) {
-        lastnameEl.value = localStorage.getItem("last_name");
-    }
-    let phoneEl = document.getElementById("input-email");
-    if ( !(localStorage.getItem("phone") == undefined) ) {
-        phoneEl.value = localStorage.getItem("phone");
-    }
-    let cityEl = document.getElementById("input-new")
-    if ( !(localStorage.getItem("city") == null || localStorage.getItem("city") == "null") ) {
-        cityEl.value = localStorage.getItem("city");
-    }
-    let countryEl = document.getElementById("input-confirm")
-    if( !(localStorage.getItem("country") == null || localStorage.getItem("country") == "null") ) {
-        countryEl.value = localStorage.getItem("country");
-    }
-}
+
 
 function loadProfileData(){
     //loadProfile();
@@ -151,15 +135,26 @@ function loadProfileData(){
     //api call and get data
 
     let url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_read";
-
+    console.log("visiting", visiting);
+    let body = {}
+    if(visiting == ""){
+        console.log("this is yours")
+        body = {
+            "user_id": user_id
+        }
+    } else {
+        console.log("visiting someone else")
+        body = {
+            "user_id": visiting
+        }
+    }
+    //let body = 
     fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-            "user_id": visiting
-        })
+        body: JSON.stringify(body)
     })
     .then(res => res.json())
     .catch(error => console.error('Error:', error))
@@ -189,6 +184,10 @@ function loadProfileData(){
             }
             let profile_image_el = document.createElement('img');
             let profile_image = "";
+            if(!user.image){
+                console.log("put the default in here")
+                profile_image = "../images/default-person.png"
+            }
             if(!(user.image == null || user.image == "")){
                 if(user.image.substr(0,4) == "data" || user.image.substr(0,4) == "http"){
                     profile_image = user.image;
@@ -204,19 +203,12 @@ function loadProfileData(){
             document.getElementById("location").appendChild(location);
 
 
-            document.getElementById('name').appendChild(document.createTextNode(" "));
-            document.getElementById('username').innerHTML = handle;
-            document.getElementById('headline_position').innerHTML = headline_position;
+            document.getElementById('name').appendChild(document.createTextNode(user.firstname + " " + user.lastname));
+            document.getElementById('username').innerHTML = user.handle;
             var user_img = document.getElementsByClassName('user_img');
-            user_img.innerHTML = '<img src=' + profile_image + '>';
+            // user_img.innerHTML = '<img src=' + profile_image + '>';
             
-            var field_of_work = body.field_of_work;
 
-            var user_img = document.getElementById("user_img");
-            user_img.innerHTML = '<img src=' + profile_image + '>';
-            document.getElementById('name').innerHTML = fn;
-            document.getElementById('user_type').innerHTML = field_of_work;
-            console.log('fn is', fn);
         }
     }) 
 }
@@ -249,15 +241,25 @@ function getPostsItems(){
     // var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read";
     var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read";
 
+    let body = {}
+    if(visiting == ""){
+        console.log("this is yours")
+        body = {
+            "user_id": user_id
+        }
+    } else {
+        console.log("visiting someone else")
+        body = {
+            "user_id": visiting
+        }
+    } 
     let params = {
         headers: {
             'Content-type': 'application/json',
             'Authorization': 'Bearer ' + token
         },
         method: 'POST',
-        body: JSON.stringify({
-            'user_id': visiting
-        })
+        body: JSON.stringify(body)
     };
     console.log(url);
     return fetch(url, params)
@@ -483,27 +485,91 @@ function showUsers(user, divId) {
     console.log(user.first_name);
 }
 
+function fillProfileEditor(){
+    
+    let firstnameEl = document.getElementById("input-first");
+    if( !(localStorage.getItem("first_name") == null || localStorage.getItem("first_name") == "null") ) {
+        console.log("first name", localStorage.getItem("first_name"))
+        firstnameEl.value = localStorage.getItem("first_name");
+    }
+    let lastnameEl = document.getElementById("input-last");
+    if ( !(localStorage.getItem("last_name") == null || localStorage.getItem("last_name") == "null") ) {
+        lastnameEl.value = localStorage.getItem("last_name");
+    }
+    let usernameEl = document.getElementById("input-handle");
+    if ( !(localStorage.getItem("handle") == null || localStorage.getItem("handle") == "null") ) {
+        usernameEl.value = localStorage.getItem("handle");
+    }
+    let phoneEl = document.getElementById("input-phone");
+    if ( !(localStorage.getItem("phone") == undefined || localStorage.getItem("phone") == 0) ) {
+        phoneEl.value = localStorage.getItem("phone");
+    }
+    let cityEl = document.getElementById("input-city")
+    if ( !(localStorage.getItem("city") == null || localStorage.getItem("city") == "null") ) {
+        console.log("loading city ", localStorage.getItem("city"))
+        cityEl.value = localStorage.getItem("city");
+    }
+    let countryEl = document.getElementById("input-country")
+    if( !(localStorage.getItem("country") == null || localStorage.getItem("country") == "null") ) {
+        countryEl.value = localStorage.getItem("country");
+    }
+    let handleEl = document.getElementById("input-headline")
+    if( !(localStorage.getItem("headline") == null || localStorage.getItem("headline") == "null") ) {
+        handleEl.value = localStorage.getItem("headline");
+    }
+    let jobEl = document.getElementById("input-job-title")
+    if( !(localStorage.getItem("job_title") == null || localStorage.getItem("job_title") == "null") ) {
+        jobEl.value = localStorage.getItem("job_title");
+    }
+    let companyEl = document.getElementById("input-company")
+    if( !(localStorage.getItem("job_company") == null || localStorage.getItem("job_company") == "null") ) {
+        companyEl.value = localStorage.getItem("job_company");
+    }
+    let prev_jobEl = document.getElementById("input-previous")
+    if( !(localStorage.getItem("prev_job") == null || localStorage.getItem("prev_job") == "null") ) {
+        prev_jobEl.value = localStorage.getItem("prev_job");
+    }
+    let prev_job_companyEl = document.getElementById("input-previous-company")
+    if( !(localStorage.getItem("prev_company") == null || localStorage.getItem("prev_company") == "null") ) {
+        prev_job_companyEl.value = localStorage.getItem("prev_company");
+    }
+}
+
 function updateUser() {
 
     let first_name = document.getElementById('input-first').value;
     let last_name = document.getElementById('input-last').value;
-    let phone = document.getElementById('input-email').value;
-    let handle = document.getElementById('input-username').value;
-    let city = document.getElementById('input-new').value;
-    let country = document.getElementById('input-confirm').value;
+    let phone = document.getElementById('input-phone').value;
+    let handle = document.getElementById('input-handle').value;
+    let city = document.getElementById('input-city').value;
+    let country = document.getElementById('input-country').value;
+    let headline = document.getElementById('input-headline').value;
+    let job_title = document.getElementById('input-job-title').value;
+    let job_company = document.getElementById('input-company').value;
+    let prev_job = document.getElementById('input-previous').value;
+    let prev_company = document.getElementById('input-previous-company').value;
 
     // let url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_update";
     let url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_update";
 
+    console.log(phone)
+    if(phone == ""){
+        phone = 0
+    }
 
     let body = {
-        'user_id': localStorage.getItem("user_id"),
+        'user_id': user_id,
         'phone': phone,
         'first_name': first_name,
         'last_name': last_name,
         'handle': handle,
         'city': city,
-        'country': country
+        'country': country,
+        'headline': headline,
+        'job_title': job_title,
+        'job_company': job_company,
+        'prev_job': prev_job,
+        'prev_company': prev_company
     }
     let params = {
         headers: {

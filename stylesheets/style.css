@@ -3349,30 +3349,166 @@ $other-blue-light: #;*/
       margin-top: 39px; }
       .navbar a .explore-p-tag:hover {
         margin-top: 39px; }
-  .navbar .search {
-    margin-left: 722px;
-    margin-top: 2px;
-    margin-right: 16px;
-    width: 27%;
-    position: inherit; }
-    .navbar .search .search-icon {
-      width: 18px;
-      height: 18px;
-      right: -79%;
-      top: 3%;
-      z-index: 2;
-      position: relative; }
-    .navbar .search input[type=text] {
-      padding: 5px;
-      width: 76%;
-      padding-right: 5px;
-      padding-top: 11px;
-      padding-bottom: 9px;
-      padding-left: 15px;
-      position: relative;
+  .navbar .signout {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 2; }
+    .navbar .signout:first-child {
+      margin-left: 40%; }
+    .navbar .signout .signout-button {
+      background-color: #226BE4;
+      border: 2px solid #226BE4;
+      color: white;
+      padding: 3px 12px;
+      width: 86px;
+      height: 32px;
+      text-align: center;
+      font-size: 12px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
       border-radius: 25px;
-      font-size: 14px;
-      border: 2px solid #226BE4; }
+      margin-right: 10%;
+      font-size: 12px; }
+      .navbar .signout .signout-button:hover {
+        width: 86px;
+        height: 32px;
+        background-color: white;
+        border: 2px solid #226BE4;
+        border-radius: 25px;
+        margin-right: 10%;
+        color: #226BE4;
+        font-size: 12px; }
+    .navbar .signout .search {
+      position: relative;
+      padding: 0 0 0 20px;
+      margin: 0 20px;
+      /* direction: rtl; */
+      width: 246px; }
+      .navbar .signout .search #input {
+        height: 26px;
+        margin: 0;
+        margin-left: -18px;
+        width: 100%;
+        padding-left: 15px;
+        border-radius: 25px;
+        border: 2px solid #226BE4; }
+      .navbar .signout .search #search_query_input {
+        height: 26px;
+        margin: 0;
+        margin-left: -18px;
+        width: 100%;
+        padding-left: 15px;
+        border-radius: 25px;
+        border: 2px solid #226BE4; }
+      .navbar .signout .search #input_img {
+        position: absolute;
+        bottom: 7px;
+        right: 12px;
+        width: 18px;
+        height: 18px; }
+  @media screen and (max-width: 1200px) {
+    .navbar .signout {
+      display: flex;
+      justify-content: flex-end;
+      flex-grow: 2; }
+      .navbar .signout:first-child {
+        margin-left: 40%; }
+      .navbar .signout .signout-button {
+        background-color: #226BE4;
+        border: 2px solid #226BE4;
+        color: white;
+        padding: 3px 12px;
+        width: 86px;
+        height: 32px;
+        text-align: center;
+        font-size: 12px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        border-radius: 25px;
+        margin-right: 10%;
+        font-size: 12px; }
+        .navbar .signout .signout-button:hover {
+          width: 86px;
+          height: 32px;
+          background-color: white;
+          border: 2px solid #226BE4;
+          border-radius: 25px;
+          margin-right: 10%;
+          color: #226BE4;
+          font-size: 12px; }
+      .navbar .signout .search {
+        position: relative;
+        padding: 0 0 0 20px;
+        margin: 0 20px;
+        width: 246px; }
+        .navbar .signout .search #input {
+          height: 12px;
+          margin: 0;
+          margin-left: -18px;
+          width: 100%;
+          padding-left: 15px;
+          border-radius: 25px;
+          border: 2px solid #226BE4; }
+        .navbar .signout .search #input_img {
+          position: absolute;
+          bottom: 7px;
+          right: 12px;
+          width: 18px;
+          height: 18px; } }
+  @media screen and (max-width: 900px) {
+    .navbar .signout {
+      width: 15%;
+      display: flex;
+      justify-content: flex-end;
+      flex-grow: 2; }
+      .navbar .signout:first-child {
+        margin-left: 40%; }
+      .navbar .signout .signout-button {
+        background-color: #226BE4;
+        border: 2px solid #226BE4;
+        color: white;
+        padding: 0px 10px;
+        width: 339px;
+        height: 33px;
+        text-align: center;
+        font-size: 12px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        border-radius: 25px;
+        margin-right: 10%;
+        font-size: 12px; }
+        .navbar .signout .signout-button:hover {
+          width: 86px;
+          height: 32px;
+          background-color: white;
+          border: 2px solid #226BE4;
+          border-radius: 25px;
+          margin-right: 10%;
+          color: #226BE4;
+          font-size: 12px; }
+      .navbar .signout .search {
+        position: relative;
+        padding: 0 0 0 20px;
+        margin-left: -99px;
+        margin: 0 20px;
+        width: 301px; }
+        .navbar .signout .search #input {
+          height: 12px;
+          margin: 0;
+          margin-left: -114px;
+          width: 296%;
+          padding-left: 15px;
+          border-radius: 25px;
+          border: 2px solid #226BE4; }
+        .navbar .signout .search #input_img {
+          position: absolute;
+          bottom: 7px;
+          right: 12px;
+          width: 18px;
+          height: 18px; } }
   .navbar p {
     font-family: "Roboto", sans-serif;
     color: #B2B2B2;
@@ -3501,7 +3637,7 @@ $other-blue-light: #;*/
   .navbar .logo-a {
     height: 55%;
     width: 82%;
-    margin-top: 3px; }
+    margin-top: -52px; }
     .navbar .logo-a .logo {
       height: 42px;
       width: 100%;
@@ -3599,11 +3735,13 @@ $other-blue-light: #;*/
     padding-bottom: 5px; }
     .navbar a {
       font-family: "Roboto", sans-serif;
+      padding-left: 30px;
       text-decoration: none; }
       .navbar a p {
         color: #B2B2B2;
         font-size: 12px;
-        margin-left: 23px; }
+        /*margin-left: 23px;*/
+        margin-left: -91px; }
         .navbar a p:hover {
           font-family: "Roboto", sans-serif;
           text-decoration: none;
@@ -9176,7 +9314,9 @@ ul p:last-child a.down {
       font-family: "Roboto", sans-serif;
       text-decoration: none; }
       .navbar a p {
-        color: #B2B2B2; }
+        color: #B2B2B2;
+        margin-left: 8px;
+        margin-top: -10px; }
         .navbar a p:hover {
           font-family: "Roboto", sans-serif;
           text-decoration: none;
@@ -9193,31 +9333,6 @@ ul p:last-child a.down {
         margin-top: 39px; }
         .navbar a .explore-p-tag:hover {
           margin-top: 39px; }
-    .navbar .search {
-      width: 90%;
-      position: fixed;
-      margin-top: 20%;
-      margin-left: 45px;
-      margin-right: 16px;
-      padding-bottom: 15px; }
-      .navbar .search .search-icon {
-        width: 16px;
-        height: 16px;
-        right: 19.5%;
-        margin-top: 80px;
-        z-index: 2;
-        position: fixed; }
-      .navbar .search input[type=text] {
-        width: 76%;
-        padding: 5px;
-        font-size: 14px;
-        padding-top: 8px;
-        position: relative;
-        padding-left: 15px;
-        padding-right: 5px;
-        padding-bottom: 9px;
-        border-radius: 25px;
-        border: 2px solid #226BE4; }
     .navbar p {
       font-family: "Roboto", sans-serif;
       color: #B2B2B2;
@@ -9227,38 +9342,59 @@ ul p:last-child a.down {
       margin-top: 19px; }
       .navbar p:hover {
         color: #E9E9E9; }
-
-  .profile-signout-button {
-    background-color: #1B5AC3;
-    border: 2px solid #1B5AC3;
-    color: white;
-    padding: 3px 12px;
-    width: 85px;
-    height: 28px;
-    text-align: center;
-    font-size: 12px;
-    cursor: pointer;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    border-radius: 25px;
-    margin-left: 20%;
-    margin-top: -34px;
-    font-size: 13px; }
-    .profile-signout-button:hover {
-      background-color: white;
-      border: 2px solid #1B5AC3;
-      color: #1B5AC3;
-      padding: 3px 12px;
-      width: 85px;
-      height: 28px;
-      text-align: center;
-      cursor: pointer;
-      -webkit-transition-duration: 0.4s;
-      transition-duration: 0.4s;
-      border-radius: 25px;
-      margin-right: 15%;
-      margin-top: -14px;
-      font-size: 13px; }
+    .navbar .signout {
+      width: 15%;
+      margin-top: 40px;
+      display: flex;
+      justify-content: flex-end;
+      flex-grow: 2; }
+      .navbar .signout:first-child {
+        margin-left: 40%; }
+      .navbar .signout .search {
+        position: relative;
+        padding: 0 0 0 -9px;
+        margin-left: 35px;
+        margin: 0 75px;
+        width: 75px; }
+        .navbar .signout .search #input {
+          height: 15px;
+          margin: 0;
+          margin-top: -8px;
+          margin-left: -111px;
+          width: 296%;
+          padding-left: 15px;
+          border-radius: 25px;
+          border: 2px solid #226BE4; }
+        .navbar .signout .search #input_img {
+          position: absolute;
+          bottom: 10px;
+          right: -41px;
+          width: 15px;
+          height: 15px; }
+      .navbar .signout .signout-button {
+        background-color: #226BE4;
+        border: 2px solid #226BE4;
+        color: white;
+        padding: 0px 10px;
+        width: 80px;
+        height: 33px;
+        text-align: center;
+        font-size: 12px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        border-radius: 25px;
+        margin-right: 5%;
+        font-size: 12px; }
+        .navbar .signout .signout-button:hover {
+          width: 86px;
+          height: 32px;
+          background-color: white;
+          border: 2px solid #226BE4;
+          border-radius: 25px;
+          margin-right: 10%;
+          color: #226BE4;
+          font-size: 12px; }
 
   .user_name {
     text-decoration: none;

@@ -6,8 +6,8 @@ function getSearchResults(query_string) {
     document.getElementById('searchResultsDisplay').innerHTML = "";
     // var query_string = document.getElementById('search_query').value;
     console.log('query_string ', query_string);
-    // var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/search_functionality';
-    var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/search_functionality';
+    var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/search_functionality';
+    // var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/search_functionality';
 
     var data = {
         "query": query_string

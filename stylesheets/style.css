@@ -1996,7 +1996,7 @@ hr {
     padding-top: 2px;
     background-color: #E9E9E9;
     border-radius: 13%/180%;
-    padding-left: 47px;
+    padding-left: 57px;
     margin-top: 6px;
     font-size: 12px;
     border: none;
@@ -5865,12 +5865,9 @@ $other-blue-light: #;*/
       .create-modal-content #create-articles .articles-extra-buttons .attach-photo {
         margin-left: 0%;
         margin-top: 15px;
-        width: 18%;
+        width: 5%;
         float: left;
         display: inline-block; }
-        .create-modal-content #create-articles .articles-extra-buttons .attach-photo img {
-          width: 35px;
-          height: 35px; }
       .create-modal-content #create-articles .articles-extra-buttons .privacy-btn {
         margin-top: 15px;
         margin-left: -10%;
@@ -5884,7 +5881,7 @@ $other-blue-light: #;*/
       text-align: center;
       width: 102px;
       height: 33px;
-      margin-left: 21%;
+      margin-left: 33%;
       margin-top: 50px;
       background-color: #226BE4;
       border: 1px solid #226BE4;
@@ -5996,12 +5993,9 @@ $other-blue-light: #;*/
       .create-modal-content #create-events .events-extra-buttons .attach-photo {
         margin-left: 0%;
         margin-top: 15px;
-        width: 18%;
+        width: 5%;
         float: left;
         display: inline-block; }
-        .create-modal-content #create-events .events-extra-buttons .attach-photo img {
-          width: 35px;
-          height: 35px; }
       .create-modal-content #create-events .events-extra-buttons .privacy-btn {
         margin-top: 15px;
         margin-left: -10%;
@@ -6015,7 +6009,7 @@ $other-blue-light: #;*/
       text-align: center;
       width: 102px;
       height: 33px;
-      margin-left: 21%;
+      margin-left: 33%;
       margin-top: 50px;
       background-color: #226BE4;
       color: white;
@@ -9171,7 +9165,7 @@ ul p:last-child a.down {
       margin-left: 13px;
       font-weight: 100;
       float: left; }
-    .login-password input[type=text] {
+    .login-password input[type=password] {
       font-family: "Roboto", sans-serif;
       background-image: url("../images/lock.png");
       background-position: 4.5% 50%;
@@ -9180,7 +9174,7 @@ ul p:last-child a.down {
       padding-top: 2px;
       background-color: #E0E0E0;
       border-radius: 13%/180%;
-      padding-left: 57px;
+      padding-left: 45px;
       margin-top: 6px;
       font-size: 14px;
       border: none;

@@ -1055,7 +1055,7 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
   font-size: 16px;
   z-index: 1; }
   .rcorners:hover {
-    background: linear-gradient(#4e0f7d 10%, white 45%, white);
+    background: linear-gradient(#226BE4 10%, white 45%, white);
     color: white;
     z-index: 1; }
 
@@ -5877,7 +5877,7 @@ $other-blue-light: #;*/
       text-align: center;
       width: 102px;
       height: 33px;
-      margin-left: 13%;
+      margin-left: 21%;
       margin-top: 50px;
       background-color: #226BE4;
       color: white;
@@ -7181,6 +7181,16 @@ $other-blue-light: #;*/
     font-weight: 300;
     font-size: 13px; }
 
+.pp-edit {
+  margin-top: 44px;
+  margin-left: 48.5%;
+  display: inline;
+  width: 50px;
+  height: 50px;
+  position: inherit; }
+  .pp-edit img {
+    width: 26px; }
+
 .production-profiles-wrapper {
   border-bottom: 2px solid #226BE4;
   /*display: none;*/
@@ -7191,6 +7201,22 @@ $other-blue-light: #;*/
     margin-left: 5.8%;
     color: #226BE4;
     margin-bottom: -35px; }
+  .production-profiles-wrapper .pp-cast-edit {
+    margin-top: 9px;
+    margin-left: 14%;
+    width: 50px;
+    height: 50px;
+    position: inherit; }
+    .production-profiles-wrapper .pp-cast-edit img {
+      width: 26px; }
+  .production-profiles-wrapper .pp-production-edit {
+    margin-top: 9px;
+    margin-left: 18.6%;
+    width: 50px;
+    height: 50px;
+    position: inherit; }
+    .production-profiles-wrapper .pp-production-edit img {
+      width: 26px; }
   .production-profiles-wrapper .pp-row1 {
     overflow-x: scroll;
     overflow-y: hidden;
@@ -11111,6 +11137,16 @@ ul p:last-child a.down {
     width: 100%;
     height: 200px; }
 
+  .pp-edit {
+    margin-top: 44px;
+    margin-left: 45%;
+    display: inline;
+    width: 45px;
+    height: 45px;
+    position: inherit; }
+    .pp-edit img {
+      width: 26px; }
+
   .production-profiles-wrapper {
     border-bottom: 2px solid #226BE4;
     /*display: none;*/
@@ -11136,6 +11172,22 @@ ul p:last-child a.down {
       color: #226BE4;
       font-size: 12px;
       margin-bottom: -35px; }
+    .production-profiles-wrapper .pp-cast-edit {
+      margin-top: 16px;
+      margin-left: 28%;
+      width: 45px;
+      height: 45px;
+      position: inherit; }
+      .production-profiles-wrapper .pp-cast-edit img {
+        width: 26px; }
+    .production-profiles-wrapper .pp-production-edit {
+      margin-top: 15px;
+      margin-left: 40%;
+      width: 45px;
+      height: 45px;
+      position: inherit; }
+      .production-profiles-wrapper .pp-production-edit img {
+        width: 26px; }
     .production-profiles-wrapper .pp-row1 {
       margin-top: 7%;
       overflow-x: scroll;
@@ -11428,7 +11480,7 @@ ul p:last-child a.down {
     position: absolute;
     background-color: #F7FAFF;
     margin: auto;
-    margin-top: 2%;
+    margin-top: 11%;
     border: 1px solid #888;
     width: 80%;
     margin-left: 10%;
@@ -11744,7 +11796,7 @@ ul p:last-child a.down {
     position: absolute;
     background-color: #F7FAFF;
     margin: auto;
-    margin-top: 2%;
+    margin-top: 11%;
     border: 1px solid #888;
     width: 80%;
     margin-left: 10%;
@@ -11757,12 +11809,12 @@ ul p:last-child a.down {
       font-weight: 400;
       text-align: center;
       padding: 20px;
-      margin-top: 20px;
+      margin-top: 5px;
       padding-bottom: 50px;
       font-size: 20px; }
 
   .save-changesz {
-    margin-top: 35px;
+    margin-top: 25px;
     margin-left: 27%;
     background-color: #226BE4;
     border: 2px solid #226BE4;

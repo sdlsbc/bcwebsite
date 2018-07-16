@@ -52,19 +52,29 @@ function displayUsersFound(array1) {
         // console.log('user 1', element);
         // console.log('user 1 image', element.image);
 
+
         let divUsers = document.createElement('div');
+
+        let profileHeader = document.createElement('h3');
+        profileHeader.className = "profile-h3-header";
+        divUsers.appendChild(profileHeader);
+
+        divUsers.className = "profile-div";
         let fullname = document.createElement('p');
+        fullname.className = "profile-full-name";
         fullname_text = document.createTextNode(element.firstname + " " + element.lastname);
         fullname.appendChild(fullname_text);
         divUsers.appendChild(fullname);
 
         let handle = document.createElement('p');
+        handle.className = "profile-handle";
         hande_text = document.createTextNode("@"+element.handle);
         handle.appendChild(hande_text);
         divUsers.appendChild(handle);
 
         var userImageAddress = "";
         let user_image = document.createElement('img');
+        user_image.className = "profile-image";
         if (element.image){
             if(element.image.substr(0,4) == "data"){
                 userImageAddress = element.image;
@@ -87,18 +97,22 @@ console.log('array2',array2)
         console.log('post image', element.image);
 
         let divPosts = document.createElement('div');
+        divPosts.className = "posts-div";
         let title = document.createElement('p');
+        title.className = "post-title";
         title_text = document.createTextNode(element.title);
         title.appendChild(title_text);
         divPosts.appendChild(title);
 
         let heading = document.createElement('p');
+        heading.className = "post-heading";
         heading_text = document.createTextNode(element.heading);
         heading.appendChild(heading_text);
         divPosts.appendChild(heading);
 
         var postImageAddress = "";
         let post_image = document.createElement('img');
+        post_image.className = "post-image";
         if (element.image){
             if(element.image.substr(0,4) == "data"){
                 postImageAddress = element.image;

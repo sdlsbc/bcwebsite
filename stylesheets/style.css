@@ -8835,6 +8835,108 @@ ul p:last-child a.down {
   text-decoration: none;
   cursor: pointer; }
 
+.search-header {
+  /*  h3 {
+      width: 90%;
+      font-size: 22px;
+      font-family: $font;
+      font-weight: 400;
+      margin-top: 40px;
+      float: left;
+      margin-left: 20px;
+      padding: 50px;
+      padding-top: 10px;
+      border-bottom: 2px solid $main-blue;
+    }*/ }
+  .search-header h1 {
+    font-size: 28px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    margin-top: 40px;
+    color: #226BE4;
+    text-align: center; }
+
+#searchResultsDisplay .profile-h3-header {
+  width: 95%;
+  font-size: 22px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin-top: 40px;
+  float: left;
+  padding-left: 30px;
+  padding-bottom: 15px;
+  margin-left: 20px;
+  padding-top: 15px;
+  border-bottom: 2px solid #226BE4; }
+  #searchResultsDisplay .profile-h3-header:after {
+    content: "Profile";
+    margin-top: 20px;
+    color: #226BE4; }
+#searchResultsDisplay .profile-div {
+  width: 100%;
+  margin-top: 60px;
+  display: inline-block; }
+  #searchResultsDisplay .profile-div .profile-image {
+    float: left;
+    height: 170px;
+    width: 170px;
+    margin-left: 8%;
+    margin-top: 3%;
+    border-radius: 50%;
+    margin-right: 25px;
+    border: 3px solid #226BE4; }
+  #searchResultsDisplay .profile-div .profile-full-name {
+    height: 40px;
+    width: 200px;
+    text-align: center;
+    font-size: 30px;
+    color: #226BE4;
+    margin-top: 6%;
+    font-weight: 900;
+    display: inline-block; }
+  #searchResultsDisplay .profile-div .profile-handle {
+    height: 40px;
+    width: 200px;
+    text-align: center;
+    /* float: right; */
+    font-size: 24px;
+    color: #226BE4;
+    margin-top: 9%;
+    margin-left: -8%;
+    font-weight: 400;
+    display: inline-block; }
+#searchResultsDisplay .posts-div {
+  width: 100%;
+  display: inline-block; }
+  #searchResultsDisplay .posts-div .post-image {
+    float: left;
+    height: 170px;
+    width: 170px;
+    margin-left: 8%;
+    margin-right: 25px;
+    margin-top: 50px;
+    border-radius: 50%;
+    border: 3px solid #226BE4; }
+  #searchResultsDisplay .posts-div .post-title {
+    height: 40px;
+    width: 30%;
+    text-align: center;
+    font-size: 30px;
+    color: #226BE4;
+    margin-top: 6%;
+    font-weight: 900;
+    display: inline-block; }
+  #searchResultsDisplay .posts-div .post-heading {
+    height: 40px;
+    width: 200px;
+    text-align: center;
+    font-size: 24px;
+    color: #226BE4;
+    margin-top: 9%;
+    margin-left: -8%;
+    font-weight: 400;
+    display: inline-block; }
+
 @media screen and (max-width: 700px) {
   /* =============== M O B I L E  M A I N  H E A D E R =============== */
   .main-header {

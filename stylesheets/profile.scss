@@ -881,7 +881,7 @@ $other-blue-light: #;*/
     }
     #profile-postsbox {
       min-height: 100%;
-      background-color: $light-blue;
+      background-color: white;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -893,6 +893,14 @@ $other-blue-light: #;*/
       margin-top: 62px;
       margin-left: 9%;
       width: 74%;
+      h1 {
+        font-family: $font;
+        margin-top: 110px;
+        font-weight: 100;
+        font-size: 30px;
+        text-align: center;
+        color: #226BE4;
+      }
       h3 {
         font-family: $font;
         color: black;

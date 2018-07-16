@@ -12,7 +12,7 @@
 
 </head>
 
-<body onload="loadUserData()">
+<body onload="checkLocalStorage('explore')">
     <!-- sidebar. -->
     <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closeNav()">&times;</a>
@@ -337,7 +337,7 @@
         </script>
 
         <p class="milestone-right">
-          <img id="image" src="../images/placeholder-bc.png">
+          <img id="image" src="../images/bc-logo.png">
         </p>
         <p class="milestone-left2">
           <label class="milestone-label" for="milestone-label1">Fixed Text</label><br>
@@ -491,6 +491,7 @@
   <script src="../javascript/register.js"></script>
   <script type="text/javascript" src="../javascript/jsDate.js"></script>
   <script type="text/javascript" src="../javascript/profile.js"></script>
+  <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
 
   <!-- <script type="text/javascript" src="../javascript/loadAndRender.js"></script> -->
 </body>

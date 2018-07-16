@@ -2,8 +2,8 @@
 
 function getCompaniesProduction() {
 
-    var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/fetch_companies_productions';
-    // var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/fetch_companies_productions';
+    // var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/fetch_companies_productions';
+    var url = "https://broadwayconnected.bubbleapps.io"+version_change+"api/1.1/wf/fetch_companies_productions";
 
     var data = {
     };
@@ -111,8 +111,8 @@ function createMilestone() {
 
     var token = localStorage.getItem("token");
     //make the api call
-    var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/milestone_create';
-    // var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/milestone_create';
+    // var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/milestone_create';
+    var url = "https://broadwayconnected.bubbleapps.io"+version_change+"api/1.1/wf/milestone_create";
 
     var data = {
         "role": role,

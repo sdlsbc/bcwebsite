@@ -26,7 +26,7 @@ function create_article() {
     var user_id = localStorage.getItem("user_id");
     // console.log('upload_article_base64',upload_article_base64);
 
-     var url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_create';
+     var url = "https://broadwayconnected.bubbleapps.io"+version_change+"api/1.1/wf/post_create";
     //  var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_create';
 
      var data = {

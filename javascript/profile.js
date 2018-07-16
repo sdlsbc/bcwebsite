@@ -134,8 +134,8 @@ function loadProfileData(){
     console.log('in loadProfileData');
     //api call and get data
 
-    // let url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_read";
-    let url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_read';
+    let url = "https://broadwayconnected.bubbleapps.io"+version_change+"api/1.1/wf/user_read";
+    // let url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_read';
 
     console.log("visiting", visiting);
     let body = {}
@@ -240,8 +240,8 @@ function loadAndShowPosts(){
 }
 
 function getPostsItems(){
-    var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read";
-    // var url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read";
+    // var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read";
+    var url = "https://broadwayconnected.bubbleapps.io"+version_change+"api/1.1/wf/post_read";
 
     let body = {}
     if(visiting == ""){
@@ -551,8 +551,8 @@ function updateUser() {
     let prev_job = document.getElementById('input-previous').value;
     let prev_company = document.getElementById('input-previous-company').value;
 
-    let url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_update";
-    // let url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/user_update";
+    // let url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_update";
+    let url = "https://broadwayconnected.bubbleapps.io"+version_change+"api/1.1/wf/user_update";
 
     console.log(phone)
     if(phone == ""){

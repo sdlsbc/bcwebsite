@@ -49,10 +49,11 @@ function getSearchResults(query_string) {
 function displayUsersFound(array1) {
 
     array1.forEach(function (element) {
-        // console.log('user 1', element);
+        console.log('user 1', element);
         // console.log('user 1 image', element.image);
 
         let divUsers = document.createElement('div');
+        // divUsers.setAttribute("id", element.);
         let fullname = document.createElement('p');
         fullname_text = document.createTextNode(element.firstname + " " + element.lastname);
         fullname.appendChild(fullname_text);

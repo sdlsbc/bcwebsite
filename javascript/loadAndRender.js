@@ -1,3 +1,6 @@
+// var version_change = "/version-test/";
+var version_change = "/";
+
 var fetchCount = 0;
 var wait = false;
 var PAGE = "";
@@ -13,29 +16,39 @@ function checkLocalStorage(page) {
 	user_id = localStorage.getItem("user_id");
 	token = localStorage.getItem("token");
 
-	//this should be changed from an if/else chain into a switch
-	//and done so that there isn't a second switch or chain in getpostitems
-	if (PAGE == 'newsfeed') {
-		loadProfile();
-		loadAndShowPosts();
-		//checkIfCompleteProfile();
+	if (user_id == null || user_id == "" || user_id == undefined || token == "" || token == null || token == undefined) {
+		createCustomAlert("Please Log In First");
+		// redirect to login page
+		window.location.href = "../index.html";
 
-	} else if (PAGE == 'favs') {
-		loadAndShowPosts();
-		loadProfile();
-	} 
-	else if (PAGE == 'profile') {
-		console.log(PAGE);
-		loadProfileData();
-		loadProfile();
+	} else {
 
-	} else if (PAGE == 'discover') {
-		loadProfile();
-	} else if (PAGE == 'explore') {
-		loadProfile();
-	} else if (PAGE == 'bob') {
-		loadProfile();
-	} 
+		switch (PAGE) {
+			case 'newsfeed':
+				loadProfile();
+				loadAndShowPosts();
+				break;
+			case 'favs':
+				loadAndShowPosts();
+				loadProfile();
+				break;
+			case 'profile':
+				console.log(PAGE);
+				loadProfileData();
+				loadProfile();
+				break;
+			case 'discover':
+				loadProfile();
+				break;
+			case 'explore':
+				loadProfile();
+				break;
+			case 'bob':
+				loadProfile();
+				break;
+		}
+	}
+
 }
 
 function loadAndShowPosts() {
@@ -59,16 +72,16 @@ function getPostsItems() {
 
 	let url = "";
 	let body = {
-		'offset': (fetchCount == 0 ? 1 : (12*fetchCount)+1),
+		'offset': (fetchCount == 0 ? 1 : (12 * fetchCount) + 1),
 		'limit': 12
 	};
-	
+
 	if (PAGE == 'newsfeed') {
-		url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read";
+		url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/post_read";
 		// url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read";
 	}
 	if (PAGE == 'favs') {
-		url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/favorite_read"
+		url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/favorite_read"
 		// url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/favorite_read";
 	}
 
@@ -107,9 +120,9 @@ function loadProfile() {
 
 function favorite(post_id, liked) {
 	//alert("totes fave" + id)
-	let url = "https://broadwayconnected.bubbleapps.io/api/1.1/wf/favorite"
+	let url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/favorite"
 	// let url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/favorite"
-	let body = { 
+	let body = {
 		'post_id': post_id,
 		'liked': liked
 	}
@@ -130,7 +143,7 @@ function favorite(post_id, liked) {
 
 function likesUpdate(post_id) {
 	// let url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read';
-	let url = 'https://broadwayconnected.bubbleapps.io/api/1.1/wf/post_read';
+	let url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/post_read";
 
 	fetch(url, {
 		method: 'POST',
@@ -139,34 +152,34 @@ function likesUpdate(post_id) {
 		},
 		body: JSON.stringify({ 'post_id': post_id })
 	})
-	.then(res => res.json())
-	.catch(error => console.error('Error:', error))
-	.then(body => {
-		if (body.status != "success") {
-			console.log("request not successful");
-			// createCustomAlert("WARNING: User Already Exists");
-		} else {
-			console.log("request successful")
-			var likes = body.response.favoriters;
-			let parent = document.getElementById(post_id);
-			let fav_likes = parent.querySelector('.fav_likes');
-			fav_likes.innerHTML = body.response.post.favoriters.length;
-		}
-	})
+		.then(res => res.json())
+		.catch(error => console.error('Error:', error))
+		.then(body => {
+			if (body.status != "success") {
+				console.log("request not successful");
+				// createCustomAlert("WARNING: User Already Exists");
+			} else {
+				console.log("request successful")
+				var likes = body.response.favoriters;
+				let parent = document.getElementById(post_id);
+				let fav_likes = parent.querySelector('.fav_likes');
+				fav_likes.innerHTML = body.response.post.favoriters.length;
+			}
+		})
 }
 
 
 function showModal(body) {
-	console.log("showModal",body);
+	console.log("showModal", body);
 	console.log(favs)
 	let visiting = body.user;
 	// start building the modal
 	var image_address = "";
-	if(!(body.image == null || body.image == "")){
-		if(body.image.substr(0,4) == "data" || body.image.substr(0,4) == "http"){
+	if (!(body.image == null || body.image == "")) {
+		if (body.image.substr(0, 4) == "data" || body.image.substr(0, 4) == "http") {
 			image_address = body.image;
 		} else {
-			image_address = "https:"+ body.image;
+			image_address = "https:" + body.image;
 		}
 	}
 
@@ -174,11 +187,11 @@ function showModal(body) {
 	post_image[0].innerHTML = '<img src=' + image_address + '>';
 
 	var profile_image_address = "body.publisher_image";
-	if(body.publisher_image){
-		if(body.publisher_image.substr(0,4) == "data" || body.publisher_image.substr(0,4) == "http"){
+	if (body.publisher_image) {
+		if (body.publisher_image.substr(0, 4) == "data" || body.publisher_image.substr(0, 4) == "http") {
 			image_address = body.publisher_image;
 		} else {
-			image_address = "https:"+ body.publisher_image;
+			image_address = "https:" + body.publisher_image;
 		}
 	}
 	profile_image_address = image_address;
@@ -193,7 +206,7 @@ function showModal(body) {
 	publisher_name[0].innerHTML = body.publisher_name;
 	//publisher_name[0].appendChild(publisher_nameNode);
 	var profile_link = document.getElementById("profile_link");
-	profile_link.href = "../Profile/profile.html?user_id="+ visiting;
+	profile_link.href = "../Profile/profile.html?user_id=" + visiting;
 
 	var dateTime = new Date(body["Created Date"]);
 	//var dateTime = dateTime.split(" ");
@@ -209,7 +222,7 @@ function showModal(body) {
 	console.log("really_real_date ", really_real_date)
 	var date = document.getElementsByClassName("modal-date");
 	date[0].innerHTML = dateTime.toDateString();
-	 var time = document.getElementsByClassName("modal-time");
+	var time = document.getElementsByClassName("modal-time");
 	time[0].innerHTML = time1;
 
 	var time_split = time1.split(':');
@@ -271,11 +284,11 @@ function showModal(body) {
 	let fav_likes = parent.querySelector('.fav_likes');
 
 	fav_button.onclick = function (ev) {
-		console.log("was it already liked?",liked)
+		console.log("was it already liked?", liked)
 		favorite(body._id, liked)
 			.then(res => {
 				console.log(body)
-				if(res.response.post.favoriters.some(fav => fav == user_id)){
+				if (res.response.post.favoriters.some(fav => fav == user_id)) {
 					var new_like = true;
 					favs[res.response.post._id] = true;
 				} else {
@@ -315,15 +328,15 @@ function createPost(body) {
 	var image_address = "";
 
 	let publisher_image = document.createElement('img');
-	if (body.publisher_image){
-		if(body.publisher_image.substr(0,4) == "data" || body.publisher_image.substr(0,4) == "http") {
+	if (body.publisher_image) {
+		if (body.publisher_image.substr(0, 4) == "data" || body.publisher_image.substr(0, 4) == "http") {
 			image_address = body.publisher_image;
 		} else {
-			image_address = "https:"+ body.publisher_image;
+			image_address = "https:" + body.publisher_image;
 		}
 		publisher_image.src = image_address;
 	}
-	
+
 	publisher_image.classList.add('publisher_image');
 	publisher_div.appendChild(publisher_image);
 	image_address = "";
@@ -358,13 +371,13 @@ function createPost(body) {
 	})();
 	//adding modal .click end
 
-	if(body.image){
+	if (body.image) {
 		let main_image = document.createElement('img');
 
-		if(body.image.substr(0,4) == "data" || body.image.substr(0,4) == "http"){
+		if (body.image.substr(0, 4) == "data" || body.image.substr(0, 4) == "http") {
 			image_address = body.image;
 		} else {
-			image_address = "https:"+ body.image;
+			image_address = "https:" + body.image;
 		}
 		main_image.src = image_address;
 		main_image.classList.add('main_image');
@@ -382,7 +395,7 @@ function createPost(body) {
 	fav_button.src = '../images/newsfeed_buttons/heart2.png';
 	fav_button.classList.add('pointer');
 	var liked = false;
-	if(body.favoriters){
+	if (body.favoriters) {
 		if (body.favoriters.some(fav => fav == user_id)) {
 			fav_button.classList.add('favorite_click');
 			liked = true;
@@ -397,7 +410,7 @@ function createPost(body) {
 		favorite(body._id, liked)
 			.then(body => {
 				console.log(body)
-				if(body.response.post.favoriters.some(fav => fav == user_id)){
+				if (body.response.post.favoriters.some(fav => fav == user_id)) {
 					var new_like = true;
 				} else {
 					var new_like = false;
@@ -425,7 +438,7 @@ function createPost(body) {
 
 
 	let fav_button_num = document.createElement('p');
-	if(body.favoriters){
+	if (body.favoriters) {
 		var fav_button_numNode = document.createTextNode(body.favoriters.length);
 	} else {
 		var fav_button_numNode = document.createTextNode(0);

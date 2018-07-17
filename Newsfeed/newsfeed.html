@@ -259,7 +259,8 @@
         </div>
       </div>
 
-      <!-- </div> -->
+      <!-- </div> --> 
+
       <div id="create-milestones" class="tabcontent">
         <h3>Add a Milestone</h3>
         <form>
@@ -268,109 +269,129 @@
             <br>
             <select id="milestone-type">
               <option value="" disabled selected>Select Milestone Type</option>
-              <option value="../images/milestones-img1.png">Casted as Photo</option>
-              <option value="../images/milestones-img2.png">First Rehearsal</option>
-              <option value="../images/milestones-img3.png">Opening Night</option>
-              <option value="../images/milestones-img4.png">First Day Of Work</option>
-              <option value="../images/milestones-img5.png">First Broadway Show</option>
-              <option value="../images/milestones-img6.png">Audition</option>
-              <option value="../images/milestones-img7.png">Call Back</option>
-              <option value="../images/milestones-img8.png">Offer</option>
+              <option value="Casted as Photo">Was Cast As</option>
+              <option value="First Rehearsal">First Rehearsal</option>
+              <option value="Opening Night">Opening Night</option>
+              <option value="First Day Of Work">First Day Of Work</option>
+              <option value="First Broadway Show">First Broadway Show</option>
+              <option value="Audition">Audition</option>
+              <option value="Call Back">Callback</option>
+              <option value="Offer">Offer</option>
             </select>
           </p>
           <script>
-              function setMilestoneImg() {
-                var img = document.getElementById("image");
-                img.src = this.value;
-  
-                setFixedTextMilestone()
-  
-                return false;
-              }
-              document.getElementById("milestone-type").onchange = setMilestoneImg;
-  
-              function setFixedTextMilestone() {
-                var milestone_type = document.getElementById("milestone-type").value;
-                var ft1 = "";
-                var ft2 = "";
-  
-                switch (milestone_type) {
-                  case "../images/milestones-img1.png":
-                    ft1 = "Got cast as"; ft2 = "in";
-                    break;
-  
-                  case "../images/milestones-img2.png":
-                    ft1 = "First day of rehearsal as"; ft2 = "for";
-                    break;
-  
-                  case "../images/milestones-img3.png":
-                    ft1 = "Opening night of"; ft2 = "at";
-                    break;
-  
-                  case "../images/milestones-img4.png":
-                    ft1 = "First day of work as"; ft2 = "at";
-                    break;
-  
-                  case "../images/milestones-img5.png":
-                    ft1 = "Saw first Broadway Show"; ft2 = "at";
-                    break;
-  
-                  case "../images/milestones-img6.png":
-                    ft1 = "Auditioned for"; ft2 = "in";
-                    break;
-  
-                  case "../images/milestones-img7.png":
-                    ft1 = "Got called back for"; ft2 = "in"
-                    break;
-  
-                  case "../images/milestones-img8.png":
-                    ft1 = "Got an offer for"; ft2 = "in";
-                    break;
-                }
-  
-                document.getElementById("milestone-fixed-text1").innerHTML = ft1;
-                document.getElementById("milestone-fixed-text2").innerHTML = ft2;
-              }
-            </script>  
+            function setMilestoneImg() {
+              var img = document.getElementById("image");
+              var milestone_type = document.getElementById("milestone-type").value
+              switch (milestone_type) {
+                case "Casted as Photo":
+                  img.src = "../images/milestones-img1.png";
+                  break;
 
-        <p class="milestone-right">
-          <img id="image" src="../images/bc-logo.png">
-        </p>
-        <p class="milestone-left2">
-          <label class="milestone-label" for="milestone-label1">Fixed Text</label><br>
-          <input class="milestone-text" id="milestone-text1" type="text" placeholder="Enter Company Name">
-        </p>
-        <p class="milestone-right2">
-          <label class="milestone-label" for="milestone-label2">Fixed Text</label><br>
-          <input class="milestone-text" id="milestone-text2" type="text" placeholder="Enter Company Name">
-        </p>
-        <p class="milestone-center">
-          <label class="milestone-label" for="mileston-description">Description</label><br>
-          <textarea class="milestone-text" id="milestone-text1" rows="4" cols="50" maxlength="300" placeholder="Enter Company Name"></textarea>
-        </p>
-        <!-- <p class="only-me-checkbox"> -->
-          <!-- <p class="milestone-right">
-            <img id="image" src="../images/placeholder-bc.png">
+                case "First Rehearsal":
+                  img.src = "../images/milestones-img2.png";
+                  break;
+
+                case "Opening Night":
+                  img.src = "../images/milestones-img3.png";
+                  break;
+
+                case "First Day Of Work":
+                  img.src = "../images/milestones-img4.png";
+                  break;
+
+                case "First Broadway Show":
+                  img.src = "../images/milestones-img5.png";
+                  break;
+
+                case "Audition":
+                  img.src = "../images/milestones-img6.png";
+                  break;
+
+                case "Call Back":
+                  img.src = "../images/milestones-img7.png";
+                  break;
+
+                case "Offer":
+                  img.src = "../images/milestones-img8.png";
+                  break;
+              }
+
+              setFixedTextMilestone()
+
+              return false;
+            }
+            document.getElementById("milestone-type").onchange = setMilestoneImg;
+
+            function setFixedTextMilestone() {
+              var milestone_type = document.getElementById("milestone-type").value;
+              var ft1 = "";
+
+              switch (milestone_type) {
+                case "Casted as Photo":
+                  ft1 = "Got cast as";
+                  break;
+
+                case "First Rehearsal":
+                  ft1 = "First day of rehearsal as";
+                  break;
+
+                case "Opening Night":
+                  ft1 = "Opening night of";
+                  break;
+
+                case "First Day Of Work":
+                  ft1 = "First day of work as";
+                  break;
+
+                case "First Broadway Show":
+                  ft1 = "Saw first Broadway Show";
+                  break;
+
+                case "Audition":
+                  ft1 = "Auditioned for";
+                  break;
+
+                case "Call Back":
+                  ft1 = "Got called back for";
+                  break;
+
+                case "Offer":
+                  ft1 = "Got an offer for";
+                  break;
+              }
+
+              document.getElementById("milestone-fixed-text1").innerHTML = ft1;
+            }
+          </script>
+
+          <p class="milestone-right">
+            <img id="image" src="../images/bc-logo.png">
           </p>
+
           <p class="milestone-left2">
-            <label class="milestone-label" for="milestone-label1" id="milestone-fixed-text1">Fixed Text</label>
+            <label class="milestone-label" for="milestone-label1" id="milestone-fixed-text1"></label>
             <br>
-            <input class="milestone-text" id="milestone-text1" type="text" placeholder="Enter Company Name">
+            <input class="milestone-text" id="milestone-text1" type="text" placeholder="" onfocus="checkIfMilestoneTypeSelected()">
           </p>
           <p class="milestone-right2">
-            <label class="milestone-label" for="milestone-label2" id="milestone-fixed-text2">Fixed Text</label>
+            <select id="milestone-fixed-text2" onfocus="checkIfMilestoneTypeSelected()">
+              <option value="" disabled selected>in/at</option>
+              <option value="in">In</option>
+              <option value="at">At</option>
+            </select>
             <br>
-            <input class="milestone-text" id="milestone-text2" type="text" placeholder="Enter Company Name">
+            <input type="text" id="city" list="comp-prod-list" onfocus="checkIfMilestoneTypeSelected()" placeholder="Enter Company/Production Name">
+            <datalist id="comp-prod-list">
+            </datalist>
           </p>
           <p class="milestone-center">
             <label class="milestone-label" for="mileston-description">Description</label>
             <br>
-            <textarea class="milestone-text" id="milestone-text1" rows="4" cols="50" maxlength="300" placeholder="Enter Company Name"></textarea>
-          </p> -->
-          <p class="only-me-checkbox">
-            <input type="checkbox" name="only-me" value="yes">Only Me
+            <textarea class="milestone-text" id="milestone-description" onfocus="checkIfMilestoneTypeSelected()" rows="4" cols="50" maxlength="300"
+              placeholder="Add Description 300 Characters or Less"></textarea>
           </p>
-          <button class="input-button">Post</button>
+          <button class="input-button" id="btnPostMilestone" onclick="createMilestone()">Post</button>
         </form>
       </div>
 
@@ -388,11 +409,11 @@
             </select>
           </p>
           <p class="moments-right">
-            <input class="attach-photo" type="image" src="../images/image.png"/>
-            <input type="file" id="moment-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;"/>
+            <input class="attach-photo" type="image" src="../images/image.png" />
+            <input type="file" id="moment-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;" />
             <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
             <script>
-              $("input[type='image']").click(function() {
+              $("input[type='image']").click(function () {
                 $("input[id='moment-image']").click();
               });
             </script>
@@ -437,11 +458,11 @@
 
         </form>
         <div class="articles-extra-buttons">
-          <input class="attach-photo" type="image" src="../images/image.png"/>
-          <input type="file" id="articles-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;"/>
+          <input class="attach-photo" type="image" src="../images/image.png" />
+          <input type="file" id="articles-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;" />
           <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
           <script>
-            $("input[type='image']").click(function() {
+            $("input[type='image']").click(function () {
               $("input[id='articles-image']").click();
             });
           </script>
@@ -469,11 +490,11 @@
           </span>
         </form>
         <div class="events-extra-buttons">
-          <input class="attach-photo" type="image" src="../images/image.png"/>
-          <input type="file" id="events-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;"/>
+          <input class="attach-photo" type="image" src="../images/image.png" />
+          <input type="file" id="events-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;" />
           <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
           <script>
-            $("input[type='image']").click(function() {
+            $("input[type='image']").click(function () {
               $("input[id='events-image']").click();
             });
           </script>
@@ -505,6 +526,8 @@
     var btnx = document.getElementById("myBtn");
     var spanx = document.getElementsByClassName("create-close")[0];
     btnx.onclick = function () {
+      // call function to populate the companies and productions
+      getCompaniesProduction();
       modalx.style.display = "block";
       document.getElementById("mySidenav").style.width = "0";
     }
@@ -522,6 +545,7 @@
   <script type="text/javascript" src="../javascript/search.js"></script>
   <script type="text/javascript" src="../javascript/profile.js"></script>
   <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
+  <script type="text/javascript" src="../javascript/createThings.js"></script>
   <script type="text/javascript" src="../javascript/article.js"></script>
 
 </body>

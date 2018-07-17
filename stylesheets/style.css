@@ -7392,16 +7392,19 @@ $other-blue-light: #;*/
   width: 100%;
   text-align: center; }
   .pp-header h2 {
-    margin-top: 5px;
+    margin-top: 2%;
+    font-size: 32px;
     color: #226BE4; }
   .pp-header h3 {
     margin-top: 7px;
     color: black;
-    font-size: 16px;
-    font-weight: 100; }
+    font-size: 22px;
+    font-weight: 400; }
   .pp-header p {
+    font-size: 14px;
+    margin-top: -8px;
     font-weight: 300;
-    font-size: 13px; }
+    padding-bottom: 10px; }
 
 .pp-edit {
   margin-top: 44px;
@@ -7415,35 +7418,85 @@ $other-blue-light: #;*/
 
 .pp-follow {
   margin-top: 44px;
-  margin-left: 47%;
+  margin-left: 46.3%;
   display: inline;
   width: 50px;
   height: 50px;
   position: inherit; }
   .pp-follow .follow {
-    background-color: #226BE4;
-    border: 2px solid #226BE4;
-    color: white;
+    background-color: rgba(51, 153, 255, 0.3);
+    border: 2px solid #F7FAFF;
+    color: #226BE4;
     padding: 3px 12px;
-    width: 86px;
-    height: 32px;
+    width: 105px;
+    height: 36px;
     text-align: center;
     font-size: 12px;
     cursor: pointer;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
-    border-radius: 25px;
-    margin-right: 10%;
-    font-size: 12px; }
+    /*border-radius: 25px;*/
+    font-size: 14px; }
+    .pp-follow .follow a {
+      font-family: "Roboto", sans-serif;
+      text-decoration: none; }
+      .pp-follow .follow a p {
+        font-family: "Roboto", sans-serif;
+        margin-top: 5px;
+        color: #226BE4; }
     .pp-follow .follow:hover {
-      width: 86px;
-      height: 32px;
+      width: 103px;
+      height: 34px;
       background-color: white;
-      border: 2px solid #226BE4;
-      border-radius: 25px;
-      margin-right: 10%;
-      color: #226BE4;
-      font-size: 12px; }
+      border: 2px solid #99CCFF;
+      /*border-radius: 25px;*/
+      color: #1B5AC3;
+      font-size: 14px; }
+      .pp-follow .follow:hover a {
+        font-family: "Roboto", sans-serif;
+        text-decoration: none; }
+        .pp-follow .follow:hover a p {
+          font-family: "Roboto", sans-serif;
+          color: #99CCFF;
+          margin-top: 3px; }
+
+.pp-location {
+  margin-top: 30px;
+  text-align: center; }
+  .pp-location img {
+    width: 24px; }
+  .pp-location h3 {
+    margin-top: 0px;
+    font-size: 16px;
+    font-weight: 400; }
+
+.pp-date {
+  margin-top: 30px;
+  text-align: center; }
+  .pp-date img {
+    width: 20px; }
+  .pp-date h3 {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 400; }
+  .pp-date h4 {
+    margin-top: 2px;
+    font-size: 16px;
+    font-weight: 400; }
+
+.pp-socials {
+  width: 60%;
+  margin-left: 19%;
+  margin-top: 40px;
+  text-align: center; }
+  .pp-socials .media {
+    width: 55px;
+    height: 55px;
+    color: white;
+    font-size: 16px;
+    margin-left: 30px;
+    border-radius: 50%;
+    background-color: #226BE4; }
 
 .production-profiles-wrapper {
   border-bottom: 2px solid #226BE4;

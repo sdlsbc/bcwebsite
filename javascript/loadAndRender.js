@@ -279,6 +279,20 @@ function showModal(body) {
 		liked = false
 	}
 
+  // extra
+	// let fav_button_num = document.createElement('p');
+	// if (body.favoriters) {
+	// 	var fav_button_numNode = document.createTextNode(body.favoriters.length);
+	// } else {
+	// 	var fav_button_numNode = document.createTextNode(0);
+	// }
+	// fav_button_num.appendChild(fav_button_numNode);
+	// fav_button_num.classList.add('fav_likes');
+	// button_div.appendChild(fav_button_num);
+
+
+
+
 	let parent = document.getElementById(body._id);
 	let fav_from_newsfeed = parent.querySelector('.favorite');
 	let fav_likes = parent.querySelector('.fav_likes');

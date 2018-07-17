@@ -46,6 +46,9 @@ function checkLocalStorage(page) {
 			case 'bob':
 				loadProfile();
 				break;
+			case 'user_profile':
+			loadProfile();
+			fetchProfileData();
 		}
 	}
 

@@ -59,7 +59,7 @@ function displayUsersFound(array1) {
         divUsers.onclick = (function () {
             var unique_id = element._id;
             return function () {
-                window.location.href = "../test.html?id="+unique_id;
+                window.location.href = "../User-Profile/user_profile.html?id="+unique_id;
             }
         })();
          // adding onclick event
@@ -136,7 +136,7 @@ console.log('array2',array2)
         divPosts.onclick = (function () {
             var unique_id = element._id;
             return function () {
-                window.location.href = "../test.html?id="+unique_id;
+                window.location.href = "../User-Profile/user_profile.html?id="+unique_id;
             }
         })();
          // adding onclick event

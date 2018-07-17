@@ -64,17 +64,24 @@ function displayUsersFound(array1) {
         fullname.className = "profile-full-name";
         fullname_text = document.createTextNode(element.firstname + " " + element.lastname);
         fullname.appendChild(fullname_text);
-        divUsers.appendChild(fullname);
+        // divUsers.appendChild(fullname);
 
         let handle = document.createElement('p');
         handle.className = "profile-handle";
         hande_text = document.createTextNode("@"+element.handle);
         handle.appendChild(hande_text);
-        divUsers.appendChild(handle);
+        // divUsers.appendChild(handle);
+
+        let profileText = document.createElement('div');
+        profileText.className = "profile-text";
+        profileText.appendChild(fullname);
+        profileText.appendChild(handle);
+        divUsers.appendChild(profileText);
+
 
         var userImageAddress = "";
         let user_image = document.createElement('img');
-        user_image.className = "profile-image";
+        user_image.className = "image";
         if (element.image){
             if(element.image.substr(0,4) == "data"){
                 userImageAddress = element.image;
@@ -84,7 +91,24 @@ function displayUsersFound(array1) {
             user_image.src = userImageAddress;
         }
 
-        divUsers.appendChild(user_image);
+        let profileImage = document.createElement('div');
+        profileImage.className = "profile-image";
+        profileImage.appendChild(user_image);
+        divUsers.appendChild(profileImage);
+
+
+        let profileContent = document.createElement('div');
+        profileContent.className = "profile-all-content";
+        profileContent.appendChild(profileImage);
+        profileContent.appendChild(profileText);
+        divUsers.appendChild(profileContent);
+
+
+        // divUsers.appendChild(user_image);
+
+
+
+
         document.getElementById('searchResultsDisplay').appendChild(divUsers);
     });
 
@@ -97,22 +121,35 @@ console.log('array2',array2)
         console.log('post image', element.image);
 
         let divPosts = document.createElement('div');
+
+        let postHeader = document.createElement('h3');
+        postHeader.className = "post-h3-header";
+        divPosts.appendChild(postHeader);
+
+
         divPosts.className = "posts-div";
         let title = document.createElement('p');
         title.className = "post-title";
         title_text = document.createTextNode(element.title);
         title.appendChild(title_text);
-        divPosts.appendChild(title);
+        // divPosts.appendChild(title);
 
         let heading = document.createElement('p');
         heading.className = "post-heading";
         heading_text = document.createTextNode(element.heading);
         heading.appendChild(heading_text);
-        divPosts.appendChild(heading);
+        // divPosts.appendChild(heading);
+
+        let postText = document.createElement('div');
+        postText.className = "post-text";
+        postText.appendChild(title);
+        postText.appendChild(heading);
+        divPosts.appendChild(postText);
+
 
         var postImageAddress = "";
         let post_image = document.createElement('img');
-        post_image.className = "post-image";
+        post_image.className = "image";
         if (element.image){
             if(element.image.substr(0,4) == "data"){
                 postImageAddress = element.image;
@@ -121,8 +158,22 @@ console.log('array2',array2)
             }
             post_image.src = postImageAddress;
         }
+        
 
-        divPosts.appendChild(post_image);
+        let postImage = document.createElement('div');
+        postImage.className = "post-image";
+        postImage.appendChild(post_image);
+        divPosts.appendChild(postImage);
+
+
+        let postContent = document.createElement('div');
+        postContent.className = "post-all-content";
+        postContent.appendChild(postImage);
+        postContent.appendChild(postText);
+        divPosts.appendChild(postContent);
+
+
+        // divPosts.appendChild(post_image);
         document.getElementById('searchResultsDisplay').appendChild(divPosts);
     });
 

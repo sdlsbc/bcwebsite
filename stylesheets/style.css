@@ -8875,67 +8875,89 @@ ul p:last-child a.down {
 #searchResultsDisplay .profile-div {
   width: 100%;
   margin-top: 60px;
+  padding-bottom: 8%;
   display: inline-block; }
-  #searchResultsDisplay .profile-div .profile-image {
-    float: left;
-    height: 170px;
-    width: 170px;
-    margin-left: 8%;
-    margin-top: 3%;
-    border-radius: 50%;
-    margin-right: 25px;
-    border: 3px solid #226BE4; }
-  #searchResultsDisplay .profile-div .profile-full-name {
-    height: 40px;
-    width: 200px;
-    text-align: center;
-    font-size: 30px;
-    color: #226BE4;
-    margin-top: 6%;
-    font-weight: 900;
-    display: inline-block; }
-  #searchResultsDisplay .profile-div .profile-handle {
-    height: 40px;
-    width: 200px;
-    text-align: center;
-    /* float: right; */
-    font-size: 24px;
-    color: #226BE4;
-    margin-top: 9%;
-    margin-left: -8%;
-    font-weight: 400;
-    display: inline-block; }
+  #searchResultsDisplay .profile-div .profile-all-content {
+    width: 97%;
+    height: 20%;
+    clear: both;
+    margin-left: 1%;
+    background-color: #F7FAFF; }
+    #searchResultsDisplay .profile-div .profile-all-content .profile-image {
+      width: 28%;
+      margin-top: 2%;
+      margin-left: 8%;
+      padding-bottom: 3%;
+      display: inline-block; }
+      #searchResultsDisplay .profile-div .profile-all-content .profile-image .image {
+        height: 170px;
+        width: 170px;
+        border-radius: 50%;
+        border: 3px solid #226BE4; }
+    #searchResultsDisplay .profile-div .profile-all-content .profile-text {
+      width: 30%;
+      margin-left: 25%;
+      margin-top: -207px;
+      padding-bottom: 3%; }
+      #searchResultsDisplay .profile-div .profile-all-content .profile-text .profile-full-name {
+        color: #226BE4;
+        font-size: 30px;
+        font-weight: 900; }
+      #searchResultsDisplay .profile-div .profile-all-content .profile-text .profile-handle {
+        color: #18253B;
+        font-size: 24px;
+        font-weight: 400; }
+#searchResultsDisplay .post-h3-header {
+  width: 95%;
+  font-size: 22px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin-top: 40px;
+  float: left;
+  padding-left: 30px;
+  padding-bottom: 15px;
+  margin-left: 20px;
+  padding-top: 15px;
+  border-bottom: 2px solid #226BE4; }
+  #searchResultsDisplay .post-h3-header:after {
+    content: "Articles";
+    margin-top: 20px;
+    color: #226BE4; }
 #searchResultsDisplay .posts-div {
   width: 100%;
+  margin-top: 60px;
+  padding-bottom: 8%;
   display: inline-block; }
-  #searchResultsDisplay .posts-div .post-image {
-    float: left;
-    height: 170px;
-    width: 170px;
-    margin-left: 8%;
-    margin-right: 25px;
-    margin-top: 50px;
-    border-radius: 50%;
-    border: 3px solid #226BE4; }
-  #searchResultsDisplay .posts-div .post-title {
-    height: 40px;
-    width: 30%;
-    text-align: center;
-    font-size: 30px;
-    color: #226BE4;
-    margin-top: 6%;
-    font-weight: 900;
-    display: inline-block; }
-  #searchResultsDisplay .posts-div .post-heading {
-    height: 40px;
-    width: 200px;
-    text-align: center;
-    font-size: 24px;
-    color: #226BE4;
-    margin-top: 9%;
-    margin-left: -8%;
-    font-weight: 400;
-    display: inline-block; }
+  #searchResultsDisplay .posts-div .post-all-content {
+    width: 97%;
+    height: 20%;
+    clear: both;
+    margin-left: 1%;
+    background-color: #F7FAFF; }
+    #searchResultsDisplay .posts-div .post-all-content .post-image {
+      width: 28%;
+      margin-top: 2%;
+      margin-left: 8%;
+      padding-bottom: 3%;
+      display: inline-block; }
+      #searchResultsDisplay .posts-div .post-all-content .post-image .image {
+        height: 170px;
+        width: 170px;
+        border-radius: 50%;
+        border: 3px solid #226BE4; }
+    #searchResultsDisplay .posts-div .post-all-content .post-text {
+      width: 30%;
+      margin-left: 25%;
+      margin-top: -207px;
+      padding-bottom: 3%; }
+      #searchResultsDisplay .posts-div .post-all-content .post-text .post-title {
+        color: #226BE4;
+        font-size: 30px;
+        font-weight: 900; }
+      #searchResultsDisplay .posts-div .post-all-content .post-text .post-header {
+        color: #18253B;
+        font-size: 24px;
+        font-weight: 400; }
 
 @media screen and (max-width: 700px) {
   /* =============== M O B I L E  M A I N  H E A D E R =============== */

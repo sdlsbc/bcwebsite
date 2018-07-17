@@ -43,73 +43,103 @@
   .profile-div {
     width: 100%;
     margin-top: 60px;
+    padding-bottom: 8%;
     display: inline-block;
-    .profile-image { 
-      float: left;
-      height: 170px;
-      width: 170px;
-      margin-left: 8%;
-      margin-top: 3%;
-      border-radius: 50%;
-      margin-right: 25px;
-      border: 3px solid $main-blue;
+    .profile-all-content {
+      width: 97%;
+      height: 20%;
+      clear: both;
+      margin-left: 1%;
+      background-color: $light-blue;
+      .profile-image {
+        width: 28%;
+        margin-top: 2%;
+        margin-left: 8%;
+        padding-bottom: 3%;
+        display: inline-block;
+        .image { 
+          height: 170px;
+          width: 170px;
+          border-radius: 50%;
+          border: 3px solid $main-blue;
+        }
+      }
+      .profile-text { 
+        width: 30%;
+        margin-left: 25%;
+        margin-top: -207px;
+        padding-bottom: 3%;
+        .profile-full-name {
+          color: $main-blue;
+          font-size: 30px;
+          font-weight: 900;
+        }
+        .profile-handle {
+          color: $dark-blue;
+          font-size: 24px;
+          font-weight: 400;
+        }
+      }
     }
-    .profile-full-name {
-      height: 40px;
-      width: 200px;
-      text-align: center;
-      font-size: 30px;
-      color: #226BE4;
-      margin-top: 6%;
-      font-weight: 900;
-      display: inline-block;
-    }
-    .profile-handle {
-      height: 40px;
-      width: 200px;
-      text-align: center;
-      /* float: right; */
-      font-size: 24px;
-      color: #226BE4;
-      margin-top: 9%;
-      margin-left: -8%;
-      font-weight: 400;
-      display: inline-block;
+  }
+  .post-h3-header {
+    width: 95%;
+    font-size: 22px;
+    font-family: $font;
+    font-weight: 400;
+    margin-top: 40px;
+    float: left;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    margin-left: 20px;
+    padding-top: 15px;
+    border-bottom: 2px solid $main-blue;
+    &:after {
+      content: "Articles";
+      margin-top: 20px;
+      color: $main-blue;
     }
   }
   .posts-div {
     width: 100%;
+    margin-top: 60px;
+    padding-bottom: 8%;
     display: inline-block;
-    .post-image { 
-      float: left;
-      height: 170px;
-      width: 170px;
-      margin-left: 8%;
-      margin-right: 25px;
-      margin-top: 50px;
-      border-radius: 50%;
-      border: 3px solid $main-blue;
-    }
-    .post-title {
-      height: 40px;
-      width: 30%;
-      text-align: center;
-      font-size: 30px;
-      color: #226BE4;
-      margin-top: 6%;
-      font-weight: 900;
-      display: inline-block;
-    }
-    .post-heading {
-      height: 40px;
-      width: 200px;
-      text-align: center;
-      font-size: 24px;
-      color: #226BE4;
-      margin-top: 9%;
-      margin-left: -8%;
-      font-weight: 400;
-      display: inline-block;
+    .post-all-content {
+      width: 97%;
+      height: 20%;
+      clear: both;
+      margin-left: 1%;
+      background-color: $light-blue;
+      .post-image {
+        width: 28%;
+        margin-top: 2%;
+        margin-left: 8%;
+        padding-bottom: 3%;
+        display: inline-block;
+        .image { 
+          height: 170px;
+          width: 170px;
+          border-radius: 50%;
+          border: 3px solid $main-blue;
+        }
+      }
+      .post-text { 
+        width: 30%;
+        margin-left: 25%;
+        margin-top: -207px;
+        padding-bottom: 3%;
+        .post-title {
+          color: $main-blue;
+          font-size: 30px;
+          font-weight: 900;
+        }
+        .post-header {
+          color: $dark-blue;
+          font-size: 24px;
+          font-weight: 400;
+        }
+      }
     }
   }
 }

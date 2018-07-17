@@ -49,12 +49,21 @@ function getSearchResults(query_string) {
 function displayUsersFound(array1) {
 
     array1.forEach(function (element) {
-        // console.log('user 1', element);
+        console.log('user 1', element._id);
         // console.log('user 1 image', element.image);
 
-
         let divUsers = document.createElement('div');
+        divUsers.setAttribute("id", element._id);
 
+        // adding onclick event
+        divUsers.onclick = (function () {
+            var unique_id = element._id;
+            return function () {
+                window.location.href = "../User-Profile/user_profile.html?id="+unique_id;
+            }
+        })();
+         // adding onclick event
+        
         let profileHeader = document.createElement('h3');
         profileHeader.className = "profile-h3-header";
         divUsers.appendChild(profileHeader);
@@ -121,6 +130,16 @@ console.log('array2',array2)
         console.log('post image', element.image);
 
         let divPosts = document.createElement('div');
+        divPosts.setAttribute("id", element._id);
+
+        // adding onclick event
+        divPosts.onclick = (function () {
+            var unique_id = element._id;
+            return function () {
+                window.location.href = "../User-Profile/user_profile.html?id="+unique_id;
+            }
+        })();
+         // adding onclick event
 
         let postHeader = document.createElement('h3');
         postHeader.className = "post-h3-header";

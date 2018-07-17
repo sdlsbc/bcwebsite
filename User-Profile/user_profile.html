@@ -88,7 +88,10 @@
       <img>
     </div>
   </div>
-  
+  <!-- <div class="follow-button">
+    <button class="follow">Follow</button>
+  </div>
+ -->  
   <div class="pe-header">
     <div class="pe-name">
       <h2>John Doe</h2>
@@ -105,8 +108,8 @@
     <div class="pe-role">
       <h6>Entrepreneur</h6>
     </div>
-    <div class="pe-show-more">
-      <a href="#" id="myModal"><img src="../images/penciliconblue.png" class="edit-button"></a>
+    <div class="pe-follow">
+      <button class="follow">Follow</button>
     </div>
   </div>
 </div>
@@ -122,149 +125,6 @@
     <h2>Executive Intern @ Marathon Digital</h2>
   </div>
 </div>
-
-
-<div id="createModalx" class="create-modal">
-  <div class="create-modal-contenty" id="create-modal-contentx">
-  <span class="create-closex">&times;</span>
-    <h1>Edit Information</h1>
-    <form>
-      <span class="edit-left1">
-        <label id="edit-first">FIRST NAME</label>
-        <br>
-        <input type="text" id="input-first" name="articles" placeholder="First">
-      </span>
-      <span class="edit-right1">
-        <label id="edit-last">LAST NAME</label>
-        <input type="text" id="input-last" name="articles" placeholder="Last">
-      </span>
-      <span class="edit-left2">
-        <label id="edit-username">USERNAME</label>
-        <br>
-        <input type="text" id="input-email" name="articles">
-      </span>
-      <span class="edit-right2">
-        <label id="edit-headline">HEADLINE</label>
-        <br>
-        <input type="text" id="input-username" name="articles">
-      </span>
-      <span class="edit-left3">
-        <label id="edit-job-title">JOB TITLE</label>
-        <br>
-        <input type="text" id="input-new" name="articles">
-      </span>
-      <span class="edit-right3">
-        <label id="edit-company">COMPANY</label>
-        <br>
-        <input type="text" id="input-confirm" name="articles">
-      </span>
-      <span class="edit-left4">
-        <label id="edit-previous-job">PREVIOUS JOB</label>
-        <br>
-        <input type="text" id="input-new" name="articles">
-      </span>
-      <span class="edit-right4">
-        <label id="edit-previous-company">PREVIOUS COMPANY</label>
-        <br>
-        <input type="text" id="input-confirm" name="articles">
-      </span>
-      <span class="edit-left5">
-        <label id="edit-email">EMAIL</label>
-        <br>
-        <input type="text" id="input-new" name="articles">
-      </span>
-      <span class="edit-right5">
-        <label id="edit-phone">PHONE</label>
-        <br>
-        <input type="text" id="input-confirm" name="articles">
-      </span>
-      <span class="edit-left6">
-        <label id="edit-city">CITY</label>
-        <br>
-        <input type="text" id="input-new" name="articles">
-      </span>
-      <span class="edit-right6">
-        <label id="edit-country">COUNTRY</label>
-        <br>
-        <input type="text" id="input-confirm" name="articles">
-      </span>
-      <div class="articles-extra-buttons">
-        <a href="" class="attach-photo">
-          <img src="../images/image.png">
-        </a>
-      </div>
-      <span class="toggle">
-        <label class="switch1">
-        <p>Public / Private</p>
-          <input type="checkbox">
-          <span class="slider round"></span>
-        </label>
-          <!-- <p class="checkbox-profile"> -->
- 
-        <label class="switch2">
-        <p>Header Is Current Position</p>
-          <input type="checkbox">
-          <span class="slider round"></span>   
-        </label>
-      </span>
-    </form>
-      <button class="save-changes" onclick="updateUser()">Save Changes</button>
-  </div>
-</div>
-
-<script>
-  var modalx = document.getElementById('createModalx');
-  var btnx = document.getElementById("myModal");
-  var spanx = document.getElementsByClassName("create-closex")[0];
-  btnx.onclick = function() {
-    modalx.style.display = "block";
-  }
-  spanx.onclick = function() {
-    modalx.style.display = "none";
-  }
-  window.onclick = function(event) {
-    if (event.target == modalx) {
-      modalx.style.display = "none";
-    }
-  }
-</script>
-
-
-<!-- <div class="pe-nav">
-  <a href="#" onclick="toggleVisibility('profile-moments');">
-    <p class="p-tag" id="moments">Moments</p>
-  </a>
-  <a href="#" onclick="toggleVisibility('profile-followers');">
-    <p class="p-tag" id="followers">Calendar</p>
-  </a>
-  <a href="#" onclick="toggleVisibility('profile-calendar');">
-    <p class="p-tag" id="calendar">Articles</p>
-  </a>
-  <a href="#" onclick="toggleVisibility('profile-postsbox');">
-    <p class="p-tag" id="userfeed">Milestones</p>
-  </a>
-  <br><br>
-  <div id="profile-moments">
-    <div class="pe-moments">
-      <h1>Moments...</h1>
-    </div>
-  </div>
-  <div id="profile-postsbox">
-    <div class="pe-milestones">
-      <h1>Milestones...</h1>
-    </div>
-  </div>
-  <div id="profile-calendar">
-    <div class="pe-articles">
-      <h1>Articles...</h1>
-    </div>
-  </div>
-  <div id="profile-followers">
-    <div class="pe-events">
-      <h1>Calendar...</h1>
-    </div>
-  </div>
-</div> -->
 
 
 <div class="profile_wrapper" style="margin-top: 180px;
@@ -307,22 +167,6 @@
     });
   </script>
 
-
-<script>
-    // function openCity(evt, cityName) {
-    //   var i, tabcontent, tablinks;
-    //   tabcontent = document.getElementsByClassName("tabcontent");
-    //   for (i = 0; i < tabcontent.length; i++) {
-    //       tabcontent[i].style.display = "none";
-    //   }
-    //   tablinks = document.getElementsByClassName("tablinks");
-    //   for (i = 0; i < tablinks.length; i++) {
-    //       tablinks[i].className = tablinks[i].className.replace("   active", "");
-    //   }
-    //   document.getElementById(cityName).style.display = "block";
-    //   evt.currentTarget.className += " active";
-    
-  </script>
 
  <script>
      function openNav() {

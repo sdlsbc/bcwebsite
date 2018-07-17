@@ -4019,7 +4019,7 @@ $other-blue-light: #;*/
       .profile_wrapper .second_nav_right a:first-child {
         font-family: "Roboto", sans-serif;
         margin-left: 0%;
-        margin-right: 18%; }
+        margin-right: 16%; }
       .profile_wrapper .second_nav_right a .p-tag {
         font-family: "Roboto", sans-serif;
         text-align: center;
@@ -4041,7 +4041,7 @@ $other-blue-light: #;*/
       overflow: hidden;
       padding-top: 50px;
       margin-top: 62px;
-      margin-left: 9%;
+      margin-left: 11%;
       width: 74%; }
       .profile_wrapper .second_nav_right #profile-postsbox h1 {
         font-family: "Roboto", sans-serif;
@@ -5150,7 +5150,37 @@ $other-blue-light: #;*/
   /*display: flex;*/
   flex-wrap: wrap;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  /*.follow-button {
+    float: right;
+    width: 10%;
+    .follow {
+      background-color: #226BE4;
+      border: 2px solid #226BE4;
+      color: white;
+      padding: 3px 12px;
+      width: 86px;
+      height: 32px;
+      text-align: center;
+      font-size: 12px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      border-radius: 25px;
+      margin-right: 10%;
+      font-size: 12px;
+      &:hover {
+        width: 86px;
+        height: 32px;
+        background-color: white;
+        border: 2px solid #226BE4;
+        border-radius: 25px;
+        margin-right: 10%; 
+        color: #226BE4;
+        font-size: 12px;
+      }
+    }
+  }*/ }
   .profile_wrapper .pe-wrapper {
     margin-top: -490px;
     width: 30%;
@@ -5167,7 +5197,7 @@ $other-blue-light: #;*/
     margin-top: -64px; }
     .profile_wrapper .pe-header .pe-name h2 {
       margin-top: -250px;
-      margin-left: 95px;
+      margin-left: 8.3%;
       text-align: center;
       font-weight: 100;
       font-size: 24px;
@@ -5175,7 +5205,7 @@ $other-blue-light: #;*/
     .profile_wrapper .pe-header .pe-handle h3 {
       margin-top: 0.2%;
       text-align: center;
-      margin-left: 9%;
+      margin-left: 8%;
       font-weight: 400;
       font-size: 18px;
       color: #B2B2B2; }
@@ -5196,6 +5226,7 @@ $other-blue-light: #;*/
       color: #B2B2B2; }
     .profile_wrapper .pe-header .pe-role h6 {
       width: 41%;
+      padding-bottom: 4.2%;
       margin-top: -1.5%;
       text-align: center;
       margin-left: 33.8%;
@@ -5204,12 +5235,40 @@ $other-blue-light: #;*/
       color: #B2B2B2; }
     .profile_wrapper .pe-header .pe-show-more {
       width: 40%;
-      margin-top: 4.5%;
+      margin-top: 0.5%;
       text-align: center;
       margin-left: 33.8%; }
       .profile_wrapper .pe-header .pe-show-more img {
         width: 25px;
         height: 25px; }
+    .profile_wrapper .pe-header .pe-follow {
+      width: 40%;
+      text-align: center;
+      margin-left: 36.3%; }
+      .profile_wrapper .pe-header .pe-follow .follow {
+        background-color: #226BE4;
+        border: 2px solid #226BE4;
+        color: white;
+        padding: 3px 12px;
+        width: 86px;
+        height: 32px;
+        text-align: center;
+        font-size: 12px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        border-radius: 25px;
+        margin-right: 10%;
+        font-size: 12px; }
+        .profile_wrapper .pe-header .pe-follow .follow:hover {
+          width: 86px;
+          height: 32px;
+          background-color: white;
+          border: 2px solid #226BE4;
+          border-radius: 25px;
+          margin-right: 10%;
+          color: #226BE4;
+          font-size: 12px; }
   .profile_wrapper .visiblediv {
     display: none; }
 
@@ -5242,6 +5301,16 @@ $other-blue-light: #;*/
       font-size: 14px;
       color: #B2B2B2; }
 
+@media screen and (max-width: 1200px) {
+  .profile_wrapper .pe-header .pe-role h6 {
+    width: 41%;
+    padding-bottom: 6.5%;
+    margin-top: -1.5%;
+    text-align: center;
+    margin-left: 33.8%;
+    font-size: 14px;
+    font-weight: 400;
+    color: #B2B2B2; } }
 .pe-nav {
   width: 80%;
   margin-top: 10%;
@@ -10363,6 +10432,35 @@ ul p:last-child a.down {
             font-size: 12px;
             margin-bottom: 10px;
             font-family: "Roboto", sans-serif; }
+      .profile_wrapper .pe-header .pe-follow {
+        width: 100%;
+        text-align: center;
+        margin-top: 9%;
+        margin-left: 9.5%; }
+        .profile_wrapper .pe-header .pe-follow .follow {
+          background-color: #226BE4;
+          border: 2px solid #226BE4;
+          color: white;
+          padding: 3px 12px;
+          width: 86px;
+          height: 32px;
+          text-align: center;
+          font-size: 12px;
+          cursor: pointer;
+          -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+          border-radius: 25px;
+          margin-right: 10%;
+          font-size: 12px; }
+          .profile_wrapper .pe-header .pe-follow .follow:hover {
+            width: 86px;
+            height: 32px;
+            background-color: white;
+            border: 2px solid #226BE4;
+            border-radius: 25px;
+            margin-right: 10%;
+            color: #226BE4;
+            font-size: 12px; }
       .profile_wrapper .pe-header .visiblediv {
         display: none; }
 

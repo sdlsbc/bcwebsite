@@ -109,10 +109,17 @@
     <a href='../Explore/explore.html'>
       <p class="newsfeed-p-tagx">Explore</p>
     </a>
-    <div class="search">
+    <!-- <div class="search">
       <img class="search-icon" src="../images/search-icon.png">
       </span>
       <input type="text" placeholder="Search.." id="search_query_input">
+    </div> -->
+    <div class="signout">
+      <div class="search" id="input-container">
+        <input type="text" id="search_query_input" placeholder="Search..." value>
+        <img src="../images/search-icon.png" id="input_img">
+      </div>
+      <button class="signout-button" onclick="signout()">Sign Out</button>
     </div>
 
     <script>
@@ -126,9 +133,6 @@
         }
       });
     </script>
-    <div class="signout">
-      <button class="signout-button" onclick="signout()">Sign Out</button>
-    </div>
   </div>
   <div id="postsbox">
   </div>
@@ -158,6 +162,7 @@
         </div>
         <div class="modal-favorite">
           <img id="modal-favorite-img" src="../images/newsfeed_buttons/heart2.png">
+          <p class="fav_likes"></p>
         </div>
       </div>
       <center>
@@ -255,7 +260,8 @@
         </div>
       </div>
 
-      <!-- </div> -->
+      <!-- </div> --> 
+
       <div id="create-milestones" class="tabcontent">
         <h3>Add a Milestone</h3>
         <form>
@@ -361,8 +367,9 @@
           </script>
 
           <p class="milestone-right">
-            <img id="image" src="../images/placeholder-bc.png">
+            <img id="image" src="../images/bc-logo.png">
           </p>
+
           <p class="milestone-left2">
             <label class="milestone-label" for="milestone-label1" id="milestone-fixed-text1"></label>
             <br>
@@ -375,8 +382,7 @@
               <option value="at">At</option>
             </select>
             <br>
-            <!-- <input class="milestone-text" id="milestone-text2" type="text" placeholder="Enter Company/Production Name"> -->
-            <input type="text" id="city" list="comp-prod-list" onfocus="checkIfMilestoneTypeSelected()">
+            <input type="text" id="city" list="comp-prod-list" onfocus="checkIfMilestoneTypeSelected()" placeholder="Enter Company/Production Name">
             <datalist id="comp-prod-list">
             </datalist>
           </p>
@@ -386,9 +392,6 @@
             <textarea class="milestone-text" id="milestone-description" onfocus="checkIfMilestoneTypeSelected()" rows="4" cols="50" maxlength="300"
               placeholder="Add Description 300 Characters or Less"></textarea>
           </p>
-          <!-- <p class="only-me-checkbox">
-          <input type="checkbox" name="only-me" value="yes">Only Me
-        </p> -->
           <button class="input-button" id="btnPostMilestone" onclick="createMilestone()">Post</button>
         </form>
       </div>
@@ -407,8 +410,14 @@
             </select>
           </p>
           <p class="moments-right">
-            <input type="file" id="company-image" onchange="companyImage(event)" />
+            <input class="attach-photo" type="image" src="../images/image.png" />
+            <input type="file" id="moment-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;" />
             <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
+            <script>
+              $("input[type='image']").click(function () {
+                $("input[id='moment-image']").click();
+              });
+            </script>
           </p>
           <p class="moments-left2">
             <label class="moments-label" for="moments-label1">Fixed Text</label>
@@ -450,9 +459,14 @@
 
         </form>
         <div class="articles-extra-buttons">
-          <a href="" class="attach-photo">
-            <img src="../images/image.png">
-          </a>
+          <input class="attach-photo" type="image" src="../images/image.png" />
+          <input type="file" id="articles-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;" />
+          <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
+          <script>
+            $("input[type='image']").click(function () {
+              $("input[id='articles-image']").click();
+            });
+          </script>
         </div>
         <button class="input-button">Post</button>
       </div>
@@ -477,12 +491,14 @@
           </span>
         </form>
         <div class="events-extra-buttons">
-          <a href="" class="attach-photo">
-            <img src="../images/image.png">
-          </a>
-          <a href="" class="privacy-btn">
-            <img src="../images/lock.png">
-          </a>
+          <input class="attach-photo" type="image" src="../images/image.png" />
+          <input type="file" id="events-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;" />
+          <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
+          <script>
+            $("input[type='image']").click(function () {
+              $("input[id='events-image']").click();
+            });
+          </script>
         </div>
         <button class="input-button">Post</button>
       </div>

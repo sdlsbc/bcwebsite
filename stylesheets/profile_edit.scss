@@ -627,14 +627,17 @@
       margin-right: 54px;
       padding-bottom: 36px;
       display: inline-block;
-      input[type=file] {
-        font-size: 16px;
+      .attach-photo {
+        width: 56px;
+        margin-left: 41%;
+        margin-top: 9px;
+        margin-top: -44px;
       }
     }
     .moments-left2 {
       width: 40%;
       float: left;
-      margin-top: 29px;
+      margin-top: 5px;
       margin-left: 50px;
       display: inline-block;
       .moments-label {
@@ -658,7 +661,7 @@
     .moments-right2 {
       width: 40%;
       float: right;
-      margin-top: 0px;
+      margin-top: -25px;
       margin-right: 55px;
       display: inline-block;
       .moments-label {
@@ -834,13 +837,9 @@
       .attach-photo {
         margin-left: 0%;
         margin-top: 15px;
-        width: 18%;
+        width: 5%;
         float: left;
         display: inline-block;
-        img {
-          width: 35px;
-          height: 35px
-        }
       }
       .privacy-btn {
         margin-top: 15px;
@@ -858,7 +857,7 @@
       text-align: center;
       width: 102px;
       height: 33px;
-      margin-left: 13%;
+      margin-left: 33%;
       margin-top: 50px;
       background-color: #226BE4;
       border: 1px solid $main-blue;
@@ -984,13 +983,9 @@
       .attach-photo {
         margin-left: 0%;
         margin-top: 15px;
-        width: 18%;
+        width: 5%;
         float: left;
         display: inline-block;
-        img {
-          width: 35px;
-          height: 35px
-        }
       }
       .privacy-btn {
         margin-top: 15px;
@@ -1008,7 +1003,7 @@
       text-align: center;
       width: 102px;
       height: 33px;
-      margin-left: 13%;
+      margin-left: 33%;
       margin-top: 50px;
       background-color: #226BE4;
       color: white;

@@ -73,11 +73,11 @@
     <a href='../Explore/explore.html'>
       <p>Explore</p>
     </a>
-    <div class="search">
-      <img class="search-icon" src="../images/search-icon.png"></span>
-      <input type="text" placeholder="Search..">
-    </div>
     <div class="signout">
+      <div class="search" id="input-container">
+        <input type="text" id="input" placeholder="Search..." value>
+        <img src="../images/search-icon.png" id="input_img">
+      </div>
       <button class="signout-button" onclick="signout()">Sign Out</button>
     </div>
   </div>
@@ -95,15 +95,22 @@
     <h3>@hamilton</h3>
     <p>BROADWAY PRODUCTION</p>
   </div>
+  <div class="pp-edit">
+    <a href="#" id="myModal"><img src="../images/penciliconblue.png" class="edit-button"></a>
+  </div>
   <center>
     <div class="pp-show-more">
       <button class="pp-button" id="p1" onclick="myNewFunction()"><a href="#" style="text-decoration: none;"><p>Show More</p></a></button>
     </div>
   </center>
+  <br>
   <div class="production-profiles-wrapper" id="pp-wrapper">
     
     
     <h4>Current Cast</h4>
+    <div class="pp-cast-edit">
+      <a href="#" id="myModaly"><img src="../images/penciliconblue.png" class="edit-button"></a>
+    </div>
     <div class="pp-row1">
       <div class="pp-current-cast">
         <img src="../images/default-person.png">
@@ -150,6 +157,9 @@
     </div>
     <br><br>
     <h4>Production Creatives</h4>
+    <div class="pp-production-edit">
+      <a href="#" id="myModalz"><img src="../images/penciliconblue.png" class="edit-button"></a>
+    </div>
     <div class="pp-row2">
       <div class="pp-current-cast">
         <img src="../images/default-person.png">
@@ -304,6 +314,290 @@
  </script>
 
 
+
+
+
+<!-- GENERAL EDIT FORM -->
+
+<div id="createModalx" class="create-modal">
+  <div class="create-modal-contentx" id="create-modal-contentx">
+  <span class="create-closex">&times;</span>
+    <h1>Edit Information</h1>
+    <form>
+      <span class="cp-left1">
+        <label id="edit-name">PRODUCTION NAME</label>
+        <br>
+        <input type="text" id="input-first" name="articles">
+      </span>
+      <span class="cp-right1">
+        <label id="edit-type">PRODUCTION TYPE</label>
+        <!-- <br> -->
+        <input type="text" id="input-last" name="articles">
+      </span>
+      <span class="cp-center">
+        <label id="edit-desc">DESCRIPTION</label>
+        <br>
+        <input type="text" id="input-email" name="articles">
+      </span>
+      <span class="cp-left2">
+        <label id="cp-new-password">NEW PASSWORD</label>
+        <br>
+        <input type="text" id="input-new" name="articles" placeholder="John">
+      </span>
+      <span class="cp-right2">
+        <label id="cp-confirm-password">CONFIRM PASSWORD</label>
+        <br>
+        <input type="text" id="input-confirm" name="articles" placeholder="John">
+      </span>
+      <button class="save-changes" onclick="signout()">Save Changes</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  var modalx = document.getElementById('createModalx');
+  var btnx = document.getElementById("myModal");
+  var spanx = document.getElementsByClassName("create-closex")[0];
+  btnx.onclick = function() {
+    modalx.style.display = "block";
+  }
+  spanx.onclick = function() {
+    modalx.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modalx) {
+      modalx.style.display = "none";
+    }
+  }
+</script>
+
+
+
+
+
+<!-- CAST EDIT FORM -->
+<div id="createModaly" class="create-modal">
+  <div class="create-modal-contentx" id="create-modal-contenty">
+  <span class="create-closey">&times;</span>
+    <h1>Edit Cast Information</h1>
+    <div class="employee-edit-wrapper">
+      <form>
+        <span class="employee-col1">
+          <ul>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Cast Member Handle1">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Cast Member Role1">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Cast Member Handle2">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Cast Member Role2">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Cast Member Handle3">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Cast Member Role3">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Cast Member Handle4">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Cast Member Role4">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Cast Member Handle5">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Cast Member Role5">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Cast Member Handle6">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Cast Member Role6">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+          </ul>
+        </span>
+      </form>
+    </div>
+    <button class="save-changesx" onclick="#">Save Changes</button>
+  </div>
+</div>
+
+<script>
+$(function() {
+  $('.up').on('click', function(e) {
+    var wrapper = $(this).closest('.columns')
+    wrapper.insertBefore(wrapper.prev())
+  })
+  $('.down').on('click', function(e) {
+    var wrapper = $(this).closest('.columns')
+    wrapper.insertAfter(wrapper.next())
+  })
+})
+</script>
+
+<script>
+  var modaly = document.getElementById('createModaly');
+  var btny = document.getElementById("myModaly");
+  var spany = document.getElementsByClassName("create-closey")[0];
+  btny.onclick = function() {
+    modaly.style.display = "block";
+  }
+  spany.onclick = function() {
+    modaly.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modaly) {
+      modaly.style.display = "none";
+    }
+  }
+</script>
+
+
+
+
+
+<!-- PRODUCTION EDIT FORM -->
+<div id="createModalz" class="create-modal">
+  <div class="create-modal-contentz" id="create-modal-contentz">
+  <span class="create-closez">&times;</span>
+    <h1>Edit Production Creatives Information</h1>
+    <div class="employee-edit-wrapper">
+      <form>
+        <span class="employee-col1">
+          <ul>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Production Creative Handle1">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Production Creative Info1">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Production Creative Handle2">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Production Creative Info2">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Production Creative Handle3">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Production Creative Info3">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Production Creative Handle4">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Production Creative Info4">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Production Creative Handle5">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Clinet Info5">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+            <div class="columns">
+              <div class="basic-info">
+                <input type="text" id="input-new" name="articles" placeholder="Production Creative Handle6">
+              </div>
+              <div class="role">
+                <input type="text" id="input-new" name="articles" placeholder="Production Creative Info6">
+              </div>
+              <a class='up' href='#'>&uArr;</a><br>
+              <a class='down' href='#'>&dArr;</a>
+            </div>
+          </ul>
+        </span>
+      </form>
+    </div>
+        <button class="save-changesz" onclick="#">Save Changes</button>
+  </div>
+</div>
+
+ 
+<!-- $(function() {
+  $('.up').on('click', function(e) {
+    var wrapper = $(this).closest('.columns')
+    wrapper.insertBefore(wrapper.prev())
+  })
+  $('.down').on('click', function(e) {
+    var wrapper = $(this).closest('.columns')
+    wrapper.insertAfter(wrapper.next())
+  })
+}) -->
+<script>
+  var modalz = document.getElementById('createModalz');
+  var btnz = document.getElementById("myModalz");
+  var spanz = document.getElementsByClassName("create-closez")[0];
+  btnz.onclick = function() {
+    modalz.style.display = "block";
+  }
+  spanz.onclick = function() {
+    modalz.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modalz) {
+      modalz.style.display = "none";
+    }
+  }
+</script>
+
+
+
+
+
+
+
+
 <!-- ========== M I L E S T O N E S  M O D A L ===========  -->
 <div id="createModal" class="create-modal">
   <div class="create-modal-content" id="create-modal-content">
@@ -370,7 +664,7 @@
         </script>
 
         <p class="milestone-right">
-          <img id="image" src="../images/placeholder-bc.png">
+          <img id="image" src="../images/bc-logo.png">
         </p>
         <p class="milestone-left2">
           <label class="milestone-label" for="milestone-label1">Fixed Text</label><br>
@@ -404,8 +698,14 @@
           </select>
         </p>
         <p class="moments-right">
-          <input type="file" id="company-image" onchange="companyImage(event)" />
+          <input class="attach-photo" type="image" src="../images/image.png"/>
+          <input type="file" id="moment-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;"/>
           <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
+          <script>
+            $("input[type='image']").click(function() {
+              $("input[id='moment-image']").click();
+            });
+          </script>
         </p>
         <p class="moments-left2">
           <label class="moments-label" for="moments-label1">Fixed Text</label><br>
@@ -444,9 +744,14 @@
 
       </form>
       <div class="articles-extra-buttons">
-        <a href="" class="attach-photo">
-          <img src="../images/image.png">
-        </a>
+        <input class="attach-photo" type="image" src="../images/image.png"/>
+        <input type="file" id="articles-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;"/>
+        <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
+        <script>
+          $("input[type='image']").click(function() {
+            $("input[id='articles-image']").click();
+          });
+        </script>
       </div>
         <button class="input-button">Post</button>
     </div>
@@ -471,12 +776,14 @@
         </span>
       </form>
       <div class="events-extra-buttons">
-        <a href="" class="attach-photo">
-          <img src="../images/image.png">
-        </a>
-        <a href="" class="privacy-btn">
-          <img src="../images/lock.png">
-        </a>       
+        <input class="attach-photo" type="image" src="../images/image.png"/>
+          <input type="file" id="events-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;"/>
+          <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
+          <script>
+            $("input[type='image']").click(function() {
+              $("input[id='events-image']").click();
+            });
+          </script>     
       </div>
        <button class="input-button">Post</button>
     </div>

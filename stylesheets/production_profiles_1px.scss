@@ -4,6 +4,17 @@
     height: 200px;
   }
 }
+.pp-edit {
+  margin-top: 44px;
+  margin-left: 45%;
+  display: inline;
+  width: 45px;
+  height: 45px;
+  position: inherit;
+  img {
+    width: 26px;
+  }
+}
 .production-profiles-wrapper {
   border-bottom: 2px solid $main-blue;
   /*display: none;*/
@@ -33,6 +44,27 @@
     color: $main-blue;
     font-size: 12px;
     margin-bottom: -35px;
+  }
+  .pp-cast-edit {
+    margin-top: 16px;
+    margin-left: 28%;
+    width: 45px;
+    height: 45px;
+    position: inherit;
+    img {
+      width: 26px;
+    }
+  }
+  .pp-production-edit {
+    margin-top: 15px;
+    margin-left: 40%;
+
+    width: 45px;
+    height: 45px;
+    position: inherit;
+    img {
+      width: 26px;
+    }
   }
   .pp-row1 {
     margin-top: 7%;

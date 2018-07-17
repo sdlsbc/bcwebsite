@@ -394,7 +394,7 @@ hr {
     font-weight: 100;
     float: left;
   }
-  input[type=text] {
+  input[type=password] {
     font-family: $font;
     background-image: url("../images/lock.png");
     background-position: 4.5% 50%;
@@ -403,7 +403,7 @@ hr {
     padding-top: 2px;
     background-color: #E0E0E0;
     border-radius: 13%/180%;
-    padding-left: 57px;
+    padding-left: 45px;
     margin-top: 6px;
     font-size: 14px;
     border: none;

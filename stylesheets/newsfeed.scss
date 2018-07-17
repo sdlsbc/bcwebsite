@@ -314,12 +314,14 @@
   font-size: 30px;
   cursor: pointer;
   margin-top: 10px;
+  z-index: 2;
+  padding-right: 20px;
 }
 .logo {
   height: 52px;
   width: auto;
   margin-right: -11px;
-  margin-left: 8px;
+  margin-left: -19px;
   margin-top: 8px;
 }
 @media screen and (max-width: 1200px) {
@@ -1191,7 +1193,7 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
   font-size: 16px;
   z-index: 1;
   &:hover {
-    background: linear-gradient(#4e0f7d 10%, white 45%, white);
+    background: linear-gradient(#226BE4 10%, white 45%, white);
     color: white;
     z-index: 1;
   }
@@ -1212,7 +1214,7 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
   right: 5px;
   z-index: 5;
   width: 15%;
-  height: 5%;
+  height: 6%;
   background-color:rgba(0,0,0,0.5); 
   border-radius: 18px;
 }

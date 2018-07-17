@@ -1,28 +1,127 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-
+ <link rel="icon" href="../images/bc32_mcU_icon.ico" type="image/x-icon">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta charset="UTF-8">
+ <meta name="google" content="notranslate">
+ <meta http-equiv="Content-Language" content="en">
+ <link href="../stylesheets/style.css" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
-<script>
+
+<body onload="checkLocalStorage('explore'); myFunction();">
+    <!-- sidebar. -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closeNav()">&times;</a>
+        <p> </p>
+        <center id="profile_pic"></center>
+        <center>
+            <p class="navname"></p>
+        </center>
+        <center>
+      <p class="profile">
+        <button class="my-profile-btn"><a href="../Profile/profile.html" id="profile-a"><p>My Profile</p></a></button>
+      </p>
+    </center>
+    <br/>
+      <div class="sidenav-links">
+        <a href="../Newsfeed/newsfeed.html">
+          <img src="../images/rss@3x.png" width="19" height="19">&nbsp&nbsp Newsfeed
+        </a>
+        <a href="#" id="myBtn">
+          <img src="../images/add-icon.png" width="20" height="20">&nbsp&nbsp Create 
+        </a>
+        <a href="../Q.O.D./qod.html">
+          <img src="../images/compass@3x.png" width="19" height="19">&nbsp&nbsp Q.O.D
+        </a>
+        <a href="../Calendar/calendar.html">
+          <img src="../images/calendar (1)@3x.png" width="19" height="19">&nbsp&nbsp Calendar
+        </a>
+        <a href="../Favorites/favorites.html">
+          <img src="../images/heart@3x.png" width="19" height="19">&nbsp&nbsp My Favorites
+        </a>
+        <a href="../ProductionProfiles/production_profiles.html">
+          <img src="../images/stage@3x.png" width="19" height="19">&nbsp&nbsp Production Profiles
+        </a>
+        <a href="../CompanyProfiles/company_profiles.html">
+          <img src="../images/building@3x.png" width="19" height="19">&nbsp&nbsp Company Profiles
+        </a>
+        <a href="../B.O.B./bob.html">
+          <img src="../images/briefcase@3x.png" width="19" height="19">&nbsp&nbsp Business of Broadway 
+        </a>
+        <a href="../Contact/contact.html">
+          <img src="../images/info@3x.png" width="19" height="19">&nbsp&nbsp FAQ & Contact Us
+        </a>
+      </div>
+  </div>
+</body>
+
+  <script>
+     function openNav() {
+       document.getElementById("mySidenav").style.width = "250px";
+     }
+     function closeNav() {
+       document.getElementById("mySidenav").style.width = "0";
+     }
+  </script>
+  <!-- sidebar. --> 
+  <div class="navbar">
+    <span class="open_sidenav" onclick="openNav()">
+      <img src="../images/side button2.png">
+    </span>
+    <a href="../Newsfeed/newsfeed.html" class="logo-a">
+      <img class="logo" src="../images/bc_solo_logo.png">
+    </a>
+    <a href='../Newsfeed/newsfeed.html'>
+      <p>Newsfeed</p>
+    </a>
+    <a href='../Discover/discover.html'>
+      <p>Discover</p>
+    </a>
+    <a href='../Explore/explore.html'>
+      <p>Explore</p>
+    </a>
+    <div class="signout">
+      <div class="search" id="input-container">
+        <input type="text" id="input" placeholder="Search..." value>
+        <img src="../images/search-icon.png" id="input_img">
+      </div>
+      <button class="signout-button" onclick="signout()">Sign Out</button>
+    </div>
+  </div>
+
+  <script>
     var urlParam = function (name, w) {
-        w = w || window;
-        var rx = new RegExp('[\&|\?]' + name + '=([^\&\#]+)'),
-            val = w.location.search.match(rx);
-        return !val ? '' : val[1];
+      w = w || window;
+      var rx = new RegExp('[\&|\?]' + name + '=([^\&\#]+)'),
+          val = w.location.search.match(rx);
+      return !val ? '' : val[1];
     }
     var query = urlParam('query');
     // console.log(query);
     function myFunction() {
-        getSearchResults(query);
-}
-</script>
+      getSearchResults(query);
+    }
+  </script>
 
-<body onload="myFunction()">
-    <div id="searchResultsDisplay">
+  <!-- <body onload="myFunction()"> -->
+  <br><br>
+  <div class="search-header">
+    <h1>Search Results</h1>
+  </div>
+  <div id="searchResultsDisplay">
+    <!-- <h3>Profiles</h3> -->
+  </div>
+  <!-- </div> -->
 
-    </div>
-    <script type="text/javascript" src="../javascript/search.js"></script>
+
+  <script src="../javascript/register.js"></script>
+  <script type="text/javascript" src="../javascript/jsDate.js"></script>
+  <script type="text/javascript" src="../javascript/profile.js"></script>
+  <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
+  <script type="text/javascript" src="../javascript/search.js"></script>
 
 </body>
-
 </html>

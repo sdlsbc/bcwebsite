@@ -3472,7 +3472,7 @@ $other-blue-light: #;*/
         border: 2px solid #226BE4;
         color: white;
         padding: 0px 10px;
-        width: 339px;
+        width: 395px;
         height: 33px;
         text-align: center;
         font-size: 12px;
@@ -3505,10 +3505,18 @@ $other-blue-light: #;*/
           padding-left: 15px;
           border-radius: 25px;
           border: 2px solid #226BE4; }
+        .navbar .signout .search #search_query_input {
+          height: 12px;
+          margin: 0;
+          margin-left: -114px;
+          width: 330%;
+          padding-left: 15px;
+          border-radius: 25px;
+          border: 2px solid #226BE4; }
         .navbar .signout .search #input_img {
           position: absolute;
           bottom: 7px;
-          right: 12px;
+          right: 5px;
           width: 18px;
           height: 18px; } }
   .navbar p {
@@ -3738,7 +3746,7 @@ $other-blue-light: #;*/
     padding-bottom: 5px; }
     .navbar a {
       font-family: "Roboto", sans-serif;
-      padding-left: 30px;
+      padding-left: 25px;
       text-decoration: none; }
       .navbar a p {
         color: #B2B2B2;
@@ -7405,6 +7413,38 @@ $other-blue-light: #;*/
   .pp-edit img {
     width: 26px; }
 
+.pp-follow {
+  margin-top: 44px;
+  margin-left: 47%;
+  display: inline;
+  width: 50px;
+  height: 50px;
+  position: inherit; }
+  .pp-follow .follow {
+    background-color: #226BE4;
+    border: 2px solid #226BE4;
+    color: white;
+    padding: 3px 12px;
+    width: 86px;
+    height: 32px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    border-radius: 25px;
+    margin-right: 10%;
+    font-size: 12px; }
+    .pp-follow .follow:hover {
+      width: 86px;
+      height: 32px;
+      background-color: white;
+      border: 2px solid #226BE4;
+      border-radius: 25px;
+      margin-right: 10%;
+      color: #226BE4;
+      font-size: 12px; }
+
 .production-profiles-wrapper {
   border-bottom: 2px solid #226BE4;
   /*display: none;*/
@@ -9557,6 +9597,15 @@ ul p:last-child a.down {
         margin: 0 75px;
         width: 75px; }
         .navbar .signout .search #input {
+          height: 15px;
+          margin: 0;
+          margin-top: -8px;
+          margin-left: -111px;
+          width: 296%;
+          padding-left: 15px;
+          border-radius: 25px;
+          border: 2px solid #226BE4; }
+        .navbar .signout .search #search_query_input {
           height: 15px;
           margin: 0;
           margin-top: -8px;

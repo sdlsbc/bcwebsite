@@ -213,7 +213,7 @@ $other-blue-light: #;*/
       border: 2px solid #226BE4;
       color: white;
       padding: 0px 10px;
-      width: 339px;
+      width: 395px;
       height: 33px;
       text-align: center;
       font-size: 12px;
@@ -249,10 +249,19 @@ $other-blue-light: #;*/
         border-radius: 25px;
         border: 2px solid $main-blue;
       }
+      #search_query_input {
+        height: 12px;
+        margin: 0;
+        margin-left: -114px;
+        width: 330%;
+        padding-left: 15px;
+        border-radius: 25px;
+        border: 2px solid $main-blue;
+      }
       #input_img {
         position: absolute;
         bottom: 7px;
-        right: 12px;
+        right: 5px;
         width: 18px;
         height: 18px;
       }
@@ -539,7 +548,7 @@ $other-blue-light: #;*/
     padding-bottom: 5px;
     a { 
       font-family: $font;
-      padding-left: 30px;
+      padding-left: 25px;
       text-decoration: none;
       p {
         color: $gray;

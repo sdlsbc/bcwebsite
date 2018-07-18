@@ -7,6 +7,7 @@ function fetchProfileData() {
             val = w.location.search.match(rx);
         return !val ? '' : val[1];
     }
+    
     var unique_id = urlParam('id');
     console.log(unique_id);
 

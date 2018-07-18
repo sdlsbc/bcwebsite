@@ -141,9 +141,10 @@ function checkBrowser() {
 }
 
 function loadUserData() {
+
     loadAndShowPostsNew();
-    loadProfileData();
-    fillProfileEditor();
+    // loadProfileData();
+    // fillProfileEditor();
 }
 
 
@@ -154,9 +155,6 @@ function loadProfileData() {
     //api call and get data
 
     let url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/user_read";
-    // let url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_read';
-
-    console.log("visiting", visiting);
     let body = {}
     if (visiting == "") {
         console.log("this is yours")
@@ -169,7 +167,6 @@ function loadProfileData() {
             "user_id": visiting
         }
     }
-    //let body = 
     fetch(url, {
         method: 'POST',
         headers: {
@@ -235,8 +232,7 @@ function loadProfileData() {
 }
 
 function loadAndShowPostsNew() {
-    console.log("This is the /'main/'");
-
+document.getElementById('profile-postsbox').innerHTML = "";
     getPostsItemsNew()
         .then(newsRaw => {
             console.log('response from getPostsIetms', newsRaw)
@@ -253,27 +249,29 @@ function loadAndShowPostsNew() {
                     date.appendChild(dateNode);
                     document.getElementById('profile-postsbox').appendChild(date);
                 }
-                createPostNew(element);
+                createUserFeedArticles(element);
             })
         })
 }
 
 function getPostsItemsNew() {
-    // var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read";
     var url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/post_read";
-
-    let body = {}
-    if (visiting == "") {
-        console.log("this is yours")
-        body = {
-            "user_id": user_id
-        }
-    } else {
-        console.log("visiting someone else")
-        body = {
-            "user_id": visiting
-        }
+    var user_id_current = localStorage.getItem("user_id");
+    console.log('user_id_current : ',user_id_current);
+    let body = {
+        "user_id": user_id_current
     }
+    // if (visiting == "") {
+    //     console.log("this is yours")
+    //     body = {
+    //         "user_id": user_id
+    //     }
+    // } else {
+    //     console.log("visiting someone else")
+    //     body = {
+    //         "user_id": visiting
+    //     }
+    // }
     let params = {
         headers: {
             'Content-type': 'application/json',
@@ -291,7 +289,7 @@ function getPostsItemsNew() {
         })
 }
 
-function createPostNew(body) {
+function createUserFeedArticles(body) {
 
     let div = document.createElement('div');
     div.classList.add('userfeed-post');

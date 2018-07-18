@@ -17,12 +17,34 @@ function getArticleImage(event) {
 }
 
 function create_article() {
+
     var art_header = document.getElementById('articles-header').value;
     var art_title = document.getElementById('articles-title').value;
     var art_body = document.getElementById('articles-body').value;
-    var art_tag = document.getElementById('articles-tag').value;
+    // var art_tag = document.getElementById('articles-tag').value;
     var art_image = upload_article_base64;
-    console.log('art_header', art_header);
+
+    // validation checks
+    if (art_header == "" || art_header == null )
+    {
+        createCustomAlert("Please Enter Heading");
+        return;
+    }
+    if (art_title == "" || art_title == null) {
+        createCustomAlert("Please Enter A Title");
+        return;
+    }
+    if (art_body == "" || art_body == null) {
+        createCustomAlert("Please Enter A Description");
+        return;
+    }
+    if (art_image == "") {
+        createCustomAlert("Please Select An Image");
+        return;
+    }
+
+    document.getElementById("body").style.cursor = "wait";
+
     var user_id = localStorage.getItem("user_id");
     // console.log('upload_article_base64',upload_article_base64);
 
@@ -51,25 +73,16 @@ function create_article() {
              console.log('Article Created', response);
  
              if (response.status == "success") {
-                art_header.innerHTML = "";
-                art_title.innerHTML = "";
-                art_body.innerHTML = "";
-                art_tag.innerHTML = "";
-                art_header.value = "";
-                art_title.value = "";
-                art_body.value = "";
-                art_tag.value = "";
-                upload_article_base64 = "";
+
+                document.getElementById("body").style.cursor = "pointer";
+
+                document.getElementById('articles-header').value = "";
+                document.getElementById('articles-title').value= "";
+                document.getElementById('articles-body').value= "";
+                document.getElementById('articles-tag').value= "";
+
+
                 createCustomAlert("Article Created Successfully");
-                // art_header.innerHTML = "";
-                // art_title.innerHTML = "";
-                // art_body.innerHTML = "";
-                // art_tag.innerHTML = "";
-                // art_header.value = "";
-                // art_title.value = "";
-                // art_body.value = "";
-                // art_tag.value = "";
-                // upload_article_base64 = "";
              }
          })
 

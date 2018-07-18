@@ -51,11 +51,28 @@ function create_article() {
              console.log('Article Created', response);
  
              if (response.status == "success") {
-                //  var token = response.response.token;
-                //  var user_image = response.response.user.image;
-                //  var user_id = response.response.user_id;
+                art_header.innerHTML = "";
+                art_title.innerHTML = "";
+                art_body.innerHTML = "";
+                art_tag.innerHTML = "";
+                art_header.value = "";
+                art_title.value = "";
+                art_body.value = "";
+                art_tag.value = "";
+                upload_article_base64 = "";
+                createCustomAlert("Article Created Successfully");
+                // art_header.innerHTML = "";
+                // art_title.innerHTML = "";
+                // art_body.innerHTML = "";
+                // art_tag.innerHTML = "";
+                // art_header.value = "";
+                // art_title.value = "";
+                // art_body.value = "";
+                // art_tag.value = "";
+                // upload_article_base64 = "";
              }
          })
+
 
 }
 

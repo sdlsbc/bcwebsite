@@ -33,7 +33,7 @@ function checkLocalStorage(page) {
 				loadProfile();
 				break;
 			case 'profile':
-				// loadProfileData();
+				loadProfileData();
 				loadProfile();
 				break;
 			case 'discover':

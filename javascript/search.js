@@ -105,11 +105,20 @@ function displayUsersFound(array1) {
         profileImage.appendChild(user_image);
         divUsers.appendChild(profileImage);
 
+        let profileFollowLine = document.createElement('p');
+        profileFollowLine.className = "profile-follow-line";
+
+        let profileFollow = document.createElement('button');
+        profileFollow.className = "profile-follow-btn";
+
+
 
         let profileContent = document.createElement('div');
         profileContent.className = "profile-all-content";
         profileContent.appendChild(profileImage);
         profileContent.appendChild(profileText);
+        profileContent.appendChild(profileFollowLine);
+        profileContent.appendChild(profileFollow);
         divUsers.appendChild(profileContent);
 
 

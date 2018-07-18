@@ -1,11 +1,12 @@
 .search-header {
-  h1 {
-    font-size: 28px;
+  background-color: $light-blue;
+  margin-top: 20px;
+  h3 {
+    font-size: 18px;
     font-family: $font;
     font-weight: 400;
-    margin-top: 40px;
-    color: $main-blue;
-    text-align: center;
+    margin-top: 20px;
+    color: $dark-blue;
   }
 /*  h3 {
     width: 90%;
@@ -22,62 +23,98 @@
   
 }
 #searchResultsDisplay {
+  background-color: $light-blue;
   .profile-h3-header {
-    width: 95%;
+    width: 100%;
     font-size: 22px;
-    font-family: $font;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
-    margin-top: 40px;
-    float: left;
-    padding-left: 30px;
+    margin-top: -60px;
     padding-bottom: 15px;
-    margin-left: 20px;
+    margin-left: 39%;
     padding-top: 15px;
-    border-bottom: 2px solid $main-blue;
     &:after {
-      content: "Profile";
-      margin-top: 20px;
+      content: "Human";
+      margin-top: -40px;
       color: $main-blue;
     }
   }
   .profile-div {
-    width: 100%;
-    margin-top: 60px;
+    width: 22%;
+    height: 20%;
+    margin-top: 70px;
+    margin-left: 20px;
     padding-bottom: 8%;
+    border-radius: 25px;
     display: inline-block;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 1px 1px 5px 1px $light-gray;
     .profile-all-content {
       width: 97%;
       height: 20%;
       clear: both;
       margin-left: 1%;
-      background-color: $light-blue;
+      padding-bottom: 3%;
       .profile-image {
-        width: 28%;
-        margin-top: 2%;
-        margin-left: 8%;
+        width: 50%;
+        margin-top: -1%;
+        margin-left: 31%;
         padding-bottom: 3%;
         display: inline-block;
         .image { 
-          height: 170px;
-          width: 170px;
+          height: 110px;
+          width: 110px;
           border-radius: 50%;
           border: 3px solid $main-blue;
         }
       }
       .profile-text { 
-        width: 30%;
-        margin-left: 25%;
-        margin-top: -207px;
+        width: 50%;
+        margin-left: 41%;
+        margin-top: -8%;
         padding-bottom: 3%;
         .profile-full-name {
-          color: $main-blue;
-          font-size: 30px;
+          color: $dark-blue;
+          font-size: 24px;
           font-weight: 900;
         }
         .profile-handle {
-          color: $dark-blue;
-          font-size: 24px;
+          font-size: 16px;
+          margin-top: -20px;
           font-weight: 400;
+          color: $dark-blue;
+        }
+      }
+      .profile-follow-line {
+        width: 100%;
+        border-bottom: 1px solid $light-gray;
+      }
+      .profile-follow-btn {
+        width: 30%;
+        color: white;
+        padding: 8px;
+        margin-left: 35%;
+        border-radius: 25px;
+        background-color: $main-blue;
+        &:hover {
+          width: 30%;
+          color: $main-blue;
+          padding: 8px;
+          margin-left: 35%;
+          border-radius: 25px;
+          background-color: white;
+          border: 2px solid $main-blue;
+          &:after {
+            content: "Follow";
+            margin-top: -40px;
+            color: $main-blue;
+          }
+        }
+        &:after {
+          content: "Follow";
+          margin-top: -40px;
+          color: white;
         }
       }
     }

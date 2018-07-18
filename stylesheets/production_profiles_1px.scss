@@ -15,6 +15,49 @@
     width: 26px;
   }
 }
+.pp-location {
+  margin-top: 30px;
+  text-align: center;
+  img {
+    width: 24px;
+  }
+  h3 {
+    margin-top: 0px;
+    font-size: 16px;
+    font-weight: 400;
+
+  }
+}
+.pp-date {
+  margin-top: 30px;
+  text-align: center;
+  img {
+    width: 20px;
+  }
+  h3 {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  h4 {
+    margin-top: 2px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+.pp-socials {
+  width: 90%;
+  margin-left: 2%;
+  .media {
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+    margin-left: 18px;
+    border-radius: 50%;
+    background-color: $main-blue;
+  }
+}
 .production-profiles-wrapper {
   border-bottom: 2px solid $main-blue;
   /*display: none;*/

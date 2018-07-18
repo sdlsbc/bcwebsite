@@ -377,7 +377,7 @@
         </p>
         <p class="moments-right">
           <input class="attach-photo" type="image" src="../images/image.png"/>
-          <input type="file" id="moments-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;"/>
+          <input type="file" id="moments-image" src="../images/image.png" onchange="companyImage(moment)" style="display: none;"/>
           <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
           <script>
             $("input[type='image']").click(function() {
@@ -423,7 +423,7 @@
       </form>
       <div class="articles-extra-buttons">
         <input class="attach-photo" type="image" src="../images/image.png"/>
-        <input type="file" id="articles-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;"/>
+        <input type="file" id="articles-image" src="../images/image.png" onchange="companyImage(article)" style="display: none;"/>
         <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
         <script>
           $("input[type='image']").click(function() {

@@ -927,25 +927,29 @@ $other-blue-light: #;*/
         height: auto;
         padding: 10px;
         overflow: none;
+        &:hover {
+          background: linear-gradient(#226BE4 10%, white 45%, white);
+        }
         .publisher {
           float: left;
           .userfeed-publisher-image {
-            width: 43px;
-            height: 43px;
-            border-radius:50%;
-            margin-left: 20px;
-            margin-top: 5px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-left: 14px;
+            margin-top: -13px;
           }
           .userfeed-name {
             font-family: $font;
             font-size: 20px;
             font-weight: 400;
-            margin-left: 10px;
-            margin-top: 18px;
+            margin-left: 15px;
+            margin-top: 4px;
           }
         }
         .userfeed-image{
-          width: 100%;
+          width: 104%;
+          margin-left: -2%;
           height: auto;
           padding-bottom: 5px;
         }

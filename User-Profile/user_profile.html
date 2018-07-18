@@ -85,7 +85,7 @@
 <div class="profile_wrapper">
   <div class="pe-wrapper">
     <div class="user_img" id="user_img">
-      <img>
+      <img id="user_image_here">
     </div>
   </div>
   <!-- <div class="follow-button">
@@ -94,35 +94,35 @@
  -->  
   <div class="pe-header">
     <div class="pe-name">
-      <h2>John Doe</h2>
+      <h2 id="user_full_name"></h2>
     </div>
     <div class="pe-handle">
-      <h3>@johndoe</h3>
+      <h3 id="user_handle"></h3>
     </div>
     <div class="pe-title">
-      <h4>CEO and Founder</h4>
+      <h4 id="user_headline"></h4>
     </div>
     <div class="pe-company">
-      <h5>@ Broadway Connected Inc</h5>
+      <h5 id="user_job_company"></h5>
     </div>
     <div class="pe-role">
-      <h6>Entrepreneur</h6>
+      <h6 id="user_job_title">Entrepreneur</h6>
     </div>
     <div class="pe-follow">
-      <button class="follow">Follow</button>
+      <button class="follow" onclick="checkFollowStatus()" id="user_profile_follow_button">Follow</button>
     </div>
   </div>
 </div>
 <div class="pe-wrapper2">
   <div class="pe-city-country">
     <img src="../images/pinpoint2.png">
-    <h2>NY, New York</h2>
-    <h2>United States</h2>
+    <h2 id="user_city"></h2>
+    <h2 id="user_country"></h2>
   </div>
   <div class="pe-previous-job">
     <img src="../images/briefcase.png">
     <h2>Previous:</h2>
-    <h2>Executive Intern @ Marathon Digital</h2>
+    <h2 id="user_prev_info"></h2>
   </div>
 </div>
 
@@ -423,6 +423,7 @@
   <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
   <script type="text/javascript" src="../javascript/search.js"></script>
   <script type="text/javascript" src="../javascript/user_profile.js"></script>
+  <script type="text/javascript" src="../javascript/follow-unfollow.js"></script>
 
 </body>
 </html>

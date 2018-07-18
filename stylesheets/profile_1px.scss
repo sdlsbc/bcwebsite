@@ -399,7 +399,7 @@
       align-content: space-around;
       height: auto;
       overflow: hidden;
-      padding-top: 50px;
+      padding-top: 0px;
       margin-top: 62px;
       margin-left: 10%;
       width: 80%;
@@ -411,6 +411,49 @@
         font-size: 20px;
         text-align: center;
         color: $main-blue;
+      }
+      .following {
+        width: 90%;
+        padding: 1%;
+        margin-top: 0%;
+        margin-left: 1.5%;
+        border-radius: 25px;
+        display: inline-block;
+        border: 2px solid $light-blue;
+        .following-text {
+          width: 46%;
+          float: right;
+          display: inline-block;
+          .following-name {
+            width: 100%;
+            font-size: 15px;
+            margin-top: 20%;
+            margin-left: -42%;
+            font-weight: 400;
+            color: $dark-blue;
+          }
+          .following-handle {
+            width: 100%;
+            font-size: 14px;
+            margin-left: -42%;
+            margin-top: -5px;
+            font-weight: 100;
+            color: $dark-blue;
+          }
+        }
+        .following-img-wrap {
+          width: 46%;
+          float: left;
+          margin-top: 18px;
+          padding-right: 5px;
+          display: inline-block;
+          .following-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid $main-blue;
+          }
+        }
       }
       .follow {
         width: 46.6%;

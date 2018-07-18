@@ -8003,8 +8003,21 @@ $other-blue-light: #;*/
       width: 41%;
       margin-top: 1%;
       text-align: center;
-      margin-left: 33%;
+      margin-left: 34%;
       font-size: 14px; }
+    .profile_wrapper .cp-header .cp-socials {
+      width: 60%;
+      margin-left: 23.5%;
+      margin-top: 40px;
+      text-align: center; }
+      .profile_wrapper .cp-header .cp-socials .media {
+        width: 55px;
+        height: 55px;
+        color: white;
+        font-size: 16px;
+        margin-left: 30px;
+        border-radius: 50%;
+        background-color: #226BE4; }
   .profile_wrapper h4 {
     margin-top: 5.5%;
     font-weight: 100;
@@ -8512,6 +8525,19 @@ ul p:last-child a.down {
         text-align: justify;
         margin-left: 26%;
         font-size: 14px; }
+      .profile_wrapper .cp-header .cp-socials {
+        width: 75%;
+        margin-left: 16.5%;
+        margin-top: 40px;
+        text-align: center; }
+        .profile_wrapper .cp-header .cp-socials .media {
+          width: 55px;
+          height: 55px;
+          color: white;
+          font-size: 16px;
+          margin-left: 30px;
+          border-radius: 50%;
+          background-color: #226BE4; }
     .profile_wrapper h4 {
       margin-top: 5%;
       font-weight: 100;
@@ -11664,7 +11690,7 @@ ul p:last-child a.down {
       width: 40px;
       height: 40px;
       color: white;
-      font-size: 16px;
+      font-size: 14px;
       margin-left: 18px;
       border-radius: 50%;
       background-color: #226BE4; }
@@ -11829,21 +11855,21 @@ ul p:last-child a.down {
     height: 200%;
     width: 100%; }
     .profile_wrapper .company_profiles_wrapper {
-      margin-top: -490px;
+      margin-top: -467px;
       width: 30%;
       margin-left: 34%; }
       .profile_wrapper .company_profiles_wrapper .user_img {
+        margin-top: 25px;
         text-align: center; }
         .profile_wrapper .company_profiles_wrapper .user_img img {
           border: 4px solid #226BE4;
           border-radius: 50%;
-          width: 100px;
-          height: 100px; }
+          width: 80px;
+          height: 80px; }
     .profile_wrapper .cp-header {
-      width: 90%;
-      margin-top: -124px; }
+      width: 90%; }
       .profile_wrapper .cp-header h2 {
-        margin-top: -250px;
+        margin-top: -278px;
         margin-left: 40px;
         text-align: center;
         font-weight: 100;
@@ -11863,11 +11889,24 @@ ul p:last-child a.down {
         font-size: 12px;
         color: #B2B2B2; }
       .profile_wrapper .cp-header p {
-        width: 80%;
+        width: 93%;
         margin-top: 1%;
         text-align: justify;
-        margin-left: 15%;
+        margin-left: 9%;
         font-size: 14px; }
+      .profile_wrapper .cp-header .cp-socials {
+        width: 90%;
+        margin-top: 22px;
+        padding-bottom: 20px;
+        margin-left: 9%; }
+        .profile_wrapper .cp-header .cp-socials .media {
+          width: 40px;
+          height: 40px;
+          color: white;
+          font-size: 14px;
+          margin-left: 10px;
+          border-radius: 50%;
+          background-color: #226BE4; }
     .profile_wrapper h4 {
       margin-top: 11%;
       font-weight: 100;
@@ -11975,7 +12014,7 @@ ul p:last-child a.down {
         width: 26px; }
 
   .cp-edit {
-    margin-top: -500px;
+    margin-top: -450px;
     margin-left: 86%;
     float: right;
     display: inline;

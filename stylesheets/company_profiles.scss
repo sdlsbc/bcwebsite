@@ -22,7 +22,6 @@
   }
   .cp-header {
     width: 90%;
-    
     margin-top: -64px;
     h2 {
       margin-top: -250px;
@@ -51,8 +50,23 @@
       width: 41%;
       margin-top: 1%;
       text-align: center;
-      margin-left: 33%;
+      margin-left: 34%;
       font-size: 14px;
+    }
+    .cp-socials {
+      width: 60%;
+      margin-left: 23.5%;
+      margin-top: 40px;
+      text-align: center;
+      .media {
+        width: 55px;
+        height: 55px;
+        color: white;
+        font-size: 16px;
+        margin-left: 30px;
+        border-radius: 50%;
+        background-color: $main-blue;
+      }
     }
   }
   h4 {
@@ -673,6 +687,21 @@ ul p:last-child a.down {
         text-align: justify;
         margin-left: 26%;
         font-size: 14px;
+      }
+      .cp-socials {
+        width: 75%;
+        margin-left: 16.5%;
+        margin-top: 40px;
+        text-align: center;
+        .media {
+          width: 55px;
+          height: 55px;
+          color: white;
+          font-size: 16px;
+          margin-left: 30px;
+          border-radius: 50%;
+          background-color: $main-blue;
+        }
       }
     }
     h4 {

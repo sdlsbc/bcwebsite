@@ -52,20 +52,21 @@
         padding-bottom: 3%;
         display: inline-block;
         .image { 
-          height: 110px;
-          width: 110px;
+          height: 90px;
+          width: 90px;
           border-radius: 50%;
           border: 3px solid $main-blue;
         }
       }
       .profile-text { 
-        width: 50%;
-        margin-left: 40%;
+        width: 80%;
+        height: 80px;
         margin-top: -8%;
+        margin-left: 25%;
         padding-bottom: 3%;
         .profile-full-name {
           color: $dark-blue;
-          font-size: 24px;
+          font-size: 20px;
           font-weight: 900;
         }
         .profile-handle {
@@ -85,14 +86,14 @@
         width: 30%;
         color: white;
         padding: 8px;
-        margin-left: 35%;
+        margin-left: 32%;
         border-radius: 25px;
         background-color: $main-blue;
         &:hover {
           width: 30%;
           color: $main-blue;
-          padding: 8px;
-          margin-left: 35%;
+          padding: 7px;
+          margin-left: 32%;
           border-radius: 25px;
           background-color: white;
           border: 2px solid $main-blue;
@@ -111,61 +112,100 @@
     }
   }
   .post-h3-header {
-    width: 95%;
+    width: 100%;
     font-size: 22px;
-    font-family: $font;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
-    margin-top: 40px;
-    float: left;
-    padding-left: 30px;
+    margin-top: -60px;
     padding-bottom: 15px;
-    margin-left: 20px;
+    margin-left: 39%;
     padding-top: 15px;
-    border-bottom: 2px solid $main-blue;
     &:after {
-      content: "Articles";
-      margin-top: 20px;
+      content: "Article";
+      margin-top: -40px;
       color: $main-blue;
     }
   }
   .posts-div {
-    width: 100%;
-    margin-top: 60px;
+    width: 22%;
+    height: 20%;
+    margin-top: 70px;
+    margin-left: 20px;
     padding-bottom: 8%;
+    border-radius: 25px;
     display: inline-block;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 1px 1px 5px 1px $light-gray;
     .post-all-content {
       width: 97%;
       height: 20%;
       clear: both;
-      margin-left: 1%;
-      background-color: $light-blue;
+      text-align: center;
+      margin-left: -13%;
+      padding-bottom: 3%;
       .post-image {
-        width: 28%;
-        margin-top: 2%;
-        margin-left: 8%;
+        width: 50%;
+        margin-top: -1%;
+        margin-left: 31%;
         padding-bottom: 3%;
         display: inline-block;
         .image { 
-          height: 170px;
-          width: 170px;
+          height: 90px;
+          width: 90px;
           border-radius: 50%;
           border: 3px solid $main-blue;
         }
       }
       .post-text { 
-        width: 30%;
-        margin-left: 25%;
-        margin-top: -207px;
+        width: 90%;
+        height: 80px;
+        margin-left: 19%;
+        margin-top: -8%;
         padding-bottom: 3%;
         .post-title {
-          color: $main-blue;
-          font-size: 30px;
+          color: $dark-blue;
+          font-size: 20px;
           font-weight: 900;
         }
-        .post-header {
-          color: $dark-blue;
-          font-size: 24px;
+        .post-heading {
+          font-size: 16px;
+          margin-top: -14px;
           font-weight: 400;
+          color: $dark-blue;
+        }
+      }
+      .post-follow-line {
+        width: 100%;
+        margin-left: 14.5%;
+        text-align: center;
+        border-bottom: 1px solid $light-gray;
+      }
+      .post-follow-btn {
+        width: 30%;
+        color: white;
+        padding: 8px;
+        margin-left: 32%;
+        border-radius: 25px;
+        background-color: $main-blue;
+        &:hover {
+          width: 30%;
+          color: $main-blue;
+          padding: 7px;
+          margin-left: 32%;
+          border-radius: 25px;
+          background-color: white;
+          border: 2px solid $main-blue;
+          &:after {
+            content: "Follow";
+            margin-top: -40px;
+            color: $main-blue;
+          }
+        }
+        &:after {
+          content: "Follow";
+          margin-top: -40px;
+          color: white;
         }
       }
     }
@@ -379,61 +419,99 @@
       }
     }
     .post-h3-header {
-      width: 95%;
+      width: 100%;
       font-size: 22px;
-      font-family: $font;
+      font-family: "Roboto", sans-serif;
       font-weight: 400;
-      margin-top: 40px;
-      float: left;
-      padding-left: 30px;
+      margin-top: -60px;
       padding-bottom: 15px;
-      margin-left: 20px;
+      margin-left: 29%;
       padding-top: 15px;
-      border-bottom: 2px solid $main-blue;
       &:after {
-        content: "Articles";
-        margin-top: 20px;
+        content: "Article";
+        margin-top: -40px;
         color: $main-blue;
       }
     }
     .posts-div {
-      width: 100%;
-      margin-top: 60px;
+      width: 22%;
+      height: 20%;
+      margin-top: 70px;
+      margin-left: 20px;
       padding-bottom: 8%;
+      border-radius: 25px;
       display: inline-block;
+      background-color: white;
+      padding: 10px;
+      box-shadow: 1px 1px 5px 1px $light-gray;
       .post-all-content {
         width: 97%;
         height: 20%;
         clear: both;
-        margin-left: 1%;
-        background-color: $light-blue;
+        text-align: center;
+        margin-left: -25%;
+        padding-bottom: 3%;
         .post-image {
-          width: 28%;
-          margin-top: 2%;
-          margin-left: 8%;
+          width: 50%;
+          margin-top: -1%;
+          margin-left: 31%;
           padding-bottom: 3%;
           display: inline-block;
           .image { 
-            height: 170px;
-            width: 170px;
+            height: 110px;
+            width: 110px;
             border-radius: 50%;
             border: 3px solid $main-blue;
           }
         }
         .post-text { 
-          width: 30%;
-          margin-left: 25%;
-          margin-top: -207px;
+          width: 50%;
+          margin-left: 50%;
+          margin-top: -8%;
           padding-bottom: 3%;
-          .post-title {
-            color: $main-blue;
-            font-size: 30px;
-            font-weight: 900;
-          }
-          .post-header {
+          .post-full-name {
             color: $dark-blue;
             font-size: 24px;
+            font-weight: 900;
+          }
+          .post-handle {
+            font-size: 16px;
+            margin-top: -20px;
             font-weight: 400;
+            color: $dark-blue;
+          }
+        }
+        .post-follow-line {
+          width: 100%;
+          margin-left: 28.5%;
+          text-align: center;
+          border-bottom: 1px solid $light-gray;
+        }
+        .post-follow-btn {
+          width: 43%;
+          color: white;
+          padding: 8px;
+          margin-left: 49%;
+          border-radius: 25px;
+          background-color: $main-blue;
+          &:hover {
+            width: 30%;
+            color: $main-blue;
+            padding: 8px;
+            margin-left: 35%;
+            border-radius: 25px;
+            background-color: white;
+            border: 2px solid $main-blue;
+            &:after {
+              content: "Follow";
+              margin-top: -40px;
+              color: $main-blue;
+            }
+          }
+          &:after {
+            content: "Follow";
+            margin-top: -40px;
+            color: white;
           }
         }
       }

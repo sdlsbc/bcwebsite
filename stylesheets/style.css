@@ -9093,18 +9093,19 @@ ul p:last-child a.down {
         padding-bottom: 3%;
         display: inline-block; }
         #searchResultsDisplay .profile-div .profile-all-content .profile-image .image {
-          height: 110px;
-          width: 110px;
+          height: 90px;
+          width: 90px;
           border-radius: 50%;
           border: 3px solid #226BE4; }
       #searchResultsDisplay .profile-div .profile-all-content .profile-text {
-        width: 50%;
-        margin-left: 40%;
+        width: 80%;
+        height: 80px;
         margin-top: -8%;
+        margin-left: 25%;
         padding-bottom: 3%; }
         #searchResultsDisplay .profile-div .profile-all-content .profile-text .profile-full-name {
           color: #18253B;
-          font-size: 24px;
+          font-size: 20px;
           font-weight: 900; }
         #searchResultsDisplay .profile-div .profile-all-content .profile-text .profile-handle {
           font-size: 16px;
@@ -9120,14 +9121,14 @@ ul p:last-child a.down {
         width: 30%;
         color: white;
         padding: 8px;
-        margin-left: 35%;
+        margin-left: 32%;
         border-radius: 25px;
         background-color: #226BE4; }
         #searchResultsDisplay .profile-div .profile-all-content .profile-follow-btn:hover {
           width: 30%;
           color: #226BE4;
-          padding: 8px;
-          margin-left: 35%;
+          padding: 7px;
+          margin-left: 32%;
           border-radius: 25px;
           background-color: white;
           border: 2px solid #226BE4; }
@@ -9140,56 +9141,90 @@ ul p:last-child a.down {
           margin-top: -40px;
           color: white; }
   #searchResultsDisplay .post-h3-header {
-    width: 95%;
+    width: 100%;
     font-size: 22px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    margin-top: 40px;
-    float: left;
-    padding-left: 30px;
+    margin-top: -60px;
     padding-bottom: 15px;
-    margin-left: 20px;
-    padding-top: 15px;
-    border-bottom: 2px solid #226BE4; }
+    margin-left: 39%;
+    padding-top: 15px; }
     #searchResultsDisplay .post-h3-header:after {
-      content: "Articles";
-      margin-top: 20px;
+      content: "Article";
+      margin-top: -40px;
       color: #226BE4; }
   #searchResultsDisplay .posts-div {
-    width: 100%;
-    margin-top: 60px;
+    width: 22%;
+    height: 20%;
+    margin-top: 70px;
+    margin-left: 20px;
     padding-bottom: 8%;
-    display: inline-block; }
+    border-radius: 25px;
+    display: inline-block;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 1px 1px 5px 1px #E9E9E9; }
     #searchResultsDisplay .posts-div .post-all-content {
       width: 97%;
       height: 20%;
       clear: both;
-      margin-left: 1%;
-      background-color: #F7FAFF; }
+      text-align: center;
+      margin-left: -13%;
+      padding-bottom: 3%; }
       #searchResultsDisplay .posts-div .post-all-content .post-image {
-        width: 28%;
-        margin-top: 2%;
-        margin-left: 8%;
+        width: 50%;
+        margin-top: -1%;
+        margin-left: 31%;
         padding-bottom: 3%;
         display: inline-block; }
         #searchResultsDisplay .posts-div .post-all-content .post-image .image {
-          height: 170px;
-          width: 170px;
+          height: 90px;
+          width: 90px;
           border-radius: 50%;
           border: 3px solid #226BE4; }
       #searchResultsDisplay .posts-div .post-all-content .post-text {
-        width: 30%;
-        margin-left: 25%;
-        margin-top: -207px;
+        width: 90%;
+        height: 80px;
+        margin-left: 19%;
+        margin-top: -8%;
         padding-bottom: 3%; }
         #searchResultsDisplay .posts-div .post-all-content .post-text .post-title {
-          color: #226BE4;
-          font-size: 30px;
-          font-weight: 900; }
-        #searchResultsDisplay .posts-div .post-all-content .post-text .post-header {
           color: #18253B;
-          font-size: 24px;
-          font-weight: 400; }
+          font-size: 20px;
+          font-weight: 900; }
+        #searchResultsDisplay .posts-div .post-all-content .post-text .post-heading {
+          font-size: 16px;
+          margin-top: -14px;
+          font-weight: 400;
+          color: #18253B; }
+      #searchResultsDisplay .posts-div .post-all-content .post-follow-line {
+        width: 100%;
+        margin-left: 14.5%;
+        text-align: center;
+        border-bottom: 1px solid #E9E9E9; }
+      #searchResultsDisplay .posts-div .post-all-content .post-follow-btn {
+        width: 30%;
+        color: white;
+        padding: 8px;
+        margin-left: 32%;
+        border-radius: 25px;
+        background-color: #226BE4; }
+        #searchResultsDisplay .posts-div .post-all-content .post-follow-btn:hover {
+          width: 30%;
+          color: #226BE4;
+          padding: 7px;
+          margin-left: 32%;
+          border-radius: 25px;
+          background-color: white;
+          border: 2px solid #226BE4; }
+          #searchResultsDisplay .posts-div .post-all-content .post-follow-btn:hover:after {
+            content: "Follow";
+            margin-top: -40px;
+            color: #226BE4; }
+        #searchResultsDisplay .posts-div .post-all-content .post-follow-btn:after {
+          content: "Follow";
+          margin-top: -40px;
+          color: white; }
 
 @media screen and (max-width: 800px) {
   .search-header {
@@ -9290,56 +9325,89 @@ ul p:last-child a.down {
             margin-top: -40px;
             color: white; }
     #searchResultsDisplay .post-h3-header {
-      width: 95%;
+      width: 100%;
       font-size: 22px;
       font-family: "Roboto", sans-serif;
       font-weight: 400;
-      margin-top: 40px;
-      float: left;
-      padding-left: 30px;
+      margin-top: -60px;
       padding-bottom: 15px;
-      margin-left: 20px;
-      padding-top: 15px;
-      border-bottom: 2px solid #226BE4; }
+      margin-left: 29%;
+      padding-top: 15px; }
       #searchResultsDisplay .post-h3-header:after {
-        content: "Articles";
-        margin-top: 20px;
+        content: "Article";
+        margin-top: -40px;
         color: #226BE4; }
     #searchResultsDisplay .posts-div {
-      width: 100%;
-      margin-top: 60px;
+      width: 22%;
+      height: 20%;
+      margin-top: 70px;
+      margin-left: 20px;
       padding-bottom: 8%;
-      display: inline-block; }
+      border-radius: 25px;
+      display: inline-block;
+      background-color: white;
+      padding: 10px;
+      box-shadow: 1px 1px 5px 1px #E9E9E9; }
       #searchResultsDisplay .posts-div .post-all-content {
         width: 97%;
         height: 20%;
         clear: both;
-        margin-left: 1%;
-        background-color: #F7FAFF; }
+        text-align: center;
+        margin-left: -25%;
+        padding-bottom: 3%; }
         #searchResultsDisplay .posts-div .post-all-content .post-image {
-          width: 28%;
-          margin-top: 2%;
-          margin-left: 8%;
+          width: 50%;
+          margin-top: -1%;
+          margin-left: 31%;
           padding-bottom: 3%;
           display: inline-block; }
           #searchResultsDisplay .posts-div .post-all-content .post-image .image {
-            height: 170px;
-            width: 170px;
+            height: 110px;
+            width: 110px;
             border-radius: 50%;
             border: 3px solid #226BE4; }
         #searchResultsDisplay .posts-div .post-all-content .post-text {
-          width: 30%;
-          margin-left: 25%;
-          margin-top: -207px;
+          width: 50%;
+          margin-left: 50%;
+          margin-top: -8%;
           padding-bottom: 3%; }
-          #searchResultsDisplay .posts-div .post-all-content .post-text .post-title {
-            color: #226BE4;
-            font-size: 30px;
-            font-weight: 900; }
-          #searchResultsDisplay .posts-div .post-all-content .post-text .post-header {
+          #searchResultsDisplay .posts-div .post-all-content .post-text .post-full-name {
             color: #18253B;
             font-size: 24px;
-            font-weight: 400; } }
+            font-weight: 900; }
+          #searchResultsDisplay .posts-div .post-all-content .post-text .post-handle {
+            font-size: 16px;
+            margin-top: -20px;
+            font-weight: 400;
+            color: #18253B; }
+        #searchResultsDisplay .posts-div .post-all-content .post-follow-line {
+          width: 100%;
+          margin-left: 28.5%;
+          text-align: center;
+          border-bottom: 1px solid #E9E9E9; }
+        #searchResultsDisplay .posts-div .post-all-content .post-follow-btn {
+          width: 43%;
+          color: white;
+          padding: 8px;
+          margin-left: 49%;
+          border-radius: 25px;
+          background-color: #226BE4; }
+          #searchResultsDisplay .posts-div .post-all-content .post-follow-btn:hover {
+            width: 30%;
+            color: #226BE4;
+            padding: 8px;
+            margin-left: 35%;
+            border-radius: 25px;
+            background-color: white;
+            border: 2px solid #226BE4; }
+            #searchResultsDisplay .posts-div .post-all-content .post-follow-btn:hover:after {
+              content: "Follow";
+              margin-top: -40px;
+              color: #226BE4; }
+          #searchResultsDisplay .posts-div .post-all-content .post-follow-btn:after {
+            content: "Follow";
+            margin-top: -40px;
+            color: white; } }
 @media screen and (max-width: 700px) {
   /* =============== M O B I L E  M A I N  H E A D E R =============== */
   .main-header {
@@ -12621,7 +12689,7 @@ ul p:last-child a.down {
         margin-top: -40px;
         color: #226BE4; }
     #searchResultsDisplay .profile-div {
-      width: 39%;
+      width: 35%;
       height: 20%;
       margin-top: 135px;
       margin-left: 20px;
@@ -12656,7 +12724,7 @@ ul p:last-child a.down {
           padding-bottom: 3%; }
           #searchResultsDisplay .profile-div .profile-all-content .profile-text .profile-full-name {
             color: #18253B;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 900; }
           #searchResultsDisplay .profile-div .profile-all-content .profile-text .profile-handle {
             font-size: 12px;
@@ -12692,55 +12760,89 @@ ul p:last-child a.down {
             margin-top: -40px;
             color: white; }
     #searchResultsDisplay .post-h3-header {
-      width: 95%;
-      font-size: 22px;
+      width: 100%;
+      font-size: 16px;
       font-family: "Roboto", sans-serif;
       font-weight: 400;
-      margin-top: 40px;
-      float: left;
-      padding-left: 30px;
+      margin-top: -50px;
       padding-bottom: 15px;
-      margin-left: 20px;
-      padding-top: 15px;
-      border-bottom: 2px solid #226BE4; }
+      margin-left: 29%;
+      padding-top: 15px; }
       #searchResultsDisplay .post-h3-header:after {
-        content: "Articles";
-        margin-top: 20px;
+        content: "Article";
+        margin-top: -40px;
         color: #226BE4; }
     #searchResultsDisplay .posts-div {
-      width: 100%;
-      margin-top: 60px;
+      width: 35%;
+      height: 20%;
+      margin-top: 135px;
+      margin-left: 20px;
       padding-bottom: 8%;
-      display: inline-block; }
+      border-radius: 25px;
+      display: inline-block;
+      background-color: white;
+      padding: 10px;
+      box-shadow: 1px 1px 5px 1px #E9E9E9; }
       #searchResultsDisplay .posts-div .post-all-content {
         width: 97%;
         height: 20%;
         clear: both;
-        margin-left: 1%;
-        background-color: #F7FAFF; }
+        text-align: center;
+        margin-left: -30%;
+        padding-bottom: 3%; }
         #searchResultsDisplay .posts-div .post-all-content .post-image {
-          width: 28%;
-          margin-top: 2%;
-          margin-left: 8%;
+          width: 50%;
+          margin-top: -6%;
+          margin-left: 57%;
           padding-bottom: 3%;
           display: inline-block; }
           #searchResultsDisplay .posts-div .post-all-content .post-image .image {
-            height: 170px;
-            width: 170px;
+            height: 60px;
+            width: 60px;
             border-radius: 50%;
             border: 3px solid #226BE4; }
         #searchResultsDisplay .posts-div .post-all-content .post-text {
-          width: 30%;
-          margin-left: 25%;
-          margin-top: -207px;
+          width: 94%;
+          margin-left: 35%;
+          margin-top: -14%;
           padding-bottom: 3%; }
           #searchResultsDisplay .posts-div .post-all-content .post-text .post-title {
-            color: #226BE4;
-            font-size: 30px;
+            color: #18253B;
+            font-size: 18px;
             font-weight: 900; }
           #searchResultsDisplay .posts-div .post-all-content .post-text .post-header {
-            color: #18253B;
-            font-size: 24px;
-            font-weight: 400; } }
+            font-size: 14px;
+            margin-top: -6px;
+            font-weight: 400;
+            margin-top: -20px;
+            color: #18253B; }
+        #searchResultsDisplay .posts-div .post-all-content .post-follow-line {
+          width: 100%;
+          margin-left: 31.5%;
+          text-align: center;
+          border-bottom: 1px solid #E9E9E9; }
+        #searchResultsDisplay .posts-div .post-all-content .post-follow-btn {
+          width: 43%;
+          color: white;
+          padding: 8px;
+          margin-left: 61%;
+          border-radius: 25px;
+          background-color: #226BE4; }
+          #searchResultsDisplay .posts-div .post-all-content .post-follow-btn:hover {
+            width: 30%;
+            color: #226BE4;
+            padding: 8px;
+            margin-left: 35%;
+            border-radius: 25px;
+            background-color: white;
+            border: 2px solid #226BE4; }
+            #searchResultsDisplay .posts-div .post-all-content .post-follow-btn:hover:after {
+              content: "Follow";
+              margin-top: -40px;
+              color: #226BE4; }
+          #searchResultsDisplay .posts-div .post-all-content .post-follow-btn:after {
+            content: "Follow";
+            margin-top: -40px;
+            color: white; } }
 
 /*# sourceMappingURL=style.css.map */

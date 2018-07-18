@@ -6,8 +6,8 @@ function getSearchResults(query_string) {
     document.getElementById('searchResultsDisplay').innerHTML = "";
     // var query_string = document.getElementById('search_query').value;
     console.log('query_string ', query_string);
-    //var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/search_functionality';
-    var url = "https://broadwayconnected.bubbleapps.io"+version_change+"api/1.1/wf/search_functionality";
+    var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/search_functionality';
+    //var url = "https://broadwayconnected.bubbleapps.io"+version_change+"api/1.1/wf/search_functionality";
 
     var data = {
         "query": query_string
@@ -193,11 +193,19 @@ console.log('array2',array2)
         postImage.appendChild(post_image);
         divPosts.appendChild(postImage);
 
+        let postFollowLine = document.createElement('p');
+        postFollowLine.className = "post-follow-line";
+
+        let postFollow = document.createElement('button');
+        postFollow.className = "post-follow-btn";
+
 
         let postContent = document.createElement('div');
         postContent.className = "post-all-content";
         postContent.appendChild(postImage);
         postContent.appendChild(postText);
+        postContent.appendChild(postFollowLine);
+        postContent.appendChild(postFollow);
         divPosts.appendChild(postContent);
 
 

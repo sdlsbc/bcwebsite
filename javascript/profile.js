@@ -642,6 +642,7 @@ function showFollowingCurrentUserProfile(followingArray, x) {
             // console.log(element.firstname, element.lastname ,element.image);
 
             let divFollowing = document.createElement('div');
+            divFollowing.className = "following";
             // divFollowing.setAttribute("id", element._id);
 
             // adding onclick event
@@ -654,17 +655,30 @@ function showFollowingCurrentUserProfile(followingArray, x) {
             // adding onclick event
 
             let fullname = document.createElement('p');
+            fullname.className = "following-name";
+
             fullname_text = document.createTextNode(element.firstname + " " + element.lastname);
             fullname.appendChild(fullname_text);
-            divFollowing.appendChild(fullname);
+            // divFollowing.appendChild(fullname);
 
             let handle = document.createElement('p');
+            handle.className = "following-handle";
             hande_text = document.createTextNode("@" + element.handle);
             handle.appendChild(hande_text);
-            divFollowing.appendChild(handle);
+            // divFollowing.appendChild(handle);
+            
+
+            let profileText = document.createElement('div');
+            profileText.className = "following-text";
+            profileText.appendChild(fullname);
+            profileText.appendChild(handle);
+            divFollowing.appendChild(profileText);
+
+
 
             var userImageAddress = "";
             let user_image = document.createElement('img');
+            user_image.className = "following-img";
             if (element.image) {
                 if (element.image.substr(0, 4) == "data") {
                     userImageAddress = element.image;
@@ -674,12 +688,8 @@ function showFollowingCurrentUserProfile(followingArray, x) {
                 user_image.src = userImageAddress;
             }
 
-            if (user_image && user_image.style) {
-                user_image.style.height = '100px';
-                user_image.style.width = '100px';
-            }
-
             let profileImage = document.createElement('div');
+            profileImage.className = "following-img-wrap";
             profileImage.appendChild(user_image);
             divFollowing.appendChild(profileImage);
 

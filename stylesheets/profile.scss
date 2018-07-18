@@ -1165,11 +1165,53 @@ $other-blue-light: #;*/
     align-content: space-around;
     height: auto;
     overflow: hidden;
-    padding-top: 50px;
+    padding-top: 10px;
     margin-top: 62px;
     margin-left: 9%;
-    width: 74%;
+    width: 75%;
     height: 90%;
+    .following {
+      width: 45%;
+      padding: 1%;
+      margin-top: 2%;
+      margin-left: 1.5%;
+      border-radius: 25px;
+      display: inline-block;
+      border: 2px solid $light-blue;
+      .following-text {
+        width: 48%;
+        float: right;
+        margin-top: 5%;
+        display: inline-block;
+        .following-name {
+          font-size: 18px;
+          margin-top: 20%;
+          margin-left: -8%;
+          font-weight: 400;
+          color: $dark-blue;
+        }
+        .following-handle {
+          font-size: 14px;
+          margin-left: -8%;
+          margin-top: -5px;
+          font-weight: 100;
+          color: $dark-blue;
+        }
+      }
+      .following-img-wrap {
+        width: 50%;
+        float: left;
+        margin-top: 11px;
+        padding-right: 5px;
+        display: inline-block;
+        .following-img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          border: 2px solid $main-blue;
+        }
+      }
+    }
     h1 {
       font-family: $font;
       margin-top: 110px;
@@ -1214,8 +1256,58 @@ $other-blue-light: #;*/
   }
 }
 
-
-
+@media screen and (max-width: 1200px) {
+  .profile_wrapper {
+    .second_nav_right {
+      #profile-following { 
+        width: 77%;
+        .following {
+          width: 45%;
+          padding: 1%;
+          margin-top: 2%;
+          margin-left: 1.5%;
+          border-radius: 25px;
+          display: inline-block;
+          border: 2px solid $light-blue;
+          .following-text {
+            width: 48%;
+            float: right;
+            display: inline-block;
+            .following-name {
+              width: 100%;
+              font-size: 13px;
+              margin-top: 20%;
+              margin-left: -8%;
+              font-weight: 400;
+              color: $dark-blue;
+            }
+            .following-handle {
+              width: 100%;
+              font-size: 13px;
+              margin-left: -8%;
+              margin-top: -5px;
+              font-weight: 100;
+              color: $dark-blue;
+            }
+          }
+          .following-img-wrap {
+            width: 48%;
+            float: left;
+            margin-top: 18px;
+            padding-right: 5px;
+            display: inline-block;
+            .following-img {
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+              border: 2px solid $main-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 
 
@@ -2263,6 +2355,26 @@ $other-blue-light: #;*/
   }
 }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

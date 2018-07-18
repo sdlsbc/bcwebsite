@@ -1,145 +1,164 @@
-var divs = ["profile-postsbox", "profile-calendar", "profile-followers", "profile-following", "profile-moments", "profile-article"];
+// var divs = ["profile-postsbox", "profile-calendar", "profile-followers", "profile-following", "profile-moments", "profile-article"];
+var divs = ["profile-postsbox", "profile-calendar", "profile-followers", "profile-following"];
+
 var visibleDivId = null;
 var followers = false;
 var followings = false;
 var user_id = localStorage.getItem("user_id");
 // var visiting = getParameterByName('user_id');
-if(getParameterByName('user_id') != "" || getParameterByName('user_id') != null){
+if (getParameterByName('user_id') != "" || getParameterByName('user_id') != null) {
     var visiting = getParameterByName('user_id');
 }
 var token = localStorage.getItem("token");
 var favs = {};
 
-console.log("looky looky what went through ",localStorage.getItem("headline"),
-                    localStorage.getItem("job_title"),
-                    localStorage.getItem("job_company"),
-                    localStorage.getItem("prev_job"),
-                    localStorage.getItem("prev_company"))
+console.log("looky looky what went through ", localStorage.getItem("headline"),
+    localStorage.getItem("job_title"),
+    localStorage.getItem("job_company"),
+    localStorage.getItem("prev_job"),
+    localStorage.getItem("prev_company"))
 
 
 function toggleAndLoadFollowers() {
     toggleVisibility('profile-followers');
-    if(followers == false){
+    if (followers == false) {
         followers = true;
     }
     else {
         return;
     }
-    let url = "http://app.bwayconnected.com/api/user/followers?user_id=414";
-    //let url = "http://app.bwayconnected.com/api/user/followers?user_id=" + user_id;
-    let params = {
-        method: 'GET',
+
+    token = localStorage.getItem("token");
+    user_id_current = localStorage.getItem("user_id");
+
+    var url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/get_currentuser_followers";
+
+    var data = {
+    };
+
+    fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(data),
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
         }
-    }
-    fetch(url, params)
+    })
         .then(res => res.json())
-        .then(body => body.Result.records)
-        .then(users => {
-            users.forEach(user =>
-                showUsers(user, 'profile-followers')
-            )
+        .catch(error => console.error('Error:', error))
+        .then(response => {
+            // console.log(response);
+            if (response.status == "success") {
+
+                // console.log('all following',response.response.following);
+                showFollowingCurrentUserProfile(response.response.followers,"followers");
+            }
         })
 
 }
 
 function toggleAndLoadFollowings() {
     toggleVisibility('profile-following');
-    //let url = "http://app.bwayconnected.com/api/user/followings?user_id=" + user_id;
-    if(followings == false){
+    if (followings == false) {
         followings = true;
     }
     else {
         return;
     }
-    let url = "http://app.bwayconnected.com/api/user/followings?user_id=414";
-    let params = {
-        method: 'GET',
+
+    token = localStorage.getItem("token");
+    console.log(token)
+    user_id_current = localStorage.getItem("user_id");
+
+    var url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/get_currentuser_following";
+
+    var data = {
+    };
+
+    fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(data),
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
         }
-    }
-    console.log('about to fetch')
-    fetch(url, params)
+    })
         .then(res => res.json())
-        .then(body => body.Result.records)
-        .then(users => {
-            users.forEach(user =>
-                showUsers(user, 'profile-following')
-            )
+        .catch(error => console.error('Error:', error))
+        .then(response => {
+            // console.log(response);
+            if (response.status == "success") {
+
+                // console.log('all following',response.response.following);
+                showFollowingCurrentUserProfile(response.response.following,"following");
+            }
         })
 }
 
 function toggleVisibility(divId) {
-  if(visibleDivId === divId) {
-    //visibleDivId = null;
-  } else {
-    visibleDivId = divId;
-  }
-  hideNonVisibleDivs();
+    if (visibleDivId === divId) {
+        //visibleDivId = null;
+    } else {
+        visibleDivId = divId;
+    }
+    hideNonVisibleDivs();
 }
 function hideNonVisibleDivs() {
-  var i, divId, div;
-  for(i = 0; i < divs.length; i++) {
-    divId = divs[i];
-    div = document.getElementById(divId);
-    if(visibleDivId === divId) {
-      div.style.display = "block";
-    } else {
-      div.style.display = "none";
+    var i, divId, div;
+    for (i = 0; i < divs.length; i++) {
+        divId = divs[i];
+        div = document.getElementById(divId);
+        if (visibleDivId === divId) {
+            div.style.display = "block";
+        } else {
+            div.style.display = "none";
+        }
     }
-  }
 }
 
 
 
-function checkBrowser(){
-    if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 
-    {
+function checkBrowser() {
+    if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1) {
         alert('Opera');
     }
-    else if(navigator.userAgent.indexOf("Chrome") != -1 )
-    {
+    else if (navigator.userAgent.indexOf("Chrome") != -1) {
         alert('Chrome');
     }
-    else if(navigator.userAgent.indexOf("Safari") != -1)
-    {
+    else if (navigator.userAgent.indexOf("Safari") != -1) {
         alert('Safari');
     }
-    else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
-    {
-         alert('Firefox');
+    else if (navigator.userAgent.indexOf("Firefox") != -1) {
+        alert('Firefox');
     }
-    else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
+    else if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) //IF IE > 10
     {
-      alert('IE'); 
-    }  
-    else 
-    {
-       alert('unknown');
+        alert('IE');
+    }
+    else {
+        alert('unknown');
     }
 }
 
-function loadUserData(){
-    loadAndShowPosts();
+function loadUserData() {
+    loadAndShowPostsNew();
     loadProfileData();
     fillProfileEditor();
 }
 
 
 
-function loadProfileData(){
+function loadProfileData() {
     //loadProfile();
     console.log('in loadProfileData');
     //api call and get data
 
-    let url = "https://broadwayconnected.bubbleapps.io"+version_change+"api/1.1/wf/user_read";
+    let url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/user_read";
     // let url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_read';
 
     console.log("visiting", visiting);
     let body = {}
-    if(visiting == ""){
+    if (visiting == "") {
         console.log("this is yours")
         body = {
             "user_id": user_id
@@ -158,75 +177,75 @@ function loadProfileData(){
         },
         body: JSON.stringify(body)
     })
-    .then(res => res.json())
-    .catch(error => console.error('Error:', error))
-    .then(body => {
+        .then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(body => {
 
-        if (body.status != "success") {
-            console.log("request not successful in loadProfileData");
-            // createCustomAlert("WARNING: User Already Exists");
-        } else {
-            console.log('Success in loadProfileData', body)
-            let company = body.response.company;
-            let production = body.response.production;
-            let user = body.response.user;
-            let personal = body.response.personal;
-            
-            
-            switch(user.usertype) {
-                case "company":
-                    console.log("this is a company");
-                    break;
-                case "production":
-                    console.log("this one's a company");
-                    break;
-                case "personal":
-                    console.log("just some dude");
-                    break;
-            }
-            let profile_image_el = document.createElement('img');
-            let profile_image = "";
-            if(!user.image){
-                console.log("put the default in here")
-                profile_image = "../images/default-person.png"
-            }
-            if(!(user.image == null || user.image == "")){
-                if(user.image.substr(0,4) == "data" || user.image.substr(0,4) == "http"){
-                    profile_image = user.image;
-                } else {
-                    profile_image = "https:"+ user.image;
+            if (body.status != "success") {
+                console.log("request not successful in loadProfileData");
+                // createCustomAlert("WARNING: User Already Exists");
+            } else {
+                console.log('Success in loadProfileData', body)
+                let company = body.response.company;
+                let production = body.response.production;
+                let user = body.response.user;
+                let personal = body.response.personal;
+
+
+                switch (user.usertype) {
+                    case "company":
+                        console.log("this is a company");
+                        break;
+                    case "production":
+                        console.log("this one's a company");
+                        break;
+                    case "personal":
+                        console.log("just some dude");
+                        break;
                 }
+                let profile_image_el = document.createElement('img');
+                let profile_image = "";
+                if (!user.image) {
+                    console.log("put the default in here")
+                    profile_image = "../images/default-person.png"
+                }
+                if (!(user.image == null || user.image == "")) {
+                    if (user.image.substr(0, 4) == "data" || user.image.substr(0, 4) == "http") {
+                        profile_image = user.image;
+                    } else {
+                        profile_image = "https:" + user.image;
+                    }
+                }
+
+                profile_image_el.src = profile_image;
+                document.getElementById("user_img").appendChild(profile_image_el);
+
+                let location = document.createTextNode(user.city + ", " + user.country);
+                document.getElementById("location").appendChild(location);
+
+
+                document.getElementById('name').appendChild(document.createTextNode(user.firstname + " " + user.lastname));
+                document.getElementById('username').innerHTML = user.handle;
+                var user_img = document.getElementsByClassName('user_img');
+                // user_img.innerHTML = '<img src=' + profile_image + '>';
+
+
             }
-
-            profile_image_el.src = profile_image;
-            document.getElementById("user_img").appendChild(profile_image_el);
-
-            let location = document.createTextNode(user.city + ", " + user.country);
-            document.getElementById("location").appendChild(location);
-
-
-            document.getElementById('name').appendChild(document.createTextNode(user.firstname + " " + user.lastname));
-            document.getElementById('username').innerHTML = user.handle;
-            var user_img = document.getElementsByClassName('user_img');
-            // user_img.innerHTML = '<img src=' + profile_image + '>';
-            
-
-        }
-    }) 
+        })
 }
 
-function loadAndShowPosts(){
+function loadAndShowPostsNew() {
     console.log("This is the /'main/'");
 
-    getPostsItems()
+    getPostsItemsNew()
         .then(newsRaw => {
-            console.log(newsRaw)
+            console.log('response from getPostsIetms', newsRaw)
             var oldDate = new Date();
             newsRaw.forEach(element => {
                 var newDate = new Date(element["Created Date"]);
-                newDate.setHours(0,0,0,0)
+                newDate.setHours(0, 0, 0, 0)
 
-                if(newDate < oldDate){
+                if (newDate < oldDate) {
                     oldDate = newDate;
                     let date = document.createElement('h3');
                     //let dateObj = new Date(Date.parse(body.published_date));
@@ -234,17 +253,17 @@ function loadAndShowPosts(){
                     date.appendChild(dateNode);
                     document.getElementById('profile-postsbox').appendChild(date);
                 }
-                createPost(element);
+                createPostNew(element);
             })
         })
 }
 
-function getPostsItems(){
+function getPostsItemsNew() {
     // var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/post_read";
-    var url = "https://broadwayconnected.bubbleapps.io"+version_change+"api/1.1/wf/post_read";
+    var url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/post_read";
 
     let body = {}
-    if(visiting == ""){
+    if (visiting == "") {
         console.log("this is yours")
         body = {
             "user_id": user_id
@@ -254,7 +273,7 @@ function getPostsItems(){
         body = {
             "user_id": visiting
         }
-    } 
+    }
     let params = {
         headers: {
             'Content-type': 'application/json',
@@ -263,16 +282,16 @@ function getPostsItems(){
         method: 'POST',
         body: JSON.stringify(body)
     };
-    console.log(url);
+    // console.log(url);
     return fetch(url, params)
         .then(res => res.json())
         .then(body => {
-            console.log(body)
+            console.log('this is user posts', body.response.post)
             return body.response.post
         })
 }
 
-function createPost(body){
+function createPostNew(body) {
 
     let div = document.createElement('div');
     div.classList.add('userfeed-post');
@@ -281,7 +300,7 @@ function createPost(body){
     publisher_div.classList.add('publisher');
 
     let publisher_image = document.createElement('img');
-    
+
     publisher_image.src = body.publisher_image;
     publisher_image.classList.add('userfeed-publisher-image');
     publisher_div.appendChild(publisher_image);
@@ -328,7 +347,7 @@ function createPost(body){
 
     let favorite_num = document.createElement('p');
 
-    if(body.favoriters){
+    if (body.favoriters) {
         var fav_button_numNode = document.createTextNode(body.favoriters.length);
     } else {
         var fav_button_numNode = document.createTextNode(0);
@@ -397,9 +416,9 @@ function createPost(body){
     readMore.appendChild(readMoreNode);
     description_div.appendChild(readMore)
 
-    readMore.onclick = function(ev) {
+    readMore.onclick = function (ev) {
         var target = ev.srcElement || ev.target;
-        if(target.textContent == "Read More") {
+        if (target.textContent == "Read More") {
             document.getElementById(body.id).classList.remove('hidden-post');
             target.textContent = "Read Less";
         } else {
@@ -413,35 +432,35 @@ function createPost(body){
     document.getElementById('profile-postsbox').appendChild(div);
 }
 
-function howLongAgo(date){
+function howLongAgo(date) {
     let now = new Date();
     let postDate = new Date(date);
     let years = DateDiff('yyyy', postDate, now);
-    if(years >= 1){
-        if(years == 1){
+    if (years >= 1) {
+        if (years == 1) {
             return "1 year ago"
         }
         return years + " years ago"
     }
 
     let months = DateDiff('m', postDate, now);
-    if(months >= 1){
-        if(months == 1){
+    if (months >= 1) {
+        if (months == 1) {
             return "1 month ago"
         }
         return months + " months ago"
     }
-    
+
     let days = DateDiff('d', postDate, now);
-    if(days >= 1){
-        if(days == 1){
+    if (days >= 1) {
+        if (days == 1) {
             return "1 day ago"
         }
         return days + " days ago"
     }
     let hours = DateDiff('h', postDate, now);
-    if(hours >= 1){
-        if(hours == 1){
+    if (hours >= 1) {
+        if (hours == 1) {
             return "1 hour ago"
         }
         return hours + " hours ago"
@@ -450,17 +469,17 @@ function howLongAgo(date){
 }
 
 function loadProfile() {
-	let div = document.getElementById('user_img');
-	let pic = document.createElement('img');
-	pic.classList.add('profile_pic');
-	let source = localStorage.getItem('profile_image');
+    let div = document.getElementById('user_img');
+    let pic = document.createElement('img');
+    pic.classList.add('profile_pic');
+    let source = localStorage.getItem('profile_image');
 
     pic.src = source;
-	div.appendChild(pic);
+    div.appendChild(pic);
 
-	let namep = document.getElementsByClassName('navname')[0];
-	let name = document.createTextNode(localStorage.getItem('first_name') + " " + localStorage.getItem('last_name'));
-	namep.appendChild(name);
+    let namep = document.getElementsByClassName('navname')[0];
+    let name = document.createTextNode(localStorage.getItem('first_name') + " " + localStorage.getItem('last_name'));
+    namep.appendChild(name);
 }
 
 function showUsers(user, divId) {
@@ -482,57 +501,57 @@ function showUsers(user, divId) {
     let nameNode = document.createTextNode(user.first_name + " " + user.last_name);
     name.appendChild(nameNode);
     div.appendChild(name);
-    
+
     document.getElementById(divId).appendChild(div);
     console.log(user.first_name);
 }
 
-function fillProfileEditor(){
-    
+function fillProfileEditor() {
+
     let firstnameEl = document.getElementById("input-first");
-    if( !(localStorage.getItem("first_name") == null || localStorage.getItem("first_name") == "null") ) {
+    if (!(localStorage.getItem("first_name") == null || localStorage.getItem("first_name") == "null")) {
         console.log("first name", localStorage.getItem("first_name"))
         firstnameEl.value = localStorage.getItem("first_name");
     }
     let lastnameEl = document.getElementById("input-last");
-    if ( !(localStorage.getItem("last_name") == null || localStorage.getItem("last_name") == "null") ) {
+    if (!(localStorage.getItem("last_name") == null || localStorage.getItem("last_name") == "null")) {
         lastnameEl.value = localStorage.getItem("last_name");
     }
     let usernameEl = document.getElementById("input-handle");
-    if ( !(localStorage.getItem("handle") == null || localStorage.getItem("handle") == "null") ) {
+    if (!(localStorage.getItem("handle") == null || localStorage.getItem("handle") == "null")) {
         usernameEl.value = localStorage.getItem("handle");
     }
     let phoneEl = document.getElementById("input-phone");
-    if ( !(localStorage.getItem("phone") == undefined || localStorage.getItem("phone") == 0) ) {
+    if (!(localStorage.getItem("phone") == undefined || localStorage.getItem("phone") == 0)) {
         phoneEl.value = localStorage.getItem("phone");
     }
     let cityEl = document.getElementById("input-city")
-    if ( !(localStorage.getItem("city") == null || localStorage.getItem("city") == "null") ) {
+    if (!(localStorage.getItem("city") == null || localStorage.getItem("city") == "null")) {
         console.log("loading city ", localStorage.getItem("city"))
         cityEl.value = localStorage.getItem("city");
     }
     let countryEl = document.getElementById("input-country")
-    if( !(localStorage.getItem("country") == null || localStorage.getItem("country") == "null") ) {
+    if (!(localStorage.getItem("country") == null || localStorage.getItem("country") == "null")) {
         countryEl.value = localStorage.getItem("country");
     }
     let handleEl = document.getElementById("input-headline")
-    if( !(localStorage.getItem("headline") == null || localStorage.getItem("headline") == "null") ) {
+    if (!(localStorage.getItem("headline") == null || localStorage.getItem("headline") == "null")) {
         handleEl.value = localStorage.getItem("headline");
     }
     let jobEl = document.getElementById("input-job-title")
-    if( !(localStorage.getItem("job_title") == null || localStorage.getItem("job_title") == "null") ) {
+    if (!(localStorage.getItem("job_title") == null || localStorage.getItem("job_title") == "null")) {
         jobEl.value = localStorage.getItem("job_title");
     }
     let companyEl = document.getElementById("input-company")
-    if( !(localStorage.getItem("job_company") == null || localStorage.getItem("job_company") == "null") ) {
+    if (!(localStorage.getItem("job_company") == null || localStorage.getItem("job_company") == "null")) {
         companyEl.value = localStorage.getItem("job_company");
     }
     let prev_jobEl = document.getElementById("input-previous")
-    if( !(localStorage.getItem("prev_job") == null || localStorage.getItem("prev_job") == "null") ) {
+    if (!(localStorage.getItem("prev_job") == null || localStorage.getItem("prev_job") == "null")) {
         prev_jobEl.value = localStorage.getItem("prev_job");
     }
     let prev_job_companyEl = document.getElementById("input-previous-company")
-    if( !(localStorage.getItem("prev_company") == null || localStorage.getItem("prev_company") == "null") ) {
+    if (!(localStorage.getItem("prev_company") == null || localStorage.getItem("prev_company") == "null")) {
         prev_job_companyEl.value = localStorage.getItem("prev_company");
     }
 }
@@ -552,10 +571,10 @@ function updateUser() {
     let prev_company = document.getElementById('input-previous-company').value;
 
     // let url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_update";
-    let url = "https://broadwayconnected.bubbleapps.io"+version_change+"api/1.1/wf/user_update";
+    let url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/user_update";
 
     console.log(phone)
-    if(phone == ""){
+    if (phone == "") {
         phone = 0
     }
 
@@ -583,21 +602,21 @@ function updateUser() {
     }
 
     fetch(url, params)
-    .then(res => res.json())
-    .then(body => {
-        console.log(body)
-        if(body.response.message == "Username must be unique") {
-            createCustomAlert("Username is not unique.")
-            console.log("username is bad!!!!")
-        } else {
-            localStorage.setItem("handle", body.response.user.handle);
-            localStorage.setItem("first_name", body.response.user.firstname);
-            localStorage.setItem("last_name", body.response.user.lastname);
-            localStorage.setItem("city", body.response.user.city);
-            localStorage.setItem("country", body.response.user.country);
-            localStorage.setItem("phone", body.response.user.phone);
-        }
-    })
+        .then(res => res.json())
+        .then(body => {
+            console.log(body)
+            if (body.response.message == "Username must be unique") {
+                createCustomAlert("Username is not unique.")
+                console.log("username is bad!!!!")
+            } else {
+                localStorage.setItem("handle", body.response.user.handle);
+                localStorage.setItem("first_name", body.response.user.firstname);
+                localStorage.setItem("last_name", body.response.user.lastname);
+                localStorage.setItem("city", body.response.user.city);
+                localStorage.setItem("country", body.response.user.country);
+                localStorage.setItem("phone", body.response.user.phone);
+            }
+        })
 }
 
 function getParameterByName(name, url) {
@@ -607,6 +626,84 @@ function getParameterByName(name, url) {
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 
+// Ankita
+
+function showFollowingCurrentUserProfile(followingArray, x) {
+    if (x == "following"){
+        document.getElementById('profile-following').innerHTML = "";
+
+    } else if (x == "followers"){
+        document.getElementById('profile-followers').innerHTML = "";
+    }
+
+    if (followingArray.length > 0) {
+
+        followingArray.forEach(element => {
+            // console.log(element.firstname, element.lastname ,element.image);
+
+            let divFollowing = document.createElement('div');
+            // divFollowing.setAttribute("id", element._id);
+
+            // adding onclick event
+            divFollowing.onclick = (function () {
+                var unique_id = element._id;
+                return function () {
+                    window.location.href = "../User-Profile/user_profile.html?id=" + unique_id;
+                }
+            })();
+            // adding onclick event
+
+            let fullname = document.createElement('p');
+            fullname_text = document.createTextNode(element.firstname + " " + element.lastname);
+            fullname.appendChild(fullname_text);
+            divFollowing.appendChild(fullname);
+
+            let handle = document.createElement('p');
+            hande_text = document.createTextNode("@" + element.handle);
+            handle.appendChild(hande_text);
+            divFollowing.appendChild(handle);
+
+            var userImageAddress = "";
+            let user_image = document.createElement('img');
+            if (element.image) {
+                if (element.image.substr(0, 4) == "data") {
+                    userImageAddress = element.image;
+                } else {
+                    userImageAddress = "https:" + element.image;
+                }
+                user_image.src = userImageAddress;
+            }
+
+            if (user_image && user_image.style) {
+                user_image.style.height = '100px';
+                user_image.style.width = '100px';
+            }
+
+            let profileImage = document.createElement('div');
+            profileImage.appendChild(user_image);
+            divFollowing.appendChild(profileImage);
+
+
+            if (x == "following"){
+                document.getElementById('profile-following').appendChild(divFollowing);
+            } else if (x == "followers"){
+                document.getElementById('profile-followers').appendChild(divFollowing);
+            }
+
+        });
+
+    } else {
+
+        
+        if (x == "following"){
+            document.getElementById('profile-following').innerHTML = "No Following";
+
+        } else if (x == "followers"){
+            document.getElementById('profile-followers').innerHTML = "No Followers";
+        }
+    }
+
+}
 
 
 

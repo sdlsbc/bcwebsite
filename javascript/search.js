@@ -8,6 +8,7 @@ function getSearchResults(query_string) {
     console.log('query_string ', query_string);
     //var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/search_functionality';
     var url = "https://broadwayconnected.bubbleapps.io"+version_change+"api/1.1/wf/search_functionality";
+    var token = localStorage.getItem("token");
 
     var token = localStorage.getItem("token");
     var data = {
@@ -19,7 +20,8 @@ function getSearchResults(query_string) {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
         }
     })
         .then(res => res.json())

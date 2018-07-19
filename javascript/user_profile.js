@@ -33,9 +33,19 @@ function fetchProfileData() {
 
                 //check if current user is already following this user
                 checkIfFollowing(unique_id);
-
-                // start filling the page
                 var imageSrc = response.response.user.image;
+                var profile_image = "";
+                // start filling the page
+                if (!(imageSrc == null || imageSrc == "")) {
+                    if (imageSrc.substr(0, 4) == "data" || imageSrc.substr(0, 4) == "http") {
+                        profile_image = imageSrc;
+                    } else {
+                        profile_image = "https:" + imageSrc;
+                    }
+                }
+
+
+                // var imageSrc = response.response.user.image;
                 var fullName = response.response.user.firstname + " " + response.response.user.lastname;
                 var handle = response.response.user.handle;
                 var headline = response.response.personal.headline;
@@ -46,7 +56,7 @@ function fetchProfileData() {
                 var city = response.response.user.city;
                 var country = response.response.user.country;
 
-                document.getElementById('user_image_here').src = imageSrc;
+                document.getElementById('user_image_here').src = profile_image;
                 document.getElementById('user_full_name').innerHTML = fullName;
                 document.getElementById('user_handle').innerHTML = "@" + handle;
                 document.getElementById('user_headline').innerHTML = headline;

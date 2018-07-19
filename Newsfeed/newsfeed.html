@@ -10,6 +10,7 @@
   <meta http-equiv="Content-Language" content="en">
   <link href="../stylesheets/style.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.js" type="text/javascript"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <style>
@@ -409,6 +410,7 @@
             <br>
             <textarea class="milestone-text" id="milestone-description" onfocus="checkIfMilestoneTypeSelected()" rows="4" cols="50" maxlength="300"
               placeholder="Add Description 300 Characters or Less"></textarea>
+            <span id='remaining-milestone' class="remaining-milestone" style="color: #226BE4; font-size: 14px;"></span>
           </p>
           <button class="input-button" id="btnPostMilestone" onclick="createMilestone()">Post</button>
         </form>
@@ -469,7 +471,8 @@
           </span>
           <span class="center">
             <label id="a-body">Body</label>
-            <input type="text" id="articles-body" name="articles" placeholder="New article goes here...">
+            <input type="text" class="articles-body" id="articles-body" name="articles" placeholder="New article goes here...">
+            <span class='remaining-articles' id='remaining-article' style="color: #226BE4; font-size: 14px;"></span>
   
             <label id="a-tag">Tags</label>
             <input type="text" id="articles-tag" name="articles" placeholder="tags">

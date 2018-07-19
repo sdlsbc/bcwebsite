@@ -937,12 +937,16 @@
         padding: 22px 12px 50px;
         border: 1px solid $main-blue;
       }
+      #remaining-article {
+        float: left;
+        margin-left: 6%;
+      }
       #a-tag {
-        margin-top: 15px;
+        margin-top: 30px;
         float: left;
         color: $medium-blue;
         font-size: 14px;
-        margin-left: 22px;
+        margin-left: -52%;
       }
       #articles-tag {
         margin-left: 4%;

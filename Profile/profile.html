@@ -475,7 +475,7 @@
           <label class="milestone-label" for="milestone-description">Description</label>
           <br>
           <textarea class="milestone-text" id="milestone-description" onfocus="checkIfMilestoneTypeSelected()" rows="4" cols="50" maxlength="300" placeholder="Add Description 300 Characters or Less"></textarea>
-          <span id='remaining' style="color: #226BE4; font-size: 14px;"></span>
+          <span id='remaining-milestone' style="color: #226BE4; font-size: 14px;"></span>
         </p>
         <button class="input-button" id="btnPostMilestone" onclick="createMilestone()">Post</button>
       </form>
@@ -514,9 +514,10 @@
           <input class="moments-text" id="moments-text2" type="text" placeholder="Moments Fixed Text">
         </p>
         <p class="moments-center">
-          <label class="moments-label" for="mileston-description">Description</label>
+          <label class="moments-label" for="moments-description">Description</label>
           <br>
-          <textarea class="moments-text" id="moments-text1" rows="4" cols="50" maxlength="300" placeholder="Moments Description"></textarea>
+          <textarea class="moments-text" id="moments-text1" rows="4" cols="50" maxlength="300" onfocus="checkIfMomentTypeSelected()" placeholder="Moments Description"></textarea>
+          <span id='remaining-moment' style="color: #226BE4; font-size: 14px;"></span>
         </p>
         <button class="input-button">Post</button>
       </form>
@@ -535,7 +536,8 @@
         </span>
         <span class="center">
           <label id="a-body">Body</label>
-          <input type="text" id="articles-body" name="articles" placeholder="New article goes here...">
+          <input type="text" class="articles-body" id="articles-body" name="articles" placeholder="New article goes here...">
+          <span id='remaining-article' class="remaining-article" style="color: #226BE4; font-size: 14px;"></span>
 
           <label id="a-tag">Tags</label>
           <input type="text" id="articles-tag" name="articles" placeholder="tags">

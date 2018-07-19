@@ -560,9 +560,31 @@ window.onscroll = function (ev) {
 
 
 
-$('#milestone-description').keypress(function(){
+$('.milestone-text').keypress(function(){
   if(this.value.length > 300){
       return false;
   }
-$("#remaining").html("Remaining characters : " +(300 - this.value.length));
+$(".remaining-milestone").html("Remaining characters : " +(300 - this.value.length));
 });
+
+$('#moments-text1').keypress(function(){
+  if(this.value.length > 300){
+      return false;
+  }
+$("#remaining-moment").html("Remaining characters : " +(300 - this.value.length));
+});
+
+$('.articles-body').keypress(function(){
+  if(this.value.length > 469){
+      return false;
+  }
+$(".remaining-article").html("Remaining characters : " +(469 - this.value.length));
+});
+
+
+
+
+
+
+
+

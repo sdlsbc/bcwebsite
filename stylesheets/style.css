@@ -6316,8 +6316,10 @@ $other-blue-light: #;*/
         box-sizing: border-box;
         padding: 22px 12px 50px;
         border: 1px solid #226BE4; }
+      .create-modal-content #create-articles .center #remaining-article {
+        margin-left: -4%; }
       .create-modal-content #create-articles .center #a-tag {
-        margin-top: 15px;
+        margin-top: 30px;
         float: left;
         color: #226BE4;
         font-size: 12px;
@@ -6359,8 +6361,8 @@ $other-blue-light: #;*/
       text-align: center;
       width: 102px;
       height: 33px;
-      margin-left: 33%;
-      margin-top: 50px;
+      margin-left: 42%;
+      margin-top: 20px;
       background-color: #226BE4;
       border: 1px solid #226BE4;
       color: white;
@@ -7024,7 +7026,7 @@ $other-blue-light: #;*/
           color: #226BE4; }
         .create-modal-content #create-milestones .milestone-center .milestone-text {
           width: 100%;
-          height: 250px;
+          height: 155px;
           font-size: 14px;
           margin-top: 5px;
           font-weight: 400;
@@ -7235,6 +7237,8 @@ $other-blue-light: #;*/
           box-sizing: border-box;
           padding: 22px 12px 50px;
           border: 1px solid #226BE4; }
+        .create-modal-content #create-articles .center #remaining-article {
+          margin-left: -7%; }
         .create-modal-content #create-articles .center #a-tag {
           margin-top: 35px;
           float: left;
@@ -12101,12 +12105,15 @@ ul p:last-child a.down {
           box-sizing: border-box;
           padding: 22px 12px 50px;
           border: 1px solid #226BE4; }
+        .create-modal-content #create-articles .center #remaining-article {
+          float: left;
+          margin-left: 6%; }
         .create-modal-content #create-articles .center #a-tag {
-          margin-top: 15px;
+          margin-top: 30px;
           float: left;
           color: #99CCFF;
           font-size: 14px;
-          margin-left: 22px; }
+          margin-left: -52%; }
         .create-modal-content #create-articles .center #articles-tag {
           margin-left: 4%;
           width: 85%;

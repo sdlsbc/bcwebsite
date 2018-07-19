@@ -436,7 +436,7 @@
     position: absolute;
     background-color: #fefefe;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 20%;
     border: 1px solid #888;
     width: 90%;
     margin-left: 4.5%;
@@ -574,7 +574,7 @@
     h3 {
       margin-top: 2%;
       color: white;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 400;
       margin-left: 6%;
     }
@@ -585,7 +585,7 @@
       margin-left: 15px;
       display: inline-block;
       .milestone-label {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
         margin-left: 9px;
         font-family: $font;
@@ -622,37 +622,49 @@
       margin-left: 2px;
       display: inline-block;
       .milestone-label {
-        font-size: 16px;
+        width: 90%;
+        font-size: 14px;
         font-weight: 400;
         margin-left: 16px;
-        font-family: $font;
         color: $main-blue;
+        font-family: $font;
+        display: inline-block;
       }
       input[type=text] {
-        width: 95%;
-        height: 35px;
+        width: 92%;
+        height: 28px;
         font-size: 12px;
         margin-top: 5px;
         font-weight: 400;
-        border-radius: 25px;
+        margin-left: 12px;
         padding-left: 15px;
+        border-radius: 25px;
+        display: inline-block;
         border: 1px solid $main-blue;
       }
     }
     .milestone-right2 {
       width: 43%;
       float: right;
-      margin-top: 20px;
+      margin-top: 10px;
       margin-right: 14px;
       display: inline-block;
       #milestone-fixed-text2 {
-        color: white;
-        margin-left: 20px;
-        background-color: blue;
-        border: 1px solid blue;
+        width: 50%;
+        padding: 3px;
+        font-size: 12px;
+        margin-left: 28%;
+        color: $main-blue;
+        display: inline-block;
+        background-color: white;
+        border: 1px solid $main-blue;
+        &:after { 
+          content: " *"; 
+          color: red;
+        }
       }
       .milestone-label {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
         margin-left: 16px;
         font-family: $font;
@@ -660,8 +672,8 @@
       }
       input[type=text] {
         width: 95%;
-        height: 35px;
-        font-size: 12px;
+        height: 28px;
+        font-size: 10px;
         margin-top: 5px;
         font-weight: 400;
         border-radius: 25px;
@@ -675,7 +687,7 @@
       margin-left: 2%;
       display: inline-block;
       .milestone-label {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
         margin-left: 15px;
         font-family: $font;
@@ -684,7 +696,7 @@
       .milestone-text  {
         width: 100%;
         height: 80px;
-        font-size: 16px;
+        font-size: 12px;
         margin-top: 5px;
         font-weight: 400;
         border-radius: 25px;
@@ -716,7 +728,7 @@
     h3 {
       margin-top: 2%;
       color: white;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 400;
       margin-left: 6%;
     }
@@ -1090,9 +1102,9 @@
       padding-top: 50px;
       z-index: 4;
       .attach-photo {
-        margin-left: -11%;
-        margin-top: 15px;
-        width: 18%;
+        margin-left: -103%;
+        margin-top: 60%;
+        width: 10%;
         float: left;
         display: inline-block;
         img {
@@ -1116,7 +1128,7 @@
       text-align: center;
       width: 119px;
       height: 40px;
-      margin-left: -4%;
+      margin-left: %;
       margin-top: 50px;
       background-color: #226BE4;
       border: 1px solid $main-blue;

@@ -610,6 +610,7 @@
       #milestone-fixed-text2 {
         width: 32%;
         padding: 5px;
+        font-size: 12px;
         color: $main-blue;
         display: inline-block;
         background-color: white;
@@ -1733,10 +1734,10 @@
       width: 40%;
       float: left;
       margin-top: -2px;
-      margin-left: 50px;
+      margin-left: 32px;
       display: inline-block;
       .milestone-label {
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 400;
         margin-left: 9px;
         font-family: $font;
@@ -1747,7 +1748,7 @@
         color: white;
         height: 50px;
         margin-top: 6px;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
         padding-left: 20px;
         border-radius: 50px;
@@ -1767,60 +1768,70 @@
       }
     }
     .milestone-left2 {
-      width: 40%;
+      width: 45%;
       float: left;
       margin-top: 40px;
-      margin-left: 50px;
+      margin-left: 32px;
       display: inline-block;
       .milestone-label {
-        font-size: 18px;
+        width: 41%;
+        font-size: 14px;
         font-weight: 400;
-        margin-left: 16px;
+        margin-left: 12px;
         font-family: $font;
         color: $main-blue;
+        display: inline-block;
       }
       input[type=text] {
-        width: 95%;
-        height: 50px;
-        font-size: 16px;
+        width: 46%;
+        height: 30px;
+        font-size: 14px;
         margin-top: 5px;
         font-weight: 400;
         border-radius: 25px;
         padding-left: 15px;
+        display: inline-block;
         border: 1px solid $main-blue;
       }
     }
     .milestone-right2 {
-      width: 40%;
+      width: 42%;
       float: right;
       margin-top: 17px;
-      margin-right: 55px;
+      margin-right: 22px;
       display: inline-block;
-      .milestone-label {
-        font-size: 18px;
-        font-weight: 400;
-        margin-left: 16px;
-        font-family: $font;
+      #milestone-fixed-text2 {
+        width: 28%;
+        padding: 5px;
+        font-size: 12px;
         color: $main-blue;
+        display: inline-block;
+        background-color: white;
+        border: 1px solid $main-blue;
+        &:after { 
+          content: " *"; 
+          color: red;
+        }
       }
       input[type=text] {
-        width: 95%;
-        height: 50px;
-        font-size: 16px;
+        width: 52%;
+        height: 30px;
+        font-size: 14px;
         margin-top: 5px;
         font-weight: 400;
-        border-radius: 25px;
         padding-left: 15px;
+        border-radius: 25px;
+        display: inline-block;
         border: 1px solid $main-blue;
       }
     }
     .milestone-center {
       width: 83%;
       margin-top: 15px;
-      margin-left: 7%;
+      margin-left: 5%;
       display: inline-block;
       .milestone-label {
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 400;
         margin-left: 15px;
         font-family: $font;
@@ -1829,11 +1840,11 @@
      .milestone-text  {
         width: 100%;
         height: 250px;
-        font-size: 16px;
+        font-size: 14px;
         margin-top: 5px;
         font-weight: 400;
         border-radius: 25px;
-        padding-left: 15px;
+        padding-left: 12px;
         border: 1px solid $main-blue;
       }
     }
@@ -1904,7 +1915,7 @@
     .moments-left2 {
       width: 40%;
       float: left;
-      margin-top: 20px;
+      margin-top: 5px;
       margin-left: 50px;
       display: inline-block;
       .moments-label {
@@ -2145,7 +2156,7 @@
     .left {
       width: 46%;
       float: left;
-      margin-top: 5%;
+      margin-top: 5.1%;
       margin-bottom: 3%;
       display: inline-block;
       #e-header {
@@ -2236,7 +2247,7 @@
       .attach-photo {
         margin-left: -4%;
         margin-top: 30px;
-        width: 18%;
+        width: 8%;
         float: left;
         display: inline-block;
         img {
@@ -2260,7 +2271,7 @@
       text-align: center;
       width: 129px;
       height: 45px;
-      margin-left: 11%;
+      margin-left: 27%;
       margin-top: 35px;
       background-color: #226BE4;
       border: 1px solid $main-blue;

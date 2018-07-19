@@ -462,28 +462,67 @@ hr {
 
 
 
-
-
-.contact {
-  border-top: 2px solid #E9E9E9;
-  padding-bottom: 50px;
-  padding-top: 4%;
+.about {
+  margin-top: 47%;
+  margin-left: -8px;
   h2 {
-    margin-left: 5%;
+    margin-left: 4%;
+  }
+}
+.faq {
+  padding-top: 20px;
+  h2 {
+    margin-left: 1%;
     width: 90%;
     font-size: 28px;
     color: #226BE4;
     font-weight: 300;
     text-align: center;
   }
+  h3 {
+    margin-top: 60px;
+    margin-left: 10%;
+    width: 90%;
+    color: #226BE4;
+    font-weight: 300;
+  }
   p {
     width: 80%;
-    margin-left: 9.7%;
+    margin-left: 10%;
     color: black;
     font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 18px;
+  }
+}
+.terms {
+  margin-top: 45px;
+  margin-bottom: 6%;
+  text-align: center;
+  margin-left: -15px;
+  padding-bottom: 20px;
+  border-bottom: px solid #E9E9E9;
+}
+.contact {
+  padding-top: 4%;
+  padding-bottom: 50px;
+  border-top: 2px solid #E9E9E9;
+  h2 {
+    width: 90%;
+    color: #226BE4;
+    margin-left: 1%;
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+  }
+  p {
+    width: 80%;
+    color: black;
+    margin-top: 25px;
+    font-weight: 400;
+    margin-left: 7%;
     text-align: center;
     margin-bottom: 10px;
-    margin-top: 25px;
   }
   .checkbox {
     margin-left: 20%;
@@ -492,7 +531,7 @@ hr {
   .contact-body {
     text-align: center;
     input[type=text] {
-      margin-left: 8%;
+      margin-left: 5%;
       padding-top: -20px;
       width: 80%;
       height: 175px;
@@ -503,7 +542,7 @@ hr {
   }
   .contact-submit {
     margin-top: 6%;
-    margin-left: 38%;
+    margin-left: 33%;
     background-color: #226BE4;
     border: 2px solid #226BE4;
     color: white;

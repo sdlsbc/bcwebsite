@@ -233,6 +233,9 @@ function loadProfileData() {
 
 function loadAndShowPostsNew() {
 document.getElementById('profile-postsbox').innerHTML = "";
+
+// getMilestoneItemsNew();
+
     getPostsItemsNew()
         .then(newsRaw => {
             console.log('response from getPostsIetms', newsRaw)
@@ -288,6 +291,31 @@ function getPostsItemsNew() {
             return body.response.post
         })
 }
+
+
+// function getMilestoneItemsNew() {
+//     var url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/milestone_read";
+//     var user_id_current = localStorage.getItem("user_id");
+
+//     let body = {
+//         "user_id": user_id_current
+//     }
+
+//     let params = {
+//         headers: {
+//             'Content-type': 'application/json',
+//             'Authorization': 'Bearer ' + token
+//         },
+//         method: 'POST',
+//         body: JSON.stringify(body)
+//     };
+//     return fetch(url, params)
+//         .then(res => res.json())
+//         .then(body => {
+//             console.log('this is user milestones', body.response.post)
+//             return body.response.post
+//         })
+// }
 
 function createUserFeedArticles(body) {
 

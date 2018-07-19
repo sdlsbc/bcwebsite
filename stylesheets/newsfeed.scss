@@ -1199,13 +1199,16 @@ _::-webkit-full-page-media, _:future, :root .rcorners {
   }
 }
 @media only screen and (max-width: 700px) {
-  .rcorners {
-    width: 330px;
-    background-color:#fff;
-    color: rgb(0, 0, 0);
-    border-radius:10px;
-    margin: 10px;
-    font-size:20px;
+  #postsbox {
+    padding-top: 25%;
+    .rcorners {
+      width: 330px;
+      background-color:#fff;
+      color: rgb(0, 0, 0);
+      border-radius:10px;
+      margin: 10px;
+      font-size:20px;
+    }
   }
 }
 #loading{

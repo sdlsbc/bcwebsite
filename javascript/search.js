@@ -9,8 +9,10 @@ function getSearchResults(query_string) {
     //var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/search_functionality';
     var url = "https://broadwayconnected.bubbleapps.io"+version_change+"api/1.1/wf/search_functionality";
 
+    var token = localStorage.getItem("token");
     var data = {
-        "query": query_string
+        "query": query_string,
+        "Authorization": "Bearer "+ token; 
     };
 
     fetch(url, {

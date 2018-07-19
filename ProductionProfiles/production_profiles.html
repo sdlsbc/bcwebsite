@@ -11,7 +11,7 @@
  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
-<body onload="checkLocalStorage('explore')">
+<body onload="checkLocalStorage('explore')" id="body">
     <!-- sidebar. -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closeNav()">&times;</a>
@@ -615,90 +615,197 @@ $(function() {
 
 
 
-<!-- ========== M I L E S T O N E S  M O D A L ===========  -->
-<div id="createModal" class="create-modal">
+ <!-- ========== M I L E S T O N E S  M O D A L ===========  -->
+ <div id="createModal" class="create-modal">
   <div class="create-modal-content" id="create-modal-content">
     <!-- <div class="tab"> -->
     <span class="create-close">&times;</span>
     <div class="column1">
       <h3 onclick="openCity(event, 'create-milestones')">Milestones</h3>
       <img src="../images/milestones.jpg">
-      <h4>Milestones are a way to broadcast what YOU have been up to in theatre! This feature will allow you to keep track of where you’ve gone & where you’re going.  The best part? You can make them public or visible to only you!</h4>
+      <h4>Milestones are a way to broadcast what YOU have been up to in theatre! This feature will allow you to keep track
+        of where you've gone & where you're going. The best part? You can make them public or visible to only you!</h4>
       <div class="create-button-wrapper">
-        <button class="create-button" id="p2" onclick="openCity(event, 'create-milestones')"><a href="#" style="text-decoration: none;"><p>ADD NEW</p></a></button>
+        <button class="create-button" id="p2" onclick="openCity(event, 'create-milestones')">
+          <a href="#" style="text-decoration: none;">
+            <p>ADD NEW</p>
+          </a>
+        </button>
       </div>
     </div>
     <div class="column2">
       <h3 onclick="openCity(event, 'create-moments')">Moments</h3>
       <img src="../images/moments.jpg">
-      <h4>Sometimes really cool things happen: you run into your favorite Broadway star on the street, attend opening night, or that show finally toured to your city. Share those times that make you feel like the luckiest person out there!</h4>
+      <h4>Sometimes really cool things happen: you run into your favorite Broadway star on the street, attend opening night,
+        or that show finally toured to your city. Share those times that make you feel like the luckiest person out there!</h4>
       <div class="create-button-wrapper">
-        <button class="create-button" id="p2" onclick="openCity(event, 'create-moments')"><a href="#" style="text-decoration: none;"><p>ADD NEW</p></a></button>
+        <button class="create-button" id="p2" onclick="openCity(event, 'create-moments')">
+          <a href="#" style="text-decoration: none;">
+            <p>ADD NEW</p>
+          </a>
+        </button>
       </div>
     </div>
     <div class="column3">
       <h3 onclick="openCity(event, 'create-articles')">Articles</h3>
       <img src="../images/articles.jpg">
-      <h4>Extra, extra, read AND write all about it! Write your way through your theatrical journey. You can write and post reviews, interviews, opinion pieces, or anything theatre and share it with other BC users!</h4>
+      <h4>Extra, extra, read AND write all about it! Write your way through your theatrical journey. You can write and post
+        reviews, interviews, opinion pieces, or anything theatre and share it with other BC users!</h4>
       <div class="create-button-wrapper">
-        <button class="create-button" id="p2" onclick="openCity(event, 'create-articles')"><a href="#" style="text-decoration: none;"><p>ADD NEW</p></a></button>
+        <button class="create-button" id="p2" onclick="openCity(event, 'create-articles')">
+          <a href="#" style="text-decoration: none;">
+            <p>ADD NEW</p>
+          </a>
+        </button>
       </div>
     </div>
     <div class="column4">
       <h3 onclick="openCity(event, 'create-events')">Events</h3>
       <img src="../images/events.jpg">
-      <h4>Whether you’re starring in your 20th Broadway musical or lighting your first show- invite your friends! From the first reading all the way to closing night, you’re able to host events that users can easily RSVP to!</h4>
+      <h4>Whether you're starring in your 20th Broadway musical or lighting your first show- invite your friends! From the
+        first reading all the way to closing night, you're able to host events that users can easily RSVP to!</h4>
       <div class="create-button-wrapper">
-        <button class="create-button" id="p2" onclick="openCity(event, 'create-events')"><a href="#" style="text-decoration: none;"><p>ADD NEW</p></a></button>
+        <button class="create-button" id="p2" onclick="openCity(event, 'create-events')">
+          <a href="#" style="text-decoration: none;">
+            <p>ADD NEW</p>
+          </a>
+        </button>
       </div>
     </div>
-  <!-- </div> -->
+
+    <!-- </div> --> 
 
     <div id="create-milestones" class="tabcontent">
       <h3>Add a Milestone</h3>
       <form>
         <p class="milestone-left">
-          <label class="milestone-label">Type</label><br>
+          <label class="milestone-label">Type</label>
+          <br>
           <select id="milestone-type">
             <option value="" disabled selected>Select Milestone Type</option>
-            <option value="../images/milestones-img1.png">Casted as Photo</option>
-            <option value="../images/milestones-img2.png">First Rehearsal</option>
-            <option value="../images/milestones-img3.png">Opening Night</option>
-            <option value="../images/milestones-img4.png">First Day Of Work</option>
-            <option value="../images/milestones-img5.png">First Broadway Show</option>
-            <option value="../images/milestones-img6.png">Audition</option>
-            <option value="../images/milestones-img7.png">Call Back</option>
-            <option value="../images/milestones-img8.png">Offer</option>
+            <option value="Casted as Photo">Was Cast As</option>
+            <option value="First Rehearsal">First Rehearsal</option>
+            <option value="Opening Night">Opening Night</option>
+            <option value="First Day Of Work">First Day Of Work</option>
+            <option value="First Broadway Show">First Broadway Show</option>
+            <option value="Audition">Audition</option>
+            <option value="Call Back">Callback</option>
+            <option value="Offer">Offer</option>
           </select>
         </p>
         <script>
           function setMilestoneImg() {
             var img = document.getElementById("image");
-            img.src = this.value;
+            var milestone_type = document.getElementById("milestone-type").value
+            switch (milestone_type) {
+              case "Casted as Photo":
+                img.src = "../images/milestones-img1.png";
+                break;
+
+              case "First Rehearsal":
+                img.src = "../images/milestones-img2.png";
+                break;
+
+              case "Opening Night":
+                img.src = "../images/milestones-img3.png";
+                break;
+
+              case "First Day Of Work":
+                img.src = "../images/milestones-img4.png";
+                break;
+
+              case "First Broadway Show":
+                img.src = "../images/milestones-img5.png";
+                break;
+
+              case "Audition":
+                img.src = "../images/milestones-img6.png";
+                break;
+
+              case "Call Back":
+                img.src = "../images/milestones-img7.png";
+                break;
+
+              case "Offer":
+                img.src = "../images/milestones-img8.png";
+                break;
+            }
+
+            setFixedTextMilestone()
+
             return false;
           }
           document.getElementById("milestone-type").onchange = setMilestoneImg;
+
+          function setFixedTextMilestone() {
+            var milestone_type = document.getElementById("milestone-type").value;
+            var ft1 = "";
+
+            switch (milestone_type) {
+              case "Casted as Photo":
+                ft1 = "Got cast as";
+                break;
+
+              case "First Rehearsal":
+                ft1 = "First day of rehearsal as";
+                break;
+
+              case "Opening Night":
+                ft1 = "Opening night of";
+                break;
+
+              case "First Day Of Work":
+                ft1 = "First day of work as";
+                break;
+
+              case "First Broadway Show":
+                ft1 = "Saw first Broadway Show";
+                break;
+
+              case "Audition":
+                ft1 = "Auditioned for";
+                break;
+
+              case "Call Back":
+                ft1 = "Got called back for";
+                break;
+
+              case "Offer":
+                ft1 = "Got an offer for";
+                break;
+            }
+
+            document.getElementById("milestone-fixed-text1").innerHTML = ft1;
+          }
         </script>
 
         <p class="milestone-right">
           <img id="image" src="../images/bc-logo.png">
         </p>
+
         <p class="milestone-left2">
-          <label class="milestone-label" for="milestone-label1">Fixed Text</label><br>
-          <input class="milestone-text" id="milestone-text1" type="text" placeholder="Enter Company Name">
+          <label class="milestone-label" for="milestone-label1" id="milestone-fixed-text1"></label>
+          <br>
+          <input class="milestone-text" id="milestone-text1" type="text" placeholder="" onfocus="checkIfMilestoneTypeSelected()">
         </p>
         <p class="milestone-right2">
-          <label class="milestone-label" for="milestone-label2">Fixed Text</label><br>
-          <input class="milestone-text" id="milestone-text2" type="text" placeholder="Enter Company Name">
+          <select id="milestone-fixed-text2" onfocus="checkIfMilestoneTypeSelected()">
+            <option value="" disabled selected>in/at</option>
+            <option value="in">In</option>
+            <option value="at">At</option>
+          </select>
+          <br>
+          <input type="text" id="city" list="comp-prod-list" onfocus="checkIfMilestoneTypeSelected()" placeholder="Enter Company/Production Name">
+          <datalist id="comp-prod-list">
+          </datalist>
         </p>
         <p class="milestone-center">
-          <label class="milestone-label" for="mileston-description">Description</label><br>
-          <textarea class="milestone-text" id="milestone-text1" rows="4" cols="50" maxlength="300" placeholder="Enter Company Name"></textarea>
+          <label class="milestone-label" for="mileston-description">Description</label>
+          <br>
+          <textarea class="milestone-text" id="milestone-description" onfocus="checkIfMilestoneTypeSelected()" rows="4" cols="50" maxlength="300"
+            placeholder="Add Description 300 Characters or Less"></textarea>
         </p>
-        <!-- <p class="only-me-checkbox">
-          <input type="checkbox" name="only-me" value="yes">Only Me
-        </p> -->
-        <button class="input-button">Post</button>
+        <button class="input-button" id="btnPostMilestone" onclick="createMilestone()">Post</button>
       </form>
     </div>
 
@@ -706,7 +813,8 @@ $(function() {
       <h3>Add a Moment</h3>
       <form>
         <p class="moments-left">
-          <label class="moments-label">Type</label><br>
+          <label class="moments-label">Type</label>
+          <br>
           <select id="moments-type">
             <option value="" disabled selected>Select Moments Type</option>
             <option value="option1">Moments Option 1</option>
@@ -715,25 +823,28 @@ $(function() {
           </select>
         </p>
         <p class="moments-right">
-          <input class="attach-photo" type="image" src="../images/image.png"/>
-          <input type="file" id="moment-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;"/>
+          <input class="attach-photo" type="image" src="../images/image.png" />
+          <input type="file" id="moment-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;" />
           <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
           <script>
-            $("input[type='image']").click(function() {
+            $("input[type='image']").click(function () {
               $("input[id='moment-image']").click();
             });
           </script>
         </p>
         <p class="moments-left2">
-          <label class="moments-label" for="moments-label1">Fixed Text</label><br>
+          <label class="moments-label" for="moments-label1">Fixed Text</label>
+          <br>
           <input class="moments-text" id="moments-text1" type="text" placeholder="Moments Fixed Text">
         </p>
         <p class="moments-right2">
-          <label class="moments-label" for="moments-label2">Fixed Text</label><br>
+          <label class="moments-label" for="moments-label2">Fixed Text</label>
+          <br>
           <input class="moments-text" id="moments-text2" type="text" placeholder="Moments Fixed Text">
         </p>
         <p class="moments-center">
-          <label class="moments-label" for="mileston-description">Description</label><br>
+          <label class="moments-label" for="mileston-description">Description</label>
+          <br>
           <textarea class="moments-text" id="moments-text1" rows="4" cols="50" maxlength="300" placeholder="Moments Description"></textarea>
         </p>
         <button class="input-button">Post</button>
@@ -753,7 +864,7 @@ $(function() {
         </span>
         <span class="center">
           <label id="a-body">Body</label>
-          <textarea id="articles-body" rows="4" cols="50" maxlength="300" placeholder="New article goes here..."></textarea>
+          <input type="text" id="articles-body" name="articles" placeholder="New article goes here...">
 
           <label id="a-tag">Tags</label>
           <input type="text" id="articles-tag" name="articles" placeholder="tags">
@@ -761,16 +872,17 @@ $(function() {
 
       </form>
       <div class="articles-extra-buttons">
-        <input class="attach-photo" type="image" src="../images/image.png"/>
-        <input type="file" id="articles-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;"/>
-        <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
-        <script>
-          $("input[type='image']").click(function() {
-            $("input[id='articles-image']").click();
-          });
-        </script>
+        <!-- <a href="" class="attach-photo">
+          
+          <img src="../images/image.png">
+        </a> -->
+        <!-- <a href="" class="privacy-btn">
+          <img src="../images/lock.png">
+        </a> -->
+        <input type="file" id="article-image" onchange="getArticleImage(event)" />
+        <canvas width="300" height="300" id="myArticleCanvas" style="display: none;"></canvas>
       </div>
-        <button class="input-button">Post</button>
+        <button class="input-button" id="btn-post-article" onclick="create_article()">Post</button>
     </div>
 
     <div id="create-events" class="tabcontent">
@@ -793,66 +905,65 @@ $(function() {
         </span>
       </form>
       <div class="events-extra-buttons">
-        <input class="attach-photo" type="image" src="../images/image.png"/>
-          <input type="file" id="events-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;"/>
-          <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
-          <script>
-            $("input[type='image']").click(function() {
-              $("input[id='events-image']").click();
-            });
-          </script>     
+        <input class="attach-photo" type="image" src="../images/image.png" />
+        <input type="file" id="events-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;" />
+        <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
+        <script>
+          $("input[type='image']").click(function () {
+            $("input[id='events-image']").click();
+          });
+        </script>
       </div>
-       <button class="input-button">Post</button>
+      <button class="input-button">Post</button>
     </div>
   </div>
 </div>
 
 
-  <script>
-    function openCity(evt, cityName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace("   active", "");
-      }
-      document.getElementById(cityName).style.display = "block";
-      evt.currentTarget.className += " active";
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
     }
-  </script>
-
-
-
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace("   active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
 <script>
   //open general create modal
-  var modal = document.getElementById('createModal');
-  var btn = document.getElementById("myBtn");
-  var span = document.getElementsByClassName("create-close")[0];
-  btn.onclick = function() {
-    modal.style.display = "block";
+  var modalx = document.getElementById('createModal');
+  var btnx = document.getElementById("myBtn");
+  var spanx = document.getElementsByClassName("create-close")[0];
+  btnx.onclick = function () {
+    // call function to populate the companies and productions
+    getCompaniesProduction();
+    modalx.style.display = "block";
     document.getElementById("mySidenav").style.width = "0";
   }
-  span.onclick = function() {
-    modal.style.display = "none";
+  spanx.onclick = function () {
+    modalx.style.display = "none";
   }
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
+  window.onclick = function (event) {
+    if (event.target == modalx) {
+      modalx.style.display = "none";
     }
   }
 </script>
+<script src="../javascript/register.js"></script>
+<script type="text/javascript" src="../javascript/jsDate.js"></script>
+<script type="text/javascript" src="../javascript/search.js"></script>
+<script type="text/javascript" src="../javascript/profile.js"></script>
+<script type="text/javascript" src="../javascript/loadAndRender.js"></script>
+<script type="text/javascript" src="../javascript/createThings.js"></script>
+<script type="text/javascript" src="../javascript/article.js"></script>
 
-
-
-
-  <script src="../javascript/register.js"></script>
-  <script type="text/javascript" src="../javascript/jsDate.js"></script>
-  <script type="text/javascript" src="../javascript/profile.js"></script>
-  <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
-  </body>
+</body>
 </html>
 
 

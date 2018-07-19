@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="../images/bc32_mcU_icon.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Broadway Connected</title>
+  <link href="../stylesheets/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+</head>
+
+<div class="body">
+<body onload="checkLocalStorage('explore')">
+    <!-- sidebar. -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closeNav()">&times;</a>
+        <p> </p>
+        <center id="profile_pic"></center>
+        <center>
+            <p class="navname"></p>
+        </center>
+        <center>
+          <p class="profile">
+            <button class="my-profile-btn"><a href="../Profile/profile.html" id="profile-a"><p>My Profile</p></a></button>
+          </p>
+        </center>
+        <br/>
+        <div class="sidenav-links">
+        <a href="../Newsfeed/newsfeed.html">
+          <img src="../images/rss@3x.png" width="19" height="19">&nbsp&nbsp Newsfeed
+        </a>
+        <a href="#" id="myBtn">
+          <img src="../images/add-icon.png" width="20" height="20">&nbsp&nbsp Create 
+        </a>
+        <a href="../Q.O.D./qod.html">
+          <img src="../images/compass@3x.png" width="19" height="19">&nbsp&nbsp Q.O.D
+        </a>
+        <a href="../Calendar/calendar.html">
+          <img src="../images/calendar (1)@3x.png" width="19" height="19">&nbsp&nbsp Calendar
+        </a>
+        <a href="../Favorites/favorites.html">
+          <img src="../images/heart@3x.png" width="19" height="19">&nbsp&nbsp My Favorites
+        </a>
+        <a href="../ProductionProfiles/production_profiles.html">
+          <img src="../images/stage@3x.png" width="19" height="19">&nbsp&nbsp Production Profiles
+        </a>
+        <a href="../CompanyProfiles/company_profiles.html">
+          <img src="../images/building@3x.png" width="19" height="19">&nbsp&nbsp Company Profiles
+        </a>
+        <a href="../B.O.B./bob.html">
+          <img src="../images/briefcase@3x.png" width="19" height="19">&nbsp&nbsp Business of Broadway 
+        </a>
+        <a href="#">
+          <img src="../images/info@3x.png" width="19" height="19">&nbsp&nbsp FAQ & Contact Us
+        </a>
+      </div>
+    </div>
+
+  <div class="navbar">
+    <span class="open_sidenav" onclick="openNav()">
+      <img src="../images/side button2.png" style="margin-left: 8px;margin-top: -6px;">
+    </span>
+    <a href="../Newsfeed/newsfeed.html" class="logo-a">
+      <img class="logo" src="../images/bc_solo_logo.png">
+    </a>
+    <a href='../Newsfeed/newsfeed.html'>
+      <p>Newsfeed</p>
+    </a>
+    <a href='../Discover/discover.html'>
+      <p>Discover</p>
+    </a>
+    <a href='../Explore/explore.html'>
+      <p class="explore-p-tag" style="border-bottom: 4px solid #226BE4;
+      padding-bottom: 15px; color: #226BE4;">Explore</p>
+    </a>
+    <div class="signout">
+      <div class="search" id="input-container">
+        <input type="text" id="input" placeholder="Search..." value>
+        <img src="../images/search-icon.png" id="input_img">
+      </div>
+      <button class="signout-button" onclick="signout()">Sign Out</button>
+    </div>
+  </div>
+  
+  
+  <div class="qod-coming-soon">
+    <h1>Please hold...</h1>
+    <h2>At this time Question Of The Day can be found only on our app for iOS.  To download click <a href="#">here</a>.  For further information please feel free to <a href="../Contact/contact.html">contact</a> us.<h2>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+
+
+<!-- ========== M I L E S T O N E S  M O D A L ===========  -->
+<div id="createModal" class="create-modal">
+  <div class="create-modal-content" id="create-modal-content">
+    <!-- <div class="tab"> -->
+    <span class="create-close">&times;</span>
+    <div class="column1">
+      <h3 onclick="openCity(event, 'create-milestones')">Milestones</h3>
+      <img src="../images/milestones.jpg">
+      <h4>Milestones are a way to broadcast what YOU have been up to in theatre! This feature will allow you to keep track of where you’ve gone & where you’re going.  The best part? You can make them public or visible to only you!</h4>
+      <div class="create-button-wrapper">
+        <button class="create-button" id="p2" onclick="openCity(event, 'create-milestones')"><a href="#" style="text-decoration: none;"><p>ADD NEW</p></a></button>
+      </div>
+    </div>
+    <div class="column2">
+      <h3 onclick="openCity(event, 'create-moments')">Moments</h3>
+      <img src="../images/moments.jpg">
+      <h4>Sometimes really cool things happen: you run into your favorite Broadway star on the street, attend opening night, or that show finally toured to your city. Share those times that make you feel like the luckiest person out there!</h4>
+      <div class="create-button-wrapper">
+        <button class="create-button" id="p2" onclick="openCity(event, 'create-moments')"><a href="#" style="text-decoration: none;"><p>ADD NEW</p></a></button>
+      </div>
+    </div>
+    <div class="column3">
+      <h3 onclick="openCity(event, 'create-articles')">Articles</h3>
+      <img src="../images/articles.jpg">
+      <h4>Extra, extra, read AND write all about it! Write your way through your theatrical journey. You can write and post reviews, interviews, opinion pieces, or anything theatre and share it with other BC users!</h4>
+      <div class="create-button-wrapper">
+        <button class="create-button" id="p2" onclick="openCity(event, 'create-articles')"><a href="#" style="text-decoration: none;"><p>ADD NEW</p></a></button>
+      </div>
+    </div>
+    <div class="column4">
+      <h3 onclick="openCity(event, 'create-events')">Events</h3>
+      <img src="../images/events.jpg">
+      <h4>Whether you’re starring in your 20th Broadway musical or lighting your first show- invite your friends! From the first reading all the way to closing night, you’re able to host events that users can easily RSVP to!</h4>
+      <div class="create-button-wrapper">
+        <button class="create-button" id="p2" onclick="openCity(event, 'create-events')"><a href="#" style="text-decoration: none;"><p>ADD NEW</p></a></button>
+      </div>
+    </div>
+  <!-- </div> -->
+
+    <div id="create-milestones" class="tabcontent">
+      <h3>Add a Milestone</h3>
+      <form>
+        <p class="milestone-left">
+          <label class="milestone-label">Type</label><br>
+          <select id="milestone-type">
+            <option value="" disabled selected>Select Milestone Type</option>
+            <option value="../images/milestones-img1.png">Casted as Photo</option>
+            <option value="../images/milestones-img2.png">First Rehearsal</option>
+            <option value="../images/milestones-img3.png">Opening Night</option>
+            <option value="../images/milestones-img4.png">First Day Of Work</option>
+            <option value="../images/milestones-img5.png">First Broadway Show</option>
+            <option value="../images/milestones-img6.png">Audition</option>
+            <option value="../images/milestones-img7.png">Call Back</option>
+            <option value="../images/milestones-img8.png">Offer</option>
+          </select>
+        </p>
+        <script>
+          function setMilestoneImg() {
+            var img = document.getElementById("image");
+            img.src = this.value;
+            return false;
+          }
+          document.getElementById("milestone-type").onchange = setMilestoneImg;
+        </script>
+
+        <p class="milestone-right">
+          <img id="image" src="../images/bc-logo.png">
+        </p>
+        <p class="milestone-left2">
+          <label class="milestone-label" for="milestone-label1">Fixed Text</label><br>
+          <input class="milestone-text" id="milestone-text1" type="text" placeholder="Enter Company Name">
+        </p>
+        <p class="milestone-right2">
+          <label class="milestone-label" for="milestone-label2">Fixed Text</label><br>
+          <input class="milestone-text" id="milestone-text2" type="text" placeholder="Enter Company Name">
+        </p>
+        <p class="milestone-center">
+          <label class="milestone-label" for="mileston-description">Description</label><br>
+          <textarea class="milestone-text" id="milestone-text1" rows="4" cols="50" maxlength="300" placeholder="Enter Company Name"></textarea>
+        </p>
+        <!-- <p class="only-me-checkbox">
+          <input type="checkbox" name="only-me" value="yes">Only Me
+        </p> -->
+        <button class="input-button">Post</button>
+      </form>
+    </div>
+
+    <div id="create-moments" class="tabcontent">
+      <h3>Add a Moment</h3>
+      <form>
+        <p class="moments-left">
+          <label class="moments-label">Type</label><br>
+          <select id="moments-type">
+            <option value="" disabled selected>Select Moments Type</option>
+            <option value="option1">Moments Option 1</option>
+            <option value="option2">Moments Option 2</option>
+            <option value="option3">Moments Option 3</option>
+          </select>
+        </p>
+        <p class="moments-right">
+          <input class="attach-photo" type="image" src="../images/image.png"/>
+          <input type="file" id="qod-moments-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;"/>
+          <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
+          <script>
+            $("input[type='image']").click(function() {
+              $("input[id='qod-moments-image']").click();
+            });
+          </script>
+        </p>
+        <p class="moments-left2">
+          <label class="moments-label" for="moments-label1">Fixed Text</label><br>
+          <input class="moments-text" id="moments-text1" type="text" placeholder="Moments Fixed Text">
+        </p>
+        <p class="moments-right2">
+          <label class="moments-label" for="moments-label2">Fixed Text</label><br>
+          <input class="moments-text" id="moments-text2" type="text" placeholder="Moments Fixed Text">
+        </p>
+        <p class="moments-center">
+          <label class="moments-label" for="mileston-description">Description</label><br>
+          <textarea class="moments-text" id="moments-text1" rows="4" cols="50" maxlength="300" placeholder="Moments Description"></textarea>
+        </p>
+        <button class="input-button">Post</button>
+      </form>
+    </div>
+
+    <div id="create-articles" class="tabcontent">
+      <h3>What do you want to write about? Post it here!</h3>
+      <form>
+        <span class="left">
+          <label id="a-header">Header</label>
+          <input type="text" id="articles-header" name="articles" placeholder="Header">
+        </span>
+        <span class="right">
+          <label id="a-title">Title</label>
+          <input type="text" id="articles-title" name="articles" placeholder="Title">
+        </span>
+        <span class="center">
+          <label id="a-body">Body</label>
+          <textarea id="articles-body" rows="4" cols="50" maxlength="300" placeholder="New article goes here..."></textarea>
+
+          <label id="a-tag">Tags</label>
+          <input type="text" id="articles-tag" name="articles" placeholder="tags">
+        </span>
+
+      </form>
+      <div class="articles-extra-buttons">
+        <input class="attach-photo" type="image" src="../images/image.png"/>
+        <input type="file" id="qod-articles-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;"/>
+        <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
+        <script>
+          $("input[type='image']").click(function() {
+            $("input[id='qod-articles-image']").click();
+          });
+        </script>
+      </div>
+        <button class="input-button">Post</button>
+    </div>
+
+    <div id="create-events" class="tabcontent">
+      <h3>Hosting a theatrical event? Promote it here!</h3>
+      <form>
+        <span class="left">
+          <label id="e-header">Header</label>
+          <input type="text" id="events-header" name="articles" placeholder="Header">
+        </span>
+        <span class="right">
+          <label id="e-title">Title</label>
+          <input type="text" id="events-title" name="articles" placeholder="Title">
+        </span>
+        <span class="center">
+          <label id="e-body">Body</label>
+          <textarea id="events-body" rows="4" cols="50" maxlength="300" placeholder="New event goes here..."></textarea>
+
+          <label id="e-tag">Tags</label>
+          <input type="text" id="events-tag" name="articles" placeholder="tags">
+        </span>
+      </form>
+      <div class="events-extra-buttons">
+        <input class="attach-photo" type="image" src="../images/image.png"/>
+        <input type="file" id="qod-events-image" src="../images/image.png" onchange="companyImage(event)" style="display: none;"/>
+        <canvas width="300" height="300" id="mycanvascompany" style="display: none;"></canvas>
+        <script>
+          $("input[type='image']").click(function() {
+            $("input[id='qod-events-image']").click();
+          });
+        </script>    
+      </div>
+       <button class="input-button">Post</button>
+    </div>
+  </div>
+</div>
+
+
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace("   active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+
+
+
+<script>
+  //open general create modal
+  var modal = document.getElementById('createModal');
+  var btn = document.getElementById("myBtn");
+  var span = document.getElementsByClassName("create-close")[0];
+  btn.onclick = function() {
+    modal.style.display = "block";
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+  <script src="../javascript/register.js"></script>
+  <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
+</div>
+</body>
+</html>

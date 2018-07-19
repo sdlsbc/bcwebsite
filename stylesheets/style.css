@@ -11743,6 +11743,11 @@ ul p:last-child a.down {
         margin-top: 20px;
         margin-right: 14px;
         display: inline-block; }
+        .create-modal-content #create-milestones .milestone-right2 #milestone-fixed-text2 {
+          color: white;
+          margin-left: 20px;
+          background-color: blue;
+          border: 1px solid blue; }
         .create-modal-content #create-milestones .milestone-right2 .milestone-label {
           font-size: 16px;
           font-weight: 400;

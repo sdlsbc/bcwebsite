@@ -78,13 +78,24 @@
     </a>
     <div class="signout">
       <div class="search" id="input-container">
-        <input type="text" id="input" placeholder="Search..." value>
+        <input type="text" id="search_query_input" placeholder="Search..." value>
         <img src="../images/search-icon.png" id="input_img">
       </div>
       <button class="signout-button" onclick="signout()">Sign Out</button>
-    </div>
+    </div> 
   </div>
-  
+
+    <script>
+      var input1 = document.getElementById("search_query_input");
+      input1.addEventListener("keyup", function (event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+          // alert(input1.value);
+          redirectToResultsPage(input1.value)
+          // getSearchResults(input1.value);
+        }
+      });
+    </script>
   <div class="coming-soon">
     <h1>Coming Soon...</h1>
   </div>

@@ -75,12 +75,24 @@
     </a>
     <div class="signout">
       <div class="search" id="input-container">
-        <input type="text" id="input" placeholder="Search..." value>
+        <input type="text" id="search_query_input" placeholder="Search..." value>
         <img src="../images/search-icon.png" id="input_img">
       </div>
       <button class="signout-button" onclick="signout()">Sign Out</button>
-    </div>
+    </div> 
   </div>
+
+    <script>
+      var input1 = document.getElementById("search_query_input");
+      input1.addEventListener("keyup", function (event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+          // alert(input1.value);
+          redirectToResultsPage(input1.value)
+          // getSearchResults(input1.value);
+        }
+      });
+    </script>
 
 <div class="profile_wrapper">
   <div class="pe-wrapper">
@@ -106,7 +118,7 @@
       <h5 id="user_job_company"></h5>
     </div>
     <div class="pe-role">
-      <h6 id="user_job_title">Entrepreneur</h6>
+      <h6 id="user_job_title"></h6>
     </div>
     <div class="pe-follow">
       <button class="follow" onclick="checkFollowStatus()" id="user_profile_follow_button">Follow</button>
@@ -532,6 +544,11 @@
 <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
 <script type="text/javascript" src="../javascript/createThings.js"></script>
 <script type="text/javascript" src="../javascript/article.js"></script>
+
+<!-- js for following and filling the user profile -->
+<script type="text/javascript" src="../javascript/follow-unfollow.js"></script>
+<script type="text/javascript" src="../javascript/user_profile.js"></script>
+
 
 </body>
 </html>

@@ -500,6 +500,7 @@ function createPost(body) {
 	var ALERT_BUTTON_TEXT = "x";
 	if (document.getElementById) {
 		window.alert = function (txt) {
+			// allowOutsideClick: true;
 			createCustomAlert(txt);
 		}
 	}
@@ -552,3 +553,16 @@ window.onscroll = function (ev) {
 		}
 	}
 };
+
+
+
+
+
+
+
+$('#milestone-description').keypress(function(){
+  if(this.value.length > 300){
+      return false;
+  }
+$("#remaining").html("Remaining characters : " +(300 - this.value.length));
+});

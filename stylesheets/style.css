@@ -6002,7 +6002,7 @@ $other-blue-light: #;*/
       margin-left: 50px;
       display: inline-block; }
       .create-modal-content #create-milestones .milestone-left2 .milestone-label {
-        width: 33%;
+        width: 36%;
         font-size: 12px;
         margin-left: 9px;
         font-weight: 400;
@@ -6014,7 +6014,7 @@ $other-blue-light: #;*/
           content: " *";
           color: red; }
       .create-modal-content #create-milestones .milestone-left2 input[type=text] {
-        width: 58%;
+        width: 55%;
         height: 25px;
         font-size: 12px;
         margin-top: 5px;

@@ -12,7 +12,7 @@
  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
-<body onload="checkLocalStorage('user_profile') " id="body">
+<body onload="checkLocalStorage('user_profile');load_xyz_UserData() " id="body">
     <!-- sidebar. -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closeNav()">&times;</a>
@@ -146,23 +146,23 @@
       <!-- <a href="#"><p>Milestones</p></a>
       <a href="#"><p>Moments</p></a> -->
       <a href="#" onclick="toggleAndLoadFollowings();">
-        <p class="p-tag" id="following">Following</p>
+        <p class="p-tag" id="user-following">Following</p>
       </a>
       <a href="#" onclick="toggleAndLoadFollowers();">
-        <p class="p-tag" id="followers">Followers</p>
+        <p class="p-tag" id="user-followers">Followers</p>
         </a>
       <a href="#" onclick="toggleVisibility('profile-calendar');">
         <p class="p-tag" id="calendar">Calendar</p>
       </a>
       <a href="#" onclick="toggleVisibility('profile-postsbox');">
-        <p class="p-tag" id="userfeed">User Feed</p>
+        <p class="p-tag" id="user-userfeed">User Feed</p>
       </a>
       
       <div id="profile-postsbox">
-        <h1>Userfeed is Coming Soon...</h1>
+        <h1></h1>
       </div>
       <div id="profile-calendar">
-        <h1>Calendar is Coming Soon...</h1>
+        <h1></h1>
       </div>
       <div id="profile-followers">
         <h1>Followers are Coming Soon...</h1>
@@ -542,7 +542,7 @@
 <script src="../javascript/register.js"></script>
 <script type="text/javascript" src="../javascript/jsDate.js"></script>
 <script type="text/javascript" src="../javascript/search.js"></script>
-<script type="text/javascript" src="../javascript/profile.js"></script>
+<!-- <script type="text/javascript" src="../javascript/profile.js"></script> -->
 <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
 <script type="text/javascript" src="../javascript/createThings.js"></script>
 <script type="text/javascript" src="../javascript/article.js"></script>

@@ -4039,7 +4039,7 @@ $other-blue-light: #;*/
         padding-bottom: 15px; }
     .profile_wrapper .second_nav_right #profile-postsbox {
       min-height: 100%;
-      background-color: white;
+      /*background-color: white;*/
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -4066,47 +4066,48 @@ $other-blue-light: #;*/
         font-weight: 400;
         margin-bottom: 3px; }
       .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post {
-        box-shadow: 0 6px 2px -2px rgba(220, 220, 220, 0.5);
         background-color: white;
-        margin-bottom: 20px;
+        margin-bottom: -20px;
         border-radius: 3%;
-        width: 100%;
+        width: 47%;
         height: auto;
-        padding: 10px;
         overflow: none; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post:hover {
+          color: white;
           background: linear-gradient(#226BE4 10%, white 45%, white); }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .publisher {
           float: left; }
           .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .publisher .userfeed-publisher-image {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             margin-left: 14px;
-            margin-top: -13px; }
+            margin-top: 5px; }
           .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .publisher .userfeed-name {
             font-family: "Roboto", sans-serif;
-            font-size: 20px;
+            font-size: 17px;
             font-weight: 400;
-            margin-left: 15px;
-            margin-top: 4px; }
+            margin-left: 11px;
+            margin-top: 21px; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-image {
-          width: 104%;
-          margin-left: -2%;
-          height: auto;
+          width: 100%;
+          height: 155px;
           padding-bottom: 5px; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-title {
           font-family: "Roboto", sans-serif;
           float: left;
-          margin-left: 20px;
-          color: #226BE4;
-          font-size: 18px; }
+          margin-left: 19px;
+          margin-top: 25px;
+          color: #1B5AC3;
+          font-size: 14px;
+          font-weight: 900; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-favorite {
           width: 100%; }
           .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-favorite .heart {
             width: 25px;
             height: 25px;
             float: left;
+            margin-left: 5%;
             margin-top: -4px; }
             .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-favorite .heart:hover {
               background-color: red; }
@@ -4117,24 +4118,23 @@ $other-blue-light: #;*/
             margin-top: 5px;
             color: red; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .comment_box {
-          width: 20px;
-          height: 20px;
-          float: left;
-          margin-right: 9px;
+          width: 22px;
+          height: 22px;
+          float: right;
+          margin-right: 24%;
           margin-top: -32px;
           margin-left: 51px; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .share_icon {
-          width: 18px;
-          height: 18px;
-          float: left;
-          margin-right: 9px;
-          margin-top: -32px;
-          margin-left: 87px; }
+          width: 22px;
+          height: 22px;
+          float: right;
+          margin-right: 42%;
+          margin-top: -32px; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .flag_icon {
-          width: 18px;
-          height: 18px;
-          float: left;
-          margin-right: 9px;
+          width: 22px;
+          height: 22px;
+          float: right;
+          margin-right: 6%;
           margin-top: -31px;
           margin-left: 122px; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .time {
@@ -4155,12 +4155,16 @@ $other-blue-light: #;*/
             margin-left: 174px;
             margin-top: -32.5px; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .userfeed-description {
-          text-align: justify;
+          width: 90%;
+          color: gray;
+          overflow: hidden;
+          font-size: 14px;
           margin: 0px 8px;
-          width: 94%;
-          font-size: 16px;
-          padding: 10px;
-          overflow: hidden; }
+          margin-top: -5%;
+          margin-left: 6%;
+          font-weight: 100;
+          padding-bottom: 5%;
+          text-align: justify; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post button {
           background-color: rgba(51, 153, 255, 0.3);
           border: 1px solid #F7FAFF;
@@ -4194,7 +4198,13 @@ $other-blue-light: #;*/
             margin-bottom: 20px;
             font-family: "Roboto", sans-serif; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .hidden-post {
-          max-height: 80px; }
+          width: 90%;
+          color: gray;
+          font-size: 14px;
+          max-height: 80px;
+          margin-top: -10px;
+          font-weight: 100;
+          padding-bottom: 25%; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .revealed-post {
           max-height: none; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .readMore {

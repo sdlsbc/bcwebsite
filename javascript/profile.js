@@ -356,19 +356,19 @@ function createUserFeedArticles(body) {
     div.appendChild(favorite);
     // button_row.appendChild(favorite_num);
 
-    let comment = document.createElement('div');
-    comment.classList.add('comment');
-    let comment_box = document.createElement('img');
-    comment_box.src = '../images/newsfeed_buttons/comment.png';
-    comment_box.classList.add('comment_box');
-    div.appendChild(comment_box);
-
     let share = document.createElement('div');
     share.classList.add('share');
     let share_icon = document.createElement('img');
     share_icon.src = '../images/newsfeed_buttons/share.png';
     share_icon.classList.add('share_icon');
     div.appendChild(share_icon);
+
+    let comment = document.createElement('div');
+    comment.classList.add('comment');
+    let comment_box = document.createElement('img');
+    comment_box.src = '../images/newsfeed_buttons/comment.png';
+    comment_box.classList.add('comment_box');
+    div.appendChild(comment_box);
 
     let flag = document.createElement('div');
     flag.classList.add('flag');
@@ -377,19 +377,19 @@ function createUserFeedArticles(body) {
     flag_icon.classList.add('flag_icon');
     div.appendChild(flag_icon);
 
-    let time = document.createElement('div');
-    time.classList.add('time');
-    let clock = document.createElement('img');
-    clock.src = '../images/clock.png';
-    clock.classList.add('clock');
-    time.appendChild(clock);
+    // let time = document.createElement('div');
+    // time.classList.add('time');
+    // let clock = document.createElement('img');
+    // clock.src = '../images/clock.png';
+    // clock.classList.add('clock');
+    // time.appendChild(clock);
 
-    let timeSince = document.createElement('p');
-    let timeSinceText = document.createTextNode(howLongAgo(new Date(body["Created Date"])));
-    timeSince.appendChild(timeSinceText);
-    time.appendChild(timeSince);
+    // let timeSince = document.createElement('p');
+    // let timeSinceText = document.createTextNode(howLongAgo(new Date(body["Created Date"])));
+    // timeSince.appendChild(timeSinceText);
+    // time.appendChild(timeSince);
 
-    div.appendChild(time);
+    // div.appendChild(time);
 
     let title = document.createElement('p');
     let titleNode = document.createTextNode(body.title);
@@ -408,22 +408,22 @@ function createUserFeedArticles(body) {
 
     description_div.appendChild(description);
 
-    let readMore = document.createElement('BUTTON');
-    readMore.classList.add('readMore');
-    let readMoreNode = document.createTextNode('Read More');
-    readMore.appendChild(readMoreNode);
-    description_div.appendChild(readMore)
+    // let readMore = document.createElement('BUTTON');
+    // readMore.classList.add('readMore');
+    // let readMoreNode = document.createTextNode('Read More');
+    // readMore.appendChild(readMoreNode);
+    // description_div.appendChild(readMore)
 
-    readMore.onclick = function (ev) {
-        var target = ev.srcElement || ev.target;
-        if (target.textContent == "Read More") {
-            document.getElementById(body.id).classList.remove('hidden-post');
-            target.textContent = "Read Less";
-        } else {
-            document.getElementById(body.id).classList.add('hidden-post');
-            target.textContent = "Read More";
-        }
-    }
+    // readMore.onclick = function (ev) {
+    //     var target = ev.srcElement || ev.target;
+    //     if (target.textContent == "Read More") {
+    //         document.getElementById(body.id).classList.remove('hidden-post');
+    //         target.textContent = "Read Less";
+    //     } else {
+    //         document.getElementById(body.id).classList.add('hidden-post');
+    //         target.textContent = "Read More";
+    //     }
+    // }
 
     div.appendChild(description_div);
 

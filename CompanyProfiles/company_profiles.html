@@ -715,17 +715,15 @@ $(function() {
         </p>
 
         <p class="milestone-left2">
-          <label class="milestone-label" for="milestone-label1" id="milestone-fixed-text1"></label>
-          <br>
+          <label class="milestone-label" for="milestone-label1" id="milestone-fixed-text1">Milestone Type</label>
           <input class="milestone-text" id="milestone-text1" type="text" placeholder="" onfocus="checkIfMilestoneTypeSelected()">
         </p>
         <p class="milestone-right2">
           <select id="milestone-fixed-text2" onfocus="checkIfMilestoneTypeSelected()">
-            <option value="" disabled selected>in/at</option>
+            <option value="" disabled selected>In / At</option>
             <option value="in">In</option>
             <option value="at">At</option>
           </select>
-          <br>
           <input type="text" id="city" list="comp-prod-list" onfocus="checkIfMilestoneTypeSelected()" placeholder="Enter Company/Production Name">
           <datalist id="comp-prod-list">
           </datalist>

@@ -539,6 +539,10 @@
         margin-left: 9px;
         font-family: $font;
         color: $main-blue;
+        &:after { 
+          content: " *"; 
+          color: red;
+        }
       }
       #milestone-type {
         width: 100%;
@@ -566,25 +570,34 @@
     }
     .milestone-left2 {
       width: 40%;
+      height: 47px;
       float: left;
       margin-top: 14px;
       margin-left: 50px;
       display: inline-block;
       .milestone-label {
+        width: 33%;
         font-size: 12px;
+        margin-left: 9px;
         font-weight: 400;
-        margin-left: 16px;
-        font-family: $font;
         color: $main-blue;
+        font-family: $font;
+        display: inline-block;
+        font-family: "Roboto", sans-serif;
+        &:after { 
+          content: " *"; 
+          color: red;
+        }
       }
-      input[type=text] {
-        width: 95%;
-        height: 35px;
+      input[type=text] {     
+        width: 58%;
+        height: 25px;
         font-size: 12px;
         margin-top: 5px;
         font-weight: 400;
         border-radius: 25px;
-        padding-left: 15px;
+        padding-left: 12px;
+        display: inline-block;
         border: 1px solid $main-blue;
       }
     }
@@ -594,21 +607,27 @@
       margin-top: -8px;
       margin-right: 55px;
       display: inline-block;
-      .milestone-label {
-        font-size: 12px;
-        font-weight: 400;
-        margin-left: 16px;
-        font-family: $font;
+      #milestone-fixed-text2 {
+        width: 32%;
+        padding: 5px;
         color: $main-blue;
+        display: inline-block;
+        background-color: white;
+        border: 1px solid $main-blue;
+        &:after { 
+          content: " *"; 
+          color: red;
+        }
       }
       input[type=text] {
-        width: 95%;
-        height: 35px;
-        font-size: 12px;
+        width: 55%;
+        height: 25px;
         margin-top: 5px;
+        font-size: 12px;
         font-weight: 400;
+        padding-left: 12px;
         border-radius: 25px;
-        padding-left: 15px;
+        display: inline-block;
         border: 1px solid $main-blue;
       }
     }
@@ -620,9 +639,13 @@
       .milestone-label {
         font-size: 12px;
         font-weight: 400;
-        margin-left: 16px;
+        margin-left: 12px;
         font-family: $font;
         color: $main-blue;
+        &:after { 
+          content: " *"; 
+          color: red;
+        }
       }
       .milestone-text {
         width: 100%;
@@ -683,6 +706,10 @@
         margin-left: 9px;
         font-family: $font;
         color: $main-blue;
+        &:after { 
+          content: " *"; 
+          color: red;
+        }
       }
       #moments-type {
         width: 100%;
@@ -723,6 +750,10 @@
         margin-left: 16px;
         font-family: $font;
         color: $main-blue;
+        &:after { 
+          content: " *"; 
+          color: red;
+        }
       }
       input[type=text] {
         width: 95%;
@@ -747,6 +778,10 @@
         margin-left: 16px;
         font-family: $font;
         color: $main-blue;
+        &:after { 
+          content: " *"; 
+          color: red;
+        }
       }
       input[type=text] {
         width: 95%;
@@ -770,6 +805,10 @@
         margin-left: 16px;
         font-family: $font;
         color: $main-blue;
+        &:after { 
+          content: " *"; 
+          color: red;
+        }
       }
       .moments-text {
         width: 100%;
@@ -824,6 +863,10 @@
         font-weight: 400;
         font-family: $font;
         margin-left: 45px;
+        &:after { 
+          content: " *"; 
+          color: red;
+        }
       }
       #articles-header{
         margin-left: 8%;
@@ -849,6 +892,10 @@
         font-weight: 400;
         font-family: $font;
         margin-left: 45px;
+        &:after { 
+          content: " *"; 
+          color: red;
+        }
       }
       #articles-title {
         margin-right: 8%;
@@ -874,6 +921,10 @@
         font-family: $font;
         margin-top: -40px;
         margin-left: 45px;
+        &:after { 
+          content: " *"; 
+          color: red;
+        }
       }
       #articles-body {
         float: left;
@@ -895,6 +946,10 @@
         font-weight: 400;
         font-family: $font;
         margin-left: 45px;
+        &:after { 
+          content: " *"; 
+          color: red;
+        }
       }
       #articles-tag {
         margin-left: 4%;
@@ -970,6 +1025,10 @@
         font-weight: 400;
         font-family: $font;
         margin-left: 45px;
+        &:after { 
+          content: " *"; 
+          color: red;
+        }
       }
       #events-header{
         margin-left: 8%;
@@ -995,6 +1054,10 @@
         font-weight: 400;
         font-family: $font;
         margin-left: 45px;
+        &:after { 
+          content: " *"; 
+          color: red;
+        }
       }
       #events-title {
         margin-right: 8%;
@@ -1020,6 +1083,10 @@
         font-family: $font;
         margin-top: -40px;
         margin-left: 45px;
+        &:after { 
+          content: " *"; 
+          color: red;
+        }
       }
       #events-body {
         float: left;
@@ -1041,6 +1108,10 @@
         font-family: $font;
         font-size: 12px;
         margin-left: 45px;
+        &:after { 
+          content: " *"; 
+          color: red;
+        }
       }
       #events-tag {
         margin-left: 4%;

@@ -5971,6 +5971,9 @@ $other-blue-light: #;*/
         margin-left: 9px;
         font-family: "Roboto", sans-serif;
         color: #226BE4; }
+        .create-modal-content #create-milestones .milestone-left .milestone-label:after {
+          content: " *";
+          color: red; }
       .create-modal-content #create-milestones .milestone-left #milestone-type {
         width: 100%;
         color: white;
@@ -5993,24 +5996,32 @@ $other-blue-light: #;*/
         margin-left: 18px; }
     .create-modal-content #create-milestones .milestone-left2 {
       width: 40%;
+      height: 47px;
       float: left;
       margin-top: 14px;
       margin-left: 50px;
       display: inline-block; }
       .create-modal-content #create-milestones .milestone-left2 .milestone-label {
+        width: 33%;
         font-size: 12px;
+        margin-left: 9px;
         font-weight: 400;
-        margin-left: 16px;
+        color: #226BE4;
         font-family: "Roboto", sans-serif;
-        color: #226BE4; }
+        display: inline-block;
+        font-family: "Roboto", sans-serif; }
+        .create-modal-content #create-milestones .milestone-left2 .milestone-label:after {
+          content: " *";
+          color: red; }
       .create-modal-content #create-milestones .milestone-left2 input[type=text] {
-        width: 95%;
-        height: 35px;
+        width: 58%;
+        height: 25px;
         font-size: 12px;
         margin-top: 5px;
         font-weight: 400;
         border-radius: 25px;
-        padding-left: 15px;
+        padding-left: 12px;
+        display: inline-block;
         border: 1px solid #226BE4; }
     .create-modal-content #create-milestones .milestone-right2 {
       width: 40%;
@@ -6018,20 +6029,25 @@ $other-blue-light: #;*/
       margin-top: -8px;
       margin-right: 55px;
       display: inline-block; }
-      .create-modal-content #create-milestones .milestone-right2 .milestone-label {
-        font-size: 12px;
-        font-weight: 400;
-        margin-left: 16px;
-        font-family: "Roboto", sans-serif;
-        color: #226BE4; }
+      .create-modal-content #create-milestones .milestone-right2 #milestone-fixed-text2 {
+        width: 32%;
+        padding: 5px;
+        color: #226BE4;
+        display: inline-block;
+        background-color: white;
+        border: 1px solid #226BE4; }
+        .create-modal-content #create-milestones .milestone-right2 #milestone-fixed-text2:after {
+          content: " *";
+          color: red; }
       .create-modal-content #create-milestones .milestone-right2 input[type=text] {
-        width: 95%;
-        height: 35px;
-        font-size: 12px;
+        width: 55%;
+        height: 25px;
         margin-top: 5px;
+        font-size: 12px;
         font-weight: 400;
+        padding-left: 12px;
         border-radius: 25px;
-        padding-left: 15px;
+        display: inline-block;
         border: 1px solid #226BE4; }
     .create-modal-content #create-milestones .milestone-center {
       width: 86%;
@@ -6041,9 +6057,12 @@ $other-blue-light: #;*/
       .create-modal-content #create-milestones .milestone-center .milestone-label {
         font-size: 12px;
         font-weight: 400;
-        margin-left: 16px;
+        margin-left: 12px;
         font-family: "Roboto", sans-serif;
         color: #226BE4; }
+        .create-modal-content #create-milestones .milestone-center .milestone-label:after {
+          content: " *";
+          color: red; }
       .create-modal-content #create-milestones .milestone-center .milestone-text {
         width: 100%;
         height: 100px;
@@ -6096,6 +6115,9 @@ $other-blue-light: #;*/
         margin-left: 9px;
         font-family: "Roboto", sans-serif;
         color: #226BE4; }
+        .create-modal-content #create-moments .moments-left .moments-label:after {
+          content: " *";
+          color: red; }
       .create-modal-content #create-moments .moments-left #moments-type {
         width: 100%;
         color: white;
@@ -6131,6 +6153,9 @@ $other-blue-light: #;*/
         margin-left: 16px;
         font-family: "Roboto", sans-serif;
         color: #226BE4; }
+        .create-modal-content #create-moments .moments-left2 .moments-label:after {
+          content: " *";
+          color: red; }
       .create-modal-content #create-moments .moments-left2 input[type=text] {
         width: 95%;
         height: 35px;
@@ -6152,6 +6177,9 @@ $other-blue-light: #;*/
         margin-left: 16px;
         font-family: "Roboto", sans-serif;
         color: #226BE4; }
+        .create-modal-content #create-moments .moments-right2 .moments-label:after {
+          content: " *";
+          color: red; }
       .create-modal-content #create-moments .moments-right2 input[type=text] {
         width: 95%;
         height: 35px;
@@ -6172,6 +6200,9 @@ $other-blue-light: #;*/
         margin-left: 16px;
         font-family: "Roboto", sans-serif;
         color: #226BE4; }
+        .create-modal-content #create-moments .moments-center .moments-label:after {
+          content: " *";
+          color: red; }
       .create-modal-content #create-moments .moments-center .moments-text {
         width: 100%;
         height: 100px;
@@ -6220,6 +6251,9 @@ $other-blue-light: #;*/
         font-weight: 400;
         font-family: "Roboto", sans-serif;
         margin-left: 45px; }
+        .create-modal-content #create-articles .left #a-header:after {
+          content: " *";
+          color: red; }
       .create-modal-content #create-articles .left #articles-header {
         margin-left: 8%;
         width: 86%;
@@ -6242,6 +6276,9 @@ $other-blue-light: #;*/
         font-weight: 400;
         font-family: "Roboto", sans-serif;
         margin-left: 45px; }
+        .create-modal-content #create-articles .right #a-title:after {
+          content: " *";
+          color: red; }
       .create-modal-content #create-articles .right #articles-title {
         margin-right: 8%;
         width: 86%;
@@ -6264,6 +6301,9 @@ $other-blue-light: #;*/
         font-family: "Roboto", sans-serif;
         margin-top: -40px;
         margin-left: 45px; }
+        .create-modal-content #create-articles .center #a-body:after {
+          content: " *";
+          color: red; }
       .create-modal-content #create-articles .center #articles-body {
         float: left;
         width: 93%;
@@ -6283,6 +6323,9 @@ $other-blue-light: #;*/
         font-weight: 400;
         font-family: "Roboto", sans-serif;
         margin-left: 45px; }
+        .create-modal-content #create-articles .center #a-tag:after {
+          content: " *";
+          color: red; }
       .create-modal-content #create-articles .center #articles-tag {
         margin-left: 4%;
         width: 88%;
@@ -6348,6 +6391,9 @@ $other-blue-light: #;*/
         font-weight: 400;
         font-family: "Roboto", sans-serif;
         margin-left: 45px; }
+        .create-modal-content #create-events .left #e-header:after {
+          content: " *";
+          color: red; }
       .create-modal-content #create-events .left #events-header {
         margin-left: 8%;
         width: 86%;
@@ -6370,6 +6416,9 @@ $other-blue-light: #;*/
         font-weight: 400;
         font-family: "Roboto", sans-serif;
         margin-left: 45px; }
+        .create-modal-content #create-events .right #e-title:after {
+          content: " *";
+          color: red; }
       .create-modal-content #create-events .right #events-title {
         margin-right: 8%;
         width: 86%;
@@ -6392,6 +6441,9 @@ $other-blue-light: #;*/
         font-family: "Roboto", sans-serif;
         margin-top: -40px;
         margin-left: 45px; }
+        .create-modal-content #create-events .center #e-body:after {
+          content: " *";
+          color: red; }
       .create-modal-content #create-events .center #events-body {
         float: left;
         width: 93%;
@@ -6411,6 +6463,9 @@ $other-blue-light: #;*/
         font-family: "Roboto", sans-serif;
         font-size: 12px;
         margin-left: 45px; }
+        .create-modal-content #create-events .center #e-tag:after {
+          content: " *";
+          color: red; }
       .create-modal-content #create-events .center #events-tag {
         margin-left: 4%;
         width: 88%;

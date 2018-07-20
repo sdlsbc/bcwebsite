@@ -52,11 +52,11 @@ function fetchCompanyProfileData() {
 
                 var imageSrc = response.response.user.image;
                 var fullName = response.response.company.name;
-                // var handle = response.response.user.handle;
-
+                var handle = response.response.user.handle;
+                
                 document.getElementById('company_image_here').src = profile_image;
                 document.getElementById('company_name').innerHTML = fullName;
-                // document.getElementById('user_handle').innerHTML = "@" + handle;
+                document.getElementById('xyz_company_handle').innerHTML = "@" + handle;
 
             }
         })

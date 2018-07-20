@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
- <link rel="icon" href="../images/bc32_mcU_icon.ico" type="image/x-icon">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <meta charset="UTF-8">
- <meta name="google" content="notranslate">
- <meta http-equiv="Content-Language" content="en">
- <link href="../stylesheets/style.css" rel="stylesheet">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
- <script src="http://code.jquery.com/jquery-1.11.1.js" type="text/javascript"></script>
- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="icon" href="../images/bc32_mcU_icon.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Broadway Connected</title>
+  <link href="../stylesheets/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-1.11.1.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
 </head>
 
-<body onload="checkLocalStorage('user_company_profile');load_xyz_companyData() " id="body">
+<div class="body">
+<body onload="checkLocalStorage('explore')" id="body">
     <!-- sidebar. -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closeNav()">&times;</a>
@@ -22,12 +23,12 @@
             <p class="navname"></p>
         </center>
         <center>
-      <p class="profile">
-        <button class="my-profile-btn"><a href="../Profile/profile.html" id="profile-a"><p>My Profile</p></a></button>
-      </p>
-    </center>
-    <br/>
-      <div class="sidenav-links">
+          <p class="profile">
+            <button class="my-profile-btn"><a href="../Profile/profile.html" id="profile-a"><p>My Profile</p></a></button>
+          </p>
+        </center>
+        <br/>
+        <div class="sidenav-links">
         <a href="../Newsfeed/newsfeed.html">
           <img src="../images/rss@3x.png" width="19" height="19">&nbsp&nbsp Newsfeed
         </a>
@@ -52,15 +53,15 @@
         <a href="../B.O.B./bob.html">
           <img src="../images/briefcase@3x.png" width="19" height="19">&nbsp&nbsp Business of Broadway 
         </a>
-        <a href="../Contact/contact.html">
+        <a href="#">
           <img src="../images/info@3x.png" width="19" height="19">&nbsp&nbsp FAQ & Contact Us
         </a>
       </div>
-  </div>
-  <!-- sidebar. --> 
+    </div>
+
   <div class="navbar">
     <span class="open_sidenav" onclick="openNav()">
-      <img src="../images/side button2.png">
+      <img src="../images/side button2.png" style="margin-left: 8px;margin-top: -6px;">
     </span>
     <a href="../Newsfeed/newsfeed.html" class="logo-a">
       <img class="logo" src="../images/bc_solo_logo.png">
@@ -72,7 +73,8 @@
       <p>Discover</p>
     </a>
     <a href='../Explore/explore.html'>
-      <p>Explore</p>
+      <p class="explore-p-tag" style="border-bottom: 4px solid #226BE4;
+      padding-bottom: 15px; color: #226BE4;">Explore</p>
     </a>
     <div class="signout">
       <div class="search" id="input-container">
@@ -94,250 +96,32 @@
         }
       });
     </script>
-<div class="profile_wrapper">
-  <div class="company_profiles_wrapper">
-    <div class="user_img" id="user_img">
-      <img id="company_image_here">
-    </div>
-  </div>
+    <script>
+      var input1 = document.getElementById("search_query_input");
+      input1.addEventListener("keyup", function (event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+          // alert(input1.value);
+          redirectToResultsPage(input1.value)
+          // getSearchResults(input1.value);
+        }
+      });
+    </script>
   
-  <div class="cp-header">
-    <h2 id="company_name">Company Name</h2>
-    <h3 id="xyz_company_handle">@handle</h3>
-    <h5>GENERAL MANAGEMENT</h5>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-    </p>
-    <div class="cp-est">
-      <img src="../images/calendar.png">
-      <h3>Est: 1996</h3>
-    </div>
-    <div class="cp-follow">
-      <button class="follow" onclick="checkFollowStatus('company')" id="company_profile_follow_button">Follow</button>
-    </div>
-    <div class="cp-socials">
-      <button class="media">AF</button>
-      <button class="media">NG</button>
-      <button class="media">914</button>
-      <button class="media">JM</button>
-      <button class="media">RM</button>
-    </div>
-  </div>
-  <!-- <div class="cp-edit">
-    <a href="#" id="myModal"><img src="../images/penciliconblue.png" class="edit-button"></a>
-  </div> -->
   
-  <h4>Employee Roster</h4>
-  <!-- <div class="cp-employee-edit">
-    <a href="#" id="myModaly"><img src="../images/penciliconblue.png" class="edit-button"></a>
-  </div> -->
-  <div class="cp-row1">
-    <div class="cp-current-cast">
-      <img src="../images/default-person.png">
-      <h3>Full Name</h3>
-      <p id="xyz_company_handle">@handle</p>
-      <h4>Company Role</h4>
-    </div>
-    <div class="cp-current-cast">
-      <img src="../images/default-person.png">
-      <h3>Full Name</h3>
-      <p>@handle</p>
-      <h4>Company Role</h4>
-    </div>
-    <div class="cp-current-cast">
-      <img src="../images/default-person.png">
-      <h3>Full Name</h3>
-      <p>@handle</p>
-      <h4>Company Role</h4>
-    </div>
-    <div class="cp-current-cast">
-      <img src="../images/default-person.png">
-      <h3>Full Name</h3>
-      <p>@handle</p>
-      <h4>Company Role</h4>
-    </div>
-    <div class="cp-current-cast">
-      <img src="../images/default-person.png">
-      <h3>Full Name</h3>
-      <p>@handle</p>
-      <h4>Company Role</h4>
-    </div>
-    <div class="cp-current-cast">
-      <img src="../images/default-person.png">
-      <h3>Full Name</h3>
-      <p>@handle</p>
-      <h4>Company Role</h4>
-    </div>
-    <div class="cp-current-cast">
-      <img src="../images/default-person.png">
-      <h3>Full Name</h3>
-      <p>@handle</p>
-      <h4>Company Role</h4>
-    </div>
+  <div class="qod-coming-soon">
+    <h1>Please hold...</h1>
+    <h2>At this time Question Of The Day can be found only on our app for iOS.  To download click <a href="#">here</a>.  For further information please feel free to <a href="../Contact/contact.html">contact</a> us.<h2>
   </div>
-  <br><br><br>
-  <div class="cp-row2">
-    <div class="cp-current-cast">
-      <img src="../images/default-person.png">
-      <h3>Full Name</h3>
-      <p>@handle</p>
-      <h4>Company Role</h4>
-    </div>
-    <div class="cp-current-cast">
-      <img src="../images/default-person.png">
-      <h3>Full Name</h3>
-      <p>@handle</p>
-      <h4>Company Role</h4>
-    </div>
-    <div class="cp-current-cast">
-      <img src="../images/default-person.png">
-      <h3>Full Name</h3>
-      <p>@handle</p>
-      <h4>Company Role</h4>
-    </div>
-    <div class="cp-current-cast">
-      <img src="../images/default-person.png">
-      <h3>Full Name</h3>
-      <p>@handle</p>
-      <h4>Company Role</h4>
-    </div>
-    <div class="cp-current-cast">
-      <img src="../images/default-person.png">
-      <h3>Full Name</h3>
-      <p>@handle</p>
-      <h4>Company Role</h4>
-    </div>
-    <div class="cp-current-cast">
-      <img src="../images/default-person.png">
-      <h3>Full Name</h3>
-      <p>@handle</p>
-      <h4>Company Role</h4>
-    </div>
-    <div class="cp-current-cast">
-      <img src="../images/default-person.png">
-      <h3>Full Name</h3>
-      <p>@handle</p>
-      <h4>Company Role</h4>
-    </div>
-  </div>
-
-  <h6>Clients</h6>
-  <!-- <div class="cp-client-edit">
-    <a href="#" id="myModalz"><img src="../images/penciliconblue.png" class="edit-button"></a>
-  </div> -->
-  <div class="client-list-row1">
-    <div class="cp-clients">
-      <img src="../images/placeholder-bc.png">
-      <h5>Client Name</h5>
-    </div>
-    <div class="cp-clients">
-      <img src="../images/placeholder-bc.png">
-      <h5>Client Name</h5>
-    </div>
-    <div class="cp-clients">
-      <img src="../images/placeholder-bc.png">
-      <h5>Client Name</h5>
-    </div>
-    <div class="cp-clients">
-      <img src="../images/placeholder-bc.png">
-      <h5>Client Name</h5>
-    </div>
-    <div class="cp-clients">
-      <img src="../images/placeholder-bc.png">
-      <h5>Client Name</h5>
-    </div>
-    <div class="cp-clients">
-      <img src="../images/placeholder-bc.png">
-      <h5>Client Name</h5>
-    </div>
-  </div>
-</div>
 
   <script>
-     function openNav() {
-       document.getElementById("mySidenav").style.width = "250px";
-     }
-     function closeNav() {
-       document.getElementById("mySidenav").style.width = "0";
-     }
-  </script>
-
-
-
-<!-- =============== EDIT MODAL ================ -->
-<div id="createModalx" class="create-modal">
-  <div class="create-modal-contentx" id="create-modal-contentx">
-  <span class="create-closex">&times;</span>
-    <h1>Edit Information</h1>
-    <form>
-      <span class="cp-left1">
-        <label id="edit-name">COMPANY NAME</label>
-        <br>
-        <input type="text" id="input-first" name="articles">
-      </span>
-      <span class="cp-right1">
-        <label id="edit-type">TYPE OF COMPANY</label>
-        <!-- <br> -->
-        <input type="text" id="input-last" name="articles">
-      </span>
-      <span class="cp-center">
-        <label id="edit-desc">DESCRIPTION</label>
-        <br>
-        <input type="text" id="input-email" name="articles">
-      </span>
-      <span class="cp-left2">
-        <label id="cp-new-password">NEW PASSWORD</label>
-        <br>
-        <input type="text" id="input-new" name="articles" placeholder="John">
-      </span>
-      <span class="cp-right2">
-        <label id="cp-confirm-password">CONFIRM PASSWORD</label>
-        <br>
-        <input type="text" id="input-confirm" name="articles" placeholder="John">
-      </span>
-      <button class="save-changes" onclick="signout()">Save Changes</button>
-    </form>
-  </div>
-</div>
-
-<script>
-  var modalx = document.getElementById('createModalx');
-  var btnx = document.getElementById("myModal");
-  var spanx = document.getElementsByClassName("create-closex")[0];
-  btnx.onclick = function() {
-    modalx.style.display = "block";
-  }
-  spanx.onclick = function() {
-    modalx.style.display = "none";
-  }
-  window.onclick = function(event) {
-    if (event.target == modalx) {
-      modalx.style.display = "none";
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
     }
-  }
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
 
 
  <!-- ========== M I L E S T O N E S  M O D A L ===========  -->
@@ -589,7 +373,7 @@
         <span class="center">
           <label id="a-body">Body</label>
           <input type="text" class="articles-body" id="articles-body" name="articles" placeholder="New article goes here...">
-          <span id='remaining-article' class="remaining-article" style="color: #226BE4; font-size: 14px;"></span>
+          <span class="remaining-article" id='remaining-article' style="color: #226BE4; font-size: 14px;"></span>
 
           <label id="a-tag">Tags</label>
           <input type="text" id="articles-tag" name="articles" placeholder="tags">
@@ -677,29 +461,10 @@
 <script src="../javascript/register.js"></script>
 <script type="text/javascript" src="../javascript/jsDate.js"></script>
 <script type="text/javascript" src="../javascript/search.js"></script>
+<script type="text/javascript" src="../javascript/profile.js"></script>
 <script type="text/javascript" src="../javascript/loadAndRender.js"></script>
 <script type="text/javascript" src="../javascript/createThings.js"></script>
 <script type="text/javascript" src="../javascript/article.js"></script>
 
-<!-- js for following and filling the user profile -->
-<script type="text/javascript" src="../javascript/follow-unfollow.js"></script>
-<script type="text/javascript" src="../javascript/user-company-profile.js"></script>
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

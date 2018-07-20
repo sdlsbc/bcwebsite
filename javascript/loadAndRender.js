@@ -56,9 +56,10 @@ function checkLocalStorage(page) {
 function loadAndShowPosts() {
 	wait = true;
 	document.getElementById('loading').classList.remove('hidden');
+	var createdby = "Create By";
 	getPostsItems()
 		.then(newsRaw => {
-			//console.log(newsRaw)
+			// console.log("This is newfeed elememts ---- trying to seee created by",newsRaw.createdby);
 			newsRaw.forEach(element => {
 				createPost(element);
 			});

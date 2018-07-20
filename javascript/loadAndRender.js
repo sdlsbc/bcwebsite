@@ -46,8 +46,8 @@ function checkLocalStorage(page) {
 				loadProfile();
 				break;
 			case 'user_profile':
-			loadProfile();
-			fetchProfileData();
+				loadProfile();
+				fetchProfileData();
 		}
 	}
 
@@ -209,13 +209,27 @@ function showModal(body) {
 	//publisher_name[0].appendChild(publisher_nameNode);
 	var profile_link = document.getElementById("profile_link");
 
- if (checkIfPublisherIsCurrentUser(body.user) ) {
-	profile_link.href = "../Profile/profile.html"
+	if (checkIfPublisherIsCurrentUser(body.user) ) {
+		console.log('so user current page');
 
- } else {
-	profile_link.href = "../User-Profile/user_profile.html?id=" +  body.user;  
+		profile_link.href = "../Profile/profile.html"
+	 } else {
+		console.log('so xyz user page');
+		if (body.company !== undefined){
+			console.log('so company page');
+			profile_link.href = "../CompanyProfiles/add_company_profiles.html?id=" + body.user;
+		} else
+		if (body.production !== undefined) {
+			profile_link.href = "../ProductionProfiles/add_production_profiles.html?id=" + body.user;
+			console.log('so prod page');
+	
+		} else {
+			profile_link.href = "../User-Profile/user_profile.html?id=" +  body.user;  
+		}
 
- }
+	 } 
+
+
 
 
 	var dateTime = new Date(body["Created Date"]);
@@ -261,12 +275,12 @@ function showModal(body) {
 
 	var description = document.getElementsByClassName("modal-description");
 	description[0].innerHTML = body.description;
-console.log('url issue here   : ',body.link);
+	console.log('url issue here   : ', body.link);
 	var url = body.link;
 	var url_x = document.getElementById('modal-other');
 	url_x.href = url;
 
-	if (url == "" || url == undefined || url == null)  {
+	if (url == "" || url == undefined || url == null) {
 		document.getElementsByClassName("see_more")[0].style.display = "none";
 		console.log('displpay none');
 	} else {
@@ -290,7 +304,7 @@ console.log('url issue here   : ',body.link);
 		liked = false
 	}
 
-  // extra
+	// extra
 	// let fav_button_num = document.createElement('p');
 	// if (body.favoriters) {
 	// 	var fav_button_numNode = document.createTextNode(body.favoriters.length);
@@ -348,7 +362,7 @@ function createPost(body) {
 	publisher_div.classList.add('pointer');
 
 	var publisher_link = document.createElement('a');
-	publisher_link.href = "../Profile/profile.html?user_id=" + body._id
+	// publisher_link.href = "../Profile/profile.html?user_id=" + body._id
 
 	var image_address = "";
 
@@ -569,19 +583,41 @@ window.onscroll = function (ev) {
 
 
 
-$('.milestone-text').keypress(function(){
-  if(this.value.length > 300){
-      return false;
-  }
-$(".remaining-milestone").html("Remaining characters : " +(300 - this.value.length));
+$('.milestone-text').keypress(function () {
+	if (this.value.length > 300) {
+		return false;
+	}
+	$(".remaining-milestone").html("Remaining characters : " + (300 - this.value.length));
 });
 
 
 function checkIfPublisherIsCurrentUser(unique_id) {
-    user_id = localStorage.getItem("user_id");
-    if (unique_id == user_id) {
-        return true;
-    } else {
-        return false;
-    }
+	user_id = localStorage.getItem("user_id");
+	if (unique_id == user_id) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function plsWork(x) {
+	var url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/get_usertype";
+
+	let data = {
+		"uid": x,
+	}
+
+	let params = {
+		headers: {
+			'Content-type': 'application/json'
+		},
+		method: 'POST',
+		body: JSON.stringify(data)
+	};
+	return fetch(url, params)
+		.then(res => res.json())
+		.then(body => {
+			return body.response.type;
+		})
+
 }

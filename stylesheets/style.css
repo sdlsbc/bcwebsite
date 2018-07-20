@@ -4070,7 +4070,16 @@ $other-blue-light: #;*/
         font-family: "Roboto", sans-serif;
         margin-left: 0%;
         margin-right: 16%; }
+      .profile_wrapper .second_nav_right a .following-num {
+        display: block;
+        margin-top: -18%;
+        margin-left: 45%; }
+      .profile_wrapper .second_nav_right a .followers-num {
+        display: block;
+        margin-top: -18%;
+        margin-left: 45%; }
       .profile_wrapper .second_nav_right a .p-tag {
+        display: block;
         font-family: "Roboto", sans-serif;
         text-align: center;
         color: #B2B2B2; }

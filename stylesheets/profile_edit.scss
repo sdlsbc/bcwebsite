@@ -521,6 +521,7 @@
   }
   #create-milestones {
     background-color: #c0d0f6;
+    padding-bottom: 17px;
     h3 {
       margin-top: 2%;
       color: white;
@@ -688,6 +689,7 @@
     }
   }
   #create-moments{
+    padding-bottom: 17px;
     background-color: #abc1f4;
     h3 {
       margin-top: 2%;
@@ -845,6 +847,7 @@
   }
   #create-articles{
     width: 97.4%;
+    padding-bottom: 17px;
     background-color: #95b0f0;
     h3 {
       font-weight: 400;
@@ -994,7 +997,7 @@
       text-align: center;
       width: 102px;
       height: 33px;
-      margin-left: 42%;
+      margin-left: 74%;
       margin-top: 20px;
       background-color: #226BE4;
       border: 1px solid $main-blue;
@@ -1010,6 +1013,7 @@
     }
   }
   #create-events{
+    padding-bottom: 17px;
     background-color: #7fa2ed;
     h3 {
       font-weight: 400;
@@ -2110,9 +2114,9 @@
       padding-top: 50px;
       z-index: 4;
       .attach-photo {
-        margin-left: 0%;
-        margin-top: 30px;
-        width: 18%;
+        margin-left: -3%;
+        margin-top: 10px;
+        width: 8%;
         float: left;
         display: inline-block;
         img {
@@ -2136,7 +2140,7 @@
       text-align: center;
       width: 129px;
       height: 45px;
-      margin-left: 39%;
+      margin-left: 62%;
       margin-top: 17px;
       background-color: #226BE4;
       border: 1px solid $main-blue;

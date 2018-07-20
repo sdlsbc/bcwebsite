@@ -369,14 +369,8 @@
 
       </form>
       <div class="articles-extra-buttons">
-        <!-- <a href="" class="attach-photo">
-          
-          <img src="../images/image.png">
-        </a> -->
-        <!-- <a href="" class="privacy-btn">
-          <img src="../images/lock.png">
-        </a> -->
-        <input type="file" id="article-image" onchange="getArticleImage(event)" />
+        <input class="attach-photo" type="image" src="../images/image.png" />
+        <input type="file" id="article-image" src="../images/image.png"onchange="getArticleImage(event)" style="display: none;"/>
         <canvas width="300" height="300" id="myArticleCanvas" style="display: none;"></canvas>
       </div>
         <button class="input-button" id="btn-post-article" onclick="create_article()">Post</button>

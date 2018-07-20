@@ -6269,7 +6269,8 @@ $other-blue-light: #;*/
     width: 97.4%;
     height: 85%; }
   .create-modal-content #create-milestones {
-    background-color: #c0d0f6; }
+    background-color: #c0d0f6;
+    padding-bottom: 17px; }
     .create-modal-content #create-milestones h3 {
       margin-top: 2%;
       color: white;
@@ -6414,6 +6415,7 @@ $other-blue-light: #;*/
       font-family: "Roboto", sans-serif;
       border-radius: 25px; }
   .create-modal-content #create-moments {
+    padding-bottom: 17px;
     background-color: #abc1f4; }
     .create-modal-content #create-moments h3 {
       margin-top: 2%;
@@ -6550,6 +6552,7 @@ $other-blue-light: #;*/
       border-radius: 25px; }
   .create-modal-content #create-articles {
     width: 97.4%;
+    padding-bottom: 17px;
     background-color: #95b0f0; }
     .create-modal-content #create-articles h3 {
       font-weight: 400;
@@ -6678,7 +6681,7 @@ $other-blue-light: #;*/
       text-align: center;
       width: 102px;
       height: 33px;
-      margin-left: 42%;
+      margin-left: 74%;
       margin-top: 20px;
       background-color: #226BE4;
       border: 1px solid #226BE4;
@@ -6692,6 +6695,7 @@ $other-blue-light: #;*/
       font-family: "Roboto", sans-serif;
       border-radius: 25px; }
   .create-modal-content #create-events {
+    padding-bottom: 17px;
     background-color: #7fa2ed; }
     .create-modal-content #create-events h3 {
       font-weight: 400;
@@ -7576,9 +7580,9 @@ $other-blue-light: #;*/
         padding-top: 50px;
         z-index: 4; }
         .create-modal-content #create-articles .articles-extra-buttons .attach-photo {
-          margin-left: 0%;
-          margin-top: 30px;
-          width: 18%;
+          margin-left: -3%;
+          margin-top: 10px;
+          width: 8%;
           float: left;
           display: inline-block; }
           .create-modal-content #create-articles .articles-extra-buttons .attach-photo img {
@@ -7597,7 +7601,7 @@ $other-blue-light: #;*/
         text-align: center;
         width: 129px;
         height: 45px;
-        margin-left: 39%;
+        margin-left: 62%;
         margin-top: 17px;
         background-color: #226BE4;
         border: 1px solid #226BE4;

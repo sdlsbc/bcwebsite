@@ -143,6 +143,7 @@ function checkBrowser() {
 function loadUserData() {
 
     loadAndShowPostsNew();
+    loadAndShowFollowingFollowerNumbers();
     // loadProfileData();
     // fillProfileEditor();
 }
@@ -1006,6 +1007,73 @@ function showFollowingCurrentUserProfile(followingArray, x) {
             document.getElementById('profile-followers').innerHTML = "No Followers";
         }
     }
+
+}
+
+function loadAndShowFollowingFollowerNumbers() {
+    // document.getElementById('user-followers-num').innerHTML = "No Followers";
+    // document.getElementById('user-following-num').innerHTML = "No Followers";
+
+    // get following number
+
+    token = localStorage.getItem("token");
+    user_id = localStorage.getItem("user_id");
+
+    var url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/get_following";
+
+    var data = {
+        "user_id": user_id
+    };
+
+    fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        }
+    })
+        .then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => {
+            console.log(response);
+            if (response.status == "success") {
+
+                console.log(response.response.following.length);
+                document.getElementById('user-following-num').innerHTML = response.response.following.length;
+
+            }
+        })
+
+    // get followers number
+
+    var url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/get_followers";
+
+    var data = {
+        "user_id": user_id
+    };
+
+    fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        }
+    })
+        .then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => {
+            console.log(response);
+            if (response.status == "success") {
+
+                console.log(response.response.followers.length);
+                document.getElementById('user-followers-num').innerHTML = response.response.followers.length;
+
+            }
+        })
+
+
 
 }
 

@@ -1538,12 +1538,14 @@ $other-blue-light: #;*/
           width: 72%;
           height: auto;
           overflow: none;
-          &:hover {
-            color: white;
-            background: linear-gradient(#226BE4 10%, white 45%, white);
-          }
           .publisher {
             float: left;
+            width: 100%;
+            &:hover {
+              color: white;
+              background-color: $main-blue;
+              border-radius: 15px 15px 0px 0px;
+            }
             .userfeed-publisher-image {
               width: 50px;
               height: 50px;
@@ -1638,6 +1640,183 @@ $other-blue-light: #;*/
             }
           }
           .userfeed-description {
+            width: 90%;
+            color: gray;
+            overflow: hidden;
+            font-size: 14px;
+            margin: 0px 8px;
+            margin-top: -5%;
+            margin-left: 6%;
+            font-weight: 100;
+            padding-bottom: 5%;
+            text-align: justify;
+          }
+          button {
+            background-color: rgba(51, 153, 255, 0.3);
+            border: 1px solid $light-blue;
+            color: $main-blue;
+            padding: 3px 12px;
+            width: 105px;
+            height: 36px;
+            margin-top: 20px;
+            text-align: center;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s; 
+            transition-duration: 0.4s;
+            margin-left: 40%;
+            font-size: 14px;
+            margin-bottom: 20px;
+            font-family: $font;
+            &:hover {
+              background-color: white;
+              color: $medium-blue;
+              border: 1px solid $medium-blue;
+              padding: 3px 12px;
+              width: 105px;
+              height: 36px;
+              margin-top: 20px;
+              text-align: center;
+              cursor: pointer;
+              -webkit-transition-duration: 0.4s; 
+              transition-duration: 0.4s;
+              margin-left: 40%;
+              font-size: 14px;
+              margin-bottom: 20px;
+              font-family: $font;
+            }
+          }
+          .hidden-post {
+            width: 90%;
+            color: gray;
+            font-size: 14px;
+            max-height: 80px;
+            margin-top: -10px;
+            font-weight: 100;
+            padding-bottom: 25%;
+          }
+          .revealed-post {
+            max-height: none;
+          }
+          .readMore {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            &:hover {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+            }
+          }
+        }
+        .milestone-post {
+          background-color: white;
+          margin-bottom: -20px;
+          border-radius: 3%;
+          width: 72%;
+          height: auto;
+          overflow: none;
+          .publisher {
+            float: left;
+            width: 100%;
+            &:hover {
+              color: white;
+              background-color: #4e0f7d;
+              border-radius: 15px 15px 0px 0px;
+            }
+            .milestone-publisher-image {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              margin-left: 14px;
+              margin-top: 5px;
+            }
+            .milestone-name {
+              font-family: $font;
+              font-size: 17px;
+              font-weight: 400;
+              margin-left: 11px;
+              margin-top: 21px;
+            }
+          }
+          .milestone-image{
+            width: 67%;
+            height: 155px;
+            padding-bottom: 5px;
+          }
+          .milestone-title {
+            font-family: "Roboto", sans-serif;
+            float: left;
+            margin-left: 19px;
+            margin-top: 25px;
+            color: #1B5AC3;
+            font-size: 14px;
+            font-weight: 900;
+          }
+          .milestone-favorite {
+            width: 100%;
+            .heart {
+              width: 25px;
+              height: 25px;
+              float: left;
+              margin-left: 5%;
+              margin-top: -4px;
+              &:hover {
+                background-color: red;
+              }
+            }
+            p {
+              font-family: $font;
+              font-size: 15px;
+              margin-left: -4px;
+              margin-top: 5px;
+              color: red;
+            }
+          }
+
+          .comment_box {
+            width: 22px;
+            height: 22px;
+            float: right;
+            margin-right: 24%;
+            margin-top: -32px;
+            margin-left: 51px;
+          }
+          .share_icon {
+            width: 22px;
+            height: 22px;
+            float: right;
+            margin-right: 42%;
+            margin-top: -32px;
+          }
+          .flag_icon {
+            width: 22px;
+            height: 22px;
+            float: right;
+            margin-right: 6%;
+            margin-top: -31px;
+            margin-left: 122px;
+          }
+          .time{
+            width: 100%;
+            box-shadow: 0 21px 0px -7px rgba(220, 220, 220, 0.5);
+            .clock{
+              width: 18px;
+              height: 18px;
+              float:left;
+              padding-right: 4px;        
+              margin-left: 154px;
+              margin-top: -32px;
+            }
+            p {
+              font-family: $font;
+              padding-top: 3px;
+              font-weight: 100;
+              font-size: 14px;
+              margin-left: 174px;
+              margin-top: -32.5px;
+            }
+          }
+          .milestone-description {
             width: 90%;
             color: gray;
             overflow: hidden;

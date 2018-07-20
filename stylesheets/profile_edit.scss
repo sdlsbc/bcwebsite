@@ -372,6 +372,7 @@
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
+    padding-bottom: 28px;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
@@ -2152,6 +2153,7 @@
   }
   #create-events{
     background-color: #7fa2ed;
+    padding-bottom: 17px;
     h3 {
       font-weight: 400;
       color: white;

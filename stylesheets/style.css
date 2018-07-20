@@ -6134,6 +6134,7 @@ $other-blue-light: #;*/
   /* Location of the box */
   left: 0;
   top: 0;
+  padding-bottom: 28px;
   width: 100%;
   /* Full width */
   height: 100%;
@@ -7610,7 +7611,8 @@ $other-blue-light: #;*/
         font-family: "Roboto", sans-serif;
         border-radius: 25px; }
     .create-modal-content #create-events {
-      background-color: #7fa2ed; }
+      background-color: #7fa2ed;
+      padding-bottom: 17px; }
       .create-modal-content #create-events h3 {
         font-weight: 400;
         color: white;
@@ -8123,7 +8125,7 @@ $other-blue-light: #;*/
   width: 100%;
   text-align: center; }
   .pp-header h2 {
-    margin-top: -2%;
+    margin-top: 0%;
     font-size: 32px;
     color: #226BE4; }
   .pp-header h3 {
@@ -8734,6 +8736,61 @@ $other-blue-light: #;*/
       text-align: center;
       margin-left: 34%;
       font-size: 14px; }
+    .profile_wrapper .cp-header .cp-est {
+      margin-top: 30px;
+      text-align: center; }
+      .profile_wrapper .cp-header .cp-est img {
+        width: 20px;
+        margin-top: -4px;
+        margin-left: 9%; }
+      .profile_wrapper .cp-header .cp-est h3 {
+        margin-top: 0px;
+        font-size: 16px;
+        font-weight: 400; }
+    .profile_wrapper .cp-header .cp-follow {
+      margin-top: 44px;
+      margin-left: 50.8%;
+      display: inline;
+      width: 50px;
+      height: 50px;
+      position: inherit; }
+      .profile_wrapper .cp-header .cp-follow .follow {
+        background-color: rgba(51, 153, 255, 0.3);
+        border: 2px solid #F7FAFF;
+        color: #226BE4;
+        padding: 3px 10px;
+        width: 100px;
+        height: 36px;
+        text-align: center;
+        font-size: 12px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        /*border-radius: 25px;*/
+        font-size: 14px; }
+        .profile_wrapper .cp-header .cp-follow .follow a {
+          font-family: "Roboto", sans-serif;
+          text-decoration: none; }
+          .profile_wrapper .cp-header .cp-follow .follow a p {
+            font-family: "Roboto", sans-serif;
+            margin-top: 5px;
+            margin-left: 17px;
+            color: #226BE4; }
+        .profile_wrapper .cp-header .cp-follow .follow:hover {
+          width: 103px;
+          height: 34px;
+          background-color: white;
+          border: 2px solid #99CCFF;
+          /*border-radius: 25px;*/
+          color: #1B5AC3;
+          font-size: 14px; }
+          .profile_wrapper .cp-header .cp-follow .follow:hover a {
+            font-family: "Roboto", sans-serif;
+            text-decoration: none; }
+            .profile_wrapper .cp-header .cp-follow .follow:hover a p {
+              font-family: "Roboto", sans-serif;
+              color: #99CCFF;
+              margin-top: 3px; }
     .profile_wrapper .cp-header .cp-socials {
       width: 60%;
       margin-left: 23.5%;
@@ -9254,6 +9311,61 @@ ul p:last-child a.down {
         text-align: justify;
         margin-left: 26%;
         font-size: 14px; }
+      .profile_wrapper .cp-header .cp-est {
+        margin-top: 30px;
+        text-align: center; }
+        .profile_wrapper .cp-header .cp-est img {
+          width: 20px;
+          margin-top: -4px;
+          margin-left: 9%; }
+        .profile_wrapper .cp-header .cp-est h3 {
+          margin-top: 0px;
+          font-size: 16px;
+          font-weight: 400; }
+      .profile_wrapper .cp-header .cp-follow {
+        margin-top: 44px;
+        margin-left: 47.5%;
+        display: inline;
+        width: 50px;
+        height: 50px;
+        position: inherit; }
+        .profile_wrapper .cp-header .cp-follow .follow {
+          background-color: rgba(51, 153, 255, 0.3);
+          border: 2px solid #F7FAFF;
+          color: #226BE4;
+          padding: 3px 10px;
+          width: 100px;
+          height: 36px;
+          text-align: center;
+          font-size: 12px;
+          cursor: pointer;
+          -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+          /*border-radius: 25px;*/
+          font-size: 14px; }
+          .profile_wrapper .cp-header .cp-follow .follow a {
+            font-family: "Roboto", sans-serif;
+            text-decoration: none; }
+            .profile_wrapper .cp-header .cp-follow .follow a p {
+              font-family: "Roboto", sans-serif;
+              margin-top: 5px;
+              margin-left: 17px;
+              color: #226BE4; }
+          .profile_wrapper .cp-header .cp-follow .follow:hover {
+            width: 103px;
+            height: 34px;
+            background-color: white;
+            border: 2px solid #99CCFF;
+            /*border-radius: 25px;*/
+            color: #1B5AC3;
+            font-size: 14px; }
+            .profile_wrapper .cp-header .cp-follow .follow:hover a {
+              font-family: "Roboto", sans-serif;
+              text-decoration: none; }
+              .profile_wrapper .cp-header .cp-follow .follow:hover a p {
+                font-family: "Roboto", sans-serif;
+                color: #99CCFF;
+                margin-top: 3px; }
       .profile_wrapper .cp-header .cp-socials {
         width: 75%;
         margin-left: 16.5%;
@@ -12598,9 +12710,9 @@ ul p:last-child a.down {
         padding-top: 50px;
         z-index: 4; }
         .create-modal-content #create-articles .articles-extra-buttons .attach-photo {
-          margin-left: -11%;
-          margin-top: 15px;
-          width: 18%;
+          margin-left: -104%;
+          margin-top: 49%;
+          width: 12%;
           float: left;
           display: inline-block; }
           .create-modal-content #create-articles .articles-extra-buttons .attach-photo img {
@@ -12617,9 +12729,9 @@ ul p:last-child a.down {
             height: 35px; }
       .create-modal-content #create-articles .input-button {
         text-align: center;
-        width: 119px;
-        height: 40px;
-        margin-left: 32%;
+        width: 96px;
+        height: 37px;
+        margin-left: 17%;
         margin-top: 38px;
         background-color: #226BE4;
         border: 1px solid #226BE4;
@@ -12629,7 +12741,7 @@ ul p:last-child a.down {
         cursor: pointer;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
-        font-size: 14px;
+        font-size: 18px;
         font-family: "Roboto", sans-serif;
         border-radius: 25px; }
     .create-modal-content #create-events {
@@ -12723,7 +12835,7 @@ ul p:last-child a.down {
         .create-modal-content #create-events .events-extra-buttons .attach-photo {
           margin-left: -103%;
           margin-top: 60%;
-          width: 10%;
+          width: 12%;
           float: left;
           display: inline-block; }
           .create-modal-content #create-events .events-extra-buttons .attach-photo img {
@@ -12740,9 +12852,9 @@ ul p:last-child a.down {
             height: 35px; }
       .create-modal-content #create-events .input-button {
         text-align: center;
-        width: 119px;
-        height: 40px;
-        margin-left: -4%;
+        width: 96px;
+        height: 37px;
+        margin-left: 17%;
         margin-top: 50px;
         background-color: #226BE4;
         border: 1px solid #226BE4;
@@ -12752,7 +12864,7 @@ ul p:last-child a.down {
         cursor: pointer;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
-        font-size: 14px;
+        font-size: 18px;
         font-family: "Roboto", sans-serif;
         border-radius: 25px; }
     .create-modal-content .column2 {
@@ -13266,6 +13378,61 @@ ul p:last-child a.down {
         text-align: justify;
         margin-left: 9%;
         font-size: 14px; }
+      .profile_wrapper .cp-header .cp-est {
+        margin-top: 30px;
+        text-align: center; }
+        .profile_wrapper .cp-header .cp-est img {
+          width: 20px;
+          margin-top: -4px;
+          margin-left: 9%; }
+        .profile_wrapper .cp-header .cp-est h3 {
+          margin-top: 0px;
+          font-size: 16px;
+          font-weight: 400; }
+      .profile_wrapper .cp-header .cp-follow {
+        margin-top: 44px;
+        margin-left: 39.5%;
+        display: inline;
+        width: 50px;
+        height: 50px;
+        position: inherit; }
+        .profile_wrapper .cp-header .cp-follow .follow {
+          background-color: rgba(51, 153, 255, 0.3);
+          border: 2px solid #F7FAFF;
+          color: #226BE4;
+          padding: 3px 10px;
+          width: 100px;
+          height: 36px;
+          text-align: center;
+          font-size: 12px;
+          cursor: pointer;
+          -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+          /*border-radius: 25px;*/
+          font-size: 14px; }
+          .profile_wrapper .cp-header .cp-follow .follow a {
+            font-family: "Roboto", sans-serif;
+            text-decoration: none; }
+            .profile_wrapper .cp-header .cp-follow .follow a p {
+              font-family: "Roboto", sans-serif;
+              margin-top: 5px;
+              margin-left: 17px;
+              color: #226BE4; }
+          .profile_wrapper .cp-header .cp-follow .follow:hover {
+            width: 103px;
+            height: 34px;
+            background-color: white;
+            border: 2px solid #99CCFF;
+            /*border-radius: 25px;*/
+            color: #1B5AC3;
+            font-size: 14px; }
+            .profile_wrapper .cp-header .cp-follow .follow:hover a {
+              font-family: "Roboto", sans-serif;
+              text-decoration: none; }
+              .profile_wrapper .cp-header .cp-follow .follow:hover a p {
+                font-family: "Roboto", sans-serif;
+                color: #99CCFF;
+                margin-top: 3px; }
       .profile_wrapper .cp-header .cp-socials {
         width: 90%;
         margin-top: 22px;

@@ -48,6 +48,12 @@ function checkLocalStorage(page) {
 			case 'user_profile':
 				loadProfile();
 				fetchProfileData();
+				break;
+			case "user_company_profile":
+				loadProfile();
+				fetchCompanyProfileData();
+				break;
+
 		}
 	}
 
@@ -209,25 +215,25 @@ function showModal(body) {
 	//publisher_name[0].appendChild(publisher_nameNode);
 	var profile_link = document.getElementById("profile_link");
 
-	if (checkIfPublisherIsCurrentUser(body.user) ) {
+	if (checkIfPublisherIsCurrentUser(body.user)) {
 		console.log('so user current page');
 
 		profile_link.href = "../Profile/profile.html"
-	 } else {
+	} else {
 		console.log('so xyz user page');
-		if (body.company !== undefined){
+		if (body.company !== undefined) {
 			console.log('so company page');
 			profile_link.href = "../CompanyProfiles/add_company_profiles.html?id=" + body.user;
 		} else
-		if (body.production !== undefined) {
-			profile_link.href = "../ProductionProfiles/add_production_profiles.html?id=" + body.user;
-			console.log('so prod page');
-	
-		} else {
-			profile_link.href = "../User-Profile/user_profile.html?id=" +  body.user;  
-		}
+			if (body.production !== undefined) {
+				profile_link.href = "../ProductionProfiles/add_production_profiles.html?id=" + body.user;
+				console.log('so prod page');
 
-	 } 
+			} else {
+				profile_link.href = "../User-Profile/user_profile.html?id=" + body.user;
+			}
+
+	}
 
 
 

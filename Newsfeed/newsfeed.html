@@ -14,13 +14,14 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <style>
-  /* The Close Modal Button */
 
-  .close {
-    color: blue;
+
+  /*.close {
+    color: white;
     float: right;
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 30px;
+    margin-top: -32px;
+    margin-right: -27px;
   }
 
   .close:hover,
@@ -30,7 +31,6 @@
     cursor: pointer;
   }
 
-  /* pointer on posts */
 
   .pointer {
     cursor: pointer;
@@ -39,7 +39,7 @@
   .ellipsis {
     text-overflow: ellipsis;
     white-space: nowrap;
-  }
+  }*/
 </style>
 
 <body onload="checkLocalStorage('newsfeed')" id="body">
@@ -162,7 +162,7 @@
 
     <!-- Modal content -->
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span class="close-newsfeed">&times;</span>
       <div class="modal-image">
         <!-- <span class="close"></span> -->
       </div>
@@ -203,7 +203,7 @@
   <img id="loading" class='hidden' src='../images/BCloading.gif' />
   <script>
     var modal = document.getElementById('myModal');
-    var span = document.getElementsByClassName("close")[0];
+    var span = document.getElementsByClassName("close-newsfeed")[0];
     span.onclick = function () {
       modal.style.display = "none";
     }

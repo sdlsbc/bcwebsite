@@ -876,7 +876,18 @@ $other-blue-light: #;*/
         margin-left: 0%;
         margin-right: 16%;
       }
+      .following-num {
+        display: block;    
+        margin-top: -18%;
+        margin-left: 45%;
+      }
+      .followers-num {
+        display: block;   
+        margin-top: -18%;
+        margin-left: 45%;
+      }
       .p-tag {
+        display: block;
         font-family: $font;
         text-align: center;
         color: $gray;

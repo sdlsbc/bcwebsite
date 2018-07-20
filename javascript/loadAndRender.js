@@ -174,7 +174,6 @@ function likesUpdate(post_id) {
 function showModal(body) {
 	console.log("showModal", body);
 	console.log(favs)
-	let visiting = body.user;
 	// start building the modal
 	var image_address = "";
 	if (!(body.image == null || body.image == "")) {
@@ -208,7 +207,15 @@ function showModal(body) {
 	publisher_name[0].innerHTML = body.publisher_name;
 	//publisher_name[0].appendChild(publisher_nameNode);
 	var profile_link = document.getElementById("profile_link");
-	profile_link.href = "../Profile/profile.html?user_id=" + visiting;
+
+ if (checkIfPublisherIsCurrentUser(body.user) ) {
+	profile_link.href = "../Profile/profile.html"
+
+ } else {
+	profile_link.href = "../User-Profile/user_profile.html?id=" +  body.user;  
+
+ }
+
 
 	var dateTime = new Date(body["Created Date"]);
 	//var dateTime = dateTime.split(" ");
@@ -253,22 +260,23 @@ function showModal(body) {
 
 	var description = document.getElementsByClassName("modal-description");
 	description[0].innerHTML = body.description;
-
-	var url = body.source_url;
+console.log('url issue here   : ',body.link);
+	var url = body.link;
 	var url_x = document.getElementById('modal-other');
 	url_x.href = url;
 
-	if (url == "") {
-		document.getElementsByClassName("read_more")[0].style.display = "none";
+	if (url == "" || url == undefined || url == null)  {
+		document.getElementsByClassName("see_more")[0].style.display = "none";
+		console.log('displpay none');
 	} else {
-		document.getElementsByClassName('read_more')[0].style.display = "block";
+		document.getElementsByClassName('see_more')[0].style.display = "block";
 		var url_x = document.getElementById('modal-other');
 		url_x.href = url;
 	}
 
 	modal.style.display = "block";
 
-	console.log(body)
+	// console.log(body)
 
 	let fav_button = document.getElementById('modal-favorite-img')
 	var liked = false;
@@ -566,3 +574,13 @@ $('#milestone-description').keypress(function(){
   }
 $("#remaining").html("Remaining characters : " +(300 - this.value.length));
 });
+
+
+function checkIfPublisherIsCurrentUser(unique_id) {
+    user_id = localStorage.getItem("user_id");
+    if (unique_id == user_id) {
+        return true;
+    } else {
+        return false;
+    }
+}

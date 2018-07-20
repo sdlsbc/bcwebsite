@@ -4072,13 +4072,16 @@ $other-blue-light: #;*/
         margin-bottom: -20px;
         border-radius: 3%;
         width: 47%;
-        height: auto;
+        height: 440px;
+        /*height: auto;*/
         overflow: none; }
-        .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post:hover {
-          color: white;
-          background: linear-gradient(#226BE4 10%, white 45%, white); }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .publisher {
-          float: left; }
+          float: left;
+          width: 100%; }
+          .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .publisher:hover {
+            color: white;
+            background-color: #226BE4;
+            border-radius: 15px 15px 0px 0px; }
           .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .publisher .userfeed-publisher-image {
             width: 50px;
             height: 50px;
@@ -4203,10 +4206,10 @@ $other-blue-light: #;*/
           width: 90%;
           color: gray;
           font-size: 14px;
-          max-height: 80px;
+          max-height: 0px;
           margin-top: -10px;
           font-weight: 100;
-          padding-bottom: 25%; }
+          padding-bottom: 17%; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .revealed-post {
           max-height: none; }
         .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .readMore {
@@ -4214,6 +4217,165 @@ $other-blue-light: #;*/
           margin-left: auto;
           margin-right: auto; }
           .profile_wrapper .second_nav_right #profile-postsbox .userfeed-post .readMore:hover {
+            display: block;
+            margin-left: auto;
+            margin-right: auto; }
+      .profile_wrapper .second_nav_right #profile-postsbox .milestone-post {
+        background-color: white;
+        margin-bottom: -20px;
+        border-radius: 3%;
+        width: 47%;
+        height: 440px;
+        /*height: auto;*/
+        overflow: none;
+        /*&:hover {
+          color: white;
+          background: linear-gradient(#4e0f7d 5%, white 100px, white);
+        }*/ }
+        .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .publisher {
+          float: left;
+          width: 100%; }
+          .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .publisher:hover {
+            color: white;
+            background-color: #4e0f7d;
+            border-radius: 15px 15px 0px 0px; }
+          .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .publisher .milestone-publisher-image {
+            background-color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-left: 14px;
+            margin-top: 5px; }
+          .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .publisher .milestone-name {
+            font-family: "Roboto", sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+            margin-left: 11px;
+            margin-top: 21px; }
+        .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .milestone-image {
+          width: 65%;
+          height: 155px;
+          margin-left: 16%;
+          padding-bottom: 5px; }
+        .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .milestone-title {
+          font-family: "Roboto", sans-serif;
+          float: left;
+          margin-left: 19px;
+          margin-top: 25px;
+          color: #1B5AC3;
+          font-size: 14px;
+          font-weight: 900; }
+        .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .milestone-favorite {
+          width: 100%; }
+          .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .milestone-favorite .heart {
+            width: 25px;
+            height: 25px;
+            float: left;
+            margin-left: 5%;
+            margin-top: -4px; }
+            .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .milestone-favorite .heart:hover {
+              background-color: red; }
+          .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .milestone-favorite p {
+            font-family: "Roboto", sans-serif;
+            font-size: 15px;
+            margin-left: -4px;
+            margin-top: 5px;
+            color: red; }
+        .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .comment_box {
+          width: 22px;
+          height: 22px;
+          float: right;
+          margin-right: 24%;
+          margin-top: -32px;
+          margin-left: 51px; }
+        .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .share_icon {
+          width: 22px;
+          height: 22px;
+          float: right;
+          margin-right: 42%;
+          margin-top: -32px; }
+        .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .flag_icon {
+          width: 22px;
+          height: 22px;
+          float: right;
+          margin-right: 6%;
+          margin-top: -31px;
+          margin-left: 122px; }
+        .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .time {
+          width: 100%;
+          box-shadow: 0 21px 0px -7px rgba(220, 220, 220, 0.5); }
+          .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .time .clock {
+            width: 18px;
+            height: 18px;
+            float: left;
+            padding-right: 4px;
+            margin-left: 154px;
+            margin-top: -32px; }
+          .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .time p {
+            font-family: "Roboto", sans-serif;
+            padding-top: 3px;
+            font-weight: 100;
+            font-size: 14px;
+            margin-left: 174px;
+            margin-top: -32.5px; }
+        .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .milestone-description {
+          width: 90%;
+          color: gray;
+          overflow: hidden;
+          font-size: 14px;
+          margin: 0px 8px;
+          margin-top: -5%;
+          margin-left: 6%;
+          font-weight: 100;
+          padding-bottom: 5%;
+          text-align: justify; }
+        .profile_wrapper .second_nav_right #profile-postsbox .milestone-post button {
+          background-color: rgba(51, 153, 255, 0.3);
+          border: 1px solid #F7FAFF;
+          color: #226BE4;
+          padding: 3px 12px;
+          width: 105px;
+          height: 36px;
+          margin-top: 20px;
+          text-align: center;
+          cursor: pointer;
+          -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+          margin-left: 40%;
+          font-size: 14px;
+          margin-bottom: 20px;
+          font-family: "Roboto", sans-serif; }
+          .profile_wrapper .second_nav_right #profile-postsbox .milestone-post button:hover {
+            background-color: white;
+            color: #99CCFF;
+            border: 1px solid #99CCFF;
+            padding: 3px 12px;
+            width: 105px;
+            height: 36px;
+            margin-top: 20px;
+            text-align: center;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            margin-left: 40%;
+            font-size: 14px;
+            margin-bottom: 20px;
+            font-family: "Roboto", sans-serif; }
+        .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .hidden-post {
+          width: 90%;
+          color: gray;
+          font-size: 14px;
+          max-height: 0px;
+          margin-top: -10px;
+          font-weight: 100;
+          padding-bottom: 17%; }
+        .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .revealed-post {
+          max-height: none; }
+        .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .readMore {
+          display: block;
+          margin-left: auto;
+          margin-right: auto; }
+          .profile_wrapper .second_nav_right #profile-postsbox .milestone-post .readMore:hover {
             display: block;
             margin-left: auto;
             margin-right: auto; }

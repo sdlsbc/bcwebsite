@@ -408,7 +408,7 @@ function createElementForUserfeed_Milestones(body) {
     console.log('creating a milestone');
 
     let div = document.createElement('div');
-    div.classList.add('userfeed-post');
+    div.classList.add('milestone-post');
 
     let publisher_div = document.createElement('div');
     publisher_div.classList.add('publisher');
@@ -416,13 +416,13 @@ function createElementForUserfeed_Milestones(body) {
     let publisher_image = document.createElement('img');
 
     publisher_image.src = body.publisher_image;
-    publisher_image.classList.add('userfeed-publisher-image');
+    publisher_image.classList.add('milestone-publisher-image');
     publisher_div.appendChild(publisher_image);
 
     let name = document.createElement('p');
     let nameNode = document.createTextNode(body.publisher_name)
     name.appendChild(nameNode);
-    name.classList.add('userfeed-name');
+    name.classList.add('milestone-name');
 
     publisher_div.appendChild(name);
 
@@ -468,7 +468,7 @@ function createElementForUserfeed_Milestones(body) {
 
 
     // image.src = body.image;
-    image.classList.add('userfeed-image');
+    image.classList.add('milestone-image');
     image_div.appendChild(image);
     div.appendChild(image_div);
 
@@ -476,7 +476,7 @@ function createElementForUserfeed_Milestones(body) {
     button_row.classList.add('button-row');
 
     let favorite = document.createElement('div');
-    favorite.classList.add('userfeed-favorite');
+    favorite.classList.add('milestone-favorite');
     let heart = document.createElement('img');
     heart.src = '../images/newsfeed_buttons/heart2.png';
     heart.classList.add('heart');
@@ -549,7 +549,7 @@ function createElementForUserfeed_Milestones(body) {
     var concatedTitle = body.fixedText1 + " " + body.role + " " + body.fixedText2 + " " + body.org_name;
     let titleNode = document.createTextNode(concatedTitle);
     title.appendChild(titleNode);
-    title.classList.add('userfeed-title');
+    title.classList.add('milestone-title');
     div.appendChild(title);
 
     let description_div = document.createElement('div');
@@ -557,7 +557,7 @@ function createElementForUserfeed_Milestones(body) {
     let description = document.createElement('p');
     let descriptionNode = document.createTextNode(body.description);
     description.appendChild(descriptionNode);
-    description.classList.add('userfeed-description');
+    description.classList.add('milestone-description');
     description.classList.add('hidden-post');
     description.id = body.id;
 

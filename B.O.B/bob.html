@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
- <link rel="icon" href="../images/bc32_mcU_icon.ico" type="image/x-icon">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <meta charset="UTF-8">
- <meta name="google" content="notranslate">
- <meta http-equiv="Content-Language" content="en">
- <link href="../stylesheets/style.css" rel="stylesheet">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
- <script src="http://code.jquery.com/jquery-1.11.1.js" type="text/javascript"></script>
- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
+  <link rel="icon" href="../images/bc32_mcU_icon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
+  <meta http-equiv="Content-Language" content="en">
+  <link href="../stylesheets/style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.js" type="text/javascript"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
-<body onload="checkLocalStorage('profile');loadUserData();" id="body">
+<div class="body">
+
+<body onload="checkLocalStorage('explore')" id="body">
     <!-- sidebar. -->
     <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closeNav()">&times;</a>
-    <p></p>
-    <center id="profile_pic"></center>
-    <center>
-      <p class="navname"></p>
-    </center>
-    <center>
+        <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closeNav()">&times;</a>
+        <p> </p>
+        <center id="profile_pic"></center>
+        <center>
+            <p class="navname"></p>
+        </center>
+        <center>
       <p class="profile">
         <button class="my-profile-btn"><a href="../Profile/profile.html" id="profile-a"><p>My Profile</p></a></button>
       </p>
@@ -58,14 +59,13 @@
         </a>
       </div>
   </div>
-  <!-- sidebar. --> 
   <div class="navbar">
     <span class="open_sidenav" onclick="openNav()">
-      <img src="../images/side button2.png">
+      <img src="../images/side button2.png" style="margin-left: 8px; margin-top: -6px;">
     </span>
     <a href="../Newsfeed/newsfeed.html" class="logo-a">
-      <img class="logo" src="../images/bc_solo_logo.png">
-    </a>
+        <img class="logo" src="../images/bc_solo_logo.png">
+      </a>
     <a href='../Newsfeed/newsfeed.html'>
       <p>Newsfeed</p>
     </a>
@@ -95,200 +95,21 @@
         }
       });
     </script>
- 
-  <div class="profile_wrapper" style="margin-top: 180px;
-  padding-bottom: 15%;">
-    <div class="user_profile_left">
-      <div class="user_img" id="user_img">
-        
-      </div>
-      <p class="name" id="name"></p>
-      <p class="username" id="username"></p>
-      <p class="title" id="headline_position"></p>
-      <!-- <p class="organization">@BroadwayConnectedInc</p> -->
-      <p class="user_type" id="user_type"></p>
-      
-      <!--THESE SHOULD BE CONDITIONAL, ONLY SHOWN FOR PERSONAL USER ACCOUNTS -->
-      <!-- <p class="briefcase_icon">
-        <img src="../images/briefcase.png">
-      </p>
-      <p class="previous">Previous:</p>
-      <p class="previous_job"></p> -->
-      <p class="location_icon">
-        <img src="../images/compass.png">
-      </p>
-      <p class="location" id="location"></p>
-      <center><button class="view-more"><a href="../Profile/edit.html"><p>Full Profile</p></a></button></center>
-      <a href="#" id="myModal"><img src="../images/penciliconblue.png" class="edit-button"></a>
-    </div>
-
-
-
-<!-- =============== EDIT MODAL ================ -->
-<div id="createModalx" class="create-modal">
-  <div class="create-modal-contenty" id="create-modal-contentx">
-  <span class="create-closex">&times;</span>
-    <h1>Edit Information</h1>
-    <form>
-      <span class="edit-left1">
-        <label id="edit-first">FIRST NAME</label>
-        <br>
-        <input type="text" id="input-first" name="articles" placeholder="First">
-      </span>
-      <span class="edit-right1">
-        <label id="edit-last">LAST NAME</label>
-        <input type="text" id="input-last" name="articles" placeholder="Last">
-      </span>
-      <span class="edit-left2">
-        <label id="edit-username">USERNAME</label>
-        <br>
-        <input type="text" id="input-handle" name="articles">
-      </span>
-      <span class="edit-right2">
-        <label id="edit-headline">HEADLINE</label>
-        <br>
-        <input type="text" id="input-headline" name="articles">
-      </span>
-      <span class="edit-left3">
-        <label id="edit-job-title">JOB TITLE</label>
-        <br>
-        <input type="text" id="input-job-title" name="articles">
-      </span>
-      <span class="edit-right3">
-        <label id="edit-company">COMPANY</label>
-        <br>
-        <input type="text" id="input-company" name="articles">
-      </span>
-      <span class="edit-left4">
-        <label id="edit-previous-job">PREVIOUS JOB</label>
-        <br>
-        <input type="text" id="input-previous" name="articles">
-      </span>
-      <span class="edit-right4">
-        <label id="edit-previous-company">PREVIOUS COMPANY</label>
-        <br>
-        <input type="text" id="input-previous-company" name="articles">
-      </span>
-      <span class="edit-left5">
-        <label id="edit-email">EMAIL</label>
-        <br>
-        <input type="text" id="input-email" name="articles">
-      </span>
-      <span class="edit-right5">
-        <label id="edit-phone">PHONE</label>
-        <br>
-        <input type="text" id="input-phone" name="articles">
-      </span>
-      <span class="edit-left6">
-        <label id="edit-city">CITY</label>
-        <br>
-        <input type="text" id="input-city" name="articles">
-      </span>
-      <span class="edit-right6">
-        <label id="edit-country">COUNTRY</label>
-        <br>
-        <input type="text" id="input-country" name="articles">
-      </span>
-      <div class="articles-extra-buttons">
-        <a href="" class="attach-photo">
-          <img src="../images/image.png">
-        </a>
-      </div>
-      <span class="toggle">
-        <label class="switch1">
-        <p>Public / Private</p>
-          <input type="checkbox">
-          <span class="slider round"></span>
-        </label>
-          <!-- <p class="checkbox-profile"> -->
- 
-        <label class="switch2">
-        <p>Header Is Current Position</p>
-          <input type="checkbox">
-          <span class="slider round"></span>   
-        </label>
-      </span>
-    </form>
-      <button class="save-changes" onclick="updateUser()">Save Changes</button>
+  
+  <div class="coming-soon">
+    <h1>Coming Soon...</h1>
   </div>
-</div>
-
-<script>
-  var modalx = document.getElementById('createModalx');
-  var btnx = document.getElementById("myModal");
-  var spanx = document.getElementsByClassName("create-closex")[0];
-  btnx.onclick = function() {
-    fillProfileEditor();
-    modalx.style.display = "block";
-  }
-  spanx.onclick = function() {
-    modalx.style.display = "none";
-  }
-  window.onclick = function(event) {
-    if (event.target == modalx) {
-      modalx.style.display = "none";
-    }
-  }
-</script>
 
 
-    
-    <div class="second_nav_right">
-      <!-- <a href="#"><p>Milestones</p></a>
-      <a href="#"><p>Moments</p></a> -->
-      <a href="#" onclick="toggleAndLoadFollowings();">
-        <p class="p-tag" id="following">Following</p><br>
-        <h6 class="following-num" id="user-following-num">-</h6>
-      </a>
-      <a href="#" onclick="toggleAndLoadFollowers();">
-        <p class="p-tag" id="followers">Followers</p><br>
-        <h6 class="followers-num" id="user-followers-num">-</h6>
-        </a>
-      <a href="#" onclick="toggleVisibility('profile-calendar');">
-        <p class="p-tag" id="calendar">Calendar</p>
-      </a>
-      <a href="#" onclick="toggleVisibility('profile-postsbox');">
-        <p class="p-tag" id="userfeed">User Feed</p>
-      </a>
-      
-      <div id="profile-postsbox">
-        <h1>Loading ...</h1>
-      </div>
-      <div id="profile-calendar">
-        <h1>Calendar is Coming Soon...</h1>
-      </div>
-      <div id="profile-followers">
-        <!-- <h1>Followers is Coming Soon...</h1> -->
-      </div>
-      <div id="profile-following">
-      <!-- <h1>Following is Coming Soon...</h1> -->
-      </div>
-    </div>
 
-  </div>
   <script>
-    $(".p-tag").click(function() {
-      $(".p-tag").removeClass("active");
-      $(this).addClass("active");
-    });
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
   </script>
-
- <script>
-   function openNav() {
-     document.getElementById("mySidenav").style.width = "250px";
-   }
-   function closeNav() {
-     document.getElementById("mySidenav").style.width = "0";
-   }
- </script>
-
-
-
-
-
-
-
-
 
 
  <!-- ========== M I L E S T O N E S  M O D A L ===========  -->
@@ -465,7 +286,7 @@
         </p>
         <p class="milestone-right2">
           <select id="milestone-fixed-text2" onfocus="checkIfMilestoneTypeSelected()">
-            <option value="" disabled selected>In / At</option>
+            <option value="" disabled selected> In / At</option>
             <option value="in">In</option>
             <option value="at">At</option>
           </select>
@@ -474,14 +295,16 @@
           </datalist>
         </p>
         <p class="milestone-center">
-          <label class="milestone-label" for="milestone-description">Description</label>
+          <label class="milestone-label" for="mileston-description">Description</label>
           <br>
-          <textarea class="milestone-text" id="milestone-description" onfocus="checkIfMilestoneTypeSelected()" rows="4" cols="50" maxlength="300" placeholder="Add Description 300 Characters or Less"></textarea>
-          <span id='remaining-milestone' style="color: #226BE4; font-size: 14px;"></span>
+          <textarea class="milestone-text" id="milestone-description" onfocus="checkIfMilestoneTypeSelected()" rows="4" cols="50" maxlength="300"
+            placeholder="Add Description 300 Characters or Less"></textarea>
+            <span id='remaining-milestone' class="remaining-milestone" style="color: #226BE4; font-size: 14px;"></span>
         </p>
         <button class="input-button" id="btnPostMilestone" onclick="createMilestone()">Post</button>
       </form>
     </div>
+
     <div id="create-moments" class="tabcontent">
       <h3>Add a Moment</h3>
       <form>
@@ -516,10 +339,9 @@
           <input class="moments-text" id="moments-text2" type="text" placeholder="Moments Fixed Text">
         </p>
         <p class="moments-center">
-          <label class="moments-label" for="moments-description">Description</label>
+          <label class="moments-label" for="mileston-description">Description</label>
           <br>
-          <textarea class="moments-text" id="moments-text1" rows="4" cols="50" maxlength="300" onfocus="checkIfMomentTypeSelected()" placeholder="Moments Description"></textarea>
-          <span id='remaining-moment' style="color: #226BE4; font-size: 14px;"></span>
+          <textarea class="moments-text" id="moments-text1" rows="4" cols="50" maxlength="300" placeholder="Moments Description"></textarea>
         </p>
         <button class="input-button">Post</button>
       </form>

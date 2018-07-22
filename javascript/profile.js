@@ -143,6 +143,7 @@ function checkBrowser() {
 function loadUserData() {
 
     loadAndShowPostsNew();
+    loadAndShowFollowingFollowerNumbers();
     // loadProfileData();
     // fillProfileEditor();
 }
@@ -935,64 +936,169 @@ function showFollowingCurrentUserProfile(followingArray, x) {
         followingArray.forEach(element => {
             // console.log(element.firstname, element.lastname ,element.image);
 
-            let divFollowing = document.createElement('div');
-            divFollowing.className = "following";
-            // divFollowing.setAttribute("id", element._id);
+            if (element.company !== undefined) {
 
-            // adding onclick event
-            divFollowing.onclick = (function () {
-                var unique_id = element._id;
-                return function () {
-                    window.location.href = "../User-Profile/user_profile.html?id=" + unique_id;
+                console.log('companyyyyyyyyyyyyyyyyyyyyy');
+
+
+                let divFollowing = document.createElement('div');
+                divFollowing.className = "following";
+                // divFollowing.setAttribute("id", element._id);
+
+                // adding onclick event
+                divFollowing.onclick = (function () {
+                    var unique_id = element._id;
+                    return function () {
+                        window.location.href = "../CompanyProfiles/add_company_profiles.html?id=" + unique_id;
+                    }
+                })();
+                // adding onclick event
+
+                let fullname = document.createElement('p');
+                fullname.className = "following-name";
+
+                var imageSrc_cc = "";
+                var fullName_cc = "";
+                var handle_cc = "";
+
+                // get_company_info_here
+
+
+                var url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/company_read";
+
+                var data = {
+                    "usertype_id": element.company
+                };
+            
+                fetch(url, {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(res => res.json())
+                    .catch(error => console.error('Error:', error))
+                    .then(response => {
+                        console.log('company response here----------',response);
+                        if (response.status == "success") {
+            
+                        imageSrc_cc = response.response.user.image;
+                        fullName_cc = response.response.company.name;
+                        handle_cc = response.response.user.handle;
+
+
+
+                            fullname_text = document.createTextNode(fullName_cc);
+                            fullname.appendChild(fullname_text);
+                            // divFollowing.appendChild(fullname);
+            
+                            let handle = document.createElement('p');
+                            handle.className = "following-handle";
+                            hande_text = document.createTextNode("@" + handle_cc);
+                            handle.appendChild(hande_text);
+                            // divFollowing.appendChild(handle);
+            
+            
+                            let profileText = document.createElement('div');
+                            profileText.className = "following-text";
+                            profileText.appendChild(fullname);
+                            profileText.appendChild(handle);
+                            divFollowing.appendChild(profileText);
+            
+            
+            
+                            var userImageAddress = "";
+                            let user_image = document.createElement('img');
+                            user_image.className = "following-img";
+                            if (imageSrc_cc) {
+                                if (element.image.substr(0, 4) == "data") {
+                                    userImageAddress = imageSrc_cc;
+                                } else {
+                                    userImageAddress = "https:" + imageSrc_cc;
+                                }
+                                user_image.src = userImageAddress;
+                            }
+            
+                            let profileImage = document.createElement('div');
+                            profileImage.className = "following-img-wrap";
+                            profileImage.appendChild(user_image);
+                            divFollowing.appendChild(profileImage);
+            
+            
+                            if (x == "following") {
+                                document.getElementById('profile-following').appendChild(divFollowing);
+                            } else if (x == "followers") {
+                                document.getElementById('profile-followers').appendChild(divFollowing);
+                            }
+            
+                        }
+                    })
+
+            } else {
+
+                let divFollowing = document.createElement('div');
+                divFollowing.className = "following";
+                // divFollowing.setAttribute("id", element._id);
+
+                // adding onclick event
+                divFollowing.onclick = (function () {
+                    var unique_id = element._id;
+                    return function () {
+                        window.location.href = "../User-Profile/user_profile.html?id=" + unique_id;
+                    }
+                })();
+                // adding onclick event
+
+                let fullname = document.createElement('p');
+                fullname.className = "following-name";
+
+                fullname_text = document.createTextNode(element.firstname + " " + element.lastname);
+                fullname.appendChild(fullname_text);
+                // divFollowing.appendChild(fullname);
+
+                let handle = document.createElement('p');
+                handle.className = "following-handle";
+                hande_text = document.createTextNode("@" + element.handle);
+                handle.appendChild(hande_text);
+                // divFollowing.appendChild(handle);
+
+
+                let profileText = document.createElement('div');
+                profileText.className = "following-text";
+                profileText.appendChild(fullname);
+                profileText.appendChild(handle);
+                divFollowing.appendChild(profileText);
+
+
+
+                var userImageAddress = "";
+                let user_image = document.createElement('img');
+                user_image.className = "following-img";
+                if (element.image) {
+                    if (element.image.substr(0, 4) == "data") {
+                        userImageAddress = element.image;
+                    } else {
+                        userImageAddress = "https:" + element.image;
+                    }
+                    user_image.src = userImageAddress;
                 }
-            })();
-            // adding onclick event
 
-            let fullname = document.createElement('p');
-            fullname.className = "following-name";
-
-            fullname_text = document.createTextNode(element.firstname + " " + element.lastname);
-            fullname.appendChild(fullname_text);
-            // divFollowing.appendChild(fullname);
-
-            let handle = document.createElement('p');
-            handle.className = "following-handle";
-            hande_text = document.createTextNode("@" + element.handle);
-            handle.appendChild(hande_text);
-            // divFollowing.appendChild(handle);
+                let profileImage = document.createElement('div');
+                profileImage.className = "following-img-wrap";
+                profileImage.appendChild(user_image);
+                divFollowing.appendChild(profileImage);
 
 
-            let profileText = document.createElement('div');
-            profileText.className = "following-text";
-            profileText.appendChild(fullname);
-            profileText.appendChild(handle);
-            divFollowing.appendChild(profileText);
-
-
-
-            var userImageAddress = "";
-            let user_image = document.createElement('img');
-            user_image.className = "following-img";
-            if (element.image) {
-                if (element.image.substr(0, 4) == "data") {
-                    userImageAddress = element.image;
-                } else {
-                    userImageAddress = "https:" + element.image;
+                if (x == "following") {
+                    document.getElementById('profile-following').appendChild(divFollowing);
+                } else if (x == "followers") {
+                    document.getElementById('profile-followers').appendChild(divFollowing);
                 }
-                user_image.src = userImageAddress;
+
             }
 
-            let profileImage = document.createElement('div');
-            profileImage.className = "following-img-wrap";
-            profileImage.appendChild(user_image);
-            divFollowing.appendChild(profileImage);
 
-
-            if (x == "following") {
-                document.getElementById('profile-following').appendChild(divFollowing);
-            } else if (x == "followers") {
-                document.getElementById('profile-followers').appendChild(divFollowing);
-            }
 
         });
 
@@ -1006,6 +1112,73 @@ function showFollowingCurrentUserProfile(followingArray, x) {
             document.getElementById('profile-followers').innerHTML = "No Followers";
         }
     }
+
+}
+
+function loadAndShowFollowingFollowerNumbers() {
+    // document.getElementById('user-followers-num').innerHTML = "No Followers";
+    // document.getElementById('user-following-num').innerHTML = "No Followers";
+
+    // get following number
+
+    token = localStorage.getItem("token");
+    user_id = localStorage.getItem("user_id");
+
+    var url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/get_following";
+
+    var data = {
+        "user_id": user_id
+    };
+
+    fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        }
+    })
+        .then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => {
+            console.log(response);
+            if (response.status == "success") {
+
+                console.log(response.response.following.length);
+                document.getElementById('user-following-num').innerHTML = response.response.following.length;
+
+            }
+        })
+
+    // get followers number
+
+    var url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/get_followers";
+
+    var data = {
+        "user_id": user_id
+    };
+
+    fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        }
+    })
+        .then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => {
+            console.log(response);
+            if (response.status == "success") {
+
+                console.log(response.response.followers.length);
+                document.getElementById('user-followers-num').innerHTML = response.response.followers.length;
+
+            }
+        })
+
+
 
 }
 

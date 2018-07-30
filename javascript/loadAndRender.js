@@ -53,6 +53,11 @@ function checkLocalStorage(page) {
 				loadProfile();
 				fetchCompanyProfileData();
 				break;
+				case "my_company":
+				loadProfile();
+				getCompanyProfileDataForCompany();
+				break;
+
 
 		}
 	}
@@ -114,6 +119,17 @@ function getPostsItems() {
 }
 
 function loadProfile() {
+
+// check profile type	
+let name = "";
+if (localStorage.getItem('usertype') == "company") {
+	name =  document.createTextNode(localStorage.getItem('company_name'));
+
+} else {
+	name =  document.createTextNode(localStorage.getItem('first_name') + " " + localStorage.getItem('last_name'));
+
+}
+
 	let div = document.getElementById('profile_pic');
 	let pic = document.createElement('img');
 	pic.classList.add('profile_pic');
@@ -122,7 +138,6 @@ function loadProfile() {
 	div.appendChild(pic);
 
 	let namep = document.getElementsByClassName('navname')[0];
-	let name = document.createTextNode(localStorage.getItem('first_name') + " " + localStorage.getItem('last_name'));
 	namep.appendChild(name);
 }
 
@@ -625,5 +640,9 @@ function plsWork(x) {
 		.then(body => {
 			return body.response.type;
 		})
+
+}
+
+function fetchMyProfileCompanyData () {
 
 }

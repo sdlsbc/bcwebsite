@@ -5,7 +5,7 @@ function register() {
     var userType = document.getElementById("signup-usertype").value;
 
     if (userType == "company") {
-        document.getElementById("btnSignUpCompany").disabled = true; 
+        document.getElementById("btnSignUpCompany").disabled = true;
         document.getElementById("btnSignUpCompany").classList.add('btnDisabled');
         document.getElementById("body").style.cursor = "wait";
 
@@ -20,10 +20,10 @@ function register() {
 
     } else if (userType == "production" || userType == "personal") {
 
-        document.getElementById("btnProductionSubmit").disabled = true; 
+        document.getElementById("btnProductionSubmit").disabled = true;
         document.getElementById("btnProductionSubmit").classList.add('btnDisabled');
 
-        document.getElementById("btnSignupPersonal").disabled = true; 
+        document.getElementById("btnSignupPersonal").disabled = true;
         document.getElementById("btnSignupPersonal").classList.add('btnDisabled');
 
         document.getElementById("body").style.cursor = "wait";
@@ -36,7 +36,7 @@ function register() {
         //var city = document.getElementById('signup-city').value;
         //var country = document.getElementById('signup-country').value;
         //var phone = document.getElementById("signup-phone").value;
-        
+
     }
     var c_name = "";
     var p_name = ""
@@ -61,7 +61,7 @@ function register() {
         }
 
         // var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/user_create';
-        var url = "https://broadwayconnected.bubbleapps.io"+version_change+"api/1.1/wf/user_create";
+        var url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/user_create";
 
         var data = {
             "handle": handle,
@@ -92,12 +92,12 @@ function register() {
 
                     console.log('Success:', response);
 
-                    document.getElementById("btnProductionSubmit").disabled = false; 
+                    document.getElementById("btnProductionSubmit").disabled = false;
                     document.getElementById("btnProductionSubmit").classList.remove('btnDisabled');
-            
-                    document.getElementById("btnSignupPersonal").disabled = false; 
+
+                    document.getElementById("btnSignupPersonal").disabled = false;
                     document.getElementById("btnSignupPersonal").classList.remove('btnDisabled');
-            
+
                     document.getElementById("body").style.cursor = "pointer";
 
                     if (response.response.message == "Username not unique") {
@@ -196,7 +196,7 @@ function saveUserTypeData(token) {
     }
 
     // var url = "https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/" + usertype + "_update";
-    var url = "https://broadwayconnected.bubbleapps.io"+version_change+"api/1.1/wf/" + usertype + "_update";
+    var url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/" + usertype + "_update";
 
     fetch(url, {
         method: 'POST',
@@ -228,13 +228,13 @@ function signin() {
     var error_message = validateSigninInput(email, password);
 
 
-    document.getElementById("loginBtn").disabled = true; 
+    document.getElementById("loginBtn").disabled = true;
     document.getElementById("loginBtn").classList.add('btnDisabled');
     document.getElementById("body").style.cursor = "wait";
 
 
     // var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/login';
-    var url = "https://broadwayconnected.bubbleapps.io"+version_change+"api/1.1/wf/login";
+    var url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/login";
 
     var data = {
         "email": email,
@@ -248,14 +248,14 @@ function signin() {
             'Content-Type': 'application/json'
         }
     })
-    .then(res => res.json())
+        .then(res => res.json())
         .catch(error => {
             createCustomAlert(error);
             console.error('Error:', error);
         })
         .then(response => {
 
-            document.getElementById("loginBtn").disabled = false; 
+            document.getElementById("loginBtn").disabled = false;
             document.getElementById("body").style.cursor = "default";
 
             if (response.statusCode == 400 && response.reason == "WRONG_PASSWORD") {
@@ -264,6 +264,9 @@ function signin() {
 
 
             } else if (response.status == "success") {
+
+                console.log(response);
+
                 var token = response.response.token;
                 var user_image = response.response.user.image;
                 var user_id = response.response.user_id;
@@ -277,10 +280,20 @@ function signin() {
                 if (res_usertype == "company") {
                     res_usertype_id = response.response.user.company;
                     console.log('usertype id in register.js', res_usertype_id);
+                    // var company_name = response.response.company.name;
+                    // console.log(company_name);
+                    // response.response.company.name;
+
+                    localStorage.setItem("company_name", response.response.company.name);
+
                 }
                 if (res_usertype == "production") {
                     res_usertype_id = response.response.user.production;
                     console.log('usertype id in register.js', res_usertype_id);
+                    // var production_name = response.response.production.name;
+
+                    // localStorage.setItem("production_name", production_name);
+
                 }
                 if (res_usertype == "personal") {
                     res_usertype_id = response.response.user.personal;
@@ -291,6 +304,10 @@ function signin() {
                     localStorage.setItem("prev_job", response.response.personal.prev_job)
                     localStorage.setItem("prev_company", response.response.personal.prev_company)
                     console.log('usertype id in register.js', res_usertype_id);
+
+                    localStorage.setItem("first_name", firstname);
+                    localStorage.setItem("last_name", lastname);
+
                 }
 
                 localStorage.setItem("token", token);
@@ -299,21 +316,20 @@ function signin() {
                 localStorage.setItem("handle", handle);
                 localStorage.setItem("usertype", res_usertype);
                 //localStorage.setItem("usertype_id", res_usertype_id);
-                localStorage.setItem("first_name", firstname);
-                localStorage.setItem("last_name", lastname);
                 localStorage.setItem("city", city);
                 localStorage.setItem("country", country);
+
                 var res_lastname = response.response.user.lastname;
                 var res_firstname = response.response.user.firstname;
                 if (localStorage.getItem("token") == "") {
                     createCustomAlert("WARNING: Not saved locally");
                 } else {
-                    document.getElementById("loginBtn").disabled = false; 
+                    document.getElementById("loginBtn").disabled = false;
                     document.getElementById("body").style.cursor = "pointer";
                     window.location.href = "Newsfeed/newsfeed.html";
 
 
-                    document.getElementById("loginBtn").disabled = false; 
+                    document.getElementById("loginBtn").disabled = false;
                     document.getElementById("loginBtn").classList.remove('btnDisabled');
                     document.getElementById("body").style.cursor = "pointer";
                 }
@@ -435,15 +451,14 @@ function validateEmail(e) {
 
 function handleIsUnique(fetched_handle) {
 
-    if(fetched_handle == "" || fetched_handle == null)
-    {
+    if (fetched_handle == "" || fetched_handle == null) {
         createCustomAlert("Please Enter Username");
         return
     }
     // api call to check if unique
 
     // var url = 'https://broadwayconnected.bubbleapps.io/version-test/api/1.1/wf/is_unique';
-    var url = "https://broadwayconnected.bubbleapps.io"+version_change+"api/1.1/wf/is_unique";
+    var url = "https://broadwayconnected.bubbleapps.io" + version_change + "api/1.1/wf/is_unique";
 
     var data = {
         "handle": fetched_handle
@@ -474,9 +489,9 @@ function handleIsUnique(fetched_handle) {
         })
 }
 
-function checkPasswordsMatch(fetched_password,fetched_confirm_password) {
-console.log('pwd 1:',fetched_password);
-console.log('pwd 2:',fetched_confirm_password);
+function checkPasswordsMatch(fetched_password, fetched_confirm_password) {
+    console.log('pwd 1:', fetched_password);
+    console.log('pwd 2:', fetched_confirm_password);
 
     if (fetched_password == "") {
         createCustomAlert("Please Enter Password");

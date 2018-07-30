@@ -14,8 +14,6 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <style>
-
-
   /*.close {
     color: white;
     float: right;
@@ -43,6 +41,16 @@
 </style>
 
 <body onload="checkLocalStorage('newsfeed')" id="body">
+  <script>
+    function check_usertype() {
+      if (localStorage.getItem("usertype") == "company") {
+        window.location.href = "../CompanyProfiles/company_profiles.html";
+      } else {
+        window.location.href = "../Profile/profile.html";
+
+      }
+    }
+  </script>
   <!-- sidebar. -->
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" id="closebtn" class="closebtn" onclick="closeNav()">&times;</a>
@@ -53,10 +61,10 @@
     </center>
     <center>
       <p class="profile">
-        <button class="my-profile-btn">
-          <a href="../Profile/profile.html" id="profile-a">
-            <p>My Profile</p>
-          </a>
+        <button class="my-profile-btn" id="profile-a" onclick="check_usertype()"> Profile
+          <!-- <a href="../Profile/profile.html" id="profile-a"> -->
+          <!-- <p>My Profile</p> -->
+          <!-- </a> -->
         </button>
       </p>
     </center>
@@ -117,7 +125,7 @@
       <button class="signout-button" onclick="signout()">Sign Out</button>
     </div> -->
 
-    <div class="navbar">
+  <div class="navbar">
     <span class="open_sidenav" onclick="openNav()">
       <img src="../images/side button2.png">
     </span>
@@ -140,20 +148,20 @@
         <img src="../images/search-icon.png" id="input_img">
       </div>
       <button class="signout-button" onclick="signout()">Sign Out</button>
-    </div> 
+    </div>
   </div>
 
-    <script>
-      var input1 = document.getElementById("search_query_input");
-      input1.addEventListener("keyup", function (event) {
-        event.preventDefault();
-        if (event.keyCode === 13) {
-          // alert(input1.value);
-          redirectToResultsPage(input1.value)
-          // getSearchResults(input1.value);
-        }
-      });
-    </script>
+  <script>
+    var input1 = document.getElementById("search_query_input");
+    input1.addEventListener("keyup", function (event) {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+        // alert(input1.value);
+        redirectToResultsPage(input1.value)
+        // getSearchResults(input1.value);
+      }
+    });
+  </script>
   </div>
   <div id="postsbox">
   </div>
@@ -280,7 +288,7 @@
         </div>
       </div>
 
-      <!-- </div> --> 
+      <!-- </div> -->
 
       <div id="create-milestones" class="tabcontent">
         <h3>Add a Milestone</h3>
@@ -472,18 +480,19 @@
             <label id="a-body">Body</label>
             <input type="text" class="articles-body" id="articles-body" name="articles" placeholder="New article goes here...">
             <span class='remaining-articles' id='remaining-article' style="color: #226BE4; font-size: 14px;"></span>
-  
+
             <label id="a-tag">Tags</label>
             <input type="text" id="articles-tag" name="articles" placeholder="tags">
           </span>
-  
+
         </form>
         <div class="articles-extra-buttons">
-        <input class="attach-photo" type="image" src="../images/image.png" />
-        <input type="file" id="article-image" src="../images/image.png"onchange="getArticleImage(event)" style="display: none;"/>
-        <canvas width="300" height="300" id="myArticleCanvas" style="display: none;"></canvas>
-      </div>
-          <button class="input-button" id="btn-post-article" onclick="create_article()">Post</button>
+          <input class="attach-photo" type="image" src="../images/image.png" />
+          <input type="file" id="article-image" src="../images/image.png" onchange="getArticleImage(event)" style="display: none;"
+          />
+          <canvas width="300" height="300" id="myArticleCanvas" style="display: none;"></canvas>
+        </div>
+        <button class="input-button" id="btn-post-article" onclick="create_article()">Post</button>
       </div>
 
       <div id="create-events" class="tabcontent">

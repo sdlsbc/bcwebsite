@@ -17,12 +17,22 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <style>
-.btnDisabled{
-  border: 1px solid #999999;
-  background-color: #cccccc;
-  color: #666666;
-}
+        /* hr.style-six {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+} */
+        .logo-image {
+            width: 700px;
+            height: 180px;
+        }
 
+        .btnDisabled {
+            border: 1px solid #999999;
+            background-color: #cccccc;
+            color: #666666;
+        }
     </style>
 </head>
 
@@ -51,43 +61,58 @@
 <body class="body" id="body">
 
     <!-- navigation bar -->
-    <div class="navbar" id="myTopnav">
+    <!-- <div class="navbar" id="myTopnav">
         <img class="logo-image" src="./images/bc_solo_logo.png" alt="Broadway Connected">
         <div class="signout-x">
             <button class="signout-button" id="navbarLoginBtn">Log In</button>
         </div>
         <div class="signout-y">
-            <button class="signout-button" disabled = "true" id="navbarSignUpBtn">Sign Up</button>
+            <button class="signout-button" disabled = "true" id="navbarSignUpBtn">More Info</button>
+        </div>
+    </div> -->
+    <div>
+        <div class="signout-y">
+            <button class="signout-button" style="border-color: white ;color:blue; background: white;position: absolute;right: -50px;top: 15px;"
+                id="moreInfoButton">More Info</button>
         </div>
     </div>
 
     <!-- modal login -->
     <div id="myModal1" class="index-modal">
         <div class="index-modal-content">
-            <a href="#login" class="a-login">Log In</a>
+            <a href="#login" class="a-login">More Info</a>
             <hr>
             <br>
             <span class="close"></span>
             <div class="create">
                 <div class="login-create" data-type="login">
+
+
                     <form class="login-create">
+                        <!-- <p>
+                                    Theater: Anywhere, Anytime, For AnyoneConnecting the World Of Theater, while increasing collaboration and improving efficency Email UsHave a Question?Welcome to Broadway Connected! This is your one-stop-shop for Theatre: Anytime, Anywhere, for Anyone. BC is a platform created to connect theatre people everywhere, no matter who you are or what you do. From Broadway’s biggest stages to your local high school play, everyone has the potential to get themselves out there and explore all BC has to offer. Network with professionals, discover your dream career, or just make some friends who feel just as strongly about that one specific show that ran for ten days in 1992 as you do!  
+                            </p> -->
                         <p class="login-email">
-                            <label class="label-email" for="signin-email">YOUR E-MAIL</label>
-                            <input class="input-email" id="signin-email" type="email" placeholder="E-mail">
-                            <span class="input-error">Error message here!</span>
+                            <label class="label-email" for="signin-email">Welcome to Broadway Connected! This is your one-stop-shop for Theatre: Anytime, Anywhere, for
+                                Anyone. BC is a platform created to connect theatre people everywhere, no matter who you
+                                are or what you do. From Broadway’s biggest stages to your local high school play, everyone
+                                has the potential to get themselves out there and explore all BC has to offer. Network with
+                                professionals, discover your dream career, or just make some friends who feel just as strongly
+                                about that one specific show that ran for ten days in 1992 as you do!</label>
+                            <!-- <input class="input-email" id="signin-email" type="email" placeholder="E-mail">
+                            <span class="input-error">Error message here!</span> -->
                         </p>
-                        <p class="login-password">
-                            <label class="label-password" for="signin-password">PASSWORD</label>
-                            <input class="input-password" id="signin-password" type="password" placeholder="Password">
-                            <a href="#0" class="hide">Hide</a>
-                            <span class="error">Error message here!</span>
-                        </p>
-                        <p class="login-submit">
-                            <input class="input-submit" type="button" id="loginBtn" value="Log In" onclick="signin()">
-                        </p>
+                        <hr>
                         <p class="forgot-password">
-                          <a href="#">Forgot Password</a>
+                                <!-- <label class="label-email" for="signin-email">
+                                        
+                                    </label> -->
+                                <a href="#">Have a Question?</a>
+                            </p>
+                        <p class="login-submit">
+                            <input class="input-submit" type="button" id="loginBtn" value="Email Us">
                         </p>
+                      
                     </form>
                 </div>
             </div>
@@ -400,7 +425,7 @@
         var modal_production = document.getElementById('myProductionModal');
         var modal_personal = document.getElementById('myPersonalModal');
         // navbar buttons
-        var btn1 = document.getElementById("navbarLoginBtn");
+        var btn1 = document.getElementById("moreInfoButton");
         var btn2 = document.getElementById("navbarSignUpBtn");
 
         btn1.onclick = function () {
@@ -566,11 +591,15 @@
         <br/>
         <br/>
         <br/>
-        <br/>
-        <br/>
-        <br/>
-        <p class="big">Theater: Anywhere, Anytime, For Anyone</h1>
-            <p class="small"> Connecting the World Of Theater, while increasing collaboration and improving efficiency.</p>
+        <img class="logo-image" src="./images/newlogoimp.png" alt="Broadway Connected">
+        <p class="big" style="margin-top: -30px;">
+
+            Theater: Anywhere, Anytime, For Anyone
+
+            </h1>
+            <p class="small">
+                Connecting the World Of Theater, while increasing collaboration and improving efficiency.
+            </p>
     </div>
     <script>
 

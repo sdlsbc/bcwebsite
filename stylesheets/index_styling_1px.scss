@@ -244,7 +244,7 @@ hr {
   margin-top: 10px;
   text-align: center;
   label {
-    font-family: $font;
+    // font-family: $font;
     margin-top: 10px;
     color: #0080FF;
     font-size: 14px;
@@ -253,7 +253,7 @@ hr {
     float: left;
   }
   input[type=email] {
-    font-family: $font;
+    // font-family: $font;
     background-color: $light-gray;
     border-radius: 13%/180%;
     padding-left: 25px;

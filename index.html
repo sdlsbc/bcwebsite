@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Broadway Connected</title>
     <link href="./stylesheets/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
@@ -17,12 +18,93 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <style>
-        /* hr.style-six {
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-} */
+
+.emailus-name {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+.mailus-name label {
+  margin-top: 10px;
+  color: #0080FF;
+  font-size: 14px;
+  margin-left: 25px;
+  font-weight: 100;
+  float: left;
+}
+.mailus-name input[type=text] {
+  background-color: #E9E9E9;
+  border-radius: 13%/180%;
+  padding-left: 25px;
+  margin-top: 6px;
+  font-size: 14px;
+  border: none;
+  height: 40px;
+  width: 100%;
+  color: gray;
+}
+.mailus-name span {
+  display: none;
+}
+
+.login-email-new {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+.login-email-new label {
+  margin-top: 10px;
+  color: #0080FF;
+  font-size: 14px;
+  margin-left: 25px;
+  font-weight: 100;
+  float: left;
+}
+.login-email-new input[type=email] {
+  background-color: #E9E9E9;
+  border-radius: 13%/180%;
+  padding-left: 25px;
+  margin-top: 6px;
+  font-size: 14px;
+  border: none;
+  height: 40px;
+  width: 100%;
+  color: gray;
+}
+.login-email-new span {
+  display: none;
+}
+
+
+        .fa {
+            padding: 20px;
+            font-size: 15px;
+            width: 15px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
         .logo-image {
             width: 700px;
             height: 180px;
@@ -80,14 +162,12 @@
     <!-- modal login -->
     <div id="myModal1" class="index-modal">
         <div class="index-modal-content">
-                    <a href="#login" class="a-login">More Info</a>
-            <hr>
+            <a href="#login" class="a-login">More Info</a>
+            <hr style="width: 100%; border: 1px solid lightgray;">
             <br>
             <span class="close"></span>
             <div class="create">
                 <div class="login-create" data-type="login">
-
-
                     <form class="login-create">
                         <!-- <p>
                                     Theater: Anywhere, Anytime, For AnyoneConnecting the World Of Theater, while increasing collaboration and improving efficency Email UsHave a Question?Welcome to Broadway Connected! This is your one-stop-shop for Theatre: Anytime, Anywhere, for Anyone. BC is a platform created to connect theatre people everywhere, no matter who you are or what you do. From Broadway’s biggest stages to your local high school play, everyone has the potential to get themselves out there and explore all BC has to offer. Network with professionals, discover your dream career, or just make some friends who feel just as strongly about that one specific show that ran for ten days in 1992 as you do!  
@@ -102,23 +182,87 @@
                             <!-- <input class="input-email" id="signin-email" type="email" placeholder="E-mail">
                             <span class="input-error">Error message here!</span> -->
                         </p>
-                        <hr>
+                        <hr style="width: 100%; border: 1px solid lightgray;">
                         <p class="forgot-password">
-                                <!-- <label class="label-email" for="signin-email">
-                                        
-                                    </label> -->
-                                <a href="#">Have a Question?</a>
-                            </p>
-                        <p class="login-submit">
-                            <input class="input-submit" type="button" id="loginBtn" value="Email Us">
+                            <a href="#">Have a Question?</a>
                         </p>
-                      
+                        <p class="login-submit">
+                            <input class="input-submit" type="button" id="emailUsButton" value="Email Us" onclick="openEmailModal()">
+                        </p>
+
+                        <div style="width: 100%; height: 8px; border-bottom: 1px solid lightgray; text-align: center">
+                            <span style="font-size: 12px; background-color: white; padding: 0 10px; color:gray ">
+                                OR
+                            </span>
+                        </div>
+                        <p class="forgot-password">
+                            <a href="#">Follow Us On Social !</a>
+                        </p>
+                        <div>
+                            <center>
+                                <!-- <a href="https://www.crunchbase.com/organization/broadway-connected-inc">
+                                            <img border="0" alt="crunchbase"  src="images/crunchbaseicon.jpg" width="55" height="55" style="border-radius:50%;margin-top: 15px">
+                                        </a> -->
+                                <a href="https://www.facebook.com/broadwayconnected/" class="fa fa-facebook"></a>
+                                <a href="https://twitter.com/bwayconnected" class="fa fa-twitter"></a>
+                                <a href="https://www.instagram.com/broadwayconnected/" class="fa fa-instagram"></a>
+                            </center>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <!-- modalcsend email -->
+    <!-- myEmailModal
+     -->
+     <div id="myEmailModal" class="index-modal">
+            <div class="index-modal-content">
+                <a href="#login" class="a-login">Message Us</a>
+                <hr style="width: 100%; border: 1px solid lightgray;">
+                <br>
+                <span class="close"></span>
+                <div class="create">
+                    <div class="login-create" data-type="login">
+                        <form class="login-create">
+                                <p class="mailus-name">
+                                        <label  for="signup-firstname">Name</label>
+                                        <input  id="email-name" type="text" placeholder=" Your Name" >
+                                        <span >Error message here!</span>
+                                    </p>
 
+                            </p> <br>
+
+                            <p class="login-email-new">
+                                    <label for="signin-email" >Email</label>
+                                    <input id="email-email" type="email" placeholder="Your Email">
+                                    <!-- <span class="input-error">Error message here!</span> -->
+                                </p>
+                                <hr style="width: 100%; border: 1px solid lightgray;">
+
+                                <p class="mailus-name">
+                                        <label for="signin-email" >Message</label>
+                                        <input id="email-message" type="text" placeholder="Your Message" style="height: 100px;word-wrap: break-word;">
+                                        <!-- <span class="input-error">Error message here!</span> -->
+                                    </p>
+                            <p class="login-submit">
+                                <input class="input-submit" type="button" id="emailSendButton" value="Send" onclick="sendEmailNow()" >
+                            </p>
+                        </form>
+                        <script>
+                        function sendEmailNow(){
+                            alert('Coming soon');
+                            var name = document.getElementById('email-name').value;
+                            var sentBy = document.getElementById('email-email').value;
+                            var message = document.getElementById('email-message').value;
+
+                            // mail function here
+                        }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
     <!-- modal sign-up -->
     <div id="myModal2" class="index-modal">
         <div class="index-modal-content">
@@ -424,9 +568,18 @@
         var modal_company2 = document.getElementById('myCompanyModalAccountManager');
         var modal_production = document.getElementById('myProductionModal');
         var modal_personal = document.getElementById('myPersonalModal');
+        var modal_email = document.getElementById('myEmailModal');
+
         // navbar buttons
         var btn1 = document.getElementById("moreInfoButton");
         var btn2 = document.getElementById("navbarSignUpBtn");
+        var btnEmailUs = document.getElementById("emailUsButton");
+
+        btnEmailUs.onclick = function () {
+            console.log('email  clicked');
+            modal_login.style.display = "none";
+            modal_email.style.display = "block";
+        }
 
         btn1.onclick = function () {
             console.log('button login clicked');
@@ -602,6 +755,11 @@
             </p>
     </div>
     <script>
+
+        function openEmailModal() {
+
+        }
+
 
         function companyImage(event) {
             var myCanvas = document.getElementById('mycanvascompany');

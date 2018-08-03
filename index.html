@@ -18,7 +18,32 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <style>
-
+.login-submit-btn input[type=submit] {
+  background-color: blue;
+  padding: 14px;
+  margin-left: 40%;
+  width: 20%;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 25px;
+  font-size: 16px;
+  color: white;
+  font-weight: 100;
+}
+.login-submit-btn input[type=submit]:hover {
+  background-color: #0000CD;
+  padding: 14px;
+  margin-left: 40%;
+  width: 20%;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  font-weight: 100;
+}
 .emailus-name {
   width: 100%;
   margin-top: 10px;
@@ -224,40 +249,73 @@
                 <span class="close"></span>
                 <div class="create">
                     <div class="login-create" data-type="login">
-                        <form class="login-create">
+                        <form class="login-create" name="contact" method="post">
                                 <p class="mailus-name">
                                         <label  for="signup-firstname">Name</label>
-                                        <input  id="email-name" type="text" placeholder=" Your Name" >
+                                        <input  name="name" type="text" placeholder=" Your Name" >
                                         <span >Error message here!</span>
                                     </p>
 
                             </p> <br>
 
-                            <p class="login-email-new">
-                                    <label for="signin-email" >Email</label>
-                                    <input id="email-email" type="email" placeholder="Your Email">
+                            <p class="mailus-name">
+                                    <label for="signin-email" >Subject</label>
+                                    <input name="subject" type="text" placeholder="This Email Is About">
                                     <!-- <span class="input-error">Error message here!</span> -->
                                 </p>
                                 <hr style="width: 100%; border: 1px solid lightgray;">
 
                                 <p class="mailus-name">
                                         <label for="signin-email" >Message</label>
-                                        <input id="email-message" type="text" placeholder="Your Message" style="height: 100px;word-wrap: break-word;">
+                                        <input name="message" type="text" placeholder="Your Message" style="height: 100px;word-wrap: break-word;">
                                         <!-- <span class="input-error">Error message here!</span> -->
                                     </p>
-                            <p class="login-submit">
-                                <input class="input-submit" type="button" id="emailSendButton" value="Send" onclick="sendEmailNow()" >
+                            <p class="login-submit-btn">
+                                <input class="input-submit" type="submit"  name="send" value="Send"  >
                             </p>
                         </form>
                         <script>
-                        function sendEmailNow(){
-                            alert('Coming soon');
-                            var name = document.getElementById('email-name').value;
-                            var sentBy = document.getElementById('email-email').value;
-                            var message = document.getElementById('email-message').value;
+                        // function sendEmailNow(){
+                        //     alert('Coming soon');
+                        //     var name = document.getElementById('email-name').value;
+                        //     var sentBy = document.getElementById('email-email').value;
+                        //     var message1 = document.getElementById('email-message').value;
 
-                            // mail function here
-                        }
+                        //     // mail function here
+
+                        // }
+
+                            var form = document.forms["contact"];
+	form.addEventListener('submit',contact_submit,false);
+
+	function contact_submit(e) {
+		// Stop Form From Submitting
+		e.preventDefault();
+
+		// Set Initial Variables
+		var target = e.target || e.srcElement;
+		var to = 'hello@broadwayconnected.com';
+		var uri = 'mailto:' + to;
+		var body = "";
+
+		// Set Form Values to Variables
+		var name = target.elements['name'].value;
+		var subject = target.elements['subject'].value;
+		// var phone = target.elements['phone'].value;
+		var message = target.elements['message'].value;
+
+		// Build Body / Message with all Input Fields
+		body += message + "\r\n\r\n";
+		body += "Name: " + name + "\r\n";
+		// body += "Phone Number: " + phone + "\r\n";
+
+		// Build final Mailto URI
+		uri += '?subject=' + encodeURIComponent(subject);
+		uri += '&body=' + encodeURIComponent(body);
+
+		// Open Mailto in New Window / Tab
+		window.open(uri,'_blank');
+	}
                         </script>
                     </div>
                 </div>
@@ -576,13 +634,13 @@
         var btnEmailUs = document.getElementById("emailUsButton");
 
         btnEmailUs.onclick = function () {
-            console.log('email  clicked');
+            // console.log('email  clicked');
             modal_login.style.display = "none";
             modal_email.style.display = "block";
         }
 
         btn1.onclick = function () {
-            console.log('button login clicked');
+            // console.log('button login clicked');
             modal_personal.style.display = "none"
             modal_production.style.display = "none"
             modal_company.style.display = "none";
@@ -591,18 +649,18 @@
             modal_login.style.display = "block";
         }
 
-        btn2.onclick = function () {
-            console.log('button sign up clicked');
-            modal_personal.style.display = "none"
-            modal_production.style.display = "none"
-            modal_company.style.display = "none";
-            modal_company2.style.display = "none";
-            modal_login.style.display = "none";
-            modal_signup.style.display = "block";
-        }
+        // btn2.onclick = function () {
+        //     console.log('button sign up clicked');
+        //     modal_personal.style.display = "none"
+        //     modal_production.style.display = "none"
+        //     modal_company.style.display = "none";
+        //     modal_company2.style.display = "none";
+        //     modal_login.style.display = "none";
+        //     modal_signup.style.display = "block";
+        // }
 
         window.onclick = function (event) {
-            console.log("close modals")
+            // console.log("close modals")
             if (event.target == modal_login) {
                 modal_login.style.display = "none";
             }
@@ -722,21 +780,21 @@
 
     <!-- log in submit button event listener -->
     <script>
-        var input1 = document.getElementById("signin-email");
-        input1.addEventListener("keyup", function (event) {
-            event.preventDefault();
-            if (event.keyCode === 13) {
-                document.getElementById("loginBtn").click();
-            }
-        });
+        // var input1 = document.getElementById("signin-email");
+        // input1.addEventListener("keyup", function (event) {
+        //     event.preventDefault();
+        //     if (event.keyCode === 13) {
+        //         document.getElementById("loginBtn").click();
+        //     }
+        // });
 
-        var input2 = document.getElementById("signin-password");
-        input2.addEventListener("keyup", function (event) {
-            event.preventDefault();
-            if (event.keyCode === 13) {
-                document.getElementById("loginBtn").click();
-            }
-        });
+        // var input2 = document.getElementById("signin-password");
+        // input2.addEventListener("keyup", function (event) {
+        //     event.preventDefault();
+        //     if (event.keyCode === 13) {
+        //         document.getElementById("loginBtn").click();
+        //     }
+        // });
 
     </script>
 
